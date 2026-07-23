@@ -4,7 +4,7 @@ Faithful to the Assistant Axis paper's extraction (assistant-axis/pipeline/
 2_activations.py): for each ``system(role) + user question`` chat we generate a
 response with Qwen2.5-3B-Instruct and read the residual stream averaged over the
 **response** tokens, at all layers. Downstream analysis uses the ~0.5-depth
-layer (manifest.primary_layer = half_depth_layer). Saved distinctly under
+layer (manifest.primary_layer = half_depth_hidden_state). Saved distinctly under
 data/embeddings_roles_resp/ so the prompt-token run stays intact.
 
 **Checkpointed / resumable.** Records are processed in fixed-size chunks; each
@@ -37,7 +37,7 @@ import pandas as pd
 
 
 from manifold_persona.config import (MODEL_NAME, RESP_ROLE_EMBEDDINGS_DIR,
-                                     half_depth_layer)
+                                     half_depth_hidden_state)
 from manifold_persona.prompts_roles import (build_role_records, records_to_metadata,
                                             list_roles)
 from manifold_persona.io import save_embeddings
@@ -108,6 +108,21 @@ def main():
                 f"Resume needs identical settings. Use --restart to start clean "
                 f"(discards existing shards).")
     else:
+        # A *finished* run has no _ckpt (finalization removes it), so the check
+        # above cannot see it. Without this second guard, re-invoking with
+        # different settings silently overwrites a completed cloud -- which for
+        # a multi-hour run destroys the result with no warning.
+        done_manifest = out_dir / "manifest.json"
+        if done_manifest.exists() and not args.restart:
+            prev = json.load(open(done_manifest))
+            mismatch = {k: (prev.get(k), cfg[k])
+                        for k in cfg if k in prev and prev.get(k) != cfg[k]}
+            if mismatch:
+                raise SystemExit(
+                    f"{out_dir} already holds a COMPLETED run with different "
+                    f"settings: {mismatch}\n"
+                    f"Refusing to overwrite it. Use --restart to discard and "
+                    f"rebuild, or pass a different --out_dir.")
         json.dump({**cfg, "n_records": N}, open(cfg_path, "w"), indent=2)
 
     # Which chunks still need computing?
@@ -125,9 +140,9 @@ def main():
         print(f"Loading model {args.model} ...")
         model, tokenizer, device = load_model_and_tokenizer(args.model)
         n_hidden = model.config.num_hidden_layers
-        prim = half_depth_layer(n_hidden)
+        prim = half_depth_hidden_state(n_hidden)
         print(f"device={device}  n_hidden_states={n_hidden + 1}  "
-              f"hidden={model.config.hidden_size}  half_depth_layer={prim}")
+              f"hidden={model.config.hidden_size}  half_depth_hidden_state={prim}")
         chats = [record_to_messages(r) for r in records]
         for (s, e) in todo:
             tc = time.time()
@@ -159,7 +174,7 @@ def main():
     assert avg.shape[0] == N, f"row count {avg.shape[0]} != {N}"
     n_layers = avg.shape[1]
     hidden = avg.shape[2]
-    prim = half_depth_layer(n_layers - 1)
+    prim = half_depth_hidden_state(n_layers - 1)
 
     meta_rows = records_to_metadata(records)
     for row, resp in zip(meta_rows, resp_all):

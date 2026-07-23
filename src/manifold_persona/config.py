@@ -20,7 +20,10 @@ EMBEDDINGS_DIR = DATA_DIR / "embeddings"                 # persona-vectors study
 ROLE_EMBEDDINGS_DIR = DATA_DIR / "embeddings_roles"      # assistant-axis roles study (prompt tokens)
 RESP_ROLE_EMBEDDINGS_DIR = DATA_DIR / "embeddings_roles_resp"  # roles study, RESPONSE tokens (paper-matched)
 AA_TRAIT_EMBEDDINGS_DIR = DATA_DIR / "embeddings_aa_traits"  # assistant-axis traits study
-FIGURES_DIR = REPO_ROOT / "exploratory" / "figures"
+# Per-study figures live at exploratory/<study>/figures/<stamp>/ (see
+# manifold_persona.common.FIGURES_DIR). This repo-level default named a path
+# that has never existed and had no importer.
+FIGURES_DIR = REPO_ROOT / "exploratory"
 
 # --- assistant-axis source (sibling repo) ----------------------------------
 ASSISTANT_AXIS_DIR = Path(
@@ -65,9 +68,29 @@ def primary_layer(num_hidden_layers: int) -> int:
 
 
 def half_depth_layer(num_hidden_layers: int) -> int:
-    """~0.5-depth analysis layer, matching the Assistant Axis paper.
+    """~0.5-depth **decoder-block** index, matching the Assistant Axis paper.
 
     The paper analyses at ~half depth (Gemma-2-27B L22/46, Qwen3-32B L32/64,
-    Llama-3.3-70B L40/80 -> all ≈0.5). Hidden states are indexed
-    0..num_hidden_layers (0 = embeddings)."""
+    Llama-3.3-70B L40/80 -> all ≈0.5).
+
+    NOTE: this returns a *block* index, in assistant-axis's convention, where
+    the activation is the output of ``model.model.layers[k]``. It is NOT a
+    ``hidden_states`` index -- see :func:`half_depth_hidden_state`. Using this
+    value to index ``output_hidden_states`` reads one block too shallow.
+    """
     return max(0, min(round(0.5 * num_hidden_layers), num_hidden_layers))
+
+
+def half_depth_hidden_state(num_hidden_layers: int) -> int:
+    """~0.5-depth layer as an index into HF ``output_hidden_states``.
+
+    ``output_hidden_states`` returns ``num_hidden_layers + 1`` tensors where
+    ``hidden_states[0]`` is the embedding output and ``hidden_states[i]`` is the
+    output of decoder block ``i-1``. assistant-axis hooks block ``k`` directly
+    (``pipeline/2_activations.py``), so:
+
+        assistant-axis block k  ==  hidden_states[k + 1]
+
+    For Qwen2.5-3B-Instruct (36 blocks): block 18 -> hidden_states[19].
+    """
+    return min(half_depth_layer(num_hidden_layers) + 1, num_hidden_layers)
