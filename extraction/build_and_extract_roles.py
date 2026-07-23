@@ -1,9 +1,10 @@
 """Stage 0 (assistant-axis study): build role prompts, extract activations, save.
 
-Same pipeline as extraction/build_and_extract.py, but over the 276 character-role
-personas from the assistant-axis repo. Prompt activations (prompt_avg +
-prompt_last), all layers, Qwen2.5-3B-Instruct. Saved distinctly under
-data/embeddings_roles/.
+Builds the 276 character-role personas from the assistant-axis repo into a
+prompt-token point cloud: prompt activations (prompt_avg + prompt_last), all
+layers, Qwen2.5-3B-Instruct. Saved distinctly under data/embeddings_roles/.
+
+For the paper-matched RESPONSE-token cloud see generate_and_extract_roles.py.
 
 Usage:
     .venv/bin/python -m extraction.build_and_extract_roles
