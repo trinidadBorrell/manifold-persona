@@ -1,6 +1,6 @@
 ---
 run_id: 2026-07-23-selfcontained-one-command
-status: draft          # draft | approved | executed
+status: approved       # draft | approved | executed
 interface: in-scope    # existing module entry points frozen; packaging + a CLI layer are added
 approach: incremental
 branch: refactor/selfcontained-one-command
@@ -357,7 +357,7 @@ runtime (`skdim`, `umap`, Isomap), which the 900 s flag-on budget covers.
 - [x] Pre-audit (rev 3) passed — **no blocking findings**. Three should-fix items applied after:
       invalid TOML in the pyproject snippet, DPI gates rewritten with `round()`, and the
       `build_and_extract_roles.py` scope/step disagreement.
-- [ ] Approved by user on <date>
+- [x] Approved by user on 2026-07-23
 
 ---
 
