@@ -25,15 +25,27 @@ AA_TRAIT_EMBEDDINGS_DIR = DATA_DIR / "embeddings_aa_traits"  # assistant-axis tr
 # that has never existed and had no importer.
 FIGURES_DIR = REPO_ROOT / "exploratory"
 
-# --- assistant-axis source (sibling repo) ----------------------------------
-ASSISTANT_AXIS_DIR = Path(
-    os.environ.get("ASSISTANT_AXIS_DIR", REPO_ROOT.parent / "assistant-axis")
-)
-# 276 character-role personas (identities; pos-only)
-ROLE_INSTRUCTIONS_DIR = ASSISTANT_AXIS_DIR / "data" / "roles" / "instructions"
-ROLE_QUESTIONS_FILE = ASSISTANT_AXIS_DIR / "data" / "extraction_questions.jsonl"
-# 240 behavioural traits (adjectives; bipolar pos/neg + 40 questions each)
-AA_TRAIT_INSTRUCTIONS_DIR = ASSISTANT_AXIS_DIR / "data" / "traits" / "instructions"
+# --- assistant-axis source --------------------------------------------------
+# Roles + extraction questions are VENDORED under refs/assistant-axis/ (see its
+# PROVENANCE.md), so extraction runs with no sibling checkout. Setting
+# ASSISTANT_AXIS_DIR overrides to a live checkout, which uses the upstream
+# `data/` layout; the vendored copy drops that segment (the repo's unanchored
+# `.gitignore` `data/` rule would otherwise untrack it).
+VENDORED_AXIS_DIR = REPO_ROOT / "refs" / "assistant-axis"
+_axis_override = os.environ.get("ASSISTANT_AXIS_DIR")
+
+if _axis_override:
+    ASSISTANT_AXIS_DIR = Path(_axis_override)
+    ROLE_INSTRUCTIONS_DIR = ASSISTANT_AXIS_DIR / "data" / "roles" / "instructions"
+    ROLE_QUESTIONS_FILE = ASSISTANT_AXIS_DIR / "data" / "extraction_questions.jsonl"
+    # 240 behavioural traits (adjectives; bipolar pos/neg + 40 questions each).
+    # Not vendored — only the deleted trait-extraction scripts used these.
+    AA_TRAIT_INSTRUCTIONS_DIR = ASSISTANT_AXIS_DIR / "data" / "traits" / "instructions"
+else:
+    ASSISTANT_AXIS_DIR = VENDORED_AXIS_DIR
+    ROLE_INSTRUCTIONS_DIR = VENDORED_AXIS_DIR / "roles" / "instructions"
+    ROLE_QUESTIONS_FILE = VENDORED_AXIS_DIR / "extraction_questions.jsonl"
+    AA_TRAIT_INSTRUCTIONS_DIR = VENDORED_AXIS_DIR / "traits" / "instructions"  # not vendored
 
 # --- Model ----------------------------------------------------------------
 MODEL_NAME = os.environ.get("MP_MODEL_NAME", "Qwen/Qwen2.5-3B-Instruct")
