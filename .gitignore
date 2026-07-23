@@ -26,9 +26,8 @@ RESEARCH.md
 .claude/
 
 
-# Keep figures out of git by default (uncomment to version them)
-# exploratory/figures/*.png
-# exploratory/figures/*.html
+# Generated figures are ignored via `exploratory/*/figures/` above.
+# (An earlier hint here named `exploratory/figures/`, a path that has never existed.)
 
 # Generated exploratory figures (large plotly HTML; regenerable, kept on disk)
 exploratory/*/figures/

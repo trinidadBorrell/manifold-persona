@@ -61,13 +61,13 @@ paper's layer 20/28 for Qwen2.5-7B (~0.71 depth).
 python -m venv --system-site-packages .venv     # inherits an existing torch, if present
 .venv/bin/pip install -r requirements.txt
 
-# Stage 0: extract + save locally (data/embeddings/)
-.venv/bin/python -m extraction.build_and_extract           # ~4 min on Apple MPS
+# Stage 0: build the role point cloud (data/embeddings_roles/)
+.venv/bin/python -m extraction.build_and_extract_roles     # prompt-token activations
 # Push the point cloud to Hugging Face (<username>/manifold-persona)
 .venv/bin/python -m extraction.push_to_hf                  # token read from token/huggingface.txt
 
-# Stage 1: exploratory — runs 01-04 + writes REPORT.md into one dated folder
-.venv/bin/python exploratory/persona_vectors/run_all.py
+# Stage 1: exploratory — runs 01-06 + writes REPORT.md into one dated folder
+.venv/bin/python exploratory/assistant_axis/run_all.py
 ```
 
 Each run writes to a **timestamped folder**
@@ -93,24 +93,26 @@ personas — kept separate so results never mix:
 | Data | `data/embeddings/` | `data/embeddings_roles/` | `data/embeddings_aa_traits/` |
 | Signature analyses | polarity PCA axis; traits-per-cluster; 8 cluster-3D | Assistant-Axis recovery; role families | polarity axis; trait families; per-polarity ID |
 
-Run any study with `.venv/bin/python -m extraction.build_and_extract[_roles|_aa_traits]`
-then `.venv/bin/python exploratory/<study>/run_all.py`.
+The **assistant-axis role study** is the live one and the basis of the H1 manifold
+work; it builds its own cloud rather than using the paper's uploaded aggregate vectors:
 
 ```bash
-# persona-vectors study
-.venv/bin/python -m extraction.build_and_extract
-.venv/bin/python exploratory/persona_vectors/run_all.py
-
-# assistant-axis study (does NOT use the uploaded aggregate vectors — builds its own cloud)
 .venv/bin/python -m extraction.build_and_extract_roles
 .venv/bin/python exploratory/assistant_axis/run_all.py
 ```
 
+The `persona_vectors/` and `assistant_axis_traits/` clouds are **retained on disk but
+are no longer regenerable from this repo** — their extraction scripts were removed as
+unused by H1 (`RESEARCH.md`). Their exploratory scripts still run against the existing
+`data/embeddings*/` directories.
+
 ## Layout
 
 ```
-src/manifold_persona/          # config, io, extract; prompts.py (traits) + prompts_roles.py (roles)
-extraction/                    # build_and_extract.py (traits), build_and_extract_roles.py (roles), push_to_hf.py
+src/manifold_persona/          # config, io, extract, common, runlog; prompts_roles.py (roles)
+extraction/                    # build_and_extract_roles.py (prompt tokens),
+                               # generate_and_extract_roles.py (response tokens), push_to_hf.py
+manifold/                      # H1 manifold study: pipeline, tps, run, sweep, local_id
 exploratory/persona_vectors/   # trait study: 01–04 + common + run_all + make_report + figures/<stamp>/
 exploratory/assistant_axis/    # role study:  01–04 + common + run_all + make_report + figures/<stamp>/
 data/embeddings/               # trait point cloud (gitignored; mirrored on HF)
@@ -118,6 +120,14 @@ data/embeddings_roles/         # role point cloud (gitignored)
 token/huggingface.txt          # HF token (gitignored)
 ```
 
-Config knobs live in `src/manifold_persona/config.py` (model, traits, paths,
-`primary_layer`). Point the extractor at a different model with
-`MP_MODEL_NAME`, or a relocated source repo with `PERSONA_VECTORS_DIR`.
+Config knobs live in `src/manifold_persona/config.py` (model, traits, paths, and the
+layer helpers `primary_layer` / `half_depth_layer` / `half_depth_hidden_state`). Point
+the extractor at a different model with `MP_MODEL_NAME`, or a relocated source repo with
+`ASSISTANT_AXIS_DIR` / `PERSONA_VECTORS_DIR`. `MP_ROLE_DIR` repoints the whole stack at a
+different cloud; `MP_AGGREGATE=none` disables role-mean collapsing.
+
+Install once so the packages import from any working directory:
+
+```bash
+.venv/bin/pip install -e .
+```
