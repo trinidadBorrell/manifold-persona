@@ -19,9 +19,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import datetime
 import json
-import platform
 import time
 from pathlib import Path
 
@@ -31,6 +29,8 @@ import pandas as pd
 from . import pipeline as P
 from . import sweep_plots as SP
 from . import idim
+from manifold_persona.runlog import (holm, make_say, new_run_dir, provenance,
+                                     timestamp, write_manifest)
 from .subsets import cloud_scale, kmeans_medoid_roles, subset_cloud
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -50,15 +50,6 @@ SPLINE_FIG_NS = [10, 25]     # illustrative figures only
 # plan #1 decider, for the 0a regression check
 PRIOR = {"r2": 0.655, "null_median": 0.372, "rel_reduction": 0.451}
 PRIOR_TOL = 0.01
-
-
-def holm(pvals: dict) -> dict:
-    items = sorted(pvals.items(), key=lambda kv: kv[1])
-    m, adj, prev = len(items), {}, 0.0
-    for i, (name, p) in enumerate(items):
-        prev = max(prev, min(1.0, (m - i) * p))
-        adj[name] = prev
-    return adj
 
 
 def run_cell(cloud, n: int, seed: int, n_perm: int, say) -> dict:
@@ -122,16 +113,10 @@ def main() -> None:
     n_ref = 10 if args.smoke else N_REF_DRAWS
 
     t0 = time.time()
-    stamp = datetime.datetime.now().strftime("%Y-%m-%dT%H-%M")
-    run_dir = REPO_ROOT / "output" / "manifold_h1-2" / (stamp + ("-smoke" if args.smoke else ""))
-    (run_dir / "figures").mkdir(parents=True, exist_ok=False)   # fail if exists
-    (run_dir / "data").mkdir(parents=True)
-    (run_dir / "logs").mkdir(parents=True)
-    log = open(run_dir / "logs" / "run.log", "w")
-
-    def say(*a):
-        msg = " ".join(str(x) for x in a)
-        print(msg, flush=True); log.write(msg + "\n"); log.flush()
+    stamp = timestamp()
+    run_dir = new_run_dir(REPO_ROOT / "output" / "manifold_h1-2",
+                          stamp + ("-smoke" if args.smoke else ""))
+    say, _close_log = make_say(run_dir / "logs" / "run.log")
 
     say(f"run_dir={run_dir}")
     say(f"plan={PLAN}  n_list={n_list}  seeds={seeds}  n_perm={n_perm}  "
@@ -159,8 +144,7 @@ def main() -> None:
     if not reg_ok:
         say("!! REGRESSION CHECK FAILED — shared code no longer reproduces plan #1. "
             "Stopping; nothing downstream is interpretable.")
-        json.dump({"status": "stopped-regression-failed", "regression": reg},
-                  open(run_dir / "manifest.json", "w"), indent=2)
+        write_manifest(run_dir, {"status": "stopped-regression-failed", "regression": reg})
         (run_dir / "REPORT.md").write_text(
             "# STOPPED — regression check failed\n\n"
             "The n=276 cell did not reproduce plan #1's decider "
@@ -291,17 +275,13 @@ def main() -> None:
         "decision": decision,
         "n_roles_total": len(cloud.role_names), "n_points_total": int(cloud.raw.shape[0]),
         "exclusions": "none (default kept everywhere)",
-        "python": platform.python_version(), "numpy": np.__version__,
-        "pandas": pd.__version__,
-        "started": datetime.datetime.fromtimestamp(t0).isoformat(),
-        "finished": datetime.datetime.now().isoformat(),
-        "elapsed_sec": round(time.time() - t0, 1),
+        **provenance(t0, pandas=True),
         "reproduce": ".venv/bin/python -m manifold.sweep",
         "cells": len(df),
     }
-    json.dump(manifest, open(run_dir / "manifest.json", "w"), indent=2, default=str)
+    write_manifest(run_dir, manifest, default=str)
     say(f"\nDONE in {time.time()-t0:.0f}s -> {run_dir}")
-    log.close()
+    _close_log()
 
 
 if __name__ == "__main__":

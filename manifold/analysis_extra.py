@@ -24,11 +24,13 @@ from scipy.sparse import csr_matrix  # noqa: E402
 from scipy.sparse.csgraph import minimum_spanning_tree, connected_components  # noqa: E402
 from scipy.spatial.distance import pdist, squareform  # noqa: E402
 
+from manifold_persona.runlog import save_fig  # noqa: E402
+
 from . import pipeline as P  # noqa: E402
 
 
 def _save(fig, path):
-    fig.savefig(path, dpi=300, bbox_inches="tight"); plt.close(fig); print("wrote", path)
+    save_fig(fig, path)          # dpi=300
 
 
 # --------------------------------------------------------------------------- #

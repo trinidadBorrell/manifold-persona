@@ -16,13 +16,13 @@ import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
+
+from manifold_persona.runlog import save_fig  # noqa: E402
 from sklearn.decomposition import PCA  # noqa: E402
 
 
 def _save(fig, path: Path):
-    fig.savefig(path, dpi=300, bbox_inches="tight")
-    plt.close(fig)
-    print("wrote", path)
+    save_fig(fig, path)          # dpi=300
 
 
 def _agg(df, col):

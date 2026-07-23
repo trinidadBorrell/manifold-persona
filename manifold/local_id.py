@@ -63,6 +63,8 @@ import sklearn
 from sklearn.decomposition import PCA
 from sklearn.neighbors import NearestNeighbors
 
+from manifold_persona.runlog import (new_run_dir, save_fig, timestamp,
+                                     write_manifest)
 from . import pipeline as P
 
 REPO = Path(__file__).resolve().parents[1]
@@ -159,9 +161,9 @@ def positive_control(role_means: np.ndarray, k: int, seed: int):
 # figures
 # --------------------------------------------------------------------------- #
 def _save(fig, path):
-    fig.savefig(path, dpi=160, bbox_inches="tight")
-    plt.close(fig)
-    print("   ", path.name)
+    # dpi=160 and the indented short form are deliberate deviations from the
+    # other plot modules (300 / "wrote <path>"); see the refactor plan's ## Found.
+    save_fig(fig, path, dpi=160, log=lambda p: print("   ", p.name))
 
 
 def fig_hist(real, neg_cvs, pos_vals, figs):
@@ -223,11 +225,10 @@ def fig_k(per_k, neg_by_k, pos_by_k, figs):
 
 # --------------------------------------------------------------------------- #
 def main() -> None:
-    stamp = datetime.datetime.now().strftime("%Y-%m-%dT%H-%M")
-    run = OUT_ROOT / f"{stamp}-local-intrinsic-dimension"
+    stamp = timestamp()
+    run = new_run_dir(OUT_ROOT, f"{stamp}-local-intrinsic-dimension",
+                      subdirs=("figures", "data"))
     figs = run / "figures"
-    figs.mkdir(parents=True, exist_ok=False)
-    (run / "data").mkdir()
 
     print("[0] loading role cloud (prompt_avg, layer 26, PCA-50) ...")
     cloud = P.load_cloud(view="prompt_avg", seed=SEED)
@@ -295,13 +296,13 @@ def main() -> None:
     np.savetxt(run / "data" / "local_id_per_role.csv",
                np.c_[real, proj], delimiter=",",
                header="local_id,assistant_axis_proj", comments="")
-    (run / "manifest.json").write_text(json.dumps({
+    write_manifest(run, {
         "run": stamp, "script": "manifold/local_id.py", "seed": SEED,
         "view": "prompt_avg", "layer": 26, "d_ambient": int(X.shape[1]),
         "python": sys.version.split()[0], "platform": platform.platform(),
         "numpy": np.__version__, "sklearn": sklearn.__version__,
         "status": "exploratory — post hoc, not preregistered",
-    }, indent=2))
+    })
 
     write_md(run, res)
     print(f"\ndone -> {run}")

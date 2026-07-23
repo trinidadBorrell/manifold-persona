@@ -10,10 +10,6 @@ Usage:
 """
 from __future__ import annotations
 
-import datetime
-import json
-import platform
-import sys
 import time
 from pathlib import Path
 
@@ -22,6 +18,8 @@ import pandas as pd
 
 from . import pipeline as P
 from . import plots
+from manifold_persona.runlog import (holm, make_say, new_run_dir, provenance,
+                                     timestamp, write_manifest)
 from .tps import SplineManifold, reconstruction
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -34,18 +32,6 @@ FLOOR = 0.30            # effect-size floor: relative reduction in NRE
 ALPHA = 0.05
 
 
-def holm(pvals: dict) -> dict:
-    """Holm-Bonferroni adjusted p-values for a name->p dict."""
-    items = sorted(pvals.items(), key=lambda kv: kv[1])
-    m = len(items)
-    adj, prev = {}, 0.0
-    for i, (name, p) in enumerate(items):
-        a = min(1.0, (m - i) * p)
-        prev = max(prev, a)
-        adj[name] = prev
-    return adj
-
-
 def verdict(stats: dict) -> str:
     if stats["p"] < ALPHA and stats["rel_reduction"] >= FLOOR:
         return "SUPPORTED"
@@ -56,16 +42,9 @@ def verdict(stats: dict) -> str:
 
 def main() -> None:
     t0 = time.time()
-    stamp = datetime.datetime.now().strftime("%Y-%m-%dT%H-%M")
-    run_dir = REPO_ROOT / "output" / "manifold_h1-2" / stamp
-    (run_dir / "figures").mkdir(parents=True, exist_ok=False)  # fail if exists
-    (run_dir / "data").mkdir(parents=True)
-    (run_dir / "logs").mkdir(parents=True)
-    log = open(run_dir / "logs" / "run.log", "w")
-
-    def say(*a):
-        msg = " ".join(str(x) for x in a)
-        print(msg); log.write(msg + "\n"); log.flush()
+    stamp = timestamp()
+    run_dir = new_run_dir(REPO_ROOT / "output" / "manifold_h1-2", stamp)
+    say, _close_log = make_say(run_dir / "logs" / "run.log")
 
     say(f"run_dir={run_dir}")
     say(f"seed=0  D={P.D_AMBIENT}  k={P.K_INTRINSIC}  floor={FLOOR}")
@@ -243,7 +222,7 @@ def main() -> None:
                          "reproduce": ".venv/bin/python -m manifold.run"},
     }, status="executed")
     say(f"\nDONE in {time.time()-t0:.0f}s. Verdict (C_role): {dec_verdict}")
-    log.close()
+    _close_log()
 
 
 def _write_manifest(run_dir, stamp, t0, extra, status):
@@ -256,13 +235,9 @@ def _write_manifest(run_dir, stamp, t0, extra, status):
         "view": "prompt_avg", "layer": 26, "model": "Qwen/Qwen2.5-3B-Instruct",
         "inputs": "data/embeddings_roles/ (prompt_avg, layer 26; no re-extraction)",
         "n_roles": 276, "n_points": 6900, "exclusions": "none (default role kept)",
-        "python": platform.python_version(), "numpy": np.__version__,
-        "started": datetime.datetime.fromtimestamp(t0).isoformat(),
-        "finished": datetime.datetime.now().isoformat(),
-        "elapsed_sec": round(time.time() - t0, 1), **extra,
+        **provenance(t0), **extra,
     }
-    with open(run_dir / "manifest.json", "w") as f:
-        json.dump(manifest, f, indent=2)
+    write_manifest(run_dir, manifest)
 
 
 def _write_report(run_dir, report, rows, stamp, stopped):
