@@ -13,14 +13,11 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import sys
 import time
 from pathlib import Path
 
 import pandas as pd
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from manifold_persona.config import MODEL_NAME, ROLE_EMBEDDINGS_DIR, primary_layer
 from manifold_persona.prompts_roles import (build_role_records, render_prompts,

@@ -29,7 +29,7 @@ from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
 from sklearn.decomposition import PCA
 import umap
 
-from common import (load_points, center, savefig, resolve_run_dir,
+from manifold_persona.common import (load_points, center, savefig, resolve_run_dir,
                     assistant_axis, project, clusters_path)
 
 METHODS = [  # (report key, parquet column suffix base, pretty title)

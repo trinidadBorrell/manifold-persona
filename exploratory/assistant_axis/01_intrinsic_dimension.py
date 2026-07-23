@@ -17,7 +17,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import skdim
 
-from common import load_points, center, savefig, resolve_run_dir
+from manifold_persona.common import load_points, center, savefig, resolve_run_dir
 
 
 def pca_participation_ratio(X):

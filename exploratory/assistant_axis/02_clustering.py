@@ -34,7 +34,7 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.metrics import silhouette_score, davies_bouldin_score
 import hdbscan
 
-from common import (load_points, center, savefig, resolve_run_dir,
+from manifold_persona.common import (load_points, center, savefig, resolve_run_dir,
                     assistant_axis, project, clusters_path)
 
 

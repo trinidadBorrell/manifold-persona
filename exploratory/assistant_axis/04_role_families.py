@@ -20,7 +20,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.cluster.hierarchy import linkage, dendrogram, fcluster
 
-from common import (load_points, center, savefig, resolve_run_dir,
+from manifold_persona.common import (load_points, center, savefig, resolve_run_dir,
                     assistant_axis, project, role_centroids, clusters_path)
 
 

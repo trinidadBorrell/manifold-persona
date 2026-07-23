@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "manifold-persona"
+version = "0.1.0"
+requires-python = ">=3.9"
+description = "Persona-activation geometry: do character-role representations lie on a low-dimensional manifold?"
+dependencies = []   # deliberately empty; requirements.txt stays the source of truth
+
+# Explicit packages, not `find`: this is a mixed flat+src tree (manifold/, extraction/,
+# exploratory/, data/, output/ all sit at the root), so discovery heuristics would guess wrong.
+[tool.setuptools]
+packages = ["manifold_persona", "manifold", "extraction"]
+
+# NOTE: a section, not an inline table. TOML inline tables may not span lines.
+[tool.setuptools.package-dir]
+manifold_persona = "src/manifold_persona"
+manifold = "manifold"
+extraction = "extraction"

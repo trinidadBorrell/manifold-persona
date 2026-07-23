@@ -11,13 +11,10 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import sys
 from pathlib import Path
 
 import numpy as np
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from manifold_persona.config import EMBEDDINGS_DIR, HF_REPO_NAME
 from manifold_persona.io import load_metadata, load_manifest, AVG_FILE, LAST_FILE

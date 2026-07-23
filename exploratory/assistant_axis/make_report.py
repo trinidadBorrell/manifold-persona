@@ -10,7 +10,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from common import resolve_run_dir
+from manifold_persona.common import resolve_run_dir
 from manifold_persona.io import load_manifest
 from manifold_persona.config import ROLE_EMBEDDINGS_DIR
 

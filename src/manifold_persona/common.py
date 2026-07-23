@@ -9,21 +9,21 @@ the paper's axis = mean(default) - mean(roles).
 from __future__ import annotations
 
 import os
-import sys
 import datetime
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-# exploratory/assistant_axis/common.py -> repo root is parents[2]
-REPO_ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(REPO_ROOT / "src"))
+from manifold_persona.config import REPO_ROOT, ROLE_EMBEDDINGS_DIR
+from manifold_persona.io import load_layer
 
-from manifold_persona.config import ROLE_EMBEDDINGS_DIR  # noqa: E402
-from manifold_persona.io import load_layer  # noqa: E402
-
-FIGURES_DIR = Path(__file__).resolve().parent / "figures"
+# Anchored to the repo root, NOT to __file__. This module used to live at
+# exploratory/assistant_axis/common.py, where `__file__.parent / "figures"` gave
+# the right answer; after the move to src/ it would silently relocate every
+# exploratory figure into the package. RESEARCH.md:27 fixes this location, and
+# .gitignore's `exploratory/*/figures/` rule depends on it.
+FIGURES_DIR = REPO_ROOT / "exploratory" / "assistant_axis" / "figures"
 FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 
 DEFAULT_COLOR = "#111111"     # the neutral Assistant baseline ("default" role)

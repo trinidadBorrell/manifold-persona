@@ -5,7 +5,6 @@ Everything downstream of the saved role point cloud; no model, no re-extraction.
 """
 from __future__ import annotations
 
-import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -17,13 +16,9 @@ from scipy.sparse.csgraph import connected_components
 from scipy.spatial.distance import pdist, squareform
 from sklearn.decomposition import PCA
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(REPO_ROOT / "exploratory" / "assistant_axis"))
-sys.path.insert(0, str(REPO_ROOT / "src"))
+from manifold_persona.common import load_points  # the study's loader/aggregator
 
-from common import load_points  # noqa: E402  (reuse the study's loader/aggregator)
-
-from .tps import SplineManifold, reconstruction  # noqa: E402
+from .tps import SplineManifold, reconstruction
 
 D_AMBIENT = 50          # PCA ambient reduction (plan: D=50)
 K_INTRINSIC = 3         # TPS intrinsic_dim (plan: k=3 primary, k=2 robustness)

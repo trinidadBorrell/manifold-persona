@@ -21,7 +21,7 @@ from sklearn.decomposition import PCA
 from scipy.cluster.hierarchy import linkage, fcluster
 import umap
 
-from common import (load_points, center, savefig, resolve_run_dir,
+from manifold_persona.common import (load_points, center, savefig, resolve_run_dir,
                     role_centroids, distinct_colors)
 
 

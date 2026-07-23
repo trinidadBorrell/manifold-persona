@@ -24,7 +24,7 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 import umap
 
-from common import (load_points, center, savefig, resolve_run_dir,
+from manifold_persona.common import (load_points, center, savefig, resolve_run_dir,
                     assistant_axis, project, DEFAULT_COLOR,
                     ward_families, clusters_path, distinct_colors)
 

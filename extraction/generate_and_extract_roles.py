@@ -29,15 +29,12 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
-import sys
 import time
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from manifold_persona.config import (MODEL_NAME, RESP_ROLE_EMBEDDINGS_DIR,
                                      half_depth_layer)

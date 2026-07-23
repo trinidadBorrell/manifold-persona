@@ -37,3 +37,6 @@ exploratory/*/figures/
 # Refactor verification scratch (large; sha.txt + dirnames stay tracked)
 refactors/baselines/*/golden/
 refactors/baselines/*/extra-reference/
+
+# Editable-install build artifact
+*.egg-info/

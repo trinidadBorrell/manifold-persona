@@ -7,7 +7,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from common import timestamp, FIGURES_DIR
+from manifold_persona.common import timestamp, FIGURES_DIR
 
 HERE = Path(__file__).resolve().parent
 PY = sys.executable

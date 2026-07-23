@@ -7,15 +7,11 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import sys
 import time
 from pathlib import Path
 
 import pandas as pd
 
-# Make src/ importable when run as a script/module from repo root.
-REPO_ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from manifold_persona.config import MODEL_NAME, EMBEDDINGS_DIR, TRAITS, primary_layer
 from manifold_persona.prompts import build_prompt_records, render_prompts, records_to_metadata
