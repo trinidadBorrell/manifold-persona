@@ -1,0 +1,35 @@
+.venv/
+__pycache__/
+*.pyc
+
+# Local point clouds (large; persona-vectors mirrored on Hugging Face)
+data/embeddings/*.npy
+data/embeddings/*.parquet
+data/embeddings_roles/*.npy
+data/embeddings_roles/*.parquet
+data/embeddings_aa_traits/*.npy
+data/embeddings_aa_traits/*.parquet
+
+# Secrets
+token/
+.env
+
+output/
+plans/
+data/
+exploratory/assistant_axis_traits/
+exploratory/persona_vectors/
+
+DESIGN.md   
+RESEARCH.md
+
+.claude/
+
+
+# Keep figures out of git by default (uncomment to version them)
+# exploratory/figures/*.png
+# exploratory/figures/*.html
+
+# Generated exploratory figures (large plotly HTML; regenerable, kept on disk)
+exploratory/*/figures/
+.DS_Store
