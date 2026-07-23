@@ -33,3 +33,7 @@ RESEARCH.md
 # Generated exploratory figures (large plotly HTML; regenerable, kept on disk)
 exploratory/*/figures/
 .DS_Store
+
+# Refactor verification scratch (large; sha.txt + dirnames stay tracked)
+refactors/baselines/*/golden/
+refactors/baselines/*/extra-reference/

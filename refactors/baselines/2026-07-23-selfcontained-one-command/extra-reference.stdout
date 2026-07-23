@@ -1,0 +1,52 @@
+/Users/trinidad.borrell/Documents/Work/MARS-V/code/manifold-persona/.venv/lib/python3.9/site-packages/sklearn/utils/extmath.py:335: RuntimeWarning: divide by zero encountered in matmul
+  Q, _ = normalizer(A @ Q)
+/Users/trinidad.borrell/Documents/Work/MARS-V/code/manifold-persona/.venv/lib/python3.9/site-packages/sklearn/utils/extmath.py:335: RuntimeWarning: overflow encountered in matmul
+  Q, _ = normalizer(A @ Q)
+/Users/trinidad.borrell/Documents/Work/MARS-V/code/manifold-persona/.venv/lib/python3.9/site-packages/sklearn/utils/extmath.py:335: RuntimeWarning: invalid value encountered in matmul
+  Q, _ = normalizer(A @ Q)
+/Users/trinidad.borrell/Documents/Work/MARS-V/code/manifold-persona/.venv/lib/python3.9/site-packages/sklearn/utils/extmath.py:336: RuntimeWarning: divide by zero encountered in matmul
+  Q, _ = normalizer(A.T @ Q)
+/Users/trinidad.borrell/Documents/Work/MARS-V/code/manifold-persona/.venv/lib/python3.9/site-packages/sklearn/utils/extmath.py:336: RuntimeWarning: overflow encountered in matmul
+  Q, _ = normalizer(A.T @ Q)
+/Users/trinidad.borrell/Documents/Work/MARS-V/code/manifold-persona/.venv/lib/python3.9/site-packages/sklearn/utils/extmath.py:336: RuntimeWarning: invalid value encountered in matmul
+  Q, _ = normalizer(A.T @ Q)
+/Users/trinidad.borrell/Documents/Work/MARS-V/code/manifold-persona/.venv/lib/python3.9/site-packages/sklearn/utils/extmath.py:340: RuntimeWarning: divide by zero encountered in matmul
+  Q, _ = qr_normalizer(A @ Q)
+/Users/trinidad.borrell/Documents/Work/MARS-V/code/manifold-persona/.venv/lib/python3.9/site-packages/sklearn/utils/extmath.py:340: RuntimeWarning: overflow encountered in matmul
+  Q, _ = qr_normalizer(A @ Q)
+/Users/trinidad.borrell/Documents/Work/MARS-V/code/manifold-persona/.venv/lib/python3.9/site-packages/sklearn/utils/extmath.py:340: RuntimeWarning: invalid value encountered in matmul
+  Q, _ = qr_normalizer(A @ Q)
+/Users/trinidad.borrell/Documents/Work/MARS-V/code/manifold-persona/.venv/lib/python3.9/site-packages/sklearn/utils/extmath.py:533: RuntimeWarning: divide by zero encountered in matmul
+  B = Q.T @ M
+/Users/trinidad.borrell/Documents/Work/MARS-V/code/manifold-persona/.venv/lib/python3.9/site-packages/sklearn/utils/extmath.py:533: RuntimeWarning: overflow encountered in matmul
+  B = Q.T @ M
+/Users/trinidad.borrell/Documents/Work/MARS-V/code/manifold-persona/.venv/lib/python3.9/site-packages/sklearn/utils/extmath.py:533: RuntimeWarning: invalid value encountered in matmul
+  B = Q.T @ M
+/Users/trinidad.borrell/Documents/Work/MARS-V/code/manifold-persona/.venv/lib/python3.9/site-packages/sklearn/utils/extmath.py:547: RuntimeWarning: divide by zero encountered in matmul
+  U = Q @ Uhat
+/Users/trinidad.borrell/Documents/Work/MARS-V/code/manifold-persona/.venv/lib/python3.9/site-packages/sklearn/utils/extmath.py:547: RuntimeWarning: overflow encountered in matmul
+  U = Q @ Uhat
+/Users/trinidad.borrell/Documents/Work/MARS-V/code/manifold-persona/.venv/lib/python3.9/site-packages/sklearn/utils/extmath.py:547: RuntimeWarning: invalid value encountered in matmul
+  U = Q @ Uhat
+== intrinsic dimension ==
+wrote refactors/baselines/2026-07-23-selfcontained-one-command/extra-reference/figures/fig12_intrinsic_dimension.png
+   TwoNN  role_means=8.54  raw=7.54
+   MLE    role_means=8.87  raw=7.23
+   lPCA   role_means=10.00  raw=14.00
+== spectral eigengap ==
+wrote refactors/baselines/2026-07-23-selfcontained-one-command/extra-reference/figures/fig10_spectral_eigengap.png
+   eigenvalues[:8]: [-0.0, 0.051, 0.139, 0.216, 0.226, 0.264, 0.294, 0.34] -> N≈ 2
+== persistence sweep ==
+wrote refactors/baselines/2026-07-23-selfcontained-one-command/extra-reference/figures/fig11_components_vs_tau.png
+   most-persistent N = 1 (over 68% of the τ range)
+== MST skeleton ==
+wrote refactors/baselines/2026-07-23-selfcontained-one-command/extra-reference/figures/fig09_mst_skeleton_2d.png
+wrote refactors/baselines/2026-07-23-selfcontained-one-command/extra-reference/figures/fig09_mst_skeleton_3d.png
+== intrinsic volume ==
+wrote refactors/baselines/2026-07-23-selfcontained-one-command/extra-reference/figures/fig13_intrinsic_volume.png
+== UMAP views (fig02u/fig09u) ==
+wrote refactors/baselines/2026-07-23-selfcontained-one-command/extra-reference/figures/fig02u_roles_umap_2d.png
+wrote refactors/baselines/2026-07-23-selfcontained-one-command/extra-reference/figures/fig09u_mst_skeleton_umap_2d.png
+wrote refactors/baselines/2026-07-23-selfcontained-one-command/extra-reference/figures/fig02u_roles_umap_3d.png
+wrote refactors/baselines/2026-07-23-selfcontained-one-command/extra-reference/figures/fig09u_mst_skeleton_umap_3d.png
+wrote refactors/baselines/2026-07-23-selfcontained-one-command/extra-reference/POSTHOC-manifold-structure.md

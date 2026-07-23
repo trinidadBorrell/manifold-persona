@@ -106,7 +106,10 @@ imply both siblings get vendored.
 - **Stop-on-fail:** `run.py:102-107` (posctrl) and `sweep.py:159-168` (regression check).
 - **Defensive plotting:** `RESEARCH.md:44`. Preserved where it exists (6 try/except in `plots.py`,
   10 in `sweep_plots.py`) and **extended** to the `--extra` path, which today has zero.
-- **Performance budget:** `manifold.run` ≤ 470 s (baseline 411 s, +15%) **with `--extra` off**.
+- **Performance budget:** `manifold.run` ≤ **210 s** with `--extra` off. **Tightened during
+  step 0** (deviation, recorded): the 470 s figure came from the 2026-07-21 manifest's 411 s,
+  but both step-0 passes ran in 183.9 s / 178.2 s with bit-identical output. Against a 184 s
+  measured baseline, a 470 s ceiling would pass a 2.5x regression. 210 s is +14% on measured.
   With `--extra` on the budget is **900 s**, because step 7 pulls `skdim`, `umap` and an Isomap fit
   onto the run path — an addition the 470 s figure was never meant to cover.
 
