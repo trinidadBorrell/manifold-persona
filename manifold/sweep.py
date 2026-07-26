@@ -101,11 +101,11 @@ def run_cell(cloud, n: int, seed: int, n_perm: int, say) -> dict:
     return row, sel, sub, null, dec
 
 
-def main() -> None:
+def main(argv=None) -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--smoke", action="store_true",
                     help="tiny run for wiring checks; NOT a result")
-    args = ap.parse_args()
+    args = ap.parse_args(argv)
 
     n_list = [10, 25] if args.smoke else N_LIST
     seeds = [0] if args.smoke else SEEDS

@@ -40,7 +40,16 @@ def verdict(stats: dict) -> str:
     return "null"
 
 
-def main() -> None:
+def main(argv=None) -> None:
+    import argparse
+    ap = argparse.ArgumentParser(prog="manifold.run",
+                                 description="H1 decider: fit the role manifold and test it.")
+    ap.add_argument("--extra", action="store_true",
+                    help="also run the post-hoc structural analyses (fig09-13 + "
+                         "POSTHOC-manifold-structure.md). Off by default.")
+    args = ap.parse_args(argv)
+    _ = args.extra                 # wired in a later step; no effect yet
+
     t0 = time.time()
     stamp = timestamp()
     run_dir = new_run_dir(REPO_ROOT / "output" / "manifold_h1-2", stamp)

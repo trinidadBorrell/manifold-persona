@@ -224,7 +224,10 @@ def fig_k(per_k, neg_by_k, pos_by_k, figs):
 
 
 # --------------------------------------------------------------------------- #
-def main() -> None:
+def main(argv=None) -> None:
+    import argparse
+    argparse.ArgumentParser(prog="manifold.local_id",
+                            description="Local intrinsic-dimension study (exploratory).").parse_args(argv)
     stamp = timestamp()
     run = new_run_dir(OUT_ROOT, f"{stamp}-local-intrinsic-dimension",
                       subdirs=("figures", "data"))
