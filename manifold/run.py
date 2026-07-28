@@ -48,7 +48,6 @@ def main(argv=None) -> None:
                     help="also run the post-hoc structural analyses (fig09-13 + "
                          "POSTHOC-manifold-structure.md). Off by default.")
     args = ap.parse_args(argv)
-    _ = args.extra                 # wired in a later step; no effect yet
 
     t0 = time.time()
     stamp = timestamp()
@@ -231,6 +230,19 @@ def main(argv=None) -> None:
                          "reproduce": ".venv/bin/python -m manifold.run"},
     }, status="executed")
     say(f"\nDONE in {time.time()-t0:.0f}s. Verdict (C_role): {dec_verdict}")
+
+    # Post-hoc structural extras (fig09-13 + POSTHOC-manifold-structure.md).
+    # Off by default. Runs only AFTER the report + manifest are on disk, and is
+    # wrapped so any failure (skdim / UMAP / Isomap) logs and returns without
+    # killing a run that already produced its numbers -- RESEARCH.md:44.
+    if args.extra:
+        say("\n[extra] post-hoc structural analyses ...")
+        try:
+            from . import analysis_extra
+            analysis_extra.main(str(run_dir))
+        except Exception as e:
+            say(f"    [extra] FAILED ({type(e).__name__}: {e}); run result is unaffected.")
+
     _close_log()
 
 
