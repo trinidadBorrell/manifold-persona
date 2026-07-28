@@ -17,20 +17,25 @@ lens of two follow-up ideas: that persona representations lie on a low-dimension
 
 ## What it does
 
-**Stage 0 — embedding generation** (`extraction/`). For each of the 7 persona
-traits (`evil, sycophantic, hallucinating, apathetic, optimistic, humorous,
-impolite`) we build persona-conditioned prompts directly from the
-`persona_vectors` trait artifacts — every `question × instruction(pos/neg)` plus
-a neutral (no-instruction) baseline — render them through the model's chat
-template, and extract **prompt activations** (mean-over-tokens `prompt_avg` and
-final-token `prompt_last`) from **all 37 layers** of `Qwen/Qwen2.5-3B-Instruct`.
-No response generation, no judge. This yields a labelled point cloud of **1,540
-points** (700 pos + 700 neg + 140 neutral). Prompt construction and the
-activation loop are recycled from `persona_vectors` (`eval_persona.py`,
-`generate_vec.py`).
+**Stage 0 — embedding generation** (`extraction/`). The main cloud is built from
+the **276 character-role archetypes** vendored from the Assistant Axis repo (see
+`refs/assistant-axis/`, `PROVENANCE.md`). For every role we form persona-conditioned
+chats — each role's 5 instruction phrasings × 5 shared sampled questions
+(`system(role) + user question`) — render them through the model's chat template,
+and extract **prompt activations** (mean-over-tokens `prompt_avg` and final-token
+`prompt_last`) from **all 37 layers** of `Qwen/Qwen2.5-3B-Instruct`. This yields a
+labelled point cloud of **6,900 points** (276 roles × 5 instructions × 5 questions),
+saved under `data/embeddings_roles/`. Run it with:
 
-The primary analysis layer is **26** — the depth-scaled equivalent of the
-paper's layer 20/28 for Qwen2.5-7B (~0.71 depth).
+```bash
+.venv/bin/python -m manifold_persona.cli extract              # default: prompt tokens
+.venv/bin/python -m manifold_persona.cli extract --response   # answer tokens, ~0.5 depth
+```
+
+The default reads **prompt** tokens at layer **26** — the depth-scaled equivalent of
+Persona Vectors' layer 20/28 for Qwen2.5-7B (~0.71 depth). `--response` instead
+generates an answer and reads the **response** tokens at ~half depth
+(`generate_and_extract_roles.py`), matching the Assistant Axis paper's extraction.
 
 **Stage 1 — exploratory** (`exploratory/`):
 1. `01_intrinsic_dimension.py` — non-linear ID estimators (TwoNN, MLE, lPCA,
