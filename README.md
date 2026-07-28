@@ -48,17 +48,13 @@ generates an answer and reads the **response** tokens at ~half depth
 4. `04_traits_per_cluster.py` — cluster×trait contingency heatmap, composition
    bars, dominant-trait/purity table.
 
-## Key findings (Qwen2.5-3B, layer 26, `prompt_avg`)
+## Key findings so far (Qwen2.5-3B, layer 26, `prompt_avg`)
 
 - **Low-dimensional manifold**: intrinsic dimension ≈ **3–13** (most estimators
   4–7) versus ambient **2048** → persona activations occupy a thin manifold.
 - **Assistant Axis**: PCA **PC1** orders **neutral → negative → positive**
   personas — a single leading direction capturing distance from the model's
   default identity.
-- **Geometry recovers the traits**: KMeans **k=14** recovers trait×polarity with
-  **0.86 dominant-trait purity** (NMI≈0.73 vs trait); neutral prompts form their
-  own cluster. Linear structure carries the persona signal, while local UMAP is
-  dominated by question-level micro-structure.
 
 ## Setup & run
 
@@ -83,33 +79,6 @@ figure, interprets it, and cites the code that produced it. The orchestrator
 fixes one timestamp and shares it across the four scripts via the `MP_RUN_DIR`
 env var; each script also accepts `--outdir`.
 
-## Three studies
-
-`exploratory/` holds **three parallel studies** that share the identical pipeline
-(local Qwen2.5-3B, prompt activations, per-example point cloud) but differ in the
-personas — kept separate so results never mix:
-
-| | `persona_vectors/` | `assistant_axis/` | `assistant_axis_traits/` |
-|---|---|---|---|
-| Personas | 7 behavioral **traits** × pos/neg | 276 character-role **archetypes** | 240 behavioral **traits** × pos/neg |
-| Source | `../persona_vectors` artifacts | `../assistant-axis/data/roles` | `../assistant-axis/data/traits` |
-| Points | 1,540 | ~6,900 | 3,600 |
-| Polarity | yes (pos/neg/neutral) | no (identities) | yes (pos/neg/neutral) |
-| Data | `data/embeddings/` | `data/embeddings_roles/` | `data/embeddings_aa_traits/` |
-| Signature analyses | polarity PCA axis; traits-per-cluster; 8 cluster-3D | Assistant-Axis recovery; role families | polarity axis; trait families; per-polarity ID |
-
-The **assistant-axis role study** is the live one and the basis of the H1 manifold
-work; it builds its own cloud rather than using the paper's uploaded aggregate vectors:
-
-```bash
-.venv/bin/python -m extraction.build_and_extract_roles
-.venv/bin/python exploratory/assistant_axis/run_all.py
-```
-
-The `persona_vectors/` and `assistant_axis_traits/` clouds are **retained on disk but
-are no longer regenerable from this repo** — their extraction scripts were removed as
-unused by H1 (`RESEARCH.md`). Their exploratory scripts still run against the existing
-`data/embeddings*/` directories.
 
 ## Layout
 
