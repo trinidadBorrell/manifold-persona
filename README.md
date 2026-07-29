@@ -48,6 +48,22 @@ generates an answer and reads the **response** tokens at ~half depth
 4. `04_traits_per_cluster.py` — cluster×trait contingency heatmap, composition
    bars, dominant-trait/purity table.
 
+**Stage 1b — per-persona** (`exploratory/per_persona/`). The stage-1 scripts collapse
+each role to one mean point and study the cloud *between* roles. This stage inverts
+that: it keeps the raw cloud and gives each role its **own** manifold — 276 intrinsic
+dimensions and 276 clusterings, each from that role's 25 points
+(5 instructions × 5 questions).
+
+```bash
+.venv/bin/python exploratory/per_persona/run_all.py      # 01-03 + REPORT.md, ~70s
+```
+
+Read `exploratory/per_persona/README.md` before using the numbers: at 25 points a role's
+cloud is a complete 5×5 factorial grid, and **99.4% of its variance is that grid**
+(instruction 68%, question 31%, interaction 0.6%). A design null with no persona in it
+reproduces both the ID and the clustering, so on today's cloud these measure the
+extraction design. `03_compute_budget.py` prices the fix.
+
 ## Key findings so far (Qwen2.5-3B, layer 26, `prompt_avg`)
 
 - **Low-dimensional manifold**: intrinsic dimension ≈ **3–13** (most estimators
@@ -55,6 +71,12 @@ generates an answer and reads the **response** tokens at ~half depth
 - **Assistant Axis**: PCA **PC1** orders **neutral → negative → positive**
   personas — a single leading direction capturing distance from the model's
   default identity.
+- **Per-persona manifolds are not yet measurable**: within a role, 99.4% of the
+  variance is the 5×5 instruction×question extraction grid (interaction 0.6%), so
+  the 276 per-role IDs (~4–8, lPCA exactly 8 = the grid's additive rank) and the
+  per-role clusterings (ARI ≈ 1.0 vs instruction phrasing) are reproduced by a
+  persona-free design null. Needs ~400 points/role to resolve; see
+  `exploratory/per_persona/`.
 
 ## Setup & run
 
@@ -89,6 +111,7 @@ extraction/                    # build_and_extract_roles.py (prompt tokens),
 manifold/                      # H1 manifold study: pipeline, tps, run, sweep, local_id
 exploratory/persona_vectors/   # trait study: 01–04 + common + run_all + make_report + figures/<stamp>/
 exploratory/assistant_axis/    # role study:  01–04 + common + run_all + make_report + figures/<stamp>/
+exploratory/per_persona/       # per-role study: 01–03 + common + run_all + figures/<stamp>/
 data/embeddings/               # trait point cloud (gitignored; mirrored on HF)
 data/embeddings_roles/         # role point cloud (gitignored)
 token/huggingface.txt          # HF token (gitignored)
