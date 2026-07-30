@@ -54,6 +54,29 @@ real roles separate from the null on every panel.
 primary layer is kept locally, 226 MB, so `manifest.json` reports `n_layers: 1`
 and `source_layer: 19`).
 
+## ID vs the Assistant Axis (`04`)
+
+Run separately against an existing run folder:
+
+```bash
+MP_ROLE_DIR=data/embeddings_roles_resp40 .venv/bin/python \
+  exploratory/per_persona/04_id_vs_axis.py --layer 0 --rundir figures/resp40
+```
+
+On the response cloud, **4 of 6 estimators agree strongly: more Assistant-like
+roles have LOWER-dimensional within-role manifolds** (partial r −0.49 to −0.80
+after controlling cloud scale, BH q < 1e-17). `lPCA` dissents (+0.44) and
+participation ratio is near zero once scale is removed (+0.13).
+
+Two warnings the script exists to enforce. **Cloud scale is a huge confound** —
+ID correlates with log within-role variance at r up to −0.78, so the raw column
+is not the answer; read the partial. And **`axis_proj` and `dist_default` are
+mirror images here** (their r-vectors correlate at 0.999), so they are one
+finding stated twice, not two independent confirmations.
+
+The prompt cloud gives the **opposite sign** — but its ID is 99.4% grid, so that
+correlation is about grid saturation, not geometry.
+
 ## Scaling further
 
 Only the **question** factor scales: `refs/assistant-axis/extraction_questions.jsonl`
@@ -72,6 +95,7 @@ bound, since generation is several times slower.
 | `02_per_persona_clustering.py` | 276 clusterings, ARI/NMI vs instruction and vs question |
 | `03_compute_budget.py` | measured analysis cost, ID-recovery-vs-N curve, extraction budget |
 | `fetch_resp40.py` | pull the HF response cloud, keep the primary layer only |
+| `04_id_vs_axis.py` | does per-role ID track closeness to the Assistant? all 6 estimators, scale-controlled |
 | `run_all.py` | all three into one dated folder + `REPORT.md` |
 
 ## Reuse
