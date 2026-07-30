@@ -69,6 +69,12 @@ def main():
         model, tokenizer, texts, device, sink_factor=sink_factor)
 
     meta_df = pd.DataFrame(records_to_metadata(records))
+    # Prompt length per record. The attention sink made prompt_avg's PC1 = 1/T
+    # (see diagnostics/), and length stays a real confound with role even after
+    # the fix -- so it has to be a first-class column, not something recovered later.
+    meta_df["n_tokens"] = [len(tokenizer(r.text, add_special_tokens=False)["input_ids"])
+                           for r in records]
+    meta_df["n_sink_dropped"] = n_dropped
     p_layer = primary_layer(model.config.num_hidden_layers)
     manifest = {
         "study": "assistant_axis",

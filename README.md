@@ -65,10 +65,22 @@ geometry being measured. **Both numbers below need recomputing on a clean cloud.
 A cloud is clean iff its `data/embeddings_roles/manifest.json` contains a
 `sink_factor` key.
 
-- ~~**Low-dimensional manifold**: intrinsic dimension ≈ **3–13** (most estimators
-  4–7) versus ambient **2048**.~~ Needs recompute.
-- ~~**Assistant Axis**: PCA **PC1** orders **neutral → negative → positive**
-  personas.~~ Needs recompute — PC1 was length.
+Recomputed on 2026-07-30 (Qwen2.5-**0.5B**, layer 17, 276 roles × 5 × 3 = 4,140
+records, both with and without the sink). Verdict is split:
+
+- **Low-dimensional manifold — SURVIVES.** Every distance-based estimator is
+  essentially unchanged by the fix (TwoNN 11.8 → 11.3, MLE 13.0 → 12.6, TLE
+  12.2 → 11.9). ID ≈ **10–13** vs ambient **896** is real. *But* the linear
+  picture was badly understated: lPCA 4 → 25, and PCs for 90% variance 42 → 71.
+- **Assistant Axis — DOES NOT SURVIVE.** `|cos(PC1, axis)|` falls **0.945 → 0.276**.
+  The apparent alignment was sequence length (raw PC1 correlates with `1/T` at
+  0.997). Worse, the axis is *structurally* confounded with length: the `default`
+  baseline is the shortest condition in the design by construction (mean 32.6
+  tokens vs 41.7 for roles; no role's mean falls below it), and the projection
+  still correlates with `1/T` at **0.64** even after the fix.
+
+Caveat: this is 0.5B and *prompt* tokens, so it does not test the papers' claims —
+they use response tokens (which excludes the sink automatically) at 27B–70B.
 
 ## Setup & run
 
