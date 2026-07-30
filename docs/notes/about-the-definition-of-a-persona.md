@@ -73,6 +73,11 @@ Much more important: we are averaging ~256 questions in an infinitely dimensiona
 space. We are way off the actual expected value. No amount of care about *how* we
 average fixes the fact that `f̂ ≠ f`, and it never will be.
 
+Two distinct failures are stacked here: **sampling error**, which more questions
+would shrink, and **approximation error** — a constant vector cannot represent an
+input-dependent function — which no number of questions touches. §6 is about the
+second.
+
 ## 5. The exact `f`
 
 We would like the exact shift `f`, not an estimate `f̂`.
@@ -152,6 +157,11 @@ Three consequences:
 We already know from the lossy representation that persona space is low-dimensional
 and that it is useful for steering. So:
 
+They are not symmetric in cost. **A needs training, which puts the expectation over
+inputs back into the loss — the thing §5 was trying to escape. B has a training-free
+branch: compress the KV cache to `k` slots by clustering the key–value pairs, which
+is question-free, fixed-dimensional, and lossy by a measurable amount.**
+
 ### A. A better lossy representation: LoRA, with fixed and controlled dimension
 
 Keep it lossy but with much more controlled dimensionality and far more faithful
@@ -174,9 +184,12 @@ Experiment 1 tells us whether this is necessary.
 
 Prior art worth knowing: **ReFT / LoReFT** already does low-rank learned
 interventions on hidden states (this is "steering with a learned operator instead of
-a fixed vector"), and hypernetworks that emit a LoRA from a text description exist.
-Neither has been done *for personas* and then asked about the geometry of the
-resulting adapter space. That is our question.
+a fixed vector"), and **Text-to-LoRA** (Sakana AI, ICML 2025,
+<https://github.com/SakanaAI/text-to-lora>) is a hypernetwork that emits a
+task-specific LoRA from a text description in one forward pass — so a persona
+adapter need not be trained per persona, it can be amortised. Neither has been done
+*for personas* and then asked about the geometry of the resulting adapter space.
+That is our question.
 
 ### B. Stay in KV-cache space and do the geometry there
 
@@ -193,6 +206,9 @@ comparability problem directly.
 - **Functional view.** The KV cache defines a map `x ↦ Δh(x)` that shifts the weight
   space. The domain is infinite-dimensional, so work in the **image** of that map,
   which need not be.
+- **Training-free compression.** Cluster the `|P|` key–value pairs into `k`
+  representatives. Fixed-dimensional and comparable, with no questions and no
+  fitting; the only cost is a loss we can measure directly against the exact cache.
 
 ## Experiment 1 — how far is the true shift from a fixed vector?
 
@@ -217,4 +233,32 @@ Stack over questions and positions into a matrix and look at its singular spectr
 
 The fraction of variance in the top singular direction is a direct, quantitative
 answer to "how much is the actual difference" between `f̂` and `f`. No generation, no
-training, ~40 lines.
+training.
+
+**The control matters.** A persona prompt and no prompt give sequences of different
+length, so the question tokens sit at different absolute positions and RoPE alone
+produces a shift. The control must be a **length-matched, persona-free** system
+prompt, so positions are identical and only content differs. And there must be a
+**null**: two persona-free controls of equal length, whose shift is the floor.
+
+### Result (Qwen2.5-0.5B, layer 12, 8 roles × 10 questions)
+
+`diagnostics/03_experiment1_shift_rank.py`
+
+| | SV1 | SV1-3 | eff. directions | gain CV | mean\|cos to v1\| | ‖Δh‖ |
+|---|---|---|---|---|---|---|
+| persona (mean of 8) | 0.239 | 0.477 | 10.2 | 0.453 | 0.206 | 3.74 |
+| null (no persona) | 0.378 | 0.674 | 5.0 | 0.849 | 0.126 | 2.47 |
+
+**Gated-constant is rejected.** The top direction carries only ~24% of the variance,
+there are ~10 effective directions, and each individual shift has mean \|cos\| of
+just 0.21 with the top direction. The persona shift is *more* spread out than the
+null, not less. So `Δh(x) ≈ λ(x)·v` does not hold: the direction itself moves with
+the input, not only the gain. This argues for §7B, or for a gated LoRA rather than a
+plain one — a single steering vector is the wrong object class, as §6 predicted.
+
+**Caveat on effect size.** The persona shift is only ~1.5× the null in magnitude
+(3.74 vs 2.47), so a large share of what is measured is generic "system-prompt
+content changed" rather than persona identity. The rank conclusion is robust to
+this; the effect size is not. Needs a larger model, more roles, and a sharper null
+before it carries weight.
