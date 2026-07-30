@@ -48,19 +48,39 @@ generates an answer and reads the **response** tokens at ~half depth
 4. `04_traits_per_cluster.py` — cluster×trait contingency heatmap, composition
    bars, dominant-trait/purity table.
 
-## Key findings so far (Qwen2.5-3B, layer 26, `prompt_avg`)
+## ⚠️ Findings below are WITHDRAWN pending recompute (2026-07-30)
 
-- **Low-dimensional manifold**: intrinsic dimension ≈ **3–13** (most estimators
-  4–7) versus ambient **2048** → persona activations occupy a thin manifold.
-- **Assistant Axis**: PCA **PC1** orders **neutral → negative → positive**
-  personas — a single leading direction capturing distance from the model's
-  default identity.
+The `prompt_avg` view they were computed from was contaminated by a first-token
+**attention sink**, which made its **PC1 essentially `1/sequence_length`**
+(|r| = 0.9998, 78% of variance) rather than anything about personas. Because
+system-prompt length differs by role, it also produced a *fake* between-role
+signal. Fixed in `src/manifold_persona/extract.py`; full measurement and
+mechanism in **[diagnostics/README.md](diagnostics/README.md)**.
+
+Distance-based ID estimators are translation-invariant, so a constant offset
+would have been harmless — but the sink term is scaled by `1/T`, so it varies.
+Measured `r(d(prompt_avg), d(sink-excluded)) = 0.42`: the artifact was inside the
+geometry being measured. **Both numbers below need recomputing on a clean cloud.**
+
+A cloud is clean iff its `data/embeddings_roles/manifest.json` contains a
+`sink_factor` key.
+
+- ~~**Low-dimensional manifold**: intrinsic dimension ≈ **3–13** (most estimators
+  4–7) versus ambient **2048**.~~ Needs recompute.
+- ~~**Assistant Axis**: PCA **PC1** orders **neutral → negative → positive**
+  personas.~~ Needs recompute — PC1 was length.
 
 ## Setup & run
+
+On a CPU-only machine see **[SMOKE.md](SMOKE.md)** instead — it has a verified
+CPU-wheel setup, a small-model smoke sequence, and measured runtimes.
 
 ```bash
 python -m venv --system-site-packages .venv     # inherits an existing torch, if present
 .venv/bin/pip install -r requirements.txt
+
+# Sanity-check the apparatus before trusting any geometry (~1 min, CPU, 0.5B model)
+.venv/bin/python diagnostics/01_activation_scales.py
 
 # Stage 0: build the role point cloud (data/embeddings_roles/)
 .venv/bin/python -m extraction.build_and_extract_roles     # prompt-token activations
@@ -83,6 +103,8 @@ env var; each script also accepts `--outdir`.
 ## Layout
 
 ```
+docs/papers/ + docs/notes/     # reference PDFs + reading notes (see docs/README.md)
+diagnostics/                   # apparatus checks: activation scales, attention sinks
 src/manifold_persona/          # config, io, extract, common, runlog; prompts_roles.py (roles)
 extraction/                    # build_and_extract_roles.py (prompt tokens),
                                # generate_and_extract_roles.py (response tokens), push_to_hf.py
