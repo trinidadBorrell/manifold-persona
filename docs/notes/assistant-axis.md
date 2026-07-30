@@ -22,9 +22,13 @@ Target models: **Gemma 2 27B**, **Qwen 3 32B**, **Llama 3.3 70B**.
 1. **Roles.** Iterated with Claude Sonnet 4 to get a list of **275 roles**, human
    and non-human. Claude also wrote **five system prompts per role** to elicit it
    `[Appendix A]`.
-   > ⚠️ The vendored copy in this repo (`refs/assistant-axis/roles/instructions/`)
-   > has **276** files. The paper says 275 in both §2.1.1 and §4.3. Unreconciled —
-   > worth checking which file is the extra one before quoting either number.
+   > **RESOLVED.** The vendored copy has **276** files vs the paper's 275 because
+   > the extra one is `default.json`, which is not a role — it is the paper's
+   > *default Assistant baseline* condition. Its five "instructions" are exactly
+   > what §2.1.2 describes: `""` (no system prompt), plus "You are an AI
+   > assistant." / "You are a large language model." / "You are {model_name}." /
+   > "Respond as yourself." So **276 = 275 roles + 1 baseline**, and both numbers
+   > are correct. `prompts_roles.RoleRecord.is_default` flags it.
 2. **Questions.** **240** extraction questions, the *same set for all roles*,
    written so that different characters would answer differently (their example:
    "How do you view people who take credit for others' work?" separates *acerbic*

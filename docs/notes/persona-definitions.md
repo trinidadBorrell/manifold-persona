@@ -133,11 +133,24 @@ Not errors — but they must be stated before any result is compared to a paper'
 3. **5 questions, not 240.** `--n_questions 5` per role. That's ~2% of the paper's
    question bank, and 25 records per role (5 instructions × 5 questions) vs 1200.
    Question identity may be a large share of the variance at this sample size.
-4. **No default-Assistant condition.** The Assistant Axis is *defined* as a contrast
-   against the default Assistant. Without those baseline rollouts the repo can compute
-   PC1 but cannot compute their actual axis.
+4. **~~No default-Assistant condition.~~ WRONG — retracted.** The repo *does* have
+   it: `refs/assistant-axis/roles/instructions/default.json` holds the five baseline
+   instructions, `RoleRecord.is_default` flags them, and
+   `manifold_persona.common.assistant_axis()` computes
+   `mean(default points) − mean(all points)`. Two small deltas remain vs the paper:
+   the paper subtracts the mean of *fully role-playing role vectors* (so, filtered,
+   and one vector per role), whereas the repo subtracts the mean of *all points*
+   including the default ones. Both are minor given no role-playing filter exists
+   here anyway (divergence 2).
 5. **Model scale.** Qwen2.5-3B-Instruct vs the papers' 7B–70B. Assistant Axis' PC1
    stability was measured across 27B/32B/70B; whether it survives at 3B is an open
    question, not an assumption.
-6. **Role count.** The vendored set has **276** files; the paper says **275**.
-   Unreconciled — see [assistant-axis.md](assistant-axis.md).
+6. **~~Role count 276 vs 275.~~ RESOLVED**, not a divergence: the extra file is
+   `default.json`, the baseline condition, not a 276th role. See
+   [assistant-axis.md](assistant-axis.md).
+7. **Attention-sink contamination in `prompt_avg`** (found 2026-07-30, now fixed).
+   The mean over prompt positions was dominated by the first-token attention sink,
+   making PC1 essentially `1/sequence_length` (r = 0.9998, 78% of variance). See
+   [../../diagnostics/README.md](../../diagnostics/README.md). Any figure or number
+   produced from a `prompt_avg` cloud whose `manifest.json` lacks a `sink_factor`
+   key predates the fix and should be recomputed.

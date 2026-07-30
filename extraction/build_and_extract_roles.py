@@ -23,7 +23,8 @@ import pandas as pd
 from manifold_persona.config import MODEL_NAME, ROLE_EMBEDDINGS_DIR, primary_layer
 from manifold_persona.prompts_roles import (build_role_records, render_prompts,
                                             records_to_metadata, list_roles)
-from manifold_persona.extract import load_model_and_tokenizer, extract_prompt_activations
+from manifold_persona.extract import (load_model_and_tokenizer, extract_prompt_activations,
+                                      DEFAULT_SINK_FACTOR)
 from manifold_persona.io import save_embeddings
 
 
@@ -34,6 +35,14 @@ def main():
     ap.add_argument("--n_questions", type=int, default=5, help="questions sampled per role")
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--limit", type=int, default=None, help="cap #records (smoke test)")
+    ap.add_argument("--roles", nargs="+", default=None,
+                    help="restrict to these roles (smoke test). Include 'default' -- the "
+                         "neutral Assistant baseline that the Assistant Axis is defined "
+                         "against; without it 02_clustering.py cannot build the axis.")
+    ap.add_argument("--keep_sinks", action="store_true",
+                    help="do NOT exclude attention-sink positions from prompt_avg. "
+                         "Reproduces the pre-fix behaviour, whose PC1 is ~1/seq_len "
+                         "(r=0.9998). See diagnostics/01_activation_scales.py.")
     args = ap.parse_args()
 
     t0 = time.time()
@@ -46,14 +55,18 @@ def main():
     print("Building role prompt records from assistant-axis artifacts ...")
     model_display = args.model.split("/")[-1]
     records = build_role_records(n_questions=args.n_questions, seed=args.seed,
-                                 model_display=model_display)
+                                 roles=args.roles, model_display=model_display)
     if args.limit:
         records = records[: args.limit]
     records = render_prompts(records, tokenizer)
-    print(f"{len(records)} prompt records over {len(list_roles())} roles")
+    # Count roles actually present -- with --limit this is far fewer than list_roles().
+    print(f"{len(records)} prompt records over {len({r.role for r in records})} roles "
+          f"(of {len(list_roles())} available)")
 
     texts = [r.text for r in records]
-    avg, last = extract_prompt_activations(model, tokenizer, texts, device)
+    sink_factor = None if args.keep_sinks else DEFAULT_SINK_FACTOR
+    avg, last, n_dropped = extract_prompt_activations(
+        model, tokenizer, texts, device, sink_factor=sink_factor)
 
     meta_df = pd.DataFrame(records_to_metadata(records))
     p_layer = primary_layer(model.config.num_hidden_layers)
@@ -69,6 +82,10 @@ def main():
         "seed": args.seed,
         "views": ["prompt_avg", "prompt_last"],
         "dtype": "float16",
+        # Provenance for the attention-sink fix. Absent in clouds built before it.
+        "sink_factor": sink_factor,
+        "sink_positions_dropped_max": int(max(n_dropped)) if n_dropped else 0,
+        "final_layer_is_normalized": n_layers - 1,
     }
     print("Saving to", args.out_dir)
     save_embeddings(avg, last, meta_df, manifest, out_dir=Path(args.out_dir))
