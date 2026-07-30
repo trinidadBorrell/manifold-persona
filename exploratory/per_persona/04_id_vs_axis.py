@@ -96,9 +96,25 @@ def main():
     df["log_var"] = df["role"].map(lambda r: np.log(tot_var[r]))
 
     # `default` is distance 0 from itself and anchors the axis; it cannot inform
-    # a trend about distance FROM it, so every fit here excludes it.
+    # a trend about distance FROM it, so every fit here excludes it. It is still
+    # PLOTTED, and its percentile against the other roles recorded: whether the
+    # Assistant itself obeys the trend its own axis defines is the whole point.
     d = df[df["role"] != "default"].dropna(subset=ID_COLS + PREDICTORS + ["log_var"])
-    print(f"view={args.view} layer={layer} grid={n_i}x{n_q} n={len(d)} roles (default excluded)")
+    dflt = df[df["role"] == "default"]
+    dflt = dflt.iloc[0] if len(dflt) else None
+    print(f"view={args.view} layer={layer} grid={n_i}x{n_q} n={len(d)} roles (default excluded from fits)")
+
+    default_pos = {}
+    if dflt is not None:
+        default_pos["axis_proj"] = {
+            "value": float(dflt["axis_proj"]),
+            "pct_of_other_roles_below": float((d["axis_proj"] < dflt["axis_proj"]).mean() * 100),
+            "others_min": float(d["axis_proj"].min()), "others_max": float(d["axis_proj"].max())}
+        for c in ID_COLS:
+            default_pos[c] = {
+                "value": float(dflt[c]),
+                "pct_of_other_roles_below": float((d[c] < dflt[c]).mean() * 100),
+                "others_median": float(d[c].median())}
 
     rows = []
     for pred in PREDICTORS:
@@ -120,8 +136,10 @@ def main():
 
     res.to_csv(run_dir / f"04_id_vs_axis_{args.view}_L{layer}.csv", index=False)
     json.dump({"_meta": {"view": args.view, "layer": layer, "grid": [n_i, n_q],
-                         "n_roles": int(len(d)), "default_excluded": True},
+                         "n_roles": int(len(d)),
+                         "default_excluded_from_fits": True, "default_plotted": True},
                "id_vs_log_variance_pearson_r": r_scale,
+               "default_position": default_pos,
                "results": res.to_dict("records")},
               open(run_dir / f"04_id_vs_axis_{args.view}_L{layer}.json", "w"),
               indent=2, default=float)
@@ -151,6 +169,16 @@ def main():
             xs = np.linspace(d[pred].min(), d[pred].max(), 50)
             sig = row["partial_q"] < 0.05
             ax.plot(xs, m * xs + b, lw=2, color=C_DESIGN if sig else C_QUEST)
+            # The Assistant itself: excluded from the fit, but shown, because
+            # "does default obey the trend its own axis defines?" is the point.
+            # The fit line is extended to reach it when it sits outside the
+            # character roles' range, so the extrapolation is visible as such.
+            if dflt is not None:
+                dx, dy = float(dflt[pred]), float(dflt[c])
+                if not (xs[0] <= dx <= xs[-1]):
+                    ex = np.linspace(min(xs[0], dx), max(xs[-1], dx), 50)
+                    ax.plot(ex, m * ex + b, lw=1, ls=":", color=C_DESIGN if sig else C_QUEST)
+                ax.scatter([dx], [dy], s=70, marker="*", color="#111111", zorder=6)
             ax.set_title(f"{c.replace('PCA_','').replace('_',' ')}\n"
                          f"r={row['pearson_r']:.2f}  partial={row['partial_r_ctrl_logvar']:.2f}"
                          f"{' *' if sig else ''}", fontsize=8.5)
@@ -163,9 +191,11 @@ def main():
         axes[1, j].set_xlabel("distance from default", fontsize=8)
         axes[0, j].set_xlabel("assistant-axis projection", fontsize=8)
     fig.suptitle(f"Per-role intrinsic dimension vs closeness to the Assistant "
-                 f"({n_i}x{n_q} grid, layer {layer}, n={len(d)})\n"
+                 f"({n_i}x{n_q} grid, layer {layer}, n={len(d)} character roles)\n"
                  f"orange = significant after controlling for cloud scale (BH q<0.05); "
-                 f"blue = not", fontsize=10)
+                 f"blue = not.   ★ = `default`, the Assistant itself "
+                 f"(excluded from every fit; dotted = fit extrapolated to reach it)",
+                 fontsize=10)
     fig.tight_layout(rect=[0, 0, 1, 0.93])
     savefig(fig, f"04_id_vs_axis_{args.view}_L{layer}.png", run_dir)
 

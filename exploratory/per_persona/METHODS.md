@@ -209,7 +209,38 @@ significant for five — `lPCA` is the exception at q = 0.20). Its ID is 99.4%
 grid (see §1), so that correlation is about grid saturation, not geometry —
 contrast, not a competing result.
 
-One loose end, recorded rather than resolved: `default` has the *highest*
-`axis_proj` yet the *lowest* ID on the prompt cloud, against that cloud's own
-positive trend. It is excluded from all fits, so it moves no number here, but
-the trend does not extrapolate to it.
+### Where `default` — the Assistant itself — sits
+
+Marked **★** in the `04` figures. Excluded from every fit (distance 0 from
+itself; it defines the axis), but plotted, because "does the Assistant obey the
+trend its own axis defines?" is the question the axis was built to ask. Where the
+star falls outside the character roles' range the fit is extended as a dotted
+line, so the extrapolation is visible as an extrapolation.
+
+**Response cloud — it lands on the line.** `default` sits at the far
+Assistant-like end (`axis_proj` 3.39 against a character-role max of 3.55) with
+among the lowest IDs in the set: MLE 1st percentile, dim-90% 0.4th, TwoNN 5th.
+The fit predicts MLE 4.71 at its position; actual is 4.59. Dim-90% predicted
+35.0, actual 34.0. The Assistant is the natural endpoint of the trend, not an
+exception to it — independent support for "more Assistant-like ⇒ lower
+within-role dimension", since nothing in the fit was told about this point.
+
+The one dissent is `lPCA` again: `default` sits at the 73rd percentile there,
+high rather than low — consistent with lPCA's slope pointing the other way.
+
+**Prompt cloud — it contradicts the trend.** `default` has the highest
+`axis_proj` of any role by a wide margin (30.48 vs a character-role max of
+13.14 — a gap of 45% of their entire span) and simultaneously the **minimum** ID
+on every estimator (0th percentile). That cloud's trend is *positive*, so the
+fit extrapolates to MLE 4.83 at its position while the actual value is 1.49, and
+to dim-90% 8.04 against an actual 4.00.
+
+Two reasons not to read that as a finding. The prediction is an extrapolation
+45% beyond the fitted range, where a linear fit carries no authority. And this
+cloud's ID is 99.4% extraction grid (§1) — `default`'s instruction slots are one
+empty prompt plus near-synonymous generic strings rather than distinct persona
+embodiments, so its instruction factor carries almost no variance and its ID
+collapses. Same design artefact, seen from the other side.
+
+That the star lands on the line for the response cloud and far off it for the
+prompt cloud is the clearest single picture of the difference between the two.
