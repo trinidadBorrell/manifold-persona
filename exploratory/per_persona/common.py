@@ -7,33 +7,38 @@ looks like — one manifold, one intrinsic dimension and one clustering per role
 
 THE STRUCTURAL CONSTRAINT (read this before interpreting any number here)
 ------------------------------------------------------------------------
-Each role owns exactly 25 raw points: 5 instruction phrasings x 5 shared
-questions (``data/embeddings_roles/manifest.json``: n_questions=5). Those 25
-points are a complete 5x5 factorial grid, so before any model geometry enters,
-the cloud's rank is capped by the design:
+Each role's points form a complete two-factor grid: n_i instruction phrasings x
+n_q shared questions, one point per cell. Before any model geometry enters, that
+grid caps the cloud's rank:
 
-    additive (no-interaction) rank = (5-1) + (5-1) = 8
+    additive (no-interaction) rank = (n_i - 1) + (n_q - 1)
 
-That is not a bound we impose, it is what a two-factor grid *is*. Any ID
-estimate on 25 gridded points is therefore reporting the grid unless the
-interaction term carries real variance. :func:`design_fractions` measures
-exactly that, and every script here reports it alongside the ID so the number
-cannot be read without its caveat.
+That is not a bound we impose, it is what a two-factor grid *is*. An ID estimate
+on gridded points reports the grid unless the interaction term carries real
+variance. :func:`design_fractions` measures exactly that, and every script here
+reports it alongside the ID so the number cannot be read without its caveat.
+
+The grid shape is read from the data, never assumed — it differs sharply between
+the two clouds this study has been run on:
+
+  data/embeddings_roles/         5 x  5 =  25 points/role, additive rank  8
+  data/embeddings_roles_resp40/  5 x 40 = 200 points/role, additive rank 43
 
 Two nulls are provided, and the second is the load-bearing one:
 
-  GAUSSIAN null  — 25 points from a Gaussian matched to the pooled within-role
+  GAUSSIAN null  — points from a Gaussian matched to the pooled within-role
     covariance. Structureless. Answers "is the role cloud lower-dimensional
-    than noise at this n?" It always says yes, because of the grid.
+    than noise at this n?"
 
-  DESIGN null    — 25 points synthesised as ``a[i] + b[j]`` from random
+  DESIGN null    — points synthesised as ``a[i] + b[j]`` from random
     instruction/question effects with the data's empirical effect covariances.
-    Same 5x5 grid, same additive rank, NO persona-specific geometry. This is
-    the null that matters: if a role's real ID sits inside this band, the
+    Same grid, same additive rank, NO persona-specific geometry. This is the
+    null that matters: if a role's real ID sits inside this band, the
     per-persona "manifold" is the experiment's design and nothing else.
 """
 from __future__ import annotations
 
+import contextlib
 import datetime
 import os
 from pathlib import Path
@@ -49,6 +54,41 @@ FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 # Okabe-Ito, the palette the rest of the repo's figures already use.
 C_REAL, C_DESIGN, C_GAUSS = "#0072B2", "#D55E00", "#999999"
 C_INSTR, C_QUEST, C_INTER = "#009E73", "#56B4E9", "#CC79A7"
+
+
+@contextlib.contextmanager
+def small_matrix_ops():
+    """Pin BLAS to one thread AND silence this machine's bogus BLAS FP flags.
+
+    Both halves exist for the same reason: every loop in this study hammers
+    a small matrix thousands of times, and numpy 2.0.2 on Apple Accelerate
+    handles that badly in two separate ways.
+
+    1. Threads (see :func:`single_threaded`) — 4.5x slower with the default 10.
+    2. Spurious divide-by-zero / overflow / invalid RuntimeWarnings raised from
+       inside sklearn's own matmuls (KMeans, randomized_svd). Verified bogus on
+       this data: the response cloud's values top out at |x| ~ 37 with squared
+       norms ~2.8e3, nowhere near even float32 range, and every output is
+       finite. The flags come from the BLAS kernel, not the arithmetic.
+
+    Suppressing warnings can hide real failures, so callers must still check
+    their outputs — :func:`assert_finite` is provided for that and is used at
+    the end of each per-role loop.
+    """
+    with single_threaded(), np.errstate(divide="ignore", over="ignore",
+                                        invalid="ignore"):
+        yield
+
+
+def assert_finite(df, what: str = "results"):
+    """Guard for the suppression in :func:`small_matrix_ops` — a genuine
+    numerical failure must still stop the run, not vanish into ignored flags."""
+    import pandas as pd
+    num = df.select_dtypes(include="number")
+    bad = num.columns[num.apply(lambda c: np.isinf(c.to_numpy(dtype=float)).any())]
+    if len(bad):
+        raise FloatingPointError(f"non-finite {what} in columns: {list(bad)}")
+    return df
 
 
 def single_threaded():
@@ -113,6 +153,23 @@ def load_role_clouds(view: str = "prompt_avg", layer: int = None):
         factors[r] = (np.unique(ii[m], return_inverse=True)[1],
                       np.unique(qi[m], return_inverse=True)[1])
     return roles, clouds, factors, manifest
+
+
+def grid_shape(factors) -> tuple:
+    """(n_instructions, n_questions, additive_rank) read from the data.
+
+    Asserts the grid is the same for every role and complete (one point per
+    cell) — every rank statement in this study depends on that, so it is
+    checked rather than assumed.
+    """
+    shapes = {(int(i.max()) + 1, int(q.max()) + 1) for i, q in factors.values()}
+    if len(shapes) != 1:
+        raise ValueError(f"roles disagree on grid shape: {sorted(shapes)}")
+    n_i, n_q = shapes.pop()
+    for r, (i, q) in factors.items():
+        if len(i) != n_i * n_q:
+            raise ValueError(f"role {r!r}: {len(i)} points for a {n_i}x{n_q} grid")
+    return n_i, n_q, (n_i - 1) + (n_q - 1)
 
 
 def design_fractions(Xr: np.ndarray, instr: np.ndarray, quest: np.ndarray) -> dict:
@@ -191,38 +248,39 @@ def _sqrt_cov(M: np.ndarray) -> np.ndarray:
 def design_null_draws(clouds, factors, n_draws: int = 100, seed: int = 0):
     """Yield ``n_draws`` synthetic 25-point role clouds with the grid but no persona.
 
-    Each draw picks 5 random instruction effects and 5 random question effects
-    from Gaussians matched to the pooled empirical effect covariances, then
-    forms the full 5x5 additive grid ``a[i] + b[j]``. Interaction is exactly
+    Each draw picks n_i random instruction effects and n_q random question
+    effects from Gaussians matched to the pooled empirical effect covariances,
+    then forms the full additive grid ``a[i] + b[j]``. Interaction is exactly
     zero by construction, so a real role that scores like this band has no
     within-role structure beyond its design.
 
-    Returns (generator of (X [25,h], instr, quest)).
+    Returns (generator of (X [n_i*n_q, h], instr, quest)).
     """
+    n_i, n_q, _ = grid_shape(factors)
     A, B = _effect_covariances(clouds, factors)
     SA, SB = _sqrt_cov(A), _sqrt_cov(B)
-    h = A.shape[1]
     rng = np.random.default_rng(seed)
-    instr = np.repeat(np.arange(5), 5)
-    quest = np.tile(np.arange(5), 5)
+    instr = np.repeat(np.arange(n_i), n_q)
+    quest = np.tile(np.arange(n_q), n_i)
 
     def gen():
         for _ in range(n_draws):
-            a, b = _gauss(rng, 5, SA), _gauss(rng, 5, SB)
+            a, b = _gauss(rng, n_i, SA), _gauss(rng, n_q, SB)
             yield a[instr] + b[quest], instr, quest
     return gen()
 
 
 def gaussian_null_draws(clouds, n_draws: int = 100, seed: int = 0):
-    """Yield ``n_draws`` structureless 25-point clouds matched to the pooled
-    WITHIN-role covariance (each role centred before pooling)."""
+    """Yield ``n_draws`` structureless clouds, matched to the pooled WITHIN-role
+    covariance (each role centred before pooling) and to the points-per-role."""
     W = np.concatenate([Xr - Xr.mean(0) for Xr in clouds.values()])
+    n_per = len(next(iter(clouds.values())))
     S = _sqrt_cov(W)
     rng = np.random.default_rng(seed)
 
     def gen():
         for _ in range(n_draws):
-            yield _gauss(rng, 25, S)
+            yield _gauss(rng, n_per, S)
     return gen()
 
 

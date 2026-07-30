@@ -4,7 +4,7 @@ Answers question (3) of the per-persona brief, and it separates two costs that
 are usually conflated:
 
   ANALYSIS on the cloud we already have — measured here by actually running the
-    per-role estimators at n_roles = 10 / 50 / 100 / 276. It is seconds. Picking
+    per-role estimators at several role counts. It is seconds. Picking
     a role subset to save analysis time saves nothing, so subsetting is not an
     analysis decision.
 
@@ -15,7 +15,7 @@ are usually conflated:
 The bridge between them is Part B: **how many points per role do the estimators
 actually need** before a per-role ID means anything? We answer it by planting
 manifolds of KNOWN dimension in the data's ambient space and finding the N at
-which the estimators recover them. That N, divided by the 5 instruction
+which the estimators recover them. That N, divided by the number of instruction
 phrasings, is the number of questions per role that must be extracted — which
 turns a vague "more data" into a number of GPU-hours.
 
@@ -38,9 +38,9 @@ import matplotlib.pyplot as plt
 
 from manifold.idim import id_estimates
 from common import (load_role_clouds, pca_stats, design_fractions, resolve_run_dir,
-                    savefig, single_threaded, C_REAL, C_DESIGN, C_INSTR, C_QUEST, C_INTER)
+                    savefig, small_matrix_ops, grid_shape,
+                    C_REAL, C_DESIGN, C_INSTR, C_QUEST, C_INTER)
 
-N_INSTRUCTIONS = 5          # fixed by the assistant-axis role artifacts
 N_QUESTION_POOL = 240       # refs/assistant-axis/extraction_questions.jsonl
 ROLE_BUDGETS = [10, 50, 100, 276]
 TRUE_DIMS = [5, 10, 15]
@@ -80,19 +80,21 @@ def main():
     roles, clouds, factors, manifest = load_role_clouds(args.view, args.layer)
     layer = args.layer if args.layer is not None else manifest["primary_layer"]
     ambient = clouds[roles[0]].shape[1]
+    n_per = len(next(iter(clouds.values())))
+    n_i, n_q, _ = grid_shape(factors)
     rng = np.random.default_rng(0)
 
     # ---- Part A: measured analysis cost on the cloud we already have --------
-    print("== Part A: measured per-role analysis cost (existing 25-point clouds) ==")
+    print(f"== Part A: measured per-role analysis cost ({n_per}-point clouds) ==")
     from manifold.subsets import kmeans_medoid_roles  # noqa: F401  (documented reuse)
     timings = {}
     for nb in ROLE_BUDGETS:
         sub = roles[:nb] if nb >= len(roles) else list(rng.choice(roles, nb, replace=False))
         t0 = time.time()
-        # single_threaded to match how 01/02 actually run — measuring this loop
+        # small_matrix_ops to match how 01/02 actually run — measuring this loop
         # with the default thread count would overstate the cost ~4x (see
-        # common.single_threaded).
-        with single_threaded():
+        # common.small_matrix_ops).
+        with small_matrix_ops():
             for r in sub:
                 instr, quest = factors[r]
                 id_estimates(clouds[r]); pca_stats(clouds[r])
@@ -130,9 +132,9 @@ def main():
     # The per-role target: enough for the largest dimension we might plausibly
     # find. Fall back to the top of the grid if nothing qualified.
     n_target = max([v for v in n_needed.values() if v] or [N_GRID[-1]])
-    q_needed = int(np.ceil(n_target / N_INSTRUCTIONS))
+    q_needed = int(np.ceil(n_target / n_i))
     q_capped = min(q_needed, N_QUESTION_POOL)
-    print(f"\n  => target {n_target} points/role = {q_needed} questions x {N_INSTRUCTIONS} "
+    print(f"\n  => target {n_target} points/role = {q_needed} questions x {n_i} "
           f"instructions (pool has {N_QUESTION_POOL}; using {q_capped})")
 
     # ---- Part C: extraction budget ----------------------------------------
@@ -140,17 +142,32 @@ def main():
     budget = {}
     print(f"  {'roles':>6s} {'records':>9s} {'hours':>8s} {'days':>7s}   note")
     for nb in ROLE_BUDGETS:
-        rec = nb * N_INSTRUCTIONS * q_capped
+        rec = nb * n_i * q_capped
         hrs = rec * args.sec_per_record / 3600
         budget[nb] = {"records": rec, "hours": round(hrs, 1), "days": round(hrs / 24, 2),
-                      "questions_per_role": q_capped, "points_per_role": q_capped * N_INSTRUCTIONS}
+                      "questions_per_role": q_capped, "points_per_role": q_capped * n_i}
         note = "overnight" if hrs <= 12 else ("a weekend" if hrs <= 60 else "not tractable locally")
         print(f"  {nb:6d} {rec:9d} {hrs:8.1f} {hrs/24:7.2f}   {note}")
 
+    # The default rate is for a PROMPT-only forward pass. A response cloud has to
+    # generate tokens first and is several times slower (the 2-role pilot in
+    # plans/2026-07-23-halfdepth-response-stream.md measured 15.2 s/rec at
+    # max_new_tokens=512), so flag when the two disagree instead of quietly
+    # pricing generation at forward-pass rates.
+    basis = manifest.get("token_basis", "prompt")
+    rate_note = "RESEARCH.md:24 (documented, not re-measured)"
+    if basis == "response" and args.sec_per_record < 12:
+        rate_note += (f"; WARNING this cloud is token_basis={basis} "
+                      f"(max_new_tokens={manifest.get('max_new_tokens')}) — generation is "
+                      "slower than a prompt-only pass, so these hours are a LOWER bound")
+        print(f"\n  [!] token_basis={basis}: {args.sec_per_record}s/record is the prompt-only "
+              "rate; generation is slower, treat Part C as a lower bound.")
     results = {"_meta": {"view": args.view, "layer": layer, "ambient": ambient,
+                         "token_basis": basis, "points_per_role_now": int(n_per),
+                         "grid": [n_i, n_q],
                          "sec_per_record": args.sec_per_record,
-                         "sec_per_record_source": "RESEARCH.md:24 (documented, not re-measured)",
-                         "n_instructions": N_INSTRUCTIONS, "question_pool": N_QUESTION_POOL},
+                         "sec_per_record_source": rate_note,
+                         "n_instructions": n_i, "question_pool": N_QUESTION_POOL},
                "analysis_seconds_by_n_roles": timings,
                "id_recovery_vs_n": {str(d): recovery[d] for d in TRUE_DIMS},
                "min_n_within_20pct": {str(d): n_needed[d] for d in TRUE_DIMS},
@@ -178,9 +195,10 @@ def main():
         ys = [recovery[d][n] for n in N_GRID]
         ax.plot(N_GRID, ys, "-o", color=col, lw=2, ms=5, label=f"planted d = {d}")
         ax.axhline(d, color=col, ls=":", lw=1)
-    ax.axvline(25, color=C_DESIGN, lw=2)
-    ax.annotate("what we have now\n(25 pts/role)", (25, ax.get_ylim()[0]), color=C_DESIGN,
-                fontsize=8, ha="left", va="bottom", xytext=(6, 4), textcoords="offset points")
+    ax.axvline(n_per, color=C_DESIGN, lw=2)
+    ax.annotate(f"what we have now\n({n_per} pts/role)", (n_per, ax.get_ylim()[0]),
+                color=C_DESIGN, fontsize=8, ha="left", va="bottom",
+                xytext=(6, 4), textcoords="offset points")
     ax.set_xscale("log")
     ax.set_xlabel("points per role (log)")
     ax.set_ylabel("recovered dimension")
@@ -201,8 +219,8 @@ def main():
                 xytext=(0, 3), textcoords="offset points")
     ax.set_xlabel("roles extracted (always including `default`)")
     ax.set_ylabel(f"projected hours @ {args.sec_per_record} s/record")
-    ax.set_title(f"C. Re-extraction cost at {q_capped} questions x {N_INSTRUCTIONS} instructions\n"
-                 f"= {q_capped * N_INSTRUCTIONS} points per role")
+    ax.set_title(f"C. Re-extraction cost at {q_capped} questions x {n_i} instructions\n"
+                 f"= {q_capped * n_i} points per role")
 
     fig.tight_layout()
     savefig(fig, f"03_compute_budget_{args.view}_L{layer}.png", run_dir)

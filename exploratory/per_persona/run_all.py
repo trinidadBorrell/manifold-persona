@@ -41,29 +41,40 @@ def write_report(run_dir: Path, view: str, layer: int):
     bud = j(f"03_compute_budget_{view}_L{layer}.json")
 
     m, dv = idr["_meta"], idr["design_variance"]
+    n_i, n_q = m.get("grid", [None, None])
+    grid = f"{n_i}x{n_q}"
+    inter = dv["interaction_frac"]["median"]
     L = []
     A = L.append
     A(f"# Per-persona manifold — {view}, layer {layer}\n")
     A(f"Each of the **{m['n_roles']} roles** is treated as its own point cloud of "
-      f"**{m['points_per_role']} points** in {m['ambient']} ambient dimensions, and gets its "
-      f"own intrinsic dimension and its own clustering.\n")
+      f"**{m['points_per_role']} points** ({grid}: instruction phrasings x questions) in "
+      f"{m['ambient']} ambient dimensions, and gets its own intrinsic dimension and its own "
+      "clustering.\n")
 
     A("## Headline\n")
     A(f"The within-role cloud is **{_pct(dv['instr_frac']['median'])} instruction phrasing, "
-      f"{_pct(dv['quest_frac']['median'])} question, and only "
-      f"{_pct(dv['interaction_frac']['median'])} interaction**. Instruction and question are "
-      "the two axes of the 5x5 extraction grid, so everything except that last term is forced "
-      "by the experiment's design, not by the model. The additive rank of a 5x5 grid is "
-      f"(5-1)+(5-1) = **{m['additive_design_rank']}**, and lPCA returns exactly "
-      f"{_num(idr['per_role_summary']['lPCA']['median'], 1)} for essentially every role.\n")
-    A("**Both requested results are therefore measurements of the extraction grid, not of "
-      "persona geometry.** They are reported in full below, with the null that shows why.\n")
+      f"{_pct(dv['quest_frac']['median'])} question, and {_pct(inter)} interaction**. "
+      f"Instruction and question are the two axes of the {grid} extraction grid, so everything "
+      "except that last term is forced by the experiment's design, not by the model. The "
+      f"additive rank of a {grid} grid is ({n_i}-1)+({n_q}-1) = "
+      f"**{m['additive_design_rank']}**; observed lPCA is "
+      f"{_num(idr['per_role_summary']['lPCA']['median'], 1)}.\n")
+    if inter is not None and inter < 0.05:
+        A("Interaction — the only term a grid does **not** force — is under 5%. On this cloud "
+          "the per-role ID and clustering are therefore measurements of the extraction grid, "
+          "not of persona geometry. Reported in full below, with the null that shows why.\n")
+    else:
+        A(f"Interaction — the only term a grid does **not** force — carries {_pct(inter)} of "
+          "the within-role variance, so there is genuine role-specific structure here beyond "
+          "the design. The design null below is what separates the two.\n")
 
     A("## 1. Intrinsic dimension, per role\n")
     A(f"![ID](01_per_persona_id_{view}_L{layer}.png)\n")
-    A("`design null` = 25 synthetic points on the same 5x5 additive grid, built from the "
-      "empirical instruction/question effect covariances, containing **no persona at all**. "
-      "`Gaussian null` = 25 structureless points matched to the pooled within-role covariance.\n")
+    A(f"`design null` = {m['points_per_role']} synthetic points on the same {grid} additive "
+      "grid, built from the empirical instruction/question effect covariances, containing "
+      f"**no persona at all**. `Gaussian null` = {m['points_per_role']} structureless points "
+      "matched to the pooled within-role covariance.\n")
     A("| estimator | real median (IQR) | design null (IQR) | inside null IQR? |")
     A("|---|---|---|---|")
     for k, v in idr["verdict"].items():
@@ -74,38 +85,44 @@ def write_report(run_dir: Path, view: str, layer: int):
           f"{_num(n['median'])} ({_num(n['q25'])}–{_num(n['q75'])}) | "
           f"{'yes' if v['real_median_inside_design_iqr'] else 'no'} |")
     ax = idr.get("axis_vs_id", {})
+    d_pr = ax.get("default_participation_ratio")
+    med_pr = idr["per_role_summary"]["PCA_participation_ratio"]["median"]
     A(f"\nPer-role ID vs assistant-axis position: r = {_num(ax.get('pearson_r_excl_default'))} "
-      f"excluding `default` (r = {_num(ax.get('pearson_r_all'))} with it). `default` itself has "
-      f"much the lowest per-role ID in the set (participation ratio "
-      f"{_num(ax.get('default_participation_ratio'))} against a median of "
-      f"{_num(idr['per_role_summary']['PCA_participation_ratio']['median'])}). That is **not** a "
-      "geometric fact about the Assistant: `default`'s five instruction slots are one empty "
-      "prompt plus four near-synonymous generic strings (\"You are an AI assistant.\", \"You are "
-      "a large language model.\", ...), whereas every character role's five slots are five "
-      "distinct persona embodiments. Its instruction axis therefore carries little variance, and "
-      "since instruction variance is ~68% of the total, its ID collapses. Same design artefact, "
-      "seen from the other side.\n")
+      f"excluding `default` (r = {_num(ax.get('pearson_r_all'))} with it). `default`'s own ID is "
+      f"{_num(d_pr)} against a median of {_num(med_pr)}.")
+    if d_pr is not None and med_pr and d_pr < 0.6 * med_pr:
+        A("\nThat gap is **not** a geometric fact about the Assistant. `default`'s instruction "
+          "slots are one empty prompt plus near-synonymous generic strings (\"You are an AI "
+          "assistant.\", \"You are a large language model.\", ...), whereas every character "
+          "role's slots are distinct persona embodiments. Its instruction axis therefore "
+          "carries little variance, and instruction variance dominates the total — so its ID "
+          "collapses. Same design effect, seen from the other side.\n")
+    else:
+        A("\n")
     A(f"Source: `exploratory/per_persona/01_per_persona_id.py` "
       f"({m['runtime_s']}s for all {m['n_roles']} roles).\n")
 
     A("## 2. Clustering, per role\n")
     A(f"![clustering](02_per_persona_clustering_{view}_L{layer}.png)\n")
     cm, real, null = clu["_meta"], clu["real"], clu["design_null"]
-    A(f"k searched over {cm['k_range'][0]}–{cm['k_range'][1]} (25 points will not support more), "
-      "in each role's own PCA-95% space. ARI is scored against the two factors we know.\n")
+    A(f"k searched over {cm['k_range'][0]}–{cm['k_range'][1]} — spanning both ground-truth "
+      f"counts ({n_i} instructions, {n_q} questions) — in each role's own PCA-95% space. "
+      "ARI is scored against the two factors we know.\n")
     A("| method | median k | silhouette | ARI vs instruction | ARI vs question | "
       "design-null ARI vs instruction |")
     A("|---|---|---|---|---|---|")
-    for meth in ("kmeans", "kmeans_k5", "gmm", "hdbscan", "dbscan"):
+    meths = ["kmeans"] + [f"kmeans_k{k}" for k in sorted({n_i, n_q})] + \
+            ["gmm", "hdbscan", "dbscan"]
+    for meth in meths:
         g = lambda d, s: d.get(f"{meth}_{s}", {}).get("median")
         A(f"| {meth} | {_num(g(real,'n_clusters'), 0)} | {_num(g(real,'silhouette'), 3)} | "
           f"{_num(g(real,'ari_instr'), 3)} | {_num(g(real,'ari_quest'), 3)} | "
           f"{_num(g(null,'ari_instr'), 3)} |")
-    A(f"\nGround-truth partition silhouette: instruction "
-      f"{_num(real['truth_instr_silhouette']['median'], 3)} vs question "
-      f"{_num(real['truth_quest_silhouette']['median'], 3)}. Every role splits into the 5 "
-      "instruction phrasings, and the design null — which has no persona in it — splits the "
-      "same way and just as cleanly.\n")
+    ti = real["truth_instr_silhouette"]["median"]
+    tq = real["truth_quest_silhouette"]["median"]
+    A(f"\nGround-truth partition silhouette: instruction {_num(ti, 3)} vs question "
+      f"{_num(tq, 3)}. Compare each method's ARI column against the design-null column: where "
+      "they match, the split is the grid; where the real ARI departs from it, it is not.\n")
     A(f"Source: `exploratory/per_persona/02_per_persona_clustering.py` "
       f"({cm['runtime_s']}s for all {cm['n_roles']} roles).\n")
 
@@ -114,14 +131,19 @@ def write_report(run_dir: Path, view: str, layer: int):
     bm = bud["_meta"]
     tim = ", ".join(f"{k} roles {v}s" for k, v in bud["analysis_seconds_by_n_roles"].items())
     A(f"**Analysis is free.** Measured: {tim}. Restricting to 10 / 50 / 100 roles buys nothing "
-      "on the cloud we already have — run all 276.\n")
+      f"on the cloud we already have — run all {m['n_roles']}.\n")
     need = ", ".join(f"d={k} needs N≥{v}" for k, v in bud["min_n_within_20pct"].items() if v)
     rec = bud["id_recovery_vs_n"]
-    at25 = ", ".join(f"a true d={k} reads as {v['25']:.1f}" for k, v in rec.items()
-                     if v.get("25"))
+    # Quote the recovery curve at the grid point nearest this cloud's actual
+    # size, not at a hardcoded N — the two clouds differ 8x.
+    n_now = m["points_per_role"]
+    here = ", ".join(
+        f"a true d={k} reads as {v[min(v, key=lambda s: abs(int(s) - n_now))]:.1f}"
+        for k, v in rec.items() if v)
+    n_shown = min(next(iter(rec.values())), key=lambda s: abs(int(s) - n_now))
     A("**Extraction is the only real cost.** Planted manifolds of known dimension are only "
       f"recovered once a role has enough points ({need}, for an estimate within 20% of truth). "
-      f"At the 25 points per role we have now, {at25} — which is the range this study reports. "
+      f"At {n_now} points per role (curve sampled at N={n_shown}), {here}. "
       f"Target: **{bud['target_points_per_role']} points/role = "
       f"{bud['questions_per_role_needed']} questions x {bm['n_instructions']} instructions** "
       f"(the question pool holds {bm['question_pool']}).\n")

@@ -1,12 +1,12 @@
-"""Intrinsic dimension of each role's OWN manifold — 276 separate estimates.
+"""Intrinsic dimension of each role's OWN manifold — one estimate per role.
 
 Mirrors exploratory/assistant_axis/01_intrinsic_dimension.py, but instead of one
 ID for the 276-point between-role cloud it produces one ID per role from that
-role's 25 within-role points, plus the two nulls defined in common.py.
+role's within-role points, plus the two nulls defined in common.py.
 
 Estimators come from ``manifold.idim.id_estimates`` and NOT from the
 assistant-axis 01 script: that one hardcodes ``skdim.id.MLE(K=20)``, which needs
-n > 21 neighbours and is meaningless on 25 points (it would use 20 of the 24
+n > 21 neighbours and is meaningless on a 25-point cloud (it would use 20 of the 24
 available neighbours, making a "local" estimator global). ``manifold.idim``
 already adapts K = min(10, n-2) for exactly this small-n case.
 
@@ -27,8 +27,8 @@ import matplotlib.pyplot as plt
 from manifold.idim import id_estimates, ESTIMATORS
 from manifold_persona.common import assistant_axis, center, project, load_points
 from common import (load_role_clouds, design_fractions, pca_stats, resolve_run_dir,
-                    savefig, design_null_draws, gaussian_null_draws, band, single_threaded,
-                    C_REAL, C_DESIGN, C_GAUSS, C_INSTR, C_QUEST, C_INTER)
+                    savefig, design_null_draws, gaussian_null_draws, band, small_matrix_ops, assert_finite,
+                    grid_shape, C_REAL, C_DESIGN, C_GAUSS, C_INSTR, C_QUEST, C_INTER)
 
 # The scalar columns we summarise per role. PR and d90 are cheap PCA readouts
 # that do not depend on a neighbour graph, so they stay meaningful at n=25 where
@@ -37,7 +37,7 @@ ID_COLS = list(ESTIMATORS) + ["PCA_participation_ratio", "PCA_dim_90pct"]
 
 
 def per_cloud(Xr, instr=None, quest=None) -> dict:
-    """All ID readouts for one 25-point cloud (+ design split when labelled)."""
+    """All ID readouts for one role's cloud (+ design split when labelled)."""
     out = {**id_estimates(Xr), **pca_stats(Xr)}
     if instr is not None:
         out.update(design_fractions(Xr, instr, quest))
@@ -57,18 +57,19 @@ def main():
     roles, clouds, factors, manifest = load_role_clouds(args.view, args.layer)
     layer = args.layer if args.layer is not None else manifest["primary_layer"]
     n_per = len(next(iter(clouds.values())))
+    n_i, n_q, add_rank = grid_shape(factors)
     print(f"view={args.view} layer={layer} roles={len(roles)} points/role={n_per} "
-          f"ambient={clouds[roles[0]].shape[1]}")
+          f"grid={n_i}x{n_q} additive_rank={add_rank} ambient={clouds[roles[0]].shape[1]}")
 
-    # --- 276 real estimates -------------------------------------------------
+    # --- one estimate per role -------------------------------------------------
     rows = []
-    with single_threaded():
+    with small_matrix_ops():
         for i, r in enumerate(roles):
             instr, quest = factors[r]
             rows.append({"role": r, **per_cloud(clouds[r], instr, quest)})
             if (i + 1) % 50 == 0:
                 print(f"  {i+1}/{len(roles)} roles  ({time.time()-t0:.1f}s)")
-    df = pd.DataFrame(rows)
+    df = assert_finite(pd.DataFrame(rows), "per-role results")
 
     # Where does each role sit on the assistant axis? Lets us ask whether ID
     # varies with how far a persona is from the default Assistant.
@@ -96,7 +97,7 @@ def main():
     # covariance, which is the one operation here that genuinely wants threads.
     d_draws = list(design_null_draws(clouds, factors, args.n_null))
     g_draws = list(gaussian_null_draws(clouds, args.n_null))
-    with single_threaded():
+    with small_matrix_ops():
         dn = [per_cloud(Xn, i_, q_) for Xn, i_, q_ in d_draws]
         gn = [per_cloud(Xn) for Xn in g_draws]
     df_design, df_gauss = pd.DataFrame(dn), pd.DataFrame(gn)
@@ -107,7 +108,7 @@ def main():
     # --- the headline comparison -------------------------------------------
     # For each estimator: is the real spread of per-role ID distinguishable from
     # the design null? If the real band sits inside the design band, the
-    # per-persona manifold is the 5x5 grid.
+    # per-persona manifold is the design grid.
     verdict = {}
     for c in ID_COLS:
         real, dnull = band(df[c]), nulls["design"][c]
@@ -122,7 +123,8 @@ def main():
     results = {"_meta": {"view": args.view, "layer": layer, "n_roles": len(roles),
                          "points_per_role": int(n_per),
                          "ambient": int(clouds[roles[0]].shape[1]),
-                         "additive_design_rank": 8, "n_null": args.n_null,
+                         "grid": [n_i, n_q], "additive_design_rank": add_rank,
+                         "n_null": args.n_null,
                          "runtime_s": round(time.time() - t0, 1)},
                "design_variance": {k: band(df[k]) for k in
                                    ("instr_frac", "quest_frac", "interaction_frac")},
@@ -133,7 +135,7 @@ def main():
     json.dump(results, open(run_dir / f"01_per_persona_id_{args.view}_L{layer}.json", "w"),
               indent=2, default=float)
 
-    print("\n== per-role ID (276 roles), real vs design null ==")
+    print(f"\n== per-role ID ({len(roles)} roles), real vs design null ==")
     for c in ID_COLS:
         v = verdict[c]
         if v is None:
@@ -166,15 +168,16 @@ def main():
                 continue
             ax.vlines(j + off, b["q25"], b["q75"], color=col, lw=4, alpha=0.85, zorder=2)
             ax.plot([j + off - 0.07, j + off + 0.07], [b["median"]] * 2, color=col, lw=2, zorder=4)
-    ax.axhline(8, color="#333333", ls="--", lw=1, zorder=1)
-    ax.annotate("additive 5x5 design rank = 8", (len(names) - 0.5, 8), fontsize=8,
+    ax.axhline(add_rank, color="#333333", ls="--", lw=1, zorder=1)
+    ax.annotate(f"additive {n_i}x{n_q} design rank = {add_rank}",
+                (len(names) - 0.5, add_rank), fontsize=8,
                 ha="right", va="bottom", color="#333333")
     ax.set_xticks(range(len(names)))
     ax.set_xticklabels([n.replace("PCA_", "").replace("_", " ") for n in names],
                        rotation=30, ha="right")
     ax.set_ylabel("estimated dimension")
-    ax.set_title(f"Per-role intrinsic dimension\n276 roles, {n_per} points each, layer {layer}")
-    for lbl, col in (("276 real roles", C_REAL), ("design null (IQR)", C_DESIGN),
+    ax.set_title(f"Per-role intrinsic dimension\n{len(roles)} roles, {n_per} points each, layer {layer}")
+    for lbl, col in ((f"{len(roles)} real roles", C_REAL), ("design null (IQR)", C_DESIGN),
                      ("Gaussian null (IQR)", C_GAUSS)):
         ax.plot([], [], "o" if col == C_REAL else "|", color=col, ms=6, label=lbl)
     ax.legend(fontsize=8, loc="upper left")

@@ -51,18 +51,21 @@ generates an answer and reads the **response** tokens at ~half depth
 **Stage 1b — per-persona** (`exploratory/per_persona/`). The stage-1 scripts collapse
 each role to one mean point and study the cloud *between* roles. This stage inverts
 that: it keeps the raw cloud and gives each role its **own** manifold — 276 intrinsic
-dimensions and 276 clusterings, each from that role's 25 points
-(5 instructions × 5 questions).
+dimensions and 276 clusterings, each from that role's own points.
 
 ```bash
-.venv/bin/python exploratory/per_persona/run_all.py      # 01-03 + REPORT.md, ~70s
+.venv/bin/python exploratory/per_persona/run_all.py                       # prompt cloud, ~70s
+MP_ROLE_DIR=data/embeddings_roles_resp40 \
+  .venv/bin/python exploratory/per_persona/run_all.py --layer 0 --stamp resp40   # response cloud, ~5min
 ```
 
-Read `exploratory/per_persona/README.md` before using the numbers: at 25 points a role's
-cloud is a complete 5×5 factorial grid, and **99.4% of its variance is that grid**
-(instruction 68%, question 31%, interaction 0.6%). A design null with no persona in it
-reproduces both the ID and the clustering, so on today's cloud these measure the
-extraction design. `03_compute_budget.py` prices the fix.
+Run on two clouds, with opposite answers. On the **prompt** cloud (5×5 = 25 pts/role)
+**99.4% of within-role variance is the extraction grid** (instruction 68%, question 31%,
+interaction 0.6%) and a persona-free design null reproduces both results — a negative
+result. On the **response** cloud (5×40 = 200 pts/role, from
+`triniborrell/manifold-persona-roles-response-40q`) the split inverts to 2% / 80% /
+**17.7% interaction** and the real roles separate from the null everywhere. Read
+`exploratory/per_persona/README.md` before using any number.
 
 ## Key findings so far (Qwen2.5-3B, layer 26, `prompt_avg`)
 
@@ -71,12 +74,14 @@ extraction design. `03_compute_budget.py` prices the fix.
 - **Assistant Axis**: PCA **PC1** orders **neutral → negative → positive**
   personas — a single leading direction capturing distance from the model's
   default identity.
-- **Per-persona manifolds are not yet measurable**: within a role, 99.4% of the
-  variance is the 5×5 instruction×question extraction grid (interaction 0.6%), so
-  the 276 per-role IDs (~4–8, lPCA exactly 8 = the grid's additive rank) and the
-  per-role clusterings (ARI ≈ 1.0 vs instruction phrasing) are reproduced by a
-  persona-free design null. Needs ~400 points/role to resolve; see
-  `exploratory/per_persona/`.
+- **Per-persona manifolds depend entirely on which cloud you ask.** On *prompt*
+  activations (5×5 grid) they are not measurable: 99.4% of within-role variance is
+  the extraction grid, per-role IDs sit at the grid's additive rank of 8, clustering
+  recovers the 5 instruction phrasings at ARI ≈ 1.0, and a persona-free design null
+  reproduces all of it. On *response* activations with 40 questions (5×40 grid) the
+  picture inverts — instruction drops to 2%, question rises to 80%, and **interaction
+  reaches 17.7%**: real role-specific geometry, with per-role ID ≈ 18 (participation
+  ratio) against a design null of 11.9. See `exploratory/per_persona/`.
 
 ## Setup & run
 
@@ -113,7 +118,8 @@ exploratory/persona_vectors/   # trait study: 01–04 + common + run_all + make_
 exploratory/assistant_axis/    # role study:  01–04 + common + run_all + make_report + figures/<stamp>/
 exploratory/per_persona/       # per-role study: 01–03 + common + run_all + figures/<stamp>/
 data/embeddings/               # trait point cloud (gitignored; mirrored on HF)
-data/embeddings_roles/         # role point cloud (gitignored)
+data/embeddings_roles/         # role point cloud, prompt tokens 5x5 (gitignored)
+data/embeddings_roles_resp40/  # role point cloud, response tokens 5x40 (gitignored; from HF)
 token/huggingface.txt          # HF token (gitignored)
 ```
 

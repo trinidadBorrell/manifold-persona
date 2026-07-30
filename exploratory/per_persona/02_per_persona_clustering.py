@@ -1,7 +1,7 @@
-"""Clustering inside each role — 276 separate clustering studies.
+"""Clustering inside each role — one clustering study per role.
 
 Mirrors exploratory/assistant_axis/02_clustering.py (same methods, same internal
-scores, same PCA-95% working space) but run once per role on that role's own 25
+scores, same PCA-95% working space) but run once per role on that role's own
 points, and — unlike the assistant-axis version — scored against **real external
 labels**. That is the one thing this study can do that the between-role study
 cannot: after role-mean aggregation each role is a single point and any grouping
@@ -10,14 +10,16 @@ every point carries a known instruction index and a known question index. So we
 score ARI / NMI against both, exactly as exploratory/persona_vectors/02 scores
 against trait and polarity.
 
-The question is therefore not "does a role cluster?" — 25 points always split —
-but **what does it cluster BY**: the phrasing of the persona instruction, or the
+The question is therefore not "does a role cluster?" — points always split — but
+**what does it cluster BY**: the phrasing of the persona instruction, or the
 question being answered? And is that split any different from the design null,
-which has the same 5x5 grid and no persona at all?
+which has the same grid and no persona at all?
 
-k is capped at 8, not 30: on 25 points a k of 30 is undefined and even k=12
-leaves 2 points per cluster. Methods that need density (HDBSCAN/DBSCAN) run with
-min_cluster_size=2 for the same reason.
+Everything that depends on cloud size adapts to it (:func:`k_range`), because the
+two clouds this has run on differ by 8x: 25 points/role (5x5) and 200 points/role
+(5x40). The k search always spans both ground-truth partitions (n_i and n_q) so
+"did it find the instructions or the questions?" is answerable in one place, and
+both are also fitted explicitly as kmeans_k<n_i> / kmeans_k<n_q>.
 
 Usage:
     .venv/bin/python exploratory/per_persona/02_per_persona_clustering.py
@@ -40,10 +42,18 @@ from sklearn.metrics import (silhouette_score, davies_bouldin_score,
 import hdbscan
 
 from common import (load_role_clouds, resolve_run_dir, savefig, design_null_draws,
-                    band, single_threaded, C_REAL, C_DESIGN, C_INSTR, C_QUEST)
+                    band, small_matrix_ops, assert_finite, grid_shape, C_REAL, C_DESIGN, C_INSTR, C_QUEST)
 
-K_RANGE = range(2, 9)          # 25 points: k=8 already means ~3 points per cluster
-METHODS = ["kmeans", "kmeans_k5", "gmm", "hdbscan", "dbscan"]
+
+def k_range(n_points: int, n_i: int, n_q: int) -> range:
+    """k values to search: wide enough to reach both ground-truth partitions,
+    capped so clusters keep >= ~3 members (below that silhouette is noise)."""
+    return range(2, max(n_i, n_q, 3) + max(2, min(8, n_points // 25)) + 1)
+
+
+def methods_for(n_i: int, n_q: int) -> list:
+    ks = sorted({n_i, n_q})
+    return ["kmeans"] + [f"kmeans_k{k}" for k in ks] + ["gmm", "hdbscan", "dbscan"]
 
 
 def internal_scores(X, labels) -> dict:
@@ -67,31 +77,37 @@ def external_scores(labels, instr, quest) -> dict:
             "nmi_quest": float(normalized_mutual_info_score(quest[mask], labels[mask]))}
 
 
-def choose_k(X):
+def choose_k(X, ks):
     sils = {k: float(silhouette_score(X, KMeans(n_clusters=k, n_init=10,
                                                 random_state=0).fit(X).labels_))
-            for k in K_RANGE}
+            for k in ks}
     return max(sils, key=sils.get), sils
 
 
-def cluster_one(Xr, instr, quest, pca_var=0.95) -> dict:
-    """Run the full method suite on ONE role's 25 points. Returns a flat dict."""
+def cluster_one(Xr, instr, quest, n_i, n_q, pca_var=0.95) -> dict:
+    """Run the full method suite on ONE role's cloud. Returns a flat dict."""
     Xc = Xr - Xr.mean(0)
     s = np.linalg.svd(Xc, full_matrices=False, compute_uv=False)
     cum = np.cumsum(s ** 2) / (s ** 2).sum()
     d = max(2, int(np.searchsorted(cum, pca_var) + 1))
-    # svd_solver="full": with only 25 rows the exact SVD is cheaper than the
-    # randomized one sklearn would otherwise pick, and it keeps numpy's
-    # Accelerate BLAS from raising spurious overflow warnings inside
-    # randomized_svd (results were finite either way, the flags are bogus).
+    # svd_solver="full": these clouds have few rows (25-200) against 2048
+    # columns, so the exact SVD is cheaper than the randomized one sklearn would
+    # otherwise pick, and it keeps numpy's Accelerate BLAS from raising spurious
+    # overflow warnings inside randomized_svd (results were finite either way).
     X = PCA(n_components=min(d, min(Xc.shape) - 1), svd_solver="full",
             random_state=0).fit_transform(Xc)
 
-    best_k, sils = choose_k(X)
+    n = X.shape[0]
+    ks = k_range(n, n_i, n_q)
+    best_k, sils = choose_k(X, ks)
     labs = {"kmeans": KMeans(n_clusters=best_k, n_init=10, random_state=0).fit(X).labels_,
-            "kmeans_k5": KMeans(n_clusters=5, n_init=10, random_state=0).fit(X).labels_,
             "gmm": GaussianMixture(n_components=best_k, random_state=0).fit(X).predict(X),
-            "hdbscan": hdbscan.HDBSCAN(min_cluster_size=2, min_samples=1).fit(X).labels_}
+            # min_cluster_size scales with the grid: a "real" cluster here is at
+            # least a whole instruction group (n/n_i points) or question group.
+            "hdbscan": hdbscan.HDBSCAN(min_cluster_size=max(2, n // (4 * max(n_i, n_q))),
+                                       min_samples=1).fit(X).labels_}
+    for k in sorted({n_i, n_q}):
+        labs[f"kmeans_k{k}"] = KMeans(n_clusters=k, n_init=10, random_state=0).fit(X).labels_
     nn = NearestNeighbors(n_neighbors=3).fit(X)
     dist, _ = nn.kneighbors(X)
     eps = float(np.median(dist[:, -1]))
@@ -124,26 +140,34 @@ def main():
     t0 = time.time()
     roles, clouds, factors, manifest = load_role_clouds(args.view, args.layer)
     layer = args.layer if args.layer is not None else manifest["primary_layer"]
-    print(f"view={args.view} layer={layer} roles={len(roles)} points/role=25")
+    n_per = len(next(iter(clouds.values())))
+    n_i, n_q, add_rank = grid_shape(factors)
+    ks = k_range(n_per, n_i, n_q)
+    METHODS = methods_for(n_i, n_q)
+    print(f"view={args.view} layer={layer} roles={len(roles)} points/role={n_per} "
+          f"grid={n_i}x{n_q} k in {ks.start}..{ks.stop-1}")
 
     rows = []
-    with single_threaded():
+    with small_matrix_ops():
         for i, r in enumerate(roles):
             instr, quest = factors[r]
-            rows.append({"role": r, **cluster_one(clouds[r], instr, quest, args.pca_var)})
+            rows.append({"role": r,
+                         **cluster_one(clouds[r], instr, quest, n_i, n_q, args.pca_var)})
             if (i + 1) % 50 == 0:
                 print(f"  {i+1}/{len(roles)} roles  ({time.time()-t0:.1f}s)")
-    df = pd.DataFrame(rows)
+    df = assert_finite(pd.DataFrame(rows), "per-role results")
 
     print(f"design null: {args.n_null} draws ...")
     draws = list(design_null_draws(clouds, factors, args.n_null))   # eigh: wants threads
-    with single_threaded():
-        null_rows = [cluster_one(Xn, i_, q_, args.pca_var) for Xn, i_, q_ in draws]
+    with small_matrix_ops():
+        null_rows = [cluster_one(Xn, i_, q_, n_i, n_q, args.pca_var) for Xn, i_, q_ in draws]
     dfn = pd.DataFrame(null_rows)
 
     num_cols = [c for c in df.columns if c != "role" and df[c].dtype.kind in "fi"]
     results = {"_meta": {"view": args.view, "layer": layer, "n_roles": len(roles),
-                         "points_per_role": 25, "k_range": [K_RANGE.start, K_RANGE.stop - 1],
+                         "points_per_role": int(n_per), "grid": [n_i, n_q],
+                         "additive_design_rank": add_rank,
+                         "k_range": [ks.start, ks.stop - 1],
                          "pca_var": args.pca_var, "n_null": args.n_null,
                          "runtime_s": round(time.time() - t0, 1)},
                "real": {c: band(df[c]) for c in num_cols},
@@ -153,7 +177,8 @@ def main():
     json.dump(results, open(run_dir / f"02_per_persona_clustering_{args.view}_L{layer}.json", "w"),
               indent=2, default=float)
 
-    print("\n== what does each role's 25-point cloud cluster BY? (medians over 276 roles) ==")
+    print(f"\n== what does each role's {n_per}-point cloud cluster BY? "
+          f"(medians over {len(roles)} roles) ==")
     print(f"  {'method':12s} {'k':>4s} {'sil':>7s} {'ARI instr':>10s} {'ARI quest':>10s}"
           f" | {'null ARI instr':>14s}")
     for m in METHODS:
@@ -171,15 +196,21 @@ def main():
 
     # A: chosen k across roles, real vs design null.
     ax = axes[0]
-    ks = sorted(K_RANGE)
+    kk = sorted(ks)
     w = 0.38
-    real_c = [float((df["best_k"] == k).sum()) / len(df) for k in ks]
-    null_c = [float((dfn["best_k"] == k).sum()) / len(dfn) for k in ks]
-    ax.bar(np.array(ks) - w / 2, real_c, w, color=C_REAL, label="276 real roles")
-    ax.bar(np.array(ks) + w / 2, null_c, w, color=C_DESIGN, label="design null")
+    real_c = [float((df["best_k"] == k).sum()) / len(df) for k in kk]
+    null_c = [float((dfn["best_k"] == k).sum()) / len(dfn) for k in kk]
+    ax.bar(np.array(kk) - w / 2, real_c, w, color=C_REAL, label=f"{len(roles)} real roles")
+    ax.bar(np.array(kk) + w / 2, null_c, w, color=C_DESIGN, label="design null")
+    # Mark the two ground-truth cluster counts: whichever the search lands on
+    # tells you which factor the geometry is organised by.
+    for k, c, lbl in ((n_i, C_INSTR, f"n instructions = {n_i}"),
+                      (n_q, C_QUEST, f"n questions = {n_q}")):
+        ax.axvline(k, color=c, ls="--", lw=1.4, label=lbl)
     ax.set_xlabel("k chosen by silhouette")
     ax.set_ylabel("fraction of roles")
-    ax.set_title("Selected number of clusters per role\n(25 points, k searched over 2-8)")
+    ax.set_title(f"Selected number of clusters per role\n"
+                 f"({n_per} points, k searched over {kk[0]}-{kk[-1]})")
     ax.legend(fontsize=8)
 
     # B: what the clusters recover — instruction vs question.
