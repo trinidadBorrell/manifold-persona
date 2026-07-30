@@ -24,6 +24,11 @@ Not a PDF: Anthropic, *The Persona Selection Model*, <https://alignment.anthropi
 
 ## Synthesis
 
+- [**about-the-definition-of-a-persona.md**](notes/about-the-definition-of-a-persona.md) —
+  the conceptual grounding: persona = system prompt; the shift it induces; why the
+  exact shift is the KV cache; why that shift is a *function* of the input rather
+  than a fixed weight update; and the two ways forward (LoRA/distillation vs
+  staying in KV space). Start here.
 - [**persona-definitions.md**](notes/persona-definitions.md) — side-by-side of how each
   paper actually operationalizes "a persona", and where this repo's pipeline
   agrees or diverges from each.
