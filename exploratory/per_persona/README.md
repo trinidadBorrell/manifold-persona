@@ -18,6 +18,10 @@ MP_ROLE_DIR=data/embeddings_roles_resp40 \
 Output lands in `figures/<DD-Mon-YYYY-HHMM>/` — the same dated-folder contract as
 the other exploratory stages (`MP_RUN_DIR` / `--outdir`).
 
+**[METHODS.md](METHODS.md)** derives the two calculations that carry the
+interpretation — the within-role variance fractions, and the ID-vs-Assistant
+correlations with their scale control. Read it before quoting either.
+
 ## Read this before using any number here
 
 Each role's points are a complete two-factor grid — n_i instruction phrasings ×
@@ -90,6 +94,7 @@ bound, since generation is several times slower.
 
 | script | what it does |
 |---|---|
+| `METHODS.md` | how the variance fractions and the ID-vs-axis correlations are computed |
 | `common.py` | raw-cloud loader, ANOVA design split, and the two nulls |
 | `01_per_persona_id.py` | 276 IDs vs both nulls; variance decomposition; ID vs assistant-axis position |
 | `02_per_persona_clustering.py` | 276 clusterings, ARI/NMI vs instruction and vs question |
