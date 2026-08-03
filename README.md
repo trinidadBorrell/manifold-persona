@@ -48,46 +48,51 @@ generates an answer and reads the **response** tokens at ~half depth
 4. `04_traits_per_cluster.py` — cluster×trait contingency heatmap, composition
    bars, dominant-trait/purity table.
 
-**Stage 1b — per-persona** (`exploratory/per_persona/`). The stage-1 scripts collapse
-each role to one mean point and study the cloud *between* roles. This stage inverts
-that: it keeps the raw cloud and gives each role its **own** manifold — 276 intrinsic
-dimensions and 276 clusterings, each from that role's own points.
+## ⚠️ Findings below are WITHDRAWN pending recompute (2026-07-30)
 
-```bash
-.venv/bin/python exploratory/per_persona/run_all.py                       # prompt cloud, ~70s
-MP_ROLE_DIR=data/embeddings_roles_resp40 \
-  .venv/bin/python exploratory/per_persona/run_all.py --layer 0 --stamp resp40   # response cloud, ~5min
-```
+The `prompt_avg` view they were computed from was contaminated by a first-token
+**attention sink**, which made its **PC1 essentially `1/sequence_length`**
+(|r| = 0.9998, 78% of variance) rather than anything about personas. Because
+system-prompt length differs by role, it also produced a *fake* between-role
+signal. Fixed in `src/manifold_persona/extract.py`; full measurement and
+mechanism in **[diagnostics/README.md](diagnostics/README.md)**.
 
-Run on two clouds, with opposite answers. On the **prompt** cloud (5×5 = 25 pts/role)
-**99.4% of within-role variance is the extraction grid** (instruction 68%, question 31%,
-interaction 0.6%) and a persona-free design null reproduces both results — a negative
-result. On the **response** cloud (5×40 = 200 pts/role, from
-`triniborrell/manifold-persona-roles-response-40q`) the split inverts to 2% / 80% /
-**17.7% interaction** and the real roles separate from the null everywhere. Read
-`exploratory/per_persona/README.md` before using any number.
+Distance-based ID estimators are translation-invariant, so a constant offset
+would have been harmless — but the sink term is scaled by `1/T`, so it varies.
+Measured `r(d(prompt_avg), d(sink-excluded)) = 0.42`: the artifact was inside the
+geometry being measured. **Both numbers below need recomputing on a clean cloud.**
 
-## Key findings so far (Qwen2.5-3B, layer 26, `prompt_avg`)
+A cloud is clean iff its `data/embeddings_roles/manifest.json` contains a
+`sink_factor` key.
 
-- **Low-dimensional manifold**: intrinsic dimension ≈ **3–13** (most estimators
-  4–7) versus ambient **2048** → persona activations occupy a thin manifold.
-- **Assistant Axis**: PCA **PC1** orders **neutral → negative → positive**
-  personas — a single leading direction capturing distance from the model's
-  default identity.
-- **Per-persona manifolds depend entirely on which cloud you ask.** On *prompt*
-  activations (5×5 grid) they are not measurable: 99.4% of within-role variance is
-  the extraction grid, per-role IDs sit at the grid's additive rank of 8, clustering
-  recovers the 5 instruction phrasings at ARI ≈ 1.0, and a persona-free design null
-  reproduces all of it. On *response* activations with 40 questions (5×40 grid) the
-  picture inverts — instruction drops to 2%, question rises to 80%, and **interaction
-  reaches 17.7%**: real role-specific geometry, with per-role ID ≈ 18 (participation
-  ratio) against a design null of 11.9. See `exploratory/per_persona/`.
+Recomputed on 2026-07-30 (Qwen2.5-**0.5B**, layer 17, 276 roles × 5 × 3 = 4,140
+records, both with and without the sink). Verdict is split:
+
+- **Low-dimensional manifold — SURVIVES.** Every distance-based estimator is
+  essentially unchanged by the fix (TwoNN 11.8 → 11.3, MLE 13.0 → 12.6, TLE
+  12.2 → 11.9). ID ≈ **10–13** vs ambient **896** is real. *But* the linear
+  picture was badly understated: lPCA 4 → 25, and PCs for 90% variance 42 → 71.
+- **Assistant Axis — DOES NOT SURVIVE.** `|cos(PC1, axis)|` falls **0.945 → 0.276**.
+  The apparent alignment was sequence length (raw PC1 correlates with `1/T` at
+  0.997). Worse, the axis is *structurally* confounded with length: the `default`
+  baseline is the shortest condition in the design by construction (mean 32.6
+  tokens vs 41.7 for roles; no role's mean falls below it), and the projection
+  still correlates with `1/T` at **0.64** even after the fix.
+
+Caveat: this is 0.5B and *prompt* tokens, so it does not test the papers' claims —
+they use response tokens (which excludes the sink automatically) at 27B–70B.
 
 ## Setup & run
+
+On a CPU-only machine see **[SMOKE.md](SMOKE.md)** instead — it has a verified
+CPU-wheel setup, a small-model smoke sequence, and measured runtimes.
 
 ```bash
 python -m venv --system-site-packages .venv     # inherits an existing torch, if present
 .venv/bin/pip install -r requirements.txt
+
+# Sanity-check the apparatus before trusting any geometry (~1 min, CPU, 0.5B model)
+.venv/bin/python diagnostics/01_activation_scales.py
 
 # Stage 0: build the role point cloud (data/embeddings_roles/)
 .venv/bin/python -m extraction.build_and_extract_roles     # prompt-token activations
@@ -110,6 +115,8 @@ env var; each script also accepts `--outdir`.
 ## Layout
 
 ```
+docs/papers/ + docs/notes/     # reference PDFs + reading notes (see docs/README.md)
+diagnostics/                   # apparatus checks: activation scales, attention sinks
 src/manifold_persona/          # config, io, extract, common, runlog; prompts_roles.py (roles)
 extraction/                    # build_and_extract_roles.py (prompt tokens),
                                # generate_and_extract_roles.py (response tokens), push_to_hf.py

@@ -129,7 +129,8 @@ def main():
     bounds = [(s, min(s + args.chunk, N)) for s in range(0, N, args.chunk)]
     todo = [(s, e) for (s, e) in bounds if not shard_path(ckpt_dir, s, e).exists()]
     done = len(bounds) - len(todo)
-    print(f"{N} records over {len(list_roles())} roles · chunk={args.chunk} · "
+    print(f"{N} records over {len({r.role for r in records})} roles "
+          f"(of {len(list_roles())} available) · chunk={args.chunk} · "
           f"{len(bounds)} shards ({done} done, {len(todo)} to do) · "
           f"max_new_tokens={args.max_new_tokens} do_sample={args.do_sample}")
 
