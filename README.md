@@ -37,33 +37,53 @@ Persona Vectors' layer 20/28 for Qwen2.5-7B (~0.71 depth). `--response` instead
 generates an answer and reads the **response** tokens at ~half depth
 (`generate_and_extract_roles.py`), matching the Assistant Axis paper's extraction.
 
-**Stage 1 — exploratory** (`exploratory/`):
-1. `01_intrinsic_dimension.py` — non-linear ID estimators (TwoNN, MLE, lPCA,
-   MOM, TLE, correlation dimension) + PCA baselines, globally and per-trait.
-2. `02_clustering.py` — centroid (KMeans auto-k, fixed k=7/k=14, GMM) and
-   density (HDBSCAN, DBSCAN) clustering, scored by silhouette / Davies-Bouldin
-   and — since labels exist — **ARI / NMI vs trait and polarity**.
-3. `03_umap.py` — UMAP 2D (static) + 3D (interactive HTML), plus a PCA(1,2)
-   "Assistant Axis" view.
-4. `04_traits_per_cluster.py` — cluster×trait contingency heatmap, composition
-   bars, dominant-trait/purity table.
+**Stage 1 — exploratory** (`exploratory/assistant_axis/`). Six scripts, all on the
+276 **role-mean** points (one mean vector per role):
+1. `01_intrinsic_dimension.py` — ID estimators (TwoNN, MLE, lPCA, MOM, TLE,
+   correlation dimension) + PCA baselines, plus the PCA cumulative-variance curve.
+2. `02_clustering.py` — KMeans (auto-k and fixed k), GMM, HDBSCAN and DBSCAN in a
+   PCA-95% space. **Internal** scores only (silhouette, Davies-Bouldin, cluster
+   counts, noise fraction) — after the role-mean collapse there is no label left
+   to score against. Each cluster gets a size, a mean axis projection, a
+   holds-`default` flag and representative roles; assignments go to
+   `clusters_rolemean_<view>_L<layer>.parquet`.
+3. `03_umap_axis.py` — UMAP 2D + interactive 3D HTML, plus PCA(1,2) coloured by
+   the axis projection, and `cos(PC1, assistant_axis)`.
+4. `04_role_families.py` — Ward dendrogram of the 276 role centroids cut into K
+   families, and per-cluster composition (size, top roles, %default, mean axis
+   projection).
+5. `05_role_map.py` — the role map: UMAP and PCA of the role centroids, coloured
+   by Ward family, with role labels + 3D HTML.
+6. `06_cluster_maps.py` — every clustering drawn in four embeddings (UMAP-2D/3D,
+   PCA-2D/3D) with `default` starred, plus a per-method interpretability dump.
+
+`run_all.py` runs all six into one dated folder; `make_report.py` writes that
+folder's `REPORT.md`.
 
 ## ⚠️ Findings below are WITHDRAWN pending recompute (2026-07-30)
 
 The `prompt_avg` view they were computed from was contaminated by a first-token
-**attention sink**, which made its **PC1 essentially `1/sequence_length`**
-(|r| = 0.9998, 78% of variance) rather than anything about personas. Because
-system-prompt length differs by role, it also produced a *fake* between-role
-signal. Fixed in `src/manifold_persona/extract.py`; full measurement and
-mechanism in **[diagnostics/README.md](diagnostics/README.md)**.
+**attention sink**, which tied its **PC1 to `1/sequence_length`** rather than to
+anything about personas. On the 0.5B layer-12 probe that link is near-total
+(|r(PC1, 1/T)| = 0.9998, PC1 = 78% of variance — see
+**[diagnostics/README.md](diagnostics/README.md)**); measured on *this* 3B
+layer-26 cloud it is weaker but still large — PC1 holds ~26% of the variance,
+|r(PC1, 1/T)| ≈ 0.60, and the axis projection itself correlates with `1/T` at
+r ≈ 0.78–0.80. Because system-prompt length differs by role, it also produced a
+*fake* between-role signal. Fixed in `src/manifold_persona/extract.py`; full
+measurement and mechanism in **[diagnostics/README.md](diagnostics/README.md)**.
 
 Distance-based ID estimators are translation-invariant, so a constant offset
 would have been harmless — but the sink term is scaled by `1/T`, so it varies.
 Measured `r(d(prompt_avg), d(sink-excluded)) = 0.42`: the artifact was inside the
 geometry being measured. **Both numbers below need recomputing on a clean cloud.**
 
-A cloud is clean iff its `data/embeddings_roles/manifest.json` contains a
-`sink_factor` key.
+A prompt-token cloud is clean iff its `manifest.json` carries a `sink_factor`
+that is **present and not null**: a pre-fix run writes no key at all, and a
+`--keep_sinks` run writes `null`. Response-token clouds are clean by
+construction, since position 0 is never pooled. The cloud now in
+`data/embeddings_roles/` **fails** this test — it predates the fix — so
+`load_layer` refuses to load it unless you set `MP_ALLOW_UNCLEAN=1`.
 
 Recomputed on 2026-07-30 (Qwen2.5-**0.5B**, layer 17, 276 roles × 5 × 3 = 4,140
 records, both with and without the sink). Verdict is split:
@@ -104,12 +124,23 @@ python -m venv --system-site-packages .venv     # inherits an existing torch, if
 ```
 
 Each run writes to a **timestamped folder**
-`exploratory/persona_vectors/figures/<DD-Mon-YYYY-HHMM>/` containing every figure
-(PNG + interactive 3D HTML), the raw metric dumps (`*.json`, `*.csv`), and an
-auto-generated **`REPORT.md`** that pulls the run's real numbers, embeds each
-figure, interprets it, and cites the code that produced it. The orchestrator
-fixes one timestamp and shares it across the four scripts via the `MP_RUN_DIR`
-env var; each script also accepts `--outdir`.
+`exploratory/assistant_axis/figures/<DD-Mon-YYYY-HHMM>/` (set in
+`src/manifold_persona/common.py:26`) containing every figure (PNG + interactive
+3D HTML), the raw metric dumps (`*.json`, `*.csv`), and an auto-generated
+**`REPORT.md`** that pulls the run's real numbers, embeds each figure,
+interprets it, and cites the code that produced it. The orchestrator fixes one
+timestamp and shares it across the six scripts via the `MP_RUN_DIR` env var;
+each script also accepts `--outdir`.
+
+**Stage 1b — per-persona** (`exploratory/per_persona/`). The same cloud read the
+other way round: instead of one mean point per role, it keeps each role's own
+points and measures the geometry *within* each role — 276 intrinsic dimensions
+and 276 clusterings. Its prompt-cloud arm is contaminated by the same length
+artifact and measures the extraction grid, not persona geometry. Its 40-question
+**response**-cloud arm (`data/embeddings_roles_resp_40q/`) is clean and finds
+that more Assistant-like roles have **lower** within-role ID — weakened but
+directionally intact once cloud scale is controlled. See
+`exploratory/per_persona/README.md`.
 
 
 ## Layout
@@ -121,12 +152,11 @@ src/manifold_persona/          # config, io, extract, common, runlog; prompts_ro
 extraction/                    # build_and_extract_roles.py (prompt tokens),
                                # generate_and_extract_roles.py (response tokens), push_to_hf.py
 manifold/                      # H1 manifold study: pipeline, tps, run, sweep, local_id
-exploratory/persona_vectors/   # trait study: 01–04 + common + run_all + make_report + figures/<stamp>/
-exploratory/assistant_axis/    # role study:  01–04 + common + run_all + make_report + figures/<stamp>/
-exploratory/per_persona/       # per-role study: 01–03 + common + run_all + figures/<stamp>/
-data/embeddings/               # trait point cloud (gitignored; mirrored on HF)
-data/embeddings_roles/         # role point cloud, prompt tokens 5x5 (gitignored)
-data/embeddings_roles_resp40/  # role point cloud, response tokens 5x40 (gitignored; from HF)
+exploratory/assistant_axis/    # role study: 01–06 + run_all + make_report + figures/<stamp>/
+exploratory/per_persona/       # per-role study: 01–04 + common + run_all + METHODS.md + figures/<stamp>/
+data/embeddings_roles/         # role cloud, prompt tokens 5x5, L26 (gitignored; UNCLEAN, see above)
+data/embeddings_roles_resp/    # role cloud, response tokens 5x5, L19 (gitignored)
+data/embeddings_roles_resp_40q/ # role cloud, response tokens 5x40, L19 (gitignored; from HF)
 token/huggingface.txt          # HF token (gitignored)
 ```
 

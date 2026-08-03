@@ -39,6 +39,8 @@ def main():
     cluj = load_first(run_dir, f"clustering_{v}_L*.json")
     rankj = load_first(run_dir, f"03_axis_ranking_{v}_L*.json")
     famj = load_first(run_dir, f"04_role_families_{v}_L*.json")
+    cosc = (rankj or {}).get("cos_pc1_axis")            # centered role means
+    coszs = (rankj or {}).get("cos_pc1_axis_zscored")   # same means, z-scored
     layer = (idj or cluj)["_meta"]["layer"]
     ambient = idj["_meta"]["ambient"] if idj else "?"
     n = (idj or cluj)["_meta"]["n"]
@@ -56,8 +58,13 @@ def main():
     is_resp = token_basis == "response"
     max_new = man.get("max_new_tokens")
     nq = man.get("n_questions", 5)
-    rollouts = 5 * nq                       # 5 instructions x nq questions
-    n_raw = man.get("n_records", rollouts * (n_roles if isinstance(n_roles, int) else 276))
+    n_roles_i = n_roles if isinstance(n_roles, int) else man.get("n_roles")
+    n_rec = man.get("n_records")
+    # instructions/role is not stored; recover it from the record count when we can.
+    n_instr = (max(1, round(n_rec / (n_roles_i * nq)))
+               if (n_rec and n_roles_i and nq) else 5)
+    rollouts = n_instr * nq                 # n_instr instructions x nq questions
+    n_raw = n_rec or rollouts * (n_roles_i or 276)
     basis_word = "response" if is_resp else "prompt"
     extract_driver = ("extraction/generate_and_extract_roles.py" if is_resp
                       else "extraction/build_and_extract_roles.py")
@@ -71,11 +78,11 @@ def main():
     A("## What this run did")
     A("")
     if is_resp:
-        A("**Paper-matched, response-token run.** Over the **276 character-role "
+        A(f"**Paper-matched, response-token run.** Over the **{n_roles_i} character-role "
           "archetypes** from the assistant-axis repo (pirate, ghost, accountant, "
           "alien, …), for each role we built `system(role instruction) + question` "
-          f"chats (5 instructions × {nq} sampled questions = {rollouts} "
-          f"rollouts/role, **{n_raw}** in total), **generated a response** with "
+          f"chats ({n_instr} instructions × {nq} sampled questions = {rollouts} "
+          f"rollouts/role, **{n_raw:,}** in total), **generated a response** with "
           f"`{model_name}` (greedy, ≤{max_new} new tokens), and read the residual "
           "stream **averaged over the assistant-response tokens** — the same token "
           "basis the Assistant Axis paper uses "
@@ -86,11 +93,11 @@ def main():
           "(which read prompt tokens with no generation) — see §B for the exact "
           "differences that remain from the paper.")
     else:
-        A("Same pipeline as the persona-vectors study, over the **276 character-role "
+        A(f"Same pipeline as the persona-vectors study, over the **{n_roles_i} character-role "
           "archetypes** from the assistant-axis repo (pirate, ghost, accountant, "
           "alien, …) rather than the 7 behavioral traits. For each role we built "
-          f"`system(role instruction) + question` prompts (5 instructions × {nq} "
-          f"sampled questions = {rollouts} rollouts/role, **{n_raw}** in total) and "
+          f"`system(role instruction) + question` prompts ({n_instr} instructions × {nq} "
+          f"sampled questions = {rollouts} rollouts/role, **{n_raw:,}** in total) and "
           f"extracted **prompt activations** from `{model_name}` — no response "
           "generation, no polarity (roles are positive embodiments). Prompt build: "
           "[`src/manifold_persona/prompts_roles.py`](../../../../src/manifold_persona/prompts_roles.py); "
@@ -101,7 +108,7 @@ def main():
           "the 6×4 cluster-map matrix are added — §2/§5.)*")
     A("")
     A("**Each point is one role-mean vector — we average across answers.** "
-      f"Every one of the {n_raw} raw {basis_word} activations is a "
+      f"Every one of the {n_raw:,} raw {basis_word} activations is a "
       "`(role, instruction, question)` combination, so a single one mixes the role "
       "identity with the specific question's content. Following the paper's "
       "role-vector definition (arXiv:2601.10387 §2.1.2–2.1.3: *\"we collected the "
@@ -122,8 +129,8 @@ def main():
     A("")
     A("**Where the inputs live.** Each archetype is one JSON file in "
       "`../assistant-axis/data/roles/instructions/<role>.json`, holding "
-      "`instruction` = **5 positive-only** identity descriptions (plus "
-      "`questions`/`eval_prompt` we don't use). There are **276** roles + "
+      f"`instruction` = **{n_instr} positive-only** identity descriptions (plus "
+      f"`questions`/`eval_prompt` we don't use). There are **{n_roles_i}** roles + "
       "`default.json`. Questions come from "
       "`../assistant-axis/data/extraction_questions.jsonl` (240 total). "
       "`default` is the neutral Assistant baseline — its 5 instructions are `\"\"`, "
@@ -138,14 +145,14 @@ def main():
     A("")
     A("**How a role becomes a prompt (this study).** "
       "`src/manifold_persona/prompts_roles.py::build_role_records`: for each role "
-      "× each of its 5 instructions × 5 **sampled** questions (a fixed seeded "
+      f"× each of its {n_instr} instructions × {nq} **sampled** questions (a fixed seeded "
       "subset, shared across all roles so the question is held constant), the "
       "**system prompt is the role instruction verbatim** — e.g. *\"You are a "
       "pirate captain who has sailed the seven seas…\"* — and the question is the "
       "**user** turn. We render `[system, {user: question}]` with "
       "`tokenizer.apply_chat_template(…, add_generation_prompt=True)`; `default`'s "
-      "`{model_name}` placeholder is substituted. → 276 × 5 × 5 = **6,900 raw "
-      "prompts**, labelled role/instruction/question, then **averaged per role "
+      f"`{{model_name}}` placeholder is substituted. → {n_roles_i} × {n_instr} × {nq} = "
+      f"**{n_raw:,} raw prompts**, labelled role/instruction/question, then **averaged per role "
       f"→ {n} role-mean points** (§ *What this run did*). **No pos/neg** — roles "
       "are identity embodiments, so there is no polarity; the shared reference is "
       "the `default` role.")
@@ -204,18 +211,30 @@ def main():
           "(separate folder) closes the token-basis and depth gaps. Set "
           "`MP_AGGREGATE=none` for the raw per-example cloud.")
     A("")
+    sink = man.get("sink_factor")
+    A(f"**Cloud provenance.** Activations read from `{role_dir}`; manifest "
+      f"`sink_factor` = `{sink}`"
+      + (" — absent or null, so this cloud predates the attention-sink fix and its "
+         "pooled means still include the sink position "
+         "(`src/manifold_persona/io.py::load_manifest`)."
+         if sink is None else
+         f" — sink positions were dropped during pooling (at most "
+         f"{man.get('sink_positions_dropped_max')} positions in any one record)."))
+    A("")
     A("### C. Preprocessing — averaging, centering, and where PCA is used")
     A("")
     A("- **Average first (across answers).** Every analysis below runs on the "
-      f"**{n} role means**, not the 6,900 raw prompts (§ *What this run did*). This "
+      f"**{n} role means**, not the {n_raw:,} raw prompts (§ *What this run did*). This "
       "is the one preprocessing step that makes the results reproduce the paper.")
     A("- **Centre, do not z-score.** We mean-centre the role vectors "
       "([`common.center`](../../common.py)) — exactly the paper's *\"subtracting "
       "the mean vector across roles\"* (covariance PCA). We **do not** divide by "
-      "per-feature std: the 2,048 residual-stream features share one natural scale, "
-      "and z-scoring reweights them so heavily that `|cos(PC1, axis)|` collapses "
-      "from **0.87 → 0.19** (§3b). The trait/persona-vectors studies z-scored; here "
-      "we follow the axis paper instead.")
+      f"per-feature std: the {ambient} residual-stream features share one natural scale, "
+      + (f"and in this run z-scoring moves `|cos(PC1, axis)|` from **{_fmt(cosc)} → "
+         f"{_fmt(coszs)}** (§3b). " if cosc is not None and coszs is not None else
+         "and z-scoring reweights them (§3b). ")
+      + "The trait/persona-vectors studies z-scored; here we follow the axis paper "
+      "instead.")
     A("- **Intrinsic dimension (§1): full-dim, with a PCA-95% robustness check.** "
       f"ID is estimated on the {ambient}-d role means; we **also** re-estimate on a "
       "PCA-95% projection to show the estimate is not inflated by the dim≫N regime "
@@ -269,6 +288,7 @@ def main():
     A("")
     cspace = (cluj or {}).get("_meta", {}).get("cluster_space", "pca95")
     pdim = (cluj or {}).get("_meta", {}).get("pca_dim")
+    n_dens = None                       # max density-cluster count, set in §2 below
     A("*Code:* [`02_clustering.py`](../../02_clustering.py) — KMeans (auto-k + "
       "k=12/24), GMM, HDBSCAN, DBSCAN, clustered in a **PCA-95%** space "
       f"(`{cspace}`, {pdim} components — denoises the dim≫N regime) plus the full "
@@ -299,26 +319,33 @@ def main():
             A("")
         A(f"![clustering](02_clustering_{v}_L{layer}.png)")
         A("")
-        A("The density clusterings, drawn on the UMAP layout (noise in grey), show "
-          "it directly — one dominant blob plus a large noise fraction, with no "
-          "coherent secondary clusters:")
-        A("")
-        A(f"![density clusters](03_density_clusters_{v}_L{layer}.png)")
-        A("")
         km = cluj[cspace]["kmeans"]
         db = cluj[cspace].get("dbscan", {})
         hdb = cluj[cspace].get("hdbscan", {})
-        A(f"**Interpretation.** Best KMeans k = **{km['k']}** at a low silhouette "
-          f"(**{_fmt(km.get('silhouette'))}**) — a weak partition. The **density** "
-          "methods are the tell-tale: HDBSCAN leaves "
+        n_dens = max(hdb.get("n_clusters") or 0, db.get("n_clusters") or 0)
+        A("The same clusterings drawn on the UMAP layout, noise in grey:")
+        A("")
+        A(f"![density clusters](03_density_clusters_{v}_L{layer}.png)")
+        A("")
+        sil = km.get("silhouette")
+        sil_word = ("weak" if (sil or 0) < 0.25 else
+                    "moderate" if sil < 0.5 else "strong")
+        A(f"**Interpretation.** Best KMeans k = **{km['k']}** at silhouette "
+          f"**{_fmt(sil)}** — a **{sil_word}** partition on the usual reading "
+          "(<0.25 weak, 0.25–0.5 moderate, >0.5 strong). The **density** methods are "
+          "the tell-tale: HDBSCAN leaves "
           f"{_fmt((hdb.get('noise_frac') or 0)*100, 0)}% as noise "
           f"({hdb.get('n_clusters')} clusters) and DBSCAN "
           f"{_fmt((db.get('noise_frac') or 0)*100, 0)}% noise "
-          f"({db.get('n_clusters')} clusters). There are **no density gaps to cut "
-          "on** — the role means form a **continuous manifold ordered along the "
-          "Assistant Axis** (§3), not a set of discrete clusters. KMeans still gives "
-          "a *useful* partition of that continuum into interpretable regions — read "
-          "per cluster in **§5**.")
+          f"({db.get('n_clusters')} clusters). "
+          + ("Neither finds more than one cluster, so there are **no density gaps to "
+             "cut on**: the role means read as one continuum, not a set of discrete "
+             "clusters. " if n_dens <= 1 else
+             f"They do cut the cloud into up to {n_dens} density clusters, so the "
+             "density structure here is not featureless — read those clusters "
+             "against the noise fractions above before treating them as families. ")
+          + "KMeans still gives a partition of the cloud into regions that can be "
+          "read semantically — per cluster in **§5**.")
         A("")
 
     # 3. axis
@@ -332,19 +359,21 @@ def main():
     A("")
     A(f"![pca 1,2](03_pca12_{v}_L{layer}.png)")
     A("")
-    A("**The same 276 role means coloured by Ward family** (§4) — one point per "
+    A(f"**The same {n} role means coloured by Ward family** (§4) — one point per "
       "role, in UMAP and in PCA(1,2):")
     A("")
     A(f"![by family](03_by_family_{v}_L{layer}.png)")
     A("")
-    A("Both views now show structure: families occupy coherent regions in UMAP, "
-      "and — because averaging concentrated the persona signal into the leading "
-      "components — they are **also** laid out along PC1 in the linear PCA(1,2) "
-      "view, from Assistant-like professional families at one end to uncanny / "
-      "non-human ones at the other. This is the opposite of the raw per-example "
-      "cloud (trait study / `MP_AGGREGATE=none`), where PC1/PC2 were an "
-      "undifferentiated blob; §3b explains why averaging across answers flips this.")
-    A("")
+    if famj:
+        _fo = famj["order_by_assistant_like"]
+        _ff = famj["families"]
+        A(f"The {len(_fo)} Ward families run from **fam{_fo[0]}** (mean axis projection "
+          f"{_fmt(_ff[str(_fo[0])]['mean_axis_proj'])}, most Assistant-like) to "
+          f"**fam{_fo[-1]}** ({_fmt(_ff[str(_fo[-1])]['mean_axis_proj'])}, most "
+          f"in-character); the full ladder with members is §4. `|cos(PC1, axis)|` = "
+          f"**{_fmt(cosc)}** sets how much of that ordering the linear PCA(1,2) view "
+          "can show (§3b).")
+        A("")
     if rankj:
         cos = rankj.get("cos_pc1_axis")
         most = ", ".join(list(rankj["most_assistant_like"])[:8])
@@ -387,32 +416,28 @@ def main():
     var3 = (rankj or {}).get("pca_var_top3")
     v1 = f"{var3[0]*100:.0f}%" if var3 else "a large %"
     v2 = f"{var3[1]*100:.0f}%" if var3 else "a small %"
-    coszs = (rankj or {}).get("cos_pc1_axis_zscored")
-    cosc = (rankj or {}).get("cos_pc1_axis")
     nonpca = [x for k, x in (idj or {}).get("global", {}).items()
               if x and not k.startswith("PCA")]
     idlo, idhi = (min(nonpca), max(nonpca)) if nonpca else (None, None)
 
     A("## 3b. Why averaging across answers recovers the Assistant Axis as PC1")
     A("")
-    A("In the raw per-example cloud (the trait study, and this study under "
-      "`MP_AGGREGATE=none`) the leading PCs are an undifferentiated blob and PC1 "
-      "is *not* the Assistant Axis. After averaging across answers per role and "
-      f"centering, PC1 jumps to **{v1}** of the variance and "
-      f"`|cos(PC1, axis)|` = **{_fmt(cosc)}**. Two mechanisms, each measurable "
-      "here, explain the flip:")
+    A("This run analyses role means only; it does not score the raw per-example cloud, "
+      "so nothing here measures that cloud. On the role means, after averaging across "
+      f"answers per role and centering, PC1 carries **{v1}** of the variance and "
+      f"`|cos(PC1, axis)|` = **{_fmt(cosc)}**. Two mechanisms, both measurable here, "
+      "bear on why:")
     A("")
     A("**1. Averaging cancels the question-content confound (a variance-reduction "
       "argument).** Write each raw point as `role_effect + question_effect + "
-      "noise`. Across the 25 rollouts of a role the `role_effect` is fixed while "
-      "`question_effect` varies, so in the raw cloud the *largest* source of "
-      "variance is **which question was asked**, not which role — and PCA, which "
-      "ranks directions by variance, puts that confound on PC1. Averaging the 25 "
-      "rollouts shrinks the question and noise terms by ≈1/√25 while leaving the "
-      "role term untouched, so the **between-role** variation (which the Assistant "
-      "Axis is part of) becomes the dominant signal. This is exactly why the paper "
-      "defines a role *vector* as a mean over rollouts before running PCA "
-      "(arXiv:2601.10387 §2.1.2–2.1.3).")
+      f"noise`. Across the {rollouts} rollouts of a role the `role_effect` is fixed "
+      f"while `question_effect` varies, so averaging those {rollouts} rollouts shrinks "
+      f"the question and noise terms by ≈1/√{rollouts} while leaving the role term "
+      "untouched — the **between-role** variation (which the Assistant Axis is part "
+      "of) is what survives. This is algebra, not a measurement: this run scores only "
+      "the role means, so it does not show where the raw cloud's PC1 points. It is "
+      "why the paper defines a role *vector* as a mean over rollouts before running "
+      "PCA (arXiv:2601.10387 §2.1.2–2.1.3).")
     A("")
     A(f"**2. Centering (not z-scoring) keeps the axis on PC1.** On the centered "
       f"role means `|cos(PC1, axis)|` = **{_fmt(cosc)}**; z-scoring the same means "
@@ -439,7 +464,7 @@ def main():
     A("## 4. Role families (hierarchical structure)")
     A("")
     A("*Code:* [`04_role_families.py`](../../04_role_families.py) — Ward hierarchy "
-      "of the 276 per-role centroids, cut into families; plus the member/axis "
+      f"of the {n} per-role centroids, cut into families; plus the member/axis "
       "composition of the point-cloud clusters.")
     A("")
     A("**What this is (and is not).** The dendrogram is a **Ward agglomerative "
@@ -468,7 +493,7 @@ def main():
         A("")
         A(f"Per-cluster composition: `{Path(comp_csv[-1]).name}`.")
         A("")
-    A("### Map of the 276 roles (UMAP & PCA of role centroids)")
+    A(f"### Map of the {n_roles} roles (UMAP & PCA of role centroids)")
     A("")
     A("*Code:* [`05_role_map.py`](../../05_role_map.py) — one point per role "
       "(centroid of its points), colored by family.")
@@ -481,28 +506,39 @@ def main():
     A("**Interpretation — what the hierarchy tells us.** The finding is not \"there "
       "are 15 families\"; it is the **ordering and the branching**:")
     A("")
-    A("1. **A dominant Assistant Axis.** Sorting the groups by mean axis projection "
-      "gives a monotone ladder from Assistant-like to fully in-character: `default` "
-      "alone at the extreme Assistant end → analytic professions (scientist, "
-      "engineer, economist, architect) → pedagogical/facilitative roles (instructor, "
-      "teacher, presenter) → creative/expressive (composer, novelist, chef) & "
-      "caregiving (healer, therapist) → emotional/existential human archetypes "
-      "(survivor, widow, refugee) → uncanny/supernatural (void, wraith, vampire) → "
-      "and, at the far pole, **non-human entities** (tree, golem, leviathan, "
-      "coral_reef). This ordering matches what the paper reports for its axis.")
+    if famj:
+        fo = famj["order_by_assistant_like"]
+        ff = famj["families"]
+        k = max(1, min(3, len(fo) // 2))    # keep the two ends disjoint
+
+        def _rung(f):
+            d = ff[str(f)]
+            return (f"**fam{f}** (n={d['size']}, proj={_fmt(d['mean_axis_proj'])}: "
+                    + ", ".join(d["roles"][:4]) + ")")
+
+        A(f"1. **A dominant Assistant Axis.** Sorting the {len(fo)} Ward groups by mean "
+          f"axis projection gives a ladder. The {k} most Assistant-like rungs: "
+          + " → ".join(_rung(f) for f in fo[:k])
+          + f". The {k} at the far pole: "
+          + " → ".join(_rung(f) for f in fo[-k:])
+          + ". The full ordering is listed above.")
+    else:
+        A("1. **A dominant Assistant Axis.** The family table "
+          "(`04_role_families_*.json`) is missing from this run, so the ladder is not "
+          "printed here.")
     A("2. **But persona space is not 1-D.** PC1 carries the axis, yet the intrinsic "
       f"dimension is ≈{_fmt(idlo)}–{_fmt(idhi)} and 90% of variance needs {d90} "
       "components (§1). The dendrogram shows the extra structure: groups at similar "
-      "axis positions still split into distinct **branches** (e.g. analytic "
-      "professions vs. educators sit near each other on the axis but separate early "
-      "in the tree). So the second-order structure is *kind of role* (professional "
-      "/ creative / caregiving / uncanny / non-human), orthogonal to *how "
-      "Assistant-like*.")
+      "axis positions can still split into distinct **branches**, so a second-order "
+      "structure — *kind of role* — sits orthogonal to *how Assistant-like* a role "
+      "is. Read the branches in the dendrogram above; this report does not quantify "
+      "them.")
     A("")
-    A("So the honest one-liner: **persona space is a continuum dominated by the "
-      "Assistant Axis, with secondary branching by archetype kind that a single "
-      "axis does not capture** — which is exactly why §2's density clustering finds "
-      "no gaps, while the hierarchy and UMAP still show coherent regions.")
+    A("So the one-liner this supports: **persona space is a continuum along the "
+      "Assistant Axis, with hierarchical branching a single axis does not capture** — "
+      + (f"read alongside §2, where the density methods cut the cloud into at most "
+         f"{n_dens} cluster(s)." if n_dens is not None else
+         "§2 has the density-clustering counterpart."))
     A("")
 
     # 5. Cluster interpretability + the 6x4 map matrix (Q4)

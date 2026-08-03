@@ -14,7 +14,11 @@ data/embeddings_aa_traits/*.parquet
 token/
 .env
 
-output/
+# Ignore experiment outputs, but track the scripts that produce them
+# (a lost script made the primary E8 result unreproducible — 2026-08-03 review).
+output/**
+!output/**/
+!output/**/*.py
 plans/
 data/
 exploratory/assistant_axis_traits/

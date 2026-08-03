@@ -4,8 +4,9 @@ Two levels: `build_sweep_report` (top of the run dir — controls, the decider,
 the step-by-step pipeline, every figure with the code that made it) and
 `build_cell_report` (one per `n-personas-<n>/`).
 
-The report is generated from the metrics frame, never hand-written, so it cannot
-drift from the numbers.
+Every number and every directional claim is computed from the metrics frame, so
+neither can drift from the run. The fixed prose is method description, the
+preregistered decision rule and the caveats — none of it states an outcome.
 """
 from __future__ import annotations
 
@@ -31,6 +32,16 @@ def _range_cell(t, nd=3):
     return f"{_f(m, nd)} [{_f(lo, nd)}–{_f(hi, nd)}]"
 
 
+def _trend(hi_v, lo_v, eps=1e-3):
+    """Direction of a quantity read from the largest `n` down to the smallest."""
+    if hi_v is None or lo_v is None or np.isnan(hi_v) or np.isnan(lo_v):
+        return "is not available"
+    d = lo_v - hi_v
+    if abs(d) < eps:
+        return "is flat"
+    return "rises" if d > 0 else "falls"
+
+
 # --------------------------------------------------------------------------- #
 def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
                        stamp: str, run_dir, floor: float, band: float,
@@ -54,17 +65,43 @@ def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
       f"context `RESEARCH.md` · status **executed**\n")
     A(f"**Verdict: {verdicts['decision']}**\n")
     lo_n, hi_n = ns[0], ns[-1]
-    A(f"> **One-line answer.** The preregistered decider says yes: the n-fair effect size "
-      f"rises monotonically as the role set is coarsened, from **{_f(rr[hi_n][0])}** at "
-      f"n={hi_n} to **{_f(rr[lo_n][0])}** at n={lo_n}, with non-overlapping seed ranges and "
-      f"p<0.05 everywhere. **My preregistered prediction was wrong and the hypothesis is "
-      f"falsified.** But both secondary metrics point the *other* way — at n={lo_n} the "
-      f"fitted surface is essentially flat (curvature gain {_f(gain[lo_n][0])} vs "
-      f"{_f(gain[hi_n][0])} at n={hi_n}) and the role means are barely distinguishable from "
-      f"a matched Gaussian in intrinsic dimension. And the positive control, which contains "
-      f"no role structure at all, trends the same way with `n`. Read §3 and §6 before quoting "
-      f"§2: what coarsening buys is a *stronger and more legible fit to a nearly-linear "
-      f"configuration*, not more manifold. See §6.\n")
+    dec = verdicts["decision"]
+    d_rr = rr[lo_n][0] - rr[hi_n][0]
+    small_ns = sorted(int(n) for n in verdicts["small"])
+    p_small = (float(df[df["n"].isin(small_ns)]["p"].max()) if small_ns else float("nan"))
+    if dec.startswith("small-n BETTER"):
+        answer = (f"The preregistered decider fires **small-n better**: the n-fair effect "
+                  f"size is **{_f(rr[lo_n][0])}** at n={lo_n} against **{_f(rr[hi_n][0])}** "
+                  f"at n={hi_n} ({d_rr:+.3f}, band ±{band:.2f}), with non-overlapping seed "
+                  f"ranges and the largest small-`n` p at {_f(p_small, 4)}. **The "
+                  f"preregistered prediction was wrong and the hypothesis is falsified.**")
+    elif dec.startswith("small-n WORSE"):
+        answer = (f"The preregistered decider fires **small-n worse**: the n-fair effect "
+                  f"size is **{_f(rr[lo_n][0])}** at n={lo_n} against **{_f(rr[hi_n][0])}** "
+                  f"at n={hi_n} ({d_rr:+.3f}, band ±{band:.2f}). **Coarsening the role set "
+                  f"lowers the measured effect size; the hypothesis is not falsified by "
+                  f"this run.**")
+    else:
+        answer = (f"The preregistered decider comes out **flat**: the n-fair effect size is "
+                  f"**{_f(rr[lo_n][0])}** at n={lo_n} against **{_f(rr[hi_n][0])}** at "
+                  f"n={hi_n} ({d_rr:+.3f}), inside the ±{band:.2f} band the rule required "
+                  f"in either direction. **The decider separates no role set from another, "
+                  f"so it neither falsifies nor confirms the hypothesis.**")
+
+    def _twonn_gap(n):
+        ref = refs.get(n, {}).get("TwoNN", {}).get("median")
+        real = df[df["n"] == n]["id_TwoNN"].mean()
+        return (real - ref) if ref is not None else np.nan
+
+    A(f"> **One-line answer.** {answer} The two preregistered secondary metrics cannot move "
+      f"that verdict, and in this run: curvature gain, which "
+      f"{_trend(gain[hi_n][0], gain[lo_n][0])} as `n` falls ({_f(gain[hi_n][0])} at "
+      f"n={hi_n} → {_f(gain[lo_n][0])} at n={lo_n}); and the TwoNN gap against a matched "
+      f"Gaussian, {_f(_twonn_gap(hi_n), 2)} at n={hi_n} against {_f(_twonn_gap(lo_n), 2)} at "
+      f"n={lo_n} (§3). The positive control, which contains no role semantics at all, has "
+      f"its own rel. reduction, which {_trend(pcrr[hi_n][0], pcrr[lo_n][0])} over the same "
+      f"range ({_f(pcrr[hi_n][0])} → {_f(pcrr[lo_n][0])}), so read §3 and §6 before quoting "
+      f"§2.\n")
 
     # ---------------------------------------------------------------- controls
     A("## 1. Controls first\n")
@@ -114,16 +151,28 @@ def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
     A(f"Cells with `n < 276` show **mean [min–max] over {len(seeds)} k-means seeds**; the "
       "spread is the \"which roles you happened to keep\" component, isolated from the `n` "
       "effect. `n=276` is the whole cloud and is deterministic (one cell).\n")
-    A("**Correction to the plan's stated reasoning.** The plan predicted a \"trap\" in which "
-      f"the null R² would rise as `n` falls, inflating raw R² for real and shuffled data "
-      f"alike. It does the opposite: the null median R² *falls* from {_f(nullm[hi_n][0])} at "
-      f"n={hi_n} to {_f(nullm[lo_n][0])} at n={lo_n} (right panel of fig01). The mechanism is "
-      "that a shuffled labelling produces centroids that are all means of ~25 random points "
-      "and therefore collapse toward the global mean; with fewer such anchors the fitted "
-      "surface is smaller, not more flexible. Real R² rises while the null falls, so the two "
-      "effects push the gap the same way and the decider's trend is, if anything, more "
-      "robust than the plan assumed. The reasoning was wrong; the metric was still the right "
-      "one to use.\n")
+    null_dir = _trend(nullm[hi_n][0], nullm[lo_n][0])
+    real_dir = _trend(r2[hi_n][0], r2[lo_n][0])
+    if null_dir == "falls":
+        mech = ("A shuffled labelling produces centroids that are all means of ~25 random "
+                "points and therefore collapse toward the global mean; with fewer such "
+                "anchors the fitted surface is smaller, not more flexible. The plan's trap "
+                "did not materialise in this run. ")
+    elif null_dir == "rises":
+        mech = ("The plan's trap is present in this run: part of any rise in raw R² at "
+                "small `n` is shared with the shuffled data. That is exactly why the "
+                "decider is a ratio against a null at the same `n` and not raw R². ")
+    else:
+        mech = ("The null is flat across `n` here, so raw R² and the ratio carry the same "
+                "information in this run. ")
+    A("**On the plan's stated reasoning.** The plan predicted a \"trap\" in which the null "
+      "R² would rise as `n` falls, inflating raw R² for real and shuffled data alike. "
+      f"Measured here, the null median R² **{null_dir}** as `n` falls, from "
+      f"{_f(nullm[hi_n][0])} at n={hi_n} to {_f(nullm[lo_n][0])} at n={lo_n}, while real R² "
+      f"{real_dir} ({_f(r2[hi_n][0])} → {_f(r2[lo_n][0])}) — right panel of fig01. "
+      + mech +
+      "Either way the ratio against a same-`n` null, not raw R², is the right metric to "
+      "compare cells with.\n")
 
     A("### Decision rule (fixed before the run)\n")
     small = verdicts["small"]
@@ -143,9 +192,10 @@ def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
       f"{1/(n_perm+1):.4f}, so Holm across {len(ns)} cells has a floor of "
       f"{len(ns)/(n_perm+1):.3f} — above 0.05 before any data was seen. The preregistered "
       f"secondary Holm analysis was therefore structurally unable to reject, and should be "
-      f"read as a formality, not as evidence. (Caught by the run's audit.) Every cell hit "
-      f"the permutation floor p={1/(n_perm+1):.4f}, i.e. no shuffle in any cell ever beat "
-      f"the real fit.\n")
+      f"read as a formality, not as evidence. (Caught by the run's audit.) "
+      f"{int((df['p'] <= 1/(n_perm+1) + 1e-12).sum())} of {len(df)} cells sit at that floor "
+      f"p={1/(n_perm+1):.4f} (no shuffle beat the real fit there); the largest p anywhere in "
+      f"the sweep is {_f(float(df['p'].max()), 4)}.\n")
 
     # ---------------------------------------------------------------- M2 / M3
     A("## 3. Secondary metrics (preregistered; cannot flip the verdict)\n")
@@ -175,25 +225,49 @@ def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
       "the evidence for a manifold. A gap near zero means the cloud looks like noise of that "
       "size, i.e. there is nothing dimensional to see.\n")
     g2 = gaps.get("TwoNN", {})
+    m2_line = ""
     if all(v is not None for v in g2.values()):
-        A(f"Observed: the gap is **most negative at n={hi_n}** ({_f(g2[hi_n],2)}) and "
-          f"**nearly closed at n={lo_n}** ({_f(g2[lo_n],2)}). The real cloud is below the "
-          f"reference at every `n`, so real dimensional structure exists throughout — but "
-          f"the *evidence* for it is strongest on the full role set and weakest on the "
-          f"coarsest one. **This runs opposite to the decider.** "
-          f"See `figures/fig02_sweep_intrinsic_dim.png`.\n")
+        n_min = min(g2, key=lambda k: g2[k])
+        n_max = max(g2, key=lambda k: g2[k])
+        n_below = sum(1 for v in g2.values() if v < 0)
+        m2_tied = abs(g2[n_max] - g2[n_min]) < 0.05
+        m2_favours_small = n_min < n_max
+        m2_line = ((f"the TwoNN gap is the same to within 0.05 at every `n` "
+                    f"({_f(g2[n_min],2)}); {n_below} of {len(g2)} cells sit below the "
+                    f"reference") if m2_tied else
+                   (f"the TwoNN gap is **most negative at n={n_min}** ({_f(g2[n_min],2)}) "
+                    f"and **least negative at n={n_max}** ({_f(g2[n_max],2)}); {n_below} of "
+                    f"{len(g2)} cells sit below the reference"))
+        A(f"Observed: {m2_line}. "
+          + ("So M2 does not order the role sets at all." if m2_tied else
+             f"So the dimensional evidence is strongest on the "
+             f"{'coarser' if m2_favours_small else 'fuller'} role set"
+             + ("." if abs(d_rr) < 1e-3 else
+                f", which runs **{'opposite to' if m2_favours_small != (d_rr > 0) else 'with'}"
+                f"** the decider."))
+          + " See `figures/fig02_sweep_intrinsic_dim.png`.\n")
+    gl = gaps.get("lPCA", {})
+    pinned = [n for n, v in gl.items() if v is not None and abs(v) < 0.05]
+    tw = {n: float(df[df["n"] == n]["id_TwoNN"].mean()) for n in ns}
+    n_pk = max(tw, key=lambda k: tw[k])
     A("**Two caveats on M2, both of which weaken it:**\n"
-      "1. **`lPCA` saturates at 10** in both the real and the reference column for `n ≥ 200`, "
-      "so its gap is pinned to zero there by the estimator, not by the data. Lean on TwoNN "
-      "and MLE; treat lPCA as uninformative at large `n`.\n"
-      "2. **The medoid selection rule inflates real ID at every `n < 276`.** TwoNN and MLE "
+      "1. **`lPCA` can saturate**, pinning its gap to ~0 by the estimator rather than by "
+      + (f"the data — that happens here at n ∈ {pinned}. Lean on TwoNN and MLE in those "
+         "cells.\n" if pinned else "the data. No cell shows that here (every lPCA gap is "
+         "away from 0), so lPCA is readable throughout this sweep.\n")
+      + "2. **The medoid selection rule inflates real ID at every `n < 276`.** TwoNN and MLE "
       "read local nearest-neighbour distances, and medoid selection deliberately removes "
       "near-duplicate roles — which raises the estimate. The Gaussian reference is drawn "
-      "i.i.d. and has no such thinning. This is visible as a non-monotonicity: real TwoNN "
-      "peaks at n=150 (14.9) and then *drops* to 8.5 at n=276, the one cell where no "
-      "selection happens. So the real–reference gap is understated at small `n` by an "
-      "unknown amount, and only the n=276 gap is free of this artefact. The direction of "
-      "the M2 conclusion is therefore suggestive, not established.\n")
+      "i.i.d. and has no such thinning. "
+      + (f"This shows up as a non-monotonicity: real TwoNN peaks at n={n_pk} "
+         f"({_f(tw[n_pk],1)}) and reads {_f(tw[hi_n],1)} at n={hi_n}, the one cell where no "
+         "selection happens. " if tw[n_pk] - tw[hi_n] > 0.05 else
+         f"In this run real TwoNN is no higher at any smaller `n` than at n={hi_n} "
+         f"({_f(tw[hi_n],1)}), the one cell where no selection happens, so no such "
+         "non-monotonicity appears. ")
+      + "The real–reference gap is therefore understated at small `n` by an unknown amount, "
+      f"and only the n={hi_n} gap is free of this artefact. The direction of the M2 reading "
+      "is suggestive, not established.\n")
 
     A("### M3 — curvature gain over a flat plane\n")
     A("| n | spline R² | flat PCA-plane R² (k=3) | gain (real) | gain (null) |")
@@ -205,13 +279,18 @@ def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
     A("The plane baseline is label-free (it is just PCA of the same points), so the null's "
       "gain uses the same plane — the honest quantity is the **gap between the two gain "
       "columns**, not the real gain alone.\n")
-    A(f"Observed: curvature gain **collapses as `n` falls** — {_f(gain[hi_n][0])} at "
-      f"n={hi_n} down to {_f(gain[lo_n][0])} at n={lo_n}, where a flat k=3 plane "
-      f"({_f(plane[lo_n][0])}) already explains almost everything the curved spline does "
-      f"({_f(r2[lo_n][0])}). At n={lo_n} there is essentially **no curvature left to "
-      f"model**: the fitted 'manifold' is a 3-dimensional linear subspace. This is visible "
-      f"directly in `fig05_spline_manifold_n10.png`, where the decoded surface is a nearly "
-      f"flat sheet. **This too runs opposite to the decider.**\n")
+    m3_hi = gain[hi_n][0] - gain_n[hi_n][0]
+    m3_lo = gain[lo_n][0] - gain_n[lo_n][0]
+    A(f"Observed: real curvature gain **{_trend(gain[hi_n][0], gain[lo_n][0])}** as `n` "
+      f"falls — {_f(gain[hi_n][0])} at n={hi_n} to {_f(gain[lo_n][0])} at n={lo_n}, where a "
+      f"flat k=3 plane reaches R²={_f(plane[lo_n][0])} against the spline's "
+      f"{_f(r2[lo_n][0])}. The honest real−null gain gap is {_f(m3_hi)} at n={hi_n} and "
+      f"{_f(m3_lo)} at n={lo_n}, i.e. it **{_trend(m3_hi, m3_lo)}** as the role set is "
+      f"coarsened"
+      + ("" if abs(d_rr) < 1e-3 else
+         f", which runs **{'opposite to' if (m3_lo > m3_hi) != (d_rr > 0) else 'with'}** the "
+         f"decider")
+      + ".\n")
 
     # ---------------------------------------------------------------- pipeline
     A("## 4. Step-by-step: what the run actually did\n")
@@ -273,10 +352,9 @@ def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
     A("|---|---|---|---|")
     A("| `fig01_sweep_decider.png` **(the decider)** | `sweep_plots.py::fig01_sweep_decider` | "
       "left: M1 rel. NRE reduction vs `n` with the 0.30 floor; right: raw R² real vs null "
-      "median vs `n` | left panel is the answer. In the right panel the two curves move in "
-      "**opposite** directions — real R² rises as `n` falls while the null falls — which is "
-      "why raw R² cannot be compared across `n` and why the gap widens (see the correction "
-      "in §2) |")
+      f"median vs `n` | left panel is the answer. In the right panel real R² {real_dir} as "
+      f"`n` falls while the null median {null_dir} — which is why raw R² cannot be compared "
+      "across `n` (§2) |")
     A("| `fig02_sweep_intrinsic_dim.png` | `sweep_plots.py::fig02_sweep_id` | ID (TwoNN/MLE/"
       "lPCA) vs `n`, solid = real roles, dashed+band = matched Gaussian small-N reference | "
       "real curve inside the grey band = the ID drop is bias; below the band = real "
@@ -294,14 +372,6 @@ def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
       "whether a small role set traces something a human can describe. Style follows "
       "`manifold-temporal/framing/plots.py::plot_manifold_3d`. **No claim rests on this "
       "figure.** |")
-    A("| `fig08_mst_skeleton_n<n>.png` (+ `.html`), `n > 50` **post hoc** | "
-      "`sweep_plots.py::fig08_mst_skeleton` | minimum spanning tree over that subset's role "
-      "centroids under **cosine** distance on unit-normalised means (same construction as "
-      "`manifold/analysis_extra.py::mst_skeleton` from plan #1), drawn in the subset's own "
-      "PC1–3, two view angles | at large `n` the fig05 spline is unreadable — 100+ knots in "
-      "an arbitrary 1-D order. The MST imposes no ordering and still touches every centroid, "
-      "so it shows which roles are near which. **Added after the run at the user's request; "
-      "outside the preregistered plan.** |")
     A("| per-`n` `fig06_null_vs_real_n<n>.png` | `sweep_plots.py::fig06_null_vs_real` | that "
       "cell's null R² histogram with the real R² overlaid | real R² clear of the null mass |")
     A("| per-`n` `fig07_roles_pc123_n<n>.png` | `sweep_plots.py::fig07_roles_pc123` | the "
@@ -310,8 +380,7 @@ def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
     A("")
     A("The plot basis of fig05 **is** the fit's own basis: `fit_manifold` uses "
       "`control_points = PCA(role_means, 3)`, so PC1–3 in that figure are exactly the "
-      "surface's intrinsic coordinates — model and picture share a frame, and the wireframe "
-      "is the real decoded `g`.\n")
+      "surface's intrinsic coordinates — model and picture share a frame.\n")
     A("Two rendering decisions in fig05, both made after seeing the first draft and both "
       "affecting only the picture, never a number:\n"
       "1. **No decoded surface mesh is drawn.** The TPS maps *three* intrinsic coordinates "
@@ -336,27 +405,38 @@ def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
       "preregistered, it cannot change the §2 verdict, and its job is to become a "
       "hypothesis in the next plan.\n")
 
-    A("### 6.1 The positive control trends the same way — so part of the decider's slope "
-      "is a property of the regime, not of roles\n")
+    A("### 6.1 How much of the decider's change across `n` the positive control reproduces "
+      "on its own\n")
     A("The per-`n` positive control is a **synthetic** curved manifold with no role "
       "semantics whatsoever, calibrated to each cell's own signal-to-noise. It was "
-      "preregistered as a pass/fail gate. It passed everywhere — but its rel. NRE reduction "
-      "*also rises as `n` falls*:\n")
+      f"preregistered as a pass/fail gate. It "
+      f"{'passed in every cell' if all_pc else 'did not pass in every cell'} — and its own "
+      f"rel. NRE reduction {_trend(pcrr[hi_n][0], pcrr[lo_n][0])} as `n` falls:\n")
     A("| n | RR real | RR positive control | excess (real − control) |")
     A("|---:|---:|---:|---:|")
     for n in ns:
         A(f"| {n} | {_f(rr[n][0])} | {_f(pcrr[n][0])} | **{_f(rr[n][0] - pcrr[n][0])}** |")
     A("")
-    A(f"So a synthetic manifold at matched SNR gains roughly {_f(pcrr[lo_n][0] - pcrr[hi_n][0], 2)} "
-      f"of rel. reduction going from n={hi_n} to n={lo_n}, versus "
-      f"{_f(rr[lo_n][0] - rr[hi_n][0], 2)} for the real roles. **A substantial share of the "
-      "decider's trend is a regime effect of low anchor counts, not evidence about roles.** "
-      "The excess column is the part not explained that way; it is largest at "
-      f"n={lo_n} ({_f(rr[lo_n][0] - pcrr[lo_n][0])}) and small and flat elsewhere.\n")
-    A("This is a **weakness of the preregistered metric that the plan did not anticipate**. "
-      "The plan used the control only as a gate; comparing real *against* the control's own "
-      "effect size is a better n-fair statistic and is carried to `## Deferred`. Had that "
-      "been the decider, the trend would have been far weaker and possibly flat.\n")
+    d_pc = pcrr[lo_n][0] - pcrr[hi_n][0]
+    exc = {n: rr[n][0] - pcrr[n][0] for n in ns}
+    n_exc_hi = max(exc, key=lambda k: exc[k])
+    n_exc_lo = min(exc, key=lambda k: exc[k])
+    share = (f"**{abs(d_pc / d_rr) * 100:.0f}% of the decider's own change across the "
+             f"sweep** is reproduced by data with no role content"
+             if abs(d_rr) > 1e-3 else
+             "**the decider itself does not change across the sweep**, so there is no "
+             "share of it to attribute")
+    A(f"So a synthetic manifold at matched SNR changes by {_f(d_pc, 2)} in rel. reduction "
+      f"going from n={hi_n} to n={lo_n}, versus {_f(d_rr, 2)} for the real roles — {share}. "
+      "The excess column is the part that is not: "
+      + (f"it is the same at every `n` ({_f(exc[n_exc_hi])}).\n"
+         if abs(exc[n_exc_hi] - exc[n_exc_lo]) < 1e-3 else
+         f"it is largest at n={n_exc_hi} ({_f(exc[n_exc_hi])}) and smallest at n={n_exc_lo} "
+         f"({_f(exc[n_exc_lo])}).\n"))
+    A("The plan used the control only as a gate; comparing real *against* the control's own "
+      "effect size is a better n-fair statistic and is carried to `## Deferred`. Had the "
+      f"excess been the decider, its change from n={hi_n} to n={lo_n} would be "
+      f"{_f(exc[lo_n] - exc[hi_n], 2)} in place of the decider's {_f(d_rr, 2)}.\n")
 
     A("### 6.2 The plan-mandated confound check (medoid spread) comes out clean\n")
     A("The plan required that, on falsification, confound 2 be checked explicitly: medoid "
@@ -365,39 +445,41 @@ def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
       "independently of any manifold. Measured directly:\n")
     A("| n | role-mean spread | within-role noise/dim | ratio |")
     A("|---:|---:|---:|---:|")
+    ratios = {}
     for n in ns:
         sp = df[df["n"] == n]["role_spread"].mean()
         nz = df[df["n"] == n]["within_role_noise"].mean()
-        A(f"| {n} | {_f(sp,2)} | {_f(nz,3)} | {_f(sp / nz, 2)} |")
+        ratios[n] = sp / nz
+        A(f"| {n} | {_f(sp,2)} | {_f(nz,3)} | {_f(ratios[n], 2)} |")
     A("")
-    A("The ratio is essentially **flat across the whole sweep**, so the effect is *not* an "
-      "SNR artefact of the selection rule. The confound the plan worried about did not "
-      "materialise — the trend is about anchor count, not about how well-separated the kept "
-      "roles are.\n")
+    r_lo, r_hi = min(ratios.values()), max(ratios.values())
+    A("The spread/noise ratio "
+      + (f"is {_f(r_lo,2)} at every `n` in this sweep. " if r_hi - r_lo < 1e-3 else
+         f"runs from {_f(r_lo,2)} to {_f(r_hi,2)} across the sweep "
+         f"({(r_hi - r_lo) / r_lo * 100:.0f}% of its smallest value) and "
+         f"**{_trend(ratios[hi_n], ratios[lo_n], eps=0.05 * max(r_lo, 1e-9))}** as `n` "
+         f"falls, from {_f(ratios[hi_n],2)} at n={hi_n} to {_f(ratios[lo_n],2)} at "
+         f"n={lo_n}. ")
+      + "That is "
+      "the whole size of any SNR artefact the selection rule could introduce; the confound "
+      "the plan worried about is this large and no larger.\n")
 
     A("### 6.3 What the three metrics say together\n")
-    A("- **M1 (decider):** coarsening raises the n-fair effect size, monotonically and "
-      "cleanly. Preregistered, and it falsifies the hypothesis.\n"
-      "- **6.1:** roughly half that rise is reproduced by a synthetic manifold with no role "
-      "content, so M1 is measuring the regime as well as the data.\n"
-      "- **M2:** the dimensional evidence for structure is *strongest at the full role set* "
-      "and nearly absent at n=10 — though the medoid rule inflates real ID at small `n`, so "
-      "this one is suggestive rather than established (§3, caveat 2).\n"
-      "- **M3:** the surface fitted at n=10 has essentially no curvature — it is a flat "
-      "3-D subspace.\n")
-    A("The reading these support jointly, offered as a hypothesis and not as a result: "
-      "**coarsening buys legibility and a tighter fit to a nearly-linear configuration; it "
-      "does not reveal more manifold.** That is close to the original hypothesis's "
-      "*substantive* claim even though its *stated metric* went the other way — which is "
-      "exactly why the metric was fixed in advance, and why this paragraph is labelled post "
-      "hoc rather than quietly promoted into §2.\n")
+    A(f"- **M1 (decider):** {dec} — rel. reduction {_f(rr[hi_n][0])} at n={hi_n} against "
+      f"{_f(rr[lo_n][0])} at n={lo_n} ({d_rr:+.3f}).\n"
+      f"- **6.1 (role-free positive control):** {share}.\n"
+      + (f"- **M2:** {m2_line} — and the medoid rule inflates real ID at small `n`, so this "
+         "one is suggestive rather than established (§3, caveat 2).\n" if m2_line else
+         "- **M2:** the ID gaps could not be computed for every cell in this run (§3).\n")
+      + f"- **M3:** the real−null curvature-gain gap is {_f(m3_hi)} at n={hi_n} and "
+      f"{_f(m3_lo)} at n={lo_n}.\n")
 
     A("## 7. What this does not show\n")
     A("1. **Medoid selection spans the cloud deliberately**, so the 10 kept roles are *more* "
       "mutually orthogonal than a random 10 would be — the arrangement least likely to look "
-      "like a manifold. That biases *against* the direction the result actually went, which "
-      "makes the falsification the harder outcome to obtain rather than an artefact of the "
-      "rule (§6.2 confirms the SNR ratio is flat across the sweep). What it does mean is "
+      "like a manifold. That biases *against* a small-`n`-better outcome, which makes that "
+      "outcome the harder one to obtain rather than an artefact of the rule (§6.2 measures "
+      "the selection rule's SNR ratio across the sweep). What it does mean is "
       "that the result is about **spread-out** small role sets; a random or a semantically "
       "coherent 10 could behave differently, and both counterfactuals are in the plan's "
       "`## Deferred`.\n")

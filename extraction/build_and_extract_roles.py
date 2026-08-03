@@ -9,7 +9,7 @@ For the paper-matched RESPONSE-token cloud see generate_and_extract_roles.py.
 Usage:
     .venv/bin/python -m extraction.build_and_extract_roles
     .venv/bin/python -m extraction.build_and_extract_roles --n_questions 5
-    .venv/bin/python -m extraction.build_and_extract_roles --limit 16   # smoke test
+    .venv/bin/python -m extraction.build_and_extract_roles --limit 16 --out_dir data/embeddings_roles_smoke   # smoke test
 """
 from __future__ import annotations
 
@@ -43,9 +43,20 @@ def main():
                     help="do NOT exclude attention-sink positions from prompt_avg. "
                          "Reproduces the pre-fix behaviour, whose PC1 is ~1/seq_len "
                          "(r=0.9998). See diagnostics/01_activation_scales.py.")
+    ap.add_argument("--force", action="store_true",
+                    help="overwrite a completed run already in --out_dir")
     args = ap.parse_args()
 
     t0 = time.time()
+    # This run is not checkpointed: save_embeddings overwrites out_dir wholesale.
+    # Without this guard a smoke test destroys a multi-hour cloud with no warning.
+    out_dir = Path(args.out_dir)
+    if (out_dir / "manifest.json").exists() and not args.force:
+        raise SystemExit(
+            f"{out_dir} already holds a COMPLETED run.\n"
+            f"Refusing to overwrite it. Use --force to discard and rebuild, "
+            f"or pass a different --out_dir.")
+
     print(f"Loading model {args.model} ...")
     model, tokenizer, device = load_model_and_tokenizer(args.model)
     n_layers = model.config.num_hidden_layers + 1
@@ -93,8 +104,8 @@ def main():
         "sink_positions_dropped_max": int(max(n_dropped)) if n_dropped else 0,
         "final_layer_is_normalized": n_layers - 1,
     }
-    print("Saving to", args.out_dir)
-    save_embeddings(avg, last, meta_df, manifest, out_dir=Path(args.out_dir))
+    print("Saving to", out_dir)
+    save_embeddings(avg, last, meta_df, manifest, out_dir=out_dir)
 
     mb = (avg.nbytes + last.nbytes) / 1e6
     print(f"Done in {time.time()-t0:.1f}s. primary_layer={p_layer}. "

@@ -65,6 +65,11 @@ def run_cell(cloud, n: int, seed: int, n_perm: int, say) -> dict:
     pc_pass = bool(pc["stats"]["p"] < ALPHA and pc["stats"]["rel_reduction"] >= FLOOR)
 
     # --- 1 decider ----------------------------------------------------------
+    # NOTE: manifold.run's decider now judges against P.coordinate_null (the
+    # structure-preserving null). This sweep still uses the role-shuffle
+    # permutation null on purpose: its PRIOR (0a regression check) is frozen
+    # against plan #1's role-shuffle numbers, so both predate that change.
+    # Switching this null is a separate decision.
     dec = P.construction_C_role(sub, k=K)
     null = P.permutation_null(sub, n_perms=n_perm, k=K, seed=0)
     st = P.separation_stats(dec.r2, null)

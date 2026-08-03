@@ -100,7 +100,9 @@ def center(X: np.ndarray) -> np.ndarray:
     roles") — i.e. **covariance** PCA. We deliberately do NOT z-score: dividing
     by per-feature std reweights all 2048 residual-stream features (which share
     one natural scale) and destroys the covariance geometry the Assistant Axis
-    lives in — empirically it drops |cos(PC1, axis)| from ~0.87 to ~0.19.
+    lives in — it drops |cos(PC1, axis)| substantially. ``03_umap_axis.py``
+    records both values per run (``cos_pc1_axis`` and ``cos_pc1_axis_zscored``)
+    and the report prints the measured pair.
     Returns float64 (also avoids a spurious fp32 matmul overflow in sklearn SVD).
     """
     X = np.asarray(X, dtype=np.float64)

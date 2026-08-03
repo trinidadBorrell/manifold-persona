@@ -1,5 +1,13 @@
 # Methods: the two calculations behind the per-persona numbers
 
+> **⚠️ Contamination notice.** Every number below that comes from
+> `data/embeddings_roles` — the **prompt** cloud — is downstream of the
+> attention-sink length artifact: that cloud predates the sink fix, and on it the
+> assistant-axis projection correlates with `1/prompt_length` at r ≈ 0.78. Those
+> figures need a recompute on a clean cloud before anyone quotes them; the loader
+> now refuses that cloud unless `MP_ALLOW_UNCLEAN=1` is set. The response-cloud
+> numbers are on a clean cloud — response-token pooling never sees the sink.
+
 Two quantities carry most of the interpretation in this study, and both are easy
 to misread. This documents exactly what they are, in the notation of the code
 that produces them.
@@ -166,7 +174,18 @@ relationship at all.
 ```
 
 Read it as: **among roles with the same cloud size, does ID still track axis
-position?** Significance uses `t = r·√((n−k−2)/(1−r²))` with `k = 1` control.
+position?** Significance uses `t = r·√((n−k−2)/(1−r²))` with `k` = number of
+controls.
+
+**The second control: `mean_text_len`.** Cloud size is not the only nuisance.
+The mean character length of the text each point embeds also raises ID (longer
+texts vary more), and in-role personas answer at a different length than the
+Assistant does. So `04` reports two partials per estimator:
+`partial_r_ctrl_logvar` (`k = 1`, as above) and
+`partial_r_ctrl_logvar_textlen` (`k = 2`). The column is named for the basis it
+does NOT assume: on a response-token cloud it is mean RESPONSE length, on a
+prompt-token cloud it is mean PROMPT length. The JSON records which one under
+`_meta.text_len_column`.
 
 Where raw and partial disagree, the raw one was the confound talking. That
 happens: participation ratio is raw −0.32 but partial **+0.13** — sign flip. The
@@ -235,12 +254,21 @@ on every estimator (0th percentile). That cloud's trend is *positive*, so the
 fit extrapolates to MLE 4.83 at its position while the actual value is 1.49, and
 to dim-90% 8.04 against an actual 4.00.
 
-Two reasons not to read that as a finding. The prediction is an extrapolation
-45% beyond the fitted range, where a linear fit carries no authority. And this
-cloud's ID is 99.4% extraction grid (§1) — `default`'s instruction slots are one
-empty prompt plus near-synonymous generic strings rather than distinct persona
-embodiments, so its instruction factor carries almost no variance and its ID
-collapses. Same design artefact, seen from the other side.
+Three reasons not to read that as a finding. The prediction is an extrapolation
+45% beyond the fitted range, where a linear fit carries no authority. This
+cloud's ID is 99.4% extraction grid (§1). And `axis_proj` on this cloud is
+mostly **prompt length**: it correlates with `1/prompt_length` at r ≈ 0.78, and
+`default` has the shortest prompts in the design by construction — its five
+instruction slots are one empty string plus short generic ones, against a
+multi-clause system prompt for every character role (measured mean 32.6 tokens
+vs 41.7, no role's mean below it; see `diagnostics/README.md`). So `default`'s
+record `axis_proj` is where the shortest prompts land, not where the most
+Assistant-like persona sits.
+
+A second candidate explanation for the low ID is that those same near-synonymous
+instruction slots carry almost no instruction variance, and instruction variance
+dominates the total on this cloud — so the ID collapses. Both explanations point
+at the same design fault; only the length one is measured.
 
 That the star lands on the line for the response cloud and far off it for the
 prompt cloud is the clearest single picture of the difference between the two.

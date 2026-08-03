@@ -91,12 +91,12 @@ def write_report(run_dir: Path, view: str, layer: int):
       f"excluding `default` (r = {_num(ax.get('pearson_r_all'))} with it). `default`'s own ID is "
       f"{_num(d_pr)} against a median of {_num(med_pr)}.")
     if d_pr is not None and med_pr and d_pr < 0.6 * med_pr:
-        A("\nThat gap is **not** a geometric fact about the Assistant. `default`'s instruction "
-          "slots are one empty prompt plus near-synonymous generic strings (\"You are an AI "
-          "assistant.\", \"You are a large language model.\", ...), whereas every character "
-          "role's slots are distinct persona embodiments. Its instruction axis therefore "
-          "carries little variance, and instruction variance dominates the total — so its ID "
-          "collapses. Same design effect, seen from the other side.\n")
+        A("\nTwo design effects can produce that gap; see METHODS.md §2 for the measured "
+          "evidence. First, on prompt clouds `axis_proj` correlates with 1/prompt-length "
+          "(r ~ 0.8) and `default` has the shortest prompts by construction. Second, "
+          "`default`'s instruction slots are near-synonymous generic strings, so its "
+          "instruction axis carries little variance. Neither is a geometric fact about "
+          "the Assistant.\n")
     else:
         A("\n")
     A(f"Source: `exploratory/per_persona/01_per_persona_id.py` "

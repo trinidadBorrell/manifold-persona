@@ -221,6 +221,39 @@ def permutation_null(cloud: Cloud, n_perms: int = 100, k: int = K_INTRINSIC,
     return r2s
 
 
+def coordinate_null(cloud: Cloud, n_draws: int = 100, k: int = K_INTRINSIC,
+                    seed: int = 0) -> np.ndarray:
+    """Structure-preserving null R^2 distribution for the decider.
+
+    Each draw permutes every coordinate of the REAL role means independently
+    across roles (a fresh permutation per coordinate per draw), reattaches each
+    role's real within-role residuals, refits C_role and rescores. That destroys
+    the joint (manifold) structure of the role means but keeps their
+    per-coordinate marginals, the role-mean spread and the within-role noise.
+
+    `permutation_null` cannot do this: its fake role means average ~25 randomly
+    chosen points, so they shrink ~4x toward the global mean and the null only
+    measures between-role spread. A surface fitted to correctly-scaled but
+    structureless anchors already reaches the real R^2, so this is the null the
+    decider must beat.
+    """
+    rng = np.random.default_rng(seed)
+    role_idx = {r: i for i, r in enumerate(cloud.role_names)}
+    point_role = np.array([role_idx[r] for r in cloud.roles])
+    resid = cloud.raw - cloud.role_means[point_role]     # real within-role noise
+    R, D = cloud.role_means.shape
+    r2s = np.zeros(n_draws)
+    for p in range(n_draws):
+        means = np.empty_like(cloud.role_means)
+        for j in range(D):
+            means[:, j] = cloud.role_means[rng.permutation(R), j]
+        raw = resid + means[point_role]                  # points follow their anchor
+        mani = fit_manifold(means, k=k)
+        res = reconstruction(raw, mani, raw.mean(0))
+        r2s[p] = res.r2
+    return r2s
+
+
 def permutation_null_tau(cloud: Cloud, tau: float, n_perms: int = 40,
                          k: int = K_INTRINSIC, seed: int = 0) -> np.ndarray:
     """Null R^2 for a C_tau construction: shuffle role labels over raw points,
