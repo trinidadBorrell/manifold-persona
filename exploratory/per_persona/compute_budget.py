@@ -24,8 +24,8 @@ already implements the spread-preserving medoid selection with `default`
 force-included.
 
 Usage:
-    .venv/bin/python exploratory/per_persona/03_compute_budget.py
-    .venv/bin/python exploratory/per_persona/03_compute_budget.py --sec_per_record 8.5
+    .venv/bin/python exploratory/per_persona/compute_budget.py
+    .venv/bin/python exploratory/per_persona/compute_budget.py --sec_per_record 8.5
 """
 from __future__ import annotations
 

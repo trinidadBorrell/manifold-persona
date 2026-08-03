@@ -11,8 +11,8 @@ available neighbours, making a "local" estimator global). ``manifold.idim``
 already adapts K = min(10, n-2) for exactly this small-n case.
 
 Usage:
-    .venv/bin/python exploratory/per_persona/01_per_persona_id.py
-    .venv/bin/python exploratory/per_persona/01_per_persona_id.py --n_null 100
+    .venv/bin/python exploratory/per_persona/id_per_role.py
+    .venv/bin/python exploratory/per_persona/id_per_role.py --n_null 100
 """
 from __future__ import annotations
 

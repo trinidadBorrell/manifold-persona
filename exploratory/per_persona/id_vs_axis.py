@@ -1,9 +1,9 @@
 """Does a role's intrinsic dimension depend on where it sits on the Assistant Axis?
 
-01 reports this for ONE estimator (participation ratio) as a single r. This runs
-it for every ID measure we compute, against two different readings of "close to
-the Assistant", with the controls that make a correlation of ~0.3 on n=276
-interpretable rather than decorative.
+`id_per_role.py` reports this for ONE estimator (participation ratio) as a single
+r. This runs it for every ID measure we compute, against two different readings
+of "close to the Assistant", with the controls that make a correlation of ~0.3 on
+n=276 interpretable rather than decorative.
 
 TWO WAYS TO BE "CLOSE TO THE ASSISTANT" — they are not the same question:
 
@@ -26,7 +26,7 @@ correction; Spearman is reported alongside Pearson because several of the ID
 distributions are skewed.
 
 Usage:
-    .venv/bin/python exploratory/per_persona/04_id_vs_axis.py --rundir <figures/STAMP>
+    .venv/bin/python exploratory/per_persona/id_vs_axis.py --rundir <figures/STAMP>
 """
 from __future__ import annotations
 
@@ -40,36 +40,11 @@ from scipy import stats
 
 from common import (load_role_clouds, resolve_run_dir, savefig, small_matrix_ops,
                     grid_shape, C_REAL, C_DESIGN, C_QUEST)
+from stats_utils import bh_fdr, partial_corr
 
 ID_COLS = ["TwoNN", "MLE", "lPCA", "PCA_participation_ratio",
            "PCA_dim_90pct", "PCA_dim_95pct"]
 PREDICTORS = ["axis_proj", "dist_default"]
-
-
-def bh_fdr(p):
-    """Benjamini-Hochberg adjusted p-values (same order as input)."""
-    p = np.asarray(p, dtype=float)
-    n = len(p)
-    order = np.argsort(p)
-    adj = np.empty(n)
-    prev = 1.0
-    for rank, i in enumerate(reversed(order), start=1):
-        prev = min(prev, p[i] * n / (n - rank + 1))
-        adj[i] = prev
-    return adj
-
-
-def partial_corr(x, y, z):
-    """Pearson r between x and y with z linearly removed from both."""
-    Z = np.column_stack([np.ones_like(z), z])
-    rx = x - Z @ np.linalg.lstsq(Z, x, rcond=None)[0]
-    ry = y - Z @ np.linalg.lstsq(Z, y, rcond=None)[0]
-    r = float(np.corrcoef(rx, ry)[0, 1])
-    n, k = len(x), 1
-    if abs(r) >= 1:
-        return r, 0.0
-    t = r * np.sqrt((n - k - 2) / (1 - r ** 2))
-    return r, float(2 * stats.t.sf(abs(t), df=n - k - 2))
 
 
 def main():

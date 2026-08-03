@@ -54,9 +54,13 @@ that: it keeps the raw cloud and gives each role its **own** manifold — 276 in
 dimensions and 276 clusterings, each from that role's own points.
 
 ```bash
-.venv/bin/python exploratory/per_persona/run_all.py                       # prompt cloud, ~70s
+.venv/bin/python exploratory/per_persona/run_id_stage.py                  # prompt cloud, ~70s
 MP_ROLE_DIR=data/embeddings_roles_resp40 \
-  .venv/bin/python exploratory/per_persona/run_all.py --layer 0 --stamp resp40   # response cloud, ~5min
+  .venv/bin/python exploratory/per_persona/run_id_stage.py --layer 0 --stamp resp40  # response cloud, ~5min
+
+# the geometry-vs-axis study on top of the response cloud (~2min)
+MP_ROLE_DIR=data/embeddings_roles_resp40 \
+  .venv/bin/python exploratory/per_persona/run_geometry.py --layer 0
 ```
 
 Run on two clouds, with opposite answers. On the **prompt** cloud (5×5 = 25 pts/role)
