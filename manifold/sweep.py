@@ -123,10 +123,18 @@ def main(argv=None) -> None:
         f"D={P.D_AMBIENT}  k={K}  floor={FLOOR}  band={BAND}")
 
     # ---------------------------------------------------- shared ambient space
-    say("\n[0] Loading role cloud (prompt_avg, layer 26); PCA 2048->50 fit ONCE ...")
+    say("\n[0] Loading role cloud (prompt_avg); PCA fit ONCE ...")
     cloud = P.load_cloud(view="prompt_avg", seed=0)
+    say(f"    model={cloud.manifest.get('model_name', '?')}  layer={cloud.layer}  "
+        f"hidden={cloud.manifest.get('hidden', '?')} -> PCA {P.D_AMBIENT}")
     say(f"    raw={cloud.raw.shape}  roles={len(cloud.role_names)}  "
         f"default_present={'default' in cloud.role_names}")
+
+    R = len(cloud.role_names)
+    clamped = sorted({min(n, R) for n in n_list})
+    if clamped != sorted(n_list):
+        say(f"    n_list clamped to {R} available roles: {sorted(n_list)} -> {clamped}")
+        n_list = clamped
 
     status = "executed"
     rows, cells = [], {}
@@ -263,8 +271,10 @@ def main(argv=None) -> None:
     manifest = {
         "run_id": stamp, "plan": PLAN, "context": "RESEARCH.md", "status": status,
         "git": "not-a-git-repo (reproducibility via manifest+seeds)",
-        "inputs": "data/embeddings_roles/ (prompt_avg, layer 26; no re-extraction)",
-        "model": "Qwen/Qwen2.5-3B-Instruct", "view": "prompt_avg", "layer": 26,
+        "inputs": f"data/embeddings_roles/ (prompt_avg, layer {cloud.layer}; no re-extraction)",
+        "model": cloud.manifest.get("model_name"), "view": "prompt_avg",
+        "layer": cloud.layer,
+        "source_manifest": cloud.manifest,
         "D_ambient": P.D_AMBIENT, "k_intrinsic": K, "n_list": n_list,
         "kmeans_seeds": seeds, "n_perm_decider": n_perm,
         "n_perm_posctrl": N_PERM_POSCTRL, "n_ref_draws": n_ref,

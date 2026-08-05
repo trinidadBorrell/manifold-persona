@@ -89,9 +89,25 @@ def participation_ratio(X: np.ndarray) -> float:
     return float(s * s / np.sum(lam ** 2)) if s > 0 else np.nan
 
 
+def usable_k_list(n: int, k_list=None):
+    """K_LIST entries that fit n points, since a patch needs k+1 <= n.
+
+    Full runs have 276 role centroids and never bind; smoke tests with a handful
+    of roles do. Returns a de-duplicated, sorted tuple, empty if n is too small.
+
+    A neighbourhood must also stay LOCAL: if k approaches n every patch is the
+    whole cloud, local ID is constant by construction and CV collapses to 0. So
+    k is capped at n // 2 as well.
+    """
+    k_list = K_LIST if k_list is None else k_list
+    cap = min(n - 1, n // 2)
+    return tuple(sorted({k for k in (min(k, cap) for k in k_list) if k >= 2}))
+
+
 def local_id(X: np.ndarray, k: int, twonn: bool = False) -> np.ndarray:
     """Local ID at every point of X, from its k nearest neighbours (self
     included, so the patch has k+1 points)."""
+    k = min(k, len(X) - 1)
     nn = NearestNeighbors(n_neighbors=k + 1).fit(X)
     _, idx = nn.kneighbors(X)
     out = np.empty(len(X))
@@ -111,6 +127,7 @@ def local_id(X: np.ndarray, k: int, twonn: bool = False) -> np.ndarray:
 def neighbour_corr(X: np.ndarray, vals: np.ndarray, k: int = 10) -> float:
     """Correlation between each point's value and its neighbours' mean value.
     High => the variation is spatially organised. ~0 => it is estimator noise."""
+    k = min(k, len(X) - 1)
     nn = NearestNeighbors(n_neighbors=k + 1).fit(X)
     _, idx = nn.kneighbors(X)
     nbr_mean = np.array([np.nanmean(vals[j[1:]]) for j in idx])
@@ -239,8 +256,15 @@ def main(argv=None) -> None:
     names = list(cloud.role_names)
     print(f"    {X.shape[0]} roles x {X.shape[1]} dims")
 
+    k_list = usable_k_list(X.shape[0])
+    if not k_list:
+        raise SystemExit(f"need at least 3 roles for local ID; got {X.shape[0]}")
+    if k_list != tuple(sorted(K_LIST)):
+        print(f"    k list clamped {tuple(sorted(K_LIST))} -> {k_list} "
+              f"({X.shape[0]} roles)")
+
     per_k, neg_by_k, pos_by_k = {}, {}, {}
-    for k in K_LIST:
+    for k in k_list:
         print(f"[1] k={k}: real ...", flush=True)
         per_k[k] = local_id(X, k)
         print(f"    negative control ({N_REF} draws) ...", flush=True)
@@ -251,7 +275,9 @@ def main(argv=None) -> None:
         print(f"    CV real={cv(per_k[k]):.3f}  neg={np.median(neg_by_k[k]):.3f}"
               f"  pos={pos_by_k[k]:.3f}")
 
-    k = K_PRIMARY
+    k = K_PRIMARY if K_PRIMARY in per_k else min(k_list, key=lambda v: abs(v - K_PRIMARY))
+    if k != K_PRIMARY:
+        print(f"    primary k {K_PRIMARY} unavailable -> using k={k}")
     real = per_k[k]
     _, pos_truth, pos_vals = positive_control(X, k, SEED)
     tw = local_id(X, k, twonn=True)
@@ -275,7 +301,7 @@ def main(argv=None) -> None:
     fig_k(per_k, neg_by_k, pos_by_k, figs)
 
     res = {
-        "k_primary": k, "k_list": list(K_LIST), "n_roles": int(X.shape[0]),
+        "k_primary": k, "k_list": list(k_list), "n_roles": int(X.shape[0]),
         "ambient": int(X.shape[1]),
         "real": {"mean": float(np.nanmean(real)), "sd": float(np.nanstd(real)),
                  "min": float(np.nanmin(real)), "max": float(np.nanmax(real)),
@@ -293,7 +319,7 @@ def main(argv=None) -> None:
                              "neighbour_corr": nc_pos},
         "cv_by_k": {str(kk): {"real": cv(per_k[kk]),
                               "neg_median": float(np.median(neg_by_k[kk])),
-                              "pos": pos_by_k[kk]} for kk in K_LIST},
+                              "pos": pos_by_k[kk]} for kk in k_list},
     }
     (run / "data" / "local_id.json").write_text(json.dumps(res, indent=2))
     np.savetxt(run / "data" / "local_id_per_role.csv",

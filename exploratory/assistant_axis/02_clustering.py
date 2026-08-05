@@ -58,11 +58,24 @@ def internal_scores(X, labels):
     return out
 
 
+def valid_k_range(n, lo=3, hi=31):
+    """k values that KMeans+silhouette can actually accept for n points.
+
+    silhouette_score requires 2 <= n_labels <= n-1, so k must stop at n-1. The
+    default point cloud is one centroid per ROLE (load_points aggregates), so n
+    is the role count -- 276 for a full run, but as few as a handful for a smoke
+    test with --roles. Without this clamp the hardcoded range(3, 31) crashes.
+    """
+    return range(lo, min(hi, n))
+
+
 def choose_k(X, k_range):
     sils = {}
     for k in k_range:
         km = KMeans(n_clusters=k, n_init=10, random_state=0).fit(X)
         sils[k] = _sil(X, km.labels_)
+    if not sils:
+        raise ValueError(f"no valid k for {len(X)} points; need at least 4")
     return max(sils, key=sils.get), sils
 
 
@@ -123,7 +136,7 @@ def main():
                         "cluster_space": pca_tag}}
     assignments = {}
     compositions = {}
-    k_range = range(3, 31)
+    k_range = valid_k_range(Xs.shape[0])
 
     for name, X in spaces.items():
         report[name] = {}
@@ -132,7 +145,7 @@ def main():
         report[name]["kmeans"] = {"k": best_k, "silhouette_by_k": sils, **internal_scores(X, km.labels_)}
         assignments[f"kmeans_{name}"] = km.labels_
 
-        for kfix in (12, 24):
+        for kfix in [k for k in (12, 24) if k < X.shape[0]]:
             kmf = KMeans(n_clusters=kfix, n_init=10, random_state=0).fit(X)
             report[name][f"kmeans_k{kfix}"] = {"k": kfix, **internal_scores(X, kmf.labels_)}
             assignments[f"kmeansk{kfix}_{name}"] = kmf.labels_
@@ -161,6 +174,7 @@ def main():
     method_cols = {"kmeans": f"kmeans_{pca_tag}", "kmeans_k12": f"kmeansk12_{pca_tag}",
                    "kmeans_k24": f"kmeansk24_{pca_tag}", "gmm": f"gmm_{pca_tag}",
                    "hdbscan": f"hdbscan_{pca_tag}", "dbscan": f"dbscan_{pca_tag}"}
+    method_cols = {m: c for m, c in method_cols.items() if c in assignments}
     for m, col in method_cols.items():
         compositions[m] = cluster_composition(assignments[col], roles, proj)
         dcl = [c for c in compositions[m] if c["has_default"]]
@@ -185,7 +199,8 @@ def main():
     axes[0].set_xlabel("k (KMeans)"); axes[0].set_ylabel("silhouette")
     axes[0].set_title(f"KMeans model selection ({pca_tag})"); axes[0].legend()
 
-    methods = ["kmeans", "kmeans_k12", "kmeans_k24", "gmm", "hdbscan", "dbscan"]
+    methods = [m for m in ("kmeans", "kmeans_k12", "kmeans_k24", "gmm", "hdbscan", "dbscan")
+               if m in report[pca_tag]]
     sil_vals = [report[pca_tag][m].get("silhouette") or 0 for m in methods]
     nois = [report[pca_tag][m].get("noise_frac") or 0 for m in methods]
     x = np.arange(len(methods))

@@ -36,6 +36,8 @@ class Cloud:
     role_means: np.ndarray       # (R, D) mean per role (in PCA space)
     global_mean: np.ndarray      # (D,) mean of raw points (fixed TSS anchor)
     pca: PCA
+    layer: int = -1
+    manifest: dict = field(default_factory=dict)
 
 
 def load_cloud(view: str = "prompt_avg", layer: int | None = None,
@@ -45,7 +47,8 @@ def load_cloud(view: str = "prompt_avg", layer: int | None = None,
     PCA is fit once on the raw points (labels irrelevant), so the ambient space
     is identical across permutations.
     """
-    Xraw, meta, _ = load_points(view=view, layer=layer, aggregate="none")
+    Xraw, meta, manifest = load_points(view=view, layer=layer, aggregate="none")
+    eff_layer = layer if layer is not None else manifest.get("primary_layer", -1)
     Xraw = np.asarray(Xraw, dtype=np.float64)
     pca = PCA(n_components=d_ambient, random_state=seed)
     raw = pca.fit_transform(Xraw)                       # (N, d)
@@ -56,7 +59,8 @@ def load_cloud(view: str = "prompt_avg", layer: int | None = None,
     for r in role_names:
         role_means[idx[r]] = raw[roles == r].mean(0)
     return Cloud(raw=raw, roles=roles, role_names=role_names,
-                 role_means=role_means, global_mean=raw.mean(0), pca=pca)
+                 role_means=role_means, global_mean=raw.mean(0), pca=pca,
+                 layer=eff_layer, manifest=manifest)
 
 
 # --------------------------------------------------------------------------- #

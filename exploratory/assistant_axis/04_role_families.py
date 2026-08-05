@@ -44,7 +44,10 @@ def main():
     # ---- (A) Hierarchical role families from per-role centroids ----
     roles, C = role_centroids(Xs, meta)
     Z = linkage(C, method="ward")
-    fam = fcluster(Z, t=args.n_families, criterion="maxclust")
+    n_families = max(2, min(args.n_families, len(roles) - 1))
+    if n_families != args.n_families:
+        print(f"n_families clamped {args.n_families} -> {n_families} ({len(roles)} roles)")
+    fam = fcluster(Z, t=n_families, criterion="maxclust")
     role_proj = pd.Series(proj, index=meta["role"].values).groupby(level=0).mean()
 
     families = {}
@@ -58,7 +61,7 @@ def main():
         }
     # order families by how Assistant-like they are
     fam_order = sorted(families, key=lambda f: -families[f]["mean_axis_proj"])
-    print(f"\n== {args.n_families} role families (by mean assistant-axis projection) ==")
+    print(f"\n== {n_families} role families (by mean assistant-axis projection) ==")
     for f in fam_order:
         d = families[f]
         head = ", ".join(d["roles"][:10])
@@ -69,10 +72,10 @@ def main():
 
     # Dendrogram (truncated) colored at the family cut
     fig, ax = plt.subplots(figsize=(13, 5.5))
-    dendrogram(Z, truncate_mode="lastp", p=args.n_families * 2, ax=ax,
-               color_threshold=Z[-(args.n_families - 1), 2], no_labels=False,
+    dendrogram(Z, truncate_mode="lastp", p=n_families * 2, ax=ax,
+               color_threshold=Z[-(n_families - 1), 2], no_labels=False,
                leaf_rotation=90, leaf_font_size=7)
-    ax.set_title(f"Role-centroid hierarchy (Ward), cut into {args.n_families} families — layer {layer}")
+    ax.set_title(f"Role-centroid hierarchy (Ward), cut into {n_families} families — layer {layer}")
     ax.set_ylabel("merge distance")
     fig.tight_layout()
     savefig(fig, f"04_role_dendrogram_{tag}.png", run_dir)

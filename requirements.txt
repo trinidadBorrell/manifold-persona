@@ -10,6 +10,7 @@ huggingface_hub>=0.24
 pandas
 pyarrow
 numpy
+tabulate
 
 # Exploratory analysis
 scikit-learn>=1.3
