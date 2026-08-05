@@ -101,19 +101,20 @@ def persistence_sweep(cloud, out):
         sizes = np.bincount(lab)
         nman.append(int((sizes >= 3).sum()))
         nsingle.append(int((sizes < 3).sum()))
+    # most-persistent N (widest τ interval at a constant count)
+    from itertools import groupby
+    runs = [(k, sum(1 for _ in g)) for k, g in groupby(nman)]
+    most = max(runs, key=lambda kv: kv[1])
     fig, ax = plt.subplots(figsize=(8, 4.5))
     ax.plot(taus, nman, "-", color="#2e7d32", lw=2, label="# manifolds (≥3 roles)")
     ax.plot(taus, nsingle, "-", color="#bbb", lw=2, label="# roles left as singletons")
     ax.axvspan(-0.24, 0.24, color="#ffe082", alpha=0.4, label="preregistered τ range")
     ax.set_xlabel("cosine threshold τ"); ax.set_ylabel("count")
     ax.set_title("Persistence: how #manifolds and dropout move with τ\n"
-                 "(N=1 is stable across a wide τ range → the honest answer)")
+                 f"(N={most[0]} is the most persistent count, over "
+                 f"{most[1]/len(taus)*100:.0f}% of the swept τ range)")
     ax.legend(fontsize=8)
     _save(fig, out / "fig11_components_vs_tau.png")
-    # most-persistent N (widest τ interval at a constant count)
-    from itertools import groupby
-    runs = [(k, sum(1 for _ in g)) for k, g in groupby(nman)]
-    most = max(runs, key=lambda kv: kv[1])
     return {"most_persistent_N": most[0], "persistence_width_frac": most[1] / len(taus)}
 
 
@@ -222,6 +223,21 @@ def main(run_dir: str):
     print("wrote", note)
 
 
+def _n_verdict(n_spec: int, n_pers: int) -> str:
+    """What the two component-count estimates jointly say — read off their values."""
+    if n_spec != n_pers:
+        return (f"The two estimates **disagree**: the eigengap says N={n_spec} and the "
+                f"persistence sweep says N={n_pers}. The component count is unresolved by "
+                "this note, so neither a single manifold nor a fixed number of them is "
+                "established here.")
+    if n_spec == 1:
+        return ("Both point at **N=1**: the roles are best described as one connected "
+                "manifold, and any larger component count at high τ is over-fragmentation "
+                "of that single manifold, not evidence of several.")
+    return (f"Both point at **N={n_spec}**, so this run does *not* describe the roles as "
+            f"one connected manifold — {n_spec} components are indicated by both estimates.")
+
+
 def _note(idr, sp, ps):
     L = ["# Post-hoc: how many manifolds, and what dimension?\n",
          "_Exploratory. Added after the run to answer follow-up questions; does not "
@@ -241,10 +257,8 @@ def _note(idr, sp, ps):
           f"{[round(x,3) for x in sp['eigenvalues'][:6]]}.",
           f"- **Persistence over τ**: the most stable component count is "
           f"**N={ps['most_persistent_N']}**, holding over {ps['persistence_width_frac']*100:.0f}% "
-          f"of the swept τ range. Fragmentation only appears at high τ (thin-neck cuts).",
-          "", "Both point the same way: the roles are best described as **one connected "
-          "manifold**; the '6 manifolds at τ=0.70' figure is over-fragmentation of that "
-          "single manifold, not evidence of several.\n",
+          f"of the swept τ range.",
+          "", _n_verdict(int(sp["n_estimate"]), int(ps["most_persistent_N"])) + "\n",
           "## Figures\n",
           "- `fig09_mst_skeleton_2d/3d.png` — MST skeleton through every centroid.",
           "- `fig10_spectral_eigengap.png` — Laplacian spectrum + eigengap.",

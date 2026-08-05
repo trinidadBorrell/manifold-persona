@@ -26,6 +26,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 PLAN = "plans/2026-07-21-role-manifold-reconstruction.md"
 
 N_PERM_DECIDER = 100
+N_COORD_DECIDER = 100   # draws of the structure-preserving null that DECIDES
 N_PERM_ROBUST = 40
 N_PERM_POSCTRL = 50
 FLOOR = 0.30            # effect-size floor: relative reduction in NRE
@@ -98,21 +99,48 @@ def main(argv=None) -> None:
     say(f"    tau percentiles (cos-sim): {taus}")
 
     # ---------------------------------------------------------------- decider
-    say("\n[2] DECIDER  C_role (prompt_avg, k=3) + 100-perm null ...")
+    # Two nulls. The role-shuffle null builds each fake role mean from ~25
+    # randomly permuted points, so those means shrink toward the global mean and
+    # it only measures between-role spread. The coordinate null keeps the real
+    # marginals/spread/noise and destroys only the joint structure, so IT decides;
+    # the role-shuffle null is kept and reported for continuity.
+    say("\n[2] DECIDER  C_role (prompt_avg, k=3) + role-shuffle null (context) "
+        "+ coordinate null (DECIDES) ...")
     dec = P.construction_C_role(cloud)
     null = P.permutation_null(cloud, n_perms=N_PERM_DECIDER, seed=0)
-    st = P.separation_stats(dec.r2, null)
+    st_perm = P.separation_stats(dec.r2, null)
+    coord_null = P.coordinate_null(cloud, n_draws=N_COORD_DECIDER, seed=0)
+    st = P.separation_stats(dec.r2, coord_null)
     dec_verdict = verdict(st)
-    say(f"    C_role R2={dec.r2:.3f} null_med={st['null_median']:.3f} p={st['p']:.3g} "
-        f"z={st['z']:.1f} rel_red={st['rel_reduction']:.2f} gap={st['r2_gap']:.3f} "
-        f"-> {dec_verdict}")
-    report["decider"] = {"r2": dec.r2, **st, "verdict": dec_verdict}
+    say(f"    C_role R2={dec.r2:.3f}")
+    say(f"    role-shuffle null (context): med={st_perm['null_median']:.3f} "
+        f"p={st_perm['p']:.3g} z={st_perm['z']:.1f} "
+        f"rel_red={st_perm['rel_reduction']:.2f} gap={st_perm['r2_gap']:.3f} "
+        f"-> would be {verdict(st_perm)}")
+    say(f"    coordinate null (DECIDES):   med={st['null_median']:.3f} "
+        f"p={st['p']:.3g} z={st['z']:.1f} rel_red={st['rel_reduction']:.2f} "
+        f"gap={st['r2_gap']:.3f} -> {dec_verdict}")
+    report["decider"] = {"r2": dec.r2, **st, "verdict": dec_verdict,
+                         "null_used": "coordinate"}
+    report["decider_perm"] = {"r2": dec.r2, **st_perm,
+                              "verdict": verdict(st_perm)}
     report["null_decider"] = null.tolist()
+    report["null_decider_coord"] = coord_null.tolist()
+    # the plain columns keep their role-shuffle meaning (every other row uses a
+    # permutation null); the coord_* columns are the deciding ones.
     rows.append({"construction": "C_role", "n_anchors": dec.n_anchors,
                  "n_manifolds": 1, "r2": dec.r2, "nre": dec.nre,
-                 "null_median": st["null_median"], "null_5pct": st["null_5pct"],
-                 "p": st["p"], "z": st["z"], "r2_gap": st["r2_gap"],
-                 "rel_reduction": st["rel_reduction"], "verdict": dec_verdict,
+                 "null_median": st_perm["null_median"],
+                 "null_5pct": st_perm["null_5pct"],
+                 "p": st_perm["p"], "z": st_perm["z"],
+                 "r2_gap": st_perm["r2_gap"],
+                 "rel_reduction": st_perm["rel_reduction"],
+                 "coord_null_median": st["null_median"],
+                 "coord_null_5pct": st["null_5pct"],
+                 "coord_p": st["p"], "coord_z": st["z"],
+                 "coord_r2_gap": st["r2_gap"],
+                 "coord_rel_reduction": st["rel_reduction"],
+                 "null_used": "coordinate", "verdict": dec_verdict,
                  "exploratory": False})
 
     # ---------------------------------------------------------------- robustness
@@ -229,7 +257,8 @@ def main(argv=None) -> None:
         "other_params": {"min_component": P.MIN_COMPONENT, "anchor_cap": 600,
                          "reproduce": ".venv/bin/python -m manifold.run"},
     }, status="executed")
-    say(f"\nDONE in {time.time()-t0:.0f}s. Verdict (C_role): {dec_verdict}")
+    say(f"\nDONE in {time.time()-t0:.0f}s. "
+        f"Verdict (C_role, coordinate null): {dec_verdict}")
 
     # Post-hoc structural extras (fig09-13 + POSTHOC-manifold-structure.md).
     # Off by default. Runs only AFTER the report + manifest are on disk, and is
@@ -252,6 +281,10 @@ def _write_manifest(run_dir, stamp, t0, extra, status):
         "git": "not-a-git-repo (reproducibility via manifest+seeds)",
         "seed": 0, "D_ambient": P.D_AMBIENT, "k_intrinsic": P.K_INTRINSIC,
         "n_perm_decider": N_PERM_DECIDER, "n_perm_robust": N_PERM_ROBUST,
+        "n_coord_null_decider": N_COORD_DECIDER,
+        "decider_null": "coordinate (structure-preserving: each role-mean "
+                        "coordinate permuted across roles); the role-shuffle "
+                        "permutation null is still computed and reported",
         "effect_floor_rel_reduction": FLOOR, "alpha": ALPHA,
         "view": "prompt_avg", "layer": 26, "model": "Qwen/Qwen2.5-3B-Instruct",
         "inputs": "data/embeddings_roles/ (prompt_avg, layer 26; no re-extraction)",

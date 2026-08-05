@@ -59,11 +59,43 @@ def shard_path(ckpt_dir: Path, start: int, end: int) -> Path:
 
 
 def run_config(args) -> dict:
-    """The subset of args that must match for a resume to be valid."""
-    return {"model": args.model, "n_questions": args.n_questions,
+    """The subset of args that must match for a resume to be valid.
+
+    Every key is also written into the final manifest under the SAME name, so
+    the completed-run guard below can compare the whole config.
+    """
+    return {"model_name": args.model, "n_questions": args.n_questions,
             "seed": args.seed, "max_new_tokens": args.max_new_tokens,
             "do_sample": bool(args.do_sample), "temperature": args.temperature,
             "limit": args.limit, "chunk": args.chunk}
+
+
+def check_completed_run(out_dir: Path, cfg: dict, n_records: int) -> None:
+    """Refuse to overwrite a COMPLETED run in ``out_dir``.
+
+    A *finished* run has no _ckpt (finalization removes it), so the resume
+    check cannot see it. Without this guard, re-invoking with different
+    settings silently overwrites a completed cloud -- which for a multi-hour
+    run destroys the result with no warning.
+
+    n_records is always compared, so a ``--limit`` run against a full cloud is
+    refused even when every other key matches. Manifests written before this
+    guard existed stored only some of the run_config keys; a key the manifest
+    never recorded cannot be compared, so it is skipped.
+    """
+    done_manifest = out_dir / "manifest.json"
+    if not done_manifest.exists():
+        return
+    prev = json.load(open(done_manifest))
+    mismatch = {k: (prev[k], cfg[k]) for k in cfg if k in prev and prev[k] != cfg[k]}
+    if prev.get("n_records") != n_records:
+        mismatch["n_records"] = (prev.get("n_records"), n_records)
+    if mismatch:
+        raise SystemExit(
+            f"{out_dir} already holds a COMPLETED run with different "
+            f"settings: {mismatch}\n"
+            f"Refusing to overwrite it. Use --restart to discard and "
+            f"rebuild, or pass a different --out_dir.")
 
 
 def main():
@@ -108,28 +140,16 @@ def main():
                 f"Resume needs identical settings. Use --restart to start clean "
                 f"(discards existing shards).")
     else:
-        # A *finished* run has no _ckpt (finalization removes it), so the check
-        # above cannot see it. Without this second guard, re-invoking with
-        # different settings silently overwrites a completed cloud -- which for
-        # a multi-hour run destroys the result with no warning.
-        done_manifest = out_dir / "manifest.json"
-        if done_manifest.exists() and not args.restart:
-            prev = json.load(open(done_manifest))
-            mismatch = {k: (prev.get(k), cfg[k])
-                        for k in cfg if k in prev and prev.get(k) != cfg[k]}
-            if mismatch:
-                raise SystemExit(
-                    f"{out_dir} already holds a COMPLETED run with different "
-                    f"settings: {mismatch}\n"
-                    f"Refusing to overwrite it. Use --restart to discard and "
-                    f"rebuild, or pass a different --out_dir.")
+        if not args.restart:
+            check_completed_run(out_dir, cfg, N)
         json.dump({**cfg, "n_records": N}, open(cfg_path, "w"), indent=2)
 
     # Which chunks still need computing?
     bounds = [(s, min(s + args.chunk, N)) for s in range(0, N, args.chunk)]
     todo = [(s, e) for (s, e) in bounds if not shard_path(ckpt_dir, s, e).exists()]
     done = len(bounds) - len(todo)
-    print(f"{N} records over {len(list_roles())} roles · chunk={args.chunk} · "
+    print(f"{N} records over {len({r.role for r in records})} roles "
+          f"(of {len(list_roles())} available) · chunk={args.chunk} · "
           f"{len(bounds)} shards ({done} done, {len(todo)} to do) · "
           f"max_new_tokens={args.max_new_tokens} do_sample={args.do_sample}")
 
@@ -182,11 +202,10 @@ def main():
     meta_df = pd.DataFrame(meta_rows)
 
     manifest = {
-        "model_name": args.model, "n_layers": int(n_layers), "hidden": int(hidden),
+        **cfg,                       # every run_config key, same names
+        "n_layers": int(n_layers), "hidden": int(hidden),
         "primary_layer": int(prim), "token_basis": "response",
-        "max_new_tokens": int(args.max_new_tokens), "do_sample": bool(args.do_sample),
-        "n_questions": int(args.n_questions), "n_records": int(N),
-        "n_roles": int(meta_df["role"].nunique()),
+        "n_records": int(N), "n_roles": int(meta_df["role"].nunique()),
     }
     save_embeddings(avg, last, meta_df, manifest, out_dir=out_dir)
     shutil.rmtree(ckpt_dir)          # clean up shards once the final save succeeded
