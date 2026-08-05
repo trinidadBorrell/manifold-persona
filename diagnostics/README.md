@@ -86,3 +86,100 @@ tweak.
 
 **Any `prompt_avg` cloud whose `manifest.json` has no `sink_factor` key predates
 this fix.** Its PC1 is length. Recompute before interpreting.
+
+---
+
+## 02_sink_impact.py — what the fix changed, at full scale
+
+Two clouds, identical in every respect except sink handling:
+**276 roles × 5 instructions × 3 questions = 4,140 records**,
+Qwen2.5-0.5B-Instruct, layer 17, seed 0. ~30 min each on 3 CPU cores.
+
+```bash
+.venv/bin/python -m extraction.build_and_extract_roles --n_questions 3 --out_dir data/embeddings_roles_full_fixed
+.venv/bin/python -m extraction.build_and_extract_roles --n_questions 3 --keep_sinks --out_dir data/embeddings_roles_full_raw
+.venv/bin/python diagnostics/02_sink_impact.py
+```
+
+| quantity | RAW | FIXED |
+|---|---|---|
+| per-record PC1 share of variance | 0.440 | 0.104 |
+| per-record \|r(PC1, 1/T)\| | **0.998** | 0.598 |
+| role-mean PC1 share | 0.493 | 0.166 |
+| role-mean \|r(PC1, 1/mean_T)\| | **0.997** | 0.614 |
+| role-mean **\|cos(PC1, Assistant Axis)\|** | **0.945** | **0.276** |
+| between/within role ratio | 1.443 | 1.232 |
+| PCs for 90% of variance | 42 | **71** |
+
+Intrinsic dimension of the 276 role centroids:
+
+| estimator | RAW | FIXED |
+|---|---|---|
+| TwoNN | 11.82 | 11.31 |
+| MLE | 12.96 | 12.59 |
+| TLE | 12.21 | 11.88 |
+| CorrInt | 9.85 | 10.95 |
+| MOM | 8.31 | 10.61 |
+| lPCA | **4.00** | **25.00** |
+
+### Reading this
+
+**The low-dimensional-manifold claim survives.** Every *distance-based* estimator
+is essentially unmoved (TwoNN 11.8 → 11.3, MLE 13.0 → 12.6, TLE 12.2 → 11.9). That
+is what theory predicts: they consume pairwise distances, and the sink adds
+essentially one extra varying direction to an already ~11-dimensional cloud.
+Intrinsic dimension ≈ **10–13** against ambient 896 is a real result and is not an
+artifact.
+
+**The linear/PCA picture does not survive.** lPCA jumps 4 → 25 and the components
+needed for 90% of variance go 42 → 71, because in the raw cloud one eigenvalue (the
+sink) dwarfed everything. The cloud is substantially *higher*-dimensional in the
+linear sense than the raw view implied.
+
+**The Assistant-Axis result does not survive.** `|cos(PC1, axis)| = 0.945` in the
+raw cloud looked like a strong reproduction of the paper's finding. But raw PC1 is
+sequence length at r = 0.997 — so that alignment was length, not identity. After
+the fix it falls to **0.276**.
+
+### Why: the Assistant Axis is structurally confounded with prompt length
+
+This is a design issue, not an implementation bug, and the fix above does not
+remove it.
+
+The axis is defined as `mean(default points) − mean(all points)`. But the `default`
+baseline is *by construction* the shortest condition in the whole design — its five
+instructions are `""` (empty), "You are an AI assistant.", "You are a large language
+model.", "You are {model_name}.", "Respond as yourself.", while every role gets a
+descriptive multi-clause system prompt. Measured:
+
+| | n | mean tokens | range |
+|---|---|---|---|
+| `default` | 15 | **32.6** | 26–40 |
+| the 275 roles | 4,125 | **41.7** | 34–62 |
+
+**No role's mean prompt length falls below the default's mean** (0.0 percentile).
+So "distance from the Assistant" and "prompt length" are collinear by design. Even
+in the *fixed* cloud:
+
+```
+r(assistant-axis projection, 1/mean_T) = +0.64   over 276 roles
+r(assistant-axis projection,   mean_T) = −0.62
+```
+
+Any claim that PC1 measures Assistant-likeness has to rule this out first —
+by matching prompt lengths, regressing length out, or conditioning on it.
+
+### Does this affect the papers? Probably not — and that's the point
+
+Both Persona Vectors and the Assistant Axis average over **response** tokens. The
+attention sink sits at position 0 of the *prompt*, so it is **excluded from their
+average automatically**. They are immune to this specific artifact.
+
+This repo introduced it by deviating from them — averaging over *prompt* tokens
+instead (divergence 1 in `docs/notes/persona-definitions.md`). Persona Vectors
+already warned that response tokens work better (their footnote 2); this is a
+concrete, quantified reason why. `prompt_last` is also immune, since the final
+position is never the sink.
+
+The length confound is a separate matter and could in principle touch the papers
+too, via response length rather than prompt length. Untested here.
