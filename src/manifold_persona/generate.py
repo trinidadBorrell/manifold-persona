@@ -59,9 +59,10 @@ def generate_and_extract(
         gen_kwargs["temperature"] = temperature
 
     for i, messages in enumerate(tqdm(chats, desc="Generate+extract")):
-        prompt_ids = tokenizer.apply_chat_template(
+        tpl = tokenizer.apply_chat_template(
             messages, return_tensors="pt", add_generation_prompt=True
-        ).to(device)
+        )
+        prompt_ids = (tpl if torch.is_tensor(tpl) else tpl["input_ids"]).to(device)
         P = prompt_ids.shape[1]
 
         out_ids = model.generate(prompt_ids, **gen_kwargs)          # [1, P+R]
