@@ -7,8 +7,9 @@ def build_report(report: dict, rows: list, stamp: str, stopped: bool) -> str:
     L.append(f"# REPORT — role manifold reconstruction (H1)\n")
     L.append(f"**Run:** `{stamp}`  ·  **Plan:** "
              f"`plans/2026-07-21-role-manifold-reconstruction.md`  ·  "
-             f"**Data:** `data/embeddings_roles/` prompt_avg, layer 26, "
-             f"Qwen2.5-3B (no re-extraction).")
+             f"**Data:** `data/embeddings_roles/` prompt_avg, "
+             f"layer {report.get('layer', '?')}, "
+             f"{report.get('model', '?')} (no re-extraction).")
     L.append("**Reproduce:** `.venv/bin/python -m manifold.run` (seed 0; not a git "
              "repo — provenance via `manifest.json` + seeds).\n")
 
