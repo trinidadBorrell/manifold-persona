@@ -176,7 +176,7 @@ attention sink sits at position 0 of the *prompt*, so it is **excluded from thei
 average automatically**. They are immune to this specific artifact.
 
 This repo introduced it by deviating from them — averaging over *prompt* tokens
-instead (divergence 1 in `docs/notes/persona-definitions.md`). Persona Vectors
+instead. Persona Vectors
 already warned that response tokens work better (their footnote 2); this is a
 concrete, quantified reason why. `prompt_last` is also immune, since the final
 position is never the sink.

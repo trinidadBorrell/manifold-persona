@@ -115,7 +115,6 @@ env var; each script also accepts `--outdir`.
 ## Layout
 
 ```
-docs/papers/ + docs/notes/     # reference PDFs + reading notes (see docs/README.md)
 diagnostics/                   # apparatus checks: activation scales, attention sinks
 src/manifold_persona/          # config, io, extract, common, runlog; prompts_roles.py (roles)
 extraction/                    # build_and_extract_roles.py (prompt tokens),
