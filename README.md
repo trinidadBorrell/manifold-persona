@@ -144,12 +144,12 @@ directionally intact once cloud scale is controlled. See
 
 ```bash
 .venv/bin/python exploratory/per_persona/run_id_stage.py                  # prompt cloud, ~70s
-MP_ROLE_DIR=data/embeddings_roles_resp40 \
-  .venv/bin/python exploratory/per_persona/run_id_stage.py --layer 0 --stamp resp40  # response cloud, ~5min
+MP_ROLE_DIR=data/embeddings_roles_resp_40q \
+  .venv/bin/python exploratory/per_persona/run_id_stage.py --layer 19 --stamp resp40  # response cloud, ~5min
 
 # the geometry-vs-axis study on top of the response cloud (~2min)
-MP_ROLE_DIR=data/embeddings_roles_resp40 \
-  .venv/bin/python exploratory/per_persona/run_geometry.py --layer 0
+MP_ROLE_DIR=data/embeddings_roles_resp_40q \
+  .venv/bin/python exploratory/per_persona/run_geometry.py --layer 19
 ```
 
 
@@ -163,7 +163,7 @@ extraction/                    # build_and_extract_roles.py (prompt tokens),
                                # generate_and_extract_roles.py (response tokens), push_to_hf.py
 manifold/                      # H1 manifold study: pipeline, tps, run, sweep, local_id
 exploratory/assistant_axis/    # role study: 01–06 + run_all + make_report + figures/<stamp>/
-exploratory/per_persona/       # per-role study: 01–04 + common + run_all + METHODS.md + figures/<stamp>/
+exploratory/per_persona/       # per-role study: id/clustering/budget stages + studies + run_id_stage + run_geometry + METHODS.md + figures/<stamp>/
 data/embeddings_roles/         # role cloud, prompt tokens 5x5, L26 (gitignored; UNCLEAN, see above)
 data/embeddings_roles_resp/    # role cloud, response tokens 5x5, L19 (gitignored)
 data/embeddings_roles_resp_40q/ # role cloud, response tokens 5x40, L19 (gitignored; from HF)

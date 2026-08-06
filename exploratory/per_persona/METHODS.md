@@ -118,7 +118,7 @@ not. This single number is why the two clouds get opposite conclusions.
 
 ## 2. Intrinsic dimension vs closeness to the Assistant
 
-**Code:** `04_id_vs_axis.py` · **Reported by:** `04`
+**Code:** `id_vs_axis.py` · **Reported by:** `04`
 
 ### The two "closeness" measures
 
@@ -165,7 +165,7 @@ and log within-role variance. Spread also shifts a role along the axis. So a raw
 ID↔axis correlation can be entirely spread acting on both ends, with no direct
 relationship at all.
 
-**The fix** (`04_id_vs_axis.py::partial_corr`). Let `z = log(SS_total)` per role:
+**The fix** (`stats_utils.py::partial_corr`). Let `z = log(SS_total)` per role:
 
 ```
 1.  regress ID on z         →  keep residual  ID⊥      (part of ID that z can't explain)

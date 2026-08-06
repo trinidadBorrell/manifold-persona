@@ -16,13 +16,13 @@ that role looks like — 276 intrinsic dimensions and 276 clusterings.
 
 ```bash
 # prompt cloud, 5x5 (default) — needs MP_ALLOW_UNCLEAN=1, see the notice above
-.venv/bin/python exploratory/per_persona/run_all.py
+.venv/bin/python exploratory/per_persona/run_id_stage.py
 
 # response cloud, 5x40 — MP_ROLE_DIR repoints the whole stack. --layer 19 is the
-# manifest's primary_layer; run_all uses it only to name the report's input files,
-# while each script reads primary_layer from the manifest itself.
+# manifest's primary_layer; run_id_stage uses it only to name the report's input
+# files, while each script reads primary_layer from the manifest itself.
 MP_ROLE_DIR=data/embeddings_roles_resp_40q \
-  .venv/bin/python exploratory/per_persona/run_all.py --layer 19 --stamp resp40
+  .venv/bin/python exploratory/per_persona/run_id_stage.py --layer 19 --stamp resp40
 ```
 
 Output lands in `figures/<DD-Mon-YYYY-HHMM>/` — the same dated-folder contract as
@@ -81,7 +81,7 @@ Run separately against an existing run folder:
 
 ```bash
 MP_ROLE_DIR=data/embeddings_roles_resp_40q .venv/bin/python \
-  exploratory/per_persona/04_id_vs_axis.py --layer 19 \
+  exploratory/per_persona/id_vs_axis.py --layer 19 \
   --rundir exploratory/per_persona/figures/resp40
 ```
 
@@ -117,12 +117,12 @@ bound, since generation is several times slower.
 |---|---|
 | `METHODS.md` | how the variance fractions and the ID-vs-axis correlations are computed |
 | `common.py` | raw-cloud loader, ANOVA design split, and the two nulls |
-| `01_per_persona_id.py` | 276 IDs vs both nulls; variance decomposition; ID vs assistant-axis position |
-| `02_per_persona_clustering.py` | 276 clusterings, ARI/NMI vs instruction and vs question |
-| `03_compute_budget.py` | measured analysis cost, ID-recovery-vs-N curve, extraction budget |
+| `id_per_role.py` | 276 IDs vs both nulls; variance decomposition; ID vs assistant-axis position |
+| `clustering_per_role.py` | 276 clusterings, ARI/NMI vs instruction and vs question |
+| `compute_budget.py` | measured analysis cost, ID-recovery-vs-N curve, extraction budget |
 | `fetch_resp40.py` | pull the HF response cloud, keep the primary layer only |
-| `04_id_vs_axis.py` | does per-role ID track closeness to the Assistant? all 6 estimators, scale-controlled |
-| `run_all.py` | all three into one dated folder + `REPORT.md` |
+| `id_vs_axis.py` | does per-role ID track closeness to the Assistant? all 6 estimators, scale-controlled |
+| `run_id_stage.py` | all three into one dated folder + `REPORT.md` |
 
 ## Reuse
 
