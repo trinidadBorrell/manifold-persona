@@ -250,11 +250,12 @@ def main(argv=None) -> None:
                       subdirs=("figures", "data"))
     figs = run / "figures"
 
-    print("[0] loading role cloud (prompt_avg, layer 26, PCA-50) ...")
+    print("[0] loading role cloud (prompt_avg, PCA-50) ...")
     cloud = P.load_cloud(view="prompt_avg", seed=SEED)
     X = cloud.role_means
     names = list(cloud.role_names)
-    print(f"    {X.shape[0]} roles x {X.shape[1]} dims")
+    print(f"    {X.shape[0]} roles x {X.shape[1]} dims  "
+          f"model={cloud.manifest.get('model_name')} layer={cloud.layer}")
 
     k_list = usable_k_list(X.shape[0])
     if not k_list:
@@ -329,7 +330,8 @@ def main(argv=None) -> None:
                header="local_id,assistant_axis_proj", comments="")
     write_manifest(run, {
         "run": stamp, "script": "manifold/local_id.py", "seed": SEED,
-        "view": "prompt_avg", "layer": 26, "d_ambient": int(X.shape[1]),
+        "view": "prompt_avg", "layer": cloud.layer,
+        "model": cloud.manifest.get("model_name"), "d_ambient": int(X.shape[1]),
         "python": sys.version.split()[0], "platform": platform.platform(),
         "numpy": np.__version__, "sklearn": sklearn.__version__,
         "status": "exploratory — post hoc, not preregistered",

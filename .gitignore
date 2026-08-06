@@ -24,7 +24,7 @@ data/
 exploratory/assistant_axis_traits/
 exploratory/persona_vectors/
 
-DESIGN.md   
+DESIGN.md
 RESEARCH.md
 
 .claude/
@@ -43,3 +43,8 @@ refactors/baselines/*/extra-reference/
 
 # Editable-install build artifact
 *.egg-info/
+output/*
+.labbook/*
+wiki/*
+lit-review.md
+novelty-assessment.md

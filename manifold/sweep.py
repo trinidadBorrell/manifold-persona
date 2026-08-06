@@ -228,7 +228,8 @@ def main(argv=None) -> None:
             SP.fig05_spline_manifold(sub, mani, d / "figures", n, 0)
             SP.fig05_spline_manifold(sub, mani, run_dir / "figures", n, 0)
         (d / "REPORT.md").write_text(
-            build_cell_report(n, sub_df, sel, refs.get(n, {}), stamp, FLOOR))
+            build_cell_report(n, sub_df, sel, refs.get(n, {}), stamp, FLOOR,
+                              len(cloud.role_names)))
 
     # ------------------------------------------------------ top-level figures
     SP.fig01_sweep_decider(df, run_dir / "figures", floor=FLOOR)
@@ -274,7 +275,7 @@ def main(argv=None) -> None:
     # ------------------------------------------------------------- report
     (run_dir / "REPORT.md").write_text(
         build_sweep_report(df, refs, verdicts, reg, stamp, run_dir, FLOOR, BAND,
-                           n_perm, seeds, n_ref))
+                           n_perm, seeds, n_ref, cloud))
 
     manifest = {
         "run_id": stamp, "plan": PLAN, "context": "RESEARCH.md", "status": status,
@@ -289,8 +290,9 @@ def main(argv=None) -> None:
         "kmeans_seeds": seeds, "n_perm_decider": n_perm,
         "n_perm_posctrl": N_PERM_POSCTRL, "n_ref_draws": n_ref,
         "effect_floor_rel_reduction": FLOOR, "decision_band": BAND, "alpha": ALPHA,
-        "selection": "kmeans medoid on 276 role means in shared D=50 PCA space; "
-                     "default force-included into its own cluster's slot",
+        "selection": f"kmeans medoid on {len(cloud.role_names)} role means in "
+                     f"shared D=50 PCA space; "
+                     f"default force-included into its own cluster's slot",
         "regression_check_vs_plan1": reg,
         "decision": decision,
         "n_roles_total": len(cloud.role_names), "n_points_total": int(cloud.raw.shape[0]),

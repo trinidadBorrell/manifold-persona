@@ -45,7 +45,15 @@ def _trend(hi_v, lo_v, eps=1e-3):
 # --------------------------------------------------------------------------- #
 def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
                        stamp: str, run_dir, floor: float, band: float,
-                       n_perm: int, seeds, n_ref: int) -> str:
+                       n_perm: int, seeds, n_ref: int, cloud) -> str:
+    # Provenance from the loaded cloud -- these used to be hardcoded to the
+    # 3B/layer-26 run and silently misreported any other cloud.
+    src_model = cloud.manifest.get("model_name", "?")
+    src_layer = cloud.layer
+    src_pts = cloud.raw.shape[0]
+    src_roles = len(cloud.role_names)
+    src_hidden = cloud.manifest.get("hidden", "?")
+    src_per_role = src_pts // src_roles
     ns = sorted(int(n) for n in df["n"].unique())
     rr = _by_n(df, "rel_reduction")
     r2 = _by_n(df, "r2")
@@ -297,15 +305,16 @@ def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
     A("Reproduce with `.venv/bin/python -m manifold.sweep` (seeds and versions in "
       "`manifest.json`). No model forward passes, no generation, no re-extraction — "
       "everything is downstream of the saved activation cloud.\n")
-    A("**Step 0 — load the cloud, once.** `manifold/pipeline.py::load_cloud` reads "
-      "`data/embeddings_roles/` (view `prompt_avg`, layer 26, Qwen2.5-3B-Instruct) via the "
-      "study loader `exploratory/assistant_axis/common.py::load_points`, giving 6,900 raw "
-      "points = 276 roles × 25 prompts in 2,048 dims, then fits **one** PCA to **D=50**. "
-      "That PCA is fit on all 6,900 points and reused by every cell of the sweep. This is "
+    A(f"**Step 0 — load the cloud, once.** `manifold/pipeline.py::load_cloud` reads "
+      f"`data/embeddings_roles/` (view `prompt_avg`, layer {src_layer}, {src_model}) via the "
+      f"study loader `exploratory/assistant_axis/common.py::load_points`, giving {src_pts:,} raw "
+      f"points = {src_roles} roles × {src_per_role} prompts in {src_hidden} dims, then fits "
+      f"**one** PCA to **D=50**. "
+      f"That PCA is fit on all {src_pts:,} points and reused by every cell of the sweep. This is "
       "load-bearing: refitting PCA per subset would change the ambient space with `n` and "
       "nothing across the sweep would be comparable.\n")
     A("**Step 1 — choose the `n` roles.** `manifold/subsets.py::kmeans_medoid_roles`. "
-      "`KMeans(n_clusters=n, random_state=seed, n_init=10)` on the **276 role means** in "
+      f"`KMeans(n_clusters=n, random_state=seed, n_init=10)` on the **{src_roles} role means** in "
       "that shared 50-D space; each cluster contributes its **medoid** — the member role "
       "closest to the cluster centroid, so a kept role is always a real role, never a "
       "synthetic average. `default` (the Assistant persona) is force-included by taking the "
@@ -483,7 +492,7 @@ def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
       "that the result is about **spread-out** small role sets; a random or a semantically "
       "coherent 10 could behave differently, and both counterfactuals are in the plan's "
       "`## Deferred`.\n")
-    A("2. **These are prompt-token activations** (`prompt_avg`, layer 26) — instruction "
+    A(f"2. **These are prompt-token activations** (`prompt_avg`, layer {src_layer}) — instruction "
       "geometry, not behaviour. Inherited from plan #1. The response-token cloud "
       "(`data/embeddings_roles_resp/`) is incomplete and untouched by this run.\n")
     A("3. **`k=3` is a preregistered assumption, and plan #1 measured the true intrinsic "
@@ -517,7 +526,7 @@ def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
 
 # --------------------------------------------------------------------------- #
 def build_cell_report(n: int, sub_df: pd.DataFrame, sel: dict, ref: dict,
-                      stamp: str, floor: float) -> str:
+                      stamp: str, floor: float, n_roles_total: int) -> str:
     L = []
     A = L.append
     A(f"# n = {n} role centroids\n")
@@ -556,7 +565,7 @@ def build_cell_report(n: int, sub_df: pd.DataFrame, sel: dict, ref: dict,
           "manifold.\n")
 
     A("## Roles selected (seed 0)\n")
-    A(f"k-means medoid selection, `k={n}` on the 276 role means in the shared D=50 PCA "
+    A(f"k-means medoid selection, `k={n}` on the {n_roles_total} role means in the shared D=50 PCA "
       f"space; one medoid per cluster. `default` force-included: "
       f"**{'yes' if sel['default_forced'] else 'no (it was already a medoid)'}**. "
       f"Degenerate-cluster fills: {sel['n_filled']}.\n")

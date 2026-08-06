@@ -25,6 +25,14 @@ def _save(fig, path: Path):
     save_fig(fig, path)          # dpi=300
 
 
+def _depth_note(sub) -> str:
+    """' ≈ 0.72 depth' from the cloud's own layer/n_layers; '' if unknown."""
+    nl = sub.manifest.get("n_layers")
+    if not nl or sub.layer < 0:
+        return ""
+    return f" ≈ {sub.layer / (nl - 1):.2f} depth"
+
+
 def _agg(df, col):
     """mean / min / max of `col` per n, in ascending n order."""
     g = df.groupby("n")[col]
@@ -259,7 +267,8 @@ def fig05_spline_manifold(sub, mani, out: Path, n_roles: int, seed: int,
             f"Red: spline passing exactly through every centroid, in PC1 order — its "
             f"excursions between knots are interpolation overshoot, not data.\n"
             f"Large markers: role means (labelled).   Faint dots: the {n_roles}×25 raw "
-            f"PROMPTS (5 role phrasings × 5 questions; prompt tokens, layer 26 ≈ 0.72 depth "
+            f"PROMPTS (5 role phrasings × 5 questions; prompt tokens, layer {sub.layer}"
+            f"{_depth_note(sub)} "
             f"— no answers were generated).   ★ = default (Assistant).\n"
             f"Axes are the fitted surface's own "
             f"intrinsic coordinates = PCA of these {n_roles} role means.\n"

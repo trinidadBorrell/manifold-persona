@@ -62,10 +62,13 @@ def main(argv=None) -> None:
     report = {}        # summary for REPORT.md
 
     # ---------------------------------------------------------- load (inert)
-    say("\n[0] Loading role cloud (prompt_avg, layer 26) ...")
+    say("\n[0] Loading role cloud (prompt_avg) ...")
     cloud = P.load_cloud(view="prompt_avg", seed=0)
     say(f"    raw={cloud.raw.shape}  roles={len(cloud.role_names)}  "
+        f"model={cloud.manifest.get('model_name')}  layer={cloud.layer}  "
         f"default_kept={'default' in cloud.role_names}")
+    report["layer"] = cloud.layer
+    report["model"] = cloud.manifest.get("model_name")
     # data-scale calibration for the positive control (audit finding 1):
     ridx = {r: i for i, r in enumerate(cloud.role_names)}
     pt_means = cloud.role_means[[ridx[r] for r in cloud.roles]]
@@ -91,7 +94,8 @@ def main(argv=None) -> None:
         say("!! POSITIVE CONTROL FAILED — pipeline cannot detect a manifold that "
             "is really there. Stopping; no role result is interpretable.")
         _write_report(run_dir, report, rows, stamp, stopped=True)
-        _write_manifest(run_dir, stamp, t0, {}, status="stopped-posctrl-failed")
+        _write_manifest(run_dir, stamp, t0, {}, status="stopped-posctrl-failed",
+                        cloud=cloud)
         return
 
     # -------------------------------------------------------------- thresholds
@@ -256,7 +260,7 @@ def main(argv=None) -> None:
                                 "manifold_intrinsic_dim": P.K_INTRINSIC},
         "other_params": {"min_component": P.MIN_COMPONENT, "anchor_cap": 600,
                          "reproduce": ".venv/bin/python -m manifold.run"},
-    }, status="executed")
+    }, status="executed", cloud=cloud)
     say(f"\nDONE in {time.time()-t0:.0f}s. "
         f"Verdict (C_role, coordinate null): {dec_verdict}")
 
@@ -275,7 +279,7 @@ def main(argv=None) -> None:
     _close_log()
 
 
-def _write_manifest(run_dir, stamp, t0, extra, status):
+def _write_manifest(run_dir, stamp, t0, extra, status, cloud):
     manifest = {
         "run_id": stamp, "plan": PLAN, "status": status,
         "git": "not-a-git-repo (reproducibility via manifest+seeds)",
@@ -286,9 +290,12 @@ def _write_manifest(run_dir, stamp, t0, extra, status):
                         "coordinate permuted across roles); the role-shuffle "
                         "permutation null is still computed and reported",
         "effect_floor_rel_reduction": FLOOR, "alpha": ALPHA,
-        "view": "prompt_avg", "layer": 26, "model": "Qwen/Qwen2.5-3B-Instruct",
-        "inputs": "data/embeddings_roles/ (prompt_avg, layer 26; no re-extraction)",
-        "n_roles": 276, "n_points": 6900, "exclusions": "none (default role kept)",
+        "view": "prompt_avg", "layer": cloud.layer,
+        "model": cloud.manifest.get("model_name"),
+        "inputs": f"data/embeddings_roles/ (prompt_avg, layer {cloud.layer}; "
+                  f"no re-extraction)",
+        "n_roles": len(cloud.role_names), "n_points": int(cloud.raw.shape[0]),
+        "exclusions": "none (default role kept)",
         **provenance(t0), **extra,
     }
     write_manifest(run_dir, manifest)

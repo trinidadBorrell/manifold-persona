@@ -97,7 +97,8 @@ def subset_cloud(cloud: Cloud, roles) -> Cloud:
     idx = {r: i for i, r in enumerate(cloud.role_names)}
     means = np.vstack([cloud.role_means[idx[r]] for r in keep])
     return Cloud(raw=raw, roles=sub_roles, role_names=keep, role_means=means,
-                 global_mean=raw.mean(0), pca=cloud.pca)
+                 global_mean=raw.mean(0), pca=cloud.pca,
+                 layer=cloud.layer, manifest=cloud.manifest)
 
 
 def cloud_scale(cloud: Cloud) -> tuple:
