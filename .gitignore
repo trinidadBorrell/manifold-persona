@@ -48,3 +48,13 @@ output/*
 wiki/*
 lit-review.md
 novelty-assessment.md
+
+exploratory/per_persona/md
+
+# exploratory geometry-panel runs: bulk ignored, provenance committed
+output/per_persona_exploratory/*/logs/
+output/per_persona_exploratory/*/data/persistence/
+output/per_persona_exploratory/*/data/*_null_L*.json
+!output/per_persona_exploratory/*/manifest.json
+!output/per_persona_exploratory/*/REPORT.md
+!output/per_persona_exploratory/*/figures/

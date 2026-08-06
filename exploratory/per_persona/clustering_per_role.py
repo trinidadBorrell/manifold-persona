@@ -22,7 +22,7 @@ two clouds this has run on differ by 8x: 25 points/role (5x5) and 200 points/rol
 both are also fitted explicitly as kmeans_k<n_i> / kmeans_k<n_q>.
 
 Usage:
-    .venv/bin/python exploratory/per_persona/02_per_persona_clustering.py
+    .venv/bin/python exploratory/per_persona/clustering_per_role.py
 """
 from __future__ import annotations
 

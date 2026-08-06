@@ -84,7 +84,6 @@ def small_matrix_ops():
 def assert_finite(df, what: str = "results"):
     """Guard for the suppression in :func:`small_matrix_ops` — a genuine
     numerical failure must still stop the run, not vanish into ignored flags."""
-    import pandas as pd
     num = df.select_dtypes(include="number")
     bad = num.columns[num.apply(lambda c: np.isinf(c.to_numpy(dtype=float)).any())]
     if len(bad):

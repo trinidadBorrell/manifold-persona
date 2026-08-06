@@ -142,6 +142,16 @@ that more Assistant-like roles have **lower** within-role ID — weakened but
 directionally intact once cloud scale is controlled. See
 `exploratory/per_persona/README.md`.
 
+```bash
+.venv/bin/python exploratory/per_persona/run_id_stage.py                  # prompt cloud, ~70s
+MP_ROLE_DIR=data/embeddings_roles_resp40 \
+  .venv/bin/python exploratory/per_persona/run_id_stage.py --layer 0 --stamp resp40  # response cloud, ~5min
+
+# the geometry-vs-axis study on top of the response cloud (~2min)
+MP_ROLE_DIR=data/embeddings_roles_resp40 \
+  .venv/bin/python exploratory/per_persona/run_geometry.py --layer 0
+```
+
 
 ## Layout
 

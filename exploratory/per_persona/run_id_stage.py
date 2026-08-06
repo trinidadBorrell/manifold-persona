@@ -1,9 +1,18 @@
-"""Run the per-persona stage into one dated folder + REPORT.md.
+"""Run the per-role ID stage into one dated folder + REPORT.md.
+
+This is the EARLIER of the two studies in this directory: 276 per-role intrinsic
+dimensions and 276 clusterings, plus the compute budget. The later
+geometry-vs-axis study has its own driver, `run_geometry.py`.
 
 Same orchestration contract as exploratory/assistant_axis/run_all.py (one fixed
 timestamp shared via MP_RUN_DIR), but the report is written here rather than in a
 separate make_report.py: this study is three scripts, and its report is a short
 read of three JSON files.
+
+The `01_`/`02_`/`03_` prefixes on the OUTPUT filenames are deliberately kept even
+though the scripts were renamed — two published run folders
+(`figures/resp40/`, `figures/29-Jul-2026-1255/`) carry those names, and
+`id_vs_axis.py --rundir` reads `01_per_role_id_*.csv` out of them.
 """
 from __future__ import annotations
 
@@ -99,7 +108,7 @@ def write_report(run_dir: Path, view: str, layer: int):
           "the Assistant.\n")
     else:
         A("\n")
-    A(f"Source: `exploratory/per_persona/01_per_persona_id.py` "
+    A(f"Source: `exploratory/per_persona/id_per_role.py` "
       f"({m['runtime_s']}s for all {m['n_roles']} roles).\n")
 
     A("## 2. Clustering, per role\n")
@@ -123,7 +132,7 @@ def write_report(run_dir: Path, view: str, layer: int):
     A(f"\nGround-truth partition silhouette: instruction {_num(ti, 3)} vs question "
       f"{_num(tq, 3)}. Compare each method's ARI column against the design-null column: where "
       "they match, the split is the grid; where the real ARI departs from it, it is not.\n")
-    A(f"Source: `exploratory/per_persona/02_per_persona_clustering.py` "
+    A(f"Source: `exploratory/per_persona/clustering_per_role.py` "
       f"({cm['runtime_s']}s for all {cm['n_roles']} roles).\n")
 
     A("## 3. Compute budget\n")
@@ -152,7 +161,7 @@ def write_report(run_dir: Path, view: str, layer: int):
     A("|---|---|---|---|")
     for k, v in bud["extraction_budget"].items():
         A(f"| {k} | {v['records']:,} | {v['hours']} | {v['days']} |")
-    A(f"\nSource: `exploratory/per_persona/03_compute_budget.py`.\n")
+    A(f"\nSource: `exploratory/per_persona/compute_budget.py`.\n")
 
     out = run_dir / "REPORT.md"
     out.write_text("\n".join(L))
@@ -175,9 +184,9 @@ def main():
     print(f"Results -> {run_dir}")
 
     nn = ["--n_null", str(args.n_null)]
-    run("01_per_persona_id.py", nn, env)
-    run("02_per_persona_clustering.py", nn, env)
-    run("03_compute_budget.py", [], env)
+    run("id_per_role.py", nn, env)
+    run("clustering_per_role.py", nn, env)
+    run("compute_budget.py", [], env)
     write_report(run_dir, args.view, args.layer)
     print(f"\nDone. See {run_dir}/REPORT.md")
 
