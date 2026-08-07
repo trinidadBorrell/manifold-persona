@@ -40,7 +40,7 @@ THE THREE PREDICTORS ARE NOT REDUNDANT
 so that **axis_proj == mean_norm * cos_axis exactly**. A correlation with
 axis_proj can therefore come from a role's mean vector being *longer* rather
 than pointing more toward the Assistant, and only cos_axis separates the two.
-md/METHODS.md already records that axis_proj and dist_default agree at r = 0.999
+METHODS.md already records that axis_proj and dist_default agree at r = 0.999
 and are one finding stated twice; cos_axis is the predictor that can disagree.
 
 Produces `ladder_L<L>.csv` -> fig02, fig02b, fig03.

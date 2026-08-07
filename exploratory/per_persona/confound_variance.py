@@ -14,7 +14,7 @@ once — splits each role's within-role variance three ways:
 Instruction and question are the two axes of the grid, so a manifold measured on
 gridded points reports the grid unless interaction carries real variance. The
 three sum to exactly 1 because the grid is balanced, which makes the instruction
-and question effects orthogonal (md/METHODS.md S1).
+and question effects orthogonal (METHODS.md S1).
 
 Run on BOTH clouds, so the contrast is reproduced from live numbers rather than
 from the plan's prose: on the 25-point prompt cloud 99.4% of within-role variance

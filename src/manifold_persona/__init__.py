@@ -14,6 +14,9 @@ from .config import (
     HF_TOKEN_PATH,
     HF_REPO_NAME,
     primary_layer,
+    DEPTH_FRACTIONS,
+    depth_block,
+    depth_hidden_state,
 )
 
 __all__ = [
@@ -24,4 +27,7 @@ __all__ = [
     "HF_TOKEN_PATH",
     "HF_REPO_NAME",
     "primary_layer",
+    "DEPTH_FRACTIONS",
+    "depth_block",
+    "depth_hidden_state",
 ]

@@ -1,4 +1,11 @@
-"""Fetch the 40q response cloud, keep only the primary layer, drop the 8.4GB blob."""
+"""Fetch the 40q response cloud, keep only the primary layer, drop the 8.4GB blob.
+
+NOTE (2026-08-07): STALE. The cloud actually in use,
+``data/embeddings_roles_resp_40q``, keeps ALL 37 layers (manifest
+primary_layer=19). This slicer writes a single-layer copy to a different
+dir (``data/embeddings_roles_resp40``) that no current script reads.
+Kept for provenance of how a slimmed cloud could be produced.
+"""
 import json, shutil
 from pathlib import Path
 import numpy as np, pandas as pd

@@ -1,7 +1,9 @@
 """Thin-plate-spline manifold — numpy reimplementation of causalab's spline.
 
-We cannot import ``causalab.methods.spline`` here: causalab targets Python 3.12
-(runtime ``X | Y`` unions) and this extraction venv is 3.9. So this module:
+We do not import ``causalab.methods.spline`` here: causalab is not a
+dependency of this repo (the port was made when the venv ran 3.9 and could
+not even parse causalab's ``X | Y`` unions; the venv is 3.12 now, but the
+port stays so the pipeline needs no causalab checkout). So this module:
   - **faithfully ports** ``causalab/methods/spline/tps.py`` (kernel, augmented
     linear solve, evaluate) — line-for-line for the pure-linear case, and
   - **adapts, with hardening,** the projection of

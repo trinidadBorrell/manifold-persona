@@ -66,6 +66,35 @@ HF_TOKEN_PATH = REPO_ROOT / "token" / "huggingface.txt"
 HF_REPO_NAME = "manifold-persona"  # dataset repo id becomes <username>/manifold-persona
 
 
+# --- Analysis depths --------------------------------------------------------
+# Depths are FRACTIONS of decoder depth, not raw layer indices: "layer 19"
+# means different depths in a 0.5B (24 blocks) vs a 3B (36 blocks) model,
+# while "0.5 depth" transfers (Giovanni, 2026-08-07). Fractions live in
+# BLOCK space (assistant-axis convention: the activation is the output of
+# ``model.model.layers[k]``); use :func:`depth_hidden_state` to index HF
+# ``output_hidden_states``.
+#
+# For Qwen2.5-3B-Instruct (36 blocks) these give hidden states 10 / 19 / 26.
+# "mid" and "late" reproduce the two existing clouds (resp40q-L19,
+# prompt-L26); "late" ~ Persona Vectors' layer 20/28 depth.
+DEPTH_FRACTIONS = {"early": 0.25, "mid": 0.5, "late": 0.70}
+
+
+def depth_block(fraction: float, num_hidden_layers: int) -> int:
+    """Decoder-block index at ``fraction`` of the model's depth."""
+    return max(0, min(round(fraction * num_hidden_layers),
+                      num_hidden_layers - 1))
+
+
+def depth_hidden_state(fraction: float, num_hidden_layers: int) -> int:
+    """``output_hidden_states`` index at ``fraction`` of the model's depth.
+
+    ``hidden_states[i]`` is the output of block ``i - 1`` (index 0 is the
+    embedding), so this is :func:`depth_block` + 1.
+    """
+    return depth_block(fraction, num_hidden_layers) + 1
+
+
 def primary_layer(num_hidden_layers: int) -> int:
     """Paper-equivalent analysis layer.
 
@@ -90,7 +119,7 @@ def half_depth_layer(num_hidden_layers: int) -> int:
     ``hidden_states`` index -- see :func:`half_depth_hidden_state`. Using this
     value to index ``output_hidden_states`` reads one block too shallow.
     """
-    return max(0, min(round(0.5 * num_hidden_layers), num_hidden_layers))
+    return depth_block(DEPTH_FRACTIONS["mid"], num_hidden_layers)
 
 
 def half_depth_hidden_state(num_hidden_layers: int) -> int:

@@ -17,7 +17,7 @@ so that **axis_proj == mean_norm * cos_axis exactly**. A correlation with
 axis_proj can therefore come from a role's mean vector being *longer* rather
 than pointing more toward the Assistant, and only cos_axis separates the two.
 `dist_default` is the fourth: distance from the Assistant in ANY direction, not
-just along the one line. md/METHODS.md records that it and axis_proj agree at
+just along the one line. METHODS.md records that it and axis_proj agree at
 r = 0.999 and are one finding stated twice; cos_axis is the one that can
 disagree.
 
@@ -72,9 +72,9 @@ def main():
     ap.add_argument("--view", default="prompt_avg")
     ap.add_argument("--layer", type=int, default=None)
     ap.add_argument("--label-layer", type=int, default=19,
-                    help="layer number used in OUTPUT filenames. The resp40 "
-                         "manifest stores primary_layer=0 because it holds a "
-                         "single extracted layer; the real depth is 19.")
+                    help="layer number used in OUTPUT filenames. The resp_40q "
+                         "cloud stores all 37 layers (manifest "
+                         "primary_layer=19); this flag only names the depth.")
     ap.add_argument("--outdir", default=None)
     args = ap.parse_args()
 

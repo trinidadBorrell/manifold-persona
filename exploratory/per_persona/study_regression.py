@@ -71,7 +71,7 @@ SCALE_COLS = ["log_var", "mean_norm"]
 TARGET = "axis_proj"
 
 # The three design fractions sum to EXACTLY 1 by construction (the grid is
-# balanced -- md/METHODS.md S1), so including all three makes the design matrix
+# balanced -- METHODS.md S1), so including all three makes the design matrix
 # singular: VIF came back at 1e12 and no coefficient among them is identifiable.
 # Drop one, as one would with a categorical's reference level. quest_frac is the
 # one dropped because instr_frac and interaction_frac are the interpretable pair

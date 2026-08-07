@@ -65,7 +65,9 @@ from metrics import ID_COLS, SEED, panel_metrics
 #
 # The three failures are genuine and unchanged: lPCA 67%, TwoNN 77%,
 # PCA_dim_95pct 120%. They stay in the panel at the user's request but must
-# never be quoted as a dimension. See md/CALIBRATION.md, md/CALIBRATION-RESULTS.md.
+# never be quoted as a dimension. Trinidad's CALIBRATION.md /
+# CALIBRATION-RESULTS.md record this; they never reached the repo (the old
+# .gitignore bug) and were requested from her on 2026-08-07.
 GATED_ESTIMATORS = ("MLE", "PCA_participation_ratio", "PCA_dim_90pct")
 UNCALIBRATED = ("TwoNN", "lPCA", "PCA_dim_95pct")
 
@@ -136,12 +138,12 @@ def plant_blob(n: int, ambient: int, radius: float, seed: int = SEED) -> np.ndar
 
 
 def positive_control(n_per: int, ambient: int, radii: list, noise: float,
-                     dims=PLANTED_DIMS) -> dict:
+                     dims=PLANTED_DIMS, seed0: int = SEED) -> dict:
     """Calibration curve (recovered vs planted, at 3 radii) + both topology controls."""
     rows = []
     for r_i, radius in enumerate(radii):
         for d in dims:
-            X = plant_manifold(d, n_per, ambient, radius, noise, seed=SEED + 7 * r_i)
+            X = plant_manifold(d, n_per, ambient, radius, noise, seed=seed0 + 7 * r_i)
             with small_matrix_ops():
                 m, _ = panel_metrics(X)
             rows.append({"planted_d": d, "radius": radius, "radius_rank": r_i,
@@ -151,9 +153,10 @@ def positive_control(n_per: int, ambient: int, radii: list, noise: float,
                               if m.get(k) is not None))
     mid = radii[len(radii) // 2]
     with small_matrix_ops():
-        m_circ, dg_circ = panel_metrics(plant_circle(n_per, ambient, mid, noise),
+        m_circ, dg_circ = panel_metrics(plant_circle(n_per, ambient, mid, noise,
+                                                     seed=seed0),
                                         keep_diagrams=True)
-        m_blob, dg_blob = panel_metrics(plant_blob(n_per, ambient, mid),
+        m_blob, dg_blob = panel_metrics(plant_blob(n_per, ambient, mid, seed=seed0),
                                         keep_diagrams=True)
     return {"calibration": rows,
             "circle": {k: m_circ.get(k) for k in
@@ -236,11 +239,20 @@ def main():
     ap.add_argument("--view", default="prompt_avg")
     ap.add_argument("--layer", type=int, default=None)
     ap.add_argument("--label-layer", type=int, default=19,
-                    help="layer number used in OUTPUT filenames. The resp40 "
-                         "manifest stores primary_layer=0 because it holds a "
-                         "single extracted layer; the real depth is 19.")
+                    help="layer number used in OUTPUT filenames. The resp_40q "
+                         "cloud stores all 37 layers (manifest "
+                         "primary_layer=19); this flag only names the depth.")
     ap.add_argument("--outdir", default=None)
     ap.add_argument("--n-radii", type=int, default=3)
+    ap.add_argument("--seed", type=int, default=SEED,
+                    help="base seed for the planted clouds; the default "
+                         "reproduces the published calibration exactly")
+    ap.add_argument("--noise-scale", type=float, default=1.0,
+                    help="multiply the data-derived noise floor; the "
+                         "default reproduces the published calibration")
+    ap.add_argument("--n-per", type=int, default=None,
+                    help="points per planted cloud; default = points per "
+                         "role in the real data")
     args = ap.parse_args()
 
     run_dir = resolve_run_dir(args.outdir)
@@ -259,15 +271,19 @@ def main():
         radii_all, noise_all = real_cloud_scale(clouds)
     radii = [float(np.percentile(radii_all, p))
              for p in np.linspace(10, 90, args.n_radii)]
-    noise = float(np.median(noise_all))
+    noise = float(np.median(noise_all)) * args.noise_scale
+    n_syn = args.n_per if args.n_per else n_per
     print(f"    calibrated to real data: radii {['%.1f' % r for r in radii]}, "
-          f"per-dim noise {noise:.4f}")
+          f"per-dim noise {noise:.4f} (scale {args.noise_scale}), "
+          f"n_per {n_syn}")
 
-    pc = positive_control(n_per, ambient, radii, noise)
+    pc = positive_control(n_syn, ambient, radii, noise, seed0=args.seed)
     verdict = control_verdict(pc)
     pc["verdict"] = verdict
     pc["exploratory"] = True
-    pc["calibrated_to"] = {"radii": radii, "per_dim_noise": noise, "n_per": n_per}
+    pc["calibrated_to"] = {"radii": radii, "per_dim_noise": noise,
+                           "n_per": n_syn, "noise_scale": args.noise_scale,
+                           "seed": args.seed}
     json.dump(pc, open(run_dir / "data" / f"calibration_L{L}.json", "w"),
               indent=2, default=float)
 

@@ -22,7 +22,7 @@ The grid shape is read from the data, never assumed — it differs sharply betwe
 the two clouds this study has been run on:
 
   data/embeddings_roles/         5 x  5 =  25 points/role, additive rank  8
-  data/embeddings_roles_resp40/  5 x 40 = 200 points/role, additive rank 43
+  data/embeddings_roles_resp_40q/  5 x 40 = 200 points/role, additive rank 43
 
 Two nulls are provided, and the second is the load-bearing one:
 
@@ -62,8 +62,9 @@ def small_matrix_ops():
     """Pin BLAS to one thread AND silence this machine's bogus BLAS FP flags.
 
     Both halves exist for the same reason: every loop in this study hammers
-    a small matrix thousands of times, and numpy 2.0.2 on Apple Accelerate
-    handles that badly in two separate ways.
+    a small matrix thousands of times, and numpy on Apple Accelerate
+    (measured under 2.0.2; both problems are Accelerate-side, not
+    version-specific) handles that badly in two separate ways.
 
     1. Threads (see :func:`single_threaded`) — 4.5x slower with the default 10.
     2. Spurious divide-by-zero / overflow / invalid RuntimeWarnings raised from
