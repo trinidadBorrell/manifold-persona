@@ -147,7 +147,7 @@ def main():
     (run / "data").mkdir(parents=True, exist_ok=True)
     (run / "figures").mkdir(parents=True, exist_ok=True)
 
-    src = Path(os.environ.get("MP_ROLE_DIR", "data/embeddings_roles_resp40"))
+    src = Path(os.environ.get("MP_ROLE_DIR", "data/embeddings_roles_resp_40q"))
     sysdf = system_prompt_stats(src, run / "data" / f"sys_prompt_tokens_L{L}.csv")
     panel = pd.read_csv(parent / "data" / f"per_role_panel_L{L}.csv")
     metrics = geometry_columns(panel)

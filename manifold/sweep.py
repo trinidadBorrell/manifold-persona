@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import time
 from pathlib import Path
 
@@ -282,7 +283,8 @@ def main(argv=None) -> None:
         "git": "not-a-git-repo (reproducibility via manifest+seeds)",
         # Read from the cloud's own manifest -- these used to be hardcoded to the
         # 3B/layer-26 run and silently misreported any other cloud.
-        "inputs": f"data/embeddings_roles/ (prompt_avg, layer {cloud.layer}; no re-extraction)",
+        "inputs": f"{os.environ.get('MP_ROLE_DIR', 'data/embeddings_roles')}/ "
+                  f"(prompt_avg, layer {cloud.layer}; no re-extraction)",
         "model": cloud.manifest.get("model_name"), "view": "prompt_avg",
         "layer": cloud.layer,
         "source_manifest": cloud.manifest,

@@ -25,10 +25,23 @@ def _save(fig, path: Path):
     save_fig(fig, path)          # dpi=300
 
 
+def _per_role(sub) -> int:
+    return sub.raw.shape[0] // len(sub.role_names)
+
+
+def _grid_note(sub) -> str:
+    """'5 role phrasings × 5 questions; ' from the cloud's own manifest; '' if unknown."""
+    nq = sub.manifest.get("n_questions")
+    per = _per_role(sub)
+    if not nq or per % nq:
+        return ""
+    return f"{per // nq} role phrasings × {nq} questions; "
+
+
 def _depth_note(sub) -> str:
     """' ≈ 0.72 depth' from the cloud's own layer/n_layers; '' if unknown."""
     nl = sub.manifest.get("n_layers")
-    if not nl or sub.layer < 0:
+    if not nl or nl < 2 or sub.layer < 0:
         return ""
     return f" ≈ {sub.layer / (nl - 1):.2f} depth"
 
@@ -266,10 +279,9 @@ def fig05_spline_manifold(sub, mani, out: Path, n_roles: int, seed: int,
             f"n = {n_roles} role centroids (k-means medoid, seed {seed}).   "
             f"Red: spline passing exactly through every centroid, in PC1 order — its "
             f"excursions between knots are interpolation overshoot, not data.\n"
-            f"Large markers: role means (labelled).   Faint dots: the {n_roles}×25 raw "
-            f"PROMPTS (5 role phrasings × 5 questions; prompt tokens, layer {sub.layer}"
-            f"{_depth_note(sub)} "
-            f"— no answers were generated).   ★ = default (Assistant).\n"
+            f"Large markers: role means (labelled).   Faint dots: the {n_roles}×"
+            f"{_per_role(sub)} raw points ({_grid_note(sub)}layer {sub.layer}"
+            f"{_depth_note(sub)}).   ★ = default (Assistant).\n"
             f"Axes are the fitted surface's own "
             f"intrinsic coordinates = PCA of these {n_roles} role means.\n"
             f"ILLUSTRATIVE ONLY — the decider is fig01, and curvature is measured in fig03.",

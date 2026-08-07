@@ -16,9 +16,17 @@ token/
 
 # Ignore experiment outputs, but track the scripts that produce them
 # (a lost script made the primary E8 result unreproducible — 2026-08-03 review).
+# DO NOT add a blanket `output/*` rule below: git never descends into an
+# ignored directory, so it would kill `!output/**/` and with it every
+# re-include in this file (scripts, manifests, REPORTs) — silently.
+# That exact bug hid all geometry-panel provenance until 2026-08-07.
 output/**
 !output/**/
 !output/**/*.py
+!output/**/manifest.json
+!output/**/results.json
+!output/**/REPORT.md
+!output/**/RESULTS.md
 plans/
 data/
 exploratory/assistant_axis_traits/
@@ -43,7 +51,6 @@ refactors/baselines/*/extra-reference/
 
 # Editable-install build artifact
 *.egg-info/
-output/*
 .labbook/*
 wiki/*
 lit-review.md

@@ -35,16 +35,12 @@ import numpy as np
 import pandas as pd
 
 from common import (load_role_clouds, grid_shape, design_null_draws,
-                    small_matrix_ops)
+                    small_matrix_ops, band)
 from metrics import PANEL_COLS, SEED, panel_metrics
 
 
 def _band(s) -> dict:
-    a = pd.to_numeric(s, errors="coerce").dropna().to_numpy()
-    if a.size == 0:
-        return {"median": None, "q25": None, "q75": None, "n": 0}
-    return {"median": float(np.median(a)), "q25": float(np.percentile(a, 25)),
-            "q75": float(np.percentile(a, 75)), "n": int(a.size)}
+    return band(pd.to_numeric(s, errors="coerce").dropna().to_numpy())
 
 
 def main():

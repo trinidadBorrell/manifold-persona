@@ -79,8 +79,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--outdir", required=True)
     ap.add_argument("--label-layer", type=int, default=19)
-    ap.add_argument("--prior", default="exploratory/per_persona/figures/resp40/"
-                                       "04_id_vs_axis_prompt_avg_L0.csv",
+    ap.add_argument("--prior", default="exploratory/per_persona/figures/resp40-L19/"
+                                       "04_id_vs_axis_prompt_avg_L19.csv",
                     help="the published id_vs_axis result, for the regression check")
     ap.add_argument("--n-boot", type=int, default=N_BOOT)
     ap.add_argument("--n-shuffle", type=int, default=N_SHUFFLE)

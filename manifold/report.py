@@ -7,7 +7,7 @@ def build_report(report: dict, rows: list, stamp: str, stopped: bool) -> str:
     L.append(f"# REPORT — role manifold reconstruction (H1)\n")
     L.append(f"**Run:** `{stamp}`  ·  **Plan:** "
              f"`plans/2026-07-21-role-manifold-reconstruction.md`  ·  "
-             f"**Data:** `data/embeddings_roles/` prompt_avg, "
+             f"**Data:** `{report.get('src_dir', 'data/embeddings_roles')}/` prompt_avg, "
              f"layer {report.get('layer', '?')}, "
              f"{report.get('model', '?')} (no re-extraction).")
     L.append("**Reproduce:** `.venv/bin/python -m manifold.run` (seed 0; not a git "
@@ -39,8 +39,9 @@ def build_report(report: dict, rows: list, stamp: str, stopped: bool) -> str:
     d = report["decider"]
     L.append("## Deciding result — H1 verdict\n")
     L.append(f"**Construction C_role** (0b): one thin-plate-spline surface through "
-             f"the 276 role-mean centroids (k=3 intrinsic dims, D=50 ambient), "
-             f"scored by how tightly all 6,900 raw points hug it.\n")
+             f"the {report.get('n_roles', '?')} role-mean centroids (k=3 intrinsic dims, "
+             f"D=50 ambient), scored by how tightly all {report.get('n_points', '?')} "
+             f"raw points hug it.\n")
     L.append(f"- **manifold-R² = {d['r2']:.3f}** (fraction of the cloud's variance the "
              f"surface explains)")
     L.append(f"- **coordinate (structure-preserving) null — this is the null that "
@@ -86,7 +87,8 @@ def build_report(report: dict, rows: list, stamp: str, stopped: bool) -> str:
              "real unexplained variance (NRE) is than the null's. ≥0.30 = the role "
              "structure itself buys a real, steerable manifold; <0.30 with p<0.05 = a "
              "statistical effect too small to build H2 on. **p alone is not enough** — a "
-             "flexible surface with 6,900 points clears p<0.05 almost automatically.\n")
+             f"flexible surface with {report.get('n_points', '?')} points clears p<0.05 "
+             f"almost automatically.\n")
     L.append("</details>\n")
 
     # ---- robustness (exploratory)
@@ -148,7 +150,8 @@ def build_report(report: dict, rows: list, stamp: str, stopped: bool) -> str:
              "decider._\n" % report["decider"]["p"])
     L.append(f"**Curved vs flat (context):** C_role spline R² {d['r2']:.3f} vs "
              f"flat PCA-plane (k=3) R² {report.get('plane_r2', float('nan')):.3f}. The "
-             f"spline explains more, but it has 276 anchors vs the plane's 3 dims, so the "
+             f"spline explains more, but it has {report.get('n_roles', '?')} anchors vs "
+             f"the plane's 3 dims, so the "
              f"gap mixes *curvature* with *anchor flexibility* — read it descriptively, "
              f"not as evidence of nonlinearity (which we did not claim).\n")
 

@@ -10,6 +10,8 @@ preregistered decision rule and the caveats — none of it states an outcome.
 """
 from __future__ import annotations
 
+import os
+
 import numpy as np
 import pandas as pd
 
@@ -306,8 +308,9 @@ def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
       "`manifest.json`). No model forward passes, no generation, no re-extraction — "
       "everything is downstream of the saved activation cloud.\n")
     A(f"**Step 0 — load the cloud, once.** `manifold/pipeline.py::load_cloud` reads "
-      f"`data/embeddings_roles/` (view `prompt_avg`, layer {src_layer}, {src_model}) via the "
-      f"study loader `exploratory/assistant_axis/common.py::load_points`, giving {src_pts:,} raw "
+      f"`{os.environ.get('MP_ROLE_DIR', 'data/embeddings_roles')}/` "
+      f"(view `prompt_avg`, layer {src_layer}, {src_model}) via the "
+      f"loader `src/manifold_persona/common.py::load_points`, giving {src_pts:,} raw "
       f"points = {src_roles} roles × {src_per_role} prompts in {src_hidden} dims, then fits "
       f"**one** PCA to **D=50**. "
       f"That PCA is fit on all {src_pts:,} points and reused by every cell of the sweep. This is "

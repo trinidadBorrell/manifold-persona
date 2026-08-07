@@ -33,8 +33,15 @@ def bh_fdr(p):
 
 
 def partial_corr(x, y, z):
-    """Pearson r between x and y with z linearly removed from both."""
-    Z = np.column_stack([np.ones_like(z), z])
+    """Pearson r between x and y with z linearly removed from both.
+
+    ``z`` is ONE control column [n]; pass a stack to partial_corr_multi,
+    which computes the correct df for k controls."""
+    z = np.asarray(z, dtype=float)
+    if z.ndim != 1:
+        raise ValueError("partial_corr takes one control column; "
+                         "use partial_corr_multi for a [n, k] stack")
+    Z = np.column_stack([np.ones(len(x)), z])
     rx = x - Z @ np.linalg.lstsq(Z, x, rcond=None)[0]
     ry = y - Z @ np.linalg.lstsq(Z, y, rcond=None)[0]
     r = float(np.corrcoef(rx, ry)[0, 1])

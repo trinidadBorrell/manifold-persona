@@ -10,6 +10,7 @@ Usage:
 """
 from __future__ import annotations
 
+import os
 import time
 from pathlib import Path
 
@@ -69,6 +70,9 @@ def main(argv=None) -> None:
         f"default_kept={'default' in cloud.role_names}")
     report["layer"] = cloud.layer
     report["model"] = cloud.manifest.get("model_name")
+    report["n_roles"] = len(cloud.role_names)
+    report["n_points"] = int(cloud.raw.shape[0])
+    report["src_dir"] = os.environ.get("MP_ROLE_DIR", "data/embeddings_roles")
     # data-scale calibration for the positive control (audit finding 1):
     ridx = {r: i for i, r in enumerate(cloud.role_names)}
     pt_means = cloud.role_means[[ridx[r] for r in cloud.roles]]
@@ -292,8 +296,8 @@ def _write_manifest(run_dir, stamp, t0, extra, status, cloud):
         "effect_floor_rel_reduction": FLOOR, "alpha": ALPHA,
         "view": "prompt_avg", "layer": cloud.layer,
         "model": cloud.manifest.get("model_name"),
-        "inputs": f"data/embeddings_roles/ (prompt_avg, layer {cloud.layer}; "
-                  f"no re-extraction)",
+        "inputs": f"{os.environ.get('MP_ROLE_DIR', 'data/embeddings_roles')}/ "
+                  f"(prompt_avg, layer {cloud.layer}; no re-extraction)",
         "n_roles": len(cloud.role_names), "n_points": int(cloud.raw.shape[0]),
         "exclusions": "none (default role kept)",
         **provenance(t0), **extra,

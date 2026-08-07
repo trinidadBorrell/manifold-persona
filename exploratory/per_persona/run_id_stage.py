@@ -11,7 +11,7 @@ read of three JSON files.
 
 The `01_`/`02_`/`03_` prefixes on the OUTPUT filenames are deliberately kept even
 though the scripts were renamed — two published run folders
-(`figures/resp40/`, `figures/29-Jul-2026-1255/`) carry those names, and
+(`figures/resp40-L19/`, `figures/03-Aug-2026-1340/`) carry those names, and
 `id_vs_axis.py --rundir` reads `01_per_role_id_*.csv` out of them.
 """
 from __future__ import annotations
