@@ -107,35 +107,47 @@ def main(argv=None) -> None:
     say(f"    tau percentiles (cos-sim): {taus}")
 
     # ---------------------------------------------------------------- decider
-    # Two nulls. The role-shuffle null builds each fake role mean from ~25
-    # randomly permuted points, so those means shrink toward the global mean and
-    # it only measures between-role spread. The coordinate null keeps the real
-    # marginals/spread/noise and destroys only the joint structure, so IT decides;
-    # the role-shuffle null is kept and reported for continuity.
+    # Null ladder, weakest to strongest. Role-shuffle only measures between-role
+    # spread (fake means shrink toward the global mean). The coordinate null
+    # keeps marginals/spread/noise and destroys ALL joint structure — linear and
+    # curved alike. The covariance-matched Gaussian null keeps the means' full
+    # linear structure and destroys only curvature, which is the claim C_role
+    # makes — so IT decides (industry standard: Theiler-style constrained
+    # surrogate; Elsayed & Cunningham 2017). The other two are kept and reported.
     say("\n[2] DECIDER  C_role (prompt_avg, k=3) + role-shuffle null (context) "
-        "+ coordinate null (DECIDES) ...")
+        "+ coordinate null (context) + covgauss null (DECIDES) ...")
     dec = P.construction_C_role(cloud)
     null = P.permutation_null(cloud, n_perms=N_PERM_DECIDER, seed=0)
     st_perm = P.separation_stats(dec.r2, null)
     coord_null = P.coordinate_null(cloud, n_draws=N_COORD_DECIDER, seed=0)
-    st = P.separation_stats(dec.r2, coord_null)
+    st_coord = P.separation_stats(dec.r2, coord_null)
+    covg_null = P.covgauss_null(cloud, n_draws=N_COORD_DECIDER, seed=0)
+    st = P.separation_stats(dec.r2, covg_null)
     dec_verdict = verdict(st)
     say(f"    C_role R2={dec.r2:.3f}")
     say(f"    role-shuffle null (context): med={st_perm['null_median']:.3f} "
         f"p={st_perm['p']:.3g} z={st_perm['z']:.1f} "
         f"rel_red={st_perm['rel_reduction']:.2f} gap={st_perm['r2_gap']:.3f} "
         f"-> would be {verdict(st_perm)}")
-    say(f"    coordinate null (DECIDES):   med={st['null_median']:.3f} "
+    say(f"    coordinate null (context):   med={st_coord['null_median']:.3f} "
+        f"p={st_coord['p']:.3g} z={st_coord['z']:.1f} "
+        f"rel_red={st_coord['rel_reduction']:.2f} gap={st_coord['r2_gap']:.3f} "
+        f"-> would be {verdict(st_coord)}")
+    say(f"    covgauss null (DECIDES):     med={st['null_median']:.3f} "
         f"p={st['p']:.3g} z={st['z']:.1f} rel_red={st['rel_reduction']:.2f} "
         f"gap={st['r2_gap']:.3f} -> {dec_verdict}")
     report["decider"] = {"r2": dec.r2, **st, "verdict": dec_verdict,
-                         "null_used": "coordinate"}
+                         "null_used": "covgauss"}
+    report["decider_coord"] = {"r2": dec.r2, **st_coord,
+                               "verdict": verdict(st_coord)}
     report["decider_perm"] = {"r2": dec.r2, **st_perm,
                               "verdict": verdict(st_perm)}
     report["null_decider"] = null.tolist()
     report["null_decider_coord"] = coord_null.tolist()
+    report["null_decider_covgauss"] = covg_null.tolist()
     # the plain columns keep their role-shuffle meaning (every other row uses a
-    # permutation null); the coord_* columns are the deciding ones.
+    # permutation null); the covg_* columns are the deciding ones and the
+    # coord_* columns are context.
     rows.append({"construction": "C_role", "n_anchors": dec.n_anchors,
                  "n_manifolds": 1, "r2": dec.r2, "nre": dec.nre,
                  "null_median": st_perm["null_median"],
@@ -143,12 +155,17 @@ def main(argv=None) -> None:
                  "p": st_perm["p"], "z": st_perm["z"],
                  "r2_gap": st_perm["r2_gap"],
                  "rel_reduction": st_perm["rel_reduction"],
-                 "coord_null_median": st["null_median"],
-                 "coord_null_5pct": st["null_5pct"],
-                 "coord_p": st["p"], "coord_z": st["z"],
-                 "coord_r2_gap": st["r2_gap"],
-                 "coord_rel_reduction": st["rel_reduction"],
-                 "null_used": "coordinate", "verdict": dec_verdict,
+                 "coord_null_median": st_coord["null_median"],
+                 "coord_null_5pct": st_coord["null_5pct"],
+                 "coord_p": st_coord["p"], "coord_z": st_coord["z"],
+                 "coord_r2_gap": st_coord["r2_gap"],
+                 "coord_rel_reduction": st_coord["rel_reduction"],
+                 "covg_null_median": st["null_median"],
+                 "covg_null_5pct": st["null_5pct"],
+                 "covg_p": st["p"], "covg_z": st["z"],
+                 "covg_r2_gap": st["r2_gap"],
+                 "covg_rel_reduction": st["rel_reduction"],
+                 "null_used": "covgauss", "verdict": dec_verdict,
                  "exploratory": False})
 
     # ---------------------------------------------------------------- robustness
@@ -266,7 +283,7 @@ def main(argv=None) -> None:
                          "reproduce": ".venv/bin/python -m manifold.run"},
     }, status="executed", cloud=cloud)
     say(f"\nDONE in {time.time()-t0:.0f}s. "
-        f"Verdict (C_role, coordinate null): {dec_verdict}")
+        f"Verdict (C_role, covgauss null): {dec_verdict}")
 
     # Post-hoc structural extras (fig09-13 + POSTHOC-manifold-structure.md).
     # Off by default. Runs only AFTER the report + manifest are on disk, and is
@@ -290,9 +307,10 @@ def _write_manifest(run_dir, stamp, t0, extra, status, cloud):
         "seed": 0, "D_ambient": P.D_AMBIENT, "k_intrinsic": P.K_INTRINSIC,
         "n_perm_decider": N_PERM_DECIDER, "n_perm_robust": N_PERM_ROBUST,
         "n_coord_null_decider": N_COORD_DECIDER,
-        "decider_null": "coordinate (structure-preserving: each role-mean "
-                        "coordinate permuted across roles); the role-shuffle "
-                        "permutation null is still computed and reported",
+        "decider_null": "covgauss (covariance-matched Gaussian role means, "
+                        "real residuals: linear structure kept, curvature "
+                        "destroyed); coordinate and role-shuffle nulls are "
+                        "still computed and reported",
         "effect_floor_rel_reduction": FLOOR, "alpha": ALPHA,
         "view": "prompt_avg", "layer": cloud.layer,
         "model": cloud.manifest.get("model_name"),

@@ -21,7 +21,10 @@ def build_report(report: dict, rows: list, stamp: str, stopped: bool) -> str:
     L.append(f"| **Positive** (synthetic arc must be found) | R²={pc.get('r2',0):.3f} "
              f"vs null {pc.get('null_median',0):.3f}, rel.red {pc.get('rel_reduction',0):.2f}, "
              f"p={pc.get('p',1):.3g} | {'✅ PASS' if pc.get('pass') else '❌ FAIL'} |")
-    L.append("| **Negative** (coordinate null, *decides*) | real role means with every "
+    L.append("| **Negative** (covgauss null, *decides*) | Gaussian role means matching "
+             "the real means' mean+covariance, real residuals kept: all linear "
+             "structure survives, only curvature dies | ✅ used |")
+    L.append("| **Negative** (coordinate null, context) | real role means with every "
              "coordinate permuted across roles: same marginals/spread/noise, no joint "
              "structure | ✅ used |")
     L.append("| **Negative** (role-shuffle null, context) | the older null; still "
@@ -44,12 +47,18 @@ def build_report(report: dict, rows: list, stamp: str, stopped: bool) -> str:
              f"raw points hug it.\n")
     L.append(f"- **manifold-R² = {d['r2']:.3f}** (fraction of the cloud's variance the "
              f"surface explains)")
-    L.append(f"- **coordinate (structure-preserving) null — this is the null that "
+    L.append(f"- **covariance-matched Gaussian null — this is the null that "
              f"decides:** median {d['null_median']:.3f}, 5th pct {d['null_5pct']:.3f}. "
-             f"Each draw permutes every coordinate of the real role means across roles "
-             f"and keeps the real within-role residuals, so the marginals, the role "
-             f"spread and the noise all survive and only the joint (manifold) structure "
-             f"dies.")
+             f"Each draw samples Gaussian role means with the real means' mean and "
+             f"covariance and keeps the real within-role residuals, so ALL linear "
+             f"structure survives and only curvature dies (Theiler-style constrained "
+             f"surrogate; Elsayed & Cunningham 2017).")
+    dc = report.get("decider_coord")
+    if dc:
+        L.append(f"- **coordinate null (context only):** median "
+                 f"{dc['null_median']:.3f}, 5th pct {dc['null_5pct']:.3f}. Destroys "
+                 f"all joint structure, linear and curved alike — tests 'any "
+                 f"structure', not curvature.")
     dp = report.get("decider_perm")
     if dp:
         L.append(f"- **role-shuffle null (context only):** median "
@@ -57,7 +66,7 @@ def build_report(report: dict, rows: list, stamp: str, stopped: bool) -> str:
                  f"(100 permutations). Its fake role means average ~25 random points, so "
                  f"they shrink ~4× toward the centre; it measures between-role spread, "
                  f"not manifold structure.")
-    L.append(f"- **separation vs the coordinate null:** p = {d['p']:.3g}  ·  "
+    L.append(f"- **separation vs the covgauss null:** p = {d['p']:.3g}  ·  "
              f"z = {d['z']:.1f}  ·  R² gap = {d['r2_gap']:.3f}  ·  **relative reduction "
              f"in NRE = {d['rel_reduction']:.2f}** (floor 0.30)")
     if dp:
@@ -77,12 +86,15 @@ def build_report(report: dict, rows: list, stamp: str, stopped: bool) -> str:
     L.append("- **role-shuffle null**: a thin-plate spline is flexible and fits *any* "
              "cloud somewhat, so we shuffle which points carry which role, refit, and "
              "rescore 100×. That is the R² attributable to a flexible surface + chance.")
-    L.append("- **coordinate null (the deciding one)**: the role-shuffle null averages "
+    L.append("- **coordinate null (context)**: the role-shuffle null averages "
              "~25 random points per fake role, so its anchors shrink toward the centre "
              "and it only asks *are the roles apart?*. The coordinate null keeps the real "
-             "anchor spread and only breaks the joint structure, so it asks the H1 "
-             "question: *do the role means lie on a surface, or are they merely spread "
-             "out?*")
+             "anchor spread and only breaks the joint structure, so it asks: *is there "
+             "any joint structure at all?*")
+    L.append("- **covgauss null (the deciding one)**: Gaussian anchors with the real "
+             "means' covariance keep every linear/low-rank pattern and can carry no "
+             "curvature, so it asks the H1 question exactly: *are the role means "
+             "CURVED beyond their linear structure?*")
     L.append("- **relative reduction (the deciding effect size)**: how much smaller the "
              "real unexplained variance (NRE) is than the null's. ≥0.30 = the role "
              "structure itself buys a real, steerable manifold; <0.30 with p<0.05 = a "
@@ -213,17 +225,17 @@ def _verdict_word(v):
 def _verdict_prose(d):
     if d["verdict"] == "SUPPORTED":
         return (f"Real points sit **{d['rel_reduction']*100:.0f}% tighter** to the "
-                f"role-mean surface than coordinate-permuted role means do "
+                f"role-mean surface than covariance-matched Gaussian role means do "
                 f"(p={d['p']:.3g}), clearing the 30% effect floor: the fit **beats the "
-                f"coordinate (structure-preserving) null**. Role representations lie on "
-                f"a low-dimensional manifold.")
+                f"covgauss (curvature-only) null**. Role representations lie on "
+                f"a curved low-dimensional manifold beyond their linear structure.")
     if d["verdict"].startswith("weak"):
-        return (f"The fit **does not beat the coordinate (structure-preserving) null**. "
+        return (f"The fit **does not beat the covgauss (curvature-only) null**. "
                 f"The effect is statistically real (p={d['p']:.3g}) but only "
-                f"{d['rel_reduction']*100:.0f}% tighter than role means whose joint "
-                f"structure was destroyed — below the 30% floor fixed before the run. "
-                f"Reported as structure present but too weak to build H2 on: **not** "
-                f"support.")
-    return (f"The fit **does not beat the coordinate (structure-preserving) null** "
+                f"{d['rel_reduction']*100:.0f}% tighter than Gaussian role means with "
+                f"the same linear structure — below the 30% floor fixed before the "
+                f"run. Reported as structure present but too weak to build H2 on: "
+                f"**not** support.")
+    return (f"The fit **does not beat the covgauss (curvature-only) null** "
             f"(p={d['p']:.3g}). Nothing beyond what a flexible surface already extracts "
-            f"from role means that keep the real spread but no joint structure.")
+            f"from Gaussian role means with the real means' linear structure.")

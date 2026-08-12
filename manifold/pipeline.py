@@ -254,6 +254,37 @@ def coordinate_null(cloud: Cloud, n_draws: int = 100, k: int = K_INTRINSIC,
     return r2s
 
 
+def covgauss_null(cloud: Cloud, n_draws: int = 100, k: int = K_INTRINSIC,
+                  seed: int = 0) -> np.ndarray:
+    """Covariance-matched Gaussian null R^2 distribution.
+
+    Each draw replaces the role means with samples from N(mu, Sigma) — the
+    Gaussian matching the REAL role means' mean and covariance — reattaches each
+    role's real within-role residuals, refits C_role and rescores. That keeps
+    ALL linear structure of the role means (their spread and every low-dim
+    subspace concentration) and destroys only what a Gaussian cannot carry:
+    curvature. `coordinate_null` destroys the linear structure too, so it tests
+    "any joint structure"; this null is the rung between it and the real data,
+    and beating it is what the "curved manifold" claim specifically requires
+    (Theiler-style constrained surrogate; cf. Elsayed & Cunningham 2017).
+    """
+    rng = np.random.default_rng(seed)
+    role_idx = {r: i for i, r in enumerate(cloud.role_names)}
+    point_role = np.array([role_idx[r] for r in cloud.roles])
+    resid = cloud.raw - cloud.role_means[point_role]     # real within-role noise
+    R = cloud.role_means.shape[0]
+    mu = cloud.role_means.mean(0)
+    cov = np.cov(cloud.role_means, rowvar=False)
+    r2s = np.zeros(n_draws)
+    for p in range(n_draws):
+        means = rng.multivariate_normal(mu, cov, size=R)
+        raw = resid + means[point_role]                  # points follow their anchor
+        mani = fit_manifold(means, k=k)
+        res = reconstruction(raw, mani, raw.mean(0))
+        r2s[p] = res.r2
+    return r2s
+
+
 def permutation_null_tau(cloud: Cloud, tau: float, n_perms: int = 40,
                          k: int = K_INTRINSIC, seed: int = 0) -> np.ndarray:
     """Null R^2 for a C_tau construction: shuffle role labels over raw points,
