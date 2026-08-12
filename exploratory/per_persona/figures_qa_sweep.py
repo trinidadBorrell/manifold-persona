@@ -49,8 +49,17 @@ PRIMARY = "r_ctrl_logvar"      # scale-controlled, the column the study reads
 
 def load_tiers(sweep: Path, label_layer: int = 19):
     """tier -> (ladder df, panel df). Skips tiers that did not produce output."""
+    # Only bare `q<number>` dirs are tiers. Variant runs kept alongside for
+    # reference (e.g. `q40_maxdim2`, the maxdim=2 twin of the 40 tier) must not
+    # be swept in as if they were another budget -- they differ in metric set,
+    # not in questions.
+    cands = [d for d in sweep.glob("q*") if d.is_dir() and d.name[1:].isdigit()]
+    skipped = [d.name for d in sweep.glob("q*")
+               if d.is_dir() and not d.name[1:].isdigit()]
+    if skipped:
+        print(f"  not tiers, ignored: {sorted(skipped)}")
     out = {}
-    for d in sorted(sweep.glob("q*"), key=lambda p: int(p.name[1:])):
+    for d in sorted(cands, key=lambda p: int(p.name[1:])):
         k = int(d.name[1:])
         lad = d / "data" / f"ladder_L{label_layer}.csv"
         pan = d / "data" / f"per_role_panel_L{label_layer}.csv"
