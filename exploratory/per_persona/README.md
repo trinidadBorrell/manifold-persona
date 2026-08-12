@@ -14,15 +14,30 @@ The assistant-axis study collapses each role to one mean point and studies the
 6,900-point cloud and asks, for each role separately, what the geometry **within**
 that role looks like — 276 intrinsic dimensions and 276 clusterings.
 
+There are two stages, each with its own orchestrator.
+
+**The ID stage** — 276 per-role IDs and clusterings, against both nulls:
+
 ```bash
 # prompt cloud, 5x5 (default) — needs MP_ALLOW_UNCLEAN=1, see the notice above
-.venv/bin/python exploratory/per_persona/run_all.py
+.venv/bin/python exploratory/per_persona/run_id_stage.py
 
-# response cloud, 5x40 — MP_ROLE_DIR repoints the whole stack. --layer 19 is the
-# manifest's primary_layer; run_all uses it only to name the report's input files,
-# while each script reads primary_layer from the manifest itself.
-MP_ROLE_DIR=data/embeddings_roles_resp_40q \
-  .venv/bin/python exploratory/per_persona/run_all.py --layer 19 --stamp resp40
+# response cloud, 5x40 — MP_ROLE_DIR repoints the whole stack. Pass the layer
+# that matches the directory: 19 for the full 37-layer copy, 0 for the thinned
+# one fetch_resp40.py writes (see "Two clouds, opposite answers" below). It is used
+# only to name the report's input files; each script reads primary_layer from
+# the manifest itself.
+MP_ROLE_DIR=data/embeddings_roles_resp40 \
+  .venv/bin/python exploratory/per_persona/run_id_stage.py --layer 0 --stamp resp40
+```
+
+**The geometry stage** — the per-role metric panel (curvature, density,
+topology, closeness) and the study of how it tracks the Assistant Axis. Runs on
+the response cloud only:
+
+```bash
+MP_ROLE_DIR=data/embeddings_roles_resp40 \
+  .venv/bin/python exploratory/per_persona/run_geometry.py --layer 0
 ```
 
 Output lands in `figures/<DD-Mon-YYYY-HHMM>/` — the same dated-folder contract as
@@ -75,18 +90,27 @@ instead writes a thinned `data/embeddings_roles_resp40` holding that one layer
 (226 MB, `n_layers: 1`, `primary_layer: 0`, `source_layer: 19`) — for **that**
 directory, and only that one, the layer to pass is `0`.
 
-## ID vs the Assistant Axis (`04`)
+## ID vs the Assistant Axis (`id_vs_axis.py`)
 
 Run separately against an existing run folder:
 
 ```bash
-MP_ROLE_DIR=data/embeddings_roles_resp_40q .venv/bin/python \
-  exploratory/per_persona/04_id_vs_axis.py --layer 19 \
+MP_ROLE_DIR=data/embeddings_roles_resp40 .venv/bin/python \
+  exploratory/per_persona/id_vs_axis.py --layer 0 \
   --rundir exploratory/per_persona/figures/resp40
 ```
 
-(`--layer 19` is this cloud's `primary_layer`; omitting the flag reads the same
-layer from the manifest.)
+(Omitting `--layer` reads `primary_layer` from the manifest, which is the same
+layer either way.)
+
+**Two controls, one of them opt-in.** Cloud scale (`log_var`) is always
+controlled — it is the study's main confound and every reported partial holds it
+fixed. Mean text length is available behind `--control-text-len` and is **off by
+default**, because every number reported here so far was computed without it and
+turning it on silently would move the table under the reader. With the flag on
+the script adds a second partial holding both fixed, *alongside* the first, so
+the two stay comparable. Where it has been measured, the per-persona direction
+survives it (partial r −0.61).
 
 On the response cloud, **4 of 6 estimators agree strongly: more Assistant-like
 roles have LOWER-dimensional within-role manifolds** (partial r −0.49 to −0.80
@@ -105,7 +129,7 @@ correlation is about grid saturation, not geometry.
 ## Scaling further
 
 Only the **question** factor scales: `refs/assistant-axis/extraction_questions.jsonl`
-holds 240 and the response cloud samples 40. `03` plants manifolds of known
+holds 240 and the response cloud samples 40. `compute_budget.py` plants manifolds of known
 dimension and finds the N at which the estimators recover them, converting "more
 data" into a GPU-hour figure per role budget. Note its default rate is a
 prompt-only forward pass — for a response cloud it warns and reports a lower
@@ -113,25 +137,62 @@ bound, since generation is several times slower.
 
 ## Scripts
 
+Shared:
+
 | script | what it does |
 |---|---|
 | `METHODS.md` | how the variance fractions and the ID-vs-axis correlations are computed |
 | `common.py` | raw-cloud loader, ANOVA design split, and the two nulls |
-| `01_per_persona_id.py` | 276 IDs vs both nulls; variance decomposition; ID vs assistant-axis position |
-| `02_per_persona_clustering.py` | 276 clusterings, ARI/NMI vs instruction and vs question |
-| `03_compute_budget.py` | measured analysis cost, ID-recovery-vs-N curve, extraction budget |
+| `stats_utils.py` | BH-FDR, partial correlation (one control and k controls), p formatting |
 | `fetch_resp40.py` | pull the HF response cloud, keep the primary layer only |
-| `04_id_vs_axis.py` | does per-role ID track closeness to the Assistant? all 6 estimators, scale-controlled |
-| `run_all.py` | all three into one dated folder + `REPORT.md` |
+
+ID stage — `run_id_stage.py` runs all three into one dated folder + `REPORT.md`:
+
+| script | what it does |
+|---|---|
+| `id_per_role.py` | 276 IDs vs both nulls; variance decomposition; ID vs assistant-axis position |
+| `clustering_per_role.py` | 276 clusterings, ARI/NMI vs instruction and vs question |
+| `compute_budget.py` | measured analysis cost, ID-recovery-vs-N curve, extraction budget |
+
+Geometry stage — `run_geometry.py` runs these ten in order, into one dated folder:
+
+| script | what it does |
+|---|---|
+| `study_panel.py` | the per-role metric table every later script reads |
+| `study_design_null.py` | the same panel on persona-free draws, for comparison |
+| `study_ladder.py` | per-metric real-vs-null ladder, with DESIGN-EXPLAINED flags |
+| `study_regression.py` | metric vs axis position, scale-controlled |
+| `study_families.py` | the panel grouped into metric families |
+| `confound_variance.py` | how much of each metric is cloud scale |
+| `figures.py` | the cross-family figures, into `figures/global/` |
+| `figures_families.py` | the same evidence per family; the only per-point distributions |
+| `study_barcodes.py` | one persistence barcode per role, beside `default`'s |
+| `confound_sysprompt.py` | **post hoc** — reads the run it just wrote, adds figPH1/figPH2 |
+
+Metric primitives the panel calls, not run directly:
+
+| module | what it computes |
+|---|---|
+| `metrics.py` | assembles every per-role metric into one row |
+| `curvature.py` | Ollivier-Ricci and Forman-Ricci on the kNN graph |
+| `density.py` | kNN distances and KDE log-density |
+| `topology.py` | persistent homology summaries (H0/H1) |
+| `closeness.py` | mutual-kNN agreement and cosine to a reference role |
+| `families.py` | which metrics belong to which family |
+| `calib_estimators.py` | estimator calibration on clouds of known dimension |
+| `test_scale_invariance.py` | asserts which metrics survive a pure rescale |
+
+`id_vs_axis.py` runs against an existing run folder rather than in either chain —
+see the section above.
 
 ## Reuse
 
 Nothing here re-implements an estimator. `manifold.idim.id_estimates` supplies
 TwoNN/MLE/lPCA (its adaptive `fit(n_neighbors = min(10, n-2))` is what keeps MLE
-local at n=25 — the assistant-axis `01` passes `MLE(K=20)`, which skdim 0.3.6
+local at n=25 — the assistant-axis `01_intrinsic_dimension.py` passes `MLE(K=20)`, which skdim 0.3.6
 ignores under the default `neighborhood_based=True` and then fits with its own
 default of 20 neighbours anyway).
 `manifold.subsets.kmeans_medoid_roles` supplies role-subset selection,
 `manifold_persona.common` supplies `load_points`, `center`, `assistant_axis`.
-Methods and scoring in `02` mirror `exploratory/assistant_axis/02_clustering.py`
+Methods and scoring in `clustering_per_role.py` mirror `exploratory/assistant_axis/02_clustering.py`
 and `exploratory/persona_vectors/02_clustering.py`.

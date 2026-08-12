@@ -21,7 +21,7 @@ tokens) and 5×40 = 200 points/role (response tokens).
 
 ## 1. Within-role variance fractions
 
-**Code:** `common.py::design_fractions` · **Reported by:** `01`, middle panel
+**Code:** `common.py::design_fractions` · **Reported by:** `id_per_role.py`, middle panel
 
 ### The question it answers
 
@@ -110,7 +110,7 @@ not. This single number is why the two clouds get opposite conclusions.
 
 - Not a per-feature variance. It is one scalar per term, pooled over 2048 dims.
 - Not a significance test. It is a decomposition of observed variance; the
-  design null in `01` is what supplies the reference.
+  design null in `id_per_role.py` is what supplies the reference.
 - Not comparable across clouds without the grid shape. A bigger `n_q` gives the
   question factor more levels to spend variance on.
 
@@ -118,7 +118,7 @@ not. This single number is why the two clouds get opposite conclusions.
 
 ## 2. Intrinsic dimension vs closeness to the Assistant
 
-**Code:** `04_id_vs_axis.py` · **Reported by:** `04`
+**Code:** `id_vs_axis.py` · **Reported by:** `04_id_vs_axis_<view>_L<layer>.{csv,json,png}`
 
 ### The two "closeness" measures
 
@@ -165,7 +165,7 @@ and log within-role variance. Spread also shifts a role along the axis. So a raw
 ID↔axis correlation can be entirely spread acting on both ends, with no direct
 relationship at all.
 
-**The fix** (`04_id_vs_axis.py::partial_corr`). Let `z = log(SS_total)` per role:
+**The fix** (`id_vs_axis.py` + `stats_utils.partial_corr`). Let `z = log(SS_total)` per role:
 
 ```
 1.  regress ID on z         →  keep residual  ID⊥      (part of ID that z can't explain)
@@ -177,19 +177,32 @@ Read it as: **among roles with the same cloud size, does ID still track axis
 position?** Significance uses `t = r·√((n−k−2)/(1−r²))` with `k` = number of
 controls.
 
-**The second control: `mean_text_len`.** Cloud size is not the only nuisance.
-The mean character length of the text each point embeds also raises ID (longer
-texts vary more), and in-role personas answer at a different length than the
-Assistant does. So `04` reports two partials per estimator:
-`partial_r_ctrl_logvar` (`k = 1`, as above) and
-`partial_r_ctrl_logvar_textlen` (`k = 2`). The column is named for the basis it
-does NOT assume: on a response-token cloud it is mean RESPONSE length, on a
-prompt-token cloud it is mean PROMPT length. The JSON records which one under
-`_meta.text_len_column`.
+**The second control: `mean_text_len`, opt-in.** Cloud size is not the only
+nuisance. The mean character length of the text each point embeds also raises ID
+(longer texts vary more), and in-role personas answer at a different length than
+the Assistant does.
+
+`id_vs_axis.py` reports it **only under `--control-text-len`**, which is off by
+default. Every result reported from this study so far was computed with the one
+control, and enabling the second by default would change the published table
+without saying so. With the flag off the output is exactly the `k = 1` version:
+`partial_r_ctrl_logvar`, and no length columns or JSON keys at all — an absent
+key means the control did not run, never that it ran and found nothing. With the
+flag on the script adds `partial_r_ctrl_logvar_textlen` (`k = 2`) *alongside*
+the first, so the two are always comparable in one table, and computes it with
+`stats_utils.partial_corr_multi` — `partial_corr` fixes `k = 1` in the t
+statistic and is wrong for two controls.
+
+The column is named for the basis it does NOT assume: on a response-token cloud
+it is mean RESPONSE length, on a prompt-token cloud it is mean PROMPT length.
+The JSON records which one under `_meta.text_len_column`.
+
+Where it has been measured, the per-persona direction survives the length
+control at partial r −0.61.
 
 Where raw and partial disagree, the raw one was the confound talking. That
 happens: participation ratio is raw −0.32 but partial **+0.13** — sign flip. The
-−0.32 originally reported by `01` was mostly scale, not axis position.
+−0.32 originally reported by `id_per_role.py` was mostly scale, not axis position.
 
 ### Multiple testing
 
@@ -230,7 +243,7 @@ contrast, not a competing result.
 
 ### Where `default` — the Assistant itself — sits
 
-Marked **★** in the `04` figures. Excluded from every fit (distance 0 from
+Marked **★** in the `id_vs_axis.py` figures. Excluded from every fit (distance 0 from
 itself; it defines the axis), but plotted, because "does the Assistant obey the
 trend its own axis defines?" is the question the axis was built to ask. Where the
 star falls outside the character roles' range the fit is extended as a dotted
