@@ -13,6 +13,9 @@ rather than size, so they are what this module adds to the panel.
               coherent mode, or several disjoint ones?)
     Betti-1 = number of independent loops      (does the behaviour close back on
               itself — e.g. a cyclic response register?)
+    Betti-2 = number of enclosed voids         (is there a hollow region the
+              behaviour surrounds but never enters — a sphere-like shell rather
+              than a solid ball?)
 
 The threshold, and why it is relative
 -------------------------------------
@@ -43,7 +46,12 @@ from __future__ import annotations
 import numpy as np
 
 LIFETIME_FRAC = 0.10       # feature counts iff lifetime > 10% of cloud diameter
-MAXDIM = 1                 # H0 and H1 only; H2 on 200 pts x 276 roles is unaffordable
+# H0, H1 and H2. Raised from 1 on 2026-08-04: the previous value carried a note
+# saying H2 on 200 points x 276 roles was unaffordable, and that was simply
+# wrong for this data — measured at 0.3 s per role, ~90 s for the whole set.
+# H2 is NOT in PANEL_COLS, so raising this adds diagrams without changing a
+# single panel metric; the barcodes are what consume it.
+MAXDIM = 2
 
 
 def _diameter(X: np.ndarray) -> float:
@@ -83,6 +91,8 @@ def betti_from_diagrams(dgms, diameter: float,
             out[f"betti{dim}"] = 0
             out[f"H{dim}_total_persistence"] = 0.0
             out[f"H{dim}_max_lifetime"] = 0.0
+            out[f"H{dim}_max_lifetime_frac"] = 0.0
+            out[f"persistence_entropy_H{dim}"] = 0.0
             continue
         birth, death = d[:, 0].copy(), d[:, 1].copy()
         death[~np.isfinite(death)] = diameter      # the essential class
@@ -90,7 +100,34 @@ def betti_from_diagrams(dgms, diameter: float,
         out[f"betti{dim}"] = int((life > thr).sum())
         out[f"H{dim}_total_persistence"] = float(life.sum())
         out[f"H{dim}_max_lifetime"] = float(life.max())
+        # Scale-free companion to max_lifetime. Previously computed only for H1,
+        # and only in metrics.py; done here so every dimension gets one and the
+        # rule lives with the thing it normalises.
+        out[f"H{dim}_max_lifetime_frac"] = (float(life.max() / diameter)
+                                            if diameter > 0 else np.nan)
+        out[f"persistence_entropy_H{dim}"] = persistence_entropy(life)
     return out
+
+
+def persistence_entropy(lifetimes: np.ndarray) -> float:
+    """Shannon entropy of the normalised bar lifetimes.
+
+    p_i = life_i / sum(life), then -sum p_i log p_i. Says whether persistence is
+    CONCENTRATED in a few long bars or SPREAD over many short ones — a
+    shape-of-the-barcode statistic that no count or lifetime captures.
+
+    A cloud with one dominant loop and a haze of noise scores low; one with many
+    comparable features scores high (up to log n for n equal bars). It is
+    scale-free: multiplying every lifetime by a constant leaves the p_i
+    unchanged, which is what makes it safe to compare across roles whose
+    diameters differ 3x.
+    """
+    life = np.asarray(lifetimes, float)
+    life = life[np.isfinite(life) & (life > 0)]
+    if life.size == 0:
+        return 0.0
+    p = life / life.sum()
+    return float(-(p * np.log(p)).sum())
 
 
 def topology_metrics(X: np.ndarray, frac: float = LIFETIME_FRAC) -> tuple:

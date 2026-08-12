@@ -24,11 +24,13 @@ from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 
 from manifold.idim import id_estimates
-from manifold.local_id import local_id, cv
 from manifold.pipeline import fit_manifold
 from manifold.tps import reconstruction
 
 from common import design_fractions, pca_stats
+from stats_utils import linfit
+from curvature import curvature_metrics
+from density import density_metrics
 from topology import topology_metrics
 
 # --- fixed by the plan; not swept ------------------------------------------
@@ -44,12 +46,39 @@ SEED = 0
 ID_COLS = ["TwoNN", "MLE", "lPCA", "PCA_participation_ratio",
            "PCA_dim_90pct", "PCA_dim_95pct"]
 
-PANEL_COLS = ID_COLS + [
-    "betti0", "betti1", "H1_total_persistence", "H1_max_lifetime",
-    "H1_max_lifetime_frac",
-    "spline_r2", "curvature_gain",
+# Grouped to match families.py, which is the authority on which family a column
+# belongs to. `families.check_coverage(PANEL_COLS)` fails loudly if the two ever
+# drift apart, so this list and that mapping cannot silently disagree.
+# Computed but NOT panelled (2026-08-04, user's request). They stay in ID_COLS
+# because that is the historical six `id_vs_axis.py` reported and the ladder's
+# regression check compares against them; they are simply not treated as panel
+# metrics any more.
+#
+#   PCA_dim_90pct  same cumulative-variance rule as PCA_dim_95pct at another
+#                  cutoff — two cutoffs of one rule are not two measurements.
+#   lPCA           a THRESHOLD COUNT, not a dimension: eigenvalues above 5% of
+#                  the largest. Its "local" name is misleading (it is fitted
+#                  globally here), and it reads the same eigenvalues as
+#                  PCA_dim_95pct under a different rule.
+DROPPED_FROM_PANEL = ("PCA_dim_90pct", "lPCA")
+PANEL_COLS = [c for c in ID_COLS if c not in DROPPED_FROM_PANEL] + [
+    # --- spectral shape ---
     "eig_decay_exponent", "effective_rank",
-    "local_id_mean", "local_id_cv",
+    # --- density and sampling ---
+    "knn_dist_mean", "knn_dist_cv", "kde_logdens_mean", "kde_logdens_sd",
+    # --- topology: lifetimes and barcode shape, per homology dim ---
+    # The thresholded counts betti0/1/2 were removed 2026-08-04: betti1 was 0
+    # for 270 of 275 roles and betti2 for all of them, and betti0 was never
+    # topology at all (it is 1 + the count of long MST edges, a sparsity
+    # measure wearing a topology name). The continuous columns below carry the
+    # signal and need no threshold.
+    "H0_total_persistence",
+    "H1_total_persistence", "H1_max_lifetime", "H1_max_lifetime_frac",
+    "H2_total_persistence", "H2_max_lifetime", "H2_max_lifetime_frac",
+    "persistence_entropy_H0", "persistence_entropy_H1", "persistence_entropy_H2",
+    # --- curvature: discrete, on the kNN graph ---
+    "orc_mean", "orc_sd", "frc_mean", "frc_sd",
+    # --- extraction design (NOT geometry) ---
     "instr_frac", "quest_frac", "interaction_frac",
 ]
 
@@ -69,9 +98,18 @@ def _spectrum(Xc: np.ndarray) -> dict:
         return {"eig_decay_exponent": np.nan, "effective_rank": np.nan}
     m = min(SPECTRUM_RANKS, lam.size)
     x, y = np.log(np.arange(1, m + 1)), np.log(lam[:m])
-    slope = float(np.polyfit(x, y, 1)[0])
+    # The exponent is the SLOPE of a straight line through a log-log spectrum,
+    # so it is only an exponent if the spectrum is actually a power law. That
+    # was never checked until 2026-08-04: measured across the 276 roles the fit
+    # R^2 runs 0.905-0.991, with 107 roles below 0.95. `eig_decay_r2` carries
+    # that per role so the exponent can be read with its own trustworthiness,
+    # and `eig_decay_p` tests the slope against flat. Neither is a panel metric
+    # -- they are diagnostics of another metric, not measurements of a persona.
+    fit = linfit(x, y)
     p = lam / lam.sum()
-    return {"eig_decay_exponent": slope,
+    return {"eig_decay_exponent": fit["slope"],
+            "eig_decay_r2": fit["r2"],
+            "eig_decay_p": fit["p"],
             "effective_rank": float(np.exp(-(p * np.log(p)).sum()))}
 
 
@@ -108,7 +146,17 @@ def _curvature(P: np.ndarray) -> dict:
 
 def panel_metrics(X: np.ndarray, instr=None, quest=None,
                   keep_diagrams: bool = False) -> tuple:
-    """Every panel metric for ONE cloud. Returns (metrics, persistence diagrams).
+    """Every panel metric for ONE cloud.
+
+    Returns ``(metrics, diagrams, pointwise)``:
+
+      metrics    the scalar columns that go in the panel
+      diagrams   persistence diagrams, only when ``keep_diagrams``
+      pointwise  per-point and per-edge arrays (knn_dist, kde_logdens, orc,
+                 frc) that the scalar columns are summaries
+                 of. The family `distributions.png` figures need these — a
+                 metric whose MEAN is flat while its SPREAD widens is a real
+                 finding that no scalar column can show.
 
     ``instr``/``quest`` are optional: the design fractions only exist for clouds
     that actually sit on the two-factor grid (real roles and design-null draws).
@@ -143,22 +191,32 @@ def panel_metrics(X: np.ndarray, instr=None, quest=None,
     out.update(id_estimates(P))
     out.update(pca_stats(P))
     out.update(_spectrum(P - P.mean(0)))
-    topo, dgms = topology_metrics(P)
-    out.update({k: v for k, v in topo.items() if k in PANEL_COLS
-                or k in ("cloud_diameter",)})
-    # Continuous topology readout. The thresholded betti1 is identically 0 on
-    # this cloud (max H1 lifetime reaches only 9.4% of diameter, under the 10%
-    # rule), so the count has no variance to correlate with anything. The
-    # lifetime fraction it is derived from does vary, needs no threshold, and is
-    # what the ladder actually uses; betti0/betti1 stay in the panel as
-    # descriptive columns.
-    out["H1_max_lifetime_frac"] = (out["H1_max_lifetime"] / out["cloud_diameter"]
-                                   if out.get("cloud_diameter") else np.nan)
-    out.update(_curvature(P))
 
-    lid = local_id(P, k=LOCAL_K)
-    out["local_id_mean"] = float(np.nanmean(lid))
-    out["local_id_cv"] = float(cv(lid))
+    # Topology. `topology_metrics` now returns every homology dimension up to
+    # MAXDIM=2 including the scale-free lifetime fractions and the barcode
+    # entropies, so nothing needs deriving here any more.
+    #
+    # The thresholded counts (betti1, betti2) are ~0 on this cloud: the longest
+    # H1 bar reaches 9.4% of diameter and the longest H2 bar ~2%, both under the
+    # 10% rule. The continuous columns they derive from do vary, need no
+    # threshold, and are what the ladder actually uses; the counts stay as
+    # descriptive columns and the ladder flags them degenerate if constant.
+    topo, dgms = topology_metrics(P)
+    out.update({k: v for k, v in topo.items()
+                if k in PANEL_COLS or k == "cloud_diameter"})
+
+    # `_curvature` (spline_r2, curvature_gain) is NO LONGER CALLED — removed
+    # from the panel 2026-08-04 after it was traced to the extraction grid.
+    # N_ANCHORS is 40 and the grid has 40 questions, so the k-means anchors
+    # recover the question groups almost exactly (ARI 0.65-0.96 per role). The
+    # spline surface therefore explains between-question variance by
+    # construction and `spline_r2` came out at r = +0.926 with `quest_frac` and
+    # r = -0.987 with `MLE` — the same measurement, not an independent one.
+    # The function is kept below so the diagnostic can be re-run.
+    dens, dens_pw = density_metrics(P, k=LOCAL_K)
+    out.update({k: v for k, v in dens.items() if not k.startswith("_")})
+    curv, curv_pw = curvature_metrics(P, k=LOCAL_K)
+    out.update(curv)
 
     if instr is not None and quest is not None:
         out.update(design_fractions(X, instr, quest))
@@ -166,10 +224,14 @@ def panel_metrics(X: np.ndarray, instr=None, quest=None,
         out.update({"instr_frac": np.nan, "quest_frac": np.nan,
                     "interaction_frac": np.nan})
 
-    # scale covariates — these are controls, not responses
+    # scale covariates — these are controls, not responses. NOTE these are the
+    # only quantities here computed on the RAW cloud rather than the PCA-50
+    # working space; md/SPACES.md records that asymmetry.
     out["log_var"] = float(np.log((Xc ** 2).sum()))
     out["rms_radius"] = float(np.sqrt((Xc ** 2).sum() / len(X)))
-    return out, (dgms if keep_diagrams else None)
+
+    pointwise = {**dens_pw, **curv_pw}
+    return out, (dgms if keep_diagrams else None), pointwise
 
 
 def geometry_columns(df) -> list:
