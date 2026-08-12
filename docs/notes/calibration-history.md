@@ -18,10 +18,23 @@ PCA_dim_95pct 120%. They stay in the panel but must never be quoted as a
 dimension.
 
 Her evidence files (`CALIBRATION.md`, `CALIBRATION-RESULTS.md`) never reached
-the repo (the old .gitignore bug); requested 2026-08-07, and again 2026-08-12
-with her run's `calibrated to real data: ... per-dim noise` line. Our
-measurement on the current canonical 40q cloud: MLE worst error 38%
-(seed-robust; see `output/calib_sensitivity_2026-08-07`,
-`robustness/baseline/calibration_L19.json`). Root cause of the 17-vs-38 gap:
-data provenance (her calibration cloud's noise floor), not code — the gate is
-noise-conditional.
+the repo (the old .gitignore bug); requested 2026-08-07 and 2026-08-12.
+
+RESOLVED (2026-08-12): the 17-vs-38 gap is the MLE neighbourhood size.
+Before the idim repair (587e7f5, 2026-08-03), `skdim.id.MLE(K=...)` was
+silently ignored (skdim 0.3.6 reads the constructor K only when
+`neighborhood_based=False`), so MLE ran at the default `n_neighbors=20`.
+The repair passes `n_neighbors=min(10, n-2)=10` to `fit()`. On the canonical
+40q cloud (byte-identical to her HF copy), same seeds and noise:
+
+- k=20 -> worst relative error 0.171 (her recorded 17%)
+- k=10 -> worst relative error 0.382 (our 38%; the d=3 -> 4.15 signature)
+
+Not data, not environment. The earlier noise-floor hypothesis moved the number
+too but was not the historical cause. The k change likely also explains the
+MLE-vs-axis correlation gap (her -0.701 vs our -0.66).
+
+Open team decision: k=20 calibrates at n=200 (passes the 0.20 gate), k=10
+does not. The repair targeted the small-n sweep (n=10-25) where k=20 is
+degenerate. Options: per-use-case neighbourhood, or keep k=10 and drop MLE
+from the gated set.

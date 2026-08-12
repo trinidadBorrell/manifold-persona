@@ -198,9 +198,9 @@ def design_fractions(Xr: np.ndarray, instr: np.ndarray, quest: np.ndarray) -> di
     Fits the additive model ``x_ij = grand + A_i + B_j`` and splits the total
     centred sum-of-squares into the instruction effect, the question effect
     and the residual (= interaction, the only term that is NOT forced by the
-    grid). Fractions are of the total centred SS. The additive fractions need
-    not sum to exactly 1 minus interaction unless the design is balanced — it
-    is (5x5).
+    grid). Fractions are of the total centred SS. The three fractions sum to
+    exactly 1 only when the design is balanced. This design is balanced (5x5),
+    so they do.
     """
     Xc = Xr - Xr.mean(0)
     tot = float((Xc ** 2).sum())

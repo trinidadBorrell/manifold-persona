@@ -59,9 +59,10 @@ def _agg(df, col):
 # --------------------------------------------------------------------------- #
 def fig01_sweep_decider(df, out: Path, floor: float = 0.30):
     """Left: M1 relative NRE reduction vs n (the decider). Right: raw R² real
-    vs null median vs n. The right panel draws the trap explicitly: a reader
-    can see both curves rise together as n falls, and so understand why raw R²
-    decides nothing."""
+    vs null median vs n. The right panel draws the trap explicitly: the two
+    curves move in OPPOSITE directions as n falls (real rises, null falls), so
+    the raw gap widens for reasons that are not manifold signal. That is why
+    raw R² alone decides nothing."""
     try:
         fig, (ax, ax2) = plt.subplots(1, 2, figsize=(12, 4.8))
 
@@ -218,13 +219,12 @@ def _open_spline(points: np.ndarray, n: int = 200):
 
 def fig05_spline_manifold(sub, mani, out: Path, n_roles: int, seed: int,
                           grid: int = 22, label_every: int = 1):
-    """Raw points + labelled role centroids + the DECODED TPS surface + a smooth
-    curve, in the manifold's own intrinsic PCA-3 frame, at two view angles.
+    """Raw points + labelled role centroids + a smooth curve, in the manifold's
+    own intrinsic PCA-3 frame, at two view angles.
 
     Style follows manifold-temporal/framing/plots.py::plot_manifold_3d (scatter,
-    big ringed labelled centroids, fitted curve, two angles), with one addition:
-    we also decode the actual k=3 TPS on a grid and draw it as a wireframe, so
-    the figure shows the object that was *scored*, not only a decorative curve.
+    big ringed labelled centroids, fitted curve, two angles). No decoded TPS
+    mesh is drawn — see the NOTE in the function body for why.
 
     The plot basis IS the fit's intrinsic basis: `fit_manifold` takes
     control_points = PCA(role_means, 3), so PC1–3 here are exactly the surface's
