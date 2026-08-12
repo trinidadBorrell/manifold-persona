@@ -65,6 +65,11 @@ def run_cell(cloud, n: int, seed: int, n_perm: int, say) -> dict:
     pc_pass = bool(pc["stats"]["p"] < ALPHA and pc["stats"]["rel_reduction"] >= FLOOR)
 
     # --- 1 decider ----------------------------------------------------------
+    # NOTE: manifold.run's decider now judges against P.coordinate_null (the
+    # structure-preserving null). This sweep still uses the role-shuffle
+    # permutation null on purpose: its PRIOR (0a regression check) is frozen
+    # against plan #1's role-shuffle numbers, so both predate that change.
+    # Switching this null is a separate decision.
     dec = P.construction_C_role(sub, k=K)
     null = P.permutation_null(sub, n_perms=n_perm, k=K, seed=0)
     st = P.separation_stats(dec.r2, null)
@@ -123,10 +128,21 @@ def main(argv=None) -> None:
         f"D={P.D_AMBIENT}  k={K}  floor={FLOOR}  band={BAND}")
 
     # ---------------------------------------------------- shared ambient space
-    say("\n[0] Loading role cloud (prompt_avg, layer 26); PCA 2048->50 fit ONCE ...")
+    say("\n[0] Loading role cloud (prompt_avg); PCA fit ONCE ...")
     cloud = P.load_cloud(view="prompt_avg", seed=0)
+    say(f"    model={cloud.manifest.get('model_name', '?')}  layer={cloud.layer}  "
+        f"hidden={cloud.manifest.get('hidden', '?')} -> PCA {P.D_AMBIENT}")
     say(f"    raw={cloud.raw.shape}  roles={len(cloud.role_names)}  "
         f"default_present={'default' in cloud.role_names}")
+
+    # kmeans_medoid_roles returns ALL roles whenever n >= n_available, so any
+    # n_list entry above the role count silently becomes the same degenerate
+    # cell under a wrong label. Clamp and de-duplicate instead.
+    R = len(cloud.role_names)
+    clamped = sorted({min(n, R) for n in n_list})
+    if clamped != sorted(n_list):
+        say(f"    n_list clamped to {R} available roles: {sorted(n_list)} -> {clamped}")
+        n_list = clamped
 
     status = "executed"
     rows, cells = [], {}
@@ -263,8 +279,12 @@ def main(argv=None) -> None:
     manifest = {
         "run_id": stamp, "plan": PLAN, "context": "RESEARCH.md", "status": status,
         "git": "not-a-git-repo (reproducibility via manifest+seeds)",
-        "inputs": "data/embeddings_roles/ (prompt_avg, layer 26; no re-extraction)",
-        "model": "Qwen/Qwen2.5-3B-Instruct", "view": "prompt_avg", "layer": 26,
+        # Read from the cloud's own manifest -- these used to be hardcoded to the
+        # 3B/layer-26 run and silently misreported any other cloud.
+        "inputs": f"data/embeddings_roles/ (prompt_avg, layer {cloud.layer}; no re-extraction)",
+        "model": cloud.manifest.get("model_name"), "view": "prompt_avg",
+        "layer": cloud.layer,
+        "source_manifest": cloud.manifest,
         "D_ambient": P.D_AMBIENT, "k_intrinsic": K, "n_list": n_list,
         "kmeans_seeds": seeds, "n_perm_decider": n_perm,
         "n_perm_posctrl": N_PERM_POSCTRL, "n_ref_draws": n_ref,

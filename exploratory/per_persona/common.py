@@ -45,8 +45,9 @@ from pathlib import Path
 
 import numpy as np
 
-from manifold_persona.config import REPO_ROOT
+from manifold_persona.config import REPO_ROOT, ROLE_EMBEDDINGS_DIR
 from manifold_persona.common import load_points
+from manifold_persona.io import load_metadata
 
 FIGURES_DIR = REPO_ROOT / "exploratory" / "per_persona" / "figures"
 FIGURES_DIR.mkdir(parents=True, exist_ok=True)
@@ -152,6 +153,22 @@ def load_role_clouds(view: str = "prompt_avg", layer: int = None):
         factors[r] = (np.unique(ii[m], return_inverse=True)[1],
                       np.unique(qi[m], return_inverse=True)[1])
     return roles, clouds, factors, manifest
+
+
+def role_text_lengths() -> tuple:
+    """(role -> mean character length of the embedded text, column used).
+
+    The basis follows the cloud, which is why the caller should label the number
+    generically: a response-token cloud carries a ``response`` column and this is
+    mean RESPONSE length; a prompt-token cloud has only ``text`` (the rendered
+    prompt) and this is mean PROMPT length. Same ``MP_ROLE_DIR`` override as
+    :func:`manifold_persona.common.load_points`, so it always reads the metadata
+    of the cloud the clouds themselves came from.
+    """
+    meta = load_metadata(os.environ.get("MP_ROLE_DIR", ROLE_EMBEDDINGS_DIR))
+    col = "response" if "response" in meta.columns else "text"
+    lens = meta[col].fillna("").str.len()
+    return lens.groupby(meta["role"]).mean().to_dict(), col
 
 
 def grid_shape(factors) -> tuple:

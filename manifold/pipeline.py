@@ -36,6 +36,8 @@ class Cloud:
     role_means: np.ndarray       # (R, D) mean per role (in PCA space)
     global_mean: np.ndarray      # (D,) mean of raw points (fixed TSS anchor)
     pca: PCA
+    layer: int = -1              # hidden_states index actually read
+    manifest: dict = field(default_factory=dict)   # source cloud's manifest.json
 
 
 def load_cloud(view: str = "prompt_avg", layer: int | None = None,
@@ -45,7 +47,8 @@ def load_cloud(view: str = "prompt_avg", layer: int | None = None,
     PCA is fit once on the raw points (labels irrelevant), so the ambient space
     is identical across permutations.
     """
-    Xraw, meta, _ = load_points(view=view, layer=layer, aggregate="none")
+    Xraw, meta, manifest = load_points(view=view, layer=layer, aggregate="none")
+    eff_layer = layer if layer is not None else manifest.get("primary_layer", -1)
     Xraw = np.asarray(Xraw, dtype=np.float64)
     pca = PCA(n_components=d_ambient, random_state=seed)
     raw = pca.fit_transform(Xraw)                       # (N, d)
@@ -56,7 +59,8 @@ def load_cloud(view: str = "prompt_avg", layer: int | None = None,
     for r in role_names:
         role_means[idx[r]] = raw[roles == r].mean(0)
     return Cloud(raw=raw, roles=roles, role_names=role_names,
-                 role_means=role_means, global_mean=raw.mean(0), pca=pca)
+                 role_means=role_means, global_mean=raw.mean(0), pca=pca,
+                 layer=eff_layer, manifest=manifest)
 
 
 # --------------------------------------------------------------------------- #
@@ -213,6 +217,39 @@ def permutation_null(cloud: Cloud, n_perms: int = 100, k: int = K_INTRINSIC,
             start += c
         mani = fit_manifold(means, k=k)
         res = reconstruction(cloud.raw, mani, cloud.global_mean)
+        r2s[p] = res.r2
+    return r2s
+
+
+def coordinate_null(cloud: Cloud, n_draws: int = 100, k: int = K_INTRINSIC,
+                    seed: int = 0) -> np.ndarray:
+    """Structure-preserving null R^2 distribution for the decider.
+
+    Each draw permutes every coordinate of the REAL role means independently
+    across roles (a fresh permutation per coordinate per draw), reattaches each
+    role's real within-role residuals, refits C_role and rescores. That destroys
+    the joint (manifold) structure of the role means but keeps their
+    per-coordinate marginals, the role-mean spread and the within-role noise.
+
+    `permutation_null` cannot do this: its fake role means average ~25 randomly
+    chosen points, so they shrink ~4x toward the global mean and the null only
+    measures between-role spread. A surface fitted to correctly-scaled but
+    structureless anchors already reaches the real R^2, so this is the null the
+    decider must beat.
+    """
+    rng = np.random.default_rng(seed)
+    role_idx = {r: i for i, r in enumerate(cloud.role_names)}
+    point_role = np.array([role_idx[r] for r in cloud.roles])
+    resid = cloud.raw - cloud.role_means[point_role]     # real within-role noise
+    R, D = cloud.role_means.shape
+    r2s = np.zeros(n_draws)
+    for p in range(n_draws):
+        means = np.empty_like(cloud.role_means)
+        for j in range(D):
+            means[:, j] = cloud.role_means[rng.permutation(R), j]
+        raw = resid + means[point_role]                  # points follow their anchor
+        mani = fit_manifold(means, k=k)
+        res = reconstruction(raw, mani, raw.mean(0))
         r2s[p] = res.r2
     return r2s
 
