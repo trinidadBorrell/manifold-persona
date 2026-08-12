@@ -143,7 +143,7 @@ def positive_control(n_per: int, ambient: int, radii: list, noise: float,
         for d in dims:
             X = plant_manifold(d, n_per, ambient, radius, noise, seed=SEED + 7 * r_i)
             with small_matrix_ops():
-                m, _ = panel_metrics(X)
+                m, _, _ = panel_metrics(X)
             rows.append({"planted_d": d, "radius": radius, "radius_rank": r_i,
                          **{k: m.get(k) for k in ID_COLS}})
             print(f"    planted d={d:2d} r={radius:8.2f} -> "
@@ -151,10 +151,10 @@ def positive_control(n_per: int, ambient: int, radii: list, noise: float,
                               if m.get(k) is not None))
     mid = radii[len(radii) // 2]
     with small_matrix_ops():
-        m_circ, dg_circ = panel_metrics(plant_circle(n_per, ambient, mid, noise),
-                                        keep_diagrams=True)
-        m_blob, dg_blob = panel_metrics(plant_blob(n_per, ambient, mid),
-                                        keep_diagrams=True)
+        m_circ, dg_circ, _ = panel_metrics(
+            plant_circle(n_per, ambient, mid, noise), keep_diagrams=True)
+        m_blob, dg_blob, _ = panel_metrics(
+            plant_blob(n_per, ambient, mid), keep_diagrams=True)
     return {"calibration": rows,
             "circle": {k: m_circ.get(k) for k in
                        ("betti0", "betti1", "H1_max_lifetime", "cloud_diameter")},

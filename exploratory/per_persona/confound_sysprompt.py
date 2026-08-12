@@ -3,8 +3,10 @@
 Plan: plans/2026-07-30-manifold-geometry-vs-assistant-axis.md
 Status: **POST HOC — decided after seeing the run's results, at the user's request
 (2026-07-30). Not preregistered, not part of Experiments 0-6, and it cannot be
-promoted to a confirmatory result.** It writes to its own run dir and never
-touches the parent run.
+promoted to a confirmatory result.** `run_geometry.py` runs it last with
+`--parent` pointing at the run it just wrote, so its figures land beside the
+others; that is a convenience, not a promotion. It only ever READS the parent's
+panel and writes new files, so re-running it cannot alter a finished run.
 
 WHY SYSTEM-PROMPT LENGTH IS A REAL CONFOUND WHERE RESPONSE LENGTH WAS NOT
 -------------------------------------------------------------------------
@@ -58,7 +60,8 @@ from scipy import stats
 
 from common import C_REAL, C_DESIGN, C_GAUSS, C_QUEST
 from metrics import geometry_columns
-from stats_utils import bh_fdr, partial_corr_multi
+from stats_utils import bh_fdr, fmt_p, linfit, partial_corr_multi
+from study_ladder import PREDICTORS
 from study_regression import DROPPED_SIMPLEX, SCALE_COLS, cv_r2
 
 CTRL_MAIN = SCALE_COLS                       # log_var, mean_norm
@@ -93,11 +96,11 @@ def system_prompt_stats(src: Path, cache: Path) -> pd.DataFrame:
     return out
 
 
-def _figure(res, d, dflt, head, order, run, L):
+def _fig_rungs(res, order, figdir, L):
+    """Does adding system-prompt length to the controls move any correlation?"""
     s = res[res.predictor == "axis_proj"].set_index("metric").reindex(order)
-    fig, axes = plt.subplots(1, 2, figsize=(14, 0.40 * len(order) + 3.0))
+    fig, ax = plt.subplots(figsize=(9, 0.40 * len(order) + 2.6))
     y_ = np.arange(len(order))
-    ax = axes[0]
     ax.axvline(0, color="k", lw=.8)
     for v in (-0.30, 0.30):
         ax.axvline(v, color=C_DESIGN, ls=":", lw=1)
@@ -111,29 +114,49 @@ def _figure(res, d, dflt, head, order, run, L):
     ax.set_yticks(y_); ax.set_yticklabels(order, fontsize=8)
     ax.set_xlabel("correlation with axis_proj"); ax.set_xlim(-1, 1)
     ax.legend(fontsize=7.5, loc="lower left")
-    ax.set_title("does adding system-prompt length move anything?", fontsize=9)
-
-    ax2 = axes[1]
-    ax2.scatter(d.sys_tok_mean, d.axis_proj, s=22, color=C_REAL, linewidths=0)
-    sl, ic = np.polyfit(d.sys_tok_mean, d.axis_proj, 1)
-    xs = np.linspace(d.sys_tok_mean.min(), d.sys_tok_mean.max(), 40)
-    ax2.plot(xs, sl * xs + ic, color=C_DESIGN, lw=2)
-    if len(dflt):
-        ax2.scatter([float(dflt.sys_tok_mean.iloc[0])],
-                    [float(dflt.axis_proj.iloc[0])], s=130, marker="*",
-                    color="#111111", zorder=6, label="default")
-        ax2.legend(fontsize=8)
-    rr = head["sys_tok_mean_vs_axis_proj"]["pearson_r"]
-    ax2.set_xlabel("mean system-prompt length (tokens)")
-    ax2.set_ylabel("assistant-axis projection")
-    ax2.set_title(f"system-prompt length vs axis position (r={rr:+.3f})", fontsize=9)
-    fig.suptitle(f"POST HOC · Is system-prompt length the common cause?  ({TAG})",
-                 fontsize=11)
-    fig.tight_layout(rect=[0, 0, 1, 0.93])
-    fig.savefig(run / "figures" / f"figPH1_sysprompt_L{L}.png", dpi=300,
+    fig.suptitle(f"POST HOC · Does system-prompt length move the panel?  ({TAG})",
+                 fontsize=10)
+    fig.tight_layout(rect=[0, 0, 1, 0.95])
+    fig.savefig(figdir / f"figPH1_sysprompt_rungs_L{L}.png", dpi=300,
                 bbox_inches="tight")
     plt.close(fig)
-    print(f"\nwrote figPH1_sysprompt_L{L}.png")
+    print(f"\nwrote figPH1_sysprompt_rungs_L{L}.png")
+
+
+def _fig_scatter(d, dflt, head, figdir, L):
+    """System-prompt length against EVERY closeness measure.
+
+    One panel per predictor rather than just `axis_proj`: if prompt length were
+    the common cause, it would have to show up in all four, and a reader should
+    be able to check that rather than take it on trust.
+    """
+    fig, axes = plt.subplots(1, len(PREDICTORS), figsize=(4.3 * len(PREDICTORS), 4.2))
+    axes = np.atleast_1d(axes)
+    for ax, pred in zip(axes, PREDICTORS):
+        ax.scatter(d.sys_tok_mean, d[pred], s=20, color=C_REAL, linewidths=0,
+                   alpha=.7)
+        f = linfit(d.sys_tok_mean, d[pred])
+        xs = np.linspace(d.sys_tok_mean.min(), d.sys_tok_mean.max(), 40)
+        ax.plot(xs, f["slope"] * xs + f["intercept"], color=C_DESIGN, lw=2)
+        if len(dflt) and pred in dflt:
+            ax.scatter([float(dflt.sys_tok_mean.iloc[0])],
+                       [float(dflt[pred].iloc[0])], s=130, marker="*",
+                       color="#111111", zorder=6, label="default")
+            ax.legend(fontsize=7)
+        rr = head[f"sys_tok_mean_vs_{pred}"]["pearson_r"]
+        rho = head[f"sys_tok_mean_vs_{pred}"]["spearman_rho"]
+        ax.set_xlabel("mean system-prompt length (tokens)", fontsize=8)
+        ax.set_ylabel(pred, fontsize=9)
+        pv = head[f"sys_tok_mean_vs_{pred}"]["p"]
+        ax.set_title(f"r = {rr:+.3f}   rho = {rho:+.3f}   {fmt_p(pv)}", fontsize=9)
+        ax.tick_params(labelsize=7)
+    fig.suptitle("POST HOC · System-prompt length vs closeness to the Assistant "
+                 f"({TAG})", fontsize=10)
+    fig.tight_layout(rect=[0, 0, 1, 0.92])
+    fig.savefig(figdir / f"figPH2_sysprompt_vs_closeness_L{L}.png",
+                dpi=300, bbox_inches="tight")
+    plt.close(fig)
+    print(f"wrote figPH2_sysprompt_vs_closeness_L{L}.png")
 
 
 def main():
@@ -145,7 +168,9 @@ def main():
     parent, run = Path(args.parent), Path(args.outdir)
     L = args.label_layer
     (run / "data").mkdir(parents=True, exist_ok=True)
-    (run / "figures").mkdir(parents=True, exist_ok=True)
+    # Alongside the other cross-family figures, not at the figures/ root.
+    figdir = run / "figures" / "global" / "figPH_sysprompt"
+    figdir.mkdir(parents=True, exist_ok=True)
 
     src = Path(os.environ.get("MP_ROLE_DIR", "data/embeddings_roles_resp40"))
     sysdf = system_prompt_stats(src, run / "data" / f"sys_prompt_tokens_L{L}.csv")
@@ -154,7 +179,7 @@ def main():
 
     d_all = panel.merge(sysdf, on="role", how="left")
     d = d_all[d_all.role != "default"].dropna(
-        subset=metrics + CTRL_MAIN + CTRL_SYS + ["axis_proj", "cos_axis"])
+        subset=metrics + CTRL_MAIN + CTRL_SYS + PREDICTORS)
     print(f"n={len(d)} roles (default excluded), {len(metrics)} metrics")
     print(f"system-prompt tokens: median {d.sys_tok_mean.median():.1f}, "
           f"range {d.sys_tok_mean.min():.1f}-{d.sys_tok_mean.max():.1f}")
@@ -166,7 +191,7 @@ def main():
 
     # --- 1. does prompt length predict axis position at all? ----------------
     head = {}
-    for pred in ("axis_proj", "cos_axis"):
+    for pred in PREDICTORS:
         for v in CTRL_SYS:
             r, p = stats.pearsonr(d[v], d[pred])
             rho, _ = stats.spearmanr(d[v], d[pred])
@@ -179,7 +204,7 @@ def main():
     Zmain = d[CTRL_MAIN].to_numpy(float)
     Zboth = d[CTRL_MAIN + CTRL_SYS].to_numpy(float)
     Zsys = d[CTRL_SYS].to_numpy(float)
-    for pred in ("axis_proj", "cos_axis"):
+    for pred in PREDICTORS:
         x = d[pred].to_numpy(float)
         for c in metrics:
             y = d[c].to_numpy(float)
@@ -195,7 +220,7 @@ def main():
                          "p_ctrl_main_plus_sys": p_both,
                          "collapse_from_adding_sys": abs(r_main) - abs(r_both)})
     res = pd.DataFrame(rows)
-    for pred in ("axis_proj", "cos_axis"):
+    for pred in PREDICTORS:
         m = res.predictor == pred
         res.loc[m, "q_ctrl_main_plus_sys"] = bh_fdr(
             res.loc[m, "p_ctrl_main_plus_sys"].values)
@@ -249,10 +274,12 @@ def main():
     json.dump(out, open(run / "data" / f"posthoc_sysprompt_L{L}.json", "w"),
               indent=2, default=float)
 
-    try:
-        _figure(res, d, dflt, head, sub.metric.tolist()[::-1], run, L)
-    except Exception as e:  # noqa: BLE001 — a figure failure must not lose the numbers
-        print(f"  [fig] figPH1 failed: {e}")
+    for fn, args_ in ((_fig_rungs, (res, sub.metric.tolist()[::-1], figdir, L)),
+                      (_fig_scatter, (d, dflt, head, figdir, L))):
+        try:
+            fn(*args_)
+        except Exception as e:  # noqa: BLE001 — a figure must not lose the numbers
+            print(f"  [fig] {fn.__name__} failed: {e}")
 
     print(f"\nmax |r| drop from adding system-prompt length: "
           f"{out['max_collapse_from_adding_sysprompt']:+.3f}")

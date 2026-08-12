@@ -26,6 +26,7 @@ import matplotlib.pyplot as plt
 
 from manifold.idim import id_estimates, ESTIMATORS
 from manifold_persona.common import assistant_axis, center, project, load_points
+from stats_utils import fmt_p, linfit
 from common import (load_role_clouds, design_fractions, pca_stats, resolve_run_dir,
                     savefig, design_null_draws, gaussian_null_draws, band, small_matrix_ops, assert_finite,
                     grid_shape, C_REAL, C_DESIGN, C_GAUSS, C_INSTR, C_QUEST, C_INTER)
@@ -200,7 +201,8 @@ def main():
     ax.scatter(df["axis_proj"], y, s=10, alpha=0.5, color=C_REAL, linewidths=0)
     rho, rho_nd = axis_fit["pearson_r_all"], axis_fit["pearson_r_excl_default"]
     ok_nd = df["axis_proj"].notna() & y.notna() & (df["role"] != "default")
-    m, b0 = np.polyfit(df.loc[ok_nd, "axis_proj"], y[ok_nd], 1)
+    _f = linfit(df.loc[ok_nd, "axis_proj"], y[ok_nd])
+    m, b0 = _f["slope"], _f["intercept"]
     xs = np.linspace(df["axis_proj"].min(), df["axis_proj"].max(), 50)
     ax.plot(xs, m * xs + b0, color=C_DESIGN, lw=2,
             label=f"r = {rho_nd:.2f} (excl. default)\nr = {rho:.2f} (all)")

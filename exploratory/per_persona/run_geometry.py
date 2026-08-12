@@ -6,20 +6,25 @@ stages: one fixed run dir, shared via `MP_RUN_DIR` and passed explicitly as
 
 The order is not arbitrary:
 
-  1. calib_estimators   the hard gate — planted manifolds of known dimension.
-                        Exits non-zero on failure, which stops everything below,
-                        so no result can quote an estimator that cannot measure
-                        a dimension at this sample size.
-  2. study_panel        the per-role table every later script reads.
-  3. study_design_null  needs the real panel to compare its draws against.
-  4. study_ladder       needs the design null for its DESIGN-EXPLAINED flags.
-  5. study_regression   \
-  6. study_families      >  independent of each other; panel is all they need.
-  7. confound_variance  /
-  8. figures            needs every data file above.
-
-`confound_sysprompt.py` is deliberately NOT run here: it is post hoc, it writes
-to its own run dir, and it takes a *completed* run as input.
+  1. study_panel        the per-role table every later script reads.
+  2. study_design_null  needs the real panel to compare its draws against.
+  3. study_ladder       needs the design null for its DESIGN-EXPLAINED flags.
+  4. study_regression   \
+  5. study_families      >  independent of each other; panel is all they need.
+  6. confound_variance  /
+  7. figures            the cross-family figures, into figures/global/.
+  8. figures_families   the same evidence split by family, into
+                        figures/families/NN_<family>/. Also the only place the
+                        per-point distributions are drawn.
+  9. study_barcodes     one persistence barcode per role, beside `default`'s,
+                        into families/04_topology/barcodes/. Reads the diagrams study_panel
+                        saved, so it never re-runs ripser.
+ 10. confound_sysprompt POST HOC. Runs last, reading the run it just wrote
+                        (`--parent` == `--outdir`) and adding figPH1/figPH2 to
+                        the same figures/ folder. Kept as a separate script with
+                        its own POST HOC banner because it was decided after
+                        seeing the results — running it in the same command does
+                        not make it preregistered, and its output says so.
 
 Usage:
     MP_ROLE_DIR=data/embeddings_roles_resp40 \\
@@ -42,7 +47,6 @@ PY = sys.executable
 # takes --view/--layer; "n_null" = it also takes the null-draw count. Everything
 # else works from the files an earlier step wrote and takes neither.
 STEPS = [
-    ("calib_estimators.py", {"cloud"}),
     ("study_panel.py", {"cloud"}),
     ("study_design_null.py", {"cloud", "n_null"}),
     ("study_ladder.py", set()),
@@ -50,6 +54,9 @@ STEPS = [
     ("study_families.py", {"cloud"}),
     ("confound_variance.py", set()),
     ("figures.py", set()),
+    ("figures_families.py", set()),
+    ("study_barcodes.py", set()),
+    ("confound_sysprompt.py", {"parent"}),
 ]
 
 
@@ -98,6 +105,8 @@ def main():
             extra += cloud_args
         if "n_null" in wants:
             extra += ["--n-null", str(args.n_null)]
+        if "parent" in wants:
+            extra += ["--parent", str(run_dir)]
         run(script, extra, run_dir, env)
 
     print(f"\nDone. Data in {run_dir}/data, figures in {run_dir}/figures")

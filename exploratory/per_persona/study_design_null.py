@@ -67,7 +67,7 @@ def main():
     with small_matrix_ops():
         for j, (Xn, instr, quest) in enumerate(
                 design_null_draws(clouds, factors, n_draws=args.n_null, seed=SEED)):
-            m, _ = panel_metrics(Xn, instr, quest)
+            m, _, _ = panel_metrics(Xn, instr, quest)
             null_rows.append(m)
             if (j + 1) % 25 == 0:
                 print(f"    {j+1}/{args.n_null} draws  ({time.time()-t0:.0f}s)")

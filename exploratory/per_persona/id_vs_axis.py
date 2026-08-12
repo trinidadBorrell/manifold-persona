@@ -40,7 +40,7 @@ from scipy import stats
 
 from common import (load_role_clouds, resolve_run_dir, savefig, small_matrix_ops,
                     grid_shape, C_REAL, C_DESIGN, C_QUEST)
-from stats_utils import bh_fdr, partial_corr
+from stats_utils import bh_fdr, fmt_p, partial_corr
 
 ID_COLS = ["TwoNN", "MLE", "lPCA", "PCA_participation_ratio",
            "PCA_dim_90pct", "PCA_dim_95pct"]
@@ -140,7 +140,7 @@ def main():
             ax = axes[i, j]
             row = res[(res.predictor == pred) & (res.estimator == c)].iloc[0]
             ax.scatter(d[pred], d[c], s=7, alpha=0.4, color=C_REAL, linewidths=0)
-            m, b = np.polyfit(d[pred], d[c], 1)
+            m, b = np.polyfit(d[pred], d[c], 1)   # q is reported in the title
             xs = np.linspace(d[pred].min(), d[pred].max(), 50)
             sig = row["partial_q"] < 0.05
             ax.plot(xs, m * xs + b, lw=2, color=C_DESIGN if sig else C_QUEST)
@@ -155,8 +155,9 @@ def main():
                     ax.plot(ex, m * ex + b, lw=1, ls=":", color=C_DESIGN if sig else C_QUEST)
                 ax.scatter([dx], [dy], s=70, marker="*", color="#111111", zorder=6)
             ax.set_title(f"{c.replace('PCA_','').replace('_',' ')}\n"
-                         f"r={row['pearson_r']:.2f}  partial={row['partial_r_ctrl_logvar']:.2f}"
-                         f"{' *' if sig else ''}", fontsize=8.5)
+                         f"r={row['pearson_r']:.2f}  partial="
+                         f"{row['partial_r_ctrl_logvar']:.2f}  "
+                         f"{fmt_p(row['partial_q'], 'q')}", fontsize=8)
             if j == 0:
                 ax.set_ylabel(f"{pred}\n\nestimated dimension" if i == 0
                               else f"{pred}\n\nestimated dimension", fontsize=8)
