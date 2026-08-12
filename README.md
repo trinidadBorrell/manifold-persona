@@ -153,10 +153,12 @@ extraction/                    # build_and_extract_roles.py (prompt tokens),
                                # generate_and_extract_roles.py (response tokens), push_to_hf.py
 manifold/                      # H1 manifold study: pipeline, tps, run, sweep, local_id
 exploratory/assistant_axis/    # role study: 01–06 + run_all + make_report + figures/<stamp>/
-exploratory/per_persona/       # per-role study: 01–04 + common + run_all + METHODS.md + figures/<stamp>/
+exploratory/per_persona/       # per-role study: two stages (run_id_stage, run_geometry)
+                               # + common + METHODS.md + README.md + figures/<stamp>/
 data/embeddings_roles/         # role cloud, prompt tokens 5x5, L26 (gitignored; UNCLEAN, see above)
 data/embeddings_roles_resp/    # role cloud, response tokens 5x5, L19 (gitignored)
-data/embeddings_roles_resp_40q/ # role cloud, response tokens 5x40, L19 (gitignored; from HF)
+data/embeddings_roles_resp_40q/ # role cloud, response tokens 5x40, 37 layers, use --layer 19 (gitignored)
+data/embeddings_roles_resp40/  # the same cloud thinned to L19 only, use --layer 0 (gitignored; from HF)
 token/huggingface.txt          # HF token (gitignored)
 ```
 
