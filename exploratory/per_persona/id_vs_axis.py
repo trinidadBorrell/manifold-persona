@@ -1,9 +1,9 @@
 """Does a role's intrinsic dimension depend on where it sits on the Assistant Axis?
 
-`id_per_role.py` reports this for ONE estimator (participation ratio) as a single
-r. This runs it for every ID measure we compute, against two different readings
-of "close to the Assistant", with the controls that make a correlation of ~0.3 on
-n=276 interpretable rather than decorative.
+`id_per_role.py` reports this for ONE estimator (participation ratio) as a
+single r. This script runs it for every ID measure we compute, against two
+different readings of "close to the Assistant". It adds the controls that
+make a correlation of ~0.3 on n=276 interpretable rather than decorative.
 
 TWO WAYS TO BE "CLOSE TO THE ASSISTANT" — they are not the same question:
 
@@ -29,7 +29,7 @@ both fixed. Where the raw and partial correlations disagree, the raw one was the
 confound talking.
 
 Six estimators are tested at once, so p-values get Benjamini-Hochberg FDR
-correction; Spearman is reported alongside Pearson because several of the ID
+correction. Spearman is reported alongside Pearson because several of the ID
 distributions are skewed.
 
 Usage:
@@ -83,10 +83,11 @@ def main():
     text_len, text_col = role_text_lengths()
     df["mean_text_len"] = df["role"].map(text_len)
 
-    # `default` is distance 0 from itself and anchors the axis; it cannot inform
-    # a trend about distance FROM it, so every fit here excludes it. It is still
-    # PLOTTED, and its percentile against the other roles recorded: whether the
-    # Assistant itself obeys the trend its own axis defines is the whole point.
+    # `default` is distance 0 from itself and anchors the axis. It cannot
+    # inform a trend about distance FROM it, so every fit here excludes it. It
+    # is still PLOTTED, and its percentile against the other roles is
+    # recorded: whether the Assistant itself obeys the trend its own axis
+    # defines is the whole point.
     d = df[df["role"] != "default"].dropna(
         subset=ID_COLS + PREDICTORS + ["log_var", "mean_text_len"])
     dflt = df[df["role"] == "default"]

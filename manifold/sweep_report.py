@@ -72,7 +72,7 @@ def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
 
     A(f"# Role-count sweep — does a coarser role set make the manifold stronger?\n")
     A(f"**Run** `{stamp}` · plan `plans/2026-07-22-role-count-sweep.md` · "
-      f"context `RESEARCH.md` · status **executed**\n")
+      f"status **executed**\n")
     A(f"**Verdict: {verdicts['decision']}**\n")
     lo_n, hi_n = ns[0], ns[-1]
     dec = verdicts["decision"]

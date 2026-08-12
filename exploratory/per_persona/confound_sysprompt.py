@@ -1,17 +1,15 @@
 """CONFOUND, POST HOC: is the whole panel driven by SYSTEM-PROMPT length?
 
-Plan: plans/2026-07-30-manifold-geometry-vs-assistant-axis.md
-Status: **POST HOC — decided after seeing the run's results, at the user's request
-(2026-07-30). Not preregistered, not part of Experiments 0-6, and it cannot be
-promoted to a confirmatory result.** It writes to its own run dir and never
-touches the parent run.
+Status: **POST HOC — decided after seeing the run's results. Not
+preregistered, and it cannot be promoted to a confirmatory result.** It
+writes to its own run dir and never touches the parent run.
 
-WHY SYSTEM-PROMPT LENGTH IS A REAL CONFOUND WHERE RESPONSE LENGTH WAS NOT
--------------------------------------------------------------------------
-Response length was dropped from this study (2026-08-03): the activations are
-MEAN-pooled over the generated tokens, so the token count is divided out before
-the role's vector is formed. That argument does not retire system-prompt length,
-which is a different variable entirely, for three reasons:
+WHY SYSTEM-PROMPT LENGTH IS A REAL CONFOUND WHERE RESPONSE LENGTH IS NOT
+------------------------------------------------------------------------
+Response length is not in this study. The activations are MEAN-pooled over
+the generated tokens, so the token count is divided out before the role's
+vector is formed. That argument does not retire system-prompt length. It is a
+different variable entirely, for three reasons:
 
 1. It is an INPUT property, fixed before the model runs, and it changes what the
    model generates. Response length, cloud scale and every geometry metric are
@@ -26,8 +24,9 @@ which is a different variable entirely, for three reasons:
 
 The within-role spread of prompt length matters too, so both are used:
 `sys_tok_mean` (the role's average instruction length) and `sys_tok_sd` (how
-much its 5 phrasings differ in length), the latter because the instruction
-factor's variance is what the design decomposition attributes to phrasing.
+much its 5 phrasings differ in length). The second is included because the
+instruction factor's variance is what the design decomposition attributes to
+phrasing.
 
 WHAT IS COMPUTED
 ----------------

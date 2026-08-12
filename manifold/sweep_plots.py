@@ -58,9 +58,10 @@ def _agg(df, col):
 # fig01 — THE DECIDER                                                          #
 # --------------------------------------------------------------------------- #
 def fig01_sweep_decider(df, out: Path, floor: float = 0.30):
-    """Left: M1 relative NRE reduction vs n (the decider). Right: raw R² real vs
-    null median vs n — the trap, drawn explicitly, so a reader can see both
-    curves rise together as n falls and understand why raw R² decides nothing."""
+    """Left: M1 relative NRE reduction vs n (the decider). Right: raw R² real
+    vs null median vs n. The right panel draws the trap explicitly: a reader
+    can see both curves rise together as n falls, and so understand why raw R²
+    decides nothing."""
     try:
         fig, (ax, ax2) = plt.subplots(1, 2, figsize=(12, 4.8))
 
@@ -85,11 +86,12 @@ def fig01_sweep_decider(df, out: Path, floor: float = 0.30):
         ax2.set_xscale("log"); ax2.set_xticks(ns)
         ax2.get_xaxis().set_major_formatter(matplotlib.ticker.ScalarFormatter())
         ax2.set_xlabel("n role centroids"); ax2.set_ylabel("manifold R²")
-        # NB the two curves move in OPPOSITE directions: real R² rises as n falls
-        # (fewer, better-separated anchors), while the null R² falls (a shuffled
-        # labelling gives centroids that all collapse toward the global mean, and
-        # with fewer anchors the fitted surface is smaller). Both effects widen
-        # the gap, which is why the decider trends as it does.
+        # NB the two curves move in OPPOSITE directions. Real R² rises as n
+        # falls (fewer, better-separated anchors). The null R² falls: a
+        # shuffled labelling gives centroids that all collapse toward the
+        # global mean, and with fewer anchors the fitted surface is smaller.
+        # Both effects widen the gap, which is why the decider trends as it
+        # does.
         ax2.set_title("Raw R² is not n-fair, and the two curves move OPPOSITE ways\n"
                       "real ↑ as n falls; null ↓ (shuffled centroids collapse to the mean)")
         ax2.legend(fontsize=8)
@@ -199,14 +201,14 @@ def _open_spline(points: np.ndarray, n: int = 200):
     Open, not periodic (cf. manifold-temporal's `_periodic_spline`): roles are
     not cyclic, so closing the loop would assert structure that isn't claimed.
 
-    **Interpolating (`s=0`), so the curve passes exactly through every centroid**
-    — same as manifold-temporal's figure, and what was asked for. Caveat worth
-    knowing when reading it: an exact cubic through centroids that are ordered by
-    intrinsic coord 1 but scattered in the other two will overshoot between
-    consecutive knots, so the large excursions in the drawn curve are artefacts
-    of the interpolant, not features of the data. The surface mesh (which is the
-    fitted model) is the thing to trust; this curve is a reading aid that
-    connects the named roles in order.
+    **Interpolating (`s=0`), so the curve passes exactly through every
+    centroid** — same as manifold-temporal's figure, and what was asked for.
+    Caveat worth knowing when reading it: the centroids are ordered by
+    intrinsic coord 1 but scattered in the other two. An exact cubic through
+    such knots overshoots between consecutive knots. So the large excursions
+    in the drawn curve are artefacts of the interpolant, not features of the
+    data. The surface mesh (which is the fitted model) is the thing to trust;
+    this curve is a reading aid that connects the named roles in order.
     """
     from scipy.interpolate import splprep, splev
     k = int(min(3, len(points) - 1))
@@ -235,13 +237,14 @@ def fig05_spline_manifold(sub, mani, out: Path, n_roles: int, seed: int,
         raw3 = p.transform(sub.raw)
         evr = p.explained_variance_ratio_
 
-        # NOTE: no decoded surface mesh is drawn (user decision, 2026-07-22).
-        # The TPS maps THREE intrinsic coords -> 50-D, so any 2-D sheet requires
-        # fixing the third coordinate, and every choice of that slice reads as a
-        # flat plate hanging in the middle of the cloud — it looks like a claim
-        # about the geometry that the slice does not actually support. The
-        # curvature question is answered numerically by M3 (fig03), not by eye,
-        # so the mesh was removed rather than made more elaborate.
+        # NOTE: no decoded surface mesh is drawn.
+        # The TPS maps THREE intrinsic coords -> 50-D, so any 2-D sheet
+        # requires fixing the third coordinate. Every choice of that slice
+        # reads as a flat plate hanging in the middle of the cloud — it looks
+        # like a claim about the geometry that the slice does not actually
+        # support. The curvature question is answered numerically by M3
+        # (fig03), not by eye, so the mesh was removed rather than made more
+        # elaborate.
         order = np.argsort(cent3[:, 0])          # order along intrinsic coord 1
         curve = _open_spline(cent3[order]) if len(cent3) >= 4 else None
 
@@ -389,7 +392,7 @@ def fig08_mst_skeleton(sub, out: Path, n_roles: int):
             f"MST skeleton over the n = {n_roles} role centroids (cosine distance, "
             f"unit-normalised) in their own PC1–3.   Every centroid is a node the "
             f"skeleton passes through.\n★ = default (Assistant).   "
-            f"POST HOC — added after the run at the user's request; outside the "
+            f"POST HOC — added after the run; outside the "
             f"preregistered plan, and no claim rests on it.",
             fontsize=9, y=0.05, color="0.3")
         fig.subplots_adjust(bottom=0.12, wspace=0.02)

@@ -6,9 +6,6 @@ fraction at depth L?". This script does exactly that, for ONE cloud (the
 response cloud) at an explicit layer, using the same `design_fractions`
 as every published split.
 
-Written 2026-08-07 for the three-layer-depth experiment
-(wiki/experiments/three-layer-depth/prereg.md, decision rule 1).
-
 Usage:
     MP_ROLE_DIR=data/embeddings_roles_resp_40q \\
       .venv/bin/python exploratory/per_persona/depth_variance.py \\

@@ -1,16 +1,16 @@
 """Correlation and multiple-comparison helpers shared across this study.
 
-These lived in ``04_id_vs_axis.py`` and ``06_axis_ladder.py``. Because both
-filenames began with a digit they could not be imported by name, so the ladder
-reached for its dependency through ``importlib.util.spec_from_file_location``.
-Collecting them here is what let those load-by-path blocks go away — the
-functions are unchanged, and the ladder's rung 2 still runs the *same*
-``partial_corr`` that produced the published `id_vs_axis` numbers rather than a
-copy of it.
+These lived in ``04_id_vs_axis.py`` and ``06_axis_ladder.py``. Both filenames
+began with a digit, so they could not be imported by name. The ladder
+therefore reached for its dependency through
+``importlib.util.spec_from_file_location``. Collecting the functions here let
+those load-by-path blocks go away. The functions are unchanged, and the
+ladder's rung 2 still runs the *same* ``partial_corr`` that produced the
+published `id_vs_axis` numbers rather than a copy of it.
 
-``partial_corr`` (one control) and ``partial_corr_multi`` (any number) are kept
-as separate functions rather than merged: the single-control form is the one
-whose published output must stay reproducible, and ``partial_corr_multi``
+``partial_corr`` (one control) and ``partial_corr_multi`` (any number) are
+kept as separate functions rather than merged. The single-control form is the
+one whose published output must stay reproducible. ``partial_corr_multi``
 asserts against it at run time in the ladder.
 """
 from __future__ import annotations

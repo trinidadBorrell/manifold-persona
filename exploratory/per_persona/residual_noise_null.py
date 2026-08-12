@@ -1,22 +1,24 @@
-"""Residual-noise null for the early interaction rise (three-layer-depth, follow-up 2).
+"""Residual-noise null: is the early (L10) interaction rise noise or structure?
 
-interaction_frac is the residual ANOVA share (see `design_fractions`), so
-extra per-point noise inflates it by construction — the fraction alone
-cannot separate noise from structure. This script tests the residual's
-STRUCTURE instead, per role and per depth:
+interaction_frac is the residual share of the ANOVA (see `design_fractions`).
+Extra per-point noise inflates it by construction. The fraction alone cannot
+separate noise from structure. This script tests the structure of the
+residual instead, per role and per depth.
 
-- within-role split-half replication: split the questions into even/odd
-  halves, remove main effects inside each half, take each half's top-k
-  residual subspace, measure overlap ||Va^T Vb||_F^2 / k. Noise that is
-  independent across cells does not replicate across halves.
-- between-role baseline: the same overlap between DIFFERENT roles
-  (role i half-A vs role i+1 half-A). Generic structured noise (shared
-  token covariance) lands here; role-specific structure exceeds it.
+Two measurements:
 
-Decision rule (wiki/experiments/three-layer-depth, follow-up 2): the noise
-explanation for the L10 interaction rise is refuted if within > between at
-L10 with a 2000-draw role-bootstrap CI excluding 0, and the L10 margin is
-not smaller than the L19 margin.
+- Within-role replication. Split each role's questions into even and odd
+  halves. Remove the main effects inside each half. Take each half's top-k
+  residual subspace. Measure the overlap ||Va^T Vb||_F^2 / k. Independent
+  noise does not replicate across halves, so it scores low.
+- Between-role baseline. Measure the same overlap between different roles
+  (role i half-A vs role i+1 half-A). Noise that all roles share (token
+  covariance) lands here. Role-specific structure scores above it.
+
+Decision rule — the noise explanation is refuted when both hold:
+1. within > between at L10, with a 2000-draw role-bootstrap CI that
+   excludes 0.
+2. The L10 margin is not smaller than the L19 margin.
 
 Usage:
     MP_ROLE_DIR=data/embeddings_roles_resp_40q \\

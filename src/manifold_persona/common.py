@@ -1,10 +1,12 @@
 """Shared helpers for the assistant-axis exploratory study.
 
-Same shape as exploratory/persona_vectors/common.py, but the point cloud is the
-276 character-role personas (data/embeddings_roles/), there is no polarity, and
-we add an "assistant-axis" helper: a direction computed *in our own embedding
-space* as mean(default-role points) - mean(all-role points), the analogue of
-the paper's axis = mean(default) - mean(roles).
+Same shape as exploratory/persona_vectors/common.py, with three differences:
+
+- The point cloud is the 276 character-role personas (data/embeddings_roles/).
+- There is no polarity.
+- An "assistant-axis" helper is added: a direction computed *in our own
+  embedding space* as mean(default-role points) - mean(all-role points).
+  This is the analogue of the paper's axis = mean(default) - mean(roles).
 """
 from __future__ import annotations
 
@@ -19,10 +21,10 @@ from manifold_persona.config import REPO_ROOT, ROLE_EMBEDDINGS_DIR
 from manifold_persona.io import load_layer
 
 # Anchored to the repo root, NOT to __file__. This module used to live at
-# exploratory/assistant_axis/common.py, where `__file__.parent / "figures"` gave
-# the right answer; after the move to src/ it would silently relocate every
-# exploratory figure into the package. RESEARCH.md:27 fixes this location, and
-# .gitignore's `exploratory/*/figures/` rule depends on it.
+# exploratory/assistant_axis/common.py, where `__file__.parent / "figures"`
+# gave the right answer. After the move to src/, that expression would silently
+# relocate every exploratory figure into the package. .gitignore's
+# `exploratory/*/figures/` rule depends on this location.
 FIGURES_DIR = REPO_ROOT / "exploratory" / "assistant_axis" / "figures"
 FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -32,12 +34,13 @@ DEFAULT_COLOR = "#111111"     # the neutral Assistant baseline ("default" role)
 def aggregate_by_role(X: np.ndarray, meta) -> tuple:
     """Collapse the per-example cloud to ONE mean vector per role.
 
-    This is the paper's role-vector definition (arXiv:2601.10387 §2.1.2–2.1.3):
-    each role vector is the mean over all its (system-prompt × extraction-question)
-    rollouts, which averages away the question-content confound so that the
-    remaining variation is *between roles*. Here each raw point is a
-    (role, instruction, question) prompt activation; we average the 25 rows per
-    role (5 instructions × 5 questions) into a single role-mean point.
+    This is the paper's role-vector definition (arXiv:2601.10387 §2.1.2–2.1.3).
+    Each role vector is the mean over all its (system-prompt ×
+    extraction-question) rollouts. The mean averages away the question-content
+    confound, so the remaining variation is *between roles*. Here each raw
+    point is a (role, instruction, question) prompt activation. We average the
+    25 rows per role (5 instructions × 5 questions) into a single role-mean
+    point.
 
     Returns (X_role [n_roles, hidden] float32, meta_role DataFrame[role, is_default]).
     Row order = sorted(unique role), so it is identical across all scripts.
@@ -58,9 +61,9 @@ def load_points(view: str = "prompt_avg", layer: int = None,
                 in_dir=ROLE_EMBEDDINGS_DIR, aggregate: str = None):
     """Return (X [N,hidden] float32, meta DataFrame, manifest dict).
 
-    By default (``aggregate="role"``, overridable via the ``MP_AGGREGATE`` env
-    var) the raw per-example cloud is collapsed to **one mean point per role**
-    (mean across answers) — see :func:`aggregate_by_role`. Pass
+    By default the raw per-example cloud is collapsed to **one mean point per
+    role** (mean across answers) — see :func:`aggregate_by_role`. The default
+    is ``aggregate="role"``; the ``MP_AGGREGATE`` env var overrides it. Pass
     ``aggregate="none"`` for the raw 6,900-point cloud.
     """
     # MP_ROLE_DIR lets the whole exploratory stack point at the response-token
@@ -97,12 +100,12 @@ def center(X: np.ndarray) -> np.ndarray:
 
     This is the paper's exact normalization (arXiv:2601.10387 §2.1.3:
     "standardized these role vectors by subtracting the mean vector across
-    roles") — i.e. **covariance** PCA. We deliberately do NOT z-score: dividing
-    by per-feature std reweights all 2048 residual-stream features (which share
-    one natural scale) and destroys the covariance geometry the Assistant Axis
-    lives in — it drops |cos(PC1, axis)| substantially. ``03_umap_axis.py``
-    records both values per run (``cos_pc1_axis`` and ``cos_pc1_axis_zscored``)
-    and the report prints the measured pair.
+    roles") — i.e. **covariance** PCA. We deliberately do NOT z-score.
+    Dividing by per-feature std reweights all 2048 residual-stream features,
+    which share one natural scale. That destroys the covariance geometry the
+    Assistant Axis lives in, and drops |cos(PC1, axis)| substantially.
+    ``03_umap_axis.py`` records both values per run (``cos_pc1_axis`` and
+    ``cos_pc1_axis_zscored``) and the report prints the measured pair.
     Returns float64 (also avoids a spurious fp32 matmul overflow in sklearn SVD).
     """
     X = np.asarray(X, dtype=np.float64)

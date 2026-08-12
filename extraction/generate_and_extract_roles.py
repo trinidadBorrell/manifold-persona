@@ -1,9 +1,9 @@
 """Stage 0 (paper-matched): GENERATE responses, extract RESPONSE-token activations.
 
 Faithful to the Assistant Axis paper's extraction (assistant-axis/pipeline/
-2_activations.py): for each ``system(role) + user question`` chat we generate a
-response with Qwen2.5-3B-Instruct and read the residual stream averaged over the
-**response** tokens, at all layers. Downstream analysis uses the ~0.5-depth
+2_activations.py). For each ``system(role) + user question`` chat we generate a
+response with Qwen2.5-3B-Instruct. We then read the residual stream averaged
+over the **response** tokens, at all layers. Downstream analysis uses the ~0.5-depth
 layer (manifest.primary_layer = half_depth_hidden_state). Saved distinctly under
 data/embeddings_roles_resp/ so the prompt-token run stays intact.
 

@@ -5,12 +5,12 @@ ID for the 276-point between-role cloud it produces one ID per role from that
 role's within-role points, plus the two nulls defined in common.py.
 
 Estimators come from ``manifold.idim.id_estimates`` and NOT from the
-assistant-axis 01 script: that one hardcodes ``skdim.id.MLE(K=20)``, which
-skdim 0.3.6 ignores under the default ``neighborhood_based=True`` — the fit then
-falls back to 20 neighbours anyway, which on a 25-point cloud uses 20 of the 24
-available neighbours and makes a "local" estimator global. ``manifold.idim``
-passes the neighbourhood where skdim reads it, ``fit(n_neighbors=min(10, n-2))``,
-for exactly this small-n case.
+assistant-axis 01 script. That script hardcodes ``skdim.id.MLE(K=20)``, which
+skdim 0.3.6 ignores under the default ``neighborhood_based=True``. The fit
+then falls back to 20 neighbours anyway. On a 25-point cloud that uses 20 of
+the 24 available neighbours and makes a "local" estimator global.
+``manifold.idim`` passes the neighbourhood where skdim reads it,
+``fit(n_neighbors=min(10, n-2))``, for exactly this small-n case.
 
 Usage:
     .venv/bin/python exploratory/per_persona/id_per_role.py

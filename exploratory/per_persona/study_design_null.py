@@ -1,13 +1,11 @@
 """DESIGN NULL — is a metric measuring the persona, or the shape of our experiment?
 
-Plan: plans/2026-07-30-manifold-geometry-vs-assistant-axis.md (Experiment 1)
-
 This is the most important control in the study. Each role's 200 points are a
 complete 5 x 40 grid — 5 instruction phrasings x 40 questions, one point per
-cell — and that grid forces structure into the data before the model contributes
-anything. A complete two-factor grid has additive rank (n_i - 1) + (n_q - 1) =
-43, so any intrinsic dimension measured on gridded points reports that rank
-unless the interaction term carries real variance.
+cell. That grid forces structure into the data before the model contributes
+anything. A complete two-factor grid has additive rank
+(n_i - 1) + (n_q - 1) = 43. So any intrinsic dimension measured on gridded
+points reports that rank, unless the interaction term carries real variance.
 
 So we synthesise clouds with the same grid and NO persona in them: random
 instruction effects a[i] and question effects b[j], drawn from the real data's

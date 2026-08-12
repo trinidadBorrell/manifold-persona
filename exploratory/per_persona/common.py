@@ -13,10 +13,11 @@ grid caps the cloud's rank:
 
     additive (no-interaction) rank = (n_i - 1) + (n_q - 1)
 
-That is not a bound we impose, it is what a two-factor grid *is*. An ID estimate
-on gridded points reports the grid unless the interaction term carries real
-variance. :func:`design_fractions` measures exactly that, and every script here
-reports it alongside the ID so the number cannot be read without its caveat.
+That is not a bound we impose, it is what a two-factor grid *is*. An ID
+estimate on gridded points reports the grid unless the interaction term
+carries real variance. :func:`design_fractions` measures exactly that. Every
+script here reports it alongside the ID, so the number cannot be read without
+its caveat.
 
 The grid shape is read from the data, never assumed — it differs sharply between
 the two clouds this study has been run on:
@@ -61,10 +62,10 @@ C_INSTR, C_QUEST, C_INTER = "#009E73", "#56B4E9", "#CC79A7"
 def small_matrix_ops():
     """Pin BLAS to one thread AND silence this machine's bogus BLAS FP flags.
 
-    Both halves exist for the same reason: every loop in this study hammers
-    a small matrix thousands of times, and numpy on Apple Accelerate
-    (measured under 2.0.2; both problems are Accelerate-side, not
-    version-specific) handles that badly in two separate ways.
+    Both halves exist for the same reason. Every loop in this study hammers a
+    small matrix thousands of times. numpy on Apple Accelerate handles that
+    badly in two separate ways (measured under 2.0.2; both problems are
+    Accelerate-side, not version-specific).
 
     1. Threads (see :func:`single_threaded`) — 4.5x slower with the default 10.
     2. Spurious divide-by-zero / overflow / invalid RuntimeWarnings raised from
@@ -96,14 +97,14 @@ def single_threaded():
     """Context manager pinning BLAS/OpenMP to one thread.
 
     Every loop in this study runs the same estimator over hundreds of TINY
-    clouds (25 x 2048, and ~25 x 8 after PCA). At that size multithreaded BLAS
-    is pure overhead — the threads spend their time synchronising over matrices
-    that fit in cache. Measured on this machine, one role's full clustering
-    suite takes 40 ms single-threaded and 182 ms with the default 10 threads,
-    i.e. the whole 376-cloud sweep goes from ~68 s to ~15 s by using FEWER
-    cores. Wrap the per-cloud loops, not the whole program: the one genuinely
-    large operation here (eigh of a 2048x2048 covariance, once per null) does
-    want its threads.
+    clouds (25 x 2048, and ~25 x 8 after PCA). At that size multithreaded
+    BLAS is pure overhead — the threads spend their time synchronising over
+    matrices that fit in cache. Measured on this machine: one role's full
+    clustering suite takes 40 ms single-threaded and 182 ms with the default
+    10 threads. The whole 376-cloud sweep thus goes from ~68 s to ~15 s by
+    using FEWER cores. Wrap the per-cloud loops, not the whole program. The
+    one genuinely large operation here (eigh of a 2048x2048 covariance, once
+    per null) does want its threads.
     """
     from threadpoolctl import threadpool_limits
     return threadpool_limits(limits=1)
@@ -121,6 +122,8 @@ def resolve_run_dir(outdir: str = None) -> Path:
     else:
         p = FIGURES_DIR / timestamp()
     p.mkdir(parents=True, exist_ok=True)
+    from manifold_persona.provenance import write_stamp
+    write_stamp(p, data_dirs=[os.environ.get("MP_ROLE_DIR", ROLE_EMBEDDINGS_DIR)])
     return p
 
 
@@ -139,9 +142,9 @@ def load_role_clouds(view: str = "prompt_avg", layer: int = None):
 
     clouds[role]  -> float64 [25, hidden]
     factors[role] -> (instr [25], quest [25]) contiguous 0..4 codes. The stored
-        ``question_idx`` indexes the 240-question pool, not the 5 sampled ones,
-        so it is re-coded here; ``instruction_idx`` is already 0..4 but is
-        re-coded the same way so both factors are handled identically.
+        ``question_idx`` indexes the 240-question pool, not the 5 sampled
+        ones, so it is re-coded here. ``instruction_idx`` is already 0..4 but
+        is re-coded the same way, so both factors are handled identically.
     """
     X, meta, manifest = load_points(view=view, layer=layer, aggregate="none")
     roles = sorted(meta["role"].unique())
@@ -159,12 +162,12 @@ def load_role_clouds(view: str = "prompt_avg", layer: int = None):
 def role_text_lengths() -> tuple:
     """(role -> mean character length of the embedded text, column used).
 
-    The basis follows the cloud, which is why the caller should label the number
-    generically: a response-token cloud carries a ``response`` column and this is
-    mean RESPONSE length; a prompt-token cloud has only ``text`` (the rendered
-    prompt) and this is mean PROMPT length. Same ``MP_ROLE_DIR`` override as
-    :func:`manifold_persona.common.load_points`, so it always reads the metadata
-    of the cloud the clouds themselves came from.
+    The basis follows the cloud, so the caller should label the number
+    generically. A response-token cloud carries a ``response`` column, and
+    this is mean RESPONSE length. A prompt-token cloud has only ``text`` (the
+    rendered prompt), and this is mean PROMPT length. Same ``MP_ROLE_DIR``
+    override as :func:`manifold_persona.common.load_points`, so it always
+    reads the metadata of the cloud the clouds themselves came from.
     """
     meta = load_metadata(os.environ.get("MP_ROLE_DIR", ROLE_EMBEDDINGS_DIR))
     col = "response" if "response" in meta.columns else "text"
@@ -193,10 +196,11 @@ def design_fractions(Xr: np.ndarray, instr: np.ndarray, quest: np.ndarray) -> di
     """Two-way ANOVA of a role's 25 points: how much is the 5x5 grid?
 
     Fits the additive model ``x_ij = grand + A_i + B_j`` and splits the total
-    centred sum-of-squares into the instruction effect, the question effect and
-    the residual (= interaction, the only term that is NOT forced by the grid).
-    Fractions are of the total centred SS and the additive ones need not sum to
-    exactly 1 minus interaction unless the design is balanced — it is (5x5).
+    centred sum-of-squares into the instruction effect, the question effect
+    and the residual (= interaction, the only term that is NOT forced by the
+    grid). Fractions are of the total centred SS. The additive fractions need
+    not sum to exactly 1 minus interaction unless the design is balanced — it
+    is (5x5).
     """
     Xc = Xr - Xr.mean(0)
     tot = float((Xc ** 2).sum())
@@ -236,11 +240,11 @@ def _gauss(rng, n: int, S: np.ndarray) -> np.ndarray:
 
     Wrapped because numpy 2.0.2 on this machine's Apple Accelerate BLAS raises
     spurious divide-by-zero / overflow / invalid RuntimeWarnings on a matmul
-    against a 2048x2048 factor even when every output value is finite (verified:
-    |S| max ~3, all outputs finite). The flags come from the BLAS kernel, not
-    from the arithmetic, so they are suppressed here — and the assertion below
-    makes sure a genuine numerical failure still stops the run rather than
-    hiding behind the suppression.
+    against a 2048x2048 factor, even when every output value is finite
+    (verified: |S| max ~3, all outputs finite). The flags come from the BLAS
+    kernel, not from the arithmetic, so they are suppressed here. The
+    assertion below makes sure a genuine numerical failure still stops the
+    run rather than hiding behind the suppression.
     """
     with np.errstate(divide="ignore", over="ignore", invalid="ignore"):
         out = rng.standard_normal((n, S.shape[0])) @ S.T
@@ -251,12 +255,13 @@ def _gauss(rng, n: int, S: np.ndarray) -> np.ndarray:
 def _sqrt_cov(M: np.ndarray) -> np.ndarray:
     """Symmetric square root of cov(M) via eigendecomposition (clip tiny negatives).
 
-    Same construction as ``manifold.idim.gaussian_reference``, but the factor is
-    formed by column-scaling ``V * sqrt(w)`` instead of ``V @ diag(sqrt(w))``.
-    Identical result; it avoids materialising and multiplying a dense 2048x2048
-    diagonal, which on this machine's BLAS (numpy 2.0.2 on Apple Accelerate)
-    also raised spurious divide-by-zero/overflow RuntimeWarnings on the zero
-    entries even though every output value was finite.
+    Same construction as ``manifold.idim.gaussian_reference``, but the factor
+    is formed by column-scaling ``V * sqrt(w)`` instead of
+    ``V @ diag(sqrt(w))``. Identical result. It avoids materialising and
+    multiplying a dense 2048x2048 diagonal. On this machine's BLAS (numpy
+    2.0.2 on Apple Accelerate) that multiply also raised spurious
+    divide-by-zero/overflow RuntimeWarnings on the zero entries, even though
+    every output value was finite.
     """
     w, V = np.linalg.eigh(np.cov(M, rowvar=False))
     return V * np.sqrt(np.clip(w, 0, None))

@@ -1,26 +1,24 @@
 """CONFOUND — how much of a role's internal variation is the extraction grid?
 
-Plan: plans/2026-07-30-manifold-geometry-vs-assistant-axis.md (Experiment 6)
-
 Each role's points are a complete two-factor grid: n_i instruction phrasings x
-n_q shared questions, one point per cell. A two-way ANOVA on that grid — done on
-VECTORS, so every sum of squares is a Frobenius sum over all 2048 dimensions at
-once — splits each role's within-role variance three ways:
+n_q shared questions, one point per cell. A two-way ANOVA on that grid splits
+each role's within-role variance three ways. It is done on VECTORS, so every
+sum of squares is a Frobenius sum over all 2048 dimensions at once:
 
     instruction phrasing   forced by the design
     question               forced by the design
     interaction            the ONLY persona-specific term
 
-Instruction and question are the two axes of the grid, so a manifold measured on
-gridded points reports the grid unless interaction carries real variance. The
-three sum to exactly 1 because the grid is balanced, which makes the instruction
-and question effects orthogonal (METHODS.md S1).
+Instruction and question are the two axes of the grid. So a manifold measured
+on gridded points reports the grid, unless interaction carries real variance.
+The three sum to exactly 1 because the grid is balanced. Balance makes the
+instruction and question effects orthogonal (METHODS.md S1).
 
-Run on BOTH clouds, so the contrast is reproduced from live numbers rather than
-from the plan's prose: on the 25-point prompt cloud 99.4% of within-role variance
-is the grid (interaction 0.6%), while on the 200-point response cloud interaction
-carries 17.7%. That ~30x difference is the reason per-role geometry is measurable
-here and was not measurable before.
+Run on BOTH clouds, so the contrast is reproduced from live numbers rather
+than from the plan's prose. On the 25-point prompt cloud, 99.4% of
+within-role variance is the grid (interaction 0.6%). On the 200-point
+response cloud, interaction carries 17.7%. That ~30x difference is the reason
+per-role geometry is measurable here and was not measurable before.
 
 Produces `prompt_vs_response_L<L>.json` -> fig09.
 

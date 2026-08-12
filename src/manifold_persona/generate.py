@@ -1,17 +1,17 @@
 """Response generation + response-token activation extraction (assistant-axis match).
 
-Where ``extract.py`` reads the residual stream over *prompt* tokens with no
-generation, this module makes the study faithful to the Assistant Axis paper
-(``assistant-axis/pipeline/2_activations.py``): for each ``system(role) + user
-question`` chat we **generate a response**, then read the residual stream
-**averaged over the assistant-response tokens** (``resp_avg``) plus the final
-response token (``resp_last``), for every hidden state. Downstream analysis then
-uses the ~0.5-depth layer, matching the paper's layer choice.
+``extract.py`` reads the residual stream over *prompt* tokens, with no
+generation. This module instead makes the study faithful to the Assistant Axis
+paper (``assistant-axis/pipeline/2_activations.py``). For each ``system(role) +
+user question`` chat we **generate a response**. We then read the residual
+stream **averaged over the assistant-response tokens** (``resp_avg``) plus the
+final response token (``resp_last``), for every hidden state. Downstream
+analysis then uses the ~0.5-depth layer, matching the paper's layer choice.
 
-Saved in the exact same on-disk layout as ``extract.py`` (npy views named
-``prompt_avg``/``prompt_last`` so the whole exploratory stack loads it unchanged;
-here those arrays hold the *response*-token means, and the manifest records
-``token_basis="response"``).
+Saved in the exact same on-disk layout as ``extract.py``: the npy views are
+named ``prompt_avg``/``prompt_last``, so the whole exploratory stack loads it
+unchanged. Here those arrays hold the *response*-token means, and the manifest
+records ``token_basis="response"``.
 """
 from __future__ import annotations
 

@@ -1,13 +1,11 @@
 """Every figure for the geometry-vs-axis run.
 
-Plan: plans/2026-07-30-manifold-geometry-vs-assistant-axis.md (Outputs table)
-
 Grouped the way the study is: fig00/fig01 are the CALIBRATION controls,
 fig02-fig05 and fig07/fig08 are the STUDY, fig09 is the design CONFOUND.
 
-Figure titles no longer carry an EXPLORATORY tag (user request, 2026-07-31). The
-fence now rests on `"exploratory": true` in every data file, the no-verdict
-banner at the top of REPORT.md, and the plan itself.
+Figure titles carry no EXPLORATORY tag. The fence rests on
+`"exploratory": true` in every data file and the no-verdict banner at the
+top of REPORT.md.
 
 Every plot function is defensive (repo convention): a failure logs and returns
 so it cannot destroy a run that has already produced its numbers.
@@ -52,9 +50,8 @@ YLABELS = {
     "effective_rank": "effective rank\n(exp of spectral entropy)",
 }
 
-# Must match study_ladder.RUNGS. Three rungs since response length was dropped
-# (2026-08-03): mean-pooled activations divide the token count out, so length
-# was never a mechanism that moved a role along the axis.
+# Must match study_ladder.RUNGS. No response-length rung: mean-pooled
+# activations divide the token count out, so length is not a mechanism.
 RUNGS = [("r_raw", "raw"), ("r_ctrl_logvar", "| log_var"),
          ("r_ctrl_all", "| log_var + mean_norm")]
 RUNG_COLORS = [C_GAUSS, C_INSTR, C_REAL]
@@ -215,9 +212,9 @@ def fig02b_forest_axisproj(lad, run_dir, L):
     #   betti1 — 0 for all but a handful of roles, so its correlation is noise
     #            about a near-constant and the row is meaningless.
     #   betti0 — NOT broken: it equals 1 + #{MST edges > 10% of diameter}, a real
-    #            sparsity measure (r = -0.570). Dropped at the user's request
-    #            because "Betti-0" reads as topology and it is not measuring
-    #            topology. Put it back by editing DROP_FROM_AXISPROJ.
+    #            sparsity measure (r = -0.570). Dropped because "Betti-0" reads
+    #            as topology and it is not measuring topology. Put it back by
+    #            editing DROP_FROM_AXISPROJ.
     DROP_FROM_AXISPROJ = ("betti0", "betti1")
     s = lad[(lad.predictor == "axis_proj")
             & (~lad.degenerate.fillna(False))
@@ -321,8 +318,8 @@ def fig04_design_null(nullj, run_dir, L):
 def fig05_regression(reg, run_dir, L):
     """Geometry against the boring baseline: how big and how long is the cloud?
 
-    The baseline used to be response length. It is now cloud scale — log_var and
-    mean_norm — which is a far harder baseline to beat, since mean_norm is a
+    The baseline used to be response length. It is now cloud scale — log_var
+    and mean_norm. That is a far harder baseline to beat: mean_norm is a
     factor of the target by construction (axis_proj = mean_norm x cos_axis).
     """
     names = ["M0_intercept", "M1_scale_only", "M2_geometry_only",
@@ -398,10 +395,10 @@ def fig09_contrast(con, run_dir, L):
     """Variance decomposition of the RESPONSE cloud only.
 
     Earlier revisions put the 25-point prompt cloud beside it. That comparison
-    now lives in the report's table instead: this run's analysis is entirely on
-    the 5x40 response cloud, and showing a second cloud invited the figure to be
-    read as a result about both. IQR whiskers across the 276 roles replace the
-    second cloud as the thing that gives each bar context.
+    now lives in the report's table instead. This run's analysis is entirely
+    on the 5x40 response cloud, and a second cloud invited the figure to be
+    read as a result about both. IQR whiskers across the 276 roles replace
+    the second cloud as the context for each bar.
     """
     c_ = con["clouds"].get("response_5x40", {"error": 1})
     if "error" in c_:

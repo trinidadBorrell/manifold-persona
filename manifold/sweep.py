@@ -279,7 +279,7 @@ def main(argv=None) -> None:
                            n_perm, seeds, n_ref, cloud))
 
     manifest = {
-        "run_id": stamp, "plan": PLAN, "context": "RESEARCH.md", "status": status,
+        "run_id": stamp, "plan": PLAN, "status": status,
         "git": "not-a-git-repo (reproducibility via manifest+seeds)",
         # Read from the cloud's own manifest -- these used to be hardcoded to the
         # 3B/layer-26 run and silently misreported any other cloud.

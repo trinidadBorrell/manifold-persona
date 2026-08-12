@@ -1,11 +1,10 @@
 """THE PANEL — every geometry metric for all 276 roles, plus the three predictors.
 
-Plan: plans/2026-07-30-manifold-geometry-vs-assistant-axis.md (Experiment 2)
-
-This is the data file the rest of the study reads. It runs `metrics.panel_metrics`
-once per role and joins on the three readings of "how Assistant-like is this
-role?", so that every downstream script (ladder, regression, families, design
-null, figures) works from one table and none of them recompute geometry.
+This is the data file the rest of the study reads. It runs
+`metrics.panel_metrics` once per role and joins on the three readings of "how
+Assistant-like is this role?". Every downstream script (ladder, regression,
+families, design null, figures) then works from one table, and none of them
+recompute geometry.
 
 THE THREE PREDICTORS ARE NOT REDUNDANT
 --------------------------------------
@@ -15,10 +14,10 @@ THE THREE PREDICTORS ARE NOT REDUNDANT
 
 so that **axis_proj == mean_norm * cos_axis exactly**. A correlation with
 axis_proj can therefore come from a role's mean vector being *longer* rather
-than pointing more toward the Assistant, and only cos_axis separates the two.
-`dist_default` is the fourth: distance from the Assistant in ANY direction, not
-just along the one line. METHODS.md records that it and axis_proj agree at
-r = 0.999 and are one finding stated twice; cos_axis is the one that can
+than pointing more toward the Assistant. Only cos_axis separates the two.
+`dist_default` is the fourth: distance from the Assistant in ANY direction,
+not just along the one line. METHODS.md records that it and axis_proj agree
+at r = 0.999 and are one finding stated twice. cos_axis is the one that can
 disagree.
 
 The persistence diagrams are saved per role so the Betti lifetime threshold can
@@ -48,9 +47,9 @@ def add_predictors(df: pd.DataFrame, view: str, layer) -> pd.DataFrame:
     """Join the four assistant-closeness readings onto the per-role panel.
 
     Computed from the ROLE-MEAN cloud (one point per role, mean-centred across
-    the 276), which is the between-role object the assistant-axis study works
-    in — deliberately a different space from the within-role clouds the panel
-    metrics come from.
+    the 276). That is the between-role object the assistant-axis study works
+    in. It is deliberately a different space from the within-role clouds the
+    panel metrics come from.
     """
     X_roles, meta_roles, _ = load_points(view=view, layer=layer, aggregate="role")
     Xc = center(X_roles)

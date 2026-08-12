@@ -29,8 +29,8 @@ FIGURES_DIR = REPO_ROOT / "exploratory"
 # Roles + extraction questions are VENDORED under refs/assistant-axis/ (see its
 # PROVENANCE.md), so extraction runs with no sibling checkout. Setting
 # ASSISTANT_AXIS_DIR overrides to a live checkout, which uses the upstream
-# `data/` layout; the vendored copy drops that segment (the repo's unanchored
-# `.gitignore` `data/` rule would otherwise untrack it).
+# `data/` layout. The vendored copy drops that `data/` segment: the repo's
+# unanchored `.gitignore` `data/` rule would otherwise untrack it.
 VENDORED_AXIS_DIR = REPO_ROOT / "refs" / "assistant-axis"
 _axis_override = os.environ.get("ASSISTANT_AXIS_DIR")
 
@@ -69,10 +69,9 @@ HF_REPO_NAME = "manifold-persona"  # dataset repo id becomes <username>/manifold
 # --- Analysis depths --------------------------------------------------------
 # Depths are FRACTIONS of decoder depth, not raw layer indices: "layer 19"
 # means different depths in a 0.5B (24 blocks) vs a 3B (36 blocks) model,
-# while "0.5 depth" transfers (Giovanni, 2026-08-07). Fractions live in
-# BLOCK space (assistant-axis convention: the activation is the output of
-# ``model.model.layers[k]``); use :func:`depth_hidden_state` to index HF
-# ``output_hidden_states``.
+# while "0.5 depth" transfers. Fractions live in BLOCK space (assistant-axis
+# convention: the activation is the output of ``model.model.layers[k]``). Use
+# :func:`depth_hidden_state` to index HF ``output_hidden_states``.
 #
 # For Qwen2.5-3B-Instruct (36 blocks) these give hidden states 10 / 19 / 26.
 # "mid" and "late" reproduce the two existing clouds (resp40q-L19,

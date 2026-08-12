@@ -1,25 +1,25 @@
 """Clustering inside each role — one clustering study per role.
 
-Mirrors exploratory/assistant_axis/02_clustering.py (same methods, same internal
-scores, same PCA-95% working space) but run once per role on that role's own
-points, and — unlike the assistant-axis version — scored against **real external
-labels**. That is the one thing this study can do that the between-role study
-cannot: after role-mean aggregation each role is a single point and any grouping
-of those points is circular (assistant_axis/02 says so explicitly), whereas here
-every point carries a known instruction index and a known question index. So we
-score ARI / NMI against both, exactly as exploratory/persona_vectors/02 scores
-against trait and polarity.
+Mirrors exploratory/assistant_axis/02_clustering.py (same methods, same
+internal scores, same PCA-95% working space) but run once per role on that
+role's own points. Unlike the assistant-axis version, it is scored against
+**real external labels**. That is the one thing this study can do that the
+between-role study cannot. After role-mean aggregation each role is a single
+point, and any grouping of those points is circular (assistant_axis/02 says
+so explicitly). Here every point carries a known instruction index and a
+known question index. So we score ARI / NMI against both, exactly as
+exploratory/persona_vectors/02 scores against trait and polarity.
 
 The question is therefore not "does a role cluster?" — points always split — but
 **what does it cluster BY**: the phrasing of the persona instruction, or the
 question being answered? And is that split any different from the design null,
 which has the same grid and no persona at all?
 
-Everything that depends on cloud size adapts to it (:func:`k_range`), because the
-two clouds this has run on differ by 8x: 25 points/role (5x5) and 200 points/role
-(5x40). The k search always spans both ground-truth partitions (n_i and n_q) so
-"did it find the instructions or the questions?" is answerable in one place, and
-both are also fitted explicitly as kmeans_k<n_i> / kmeans_k<n_q>.
+Everything that depends on cloud size adapts to it (:func:`k_range`). The two
+clouds this has run on differ by 8x: 25 points/role (5x5) and 200 points/role
+(5x40). The k search always spans both ground-truth partitions (n_i and n_q),
+so "did it find the instructions or the questions?" is answerable in one
+place. Both are also fitted explicitly as kmeans_k<n_i> / kmeans_k<n_q>.
 
 Usage:
     .venv/bin/python exploratory/per_persona/clustering_per_role.py
@@ -91,9 +91,10 @@ def cluster_one(Xr, instr, quest, n_i, n_q, pca_var=0.95) -> dict:
     cum = np.cumsum(s ** 2) / (s ** 2).sum()
     d = max(2, int(np.searchsorted(cum, pca_var) + 1))
     # svd_solver="full": these clouds have few rows (25-200) against 2048
-    # columns, so the exact SVD is cheaper than the randomized one sklearn would
-    # otherwise pick, and it keeps numpy's Accelerate BLAS from raising spurious
-    # overflow warnings inside randomized_svd (results were finite either way).
+    # columns, so the exact SVD is cheaper than the randomized one sklearn
+    # would otherwise pick. It also keeps numpy's Accelerate BLAS from raising
+    # spurious overflow warnings inside randomized_svd (results were finite
+    # either way).
     X = PCA(n_components=min(d, min(Xc.shape) - 1), svd_solver="full",
             random_state=0).fit_transform(Xc)
 

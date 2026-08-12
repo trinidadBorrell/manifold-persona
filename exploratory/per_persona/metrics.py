@@ -1,17 +1,17 @@
 """The geometry panel: every metric computed for ONE point cloud.
 
-Extracted from the old ``05_geometry_panel.py``, which held three things at once
-— the positive control, the real panel and the design null. All three run the
-identical function on different clouds, and that identity is the whole reason
-the controls mean anything, so it lives in one shared module and the three
-callers (`calib_estimators.py`, `study_panel.py`, `study_design_null.py`) import
-it rather than each owning a copy.
+Extracted from the old ``05_geometry_panel.py``, which held three things at
+once — the positive control, the real panel and the design null. All three run
+the identical function on different clouds. That identity is the whole reason
+the controls mean anything. So the function lives in one shared module, and
+the three callers (`calib_estimators.py`, `study_panel.py`,
+`study_design_null.py`) import it rather than each owning a copy.
 
-The panel covers six intrinsic-dimension estimators plus thirteen more metrics
-spanning topology, curvature, spectral shape, local heterogeneity and the
-extraction-design decomposition — because "assistant-like roles have
+The panel covers six intrinsic-dimension estimators plus thirteen more
+metrics. They span topology, curvature, spectral shape, local heterogeneity
+and the extraction-design decomposition. "Assistant-like roles have
 lower-dimensional manifolds" and "assistant-like roles have geometrically
-different manifolds" are different claims, and only a panel can tell them apart.
+different manifolds" are different claims. Only a panel can tell them apart.
 
 ``PANEL_COLS`` is the single source of truth for which columns are geometry.
 Downstream scripts import it instead of re-deriving the list from a JSON file's
@@ -57,11 +57,11 @@ PANEL_COLS = ID_COLS + [
 def _spectrum(Xc: np.ndarray) -> dict:
     """Decay exponent and effective rank of the covariance spectrum.
 
-    Two shape statistics that are NOT dimension counts: the decay exponent says
-    how fast variance falls off across directions (a steep power law means a few
-    directions dominate), and the effective rank (exp of the spectral entropy)
-    says how evenly variance is spread. Both are continuous, so unlike
-    PCA_dim_90pct they cannot be pinned to the design's additive rank.
+    Two shape statistics that are NOT dimension counts. The decay exponent
+    says how fast variance falls off across directions (a steep power law
+    means a few directions dominate). The effective rank (exp of the spectral
+    entropy) says how evenly variance is spread. Both are continuous, so
+    unlike PCA_dim_90pct they cannot be pinned to the design's additive rank.
     """
     lam = np.linalg.svd(Xc, compute_uv=False) ** 2
     lam = lam[lam > 0]
@@ -78,16 +78,17 @@ def _spectrum(Xc: np.ndarray) -> dict:
 def _curvature(P: np.ndarray) -> dict:
     """Spline R^2 and curvature gain of one cloud, in its own PCA-50 space.
 
-    Mirrors plan #1's construction exactly — anchors are group means, the fitted
-    TPS surface is scored on ALL the cloud's raw points, and the flat baseline is
-    a k-dim PCA plane on the same points with the same fixed mean, so the gain is
-    curvature and not extra fitting freedom in the denominator.
+    Mirrors plan #1's construction exactly. Anchors are group means. The
+    fitted TPS surface is scored on ALL the cloud's raw points. The flat
+    baseline is a k-dim PCA plane on the same points with the same fixed
+    mean. So the gain is curvature, not extra fitting freedom in the
+    denominator.
 
-    Anchors are 40 k-means centroids rather than the 40 question-means, so that
-    real roles, design-null clouds and planted control clouds are treated
-    IDENTICALLY: the planted clouds have no question factor, and a metric whose
-    definition changed between the real data and its own control would be
-    uncontrolled.
+    Anchors are 40 k-means centroids rather than the 40 question-means. Real
+    roles, design-null clouds and planted control clouds are then treated
+    IDENTICALLY. The planted clouds have no question factor, and a metric
+    whose definition changed between the real data and its own control would
+    be uncontrolled.
     """
     n_anchor = min(N_ANCHORS, len(P) - 1)
     km = KMeans(n_clusters=n_anchor, n_init=4, random_state=SEED).fit(P)
@@ -123,15 +124,16 @@ def panel_metrics(X: np.ndarray, instr=None, quest=None,
     #
     # Why denoise at all: the role clouds carry an isotropic noise floor spread
     # over all 2048 dimensions. Neighbour-based estimators measure small
-    # distances, which is exactly where that floor dominates, so on raw points
-    # TwoNN reads a true d=3 as 8-11 and MLE as 4.1-4.5 (see CALIBRATION.md).
+    # distances, which is exactly where that floor dominates. On raw points
+    # TwoNN reads a true d=3 as 8-11 and MLE as 4.1-4.5 (see
+    # docs/notes/calibration-history.md).
     # Projecting onto the top-variance subspace strips most of the floor.
     #
     # Why a FIXED count and not "retain 90/95% of variance": a variance fraction
     # is not the same operation on different clouds. On the planted control
     # clouds PCA-90% keeps ~9 components; on real role clouds it keeps a median
     # of 43 (range 32-82). A control run that way would validate an operation
-    # the real data never receives, and the retained count would itself become a
+    # the real data never receives. The retained count would also become a
     # per-role variable confounded with cloud structure. A fixed 50 applies the
     # identical map to real, design-null and planted clouds alike.
     #
@@ -149,8 +151,8 @@ def panel_metrics(X: np.ndarray, instr=None, quest=None,
     # Continuous topology readout. The thresholded betti1 is identically 0 on
     # this cloud (max H1 lifetime reaches only 9.4% of diameter, under the 10%
     # rule), so the count has no variance to correlate with anything. The
-    # lifetime fraction it is derived from does vary, needs no threshold, and is
-    # what the ladder actually uses; betti0/betti1 stay in the panel as
+    # lifetime fraction it is derived from does vary, needs no threshold, and
+    # is what the ladder actually uses. betti0/betti1 stay in the panel as
     # descriptive columns.
     out["H1_max_lifetime_frac"] = (out["H1_max_lifetime"] / out["cloud_diameter"]
                                    if out.get("cloud_diameter") else np.nan)
@@ -175,8 +177,8 @@ def panel_metrics(X: np.ndarray, instr=None, quest=None,
 def geometry_columns(df) -> list:
     """The panel columns present in `df` and carrying variance.
 
-    ``betti1`` is identically 0 on this cloud (plan amendment A4), so it is a
-    constant column that a scaler would drop anyway; excluding it here makes the
-    predictor list explicit instead of implicit.
+    ``betti1`` is identically 0 on this cloud, so it is a constant column that
+    a scaler would drop anyway. Excluding it here makes the predictor list
+    explicit instead of implicit.
     """
     return [c for c in PANEL_COLS if c in df.columns and df[c].std() > 0]

@@ -1,17 +1,18 @@
 """Thin-plate-spline manifold — numpy reimplementation of causalab's spline.
 
 We do not import ``causalab.methods.spline`` here: causalab is not a
-dependency of this repo (the port was made when the venv ran 3.9 and could
-not even parse causalab's ``X | Y`` unions; the venv is 3.12 now, but the
-port stays so the pipeline needs no causalab checkout). So this module:
+dependency of this repo. (The port was made when the venv ran 3.9 and could
+not even parse causalab's ``X | Y`` unions. The venv is 3.12 now, but the
+port stays so the pipeline needs no causalab checkout.) So this module:
   - **faithfully ports** ``causalab/methods/spline/tps.py`` (kernel, augmented
     linear solve, evaluate) — line-for-line for the pure-linear case, and
   - **adapts, with hardening,** the projection of
-    ``causalab/methods/spline/manifold.py::encode_to_nearest_point``: same
-    Gauss-Newton idea and nearest-centroid warm start, but forward-difference
-    Jacobian, an intrinsic-coordinate clamp box, and a keep-best-residual rule
-    (see ``project``). The hardening is required for the high-D-ambient /
-    low-D-surface regime and is applied identically to real and null data.
+    ``causalab/methods/spline/manifold.py::encode_to_nearest_point``. It keeps
+    the same Gauss-Newton idea and nearest-centroid warm start. It adds a
+    forward-difference Jacobian, an intrinsic-coordinate clamp box, and a
+    keep-best-residual rule (see ``project``). The hardening is required for
+    the high-D-ambient / low-D-surface regime and is applied identically to
+    real and null data.
 Restricted to the pure-linear (non-periodic, non-sphere) case we need for roles.
 
 A ``SplineManifold`` interpolates ``control_points`` (k-dim intrinsic coords) ->
@@ -100,13 +101,13 @@ class SplineManifold:
 
         Warm start: the intrinsic coord of the nearest target point. Iterates
         argmin_u ||decode(u) - x||^2 with a *forward*-difference Jacobian
-        (causalab uses central; forward halves the decodes), but:
-          - intrinsic coords are clamped to a padded box around the control
-            points so the TPS is never queried where it extrapolates to huge
-            values (the cause of overflow), and
-          - we keep the *best* (smallest-residual) coord seen per point, so the
-            projection can never be worse than the nearest-centroid warm start
-            (guarantees a well-defined, monotone reconstruction).
+        (causalab uses central; forward halves the decodes). Two safeguards:
+          - Intrinsic coords are clamped to a padded box around the control
+            points. So the TPS is never queried where it extrapolates to huge
+            values (the cause of overflow).
+          - We keep the *best* (smallest-residual) coord seen per point. So the
+            projection can never be worse than the nearest-centroid warm start,
+            which guarantees a well-defined, monotone reconstruction.
         """
         x = np.asarray(x, dtype=np.float64)
         b = x.shape[0]

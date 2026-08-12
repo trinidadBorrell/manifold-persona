@@ -22,19 +22,20 @@ Betti-1 a measure of sample size. We therefore count only features whose
 *lifetime* (death - birth) exceeds ``LIFETIME_FRAC`` of the role's own PCA-50
 diameter.
 
-That fraction has to be **relative to each role's own scale**, not absolute:
-roles differ several-fold in cloud radius (that is itself a panel covariate), so
-an absolute lifetime cut-off would count more loops for large roles purely
-because their distances are larger — manufacturing exactly the scale confound
-the rest of this run is built to control for. Dividing by the role's diameter
-makes the count scale-free, so Betti and radius are free to be uncorrelated.
+That fraction has to be **relative to each role's own scale**, not absolute.
+Roles differ several-fold in cloud radius (that is itself a panel covariate).
+An absolute lifetime cut-off would count more loops for large roles purely
+because their distances are larger. That would manufacture exactly the scale
+confound the rest of this run is built to control for. Dividing by the role's
+diameter makes the count scale-free, so Betti and radius are free to be
+uncorrelated.
 
-The raw diagrams are always returned alongside the counts and are saved by the
-caller, so the threshold can be re-cut later without re-running ripser (which is
-the expensive part).
+The raw diagrams are always returned alongside the counts and are saved by
+the caller. The threshold can then be re-cut later without re-running ripser
+(which is the expensive part).
 
-Both directions of the threshold are controlled in ``calib_estimators.py``: a
-planted noisy circle must yield Betti-1 = 1 and a planted Gaussian blob must
+Both directions of the threshold are controlled in ``calib_estimators.py``. A
+planted noisy circle must yield Betti-1 = 1, and a planted Gaussian blob must
 yield Betti-1 = 0 under this same rule. Without the second, the rule would
 manufacture loops and every role would look topologically interesting.
 """

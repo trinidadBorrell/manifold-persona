@@ -1,13 +1,11 @@
 """THE CORRELATION LADDER: every panel metric vs every closeness measure.
 
-Plan: plans/2026-07-30-manifold-geometry-vs-assistant-axis.md (Experiments 1, 3)
-
 WHAT A "LADDER" IS AND WHY IT REPLACES A SINGLE CORRELATION
 -----------------------------------------------------------
 `id_vs_axis.py` reports two numbers per estimator: a raw r and a partial r
 controlling cloud scale. That is already better than a raw correlation, but it
-answers only one confound. This reports THREE correlations per (metric,
-predictor) pair, each adding a control, so that erosion is visible as a
+answers only one confound. This script reports THREE correlations per (metric,
+predictor) pair. Each rung adds a control. Erosion is then visible as a
 trajectory rather than asserted at one point:
 
   rung 1  raw Pearson r                      (what `id_vs_axis` headlines)
@@ -16,20 +14,19 @@ trajectory rather than asserted at one point:
 
 A metric whose r survives rung 3 is saying something about geometry. A metric
 whose r collapses between rung 1 and rung 3 was a confound wearing geometry's
-clothes, and which rung it dies at names the confound.
+clothes. The rung it dies at names the confound.
 
 Rung 2 calls the SAME ``partial_corr`` that produced the published `id_vs_axis`
-numbers — now a normal import from ``stats_utils`` rather than a copy — so the
-regression check below is meaningful.
+numbers. It is now a normal import from ``stats_utils`` rather than a copy.
+That is what makes the regression check below meaningful.
 
-RESPONSE LENGTH IS NOT A RUNG (removed 2026-08-03)
---------------------------------------------------
-Earlier revisions carried a `| mean_tokens` rung and a fourth control set
-including `trunc_rate`. Both are gone. These activations are MEAN-pooled over
-the generated tokens, so the token count is divided out before the role's vector
-is formed; length is not a mechanism by which a longer answer moves a role along
-the axis. The run's own numbers agreed — no metric was ever flagged
-LENGTH-EXPLAINED, and the raw length-vs-axis correlation was +0.258.
+RESPONSE LENGTH IS NOT A RUNG
+-----------------------------
+These activations are MEAN-pooled over the generated tokens, so the token
+count is divided out before the role's vector is formed. Length is not a
+mechanism by which a longer answer moves a role along the axis. The run's own
+numbers agreed — no metric was ever flagged LENGTH-EXPLAINED, and the raw
+length-vs-axis correlation was +0.258.
 
 THE THREE PREDICTORS ARE NOT REDUNDANT
 --------------------------------------
@@ -39,9 +36,9 @@ THE THREE PREDICTORS ARE NOT REDUNDANT
 
 so that **axis_proj == mean_norm * cos_axis exactly**. A correlation with
 axis_proj can therefore come from a role's mean vector being *longer* rather
-than pointing more toward the Assistant, and only cos_axis separates the two.
+than pointing more toward the Assistant. Only cos_axis separates the two.
 METHODS.md already records that axis_proj and dist_default agree at r = 0.999
-and are one finding stated twice; cos_axis is the predictor that can disagree.
+and are one finding stated twice. cos_axis is the predictor that can disagree.
 
 Produces `ladder_L<L>.csv` -> fig02, fig02b, fig03.
 
@@ -141,9 +138,9 @@ def main():
 
     # ---------------- multiple comparisons ----------------------------------
     # Two corrections, side by side. BH within (predictor, rung) extends
-    # `id_vs_axis`'s convention (it corrects within predictor) so old and new q
-    # compare; the GLOBAL BH over every test in the fully-controlled rung is the
-    # conservative reading and the one the report's prose uses.
+    # `id_vs_axis`'s convention (it corrects within predictor), so old and new
+    # q compare. The GLOBAL BH over every test in the fully-controlled rung is
+    # the conservative reading, and the one the report's prose uses.
     for name, _ in RUNGS:
         res[f"q_within_{name}"] = np.nan
         for pred in PREDICTORS:
@@ -183,10 +180,10 @@ def main():
     # If the shared code has changed underneath, every number here is suspect.
     # This compares rungs 1 and 2 against the published `id_vs_axis` CSV for the
     # six estimators it reports. NOTE: that run used RAW 2048-dim points; this
-    # one uses the amended fixed PCA-50 working space (plan amendment A2), so the
+    # one uses the fixed PCA-50 working space, so the
     # values are EXPECTED to differ. Recorded as context, not as a gate.
-    chk = {"note": "id_vs_axis ran on raw 2048-dim points; this run uses PCA-50 "
-                   "per plan amendment A2, so differences are expected by design",
+    chk = {"note": "id_vs_axis ran on raw 2048-dim points; this run uses the "
+                   "fixed PCA-50 working space, so differences are expected by design",
            "comparisons": []}
     prior_path = Path(args.prior)
     if prior_path.exists():

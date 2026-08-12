@@ -1,32 +1,32 @@
 """CALIBRATION — do the estimators recover a dimension we already know?
 
-Plan: plans/2026-07-30-manifold-geometry-vs-assistant-axis.md (Experiment 0)
-
-This is the run's one hard gate. It runs FIRST and exits non-zero on failure, so
-no downstream script can quote a dimension from an estimator that cannot measure
-one at this sample size.
+This is the run's one hard gate. It runs FIRST and exits non-zero on failure.
+No downstream script can then quote a dimension from an estimator that cannot
+measure one at this sample size.
 
 WHY IT IS NEEDED
 ----------------
 `id_vs_axis.py` reports MLE = 4.59 for `default`. Nothing established that MLE
-*recovers dimension* at N=200 in 2048 ambient dims, and `compute_budget.py`
-already showed the bias is large at small N (a true d=15 reads 8.1 at N=25). So
-we plant manifolds of KNOWN dimension, calibrated to this cloud's own radius and
+*recovers dimension* at N=200 in 2048 ambient dims. `compute_budget.py` already
+showed the bias is large at small N (a true d=15 reads 8.1 at N=25). So we
+plant manifolds of KNOWN dimension, calibrated to this cloud's own radius and
 noise, and measure what the estimators return.
 
-The radius sweep is the load-bearing part. If recovered dimension depends on
-cloud RADIUS at fixed true dimension, then the ID-vs-axis correlation could be
-the bias curve reading out cloud size — and the linear partial on log
-within-role variance cannot remove a nonlinear bias. Three radii spanning the
-roles' observed range is what makes that visible.
+The radius sweep is the load-bearing part. Suppose recovered dimension depends
+on cloud RADIUS at fixed true dimension. Then the ID-vs-axis correlation could
+be the bias curve reading out cloud size. A linear partial on log within-role
+variance cannot remove a nonlinear bias. Three radii spanning the roles'
+observed range make that dependence visible.
 
 Planted manifolds are deliberately CURVED (a random Fourier embedding, not a
-linear subspace): a linear subspace lets lPCA succeed trivially and never
-stresses the neighbour-based estimators, which are the ones carrying the result.
+linear subspace). A linear subspace lets lPCA succeed trivially. It never
+stresses the neighbour-based estimators, which are the ones carrying the
+result.
 
-Topology gets controls in BOTH directions — a noisy circle must give Betti-1 = 1
-and a Gaussian blob must give Betti-1 = 0 under the same threshold. Without the
-second, the lifetime rule manufactures loops and every role looks interesting.
+Topology gets controls in BOTH directions. A noisy circle must give
+Betti-1 = 1. A Gaussian blob must give Betti-1 = 0 under the same threshold.
+Without the second control, the lifetime rule manufactures loops and every
+role looks interesting.
 
 Produces `calibration_L<L>.json` -> fig00, fig01.
 
@@ -48,26 +48,11 @@ from manifold.idim import ESTIMATORS
 from common import load_role_clouds, resolve_run_dir, small_matrix_ops
 from metrics import ID_COLS, SEED, panel_metrics
 
-# CALIBRATED = recovers a planted dimension within 20% for d<=10 in the PCA-50
-# working space. THREE estimators clear that bar, not one:
-#
-#   PCA_dim_90pct            worst 20%, bias +0.11, spread 1.00  (exact at d=3, 8)
-#   MLE                      worst 17%, bias -0.34, spread 0.31  (smoothest, but
-#                                                                 under-reads)
-#   PCA_participation_ratio  worst 18%, bias +0.22, spread 1.40
-#
-# CORRECTION (2026-07-31): this list previously held MLE alone. That was chosen
-# from the RAW 2048-dim diagnostic, where MLE really was the only survivor, and
-# was not revisited after amendment A2 moved the panel to PCA-50. Denoising
-# rescues the two PCA-threshold measures; dim_90pct is in fact the most accurate
-# estimator in the panel. No run was mis-gated (MLE passed, so the gate never
-# fired wrongly), but the "uncalibrated" label on those two was wrong.
-#
-# The three failures are genuine and unchanged: lPCA 67%, TwoNN 77%,
-# PCA_dim_95pct 120%. They stay in the panel at the user's request but must
-# never be quoted as a dimension. Trinidad's CALIBRATION.md /
-# CALIBRATION-RESULTS.md record this; they never reached the repo (the old
-# .gitignore bug) and were requested from her on 2026-08-07.
+# CALIBRATED = recovers a planted dimension within TOLERANCE for d<=MAX_D_GATED
+# in the PCA-50 working space. The uncalibrated three fail in every working
+# space tested (lPCA 67%, TwoNN 77%, PCA_dim_95pct 120%). They stay in the
+# panel but must never be quoted as a dimension. Recorded numbers and
+# provenance: docs/notes/calibration-history.md.
 GATED_ESTIMATORS = ("MLE", "PCA_participation_ratio", "PCA_dim_90pct")
 UNCALIBRATED = ("TwoNN", "lPCA", "PCA_dim_95pct")
 
@@ -84,27 +69,27 @@ def plant_manifold(d: int, n: int, ambient: int, radius: float, noise: float,
                    freq_scale: float = 0.5) -> np.ndarray:
     """`n` points on a smooth CURVED d-manifold embedded in `ambient` dims.
 
-    phi(u) = sum_k a_k * sin(omega_k . u + b_k) with random frequencies. Curved
-    on purpose: a linear subspace would let lPCA read the answer straight off the
-    rank and would never test whether the neighbour-based estimators — the ones
-    carrying the ID-vs-axis result — can follow a bent manifold at this sample
-    size.
+    phi(u) = sum_k a_k * sin(omega_k . u + b_k) with random frequencies.
+    Curved on purpose. A linear subspace would let lPCA read the answer
+    straight off the rank. It would never test whether the neighbour-based
+    estimators — the ones carrying the ID-vs-axis result — can follow a bent
+    manifold at this sample size.
 
-    The cloud is rescaled so its RMS radius equals `radius`, then isotropic
-    Gaussian noise of per-dimension scale `noise` is added, so the planted cloud
-    sits at the real data's own signal-to-noise rather than at an arbitrary one.
+    The cloud is rescaled so its RMS radius equals `radius`. Then isotropic
+    Gaussian noise of per-dimension scale `noise` is added. The planted cloud
+    thus sits at the real data's own signal-to-noise, not at an arbitrary one.
     """
     rng = np.random.default_rng(seed)
     u = rng.standard_normal((n, d))
     u /= np.linalg.norm(u, axis=1, keepdims=True)
     u *= rng.uniform(0, 1, (n, 1)) ** (1.0 / d)          # uniform in the d-ball
-    # freq_scale controls how bent the embedding is. It must stay SMALL: at
+    # freq_scale controls how bent the embedding is. It must stay SMALL. At
     # scale 2.0 the sin() features fold the manifold so tightly that its local
-    # structure fills more than d dimensions, and the estimators then correctly
-    # report a dimension above d — which would make the control fail for a
-    # reason that is about the control, not the estimators. 0.5 keeps phi smooth
-    # over the unit ball while still being genuinely curved (not a linear
-    # subspace, which would let lPCA read d straight off the rank).
+    # structure fills more than d dimensions. The estimators then correctly
+    # report a dimension above d, and the control fails for a reason that is
+    # about the control, not the estimators. 0.5 keeps phi smooth over the
+    # unit ball while still genuinely curved (not a linear subspace, which
+    # would let lPCA read d straight off the rank).
     omega = rng.standard_normal((n_freq, d)) * freq_scale
     b = rng.uniform(0, 2 * np.pi, n_freq)
     A = rng.standard_normal((n_freq, ambient)) / np.sqrt(n_freq)
@@ -172,13 +157,12 @@ def control_verdict(pc: dict, tol: float = TOLERANCE,
     """Pass/fail: the GATED estimators within `tol` of truth for d<=max_d, and
     both topology controls correct. This is the one hard gate in the run.
 
-    Amended 2026-07-30 (plan amendment A1): the original plan gated on TwoNN as
-    well, and TwoNN fails in EVERY working space tested — 77% error at a planted
-    d=3 even after PCA-50 denoising, with a scale spread of 2.4-3.3 across radii.
-    It is not rescuable by preprocessing, so gating on it would make the run
-    impossible rather than making it rigorous. TwoNN and the other uncalibrated
-    estimators are still computed and reported; the calibration error of each is
-    recorded here so the report can carry it.
+    The original plan gated on TwoNN as well. But TwoNN fails in EVERY working
+    space tested — 77% error at a planted d=3 even after PCA-50 denoising,
+    with a scale spread of 2.4-3.3 across radii. Preprocessing cannot rescue
+    it. A gate on it would make the run impossible, not rigorous. TwoNN and
+    the other uncalibrated estimators are still computed and reported. The
+    calibration error of each is recorded here so the report can carry it.
     """
     cal = pd.DataFrame(pc["calibration"])
     fails = []
@@ -216,13 +200,13 @@ def control_verdict(pc: dict, tol: float = TOLERANCE,
 def real_cloud_scale(clouds) -> tuple:
     """(per-role RMS radii, per-role noise floors) of the real role clouds.
 
-    The RADIUS is the role cloud's RMS norm about its own mean. The NOISE is the
-    isotropic floor estimated from the TAIL of the role's eigenvalue spectrum,
-    NOT the per-element RMS of the whole cloud: the latter includes the signal
-    and overstates the noise ~4x, which would make every planted manifold
-    noisier than the data it is supposed to imitate. For n points in p >> n
-    dims, an isotropic noise floor of per-element variance s^2 puts each tail
-    eigenvalue at ~ p * s^2, hence the /ambient.
+    The RADIUS is the role cloud's RMS norm about its own mean. The NOISE is
+    the isotropic floor estimated from the TAIL of the role's eigenvalue
+    spectrum, NOT the per-element RMS of the whole cloud. The latter includes
+    the signal and overstates the noise ~4x. Every planted manifold would then
+    be noisier than the data it is supposed to imitate. For n points in
+    p >> n dims, an isotropic noise floor of per-element variance s^2 puts
+    each tail eigenvalue at ~ p * s^2, hence the /ambient.
     """
     radii, noises = [], []
     for Xr in clouds.values():

@@ -1,16 +1,14 @@
 """NESTED REGRESSION: does geometry predict assistant-likeness beyond cloud scale?
 
-Plan: plans/2026-07-30-manifold-geometry-vs-assistant-axis.md (Experiment 4)
-
 THE QUESTION THIS ANSWERS THAT THE LADDER CANNOT
 ------------------------------------------------
 The ladder reports one correlation per metric. It cannot say how much of
-assistant-likeness the panel explains *jointly*, and — more importantly — it
-cannot say whether the panel beats the most boring alternative available:
+assistant-likeness the panel explains *jointly*. More importantly, it cannot
+say whether the panel beats the most boring alternative available:
 
     a role's cloud is simply bigger, or its mean vector simply longer.
 
-Both are size statements, not shape statements, and both move a role along the
+Both are size statements, not shape statements. Both move a role along the
 axis on their own. `mean_norm` in particular is a factor of the target by
 construction (axis_proj = mean_norm x cos_axis), so it is the strongest honest
 baseline in the data. If a scale-only model already explains most of the
@@ -26,22 +24,21 @@ Four nested models, axis_proj as the dependent variable:
 
 The comparison that matters is M3 vs M1, not M2 vs M0.
 
-The earlier baseline here was response length (`mean_tokens`, `trunc_rate`).
-It was dropped on 2026-08-03: these are MEAN-pooled activations, so the token
-count is divided out before the role's vector is formed, and length was never
-a mechanism by which a longer answer moved a role along the axis.
+Response length (`mean_tokens`, `trunc_rate`) is not a baseline. These are
+MEAN-pooled activations, so the token count is divided out before the role's
+vector is formed. Length is not a mechanism that moves a role along the axis.
 
 WHY CROSS-VALIDATED R2 AND NOT IN-SAMPLE
 ----------------------------------------
-19 predictors on n=275 roles will fit in-sample no matter what; OLS R2 here is
-close to meaningless as a measure of signal. Both are reported side by side and
-the prose uses the CV number. Ridge is used for the CV fit because the panel is
-heavily collinear by construction (several dimension estimators measuring
-related things), with alpha chosen by an INNER CV on the training folds only, so
-no test fold ever informs the penalty.
+19 predictors on n=275 roles will fit in-sample no matter what. OLS R2 here is
+close to meaningless as a measure of signal. Both are reported side by side,
+and the prose uses the CV number. Ridge is used for the CV fit because the
+panel is heavily collinear by construction (several dimension estimators
+measure related things). Alpha is chosen by an INNER CV on the training folds
+only, so no test fold ever informs the penalty.
 
 VIF is reported for the OLS fit so the collinearity is visible rather than
-implied: a coefficient with VIF 40 is not interpretable on its own, and readers
+implied. A coefficient with VIF 40 is not interpretable on its own. Readers
 should be told that rather than left to assume otherwise.
 
 Produces `regression_L<L>.json` -> fig05.
@@ -71,13 +68,13 @@ SCALE_COLS = ["log_var", "mean_norm"]
 TARGET = "axis_proj"
 
 # The three design fractions sum to EXACTLY 1 by construction (the grid is
-# balanced -- METHODS.md S1), so including all three makes the design matrix
-# singular: VIF came back at 1e12 and no coefficient among them is identifiable.
-# Drop one, as one would with a categorical's reference level. quest_frac is the
-# one dropped because instr_frac and interaction_frac are the interpretable pair
-# (phrasing sensitivity, persona-specific structure) and the dropped one is
-# recoverable as 1 - the other two, so no information is lost. Ridge tolerated
-# the singularity; OLS and VIF do not.
+# balanced -- METHODS.md S1). Including all three thus makes the design matrix
+# singular: VIF came back at 1e12 and no coefficient among them is
+# identifiable. Drop one, as one would with a categorical's reference level.
+# quest_frac is the one dropped. instr_frac and interaction_frac are the
+# interpretable pair (phrasing sensitivity, persona-specific structure), and
+# the dropped one is recoverable as 1 - the other two, so no information is
+# lost. Ridge tolerated the singularity; OLS and VIF do not.
 DROPPED_SIMPLEX = "quest_frac"
 
 
@@ -85,7 +82,7 @@ def cv_r2(X, y, n_boot: int = 2000):
     """Out-of-fold R2 of a standardised ridge, plus a bootstrap CI over roles.
 
     R2 is computed on the pooled out-of-fold predictions rather than averaged
-    per fold, so it is a single honest number on the same scale as the
+    per fold. It is then a single honest number on the same scale as the
     in-sample R2 it is compared against.
     """
     if X.shape[1] == 0:                       # intercept-only model

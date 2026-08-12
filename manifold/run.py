@@ -1,9 +1,10 @@
 """Execute plan 2026-07-21-role-manifold-reconstruction (H1).
 
-Creates a timestamped run dir under output/manifold_h1-2/, runs the positive
-control FIRST (stops the run if it fails), then the decider + robustness
-constructions with permutation nulls, saves metrics/manifolds/manifest, renders
-figures, and writes REPORT.md. Never overwrites a run dir.
+Creates a timestamped run dir under output/manifold_h1-2/. Runs the positive
+control FIRST and stops the run if it fails. Then runs the decider and the
+robustness constructions with permutation nulls. Saves metrics, manifolds and
+the manifest, renders figures, and writes REPORT.md. Never overwrites a run
+dir.
 
 Usage:
     .venv/bin/python -m manifold.run
@@ -107,13 +108,9 @@ def main(argv=None) -> None:
     say(f"    tau percentiles (cos-sim): {taus}")
 
     # ---------------------------------------------------------------- decider
-    # Null ladder, weakest to strongest. Role-shuffle only measures between-role
-    # spread (fake means shrink toward the global mean). The coordinate null
-    # keeps marginals/spread/noise and destroys ALL joint structure — linear and
-    # curved alike. The covariance-matched Gaussian null keeps the means' full
-    # linear structure and destroys only curvature, which is the claim C_role
-    # makes — so IT decides (industry standard: Theiler-style constrained
-    # surrogate; Elsayed & Cunningham 2017). The other two are kept and reported.
+    # Null ladder, weakest to strongest: role-shuffle (between-role spread),
+    # coordinate (any joint structure), covgauss (curvature only — the claim
+    # C_role makes, so it decides). All three computed and reported.
     say("\n[2] DECIDER  C_role (prompt_avg, k=3) + role-shuffle null (context) "
         "+ coordinate null (context) + covgauss null (DECIDES) ...")
     dec = P.construction_C_role(cloud)
@@ -145,8 +142,8 @@ def main(argv=None) -> None:
     report["null_decider"] = null.tolist()
     report["null_decider_coord"] = coord_null.tolist()
     report["null_decider_covgauss"] = covg_null.tolist()
-    # the plain columns keep their role-shuffle meaning (every other row uses a
-    # permutation null); the covg_* columns are the deciding ones and the
+    # The plain columns keep their role-shuffle meaning, since every other row
+    # uses a permutation null. The covg_* columns are the deciding ones; the
     # coord_* columns are context.
     rows.append({"construction": "C_role", "n_anchors": dec.n_anchors,
                  "n_manifolds": 1, "r2": dec.r2, "nre": dec.nre,
@@ -286,9 +283,9 @@ def main(argv=None) -> None:
         f"Verdict (C_role, covgauss null): {dec_verdict}")
 
     # Post-hoc structural extras (fig09-13 + POSTHOC-manifold-structure.md).
-    # Off by default. Runs only AFTER the report + manifest are on disk, and is
-    # wrapped so any failure (skdim / UMAP / Isomap) logs and returns without
-    # killing a run that already produced its numbers -- RESEARCH.md:44.
+    # Off by default. Runs only AFTER the report + manifest are on disk. It is
+    # wrapped so any failure (skdim / UMAP / Isomap) logs and returns; it never
+    # kills a run that already produced its numbers.
     if args.extra:
         say("\n[extra] post-hoc structural analyses ...")
         try:
@@ -301,9 +298,10 @@ def main(argv=None) -> None:
 
 
 def _write_manifest(run_dir, stamp, t0, extra, status, cloud):
+    from manifold_persona.provenance import run_stamp
     manifest = {
         "run_id": stamp, "plan": PLAN, "status": status,
-        "git": "not-a-git-repo (reproducibility via manifest+seeds)",
+        "provenance": run_stamp(),
         "seed": 0, "D_ambient": P.D_AMBIENT, "k_intrinsic": P.K_INTRINSIC,
         "n_perm_decider": N_PERM_DECIDER, "n_perm_robust": N_PERM_ROBUST,
         "n_coord_null_decider": N_COORD_DECIDER,

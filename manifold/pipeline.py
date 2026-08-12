@@ -68,10 +68,12 @@ def load_cloud(view: str = "prompt_avg", layer: int | None = None,
 # --------------------------------------------------------------------------- #
 def fit_manifold(anchors: np.ndarray, k: int = K_INTRINSIC,
                  seed: int = 0) -> SplineManifold:
-    """Fit a TPS surface through `anchors` using unsupervised PCA intrinsic
-    coordinates (control_points = PCA(anchors, k)). This is the deliberate,
-    documented extension over causalab, which is *handed* intrinsic coords by a
-    causal model; roles have none, so we derive them from the data itself."""
+    """Fit a TPS surface through `anchors`.
+
+    The intrinsic coordinates are unsupervised: control_points =
+    PCA(anchors, k). This is the deliberate, documented extension over
+    causalab. causalab is *handed* intrinsic coords by a causal model. Roles
+    have none, so we derive them from the data itself."""
     kk = min(k, anchors.shape[1], anchors.shape[0] - 1)
     control = PCA(n_components=kk, random_state=seed).fit_transform(anchors)
     return SplineManifold(control_points=control, target_points=anchors)
@@ -115,10 +117,13 @@ class ConstructionResult:
 
 
 def _score_components(cloud: Cloud, role_component: np.ndarray, k: int) -> tuple:
-    """Fit one manifold per component (>=MIN_COMPONENT roles), score that
-    component's raw points against it, aggregate SSR/TSS over all points.
-    Roles in tiny components contribute their raw points' distance-to-nearest
-    role-mean (degenerate 'manifold' = a point) so nothing is silently dropped.
+    """Score a component labelling of the roles.
+
+    Fit one manifold per component with >= MIN_COMPONENT roles. Score that
+    component's raw points against it. Aggregate SSR/TSS over all points.
+    Roles in tiny components contribute their raw points' distance to the
+    nearest role mean (a degenerate 'manifold' = a point). So nothing is
+    silently dropped.
     """
     role_idx = {r: i for i, r in enumerate(cloud.role_names)}
     point_comp = np.array([role_component[role_idx[r]] for r in cloud.roles])
@@ -225,17 +230,18 @@ def coordinate_null(cloud: Cloud, n_draws: int = 100, k: int = K_INTRINSIC,
                     seed: int = 0) -> np.ndarray:
     """Structure-preserving null R^2 distribution for the decider.
 
-    Each draw permutes every coordinate of the REAL role means independently
-    across roles (a fresh permutation per coordinate per draw), reattaches each
-    role's real within-role residuals, refits C_role and rescores. That destroys
-    the joint (manifold) structure of the role means but keeps their
-    per-coordinate marginals, the role-mean spread and the within-role noise.
+    Each draw does three things. It permutes every coordinate of the REAL role
+    means independently across roles (a fresh permutation per coordinate per
+    draw). It reattaches each role's real within-role residuals. It refits
+    C_role and rescores. This destroys the joint (manifold) structure of the
+    role means. It keeps their per-coordinate marginals, the role-mean spread
+    and the within-role noise.
 
-    `permutation_null` cannot do this: its fake role means average ~25 randomly
-    chosen points, so they shrink ~4x toward the global mean and the null only
-    measures between-role spread. A surface fitted to correctly-scaled but
-    structureless anchors already reaches the real R^2, so this is the null the
-    decider must beat.
+    `permutation_null` cannot do this. Its fake role means average ~25
+    randomly chosen points, so they shrink ~4x toward the global mean, and
+    that null only measures between-role spread. A surface fitted to
+    correctly-scaled but structureless anchors already reaches the real R^2.
+    So this is the null the decider must beat.
     """
     rng = np.random.default_rng(seed)
     role_idx = {r: i for i, r in enumerate(cloud.role_names)}
@@ -258,15 +264,11 @@ def covgauss_null(cloud: Cloud, n_draws: int = 100, k: int = K_INTRINSIC,
                   seed: int = 0) -> np.ndarray:
     """Covariance-matched Gaussian null R^2 distribution.
 
-    Each draw replaces the role means with samples from N(mu, Sigma) — the
-    Gaussian matching the REAL role means' mean and covariance — reattaches each
-    role's real within-role residuals, refits C_role and rescores. That keeps
-    ALL linear structure of the role means (their spread and every low-dim
-    subspace concentration) and destroys only what a Gaussian cannot carry:
-    curvature. `coordinate_null` destroys the linear structure too, so it tests
-    "any joint structure"; this null is the rung between it and the real data,
-    and beating it is what the "curved manifold" claim specifically requires
-    (Theiler-style constrained surrogate; cf. Elsayed & Cunningham 2017).
+    Each draw samples role means from N(mu, Sigma) of the real means, keeps the
+    real within-role residuals, refits C_role and rescores. Preserves all
+    linear structure; destroys only curvature — unlike `coordinate_null`,
+    which destroys both. Beating this null is what the curved-manifold claim
+    requires.
     """
     rng = np.random.default_rng(seed)
     role_idx = {r: i for i, r in enumerate(cloud.role_names)}
@@ -335,18 +337,19 @@ def positive_control(d_ambient: int = D_AMBIENT, n_roles: int = 276,
                      per_role: int = 25, k: int = K_INTRINSIC,
                      target_radius: float = 11.0, noise: float = 1.0,
                      seed: int = 0) -> dict:
-    """Synthetic curved **k-dimensional** manifold in d_ambient dims + isotropic
-    Gaussian noise, both calibrated to the real data (target_radius = role-mean
-    spread, noise = within-role per-dim RMS).
+    """Synthetic curved **k-dimensional** manifold in d_ambient dims, plus
+    isotropic Gaussian noise. Both are calibrated to the real data:
+    target_radius = role-mean spread, noise = within-role per-dim RMS.
 
-    The control's intrinsic dim MATCHES the pipeline's k, so it is a fair test of
-    the k-dim TPS at the data's signal-to-noise: the pipeline MUST return R^2
-    above its permutation null by >= the floor, else STOP (a null role result
-    would be uninterpretable, and even the SUPPORTED result loses its guarantee).
+    The control's intrinsic dim MATCHES the pipeline's k. So it is a fair test
+    of the k-dim TPS at the data's signal-to-noise. The pipeline MUST return
+    R^2 above its permutation null by >= the floor, else STOP: a null role
+    result would be uninterpretable, and even the SUPPORTED result loses its
+    guarantee.
 
-    The manifold is the image of a smooth nonlinear map of k intrinsic coordinates
-    (trig + low-order polynomial features) into a random d_ambient embedding —
-    genuinely curved and genuinely k-dimensional.
+    The manifold is the image of a smooth nonlinear map of k intrinsic
+    coordinates (trig + low-order polynomial features) into a random d_ambient
+    embedding — genuinely curved and genuinely k-dimensional.
     """
     rng = np.random.default_rng(seed)
     U = rng.random((n_roles, k))                       # k intrinsic coords in [0,1]

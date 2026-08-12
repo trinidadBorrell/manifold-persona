@@ -12,12 +12,12 @@ are usually conflated:
     here. This is the only cost that matters, and it is where 10 / 50 / 100
     roles is a real trade-off.
 
-The bridge between them is Part B: **how many points per role do the estimators
-actually need** before a per-role ID means anything? We answer it by planting
-manifolds of KNOWN dimension in the data's ambient space and finding the N at
-which the estimators recover them. That N, divided by the number of instruction
-phrasings, is the number of questions per role that must be extracted — which
-turns a vague "more data" into a number of GPU-hours.
+The bridge between them is Part B: **how many points per role do the
+estimators actually need** before a per-role ID means anything? We answer it
+by planting manifolds of KNOWN dimension in the data's ambient space and
+finding the N at which the estimators recover them. That N, divided by the
+number of instruction phrasings, is the number of questions per role that
+must be extracted. That turns a vague "more data" into a number of GPU-hours.
 
 Role subsets, when needed, use `manifold.subsets.kmeans_medoid_roles`, which
 already implements the spread-preserving medoid selection with `default`
@@ -50,11 +50,12 @@ N_GRID = [25, 50, 100, 200, 400, 800, 1200]
 def planted_manifold(n: int, d: int, ambient: int, scale: np.ndarray, rng) -> np.ndarray:
     """`n` points on a smooth `d`-dimensional manifold embedded in `ambient` dims.
 
-    Latent coordinates go through a mild quadratic warp before the random linear
-    embedding, so the manifold is curved (a purely linear subspace would flatter
-    the PCA-based estimators, which would recover d exactly at any n and hide
-    the small-N bias this part is measuring). `scale` fixes the per-direction
-    variance to the data's own spectrum so the noise floor is realistic.
+    Latent coordinates go through a mild quadratic warp before the random
+    linear embedding, so the manifold is curved. A purely linear subspace
+    would flatter the PCA-based estimators: they would recover d exactly at
+    any n and hide the small-N bias this part is measuring. `scale` fixes the
+    per-direction variance to the data's own spectrum, so the noise floor is
+    realistic.
     """
     Z = rng.standard_normal((n, d))
     Z = np.hstack([Z, 0.3 * Z ** 2])                      # curvature
@@ -69,7 +70,7 @@ def main():
     ap.add_argument("--view", default="prompt_avg", choices=["prompt_avg", "prompt_last"])
     ap.add_argument("--layer", type=int, default=None)
     ap.add_argument("--sec_per_record", type=float, default=8.5,
-                    help="prompt-only forward pass; RESEARCH.md:24 documents 7-10 s/record "
+                    help="prompt-only forward pass; documented rate 7-10 s/record "
                          "on this MacBook (MPS, batch size 1). Not re-measured here: the "
                          "model is not in the local HF cache.")
     ap.add_argument("--n_rep", type=int, default=5, help="repeats per (d, N) cell")
@@ -149,13 +150,12 @@ def main():
         note = "overnight" if hrs <= 12 else ("a weekend" if hrs <= 60 else "not tractable locally")
         print(f"  {nb:6d} {rec:9d} {hrs:8.1f} {hrs/24:7.2f}   {note}")
 
-    # The default rate is for a PROMPT-only forward pass. A response cloud has to
-    # generate tokens first and is several times slower (the 2-role pilot in
-    # plans/2026-07-23-halfdepth-response-stream.md measured 15.2 s/rec at
-    # max_new_tokens=512), so flag when the two disagree instead of quietly
-    # pricing generation at forward-pass rates.
+    # The default rate is for a PROMPT-only forward pass. A response cloud has
+    # to generate tokens first, and that is several times slower (a 2-role
+    # pilot measured 15.2 s/rec at max_new_tokens=512). So flag when the two
+    # disagree instead of quietly pricing generation at forward-pass rates.
     basis = manifest.get("token_basis", "prompt")
-    rate_note = "RESEARCH.md:24 (documented, not re-measured)"
+    rate_note = "documented rate, not re-measured"
     if basis == "response" and args.sec_per_record < 12:
         rate_note += (f"; WARNING this cloud is token_basis={basis} "
                       f"(max_new_tokens={manifest.get('max_new_tokens')}) — generation is "
