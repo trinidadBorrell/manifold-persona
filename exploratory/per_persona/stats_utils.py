@@ -89,3 +89,45 @@ def boot_ci(x, y, Z, rng, n_boot: int = 2000):
     if out.size < 100:
         return None, None
     return float(np.percentile(out, 2.5)), float(np.percentile(out, 97.5))
+
+
+def linfit(x, y) -> dict:
+    """Least-squares line PLUS the significance of its slope.
+
+    Every trend line drawn in this study used to be a bare ``np.polyfit``, which
+    gives a slope and no way to tell whether it is distinguishable from flat.
+    This returns the fit and its test together so a figure cannot show a line
+    without showing whether the line means anything.
+
+    ``p`` is the two-sided test of slope = 0, which for a simple regression is
+    identical to the test of Pearson r = 0. It is a RAW p-value: where the same
+    figure family runs many tests at once, prefer the Benjamini-Hochberg ``q``
+    the ladder already computes (`q_global_ctrl_all`). See :func:`fmt_p`.
+    """
+    x = np.asarray(x, float)
+    y = np.asarray(y, float)
+    ok = np.isfinite(x) & np.isfinite(y)
+    x, y = x[ok], y[ok]
+    if x.size < 3 or np.ptp(x) == 0:
+        return {"slope": np.nan, "intercept": np.nan, "r": np.nan,
+                "p": np.nan, "r2": np.nan, "n": int(x.size)}
+    res = stats.linregress(x, y)
+    return {"slope": float(res.slope), "intercept": float(res.intercept),
+            "r": float(res.rvalue), "p": float(res.pvalue),
+            "r2": float(res.rvalue ** 2), "n": int(x.size)}
+
+
+def fmt_p(p, label: str = "p") -> str:
+    """Compact p/q for a figure title: 'p<1e-10', 'p=0.023', 'p=0.51'.
+
+    Small values are shown as an upper bound rather than as 3.7e-41, which is a
+    number nobody reads and which invites over-reading a difference between two
+    astronomically small p-values that means nothing.
+    """
+    if p is None or not np.isfinite(p):
+        return f"{label}=n/a"
+    if p < 1e-10:
+        return f"{label}<1e-10"
+    if p < 0.001:
+        return f"{label}={p:.1e}"
+    return f"{label}={p:.3f}"
