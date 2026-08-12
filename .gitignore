@@ -46,10 +46,8 @@ refactors/baselines/*/extra-reference/
 
 exploratory/per_persona/md
 
-# exploratory geometry-panel runs: bulk ignored, provenance committed
-output/per_persona_exploratory/*/logs/
-output/per_persona_exploratory/*/data/persistence/
-output/per_persona_exploratory/*/data/*_null_L*.json
-!output/per_persona_exploratory/*/manifest.json
-!output/per_persona_exploratory/*/REPORT.md
-!output/per_persona_exploratory/*/figures/
+# The per_persona geometry runs under output/ stay OFF GitHub entirely --
+# manifests, reports and figures included. An earlier block here tried to
+# re-include them; it never worked (nothing descends into an ignored dir) and
+# once main widened `output/` to `output/**` + `!output/**/` it started to,
+# which is not wanted. Removed rather than repaired.
