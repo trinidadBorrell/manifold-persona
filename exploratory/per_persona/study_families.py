@@ -31,6 +31,7 @@ from scipy import stats
 from manifold_persona.common import load_points, center, ward_families
 from common import small_matrix_ops
 from metrics import geometry_columns
+from study_ladder import PREDICTORS
 
 N_FAMILIES = 15          # matches exploratory/assistant_axis/04_role_families.py
 
@@ -46,16 +47,18 @@ def families_experiment(run_dir: Path, L: int, view: str, layer):
     d = df.merge(pd.DataFrame({"role": roles, "family": lab}), on="role", how="left")
 
     # Family ordering along the axis, so "families ordered by assistant-likeness"
-    # is a property of this cloud rather than an inherited label.
+    # is a property of this cloud rather than an inherited label. The ordering
+    # uses axis_proj; the other predictors are carried alongside so fig08 can be
+    # redrawn against each of them without re-clustering.
     order = d.groupby("family")["axis_proj"].mean().sort_values(ascending=False)
     fam_summary = []
     for f in order.index:
         g = d[d.family == f]
         fam_summary.append({
             "family": int(f), "n_roles": int(len(g)),
-            "mean_axis_proj": float(g["axis_proj"].mean()),
+            **{f"mean_{p}": float(g[p].mean()) for p in PREDICTORS},
             "median_MLE": float(g["MLE"].median()),
-            "median_curvature_gain": float(g["curvature_gain"].median()),
+            "median_orc_mean": float(g["orc_mean"].median()),
             "example_roles": sorted(g["role"].tolist())[:6]})
 
     kw = {}
@@ -66,33 +69,45 @@ def families_experiment(run_dir: Path, L: int, view: str, layer):
             H, p = stats.kruskal(*groups)
             kw[c] = {"H": float(H), "p": float(p), "n_families": len(groups)}
 
-    # Does family axis-rank track family dimension?
+    # Does family closeness-rank track family geometry? Asked once per
+    # predictor: if the family-level trend only holds for one definition of
+    # closeness, that is the same caveat fig02 carries, seen at group level.
     fs = pd.DataFrame(fam_summary)
-    rho, p_rho = stats.spearmanr(fs["mean_axis_proj"], fs["median_MLE"])
-    rho_c, p_c = stats.spearmanr(fs["mean_axis_proj"], fs["median_curvature_gain"])
+    spear = {}
+    for p_ in PREDICTORS:
+        spear[p_] = {}
+        for tgt in ("median_MLE", "median_orc_mean"):
+            rho_, pv = stats.spearmanr(fs[f"mean_{p_}"], fs[tgt])
+            spear[p_][tgt] = {"spearman_rho": float(rho_), "p": float(pv)}
 
     out = {"exploratory": True, "n_families": N_FAMILIES,
            "recomputed_on": "this response cloud (NOT the layer-26 prompt families)",
+           "predictors": PREDICTORS,
            "families": fam_summary,
            "kruskal_wallis_across_families": kw,
-           "family_axis_vs_median_MLE": {"spearman_rho": float(rho), "p": float(p_rho)},
-           "family_axis_vs_median_curvature": {"spearman_rho": float(rho_c),
-                                               "p": float(p_c)}}
+           "family_rank_vs_geometry": spear,
+           # Kept at the top level because the report prose quotes them.
+           "family_axis_vs_median_MLE": spear["axis_proj"]["median_MLE"],
+           "family_axis_vs_median_curvature":
+               spear["axis_proj"]["median_orc_mean"]}
     json.dump(out, open(run_dir / "data" / f"families_L{L}.json", "w"),
               indent=2, default=float)
     d[["role", "family"]].to_csv(run_dir / "data" / f"role_families_L{L}.csv",
                                  index=False)
 
     print(f"\n== families (k={N_FAMILIES}, recomputed on THIS cloud) ==")
-    print(f"  {'fam':>4s} {'n':>4s} {'axis':>8s} {'MLE':>7s} {'curv':>7s}  examples")
+    print(f"  {'fam':>4s} {'n':>4s} {'axis':>8s} {'MLE':>7s} {'orc':>7s}  examples")
     for r in fam_summary:
         print(f"  {r['family']:4d} {r['n_roles']:4d} {r['mean_axis_proj']:8.3f} "
-              f"{r['median_MLE']:7.2f} {r['median_curvature_gain']:7.3f}  "
+              f"{r['median_MLE']:7.2f} {r['median_orc_mean']:7.3f}  "
               + ", ".join(r["example_roles"][:4]))
     sig = sum(1 for v in kw.values() if v["p"] < 0.05)
     print(f"\n  Kruskal-Wallis p<0.05 for {sig}/{len(kw)} metrics across families")
-    print(f"  family axis-rank vs median MLE:            rho={rho:+.3f} (p={p_rho:.3g})")
-    print(f"  family axis-rank vs median curvature gain: rho={rho_c:+.3f} (p={p_c:.3g})")
+    print(f"\n  {'family rank by':16s} {'vs median MLE':>16s} {'vs median orc':>16s}")
+    for p_ in PREDICTORS:
+        s = spear[p_]
+        print(f"  {p_:16s} {s['median_MLE']['spearman_rho']:16.3f} "
+              f"{s['median_orc_mean']['spearman_rho']:16.3f}")
     return out
 
 
