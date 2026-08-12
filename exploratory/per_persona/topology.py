@@ -43,15 +43,37 @@ manufacture loops and every role would look topologically interesting.
 """
 from __future__ import annotations
 
+import os
+
 import numpy as np
 
 LIFETIME_FRAC = 0.10       # feature counts iff lifetime > 10% of cloud diameter
-# H0, H1 and H2. Raised from 1 on 2026-08-04: the previous value carried a note
-# saying H2 on 200 points x 276 roles was unaffordable, and that was simply
-# wrong for this data — measured at 0.3 s per role, ~90 s for the whole set.
-# H2 is NOT in PANEL_COLS, so raising this adds diagrams without changing a
-# single panel metric; the barcodes are what consume it.
-MAXDIM = 2
+
+# Highest homology dimension ripser computes: 1 = components + loops, 2 = also
+# enclosed voids. Default stays 2, which is right at the 200-point budget this
+# study was built on (measured 0.37 s/role).
+#
+# It is settable because the cost is not smooth in cloud size — it falls off a
+# cliff once a role has more than ~900 points, since H2 has to consider every
+# triple. Measured on this data, PCA-50, per role:
+#
+#       points   maxdim=1   maxdim=2
+#          200     0.01 s      0.37 s
+#          900     0.20 s     46.11 s
+#         1200     0.39 s    ~700    s
+#
+# At the 240-question budget (1200 points/role) that is ~55 h for the panel
+# against ~0.03 h, so the question-budget sweep runs this at 1.
+#
+# Setting it to 1 DOES cost four panel metrics — H2_total_persistence,
+# H2_max_lifetime, H2_max_lifetime_frac, persistence_entropy_H2. A note here
+# used to claim "H2 is NOT in PANEL_COLS, so raising this changes no panel
+# metric"; that is wrong, all four are in PANEL_COLS and reach the ladder, and
+# H2_total_persistence carries r = -0.560 against axis_proj at 40 questions.
+# `betti_from_diagrams` enumerates whatever dimensions ripser returns and
+# `geometry_columns` keeps only columns actually present, so a lower value
+# degrades cleanly to a shorter panel rather than failing.
+MAXDIM = int(os.environ.get("MP_RIPSER_MAXDIM", 2))
 
 
 def _diameter(X: np.ndarray) -> float:

@@ -134,6 +134,12 @@ def main():
     ap.add_argument("--tiers", type=int, nargs="+", default=list(TIERS))
     ap.add_argument("--n-null", type=int, default=100)
     ap.add_argument("--seed", type=int, default=SEED)
+    ap.add_argument("--maxdim", type=int, default=1,
+                    help="ripser homology dimension for EVERY tier (default 1). "
+                         "The study's own default is 2, but H2 costs ~700 s/role "
+                         "at 1200 points against 0.39 s for H1 — ~55 h for the "
+                         "240 tier alone. Held constant across tiers so the "
+                         "comparison is not confounded by metric set.")
     ap.add_argument("--clouddir", default="data/_qa_sweep",
                     help="where the per-tier clouds are materialised")
     ap.add_argument("--keep-clouds", action="store_true",
@@ -170,8 +176,14 @@ def main():
     json.dump({"tiers": {str(k): v for k, v in tiers.items()},
                "anchor_source": str(ANCHOR), "seed": args.seed,
                "base_cloud": str(BASE), "view": args.view,
-               "nested": True, "shared_across_roles": True},
+               "nested": True, "shared_across_roles": True,
+               "ripser_maxdim": args.maxdim,
+               "h2_metrics_present": args.maxdim >= 2},
               open(out_root / "question_tiers.json", "w"), indent=2)
+    if args.maxdim < 2:
+        print(f"\nmaxdim={args.maxdim}: the four H2 panel metrics "
+              f"(H2_total_persistence, H2_max_lifetime, H2_max_lifetime_frac, "
+              f"persistence_entropy_H2) are NOT computed at any tier.")
 
     timings = {}
     for k in ks:
@@ -180,7 +192,8 @@ def main():
         print(f"\n{'=' * 70}\n=== tier {k} questions -> {tier_out}\n{'=' * 70}", flush=True)
         t0 = time.time()
         build_tier_cloud(k, tiers[k], meta, args.view, cloud)
-        env = dict(os.environ, MP_ROLE_DIR=str(cloud))
+        env = dict(os.environ, MP_ROLE_DIR=str(cloud),
+                   MP_RIPSER_MAXDIM=str(args.maxdim))
         r = subprocess.run(
             [PY, str(HERE / "run_geometry.py"), "--view", args.view,
              "--layer", "0", "--label-layer", "19",
