@@ -141,7 +141,7 @@ def fig04_manifolds_vs_tau(tau_results: dict, out: Path):
 
 def fig05_spline_vs_plane(report: dict, rows, out: Path):
     try:
-        labels = ["C_role\nspline", "PCA-plane\n(k=3)", "C_role\nnull median"]
+        labels = ["C_role\nspline", "PCA-plane\n(k=3)", "covgauss null\nmedian"]
         vals = [report["decider"]["r2"], report["plane_r2"],
                 report["decider"]["null_median"]]
         fig, ax = plt.subplots(figsize=(6, 4.5))

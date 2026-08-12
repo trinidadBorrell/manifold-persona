@@ -234,7 +234,10 @@ def main() -> None:
 
     print(f"Loading {args.model} on CPU (float32) ...")
     tokenizer = AutoTokenizer.from_pretrained(args.model)
-    model = AutoModelForCausalLM.from_pretrained(args.model, dtype=torch.float32)
+    try:
+        model = AutoModelForCausalLM.from_pretrained(args.model, dtype=torch.float32)
+    except TypeError:  # transformers 4.x (Intel Mac: torch<=2.2) uses torch_dtype=
+        model = AutoModelForCausalLM.from_pretrained(args.model, torch_dtype=torch.float32)
     model.eval()
     L = model.config.num_hidden_layers
     layer = args.layer if args.layer is not None else L // 2

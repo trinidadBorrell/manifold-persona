@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import time
 from pathlib import Path
 
@@ -28,6 +29,7 @@ import pandas as pd
 
 from . import pipeline as P
 from . import sweep_plots as SP
+from manifold_persona.provenance import run_stamp
 from . import idim
 from manifold_persona.runlog import (holm, make_say, new_run_dir, provenance,
                                      timestamp, write_manifest)
@@ -65,11 +67,11 @@ def run_cell(cloud, n: int, seed: int, n_perm: int, say) -> dict:
     pc_pass = bool(pc["stats"]["p"] < ALPHA and pc["stats"]["rel_reduction"] >= FLOOR)
 
     # --- 1 decider ----------------------------------------------------------
-    # NOTE: manifold.run's decider now judges against P.coordinate_null (the
-    # structure-preserving null). This sweep still uses the role-shuffle
-    # permutation null on purpose: its PRIOR (0a regression check) is frozen
-    # against plan #1's role-shuffle numbers, so both predate that change.
-    # Switching this null is a separate decision.
+    # NOTE: manifold.run's decider now judges against P.covgauss_null (the
+    # covariance-matched Gaussian null). This sweep still uses the
+    # role-shuffle permutation null on purpose: its PRIOR (0a regression
+    # check) is frozen against plan #1's role-shuffle numbers, so both
+    # predate that change. Switching this null is a separate decision.
     dec = P.construction_C_role(sub, k=K)
     null = P.permutation_null(sub, n_perms=n_perm, k=K, seed=0)
     st = P.separation_stats(dec.r2, null)
@@ -228,7 +230,8 @@ def main(argv=None) -> None:
             SP.fig05_spline_manifold(sub, mani, d / "figures", n, 0)
             SP.fig05_spline_manifold(sub, mani, run_dir / "figures", n, 0)
         (d / "REPORT.md").write_text(
-            build_cell_report(n, sub_df, sel, refs.get(n, {}), stamp, FLOOR))
+            build_cell_report(n, sub_df, sel, refs.get(n, {}), stamp, FLOOR,
+                              len(cloud.role_names)))
 
     # ------------------------------------------------------ top-level figures
     SP.fig01_sweep_decider(df, run_dir / "figures", floor=FLOOR)
@@ -274,14 +277,14 @@ def main(argv=None) -> None:
     # ------------------------------------------------------------- report
     (run_dir / "REPORT.md").write_text(
         build_sweep_report(df, refs, verdicts, reg, stamp, run_dir, FLOOR, BAND,
-                           n_perm, seeds, n_ref))
+                           n_perm, seeds, n_ref, cloud))
 
     manifest = {
-        "run_id": stamp, "plan": PLAN, "context": "RESEARCH.md", "status": status,
-        "git": "not-a-git-repo (reproducibility via manifest+seeds)",
-        # Read from the cloud's own manifest -- these used to be hardcoded to the
-        # 3B/layer-26 run and silently misreported any other cloud.
-        "inputs": f"data/embeddings_roles/ (prompt_avg, layer {cloud.layer}; no re-extraction)",
+        "run_id": stamp, "plan": PLAN, "status": status,
+        "provenance": run_stamp(),
+        # Read from the cloud's own manifest, never hardcoded.
+        "inputs": f"{os.environ.get('MP_ROLE_DIR', 'data/embeddings_roles')}/ "
+                  f"(prompt_avg, layer {cloud.layer}; no re-extraction)",
         "model": cloud.manifest.get("model_name"), "view": "prompt_avg",
         "layer": cloud.layer,
         "source_manifest": cloud.manifest,
@@ -289,8 +292,9 @@ def main(argv=None) -> None:
         "kmeans_seeds": seeds, "n_perm_decider": n_perm,
         "n_perm_posctrl": N_PERM_POSCTRL, "n_ref_draws": n_ref,
         "effect_floor_rel_reduction": FLOOR, "decision_band": BAND, "alpha": ALPHA,
-        "selection": "kmeans medoid on 276 role means in shared D=50 PCA space; "
-                     "default force-included into its own cluster's slot",
+        "selection": f"kmeans medoid on {len(cloud.role_names)} role means in "
+                     f"shared D=50 PCA space; "
+                     f"default force-included into its own cluster's slot",
         "regression_check_vs_plan1": reg,
         "decision": decision,
         "n_roles_total": len(cloud.role_names), "n_points_total": int(cloud.raw.shape[0]),

@@ -6,20 +6,20 @@ manifold is built from. Subsets are chosen so that every `n` is a maximally
 
     KMeans(k=n) on the 276 role means  ->  keep each cluster's MEDOID role.
 
-Medoid = the member role whose mean is Euclidean-closest to its cluster centroid,
-so a kept role is always a real role, never a synthetic average. This is what
-makes the small-n manifold a coarse sketch of the *same* surface rather than a
-different object. Note the bias it introduces (plan confound 2): medoids are more
-mutually orthogonal than a random draw would be, which works *against* finding a
-manifold at small n.
+Medoid = the member role whose mean is Euclidean-closest to its cluster
+centroid. So a kept role is always a real role, never a synthetic average.
+This is what makes the small-n manifold a coarse sketch of the *same* surface
+rather than a different object. Note the bias it introduces (plan confound 2):
+medoids are more mutually orthogonal than a random draw would be, which works
+*against* finding a manifold at small n.
 
 `default` (the Assistant persona) is force-included so its position is readable at
 every n; it replaces the medoid of its own cluster, which preserves both `n` and
 the one-role-per-cluster property.
 
-Everything happens in the SHARED D=50 PCA space of `pipeline.load_cloud` — the
-ambient basis is fit once on all 6,900 raw points and never refit per subset, or
-nothing would be comparable across `n`.
+Everything happens in the SHARED D=50 PCA space of `pipeline.load_cloud`. The
+ambient basis is fit once on all 6,900 raw points and never refit per subset;
+otherwise nothing would be comparable across `n`.
 """
 from __future__ import annotations
 
@@ -85,9 +85,9 @@ def kmeans_medoid_roles(cloud: Cloud, n: int, seed: int = 0) -> dict:
 def subset_cloud(cloud: Cloud, roles) -> Cloud:
     """Restrict a Cloud to `roles`, keeping the SHARED PCA basis.
 
-    `global_mean` becomes the mean of the subset's own raw points: it is the TSS
-    anchor, and it must be identical for the real fit and every permutation of
-    that same subset (only SSR is allowed to move), which it is — the permutation
+    `global_mean` becomes the mean of the subset's own raw points. It is the
+    TSS anchor, so it must be identical for the real fit and every permutation
+    of that same subset (only SSR is allowed to move). It is: the permutation
     reshuffles labels, never points.
     """
     keep = sorted(set(roles))
@@ -97,7 +97,8 @@ def subset_cloud(cloud: Cloud, roles) -> Cloud:
     idx = {r: i for i, r in enumerate(cloud.role_names)}
     means = np.vstack([cloud.role_means[idx[r]] for r in keep])
     return Cloud(raw=raw, roles=sub_roles, role_names=keep, role_means=means,
-                 global_mean=raw.mean(0), pca=cloud.pca)
+                 global_mean=raw.mean(0), pca=cloud.pca,
+                 layer=cloud.layer, manifest=cloud.manifest)
 
 
 def cloud_scale(cloud: Cloud) -> tuple:

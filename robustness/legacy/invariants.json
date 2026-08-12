@@ -1,0 +1,87 @@
+{
+  "pinned_at": "2026-08-07",
+  "git_commit": "acef6c0b72f6d0fba1bf5dac41bbc446e5197249",
+  "tier": "fast",
+  "values": {
+    "prompt.instr_frac": 0.683649,
+    "prompt.quest_frac": 0.30981,
+    "prompt.interaction_frac": 0.005879,
+    "response.instr_frac": 0.018332,
+    "response.quest_frac": 0.803099,
+    "response.interaction_frac": 0.177318,
+    "fold_change": 30.159388,
+    "pr_median_real": 15.454864,
+    "pr_median_null": 11.902784,
+    "r.MLE": -0.656214,
+    "r.TwoNN": -0.398397,
+    "r.PCA_participation_ratio": 0.440467,
+    "r.PCA_dim_90pct": -0.204414,
+    "r.H1_total_persistence": -0.625269,
+    "mle_worst_calib_error": 0.382108
+  },
+  "signs": {
+    "r.MLE": -1,
+    "r.TwoNN": -1,
+    "r.PCA_participation_ratio": 1,
+    "r.PCA_dim_90pct": -1,
+    "r.H1_total_persistence": -1
+  },
+  "tol": {
+    "prompt.instr_frac": 0.0095,
+    "prompt.quest_frac": 0.009300000000000001,
+    "prompt.interaction_frac": 0.005,
+    "response.instr_frac": 0.005,
+    "response.quest_frac": 0.012,
+    "response.interaction_frac": 0.008700000000000001,
+    "fold_change": 1.8,
+    "pr_median_real": 0.3,
+    "r.MLE": 0.077,
+    "r.TwoNN": 0.11,
+    "r.PCA_participation_ratio": 0.14,
+    "r.PCA_dim_90pct": 0.14,
+    "r.H1_total_persistence": 0.088,
+    "pr_median_null": 0.3,
+    "mle_worst_calib_error": 0.07100000000000001
+  },
+  "tol_provenance": {
+    "date": "2026-08-07",
+    "method": "max(2*SD, floor), SD from 2000-draw role bootstrap; calibration SD from seed sweep",
+    "floors": {
+      "frac": 0.005,
+      "fold": 1.0,
+      "median": 0.3,
+      "r": 0.02,
+      "calib": 0.02
+    },
+    "calib_seeds_used": 10,
+    "calib_errors": [
+      0.38210773943278803,
+      0.34212981670154746,
+      0.29469680941424176,
+      0.3024312183879034,
+      0.38702006318270027,
+      0.30569657354775304,
+      0.3162029302862785,
+      0.32749697301729414,
+      0.3573721309199298,
+      0.3917481643917122
+    ],
+    "sd": {
+      "prompt.instr_frac": 0.004708,
+      "prompt.quest_frac": 0.004636,
+      "prompt.interaction_frac": 0.00012,
+      "response.instr_frac": 0.001596,
+      "response.quest_frac": 0.005918,
+      "response.interaction_frac": 0.004321,
+      "fold_change": 0.867097,
+      "pr_median_real": 0.078524,
+      "r.MLE": 0.038329,
+      "r.TwoNN": 0.054792,
+      "r.PCA_participation_ratio": 0.068061,
+      "r.PCA_dim_90pct": 0.068475,
+      "r.H1_total_persistence": 0.043763,
+      "pr_median_null": 0.078524,
+      "mle_worst_calib_error": 0.035109
+    }
+  }
+}

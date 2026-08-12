@@ -66,3 +66,9 @@ exploratory/per_persona/md/
 # ---------------------------------------------------------------------------
 exploratory/assistant_axis_traits/
 exploratory/persona_vectors/
+
+# Local working notes, never committed
+.labbook/
+wiki/
+lit-review.md
+novelty-assessment.md
