@@ -134,13 +134,29 @@ each script also accepts `--outdir`.
 
 **Stage 1b — per-persona** (`exploratory/per_persona/`). The same cloud read the
 other way round: instead of one mean point per role, it keeps each role's own
-points and measures the geometry *within* each role — 276 intrinsic dimensions
-and 276 clusterings. Its prompt-cloud arm is contaminated by the same length
-artifact and measures the extraction grid, not persona geometry. Its 40-question
-**response**-cloud arm (`data/embeddings_roles_resp_40q/`) is clean and finds
-that more Assistant-like roles have **lower** within-role ID — weakened but
-directionally intact once cloud scale is controlled. See
-`exploratory/per_persona/README.md`.
+points and measures the geometry *within* each role. Two stages, each with its
+own orchestrator and its own dated folder:
+
+```bash
+# ID stage — 276 intrinsic dimensions and 276 clusterings, against both nulls
+MP_ROLE_DIR=data/embeddings_roles_resp40 \
+  .venv/bin/python exploratory/per_persona/run_id_stage.py --layer 0 --stamp resp40
+
+# geometry stage — the per-role metric panel (curvature, density, topology,
+# closeness) and how it tracks the Assistant Axis
+MP_ROLE_DIR=data/embeddings_roles_resp40 \
+  .venv/bin/python exploratory/per_persona/run_geometry.py --layer 0
+```
+
+Its prompt-cloud arm is contaminated by the same length artifact and measures the
+extraction grid, not persona geometry. Its 40-question **response**-cloud arm is
+clean — response-token pooling never sees the sink — and finds that more
+Assistant-like roles have **lower** within-role ID, weakened but directionally
+intact once cloud scale is controlled.
+
+Read `exploratory/per_persona/README.md` before quoting any number, and
+`exploratory/per_persona/METHODS.md` for how the two headline quantities are
+actually computed.
 
 
 ## Layout
