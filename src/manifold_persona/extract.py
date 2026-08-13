@@ -59,7 +59,8 @@ def load_model_and_tokenizer(model_name: str, device: str = None):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     # float16 on MPS/CUDA for speed+memory; float32 on CPU for stability.
     dtype = torch.float16 if device in ("mps", "cuda") else torch.float32
-    model = AutoModelForCausalLM.from_pretrained(model_name, dtype=dtype)
+    # torch_dtype: works on transformers 4.4x (native) and 4.5x+ (alias).
+    model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=dtype)
     model.to(device)
     model.eval()
     return model, tokenizer, device
