@@ -66,8 +66,12 @@ from metrics import ID_COLS, SEED, panel_metrics
 # The three failures are genuine and unchanged: lPCA 67%, TwoNN 77%,
 # PCA_dim_95pct 120%. They stay in the panel at the user's request but must
 # never be quoted as a dimension. See md/CALIBRATION.md, md/CALIBRATION-RESULTS.md.
-GATED_ESTIMATORS = ("MLE", "PCA_participation_ratio", "PCA_dim_90pct")
-UNCALIBRATED = ("TwoNN", "lPCA", "PCA_dim_95pct")
+# PCA_dim_90pct is DROPPED_FROM_PANEL (metrics.py), so it must not gate
+# the run: a hard stop on a metric no result uses. It is still computed
+# and its calibration error recorded below. Whether it returns to the
+# panel is an open team decision.
+GATED_ESTIMATORS = ("MLE", "PCA_participation_ratio")
+UNCALIBRATED = ("TwoNN", "lPCA", "PCA_dim_90pct", "PCA_dim_95pct")
 
 PLANTED_DIMS = (3, 5, 8, 12)
 TOLERANCE = 0.20     # relative error a gated estimator may not exceed
