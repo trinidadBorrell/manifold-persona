@@ -68,7 +68,8 @@ def run_config(args) -> dict:
             "n_questions": args.n_questions,
             "seed": args.seed, "max_new_tokens": args.max_new_tokens,
             "do_sample": bool(args.do_sample), "temperature": args.temperature,
-            "limit": args.limit, "chunk": args.chunk}
+            "limit": args.limit, "chunk": args.chunk,
+            "batch_size": args.batch_size}
 
 
 def check_completed_run(out_dir: Path, cfg: dict, n_records: int) -> None:
@@ -116,6 +117,11 @@ def main():
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--limit", type=int, default=None, help="cap #records (smoke/bench)")
     ap.add_argument("--chunk", type=int, default=128, help="records per checkpoint shard")
+    ap.add_argument("--batch_size", type=int, default=1,
+                    help="records generated per GPU batch. 1 = the sequential "
+                         "path the reference clouds used. Batched greedy can "
+                         "differ at logit near-ties; verify with "
+                         "extraction/verify_pilot.py before a full run.")
     ap.add_argument("--restart", action="store_true", help="wipe existing checkpoints first")
     args = ap.parse_args()
 
@@ -163,7 +169,8 @@ def main():
     # Load the model only if there is work to do.
     if todo:
         from manifold_persona.extract import load_model_and_tokenizer
-        from manifold_persona.generate import generate_and_extract
+        from manifold_persona.generate import (generate_and_extract,
+                                               generate_and_extract_batched)
         print(f"Loading model {args.model} ...")
         model, tokenizer, device = load_model_and_tokenizer(args.model)
         if args.tokenizer:
@@ -177,10 +184,17 @@ def main():
         chats = [record_to_messages(r) for r in records]
         for (s, e) in todo:
             tc = time.time()
-            avg, last, responses = generate_and_extract(
-                model, tokenizer, chats[s:e], device,
-                max_new_tokens=args.max_new_tokens, do_sample=args.do_sample,
-                temperature=args.temperature)
+            if args.batch_size > 1:
+                avg, last, responses = generate_and_extract_batched(
+                    model, tokenizer, chats[s:e], device,
+                    max_new_tokens=args.max_new_tokens,
+                    do_sample=args.do_sample, temperature=args.temperature,
+                    batch_size=args.batch_size)
+            else:
+                avg, last, responses = generate_and_extract(
+                    model, tokenizer, chats[s:e], device,
+                    max_new_tokens=args.max_new_tokens, do_sample=args.do_sample,
+                    temperature=args.temperature)
             # atomic-ish shard write: temp then rename. NB np.savez appends
             # ".npz" if the name lacks it, so the temp name must already end
             # ".npz" or the rename target won't exist.
