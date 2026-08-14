@@ -22,6 +22,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dir", required=True, help="cloud directory to upload")
     ap.add_argument("--repo", required=True, help="dataset repo id (user/name)")
+    ap.add_argument("--prefix", default=None,
+                    help="subfolder inside the repo (e.g. a stage name)")
     args = ap.parse_args()
 
     d = Path(args.dir)
@@ -34,6 +36,7 @@ def main():
     api = HfApi()
     info = api.upload_folder(folder_path=str(d), repo_id=args.repo,
                              repo_type="dataset",
+                             path_in_repo=args.prefix,
                              commit_message=f"upload {d.name}")
     print(f"uploaded {d} -> {args.repo}")
     print(info)

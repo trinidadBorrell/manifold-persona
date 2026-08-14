@@ -103,8 +103,15 @@ def generate_and_extract_batched(
     do_sample: bool = False,
     temperature: float = 1.0,
     batch_size: int = 16,
+    stop_marker: str = None,
 ) -> Tuple[np.ndarray, np.ndarray, List[str]]:
     """Batched twin of :func:`generate_and_extract`. Same outputs, ~10x faster.
+
+    ``stop_marker``: response ends at the first generated occurrence of this
+    string's token sequence (e.g. "<|user|>"). Base models that never emit
+    eos signal turn-end by STARTING a new turn; the marker is that signal.
+    Pass it to every stage of a lineage — aligned stages emit eos first, so
+    it is a no-op for them.
 
     Generation batches with LEFT padding + attention mask (decoding must
     continue from real tokens). Extraction then rebuilds each sample's real
@@ -150,12 +157,26 @@ def generate_and_extract_batched(
         out = model.generate(inp.to(device), attention_mask=mask.to(device),
                              **gen_kwargs)                    # [B, P+R]
 
+
         # ---- per-sample real sequences: prompt + response up to eos incl.
         seqs, rlens = [], []
         for j, i in enumerate(idx):
             gen = out[j, P:]
             eos_pos = (gen == eos_id).nonzero()
             r = int(eos_pos[0]) + 1 if eos_pos.numel() else gen.shape[0]
+            if stop_marker:
+                # String-grounded cut: BPE merges the marker's opening with
+                # whatever precedes it, so token-subsequence search misses.
+                # Find the marker in the decoded text, then the first token
+                # whose prefix-decode reaches that character position.
+                g = gen[:r].tolist()
+                full = tokenizer.decode(g)
+                p = full.find(stop_marker)
+                if p != -1:
+                    for k in range(len(g)):
+                        if len(tokenizer.decode(g[:k + 1])) > p:
+                            r = k
+                            break
             resp = gen[:r]
             responses[i] = tokenizer.decode(resp, skip_special_tokens=True)
             seqs.append(torch.cat([prompts[j].to(device), resp]))
