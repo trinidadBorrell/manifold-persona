@@ -250,11 +250,12 @@ def main(argv=None) -> None:
                       subdirs=("figures", "data"))
     figs = run / "figures"
 
-    print("[0] loading role cloud (prompt_avg, layer 26, PCA-50) ...")
+    print("[0] loading role cloud (prompt_avg, PCA-50) ...")
     cloud = P.load_cloud(view="prompt_avg", seed=SEED)
     X = cloud.role_means
     names = list(cloud.role_names)
-    print(f"    {X.shape[0]} roles x {X.shape[1]} dims")
+    print(f"    {X.shape[0]} roles x {X.shape[1]} dims  "
+          f"model={cloud.manifest.get('model_name')} layer={cloud.layer}")
 
     k_list = usable_k_list(X.shape[0])
     if not k_list:
@@ -324,12 +325,16 @@ def main(argv=None) -> None:
                               "pos": pos_by_k[kk]} for kk in k_list},
     }
     (run / "data" / "local_id.json").write_text(json.dumps(res, indent=2))
-    np.savetxt(run / "data" / "local_id_per_role.csv",
-               np.c_[real, proj], delimiter=",",
-               header="local_id,assistant_axis_proj", comments="")
+    # Role names in the CSV so downstream joins can merge by role instead of
+    # trusting row order.
+    with open(run / "data" / "local_id_per_role.csv", "w") as f:
+        f.write("role,local_id,assistant_axis_proj\n")
+        for nm, r_, p_ in zip(names, real, proj):
+            f.write(f"{nm},{float(r_)},{float(p_)}\n")
     write_manifest(run, {
         "run": stamp, "script": "manifold/local_id.py", "seed": SEED,
-        "view": "prompt_avg", "layer": 26, "d_ambient": int(X.shape[1]),
+        "view": "prompt_avg", "layer": cloud.layer,
+        "model": cloud.manifest.get("model_name"), "d_ambient": int(X.shape[1]),
         "python": sys.version.split()[0], "platform": platform.platform(),
         "numpy": np.__version__, "sklearn": sklearn.__version__,
         "status": "exploratory — post hoc, not preregistered",

@@ -73,9 +73,10 @@ def build_matched_pair(tokenizer, system_a: str, n_ctrl_offset: int, question: s
     """Return (ids_a, ids_b, n_shared) where ids_b replaces the system CONTENT with
     persona-free filler of identical token length.
 
-    Because the two system blocks have the same length, every question token sits at
-    the same absolute position in both sequences, so RoPE is identical and the
-    difference isolates system-prompt CONTENT rather than prefix length/position.
+    The two system blocks have the same token length. So every question token
+    sits at the same absolute position in both sequences, and RoPE is identical.
+    The difference therefore isolates system-prompt CONTENT rather than prefix
+    length/position.
     """
     ids_a = render_ids(tokenizer, system_a, question)
     sys_ids = tokenizer(system_a, add_special_tokens=False)["input_ids"]

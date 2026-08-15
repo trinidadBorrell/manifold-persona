@@ -13,7 +13,7 @@ numpy
 tabulate        # required by DataFrame.to_markdown (manifold/sweep_report.py)
 
 # Exploratory analysis
-scikit-learn>=1.3
+scikit-learn>=1.6  # hdbscan >=0.8.40 needs ensure_all_finite (renamed in 1.6)
 scikit-dimension>=0.3
 umap-learn>=0.5
 hdbscan>=0.8

@@ -2,23 +2,24 @@
 
 Why this module exists instead of reusing
 ``exploratory/assistant_axis/01_intrinsic_dimension.py::estimate_id_only``:
-that helper hardcodes ``skdim.id.MLE(K=20)``, which stops being LOCAL for a cloud
-of n <= 21 points — skdim clamps the neighbourhood to n-1, so every point's
-"neighbourhood" is the whole cloud — i.e. for the entire small-n end of this
-sweep (n=10, n=25), which is the part the question is about. Here the neighbourhood
-adapts as ``n_neighbors = min(10, n-2)`` (the plan's k=10, clipped to what n
-allows) and the SAME size is used for the reference draw at that n, so the
-comparison stays fair. Note it is passed to ``fit``, not to the constructor:
-in skdim 0.3.6 ``MLE(K=...)`` is read only when ``neighborhood_based=False``,
-and the default is True, so a constructor K is silently ignored.
+that helper hardcodes ``skdim.id.MLE(K=20)``, which stops being LOCAL for a
+cloud of n <= 21 points. skdim clamps the neighbourhood to n-1, so every
+point's "neighbourhood" is the whole cloud. That covers the entire small-n end
+of this sweep (n=10, n=25), which is the part the question is about. Here the
+neighbourhood adapts as ``n_neighbors = min(10, n-2)`` (the plan's k=10,
+clipped to what n allows). The SAME size is used for the reference draw at
+that n, so the comparison stays fair. Note it is passed to ``fit``, not to the
+constructor: in skdim 0.3.6 ``MLE(K=...)`` is read only when
+``neighborhood_based=False``, and the default is True, so a constructor K is
+silently ignored.
 
-The reference is the load-bearing part. ID estimators are biased *downward* when
-N is small (they need N >> 2^d), so "ID falls as n falls" is the null expectation,
-not a finding. We therefore estimate ID on `n_ref` draws of n points from a
-Gaussian matched to the full role-mean covariance — a cloud with NO manifold
-structure, only the data's second-order statistics — and report real ID against
-that band. Real ID tracking the band = small-N bias. Real ID below the band =
-genuine simplification.
+The reference is the load-bearing part. ID estimators are biased *downward*
+when N is small (they need N >> 2^d). So "ID falls as n falls" is the null
+expectation, not a finding. We therefore estimate ID on `n_ref` draws of n
+points from a Gaussian matched to the full role-mean covariance — a cloud with
+NO manifold structure, only the data's second-order statistics — and report
+real ID against that band. Real ID tracking the band = small-N bias. Real ID
+below the band = genuine simplification.
 """
 from __future__ import annotations
 

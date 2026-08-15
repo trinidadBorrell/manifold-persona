@@ -41,6 +41,7 @@ from __future__ import annotations
 import contextlib
 import datetime
 import os
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -120,6 +121,12 @@ def resolve_run_dir(outdir: str = None) -> Path:
     else:
         p = FIGURES_DIR / timestamp()
     p.mkdir(parents=True, exist_ok=True)
+    # One stamp per script: run dirs are shared, so a single provenance.json
+    # would keep only the last writer's record.
+    from manifold_persona.provenance import write_stamp
+    stem = Path(sys.argv[0]).stem or "run"
+    write_stamp(p, data_dirs=[os.environ.get("MP_ROLE_DIR", ROLE_EMBEDDINGS_DIR)],
+                name=f"provenance_{stem}.json")
     return p
 
 

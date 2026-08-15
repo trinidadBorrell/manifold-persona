@@ -26,17 +26,11 @@ data/
 # ---------------------------------------------------------------------------
 # Run outputs
 # ---------------------------------------------------------------------------
-# Nothing under output/ goes to GitHub: not figures, not logs, not manifests,
-# not REPORT.md. Runs are reproducible from the committed code plus the plan,
-# and the directories are large.
-#
-# The one exception is main's, kept deliberately: a *script* that lives under
-# output/ is tracked, because a lost one made the E8 primary result
-# unreproducible (2026-08-03 review). It is inert here — no .py under output/
-# today — and whether this branch keeps it is a merge-time call.
-output/**
-!output/**/
-!output/**/*.py
+# Nothing under output/ goes to GitHub: data and results upload to
+# Hugging Face. Scripts that produce published results must live in the
+# repo tree, not under output/ (a lost script once made the E8 primary
+# result unreproducible — 2026-08-03 review).
+output/
 
 # Generated exploratory figures (large plotly HTML; regenerable, kept on disk).
 # Note this pattern is one level deep by design: it catches
@@ -66,3 +60,9 @@ exploratory/per_persona/md/
 # ---------------------------------------------------------------------------
 exploratory/assistant_axis_traits/
 exploratory/persona_vectors/
+
+# Local working notes, never committed
+.labbook/
+wiki/
+lit-review.md
+novelty-assessment.md

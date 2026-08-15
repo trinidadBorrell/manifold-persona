@@ -46,7 +46,7 @@ def contrast_experiment(run_dir: Path, L: int):
     """Variance decomposition of the prompt cloud vs this response cloud."""
     rows = {}
     for label, d in (("response_5x40", os.environ.get("MP_ROLE_DIR",
-                                                      "data/embeddings_roles_resp40")),
+                                                      "data/embeddings_roles_resp_40q")),
                      ("prompt_5x5", "data/embeddings_roles")):
         prev = os.environ.get("MP_ROLE_DIR")
         os.environ["MP_ROLE_DIR"] = d
