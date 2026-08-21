@@ -47,6 +47,7 @@ from manifold.idim import ESTIMATORS
 
 from common import load_role_clouds, resolve_run_dir, small_matrix_ops
 from metrics import ID_COLS, SEED, panel_metrics
+from topology import betti_from_diagrams
 
 # CALIBRATED = recovers a planted dimension within 20% for d<=10 in the PCA-50
 # working space. THREE estimators clear that bar, not one:
@@ -159,6 +160,12 @@ def positive_control(n_per: int, ambient: int, radii: list, noise: float,
             plant_circle(n_per, ambient, mid, noise, seed=seed0), keep_diagrams=True)
         m_blob, dg_blob, _ = panel_metrics(
             plant_blob(n_per, ambient, mid, seed=seed0), keep_diagrams=True)
+    # panel_metrics filters betti0/1/2 out of its output (dropped from
+    # PANEL_COLS 2026-08-04), so recompute them from the diagrams here.
+    m_circ.update({k: v for k, v in betti_from_diagrams(
+        dg_circ, m_circ["cloud_diameter"]).items() if k.startswith("betti")})
+    m_blob.update({k: v for k, v in betti_from_diagrams(
+        dg_blob, m_blob["cloud_diameter"]).items() if k.startswith("betti")})
     return {"calibration": rows,
             "circle": {k: m_circ.get(k) for k in
                        ("betti0", "betti1", "H1_max_lifetime", "cloud_diameter")},
