@@ -47,6 +47,7 @@ from manifold.idim import ESTIMATORS
 
 from common import load_role_clouds, resolve_run_dir, small_matrix_ops
 from metrics import ID_COLS, SEED, panel_metrics
+from topology import betti_from_diagrams
 
 # CALIBRATED = recovers a planted dimension within 20% for d<=10 in the PCA-50
 # working space. THREE estimators clear that bar, not one:
@@ -66,8 +67,12 @@ from metrics import ID_COLS, SEED, panel_metrics
 # The three failures are genuine and unchanged: lPCA 67%, TwoNN 77%,
 # PCA_dim_95pct 120%. They stay in the panel at the user's request but must
 # never be quoted as a dimension. See md/CALIBRATION.md, md/CALIBRATION-RESULTS.md.
-GATED_ESTIMATORS = ("MLE", "PCA_participation_ratio", "PCA_dim_90pct")
-UNCALIBRATED = ("TwoNN", "lPCA", "PCA_dim_95pct")
+# PCA_dim_90pct is DROPPED_FROM_PANEL (metrics.py), so it must not gate
+# the run: a hard stop on a metric no result uses. It is still computed
+# and its calibration error recorded below. Whether it returns to the
+# panel is an open team decision.
+GATED_ESTIMATORS = ("MLE", "PCA_participation_ratio")
+UNCALIBRATED = ("TwoNN", "lPCA", "PCA_dim_90pct", "PCA_dim_95pct")
 
 PLANTED_DIMS = (3, 5, 8, 12)
 TOLERANCE = 0.20     # relative error a gated estimator may not exceed
@@ -155,6 +160,12 @@ def positive_control(n_per: int, ambient: int, radii: list, noise: float,
             plant_circle(n_per, ambient, mid, noise, seed=seed0), keep_diagrams=True)
         m_blob, dg_blob, _ = panel_metrics(
             plant_blob(n_per, ambient, mid, seed=seed0), keep_diagrams=True)
+    # panel_metrics filters betti0/1/2 out of its output (dropped from
+    # PANEL_COLS 2026-08-04), so recompute them from the diagrams here.
+    m_circ.update({k: v for k, v in betti_from_diagrams(
+        dg_circ, m_circ["cloud_diameter"]).items() if k.startswith("betti")})
+    m_blob.update({k: v for k, v in betti_from_diagrams(
+        dg_blob, m_blob["cloud_diameter"]).items() if k.startswith("betti")})
     return {"calibration": rows,
             "circle": {k: m_circ.get(k) for k in
                        ("betti0", "betti1", "H1_max_lifetime", "cloud_diameter")},

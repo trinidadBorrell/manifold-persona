@@ -46,10 +46,29 @@ CKPT_SUBDIR = "_ckpt"
 CONFIG_NAME = "ckpt_config.json"
 
 
-def record_to_messages(r):
+# Persona-neutral exemplar turns for --fewshot. Base models echo bare chat
+# markup instead of answering; two in-context Q->A pairs give them the
+# pattern. Applied to EVERY stage identically so token sequences stay
+# comparable. Not from the study's question pool.
+FEWSHOT = [
+    ("What causes the seasons on Earth?",
+     "The tilt of Earth's axis. As Earth orbits the sun, each hemisphere "
+     "leans toward the sun for part of the year and away for another, "
+     "changing how much direct sunlight it gets."),
+    ("How do you make a cup of tea?",
+     "Boil water, pour it over a tea bag or leaves, let it steep a few "
+     "minutes, then remove the tea. Add milk or sugar if you like."),
+]
+
+
+def record_to_messages(r, fewshot: bool = False):
     msgs = []
     if r.system is not None:
         msgs.append({"role": "system", "content": r.system})
+    if fewshot:
+        for q, a in FEWSHOT:
+            msgs.append({"role": "user", "content": q})
+            msgs.append({"role": "assistant", "content": a})
     msgs.append({"role": "user", "content": r.question})
     return msgs
 
@@ -64,10 +83,13 @@ def run_config(args) -> dict:
     Every key is also written into the final manifest under the SAME name, so
     the completed-run guard below can compare the whole config.
     """
-    return {"model_name": args.model, "n_questions": args.n_questions,
+    return {"model_name": args.model, "tokenizer_name": args.tokenizer,
+            "n_questions": args.n_questions,
             "seed": args.seed, "max_new_tokens": args.max_new_tokens,
             "do_sample": bool(args.do_sample), "temperature": args.temperature,
-            "limit": args.limit, "chunk": args.chunk}
+            "limit": args.limit, "chunk": args.chunk,
+            "batch_size": args.batch_size, "fewshot": bool(args.fewshot),
+            "stop_marker": args.stop_marker}
 
 
 def check_completed_run(out_dir: Path, cfg: dict, n_records: int) -> None:
@@ -101,6 +123,12 @@ def check_completed_run(out_dir: Path, cfg: dict, n_records: int) -> None:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", default=MODEL_NAME)
+    ap.add_argument("--tokenizer", default=None,
+                    help="render chats with THIS repo's tokenizer instead of "
+                         "the model's own. Cross-stage runs must pass the "
+                         "instruct tokenizer so every stage sees identical "
+                         "token sequences (base/instruct vocabs are "
+                         "byte-identical; their chat templates are not).")
     ap.add_argument("--out_dir", default=str(RESP_ROLE_EMBEDDINGS_DIR))
     ap.add_argument("--n_questions", type=int, default=5, help="questions sampled per role")
     ap.add_argument("--max_new_tokens", type=int, default=128)
@@ -109,6 +137,19 @@ def main():
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--limit", type=int, default=None, help="cap #records (smoke/bench)")
     ap.add_argument("--chunk", type=int, default=128, help="records per checkpoint shard")
+    ap.add_argument("--stop-marker", default=None,
+                    help="truncate responses at this string's first generated "
+                         "occurrence (batched path only); pass the lineage's "
+                         "user-turn marker for base models that never emit eos")
+    ap.add_argument("--fewshot", action="store_true",
+                    help="prepend the two neutral exemplar Q->A turns to every "
+                         "prompt (all stages identically); needed for base "
+                         "models that echo bare chat markup")
+    ap.add_argument("--batch_size", type=int, default=1,
+                    help="records generated per GPU batch. 1 = the sequential "
+                         "path the reference clouds used. Batched greedy can "
+                         "differ at logit near-ties; verify with "
+                         "extraction/verify_pilot.py before a full run.")
     ap.add_argument("--restart", action="store_true", help="wipe existing checkpoints first")
     args = ap.parse_args()
 
@@ -156,20 +197,32 @@ def main():
     # Load the model only if there is work to do.
     if todo:
         from manifold_persona.extract import load_model_and_tokenizer
-        from manifold_persona.generate import generate_and_extract
+        from manifold_persona.generate import (generate_and_extract,
+                                               generate_and_extract_batched)
         print(f"Loading model {args.model} ...")
         model, tokenizer, device = load_model_and_tokenizer(args.model)
+        if args.tokenizer:
+            from transformers import AutoTokenizer
+            tokenizer = AutoTokenizer.from_pretrained(args.tokenizer)
+            print(f"rendering chats with tokenizer {args.tokenizer}")
         n_hidden = model.config.num_hidden_layers
         prim = half_depth_hidden_state(n_hidden)
         print(f"device={device}  n_hidden_states={n_hidden + 1}  "
               f"hidden={model.config.hidden_size}  half_depth_hidden_state={prim}")
-        chats = [record_to_messages(r) for r in records]
+        chats = [record_to_messages(r, fewshot=args.fewshot) for r in records]
         for (s, e) in todo:
             tc = time.time()
-            avg, last, responses = generate_and_extract(
-                model, tokenizer, chats[s:e], device,
-                max_new_tokens=args.max_new_tokens, do_sample=args.do_sample,
-                temperature=args.temperature)
+            if args.batch_size > 1:
+                avg, last, responses = generate_and_extract_batched(
+                    model, tokenizer, chats[s:e], device,
+                    max_new_tokens=args.max_new_tokens,
+                    do_sample=args.do_sample, temperature=args.temperature,
+                    batch_size=args.batch_size, stop_marker=args.stop_marker)
+            else:
+                avg, last, responses = generate_and_extract(
+                    model, tokenizer, chats[s:e], device,
+                    max_new_tokens=args.max_new_tokens, do_sample=args.do_sample,
+                    temperature=args.temperature)
             # atomic-ish shard write: temp then rename. NB np.savez appends
             # ".npz" if the name lacks it, so the temp name must already end
             # ".npz" or the rename target won't exist.
@@ -201,15 +254,34 @@ def main():
         row["response"] = resp
     meta_df = pd.DataFrame(meta_rows)
 
+    # Generation sanity stats. Recorded, never filtered on: a geometry
+    # difference between stages must be checkable against a generation-quality
+    # difference (base models can loop or truncate under matched decoding).
+    lens = meta_df["response"].str.len()
+    def _loops(s):
+        tail = s[-20:]
+        return bool(tail) and s.count(tail) >= 3
     manifest = {
         **cfg,                       # every run_config key, same names
         "n_layers": int(n_layers), "hidden": int(hidden),
         "primary_layer": int(prim), "token_basis": "response",
         "n_records": int(N), "n_roles": int(meta_df["role"].nunique()),
+        "response_stats": {
+            "char_len_median": float(lens.median()),
+            "char_len_p10": float(lens.quantile(.10)),
+            "char_len_p90": float(lens.quantile(.90)),
+            "share_empty": float((lens == 0).mean()),
+            "share_looping": float(meta_df["response"].map(_loops).mean()),
+        },
     }
     save_embeddings(avg, last, meta_df, manifest, out_dir=out_dir)
+    # Human-readable copy beside the parquet, matching the published clouds.
+    meta_df.to_csv(out_dir / "metadata.csv", index=False)
+    from manifold_persona.provenance import write_stamp
+    write_stamp(out_dir)
     shutil.rmtree(ckpt_dir)          # clean up shards once the final save succeeded
     print(f"wrote {out_dir}  ({time.time()-t0:.0f}s total)  · removed {ckpt_dir}")
+    print("response stats:", json.dumps(manifest["response_stats"]))
 
 
 if __name__ == "__main__":

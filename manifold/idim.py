@@ -2,8 +2,8 @@
 
 Why this module exists instead of reusing
 ``exploratory/assistant_axis/01_intrinsic_dimension.py::estimate_id_only``:
-that helper hardcodes ``skdim.id.MLE(K=20)``, which stops being LOCAL for a
-cloud of n <= 21 points. skdim clamps the neighbourhood to n-1, so every
+that helper takes skdim's 20-neighbour ``fit`` default, which stops being LOCAL
+for a cloud of n <= 21 points. skdim clamps the neighbourhood to n-1, so every
 point's "neighbourhood" is the whole cloud. That covers the entire small-n end
 of this sweep (n=10, n=25), which is the part the question is about. Here the
 neighbourhood adapts as ``n_neighbors = min(10, n-2)`` (the plan's k=10,

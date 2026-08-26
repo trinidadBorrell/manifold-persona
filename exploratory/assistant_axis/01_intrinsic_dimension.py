@@ -36,7 +36,9 @@ def pca_cumvar(X):
 
 ESTIMATORS = {
     "TwoNN":   (lambda: skdim.id.TwoNN(),   "global"),
-    "MLE":     (lambda: skdim.id.MLE(K=20), "pw_mean"),
+    # MLE neighbourhood is skdim's fit default n_neighbors=20; a constructor K is
+    # silently ignored under the default neighborhood_based=True (skdim 0.3.6).
+    "MLE":     (lambda: skdim.id.MLE(),     "pw_mean"),
     "lPCA":    (lambda: skdim.id.lPCA(),    "global"),
     "MOM":     (lambda: skdim.id.MOM(),     "global"),
     "TLE":     (lambda: skdim.id.TLE(),     "global"),
