@@ -47,8 +47,17 @@ from __future__ import annotations
 
 import numpy as np
 
-# The paper's own entailment model (it also reports a GPT-3.5 variant).
-NLI_MODEL = "microsoft/deberta-large-mnli"
+# The paper's own entailment model is deberta-LARGE-mnli. On this machine it is
+# not runnable: on MPS its allocator grows to ~17 GB regardless of fixed-shape
+# padding or how often the cache is emptied, which drives the machine into swap
+# and collapses throughput to ~20 pairs/s (3.1 h for the pass, past the plan's
+# ceiling) -- and it stalled the first attempt in uninterruptible I/O wait.
+# The base checkpoint is the same task, same MNLI training, same label order,
+# and runs at 69 pairs/s (53 min). It is therefore the primary predicate, and
+# the LARGE model is run over a 10% sample of groups so the substitution is
+# MEASURED rather than assumed harmless. Deviation D7 / amendment A4.
+NLI_MODEL = "microsoft/deberta-base-mnli"
+NLI_MODEL_REFERENCE = "microsoft/deberta-large-mnli"
 # Preregistered fallback predicate, used only if the gates fail. Chosen because
 # it is trained on NLI data among others, so its similarity is at least aligned
 # with the notion the paper is using. It must NEVER be the layer-19 activations:
@@ -87,16 +96,28 @@ class NLIPredicate:
 
     name = "deberta-mnli-bidirectional"
 
-    def __init__(self, device: str = None, batch_size: int = 64):
+    # Every batch is padded to this FIXED length. Variable-length padding makes
+    # every batch a new tensor shape, and PyTorch's MPS allocator caches a fresh
+    # buffer per shape -- on the first full run that grew to 17 GB and drove the
+    # machine into swap until the process was stuck in uninterruptible I/O wait.
+    # A constant shape lets one buffer be reused. 192 covers question + 40 words
+    # (~150 tokens with specials) with room to spare.
+    MAX_LEN = 192
+    EMPTY_CACHE_EVERY = 200        # batches
+
+    def __init__(self, device: str = None, batch_size: int = 64, model: str = None):
         import torch
         from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
         self.torch = torch
+        self.model_id = model or NLI_MODEL
+        self.name = f"{self.model_id}-bidirectional"
         self.device = device or ("mps" if torch.backends.mps.is_available() else "cpu")
-        self.tok = AutoTokenizer.from_pretrained(NLI_MODEL)
-        self.model = AutoModelForSequenceClassification.from_pretrained(NLI_MODEL)
+        self.tok = AutoTokenizer.from_pretrained(self.model_id)
+        self.model = AutoModelForSequenceClassification.from_pretrained(self.model_id)
         self.model.to(self.device).eval()
         self.batch_size = batch_size
+        self._nbatch = 0
         # deberta-large-mnli labels: 0 CONTRADICTION, 1 NEUTRAL, 2 ENTAILMENT.
         # Read them off the config rather than hardcoding -- a silently
         # reordered label map would invert the whole study.
@@ -109,11 +130,15 @@ class NLIPredicate:
         for s in range(0, len(premises), self.batch_size):
             e = s + self.batch_size
             enc = self.tok(list(premises[s:e]), list(hypotheses[s:e]),
-                           return_tensors="pt", padding=True,
-                           truncation=True, max_length=256).to(self.device)
+                           return_tensors="pt", padding="max_length",
+                           truncation=True, max_length=self.MAX_LEN).to(self.device)
             with self.torch.no_grad():
                 logits = self.model(**enc).logits
             out[s:e] = (logits.argmax(-1) == self.entail_id).cpu().numpy()
+            del enc, logits
+            self._nbatch += 1
+            if self.device == "mps" and self._nbatch % self.EMPTY_CACHE_EVERY == 0:
+                self.torch.mps.empty_cache()
         return out
 
 

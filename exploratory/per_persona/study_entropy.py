@@ -75,7 +75,12 @@ GATE_DEGENERATE = 0.90
 
 RUNGS = [("raw", []),
          ("ctrl_scale", ["log_var", "mean_norm"]),
-         ("ctrl_all", ["log_var", "mean_norm", "mean_tokens", "trunc_rate"])]
+         ("ctrl_all", ["log_var", "mean_norm", "mean_tokens", "trunc_rate"]),
+         # A3: family dummies appended at build time -- see FAMILY_RUNG.
+         ("ctrl_family", ["log_var", "mean_norm"])]
+FAMILY_RUNG = "ctrl_family"
+FAMILIES_CSV = (REPO / "output" / "per_persona_axis_centroid_11-Aug-2026" / "q40"
+                / "data" / "role_families_L19.csv")
 
 JUDGE_MODEL = "Qwen/Qwen2.5-3B-Instruct"
 JUDGE_PROMPT = (
@@ -164,41 +169,64 @@ def build_groups(d):
 # --------------------------------------------------------------------------- #
 # experiment 0 + 1 -- the NLI pass, clustering, entropy
 # --------------------------------------------------------------------------- #
-def run_nli(groups, pred, run_dir, resume=False):
+def run_nli(groups, pred, run_dir, resume=False, tag=""):
     """Entailment matrix per group. One batched pass over every ordered pair.
 
-    Cached to disk because it is the expensive step (~220,800 forwards, ~45 min)
-    and every downstream experiment reads it.
+    Cached to disk because it is the expensive step (~220,680 forwards) and
+    every downstream experiment reads it.
+
+    Pairs are generated CHUNK BY CHUNK rather than all at once, and the flat
+    result array is checkpointed after every chunk. The first attempt at this
+    run materialised all 441,360 strings and let MPS cache a buffer per batch
+    shape; the process reached 17 GB, the machine went into swap, and it stalled
+    in uninterruptible I/O. Streaming plus fixed-shape padding fixes the cause;
+    checkpointing means a stall never costs more than one chunk.
     """
-    cache = run_dir / "data" / "entail_cache.npz"
+    cache = run_dir / "data" / f"entail_flags{tag}.npz"
+    sizes = [g["M"] for g in groups]
+    spans, tot = [], 0
+    for m in sizes:                                    # where each group's pairs live
+        n = m * (m - 1)
+        spans.append((tot, tot + n))
+        tot += n
+
+    flags = np.zeros(tot, dtype=bool)
+    start_group = 0
     if resume and cache.exists():
-        z = np.load(cache, allow_pickle=True)
-        log(f"resumed entailment matrices from {cache}")
-        return list(z["mats"])
+        z = np.load(cache)
+        if int(z["n_pairs"]) == tot:
+            flags = z["flags"].copy()
+            start_group = int(z["n_groups_done"])
+            log(f"resumed: {start_group:,}/{len(groups):,} groups already done")
+        else:
+            log("cache does not match this group set — recomputing from scratch")
 
-    prem, hyp, owner = [], [], []
+    log(f"entailment: {tot:,} ordered pairs over {len(groups):,} groups "
+        f"(from group {start_group:,})")
+    t0, chunk = time.time(), 400
+    for c0 in range(start_group, len(groups), chunk):
+        c1 = min(c0 + chunk, len(groups))
+        prem, hyp = [], []
+        for gi in range(c0, c1):
+            q, ans = groups[gi]["question"], groups[gi]["answers"]
+            for i, j in E.pair_index(len(ans)):
+                prem.append(f"{q} {ans[i]}")
+                hyp.append(f"{q} {ans[j]}")
+        res = pred.entails_batch(prem, hyp)
+        flags[spans[c0][0]:spans[c1 - 1][1]] = res
+        np.savez(cache, flags=flags, n_groups_done=c1, n_pairs=tot)
+        done = spans[c1 - 1][1]
+        rate = (done - spans[start_group][0]) / max(time.time() - t0, 1e-9)
+        log(f"  groups {c1:,}/{len(groups):,} | pairs {done:,}/{tot:,} "
+            f"({100*done/tot:.1f}%) {rate:.0f}/s eta {(tot-done)/max(rate,1e-9)/60:.1f} min")
+
+    mats = []
     for gi, g in enumerate(groups):
-        q, ans = g["question"], g["answers"]
-        for i, j in E.pair_index(len(ans)):
-            prem.append(f"{q} {ans[i]}")
-            hyp.append(f"{q} {ans[j]}")
-            owner.append((gi, i, j))
-    log(f"entailment: {len(prem):,} ordered pairs over {len(groups):,} groups")
-
-    t0 = time.time()
-    flags = np.zeros(len(prem), dtype=bool)
-    step = 25_000
-    for s in range(0, len(prem), step):
-        e = min(s + step, len(prem))
-        flags[s:e] = pred.entails_batch(prem[s:e], hyp[s:e])
-        done, rate = e, e / max(time.time() - t0, 1e-9)
-        log(f"  {done:,}/{len(prem):,} ({100*done/len(prem):.1f}%) "
-            f"{rate:.0f} pairs/s eta {(len(prem)-done)/max(rate,1e-9)/60:.1f} min")
-
-    mats = [np.zeros((g["M"], g["M"]), dtype=bool) for g in groups]
-    for (gi, i, j), f in zip(owner, flags):
-        mats[gi][i, j] = f
-    np.savez_compressed(cache, mats=np.array(mats, dtype=object))
+        m = g["M"]
+        mat = np.zeros((m, m), dtype=bool)
+        for k, (i, j) in enumerate(E.pair_index(m)):
+            mat[i, j] = flags[spans[gi][0] + k]
+        mats.append(mat)
     log(f"entailment done in {(time.time()-t0)/60:.1f} min -> {cache}")
     return mats
 
@@ -336,11 +364,26 @@ def control_pairs(groups, mats, d, pred, run_dir, seed=SEED, n=400):
 # --------------------------------------------------------------------------- #
 # experiment 2 -- the ladder
 # --------------------------------------------------------------------------- #
+def family_dummies(df):
+    """14 dummies for the 15 Ward families (A3).
+
+    Conditioning on these estimates the correlation WITHIN persona type, which
+    is the only way to tell "entropy tracks geometry" from "some kinds of
+    persona are both odd and far from the Assistant". Note the families were
+    built from the geometry of this same cloud, so this rung removes part of
+    what the geometry metrics measure -- it is a conservative floor.
+    """
+    return pd.get_dummies(df["family"].astype("category"), drop_first=True,
+                          prefix="fam").to_numpy(float)
+
+
 def build_ladder(df, targets, predictor, rng, gate_ok):
     rows = []
     x = df[predictor].to_numpy(float)
     for name, ctrl in RUNGS:
         Z = df[ctrl].to_numpy(float) if ctrl else None
+        if name == FAMILY_RUNG:
+            Z = np.column_stack([Z, family_dummies(df)])
         for t in targets:
             y = df[t].to_numpy(float)
             r, p = partial_corr_multi(x, y, Z)
@@ -367,6 +410,8 @@ def shuffle_null(df, targets, rng, n_perm=N_SHUFFLE):
     keep = {}
     for name, ctrl in RUNGS:
         Z = df[ctrl].to_numpy(float) if ctrl else None
+        if name == FAMILY_RUNG:
+            Z = np.column_stack([Z, family_dummies(df)])
         Y = df[targets].to_numpy(float)
         best = np.empty(n_perm)
         per = np.empty((n_perm, len(targets)))
@@ -485,8 +530,12 @@ def main():
         E_role=("SE_centred", "mean"), E_role_uncentred=("SE", "mean"),
         E_role_sd=("SE", "std"), mean_clusters=("n_clusters", "mean"),
         frac_collapsed=("n_clusters", lambda s: float((s == 1).mean())),
-        frac_split=("n_clusters", lambda s: float((s == 5).mean())),
         n_groups=("SE", "size")).reset_index()
+    # fully-split fraction must compare against that group's own M, not a
+    # hardcoded 5 -- 15 answers were dropped as too short, so some groups have
+    # M < 5 and would never register as split.
+    split = (grp.n_clusters == grp.M).groupby(grp.role).mean().rename("frac_split")
+    per_role = per_role.merge(split.reset_index(), on="role", how="left")
     per_role = per_role.merge(lens, on="role", how="left")
     per_role.to_csv(run_dir / "data" / "per_role_entropy_L19.csv", index=False)
     log(f"E_role: mean {per_role.E_role.mean():.4f} sd {per_role.E_role.std():.4f} "
@@ -504,6 +553,42 @@ def main():
                          and ctrl["false_merge_cross_question"] <= GATE_FALSE_MERGE))
     log(f"predicate controls: {ctrl}")
     del pred                                   # free MPS before the judge loads
+
+    # ---- A4: is the base predicate the same as the paper's large one? -- #
+    # Substituting deberta-base for deberta-large was forced by memory (see
+    # entropy.NLI_MODEL). Measuring the substitution on a 10% sample of groups
+    # is what keeps it a documented deviation rather than an assumption.
+    t0 = time.time()
+    rs = np.random.default_rng(SEED)
+    samp = sorted(rs.choice(len(groups), size=max(1, len(groups) // 10), replace=False))
+    log(f"A4: re-running {len(samp):,} groups under {E.NLI_MODEL_REFERENCE}")
+    try:
+        big = E.NLIPredicate(batch_size=32, model=E.NLI_MODEL_REFERENCE)
+        sub = [groups[i] for i in samp]
+        mats_big = run_nli(sub, big, run_dir, resume=args.resume, tag="_large")
+        del big
+        a = score_groups(sub, [mats[i] for i in samp])
+        b = score_groups(sub, mats_big)
+        agree = {
+            "n_groups": len(samp), "reference_model": E.NLI_MODEL_REFERENCE,
+            "primary_model": E.NLI_MODEL,
+            "cluster_count_exact_agreement": float((a.n_clusters == b.n_clusters).mean()),
+            "mean_clusters_primary": float(a.n_clusters.mean()),
+            "mean_clusters_reference": float(b.n_clusters.mean()),
+            "SE_pearson": float(np.corrcoef(a.SE, b.SE)[0, 1]),
+            "SE_mean_primary": float(a.SE.mean()), "SE_mean_reference": float(b.SE.mean()),
+            "pair_kappa": cohen_kappa(
+                np.concatenate([m.ravel() for m in [mats[i] for i in samp]]),
+                np.concatenate([m.ravel() for m in mats_big]))}
+        log(f"A4 agreement: cluster-count {agree['cluster_count_exact_agreement']:.3f}, "
+            f"SE r = {agree['SE_pearson']:.3f}, pair kappa = {agree['pair_kappa']:.3f}")
+    except Exception as exc:                                   # noqa: BLE001
+        agree = {"error": f"{type(exc).__name__}: {exc}"}
+        log(f"A4 agreement FAILED: {agree['error']}")
+    gates["predicate_agreement_A4"] = agree
+    json.dump(agree, open(run_dir / "data" / "predicate_agreement_L19.json", "w"),
+              indent=2, default=float)
+    timings["A4_agreement"] = time.time() - t0
 
     jd = judge_labels(groups, panel, run_dir)
     pred_same = []
@@ -525,7 +610,8 @@ def main():
         f"{np.mean(pred_same):.3f}")
     timings["gates"] = time.time() - t0
 
-    gate_ok = all(v.get("pass", v.get("pass_", False)) for v in gates.values())
+    gate_ok = all(v.get("pass", v.get("pass_", False))
+               for k, v in gates.items() if k != "predicate_agreement_A4")
     log(f"=== GATES {'PASS' if gate_ok else 'FAILED'} — running everything anyway "
         f"(amendment A1) ===")
     json.dump(gates, open(run_dir / "data" / "predicate_validation_L19.json", "w"),
@@ -536,7 +622,10 @@ def main():
     import metrics as MT
     targets = [c for c in MT.PANEL_COLS if c in panel.columns] + ["axis_proj", "cos_centroid"]
     df = panel.merge(per_role, on="role", how="inner")
-    df = df[df.role != "default"].dropna(subset=targets + ["E_role"] + RUNGS[-1][1])
+    fam = pd.read_csv(FAMILIES_CSV)                          # A3
+    df = df.merge(fam, on="role", how="left")
+    df = df[df.role != "default"].dropna(
+        subset=targets + ["E_role", "family"] + RUNGS[2][1])
     log(f"ladder: {len(df)} roles (default excluded), {len(targets)} targets, "
         f"{len(RUNGS)} rungs")
 
@@ -551,8 +640,42 @@ def main():
     ladder.to_csv(run_dir / "data" / "ladder_entropy_L19.csv", index=False)
     json.dump(null, open(run_dir / "data" / "shuffle_null_L19.json", "w"), indent=2)
 
+    # ---- A3: does persona TYPE account for it? ------------------------- #
+    from scipy import stats as st
+    grand = df.E_role.mean()
+    sizes = df.groupby("family").E_role.size()
+    means = df.groupby("family").E_role.mean()
+    ss_between = float((sizes * (means - grand) ** 2).sum())
+    ss_total = float(((df.E_role - grand) ** 2).sum())
+    kw = st.kruskal(*[g.E_role.values for _, g in df.groupby("family")
+                      if len(g) >= 2])
+    fam_tbl = (df.groupby("family")
+               .agg(n=("E_role", "size"), E_role_median=("E_role", "median"),
+                    E_role_mean=("E_role", "mean"), axis_proj_mean=("axis_proj", "mean"),
+                    MLE_median=(DECIDER_METRIC, "median"))
+               .sort_values("axis_proj_mean").reset_index())
+    fam_tbl.to_csv(run_dir / "data" / "family_entropy_L19.csv", index=False)
+    family_arm = {
+        "n_families": int(df.family.nunique()),
+        "family_sizes": {int(k): int(v) for k, v in sizes.items()},
+        "icc_between_family_share": ss_between / ss_total if ss_total > 0 else None,
+        "kruskal_H": float(kw.statistic), "kruskal_p": float(kw.pvalue),
+        "family_order_by_axis": fam_tbl.family.tolist(),
+        "note": ("families were built from the geometry of this same cloud, so "
+                 "the ctrl_family rung is a conservative floor, not an unbiased "
+                 "estimate")}
+    json.dump(family_arm, open(run_dir / "data" / "family_arm_L19.json", "w"),
+              indent=2, default=float)
+    log(f"families: ICC {family_arm['icc_between_family_share']:.3f} of E_role "
+        f"variance is family; Kruskal-Wallis H = {kw.statistic:.1f}, "
+        f"p = {kw.pvalue:.2e}")
+
     dec = ladder[(ladder.predictor == "E_role") & (ladder.target == DECIDER_METRIC)
                  & (ladder.rung == "ctrl_scale")].iloc[0]
+    decf = ladder[(ladder.predictor == "E_role") & (ladder.target == DECIDER_METRIC)
+                  & (ladder.rung == FAMILY_RUNG)].iloc[0]
+    log(f"DECIDER within-family (A3): r = {decf.r:+.3f} "
+        f"[{decf.ci_lo:+.3f}, {decf.ci_hi:+.3f}]")
     log(f"DECIDER  E_role vs {DECIDER_METRIC} | log_var, mean_norm: "
         f"r = {dec.r:+.3f} [{dec.ci_lo:+.3f}, {dec.ci_hi:+.3f}] "
         f"p = {dec.p:.2e}  bar |r| >= {DECIDER_BAR}  -> "
@@ -642,7 +765,11 @@ def main():
         "decider_result": {"r": float(dec.r), "p": float(dec.p),
                            "ci": [float(dec.ci_lo), float(dec.ci_hi)],
                            "clears_bar": bool(abs(dec.r) >= DECIDER_BAR),
-                           "quotable_as_verdict": bool(gate_ok)},
+                           "quotable_as_verdict": bool(gate_ok),
+                           "within_family_r": float(decf.r),
+                           "within_family_ci": [float(decf.ci_lo), float(decf.ci_hi)],
+                           "within_family_clears_bar": bool(abs(decf.r) >= DECIDER_BAR)},
+        "family_arm": family_arm,
         "env": {"python": sys.version.split()[0], "numpy": np.__version__,
                 "scipy": scipy.__version__, "sklearn": sklearn.__version__,
                 "pandas": pd.__version__, "torch": torch.__version__,
