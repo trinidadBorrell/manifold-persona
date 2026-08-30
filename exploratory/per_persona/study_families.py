@@ -1,15 +1,13 @@
 """ROLE FAMILIES on this cloud — does the pattern hold for GROUPS of roles?
 
-Plan: plans/2026-07-30-manifold-geometry-vs-assistant-axis.md (Experiment 5)
-
 WHY THE FAMILIES ARE RECOMPUTED
 -------------------------------
 `exploratory/assistant_axis/04_role_families.py` already produced 15 Ward
-families, but from the PROMPT cloud at layer 26. Reusing those labels here would
-be a silent cross-cloud transfer: the grouping would come from one representation
-and the metrics from another, and any family-level structure found would be
-partly an artefact of that mismatch. So the dendrogram is rebuilt on this
-cloud's own role means, with the same linkage and the same k.
+families, but from the PROMPT cloud at layer 26. Reusing those labels here
+would be a silent cross-cloud transfer. The grouping would come from one
+representation and the metrics from another. Any family-level structure found
+would then be partly an artefact of that mismatch. So the dendrogram is
+rebuilt on this cloud's own role means, with the same linkage and the same k.
 
 The test is Kruskal-Wallis (not ANOVA) across families per metric: the panel is
 non-normal, several metrics are integer-valued, and family sizes are unequal.

@@ -27,8 +27,8 @@ The order is not arbitrary:
                         not make it preregistered, and its output says so.
 
 Usage:
-    MP_ROLE_DIR=data/embeddings_roles_resp40 \\
-      .venv/bin/python exploratory/per_persona/run_geometry.py --layer 0
+    MP_ROLE_DIR=data/embeddings_roles_resp_40q \\
+      .venv/bin/python exploratory/per_persona/run_geometry.py
 """
 from __future__ import annotations
 
@@ -77,11 +77,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--view", default="prompt_avg")
     ap.add_argument("--layer", type=int, default=None,
-                    help="layer INDEX in the stored cloud (resp40 keeps one "
-                         "layer, so 0)")
+                    help="layer INDEX in the stored cloud (default: the "
+                         "manifest's primary_layer, 19 for resp_40q)")
     ap.add_argument("--label-layer", type=int, default=19,
-                    help="layer number written into output FILENAMES (the real "
-                         "depth behind resp40's primary_layer=0)")
+                    help="layer number written into output FILENAMES")
     ap.add_argument("--n-null", type=int, default=100)
     ap.add_argument("--outdir", default=None)
     ap.add_argument("--stamp", default=None)
