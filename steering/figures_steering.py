@@ -9,16 +9,18 @@ number, but "what fraction of responses is now on-target, off-target,
 theatrical, or broken". This module draws that same reading for our three arms
 so the comparison to the paper is a comparison of like with like.
 
-Three figures, and deliberately no more:
+Two figures under the current plan, three for legacy runs:
 
-    fig01  arm1_axis        one panel   - a global direction, no target
-    fig02  arm2_linear      two panels  - straight line to a target (near|far)
-    fig03  arm3_manifold    two panels  - curved path to the SAME target
+    fig01  linear_axis      one panel   - straight along the Assistant Axis
+    fig02  manifold_axis    one panel   - along the fitted curve, same axis
 
-fig03 is drawn on the y-limits computed from arm2 AND arm3 together. The whole
-point of arms 2 and 3 is that they aim at the same place by different routes, so
-the figures have to be physically superimposable; a per-figure autoscale would
-let a difference in axis range masquerade as a difference in behaviour.
+    (legacy: arm1_axis / arm2_linear / arm3_manifold, the target-directed
+     design, drawn as near|far panel pairs.)
+
+Both arms are drawn on ONE shared set of y-limits. The whole point of the pair
+is that they travel the same direction by different paths, so the figures have
+to be physically superimposable; a per-figure autoscale would let a difference
+in axis range masquerade as a difference in behaviour.
 
 WHY THE ROLE IS THE UNIT
 ------------------------
@@ -63,6 +65,9 @@ from steering.judge import (  # noqa: E402
     DEGRADED,
     OFF_TARGET,
     ON_TARGET,
+    PLOT_CATEGORIES,
+    PLOT_LABEL,
+    RESIDUAL_CATEGORIES,
 )
 
 LOG = logging.getLogger("figures_steering")
@@ -230,26 +235,95 @@ def _with_unsteered(df: pd.DataFrame, arm_rows: pd.DataFrame) -> pd.DataFrame:
     return pd.concat([base, arm_rows], ignore_index=True)
 
 
+_PLOT_IDX = [CATEGORIES.index(c) for c in PLOT_CATEGORIES]
+_RESID_IDX = [CATEGORIES.index(c) for c in RESIDUAL_CATEGORIES]
+
+
 def _panel_ymax(stats: Optional[Dict], neg: Optional[Dict]) -> float:
-    """Largest value a panel needs to show, error bars and band included."""
+    """Largest value a panel needs to show, error bars and band included.
+
+    OVER THE CATEGORIES ACTUALLY DRAWN. Taking the max over all seven let
+    `ambiguous` and `other` — scored but deliberately not plotted (see
+    RESIDUAL_CATEGORIES) — set the ceiling, so a panel whose five curves peak at
+    0.3 was framed to 0.9 and every one of them read as flat. Pass `neg=None`
+    when the control band is not being drawn, for the same reason.
+    """
     vals = [0.0]
-    if stats is not None:
-        vals.append(float(np.nanmax(stats["mean"])))
-        if np.isfinite(stats["hi"]).any():
-            vals.append(float(np.nanmax(stats["hi"])))
-    if neg is not None:
-        vals.append(float(np.nanmax(neg["mean"])))
-        if np.isfinite(neg["hi"]).any():
-            vals.append(float(np.nanmax(neg["hi"])))
+    for d in (stats, neg):
+        if d is None:
+            continue
+        vals.append(float(np.nanmax(d["mean"][:, _PLOT_IDX])))
+        hi = d["hi"][:, _PLOT_IDX]
+        if np.isfinite(hi).any():
+            vals.append(float(np.nanmax(hi)))
     return max(vals)
 
 
+# The paper's x-axis (Figure 4) is a SIGNED fraction of the average residual
+# norm: negative = steered away from the Assistant, positive = toward it. Ours
+# is an unsigned dose with the "away" direction baked into Arm 1's minus sign,
+# so our alpha is their |x| on the negative half. `paper_axis=True` plots
+# x = -alpha and frames the view to the range the paper actually swept.
+#
+# Their sweep stops at -1.0. Ours goes to 3.0, i.e. three times past the edge of
+# any figure they published, which is why the frame is a decision and not a
+# default: at |alpha| > 1 nobody has claimed the model stays coherent.
+PAPER_XLIM = (-1.06, 0.06)          # the range Fig. 4 actually sweeps
+FULL_XLIM = (-3.12, 0.12)           # everything we swept
+PAPER_XLABEL = ("steering along the Assistant Axis\n"
+                "(fraction of avg. residual norm; negative = away)")
+
+
+def _mirror(paper_axis: bool, already_signed: bool) -> float:
+    """+1, or -1 when a legacy magnitude alpha has to be flipped onto the
+    paper's signed x-axis. THE ONLY statement of the rule: the drawn points and
+    the "not shown, outside the plotted range" note both go through it, so they
+    cannot disagree about which alphas are where."""
+    return -1.0 if (paper_axis and not already_signed) else 1.0
+
+
+def sgn_for_note(alpha, paper_axis: bool, already_signed: bool):
+    """Where `alpha` lands on the drawn x-axis, mirroring included."""
+    return alpha * _mirror(paper_axis, already_signed)
+
+
+def _alphas_are_signed(df: pd.DataFrame) -> bool:
+    """Does this RUN store signed alphas (current) or magnitudes (legacy)?
+
+    Decided once, over the whole frame. Deciding it per panel from that panel's
+    own alphas was a live bug: any judged subset that happened to contain no
+    negative alpha — a partial judge pass, `--limit`, or the +0.25 end alone —
+    was read as legacy and had its x-axis MIRRORED, so "toward the Assistant"
+    was plotted as "away".
+    """
+    if "alpha" not in df:
+        return False
+    a = pd.to_numeric(df["alpha"], errors="coerce").dropna()
+    return bool((a < 0).any())
+
+
 def _draw_panel(ax, stats: Optional[Dict], neg: Optional[Dict],
-                title: str, show_legend: bool) -> None:
-    """One Figure-4 panel: seven category curves plus the control band."""
+                title: str, show_legend: bool,
+                paper_axis: bool = False,
+                xlim: Optional[Tuple[float, float]] = None,
+                already_signed: bool = True) -> None:
+    """One Figure-4 panel: the paper's five category curves plus the control band.
+
+    Five, not seven. `ambiguous` and `other` are scored but are not lines in the
+    paper's Figure 4; they are annotated as a residual instead, so a reader can
+    see how much probability mass is unaccounted for without a curve implying
+    the paper drew one.
+    """
+    # Alpha is signed in current runs (negative = away from the Assistant), so
+    # it IS the paper's x-axis already and must not be flipped again. Legacy
+    # runs stored a magnitude with the direction implied, and those still need
+    # the flip. `already_signed` comes from the whole frame (see
+    # `_alphas_are_signed`), never from this panel's slice of it.
+    sgn = _mirror(paper_axis, already_signed)
+
     if neg is not None:
-        nx = neg["alpha"]
-        for j, cat in enumerate(CATEGORIES):
+        nx = sgn * neg["alpha"]
+        for cat, j in zip(PLOT_CATEGORIES, _PLOT_IDX):
             m = neg["mean"][:, j]
             lo = np.where(np.isfinite(neg["lo"][:, j]), neg["lo"][:, j], m)
             hi = np.where(np.isfinite(neg["hi"][:, j]), neg["hi"][:, j], m)
@@ -266,20 +340,42 @@ def _draw_panel(ax, stats: Optional[Dict], neg: Optional[Dict],
         ax.text(0.5, 0.5, "no data for this panel", transform=ax.transAxes,
                 ha="center", va="center", fontsize=11, color="#B00020")
     else:
-        x = stats["alpha"]
-        for j, cat in enumerate(CATEGORIES):
+        x = sgn * stats["alpha"]
+        for cat, j in zip(PLOT_CATEGORIES, _PLOT_IDX):
             y = stats["mean"][:, j]
             lo, hi = stats["lo"][:, j], stats["hi"][:, j]
             err = np.vstack([np.where(np.isfinite(lo), y - lo, 0.0),
                              np.where(np.isfinite(hi), hi - y, 0.0)])
             err = np.clip(err, 0.0, None)
-            label = cat
+            label = PLOT_LABEL.get(cat, cat)
             if _GROUP_OF[cat]:
-                label = "%s (%s)" % (cat, _GROUP_OF[cat])
+                label = "%s (%s)" % (label, _GROUP_OF[cat])
             ax.errorbar(x, y, yerr=err, marker="o", ms=4, lw=1.6, capsize=2.5,
                         color=_PALETTE[cat], label=label, zorder=3)
 
-    ax.set_xlabel("steering strength alpha")
+        resid = float(np.nanmax(stats["mean"][:, _RESID_IDX].sum(axis=1)))
+        if resid > 0:
+            ax.text(0.98, 0.02, "%s: max %.0f%% (not plotted)"
+                    % (" + ".join(RESIDUAL_CATEGORIES), 100 * resid),
+                    transform=ax.transAxes, ha="right", va="bottom",
+                    fontsize=6.5, color="#666666")
+
+    ax.set_xlabel(PAPER_XLABEL if paper_axis else "steering strength alpha",
+                  fontsize=9 if paper_axis else 10)
+    if paper_axis:
+        lo, hi = xlim or PAPER_XLIM
+        ax.set_xlim(lo, hi)
+        # The paper's own limit, marked when we plot past it: everything left of
+        # this line is a dose no published figure covers, and the reader should
+        # not have to remember that.
+        if lo < PAPER_XLIM[0] - 1e-9:
+            ax.axvline(PAPER_XLIM[0] + 0.06, color="#B00020", lw=0.9, ls="--",
+                       alpha=0.55, zorder=0)
+            ax.text(PAPER_XLIM[0] + 0.02, 0.985, "  paper's limit", color="#B00020",
+                    fontsize=6.5, ha="left", va="top", transform=ax.get_xaxis_transform())
+        # The Assistant end. Everything is measured relative to it, and without
+        # the line the reader has to find x=0 by eye.
+        ax.axvline(0.0, color="#666666", lw=0.8, ls="-", alpha=0.5, zorder=0)
     ax.set_ylabel("fraction of responses")
     ax.set_title(title, fontsize=10)
     ax.grid(alpha=0.25, lw=0.5)
@@ -306,17 +402,29 @@ def _suptitle(fig, arm: str, missing: bool, n_roles: Optional[int]) -> None:
     fig.suptitle(head, fontsize=12, color=color)
 
 
-def _save(fig, path: Path) -> None:
-    fig.tight_layout(rect=(0, 0.035, 1, 0.93))
+def _save(fig, path: Path, bottom: float = 0.035) -> None:
+    """`bottom` reserves room for the footnote; the paper-axis one is two lines
+    under an x-label that is itself two lines, and the default rect clips it."""
+    fig.tight_layout(rect=(0, bottom, 1, 0.93))
     fig.savefig(str(path), dpi=300)
     plt.close(fig)
     LOG.info("wrote %s (%d bytes)", path, path.stat().st_size)
 
 
+# Panel label per arm. Both current arms are targetless and travel along the
+# Assistant Axis, so each is a single panel; the near/far split belonged to the
+# target-directed arms that the new plan removed.
+_ARM_LABEL = {
+    "linear_axis": "linear — straight along the Assistant Axis",
+    "manifold_axis": "manifold — along the fitted curve",
+    "arm1_axis": "no target",            # legacy runs
+}
+
+
 def _panel_specs(arm: str) -> List[Tuple[Optional[str], str]]:
-    """(target_distance, panel label) pairs — one panel for the untargeted arm."""
-    if arm == "arm1_axis":
-        return [(None, "no target")]
+    """(target_distance, panel label) pairs — one panel per targetless arm."""
+    if arm in _ARM_LABEL:
+        return [(None, _ARM_LABEL[arm])]
     return [("near", 'target_distance = "near"'),
             ("far", 'target_distance = "far"')]
 
@@ -338,13 +446,30 @@ def _build(df: pd.DataFrame, arm: str) -> Tuple[List[Optional[Dict]],
 
 
 def _render(df: pd.DataFrame, arm: str, out: Path,
-            ylim: Optional[Tuple[float, float]] = None) -> Optional[Tuple[float, float]]:
+            ylim: Optional[Tuple[float, float]] = None,
+            paper_axis: bool = False,
+            show_negctl: bool = True,
+            xlim: Optional[Tuple[float, float]] = None,
+            built: Optional[Tuple] = None) -> Optional[Tuple[float, float]]:
     """Draw and save one arm's figure; return the y-limits it used.
 
     Returning the limits is how fig03 inherits fig02's scale without either
     function knowing about the other.
+
+    `built` is this arm's `_build` result when the caller already has one. That
+    call runs a 2,000-replicate role bootstrap per alpha per panel, and
+    `make_figures` needs it once for the shared y-limits before drawing; without
+    this every bootstrap ran twice.
     """
-    stats, neg, missing, n_roles = _build(df, arm)
+    stats, neg, missing, n_roles = built if built is not None else _build(df, arm)
+    already_signed = _alphas_are_signed(df)
+    if not show_negctl:
+        # On the paper's frame the control is worse than useless: it was run at
+        # alpha 0.5/1.5/3.0, so two of its three points sit off-axis and
+        # matplotlib joins the survivor to them with a diagonal that crosses the
+        # whole panel and reads as a trend. Drop it rather than draw a line the
+        # data does not support.
+        neg = None
     specs = _panel_specs(arm)
     width = 6.4 if len(specs) == 1 else 11.5
     fig, axes = plt.subplots(1, len(specs), figsize=(width, 4.8), squeeze=False)
@@ -356,7 +481,9 @@ def _render(df: pd.DataFrame, arm: str, out: Path,
 
     for ax, s, (_td, label) in zip(axes, stats, specs):
         title = label if not missing else "%s - NO DATA" % label
-        _draw_panel(ax, s, neg, title, show_legend=(ax is axes[0]))
+        _draw_panel(ax, s, neg, title, show_legend=(ax is axes[0]),
+                    paper_axis=paper_axis, xlim=xlim,
+                    already_signed=already_signed)
         ax.set_ylim(*ylim)
 
     _suptitle(fig, arm, missing, n_roles)
@@ -364,19 +491,36 @@ def _render(df: pd.DataFrame, arm: str, out: Path,
     # curve happens to be low at that x and hides the data it annotates.
     note = "categories and reading groups are judge.py's; alpha=0 is the " \
            "shared unsteered baseline"
+    if paper_axis:
+        # Say what is off the frame — at BOTH ENDS. The old test was
+        # `abs(alpha) > -lo`, which only ever caught doses past the left edge:
+        # the sweep's +0.25 point sits outside the right edge of PAPER_XLIM
+        # (0.06) and was silently clipped off every paper-axis figure while the
+        # note claimed nothing was missing.
+        lo, hi = (xlim or PAPER_XLIM)
+        off = sorted({float(a) for a in df["alpha"].dropna().unique()
+                      if not (lo <= sgn_for_note(float(a), paper_axis,
+                                                 already_signed) <= hi)})
+        note = ("x-axis as arXiv:2601.10387 Fig. 4: signed fraction of the avg. "
+                "residual norm; negative = away from the Assistant")
+        if off:
+            note += ("\nnot shown, outside the plotted range [%g, %g]: alpha %s"
+                     % (lo, hi, ", ".join("%g" % a for a in off)))
     if neg is not None:
         note += ("  |  shaded bands = negctl (random direction), "
                  "95%% CI over %d roles, resolved by alpha" % neg["n_roles"])
-    fig.text(0.5, 0.012, note, ha="center", va="bottom", fontsize=7.5,
-             color="#444444")
-    _save(fig, out)
+    fig.text(0.5, 0.012, note, ha="center", va="bottom", fontsize=7,
+             color="#444444", wrap=True)
+    _save(fig, out, bottom=0.12 if paper_axis else 0.035)
     return ylim
 
 
 # --------------------------------------------------------------------------
 # public entry point
 # --------------------------------------------------------------------------
-def make_figures(df: pd.DataFrame, outdir: Path, layer: int = 19) -> List[Path]:
+def make_figures(df: pd.DataFrame, outdir: Path, layer: int = 19,
+                 paper_axis: bool = False, show_negctl: bool = True,
+                 xlim: Optional[Tuple[float, float]] = None) -> List[Path]:
     """Produce the three figures. Never raises.
 
     This is called at the tail of pipelines that have already spent GPU hours
@@ -392,28 +536,42 @@ def make_figures(df: pd.DataFrame, outdir: Path, layer: int = 19) -> List[Path]:
         LOG.warning("%d/%d rows have judge_score=None and are excluded from "
                     "both numerator and denominator", n_unjudged, len(df))
 
-    plan = [("arm1_axis", "fig01_arm1_axis_L%d.png" % layer),
-            ("arm2_linear", "fig02_arm2_linear_L%d.png" % layer),
-            ("arm3_manifold", "fig03_arm3_manifold_L%d.png" % layer)]
+    # Draw whichever arms the data actually holds, so this serves both the new
+    # two-arm plan and the legacy three-arm runs without a flag.
+    present = set(df["arm"].dropna().unique()) if "arm" in df else set()
+    new_plan = [("linear_axis", "fig01_linear_axis_L%d.png" % layer),
+                ("manifold_axis", "fig02_manifold_axis_L%d.png" % layer)]
+    old_plan = [("arm1_axis", "fig01_arm1_axis_L%d.png" % layer),
+                ("arm2_linear", "fig02_arm2_linear_L%d.png" % layer),
+                ("arm3_manifold", "fig03_arm3_manifold_L%d.png" % layer)]
+    plan = new_plan if present & {"linear_axis", "manifold_axis"} else old_plan
 
     # arms 2 and 3 must share a y-scale; compute it from both before drawing
     # either, so neither figure depends on the order they were rendered in.
     shared_ylim = None
+    built: Dict[str, Tuple] = {}
     try:
         tops = []
-        for arm in ("arm2_linear", "arm3_manifold"):
-            stats, neg, _missing, _n = _build(df, arm)
+        for arm, _name in plan:
+            built[arm] = _build(df, arm)
+            stats, neg, _missing, _n = built[arm]
+            # The band only constrains the scale when it is actually drawn;
+            # including it under --no-negctl left every curve squashed against
+            # the bottom of a panel framed for something not on it.
+            neg = neg if show_negctl else None
             tops.append(max([_panel_ymax(s, neg) for s in stats] + [0.0]))
         shared_ylim = (0.0, min(1.0, max(tops) * 1.12 + 0.03))
     except Exception:  # noqa: BLE001 - fall back to per-figure autoscale
-        LOG.exception("could not compute the shared arm2/arm3 y-limits; "
-                      "fig02 and fig03 will NOT be directly comparable")
+        LOG.exception("could not compute the shared y-limits; the arm figures "
+                      "will NOT be directly comparable")
 
     for arm, name in plan:
         path = outdir / name
         try:
             _render(df, arm, path,
-                    ylim=None if arm == "arm1_axis" else shared_ylim)
+                    ylim=None if arm == "arm1_axis" else shared_ylim,
+                    paper_axis=paper_axis, show_negctl=show_negctl, xlim=xlim,
+                    built=built.get(arm))
             written.append(path)
         except Exception:  # noqa: BLE001 - a figure must not kill the caller
             LOG.exception("failed to draw %s; continuing", name)
@@ -430,6 +588,17 @@ def main(argv=None) -> int:
                    help="directory the three PNGs are written to")
     p.add_argument("--layer", type=int, default=19,
                    help="layer index, used only in the filenames")
+    p.add_argument("--full-range", action="store_true",
+                   help="with --paper-axis, show every dose we swept (-3..0) "
+                        "instead of only the -1..0 the paper covers; the "
+                        "paper's limit is marked")
+    p.add_argument("--no-negctl", action="store_true",
+                   help="omit the negative-control band (its alphas are 0.5/1.5/"
+                        "3.0, so on the paper axis two of three sit off-frame)")
+    p.add_argument("--paper-axis", action="store_true",
+                   help="plot x as the paper's signed fraction of the average "
+                        "residual norm (negative = away from the Assistant), "
+                        "framed to the -1..0 range Fig. 4 actually sweeps")
     args = p.parse_args(argv)
 
     logging.basicConfig(level=logging.INFO,
@@ -440,9 +609,12 @@ def main(argv=None) -> int:
         LOG.exception("could not read %s", args.judged)
         return 1
 
-    written = make_figures(df, args.outdir, layer=args.layer)
-    LOG.info("%d/3 figures written", len(written))
-    return 0 if len(written) == 3 else 1
+    written = make_figures(df, args.outdir, layer=args.layer,
+                           paper_axis=args.paper_axis,
+                           show_negctl=not args.no_negctl,
+                           xlim=FULL_XLIM if args.full_range else None)
+    LOG.info("%d figures written", len(written))
+    return 0 if written else 1
 
 
 if __name__ == "__main__":

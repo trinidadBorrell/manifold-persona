@@ -6,7 +6,7 @@ Why this exists at all
 **not** use the thin-plate spline — it resolves to ``CubicSpline1D``, a Reinsch
 (1967) natural cubic spline. The 1-D path *is* the causalab path, so a faithful
 port is the honest way to use it here. causalab itself cannot be imported: it
-needs Python 3.12 and this venv is 3.9 (RESEARCH.steering.md).
+needs Python 3.12 and this venv is 3.11 (steering/README.md).
 
 Why 1-D at all
 --------------
@@ -28,10 +28,13 @@ Ported from ``causalab/methods/spline/cubic.py``:
 - ``_evaluate_natural`` -> :meth:`CubicSpline1D.evaluate`
   (clamp into the knot range, then add the linear extrapolation correction)
 
-torch -> numpy, float64 throughout. The smoothing parameter ``lam`` is kept so
-the port is complete, but this run fixes ``lam = 0`` (plain interpolation):
-tuning it against an outcome we have already looked at is exactly what an
-exploratory run must not do (plan, Method).
+torch -> numpy, float64 throughout. The smoothing parameter ``lam`` is chosen by
+GCV (:func:`fit_gcv`), never by hand: GCV sees only the role centroids, so it
+cannot tune lambda toward a steering outcome, which is what an exploratory run
+must not do (plan, Method; amendment A1). ``lam = 0`` — plain interpolation — is
+on the grid but is a FAILURE state here, not the default: it makes the target
+residual identically zero and the curve zigzag between adjacent roles
+(``geometry.py``, Observations O2), so ``fit_gcv`` refuses to return it.
 """
 from __future__ import annotations
 
@@ -258,6 +261,19 @@ def fit_gcv(u: np.ndarray, y: np.ndarray, grid: np.ndarray = None):
         except Exception:
             scores.append(float("inf"))
     scores = np.asarray(scores, dtype=np.float64)
+    # An all-inf grid is a TOTAL fit failure, and argmin would answer it with
+    # index 0 — which is grid[0] = 0.0, the interpolating spline that
+    # geometry.py documents as fatal (target residual r_T identically zero,
+    # tortuosity 361x). The one outcome that must never be selected is the one
+    # argmin picks by default, so refuse rather than return it. lam = 0 scores
+    # inf by construction (trH = n makes the GCV denominator vanish), so it can
+    # never win this grid legitimately either way.
+    if not np.isfinite(scores).any():
+        raise ValueError(
+            "GCV failed at every lambda on the %d-point grid: no finite score. "
+            "Returning argmin here would silently select lambda=0, the "
+            "INTERPOLATING spline. Check the control points for near-duplicate "
+            "coordinates (spacings below ~1e-12 overflow Q^T Q)." % len(grid))
     best = int(np.argmin(scores))
     spline = CubicSpline1D(u, y, lam=float(grid[best]))
     report = {"rule": "GCV over a fixed log grid; outcome-blind (sees only centroids)",

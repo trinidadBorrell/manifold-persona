@@ -7,7 +7,7 @@ Copied verbatim from the Assistant Axis authors' own repository:
 
     ../assistant-axis/assistant_axis/steering.py   (arXiv:2601.10387)
 
-Reused rather than reimplemented per RESEARCH.steering.md and the user's
+Reused rather than reimplemented per steering/README.md and the user's
 standing instruction to recycle source-repo code. The `addition`, `ablation`,
 `mean_ablation` and `capping` paths are UNMODIFIED — Arm 1 of the plan runs on
 the stock `addition` path, so the replication uses the authors' code as-is.
@@ -445,12 +445,26 @@ class ActivationSteering:
             return result
 
     def __enter__(self):
-        """Register hooks on all unique layers."""
-        for layer_idx in self.vectors_by_layer.keys():
-            layer_module = self._get_layer_module(layer_idx)
-            hook_fn = self._create_hook_fn(layer_idx)
-            handle = layer_module.register_forward_hook(hook_fn)
-            self._handles.append(handle)
+        """Register hooks on all unique layers.
+
+        ADDED (manifold-persona): the loop is guarded. Python does NOT call
+        __exit__ for a `with` whose __enter__ raised, and remove() is reachable
+        only from __exit__ or an explicit call — so a failure part-way through
+        (a bad layer index, say) used to leave the already-registered hooks
+        attached to the model for the rest of the process. Any driver that
+        caught the error and carried on would then steer every subsequent
+        forward pass, the unsteered alpha=0 baseline included, with nothing in
+        the output to distinguish it.
+        """
+        try:
+            for layer_idx in self.vectors_by_layer.keys():
+                layer_module = self._get_layer_module(layer_idx)
+                hook_fn = self._create_hook_fn(layer_idx)
+                handle = layer_module.register_forward_hook(hook_fn)
+                self._handles.append(handle)
+        except BaseException:
+            self.remove()
+            raise
 
         if self.debug:
             print(f"[ActivationSteering] Registered {len(self._handles)} hooks")

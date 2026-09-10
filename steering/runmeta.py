@@ -2,7 +2,7 @@
 
 Plan: plans/2026-08-17-manifold-steering-role-susceptibility.md (Outputs, Bounds).
 
-Two rules from RESEARCH.steering.md, enforced here rather than by discipline:
+Two rules from steering/README.md, enforced here rather than by discipline:
 
   - Run dirs are timestamped to the minute and NEVER overwritten. `new_run_dir`
     refuses to hand back an existing directory.
@@ -17,6 +17,7 @@ from __future__ import annotations
 import datetime
 import hashlib
 import json
+import os
 import platform
 import subprocess
 import sys
@@ -25,8 +26,13 @@ from typing import Optional
 
 from manifold_persona.config import REPO_ROOT
 
+# Repo-relative, with an env override. It used to be an absolute path into one
+# laptop's home directory, which meant every run on any other machine — the GPU
+# box this track was always going to need — died in `mkdir` before generating a
+# token. `output/` is gitignored either way, so results still stay local.
 OUTPUT_ROOT = Path(
-    "/Users/trinidad.borrell/Documents/Work/MARS-V/code/manifold-persona/output/steering-manifold"
+    os.environ.get("STEERING_OUTPUT_ROOT",
+                   Path(REPO_ROOT) / "output" / "steering-manifold")
 )
 
 
@@ -42,7 +48,7 @@ def new_run_dir(slug: str, root: Optional[Path] = None) -> Path:
     if p.exists():
         raise FileExistsError(
             "run dir %s already exists; refusing to write into an existing run "
-            "(RESEARCH.steering.md). Wait a minute or pass an explicit --out." % p)
+            "(steering/README.md). Wait a minute or pass an explicit --out." % p)
     for sub in ("figures", "data", "logs"):
         (p / sub).mkdir(parents=True)
     # `.run-active` marks this dir as THE live run. The guard-outputs hook
@@ -99,7 +105,7 @@ def build_manifest(run_dir: Path, plan: str, extra: Optional[dict] = None) -> di
         "run_id": run_dir.name,
         "run_dir": str(run_dir),
         "plan": plan,
-        "context": "RESEARCH.steering.md",
+        "context": "steering/README.md",
         "git_sha": sha,
         "git_dirty": dirty,
         "created": datetime.datetime.now().isoformat(timespec="seconds"),
