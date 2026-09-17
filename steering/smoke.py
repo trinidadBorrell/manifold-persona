@@ -22,7 +22,7 @@ Checks, in order, each of which has failed silently in some pipeline somewhere:
   3. delta norms          every arm realises ||delta|| = |alpha| * N_bar per
                           position, to tolerance — the dose matching the whole
                           comparison rests on
-  4. arms differ          linear_axis and manifold_axis point in measurably
+  4. arms differ          the legacy axis arms point in measurably
                           different directions (if they did not, the experiment
                           would be vacuous), and the manifold arm's out-of-knots
                           counter actually fires (WP5)
@@ -394,14 +394,22 @@ def check_hook_layer(model, tokenizer, hook_layer: int) -> dict:
 
 
 def _delta_norms_at(geom, model, tokenizer, hook_layer: int, alpha: float) -> dict:
-    """Both live arms at one alpha: realised dose, direction, out-of-knots."""
+    """Both LEGACY arms at one alpha: realised dose, direction, out-of-knots.
+
+    These are the dose-matched forms — `linear_axis_legacy` and
+    `manifold_axis_legacy` since the path rebuild — and the keys say so. The
+    four path arms hold ||delta|| nowhere near constant (they hold the
+    ENDPOINTS constant instead), so this check does not apply to them; their
+    controls are delta(0) = 0 and delta(1) = P1 - P0, checked in
+    `run_steering`'s path manifest and offline.
+    """
     import torch
 
     enc = tokenizer("Who are you?", return_tensors="pt").to(model.device)
     want = abs(alpha) * geom.n_bar          # both arms scale by |alpha| * N_bar
     results, dirs = {}, {}
 
-    # manifold_axis is the only dynamic arm: its direction depends on the
+    # manifold_axis_legacy is the only dynamic arm here: its direction depends on the
     # current activation, so its dose can only be measured under a hook. The
     # DeltaStats goes in too, because WP5's frac_out_of_knots is exactly the
     # kind of counter that can be wired up and never fire.
@@ -422,21 +430,21 @@ def _delta_norms_at(geom, model, tokenizer, hook_layer: int, alpha: float) -> di
             model(**enc)
     d_man = seen["d"].reshape(-1, seen["d"].shape[-1])
     norms = np.linalg.norm(d_man, axis=-1)
-    results["manifold_axis"] = {
+    results["manifold_axis_legacy"] = {
         "mean": float(norms.mean()), "min": float(norms.min()),
         "max": float(norms.max()),
         "rel_err": float(np.abs(norms - want).max() / want)}
-    dirs["manifold_axis"] = d_man
+    dirs["manifold_axis_legacy"] = d_man
 
-    # linear_axis is a static vector on the vendored `addition` path, so its
+    # linear_axis_legacy is a static vector on the vendored `addition` path, so its
     # norm is exact by construction and needs no forward pass.
     v = IV.linear_axis_vector(geom.axis_unit, alpha, geom.n_bar)
     nv = float(np.linalg.norm(v))
-    results["linear_axis"] = {"mean": nv, "min": nv, "max": nv,
-                              "rel_err": float(abs(nv - want) / want)}
-    dirs["linear_axis"] = v.reshape(1, -1)
+    results["linear_axis_legacy"] = {"mean": nv, "min": nv, "max": nv,
+                                     "rel_err": float(abs(nv - want) / want)}
+    dirs["linear_axis_legacy"] = v.reshape(1, -1)
 
-    lin = dirs["linear_axis"][0]
+    lin = dirs["linear_axis_legacy"][0]
     lin = lin / (np.linalg.norm(lin) + 1e-12)
     cos = float(np.mean(d_man @ lin /
                         (np.linalg.norm(d_man, axis=1) + 1e-12)))
@@ -548,10 +556,19 @@ def main() -> None:
 
     if not args.skip_generation:
         print("== 5/6. generation")
-        from steering.run_steering import (FULL_GRID_ROWS, SMOKE_MAX_NEW_TOKENS,
+        from steering.run_steering import (FULL_GRID_ROWS, LEGACY_ARMS,
+                                           SMOKE_MAX_NEW_TOKENS,
                                            build_grid, default_batch_size,
                                            generate_cell)
-        cells = build_grid(geom, smoke=True)
+        # THE LEGACY ARMS, because checks 3/4 above are the legacy arms: they
+        # call `linear_axis_vector` and `make_manifold_axis_delta_fn` directly.
+        # The four path arms need `path_cases.load_cases`, which needs --labels
+        # and hard-fails without them, so pulling them in here would make the
+        # plumbing check depend on an artifact the smoke test does not take.
+        # They are covered by `steering/geometry_check.py` and by the offline
+        # path checks instead.
+        cells = build_grid(geom, smoke=True,
+                           arms=["unsteered"] + LEGACY_ARMS)
         bs = default_batch_size(device)
         print("    batch_size=%d on %s" % (bs, device))
         # One cell from every arm, so a broken arm cannot hide behind a working one.

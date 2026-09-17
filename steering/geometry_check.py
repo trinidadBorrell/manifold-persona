@@ -37,8 +37,17 @@ from steering.manifold_paths import (  # noqa: E402
     LinearPath, PersonaPath, chord_frame, chord_coords,
     select_cylinder, endpoint_drift,
 )
+# The case definitions and the path defaults now live in `steering.path_cases`,
+# which `run_steering` imports too. Same endpoints, same eps/k/lam/param, same
+# alpha stops in the figures and in the generation run -- see that module's
+# docstring for why a second copy of these numbers was the bug.
+from steering.path_cases import (  # noqa: E402
+    ALPHAS as PATH_ALPHAS, EPS as EPS_DEFAULT, K as K_DEFAULT,
+    LAM as LAM_DEFAULT, MODE as MODE_DEFAULT, PARAM as PARAM_DEFAULT,
+    fully_only, load_cases, pick_endpoints,
+)
 
-ALPHAS = np.array([0.0, 0.2, 0.4, 0.5, 0.6, 0.7, 0.9, 1.0])
+ALPHAS = np.array(PATH_ALPHAS)
 # absolute tube radius in activation units. Mean centroid norm ~45, mean
 # near->far chord ~38, near->midway ~5.8, so this brackets the useful range.
 EPS_GRID = [0.0, 8.0, 12.0, 16.0, 20.0]
@@ -47,10 +56,10 @@ C_CLOUD = "#CCCCCC"
 C_LINEAR = "#4C72B0"
 C_MANIFOLD = "#C44E52"
 C_INSIDE = "#F0A202"
-MODE = "absolute"
-KFIG = 5          # k for the figures; the artifact sweeps k itself
-PLAM = 0.0        # lam=0 -> the curve passes through every chosen persona
-PARAM = "centripetal"   # knot abscissa; see manifold_paths.PersonaPath
+MODE = MODE_DEFAULT
+KFIG = K_DEFAULT  # k for the figures; the artifact sweeps k itself
+PLAM = LAM_DEFAULT  # lam=0 -> the curve passes through every chosen persona
+PARAM = PARAM_DEFAULT   # knot abscissa; see manifold_paths.PersonaPath
 # lam is the zigzag control. geometry.py Observations O2: lam=0 interpolates and
 # the curve zigzags between adjacent centroids (tortuosity 361x); lam>0
 # makes it a trend near them. GCV picks lam to FIT the points, and nothing in it
@@ -77,45 +86,8 @@ def _git_sha():
         return {"sha": None, "error": str(exc)}
 
 
-def fully_only(geom):
-    """Indices of roles whose centroid is a genuine fully-role-playing vector.
-
-    HARD-FAILS rather than falling through. The previous version read
-    `roles_targeted_by_unfiltered` (a key `geometry.py` never writes) and
-    `geom.target_category` (a local in `_role_vectors`, not a Geometry field,
-    so always None). It therefore dropped only `default` while claiming to
-    filter -- the same class of silent fallback this rebuild exists to remove.
-
-    `geometry.py` exposes exactly two usable signals: the per-role
-    `roles_targeted_by_somewhat` list, and the count
-    `n_centroids_unfiltered_in_curve`. If any centroid fell back to unfiltered
-    we cannot say WHICH from the report alone, so we refuse to proceed.
-    """
-    rep = geom.axis_report or {}
-    counts = rep.get("target_category_counts")
-    if not counts or not counts.get("fully"):
-        raise SystemExit(
-            "axis_report has no fully-role-playing counts (%r). Pass --labels "
-            "pointing at a role_labels.parquet; without it load_geometry falls "
-            "back to unfiltered centroids and this run would claim a filter it "
-            "did not apply." % (counts,))
-    # `default` ALWAYS takes the unfiltered fallback -- geometry.py:349, "none
-    # when the >=10 rule dropped the role (or for `default`)". It is the
-    # reference, not a role, and is excluded by name below, so exactly one
-    # unfiltered centroid is the expected baseline. More than one means a real
-    # role fell back, and axis_report does not record WHICH, so we refuse
-    # rather than quietly anchor the curve on a vector 2.1.2 says to discard.
-    n_unfiltered = int(rep.get("n_centroids_unfiltered_in_curve", 0) or 0)
-    expected = 1 if "default" in geom.roles else 0
-    if n_unfiltered > expected:
-        raise SystemExit(
-            "%d centroids fell back to unfiltered (expected %d, for `default`), "
-            "and axis_report does not say which. Re-run steering.rolefilter so "
-            "every role has a `fully` vector, or extend geometry.py to record "
-            "roles_targeted_by_unfiltered." % (n_unfiltered, expected))
-    bad = set(rep.get("roles_targeted_by_somewhat", []) or [])
-    keep = [i for i, r in enumerate(geom.roles) if r not in bad and r != "default"]
-    return np.array(keep, dtype=int), sorted(bad)
+# `fully_only` is imported from steering.path_cases (moved there so
+# run_steering applies the identical filter).
 
 
 def pca_basis(C, k=2):
@@ -130,36 +102,8 @@ def project(X, mu, basis):
     return (np.atleast_2d(X) - mu) @ basis.T
 
 
-def pick_endpoints(C, names, axis_proj, axis_unit):
-    """Case definitions.
-
-    The AXIS case travels along the Assistant Axis itself -- a segment of the
-    line through the cloud centre in direction `axis_unit`, spanning the same
-    axis extent the role centroids reach. It is deliberately NOT the chord
-    between the two extreme centroids: that is just another A->B pair, and using
-    it made the axis panel identical to summarizer->leviathan.
-
-    The PAIR cases are 3 near-Assistant sources x (3 rank-midway + 2 far).
-    """
-    order = np.argsort(axis_proj)
-    n_near = [int(i) for i in order[-3:][::-1]]
-    mid_c = len(order) // 2
-    n_mid = [int(i) for i in order[mid_c - 1:mid_c + 2]]
-    n_far = [int(i) for i in order[:2]]
-
-    centre = C.mean(0)
-    a = axis_unit / np.linalg.norm(axis_unit)
-    off = centre @ a
-    P_hi = centre + (axis_proj.max() - off) * a      # Assistant end
-    P_lo = centre + (axis_proj.min() - off) * a      # far end
-
-    cases = [("axis", P_hi, P_lo, "axis+", "axis-")]
-    for i in n_near:
-        for j in n_mid + n_far:
-            cases.append(("pair", C[i], C[j], names[i], names[j]))
-    return cases, dict(near=[names[i] for i in n_near],
-                       mid=[names[i] for i in n_mid],
-                       far=[names[i] for i in n_far])
+# `pick_endpoints` is imported from steering.path_cases (moved there so
+# run_steering steers along the very chords these figures draw).
 
 
 # --------------------------------------------------------------------------
@@ -346,20 +290,24 @@ def main():
     ap.add_argument("--layer-index", type=int, default=0,
                     help="index into the .npy. The published clouds are thinned "
                          "to a single layer, so this is 0, not the layer number.")
-    ap.add_argument("--eps-fig2", type=float, default=9.0,
+    # DEFAULTS COME FROM steering.path_cases, which run_steering reads too.
+    # A default changed in one place and not the other is exactly how a figure
+    # stops describing the run it is captioned with.
+    ap.add_argument("--eps-fig2", type=float, default=EPS_DEFAULT,
                     help="cylinder radius, activation units, for fig02 and the "
-                         "JSON exports (default matches the ablation grid)")
-    ap.add_argument("--param", default="centripetal",
+                         "JSON exports (default %g, shared with run_steering "
+                         "--eps)" % EPS_DEFAULT)
+    ap.add_argument("--param", default=PARAM_DEFAULT,
                     choices=["projection", "length", "centripetal"],
-                    help="knot abscissa for the spline")
-    ap.add_argument("--k-fig", type=int, default=5,
-                    help="k personas for the PNG figures")
-    ap.add_argument("--persona-lam", type=float, default=0.0,
+                    help="knot abscissa for the spline (default %s)" % PARAM_DEFAULT)
+    ap.add_argument("--k-fig", type=int, default=K_DEFAULT,
+                    help="k personas for the PNG figures (default %d)" % K_DEFAULT)
+    ap.add_argument("--persona-lam", type=float, default=LAM_DEFAULT,
                     help="lam for PersonaPath. 0 = interpolate every chosen "
                          "persona centroid exactly (still C2-smooth).")
     ap.add_argument("--export-json", action="store_true",
                     help="dump PCA-3 cloud + paths for the interactive viewer")
-    ap.add_argument("--eps-mode", default="absolute",
+    ap.add_argument("--eps-mode", default=MODE_DEFAULT,
                     choices=["absolute", "relative"])
     args = ap.parse_args()
 
@@ -373,17 +321,13 @@ def main():
     print("loading geometry...", flush=True)
     geom = load_geometry(resp_dir=args.cloud, layer=args.layer_index,
                          labels_path=args.labels)
-    keep, dropped = fully_only(geom)
+    # ONE call, shared with run_steering: filter -> centroids -> endpoints.
+    cs = load_cases(geom)
+    keep, dropped = cs.keep, cs.dropped
+    C, names, axis_proj = cs.C, cs.names, cs.axis_proj
+    cases, picked = cs.cases, cs.picked
     print("roles: %d total, %d fully-role-playing, %d dropped"
           % (len(geom.roles), len(keep), len(dropped)), flush=True)
-    if len(keep) < 10:
-        raise SystemExit("only %d fully-role-playing centroids - labels missing?" % len(keep))
-
-    C = np.asarray(geom.centroids, dtype=np.float64)[keep]
-    names = [geom.roles[i] for i in keep]
-    axis_proj = np.asarray(geom.axis_proj, dtype=np.float64)[keep]
-
-    cases, picked = pick_endpoints(C, names, axis_proj, np.asarray(geom.axis_unit, dtype=np.float64))
     print("cases: %d (1 axis + %d pairs)" % (len(cases), len(cases) - 1), flush=True)
     print("picked:", json.dumps(picked), flush=True)
 

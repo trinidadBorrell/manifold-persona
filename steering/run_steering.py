@@ -2,17 +2,42 @@
 
 Plan: docs/notes/plan-new-run.md.
 
-    unsteered      50 roles x 4 system prompts x 5 questions        1,000
-    linear_axis    x 9 signed alphas                                9,000
-    manifold_axis  x 9 signed alphas                                9,000
-                                                                  -------
-                                                                   19,000
+THE FOUR PATH ARMS (current design, steering/manifold_paths.py). Each is a
+route with FIXED ENDPOINTS, sampled at normalised arc position alpha in [0, 1]:
 
-Both arms travel along the Assistant Axis and neither has a target role, so
-there is no near/far split: the paper's intervention is targetless and these are
-its straight and curved forms. Alpha is SIGNED and is the paper's own x-axis
-(Fig. 4), a fraction of the average residual norm, negative = away from the
-Assistant.
+    linear_axis      the straight chord between the two ends of the Assistant
+                     Axis segment (P0 = the Assistant end, so increasing alpha
+                     travels AWAY from the Assistant, the paper's -alpha sense)
+    manifold_axis    a PersonaPath along that same chord, routed through the
+                     persona centroids inside an eps-cylinder around it
+    linear_pair      the straight chord between persona A and persona B
+    manifold_pair    a PersonaPath along that same chord
+
+THE INTERVENTION IS ADDITIVE FOR ALL FOUR, and it is the paper's own
+(Figure 4): h <- h + delta, with
+
+    delta(alpha) = path.at_alpha(alpha) - path.at_alpha(0)
+
+one precomputed vector per (arm, alpha) cell -- a rigid translation of the whole
+activation cloud, never a replacement, a projection or a per-token solve.
+
+The endpoints, the tube radius, k, lam and the abscissa all come from
+`steering.path_cases`, which `steering.geometry_check` draws its figures from.
+That is what makes those figures figures OF THIS RUN.
+
+    unsteered        the roles at alpha = 0, once, shared by every arm
+    linear_axis      x 7 nonzero alphas x roles
+    manifold_axis    x 7 nonzero alphas x roles
+    linear_pair      x 7 nonzero alphas x pair cases
+    manifold_pair    x 7 nonzero alphas x pair cases
+
+THE LEGACY ARMS. `linear_axis_legacy` and `manifold_axis_legacy` are the dose-
+matched forms these names used to mean: delta = alpha * N_bar * a_hat, and a
+fixed-length secant of the axis-keyed spline. They are RENAMED, NOT DELETED --
+the earlier shards are only interpretable against them -- and they keep their
+own signed alpha grid (a dose, not an arc position). A run dir written before
+the rename will refuse to resume, by design: its `linear_axis` shards hold a
+different intervention under a name this file now uses for another one.
 
 Checkpointed and resumable, copying the discipline of
 extraction/generate_and_extract_roles.py: each (condition, role) cell is one
@@ -31,6 +56,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import time
@@ -45,6 +71,7 @@ from manifold_persona.config import MODEL_NAME, ROLE_INSTRUCTIONS_DIR
 from steering.activation_steering import ActivationSteering, hook_layer_for_hidden_state
 from steering.geometry import LAYER_HS_INDEX, N_NEAR, RESP240_DIR, Geometry, load_geometry
 from steering import interventions as IV
+from steering import path_cases as PC
 
 # Appendix D.1.2 — the five introspective behavioural questions, verbatim.
 INTROSPECTIVE_QUESTIONS = [
@@ -87,16 +114,47 @@ ALPHAS = [-1.0, -0.875, -0.75, -0.625, -0.5, -0.375, -0.25, -0.125, 0.25]
 # `n_new_tokens` and `hit_ceiling`, so how often it bites is measured rather
 # than assumed. Raise it with --max-new-tokens if the fraction is not ~0.
 GEN_CEILING = 1024
+
+# Sampling, matching the paper's own pipeline defaults (extra/assistant-axis
+# pipeline/1_generate.py:226-228) rather than our previous greedy setting. Their
+# Figure-4 design takes ONE rollout per cell, which only carries information if
+# generation is stochastic. Seeded so the run stays reproducible.
+DO_SAMPLE = True
+TEMPERATURE = 0.7
+TOP_P = 0.9
+GEN_SEED = 0
 EXTRACTION_MAX_NEW_TOKENS = 128     # what the cloud used; kept for the record
 # The smoke test's own budget. Separate from the constant above even though
 # the number matches: that one is a historical record of the cloud and must
 # not change, this one is a knob for how long the plumbing check takes.
 SMOKE_MAX_NEW_TOKENS = 128
 
-# Two arms, both targetless, both travelling along the Assistant Axis: one
-# straight, one along the fitted curve. No near/far — the paper's intervention
-# has no target, and neither do these.
-ARMS = ["unsteered", "linear_axis", "manifold_axis"]
+# THE ALPHA GRID FOR THE PATH ARMS: normalised arc position, not a dose. It is
+# `path_cases.ALPHAS`, which is also where geometry_check puts its markers, so a
+# generated cell and a dot on fig02 are the same point on the same curve.
+#
+# alpha = 0 is dropped here for the same reason it is dropped from the dose grid
+# above: delta(0) = S(0) - S(0) is EXACTLY the zero vector for every arm, so an
+# alpha=0 cell is the unsteered cell recomputed under another name. The identity
+# is checked offline (it is exact, not approximate) rather than paid for on a
+# GPU 200 times.
+PATH_ALPHAS = list(PC.ALPHAS)   # single definition, in path_cases
+
+# The four path arms. Straight/curved x axis-chord/persona-chord, all four
+# additive, all four with the same two endpoints as their partner.
+PATH_ARMS = ["linear_axis", "manifold_axis", "linear_pair", "manifold_pair"]
+AXIS_PATH_ARMS = ("linear_axis", "manifold_axis")
+PAIR_PATH_ARMS = ("linear_pair", "manifold_pair")
+
+# RENAMED, NOT REMOVED. These two are what `linear_axis` and `manifold_axis`
+# meant before the path rebuild: a dose of alpha*N_bar along `a_hat`, and a
+# fixed-length secant of the axis-keyed spline (interventions.linear_axis_vector
+# and .make_manifold_axis_delta_fn). Deleting them would make every earlier
+# shard unreadable; leaving the NAMES on the new interventions would make them
+# indistinguishable, which is worse.
+LEGACY_ARMS = ["linear_axis_legacy", "manifold_axis_legacy"]
+
+ARMS = ["unsteered"] + PATH_ARMS
 
 # --- ablation (plan step 7) -------------------------------------------------
 # The two main arms are targetless: they push along the axis and no role is
@@ -146,6 +204,10 @@ FRACTIONS = [0.125, 0.25, 0.375, 0.40, 0.45, 0.5, 0.55, 0.60,
 # Deriving it means the number cannot go stale behind a change to ALPHAS, ARMS
 # or the role count again.
 ROWS_PER_CELL = N_SYSTEM_PROMPTS * len(INTROSPECTIVE_QUESTIONS)     # 20
+# The LEGACY Figure-4 grid. Kept as a constant because `steering.smoke` imports
+# it, but the run-level report no longer uses it: the path grid's size depends
+# on how many pair cases `path_cases.pick_endpoints` yields, so `main` derives
+# the projection from the cell list it actually built.
 FULL_GRID_CELLS = (1 + 2 * len(ALPHAS)) * N_NEAR                    # 950
 FULL_GRID_ROWS = FULL_GRID_CELLS * ROWS_PER_CELL                    # 19,000
 
@@ -153,12 +215,23 @@ FULL_GRID_ROWS = FULL_GRID_CELLS * ROWS_PER_CELL                    # 19,000
 @dataclass
 class Cell:
     """One (condition, role) unit of work = one shard."""
-    arm: str                 # unsteered | linear_axis | manifold_axis
-    target_distance: str     # always "none"; kept so old shards stay readable
-    alpha: float             # SIGNED: negative = away from the Assistant
-    role: str
-    target_role: Optional[str]   # always None; no arm has a target any more
+    arm: str                 # see ARMS / LEGACY_ARMS / the ablation lists
+    target_distance: str     # "none" for the axis arms, "pair" for a persona pair
+    alpha: float             # path arms: ARC POSITION in [0,1]. legacy: a SIGNED dose
+    role: str                # whose system prompts the model is given
+    target_role: Optional[str]   # the pair's B end, or the ablation target
     seed: Optional[int]
+    # THE ROUTE'S IDENTITY, and the key into the path bank. For a pair case
+    # these are the two persona names; for the axis case they are the endpoint
+    # LABELS "axis+" / "axis-" that `path_cases.pick_endpoints` assigns to the
+    # two ends of the axis segment, which are points on a line and not roles.
+    #
+    # Carried explicitly rather than inferred from (role, target_role): the
+    # generation role and the chord's A end coincide today, and an arm added
+    # later that steers role X along the chord Y->Z would silently steer along
+    # X->Z if the identity were reconstructed instead of recorded.
+    path_a: Optional[str] = None
+    path_b: Optional[str] = None
 
     @property
     def shard_name(self) -> str:
@@ -252,12 +325,32 @@ def build_ablation_grid(near_roles: List[str], far_roles: List[str],
 
 def build_grid(geom: Geometry, smoke: bool = False,
                arms: Optional[List[str]] = None,
-               n_roles: Optional[int] = None) -> List[Cell]:
+               n_roles: Optional[int] = None,
+               cases: Optional[list] = None,
+               path_alphas: Optional[List[float]] = None,
+               n_pairs: Optional[int] = None,
+               pairs: Optional[List[str]] = None) -> List[Cell]:
     """Every (condition, role) cell, in a fixed deterministic order.
 
-    `arms` restricts the grid. `linear_axis` is the replication — it is exactly
-    the paper's intervention — so it is the one that has to reproduce before
-    `manifold_axis` means anything.
+    `arms` restricts the grid. `linear_axis` is the straight-chord control that
+    `manifold_axis` has to be measured against, so it is the one that has to run
+    first; the same holds for `linear_pair` under `manifold_pair`.
+
+    Args:
+        cases: `path_cases.load_cases(geom).cases`. REQUIRED for any path arm,
+            because the endpoints are what the arm IS -- there is no default
+            chord to fall back on, and inventing one here is precisely how the
+            figures would stop describing the run.
+        path_alphas: arc positions for the path arms (default PATH_ALPHAS).
+        pairs: run exactly these routes, as "A>B" names. Takes precedence
+            over n_pairs. `--n-pairs` answers "how many can I afford"; this
+            answers "which ones am I asking about", which is what a follow-up
+            run targeting a chosen region of the cloud needs. An unknown name
+            is fatal rather than silently empty -- a typo'd route would
+            otherwise produce a run whose manifest quietly lacks it.
+        n_pairs: use only the first N pair cases. The pair grid is
+            n_pairs x len(path_alphas) x 2 cells, so this is the knob that keeps
+            a preview affordable.
     """
     arms = arms or ARMS
     roles = geom.near50[:2] if smoke else geom.near50
@@ -268,30 +361,150 @@ def build_grid(geom: Geometry, smoke: bool = False,
         # shape is an artefact of the truncation.
         roles = roles[:n_roles]
     alphas = ALPHAS[:2] if smoke else ALPHAS
+    palphas = list(path_alphas if path_alphas is not None else PATH_ALPHAS)
+    if smoke:
+        palphas = palphas[:2]
+
+    wants_path = [a for a in arms if a in PATH_ARMS]
+    if wants_path and not cases:
+        raise SystemExit(
+            "arms %s need the path cases. Pass `cases` from "
+            "path_cases.load_cases(geom) — which needs --labels, since "
+            "path_cases.fully_only refuses to build a chord on centroids the "
+            ">=10 rule discards." % wants_path)
+    axis_case = next((c for c in (cases or []) if c[0] == "axis"), None)
+    pair_cases = [c for c in (cases or []) if c[0] == "pair"]
+    if pairs:
+        want = [tuple(x.split(">", 1)) for x in pairs]
+        have = {(c[3], c[4]): c for c in pair_cases}
+        missing = [w for w in want if w not in have]
+        if missing:
+            raise SystemExit(
+                "unknown pair route(s) %s. Available: %s"
+                % (", ".join("%s>%s" % m for m in missing),
+                   ", ".join("%s>%s" % k for k in have)))
+        pair_cases = [have[w] for w in want]
+    elif n_pairs:
+        # ROUND-ROBIN OVER SOURCES, not the first N. pick_endpoints emits
+        # 3 sources x 5 targets in source-major order, so a plain [:6] gives
+        # five routes from one source and one from another -- and the bootstrap
+        # for the pair arms resamples PAIRS, so that is near-total confounding
+        # with a single source role. Taking them round-robin gives 2 per source
+        # for the same count.
+        by_src = {}
+        for c in pair_cases:
+            by_src.setdefault(c[3], []).append(c)          # c[3] is A's name
+        picked, i = [], 0
+        while len(picked) < n_pairs and any(v[i:] for v in by_src.values()):
+            for src in by_src:
+                if len(picked) >= n_pairs:
+                    break
+                if i < len(by_src[src]):
+                    picked.append(by_src[src][i])
+            i += 1
+        pair_cases = picked[:n_pairs]
+    if smoke:
+        pair_cases = pair_cases[:1]
+    if [a for a in arms if a in AXIS_PATH_ARMS] and axis_case is None:
+        raise SystemExit("no `axis` case in the case list — pick_endpoints "
+                         "always emits one, so this list is not from it")
+
     cells: List[Cell] = []
 
+    # THE ALPHA = 0 CELL, once, shared by every arm. It has to cover the pair
+    # sources too: those come from `pick_endpoints` (the three highest-projecting
+    # fully-role-playing centroids) and need not be in `near50`, so building the
+    # unsteered set from `roles` alone would leave the pair arms with no baseline.
     if "unsteered" in arms:
-        for r in roles:
-            cells.append(Cell("unsteered", "none", 0.0, r, None, None))
-    for arm in ("linear_axis", "manifold_axis"):
+        base = list(roles)
+        if [a for a in arms if a in PAIR_PATH_ARMS]:
+            base += [na for _, _, _, na, _ in pair_cases]
+        seen = set()
+        for r in base:
+            if r not in seen:
+                seen.add(r)
+                cells.append(Cell("unsteered", "none", 0.0, r, None, None))
+
+    # The legacy dose-matched arms keep the SIGNED dose grid; mixing them onto
+    # the arc-position grid would put two different quantities on one x-axis.
+    for arm in ("linear_axis_legacy", "manifold_axis_legacy"):
         if arm not in arms:
             continue
         for a in alphas:
             for r in roles:
                 cells.append(Cell(arm, "none", a, r, None, None))
+
+    # The axis chord is one global route with no role identity, so it sweeps
+    # every role exactly as the paper's targetless intervention does.
+    for arm in AXIS_PATH_ARMS:
+        if arm not in arms:
+            continue
+        _, _, _, na, nb = axis_case
+        for a in palphas:
+            for r in roles:
+                cells.append(Cell(arm, "none", a, r, None, None,
+                                  path_a=na, path_b=nb))
+
+    # A pair chord runs FROM one persona TO another, so it is generated under
+    # the A persona's own system prompts: the displacement moves A's cloud
+    # toward B, and applying it to a model prompted as some third role would be
+    # a different experiment wearing this one's name.
+    for arm in PAIR_PATH_ARMS:
+        if arm not in arms:
+            continue
+        for a in palphas:
+            for _, _, _, na, nb in pair_cases:
+                cells.append(Cell(arm, "pair", a, na, nb, None,
+                                  path_a=na, path_b=nb))
     return cells
 
 
-# The arms with no per-token callback: `unsteered` adds nothing, `linear_axis`
-# is a single fixed vector on the vendored `addition` path. Named once because
-# both `make_delta_fn` and the delta-stats instrumentation key off it.
-STATIC_ARMS = ("unsteered", "linear_axis")
+# The arms with no per-token callback: `unsteered` adds nothing, and
+# `linear_axis_legacy` is a single fixed vector on the vendored `addition` path.
+# Named once because both `make_delta_fn` and the delta-stats instrumentation
+# key off it.
+#
+# THE NEW `linear_axis` IS NOT HERE. Its delta is also one fixed vector, but it
+# goes through the `dynamic` hook like its manifold partner, so the two arms of
+# the pair differ in the route and in nothing else -- not in which hook ran, not
+# in whether DeltaStats saw them. The vendored `addition` path stays reachable
+# under the legacy name, which is the arm that was a literal replication.
+STATIC_ARMS = ("unsteered", "linear_axis_legacy")
 
 
-def make_delta_fn(cell: Cell, geom: Geometry, dtype, stats=None):
+def path_for(cell: Cell, paths: Optional[dict]):
+    """The path object this cell steers along.
+
+    Looked up, never rebuilt: `paths` is the bank `path_cases.build_paths` made
+    from the case list, so the route a cell takes is the route the figures drew.
+    A KeyError here means the grid and the bank were built from different case
+    lists, which is the one failure that must not be recoverable.
+    """
+    family = "manifold" if cell.arm.startswith("manifold") else "linear"
+    if not paths:
+        raise ValueError("arm %r needs the path bank (path_cases.build_paths)"
+                         % cell.arm)
+    key = (family, cell.path_a, cell.path_b)
+    if key not in paths:
+        raise KeyError("no path for %r — the grid and the path bank disagree "
+                       "about the cases" % (key,))
+    return paths[key]
+
+
+def make_delta_fn(cell: Cell, geom: Geometry, dtype, stats=None,
+                  paths: Optional[dict] = None):
     """The intervention for one cell, or None for an unsteered/static cell."""
     if cell.arm in STATIC_ARMS:
         return None
+    # THE FOUR PATH ARMS. Both members of a pair get the same alpha and the same
+    # two endpoints; only the object handed to the factory differs, and the
+    # factories type-check it so an arm cannot quietly become its partner.
+    if cell.arm in ("linear_axis", "linear_pair"):
+        return IV.make_linear_path_delta_fn(path_for(cell, paths), cell.alpha,
+                                            dtype=dtype, stats=stats)
+    if cell.arm in ("manifold_axis", "manifold_pair"):
+        return IV.make_manifold_path_delta_fn(path_for(cell, paths), cell.alpha,
+                                              dtype=dtype, stats=stats)
     if cell.arm == "linear_contrast":
         return IV.make_linear_contrast_delta_fn(geom.centroid(cell.role),
                                                 geom.centroid(cell.target_role),
@@ -315,7 +528,7 @@ def make_delta_fn(cell: Cell, geom: Geometry, dtype, stats=None):
         return IV.make_arm3_delta_fn(geom.spline, geom.axis_unit,
                                      geom.centroid(cell.target_role), cell.alpha,
                                      geom.n_bar, dtype=dtype, stats=stats)
-    if cell.arm == "manifold_axis":
+    if cell.arm == "manifold_axis_legacy":
         return IV.make_manifold_axis_delta_fn(
             geom.spline, geom.axis_unit, cell.alpha, geom.n_bar, geom.span,
             dtype=dtype, stats=stats)
@@ -323,8 +536,8 @@ def make_delta_fn(cell: Cell, geom: Geometry, dtype, stats=None):
 
 
 def make_static_vector(cell: Cell, geom: Geometry) -> Optional[np.ndarray]:
-    """The fixed vector for the arm that has one."""
-    if cell.arm == "linear_axis":
+    """The fixed vector for the arm that has one (the legacy replication)."""
+    if cell.arm == "linear_axis_legacy":
         return IV.linear_axis_vector(geom.axis_unit, cell.alpha, geom.n_bar)
     return None
 
@@ -359,7 +572,8 @@ def _assert_finite_logits(model, enc) -> None:
 
 def generate_cell(cell: Cell, geom: Geometry, model, tokenizer, hook_layer: int,
                   batch_size: int = None, max_new_tokens: int = GEN_CEILING,
-                  prompt_bank: Optional[Dict[str, List[str]]] = None) -> pd.DataFrame:
+                  prompt_bank: Optional[Dict[str, List[str]]] = None,
+                  paths: Optional[dict] = None) -> pd.DataFrame:
     """Generate all 20 responses for one (condition, role) cell."""
     import torch
 
@@ -380,13 +594,24 @@ def generate_cell(cell: Cell, geom: Geometry, model, tokenizer, hook_layer: int,
     # own guard rather than a second hand-kept list of arm names: an arm added
     # there but forgotten here would silently lose its WP5 record.
     stats = None if cell.arm in STATIC_ARMS else IV.DeltaStats()
-    delta_fn = make_delta_fn(cell, geom, dtype, stats=stats)
+    delta_fn = make_delta_fn(cell, geom, dtype, stats=stats, paths=paths)
     bs = batch_size or default_batch_size(model.device.type)
 
+    # Seed PER CELL, derived from the cell's own identity rather than a global
+    # counter. Sampling made the run stochastic, and a resumed shard must
+    # reproduce the text it would have produced first time -- a global seed
+    # advanced by batch order would not, because resume skips completed cells
+    # and changes that order.
+    cell_seed = (GEN_SEED + int(hashlib.sha256(
+        cell.shard_name.encode()).hexdigest()[:8], 16)) % (2 ** 31 - 1)
+
     def _run(enc):
+        torch.manual_seed(cell_seed)
         with torch.no_grad():
             return model.generate(**enc, max_new_tokens=max_new_tokens,
-                                  do_sample=False,
+                                  do_sample=DO_SAMPLE,
+                                  temperature=TEMPERATURE,
+                                  top_p=TOP_P,
                                   pad_token_id=tokenizer.pad_token_id)
 
     t0 = time.time()
@@ -416,6 +641,9 @@ def generate_cell(cell: Cell, geom: Geometry, model, tokenizer, hook_layer: int,
             "arm": cell.arm, "target_distance": cell.target_distance,
             "alpha": cell.alpha, "role": cell.role,
             "target_role": cell.target_role or cell.role,
+            # The route, in the row itself. A figure that groups by arm and
+            # alpha alone would silently average 15 different pair chords.
+            "path_a": cell.path_a, "path_b": cell.path_b,
             "negctl_seed": cell.seed,
             "response": text,
             "n_new_tokens": nt,
@@ -477,8 +705,13 @@ def main() -> None:
     ap.add_argument("--batch-size", type=int, default=None,
                     help="prompts per forward pass (default: 1 on mps, else 20; see O3)")
     ap.add_argument("--arms", default=None,
-                    help="comma-separated subset of %s (default: all). The plan "
-                         "runs 'unsteered,linear_axis' first." % ",".join(ARMS))
+                    help="comma-separated subset of %s (default: all). Run "
+                         "'unsteered,linear_axis' first: the straight chord is "
+                         "the control the curved one is read against. Also "
+                         "valid, on their own grids: %s (the pre-rebuild dose-"
+                         "matched forms), %s."
+                         % (",".join(ARMS), ",".join(LEGACY_ARMS),
+                            ",".join(ABLATION_ARMS + JOURNEY_ARMS + CONTRAST_ARMS)))
     ap.add_argument("--prompts", default=None,
                     help="role_prompts_eval.json from steering.gen_role_prompts "
                          "(WP3). Without it the run REUSES the extraction prompts.")
@@ -531,6 +764,40 @@ def main() -> None:
     ap.add_argument("--n-roles", type=int, default=None,
                     help="preview: use only the first N near-Assistant roles, "
                          "keeping every alpha (the dose-response axis stays whole)")
+    # THE PATH CONSTRUCTION. Every default here is `steering.path_cases`'s, which
+    # is also where `steering.geometry_check` gets its defaults, so the figures
+    # that justified eps and k describe the run unless a flag says otherwise.
+    # They are PINNED into the checkpoint config: change one and the cells mean
+    # something else, so a run dir must not mix two values of any of them.
+    ap.add_argument("--eps", type=float, default=PC.EPS,
+                    help="cylinder radius in ABSOLUTE activation units: which "
+                         "persona centroids the manifold arm may route through "
+                         "(default %g, same as geometry_check --eps-fig2)" % PC.EPS)
+    ap.add_argument("--k", type=int, default=PC.K,
+                    help="how many persona centroids the curve passes through, "
+                         "one per equal span of the chord (default %d)" % PC.K)
+    ap.add_argument("--persona-lam", type=float, default=PC.LAM,
+                    help="spline bending penalty. 0 = interpolate every chosen "
+                         "centroid exactly, still C2-smooth (default %g)" % PC.LAM)
+    ap.add_argument("--param", default=PC.PARAM,
+                    choices=["projection", "length", "centripetal"],
+                    help="knot abscissa for the spline (default %s)" % PC.PARAM)
+    ap.add_argument("--eps-mode", default=PC.MODE,
+                    choices=["absolute", "relative"],
+                    help="`absolute` fixes the tube radius in activation units "
+                         "so every chord gets the same physical neighbourhood")
+    ap.add_argument("--path-alphas", default=None,
+                    help="comma-separated arc positions in [0,1] for the four "
+                         "path arms (default %s). alpha=0 is dropped: its delta "
+                         "is exactly zero, which is the unsteered cell."
+                         % ",".join("%g" % a for a in PATH_ALPHAS))
+    ap.add_argument("--pairs", default=None,
+                    help="run exactly these pair routes, comma-separated as "
+                         "A>B (e.g. assistant>leviathan,assistant>aberration). "
+                         "Takes precedence over --n-pairs.")
+    ap.add_argument("--n-pairs", type=int, default=None,
+                    help="use only the first N persona-pair cases from "
+                         "path_cases.pick_endpoints (default: all 15)")
     args = ap.parse_args()
 
     # Resolved ONCE. `arms` is what the grid is built from, what `cfg` records
@@ -538,11 +805,12 @@ def main() -> None:
     # the ablation call site let the manifest name arms the run never ran:
     # --ablation with no --arms builds the ABLATION_ARMS grid, and cfg said
     # ARMS.
+    pair_sel = ([x.strip() for x in args.pairs.split(",")] if args.pairs else None)
     if args.arms:
         arms = [a.strip() for a in args.arms.split(",")]
     else:
         arms = list(ABLATION_ARMS if args.ablation else ARMS)
-    valid = ARMS + ABLATION_ARMS + JOURNEY_ARMS + CONTRAST_ARMS
+    valid = ARMS + LEGACY_ARMS + ABLATION_ARMS + JOURNEY_ARMS + CONTRAST_ARMS
     bad = [a for a in arms if a not in valid]
     if bad:
         raise SystemExit("unknown arm(s): %s. Valid: %s" % (bad, valid))
@@ -556,10 +824,58 @@ def main() -> None:
     ckpt = run_dir / "_ckpt"
     ckpt.mkdir(exist_ok=True)
 
+    path_alphas = ([float(x) for x in args.path_alphas.split(",")]
+                   if args.path_alphas else list(PATH_ALPHAS))
+    if any(a < 0.0 or a > 1.0 for a in path_alphas):
+        raise SystemExit(
+            "--path-alphas are ARC POSITIONS in [0,1] along a path with fixed "
+            "endpoints, not the legacy signed dose: %s is outside the path. "
+            "`at_alpha` clips, so an out-of-range value would silently generate "
+            "a duplicate of the endpoint cell." % path_alphas)
+
     geom = load_geometry(resp_dir=args.resp_dir or RESP240_DIR,
                          labels_path=args.labels, n_bar_path=args.n_bar)
     hook_layer = hook_layer_for_hidden_state(LAYER_HS_INDEX)
     prompt_bank = load_prompt_bank(args.prompts)
+
+    # The steering vector lives in the CLOUD's activation space. If the
+    # generation model has a different hidden size the delta cannot be added at
+    # all -- and if two models happened to share a hidden size, it would be
+    # added silently and mean nothing. Smoke run 11222399 hit this: a 4096-dim
+    # Qwen3-8B delta against Qwen2.5-3B's 2048-dim stream, failing inside the
+    # hook after the model had loaded.
+    try:
+        from transformers import AutoConfig
+        cfg = AutoConfig.from_pretrained(args.model)
+        model_hidden = int(getattr(cfg, "hidden_size", 0) or 0)
+    except Exception as exc:                                  # noqa: BLE001
+        print("WARNING: could not read hidden_size for %s (%s); "
+              "skipping the geometry/model dimension check" % (args.model, exc),
+              flush=True)
+        model_hidden = 0
+    if model_hidden and model_hidden != int(geom.hidden):
+        raise SystemExit(
+            "MODEL/GEOMETRY MISMATCH: --model %s has hidden_size %d but the "
+            "cloud at %s has hidden %d. The steering vector is built in the "
+            "cloud's space, so these must be the same model. Pass --model for "
+            "the model the cloud was extracted from."
+            % (args.model, model_hidden, args.resp_dir or RESP240_DIR,
+               int(geom.hidden)))
+
+    # THE CASES AND THE PATHS, from the module geometry_check draws from. Built
+    # only when a path arm is in play: `path_cases.fully_only` hard-fails
+    # without --labels, and the legacy/ablation arms have always been allowed to
+    # run on the unfiltered fallback with a recorded deviation.
+    cs, paths = None, None
+    if any(a in PATH_ARMS for a in arms):
+        cs = PC.load_cases(geom)
+        print("path cases: %d fully-role-playing centroids, %d dropped; "
+              "1 axis + %d pairs"
+              % (len(cs.keep), len(cs.dropped), len(cs.cases) - 1), flush=True)
+        print("picked:", json.dumps(cs.picked), flush=True)
+        paths = PC.build_paths(cs.cases, cs.C, eps=args.eps, k=args.k,
+                               lam=args.persona_lam, mode=args.eps_mode,
+                               param=args.param)
 
     for report, flag in ((geom.axis_report, "--labels"),
                          (geom.n_bar_report, "--n-bar")):
@@ -591,7 +907,11 @@ def main() -> None:
                        if args.fractions else None))
         print("ablation grid: %d cells (%s -> %s)" % (len(cells), near, far), flush=True)
     else:
-        cells = build_grid(geom, smoke=args.smoke, arms=arms, n_roles=args.n_roles)
+        cells = build_grid(geom, smoke=args.smoke, arms=arms,
+                           n_roles=args.n_roles,
+                           cases=(cs.cases if cs else None),
+                           path_alphas=path_alphas, n_pairs=args.n_pairs,
+                               pairs=pair_sel)
     # The UNSHARDED grid. Kept because aggregation must know every cell the run
     # is supposed to contain, not just the ones this worker owns.
     all_cells = cells
@@ -620,7 +940,17 @@ def main() -> None:
            "n_bar": geom.n_bar, "n_bar_source": geom.n_bar_report.get("source"),
            "axis_definition": geom.axis_report.get("definition"),
            "labels": args.labels, "prompts": args.prompts,
-           "lambda": geom.lam}
+           "lambda": geom.lam,
+           # THE PATH CONSTRUCTION, pinned like everything else here: two values
+           # of eps in one run dir are two different manifold arms sharing a
+           # name. Recorded UNCONDITIONALLY, which is also what stops a run dir
+           # written before the linear_axis/manifold_axis rename from resuming:
+           # its shards carry those names under the dose-matched intervention,
+           # and skipping them as "already done" would mix two experiments.
+           "path_eps": args.eps, "path_k": args.k,
+           "path_lam": args.persona_lam, "path_param": args.param,
+           "path_eps_mode": args.eps_mode, "path_alphas": path_alphas,
+           "n_pairs": args.n_pairs, "pairs": pair_sel}
     # SCOPE: which cells the run dir covers. These WIDEN — they do not conflict.
     # Comparing them for equality forbade the workflow --arms' own help text
     # prescribes ("runs 'unsteered,linear_axis' first", then re-run the same dir
@@ -664,9 +994,63 @@ def main() -> None:
     # complete and declares the run whole. build_grid is pure python over the
     # already-loaded geometry, so recomputing it here costs nothing.
     if not args.ablation and scope["arms"] != sorted(arms):
+        # The recorded scope can name a path arm this invocation did not, and
+        # the completeness gate has to count ITS cells too — so the case list
+        # must exist here even when `arms` alone would not have needed it.
+        wider_cs = cs
+        if wider_cs is None and any(a in PATH_ARMS for a in scope["arms"]):
+            wider_cs = PC.load_cases(geom)
         all_cells = build_grid(geom, smoke=args.smoke, arms=scope["arms"],
-                               n_roles=scope["n_roles"])
+                               n_roles=scope["n_roles"],
+                               cases=(wider_cs.cases if wider_cs else None),
+                               path_alphas=path_alphas, n_pairs=args.n_pairs,
+                               pairs=pair_sel)
         n_all = len(all_cells)
+
+    # THE PAIR ARMS' A ROLES NEED PROMPTS, and they are not chosen from
+    # `near50`: `pick_endpoints` takes the three highest-projecting
+    # fully-role-playing centroids, which need not overlap it at all. A role
+    # with no prompt bank entry (or no instruction file) raises inside
+    # `generate_cell`, i.e. after the model is loaded and possibly hours in, so
+    # the whole grid's roles are checked here instead.
+    if not args.collect:
+        need = sorted({c.role for c in all_cells})
+        missing_prompts = []
+        for r in need:
+            try:
+                load_system_prompts(r, prompt_bank=prompt_bank)
+            except Exception as exc:
+                missing_prompts.append("%s (%s)" % (r, exc))
+        if missing_prompts:
+            raise SystemExit(
+                "no evaluation system prompts for %d role(s):\n    %s\n"
+                "Re-run steering.gen_role_prompts for them, or drop the arms "
+                "that need them."
+                % (len(missing_prompts), "\n    ".join(missing_prompts)))
+
+    # WHAT THE ROUTES ACTUALLY ARE, beside the run they produced. detour_ratio,
+    # the persona names each curve threads and the knot error are the numbers
+    # `geometry_check` gates on; written here so a reader of the run does not
+    # have to trust that the figures were regenerated with the same flags.
+    if paths is not None:
+        manifest = {"eps": args.eps, "k": args.k, "lam": args.persona_lam,
+                    "param": args.param, "eps_mode": args.eps_mode,
+                    "alphas": path_alphas, "picked": cs.picked,
+                    "n_fully_centroids": int(len(cs.keep)),
+                    "n_dropped": int(len(cs.dropped)), "routes": []}
+        for kind, P0, P1, na, nb in cs.cases:
+            row = {"kind": kind, "A": na, "B": nb,
+                   "chord_len": float(np.linalg.norm(np.asarray(P1) - np.asarray(P0)))}
+            for family in ("linear", "manifold"):
+                path = paths[(family, na, nb)]
+                row[family] = PC.path_report(path, cs.names)
+                # THE CONTROL, measured on the object the run will use rather
+                # than asserted: delta(0) must be the zero vector, or every
+                # alpha in this cell is offset by a constant nobody chose.
+                row[family]["delta0_max_abs"] = float(
+                    np.abs(path.delta(0.0)).max())
+            manifest["routes"].append(row)
+        _write_json_atomic(manifest, run_dir / "data" / "path_manifest.json")
 
     done = 0
     rate_samples = []
@@ -686,7 +1070,7 @@ def main() -> None:
         df = generate_cell(cell, geom, model, tokenizer, hook_layer,
                            batch_size=args.batch_size,
                            max_new_tokens=args.max_new_tokens,
-                           prompt_bank=prompt_bank)
+                           prompt_bank=prompt_bank, paths=paths)
         df.to_parquet(shard, index=False)
         # WP5, CHECKPOINTED BESIDE THE SHARD IT DESCRIBES. Accumulating these in
         # a list meant a --resume wrote a delta_stats file covering only the
@@ -696,7 +1080,8 @@ def main() -> None:
         if rep:
             (ckpt / (cell.shard_name + ".delta.json")).write_text(json.dumps(
                 {"arm": cell.arm, "alpha": cell.alpha, "role": cell.role,
-                 "target_distance": cell.target_distance, **rep}))
+                 "target_distance": cell.target_distance,
+                 "path_a": cell.path_a, "path_b": cell.path_b, **rep}))
         done += 1
         n = len(df)
         rate_samples.append(n / max(df.attrs["elapsed_s"], 1e-9))
@@ -741,8 +1126,12 @@ def main() -> None:
         "max_new_tokens": args.max_new_tokens,
         "frac_hit_ceiling": hit,
         "mean_new_tokens": float(all_df["n_new_tokens"].mean()),
-        "full_grid_rows": FULL_GRID_ROWS,
-        "projected_hours_full_grid": (FULL_GRID_ROWS / rate / 3600) if rate else None,
+        # DERIVED from the grid this run actually built. The old constant was
+        # the legacy Figure-4 grid, and the path grid's size depends on how many
+        # pair cases there are, so quoting the constant would misreport the run.
+        "full_grid_rows": len(all_cells) * ROWS_PER_CELL,
+        "projected_hours_full_grid": ((len(all_cells) * ROWS_PER_CELL)
+                                      / rate / 3600) if rate else None,
         # Recorded, not inferred: with the gate above these are 0/False for any
         # normal run, so a downstream reader never has to guess whether the
         # artifact covers the whole grid.

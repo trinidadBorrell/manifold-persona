@@ -330,6 +330,24 @@ class LinearPath:
         a = np.atleast_1d(np.asarray(alpha, dtype=np.float64))[:, None]
         return self.P0[None, :] + a * (self.P1 - self.P0)[None, :]
 
+    def delta(self, alpha):
+        """S(alpha) - S(0) = alpha * (P1 - P0). The chord as a DISPLACEMENT.
+
+        Same contract and same name as `PersonaPath.delta`, so the two arms of
+        a pair are built by the same call and cannot drift apart.
+
+        EVALUATED IN THE SECOND FORM. `at_alpha(a) - at_alpha(0)` is the same
+        quantity in exact arithmetic, but both operands carry P0, so the
+        subtraction loses the low bits of a chord that is short next to
+        ||P0||: measured 1.8e-15 on a 49.5-unit chord. That is harmless as a
+        perturbation and fatal as a control -- "the linear arm's delta is
+        exactly alpha*(P1-P0)" is the property that makes the linear arm the
+        reference the manifold arm is read against, and a control that holds
+        only to rounding is not the one that was claimed.
+        """
+        a = np.atleast_1d(np.asarray(alpha, dtype=np.float64))[:, None]
+        return a * (self.P1 - self.P0)[None, :]
+
     def bending_energy(self):
         return 0.0
 
@@ -343,8 +361,77 @@ def endpoint_drift(path, P0, P1):
     return float(max(np.linalg.norm(ends[0] - P0), np.linalg.norm(ends[1] - P1)))
 
 
+def _chunk_candidates(idx_all, u_all, k, chunk, m):
+    """Cut the chord-ordered candidates into chunks, one knot per chunk.
+
+    ONE implementation, two callers: `pick_centroids` takes the candidate
+    nearest the chord in each chunk, `chunk_diagnostics` reports what it chose
+    from. A second copy of a partition is the bug that never looks like one --
+    the route and the figure describing it would each be internally consistent
+    while binning differently, and the only symptom is a clean number.
+
+    "distance" is the production partition, unchanged: k equal-WIDTH spans of
+    the chord coordinate, cut between the same END_MARGIN bounds
+    `select_cylinder` already applies. Width is the natural unit for "where
+    along the route", but it says nothing about where the personas actually
+    are. The cloud is not uniform along a chord, so one span can hold five
+    candidates and its neighbour none, and an empty span silently costs a knot:
+    k is a ceiling there, not a count.
+
+    "density" cuts the same candidates into k contiguous groups of
+    as-equal-as-possible SIZE. No group is empty while candidates remain, so the
+    knot count is exactly min(k, n_candidates), and the knots follow where the
+    personas are rather than where the ruler fell. The rule INSIDE a chunk is
+    untouched -- nearest the chord, in both modes -- so the two differ in the
+    partition and nothing else. At k = 1 they are the same partition and must
+    return the same knot; that is the positive control in test_chunking.py.
+
+    `m` is points per chunk and applies to "density" only: the bin count becomes
+    ceil(n_candidates/m) and k IS IGNORED. Passing it with "distance" is refused
+    rather than ignored, because an argument that is silently dropped is exactly
+    how a run reports a number nobody can reproduce.
+
+    Returns [(u_lo, u_hi, cand), ...] in ascending chord order, `cand` holding
+    indices into C ascending in u. u_lo/u_hi are the bin EDGES under "distance"
+    (fixed, so an empty span still has a span) and the candidates' own extent
+    under "density", where an empty group -- possible only when there are fewer
+    candidates than bins -- reports NaN rather than inventing an interval.
+    """
+    if chunk not in ("distance", "density"):
+        raise ValueError("chunk must be 'distance' or 'density', got %r" % (chunk,))
+
+    if chunk == "distance":
+        if m is not None:
+            raise ValueError("m is points-per-chunk and only applies to "
+                             "chunk='density', got m=%r with chunk='distance'" % (m,))
+        edges = np.linspace(END_MARGIN, 1.0 - END_MARGIN, int(k) + 1)
+        u_sel = u_all[idx_all]
+        span_of = np.clip(np.searchsorted(edges, u_sel, side="right") - 1, 0, int(k) - 1)
+        return [(float(edges[b]), float(edges[b + 1]), idx_all[span_of == b])
+                for b in range(int(k))]
+
+    if m is None:
+        n_bins = int(k)
+    else:
+        if int(m) < 1:
+            raise ValueError("m is points per chunk and must be >= 1, got %r" % (m,))
+        n_bins = max(1, int(np.ceil(len(idx_all) / float(int(m)))))
+    if n_bins < 1:
+        raise ValueError("chunk='density' needs at least one bin, got k=%r" % (k,))
+    # idx_all is already ascending in u (select_cylinder sorts it), so
+    # contiguous groups of the index array ARE contiguous spans of the chord.
+    out = []
+    for g in np.array_split(idx_all, n_bins):
+        if len(g) == 0:
+            out.append((float("nan"), float("nan"), g))
+        else:
+            out.append((float(u_all[g[0]]), float(u_all[g[-1]]), g))
+    return out
+
+
 def pick_centroids(C: np.ndarray, P0: np.ndarray, P1: np.ndarray, eps: float,
-                   k: int = 8, mode: str = "absolute"):
+                   k: int = 8, mode: str = "absolute", chunk: str = "distance",
+                   m=None):
     """Choose k REAL persona centroids for the curve to pass through.
 
     Every knot is a fully-role-playing persona centroid -- never an average of
@@ -357,25 +444,93 @@ def pick_centroids(C: np.ndarray, P0: np.ndarray, P1: np.ndarray, eps: float,
     and well separated along the route -- the separation is what stops an
     interpolating cubic from swinging between them.
 
+    `chunk` chooses how the chord is cut into those k pieces and DEFAULTS TO THE
+    PRODUCTION PARTITION, "distance": equal-width spans of u, which is what
+    every run up to and including 2026-09-10T15-46-fig4 used. "density" cuts
+    equal-count groups of candidates instead and so cannot leave a chunk empty
+    while candidates remain; `m` (density only) sets points per chunk and makes
+    k IRRELEVANT. `_chunk_candidates` carries the full argument for both.
+
     Returns (u, Y, idx): knot coordinates, centroid vectors, and their indices
-    into C. Fewer than k are returned when spans are empty.
+    into C. Fewer than k are returned when chunks are empty -- routine under
+    "distance", and impossible under "density" until candidates run out.
     """
     idx_all, u_all, r_all = select_cylinder(C, P0, P1, eps, mode)
+    # Partition BEFORE the empty-set exit: `_chunk_candidates` is where `chunk`
+    # and `m` are validated, and an argument that is wrong is wrong at eps = 0
+    # too. The negative control must not be the one call that swallows a typo.
+    bins = _chunk_candidates(idx_all, u_all, k, chunk, m)
     if len(idx_all) == 0:
         return np.zeros(0), np.zeros((0, C.shape[1])), np.zeros(0, dtype=int)
 
-    edges = np.linspace(END_MARGIN, 1.0 - END_MARGIN, int(k) + 1)
-    u_sel = u_all[idx_all]
-    span_of = np.clip(np.searchsorted(edges, u_sel, side="right") - 1, 0, int(k) - 1)
-
     chosen = []
-    for b in range(int(k)):
-        cand = idx_all[span_of == b]
+    for _, _, cand in bins:
         if len(cand) == 0:
             continue
         chosen.append(int(cand[np.argmin(r_all[cand])]))   # nearest the chord
     chosen = np.array(sorted(chosen, key=lambda i: u_all[i]), dtype=int)
     return u_all[chosen], np.asarray(C)[chosen], chosen
+
+
+def chunk_diagnostics(C: np.ndarray, P0: np.ndarray, P1: np.ndarray, eps: float,
+                      k: int = 8, mode: str = "absolute", chunk: str = "distance",
+                      m=None):
+    """What each chunk contained, and where the chosen knot ranked in it.
+
+    `pick_centroids` returns the winners and throws the contest away, so nothing
+    downstream can say whether a knot won by a nose or by a mile, nor how many
+    candidates it beat. This runs the SAME partition (`_chunk_candidates`) and
+    the SAME selection over the same candidate set and keeps the losers.
+
+    Two ranks, for two different questions. `picked_rank_r` is 0 in every chunk
+    BY CONSTRUCTION -- the pick is the argmin of r -- so it is a check on this
+    function, not a finding: if it is ever non-zero the diagnostic has drifted
+    from the selector and the figure drawn from it describes a route that was
+    never built. `picked_rank_cos` is the finding. Cosine distance,
+    1 - cos(C[i]-P0, P1-P0), is the other rule one might have written for
+    "close to the route", and it is not the same rule: r measures absolute
+    displacement off the chord while cosine measures angular displacement, so a
+    candidate far along the chord is judged leniently by cosine and not at all
+    differently by r. Where the two ranks agree, the choice of rule did not
+    matter; where they disagree, it did, and the figure says by how much.
+
+    Returns (records, radius). `radius` is the tube radius ACTUALLY used, in
+    activation units (eps, or eps*L under mode="relative"), so a caller can draw
+    the tube without re-deriving the mode. `records` holds one dict per
+    NON-EMPTY chunk, in ascending chord order, keyed "bin" by its index in the
+    partition -- so an empty "distance" span leaves a gap in the numbering,
+    which is the thing worth seeing rather than hiding.
+    """
+    idx_all, u_all, r_all = select_cylinder(C, P0, P1, eps, mode)
+    bins = _chunk_candidates(idx_all, u_all, k, chunk, m)
+
+    dhat, L = chord_frame(P0, P1)
+    radius = float(eps) * L if mode == "relative" else float(eps)
+    Cf = _require_finite_2d(C, P0)
+    P0f = np.asarray(P0, dtype=np.float64)
+
+    records = []
+    for b, (u_lo, u_hi, cand) in enumerate(bins):
+        if len(cand) == 0:
+            continue
+        r_c = r_all[cand]
+        # No guard on ||rel|| is needed: a candidate has u > END_MARGIN, so
+        # rel.dhat = u*L > 0 and rel cannot be the zero vector.
+        rel = Cf[cand] - P0f
+        cos_c = 1.0 - (rel @ dhat) / np.linalg.norm(rel, axis=1)
+        pick = int(np.argmin(r_c))
+        records.append({
+            "bin": int(b),
+            "u_lo": float(u_lo), "u_hi": float(u_hi),
+            "cand_idx": np.asarray(cand, dtype=int),
+            "cand_u": u_all[cand].astype(np.float64),
+            "cand_r": r_c.astype(np.float64),
+            "cand_cos": cos_c.astype(np.float64),
+            "picked": int(cand[pick]),
+            "picked_rank_r": int(np.nonzero(np.argsort(r_c, kind="stable") == pick)[0][0]),
+            "picked_rank_cos": int(np.nonzero(np.argsort(cos_c, kind="stable") == pick)[0][0]),
+        })
+    return records, radius
 
 
 class PersonaPath:
@@ -388,8 +543,12 @@ class PersonaPath:
     """
 
     def __init__(self, P0, P1, C, eps, k=8, lam=0.0, mode="absolute",
-                 param="centripetal"):
+                 param="centripetal", chunk="distance", m=None):
         """param: how the spline's abscissa is built from the knots.
+
+        chunk/m are passed straight to `pick_centroids` and only change WHICH
+        centroids become knots, never what is done with them. The default,
+        "distance", is the partition every run so far was built with.
 
         DEFAULT IS "centripetal". Measured on the real cloud, 16 routes, eps=9:
         mean spline overshoot above the polyline floor was 1.173 for
@@ -419,7 +578,9 @@ class PersonaPath:
         self.P1 = np.asarray(P1, dtype=np.float64)
         self.eps, self.k, self.lam = float(eps), int(k), float(lam)
         self.param = param
-        u, Y, idx = pick_centroids(C, self.P0, self.P1, eps, k, mode)
+        self.chunk, self.m = chunk, (None if m is None else int(m))
+        u, Y, idx = pick_centroids(C, self.P0, self.P1, eps, k, mode,
+                                   chunk=chunk, m=m)
         self.centroid_idx = idx
         self.n_centroids = int(len(idx))
 
@@ -470,6 +631,7 @@ class PersonaPath:
         """Everything a manifest row needs, in one place."""
         return {"n_centroids": self.n_centroids, "eps": self.eps, "k": self.k,
                 "lam": self.lam, "param": self.param,
+                "chunk": self.chunk, "m": self.m,
                 "detour_ratio": self.detour_ratio,
                 "polyline_ratio": self.polyline_ratio,
                 "overshoot": self.overshoot,

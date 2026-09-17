@@ -300,9 +300,10 @@ Paths are **projected into** the centroid PCA for drawing, never fitted in it.
 | `spline1d.py` | numpy port of causalab's `CubicSpline1D` (Reinsch natural cubic) + GCV. Validated against scipy to 2e-14. |
 | `geometry.py` | axis, role centroids, the fitted curve, `N̄`, the 50 near / 50 far role sets, the degeneracy gate |
 | `manifold_paths.py` | the two routes between two fixed points: `LinearPath` (the chord) and `PersonaPath` (a cubic through k real persona centroids, same endpoints). Cylinder selection, the endpoint-pinned fit, arc-length parameterisation, and the detour / overshoot / knot-error diagnostics |
+| `path_cases.py` | the cases and the path defaults, imported by BOTH `geometry_check.py` and `run_steering.py`: `fully_only`, `pick_endpoints`, `build_paths`, and one copy of eps / k / lam / param / the alpha stops. A figure and a run that disagree about the chord are the failure this removes |
 | `geometry_check.py` | Experiment 1: sweeps eps and k over 16 routes, draws figs 01–02, writes the controls JSON. Pure numpy — no GPU, no API. eps and k are frozen here, before any generation |
 | `interventions.py` | the arms and the dose scaling — the only file that knows what an arm *is* |
-| `run_steering.py` | the generation driver: builds the grid, generates, checkpoints per cell |
+| `run_steering.py` | the generation driver: builds the grid, generates, checkpoints per cell. Four path arms — `linear_axis`, `manifold_axis`, `linear_pair`, `manifold_pair` — all additive, `h <- h + (S(alpha) - S(0))`, one constant vector per cell. The dose-matched forms these two axis names used to mean are still runnable as `linear_axis_legacy` / `manifold_axis_legacy` |
 | `judge.py` | the paper's D.1.3 **perspective** rubric, verbatim, plus the row-identity keys every judge joins on. Batch path included. **Off unless a key exists.** |
 | `judge_concurrent.py` | the same judge over a thread pool — the default path, since a batch stalled once for 18.5 h |
 | `rolefilter.py` | the paper's **other** judge — §2.1.1 role expression (`fully`/`somewhat`/`no`). Rebuilds the axis from `fully` rows (WP1) and gates the fresh prompts (WP3b) |

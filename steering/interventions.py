@@ -18,13 +18,27 @@ difference is the ROUTE:
     linear_journey / manifold_journey
   displacement-matched  delta = f * (c_T - c_S), constant, never references h
     linear_contrast / manifold_contrast
+  route-matched  delta = S(alpha) - S(0) along a path with FIXED ENDPOINTS
+    linear_axis / manifold_axis        the chord across the Assistant Axis
+    linear_pair / manifold_pair        the chord between two persona centroids
+
+THE ROUTE-MATCHED ARMS are the current design (steering/manifold_paths.py). Both
+members of a pair start at P0 and end at P1 and are sampled at the same
+normalised arc positions, so at alpha = 0 both deltas are exactly zero and at
+alpha = 1 both are exactly P1 - P0; everything between them is the route and
+nothing else. The intervention is the paper's own, `h <- h + alpha*vector`
+(Figure 4), which is why the path enters as a DISPLACEMENT and never as a
+position: `make_linear_contrast_delta_fn` records what replacing h with a
+centroid-like point did to the generations.
 
 THE MATCHING IS THE POINT: without it, "arm X works better" collapses into "arm
 X pushed harder" (or "arm X went further"). What each pair gives up to hold its
 own quantity fixed is measured per cell by `DeltaStats`, not assumed.
 
-`linear_axis` runs on the vendored `addition` path unchanged; every other arm is
-`dynamic`, because its direction (or its bookkeeping) depends on the activation.
+`linear_axis_legacy` runs on the vendored `addition` path unchanged; every other
+arm is `dynamic`, because its direction (or its bookkeeping) depends on the
+activation -- or, for the constant-delta arms, simply because that is the hook
+that takes a callback.
 
 A note on Arm 3's intrinsic coordinate
 --------------------------------------
@@ -106,6 +120,12 @@ def _rescale_torch(direction: torch.Tensor, magnitude: float) -> torch.Tensor:
 
 def linear_axis_vector(axis_unit: np.ndarray, alpha: float, n_bar: float) -> np.ndarray:
     """delta = alpha * N_bar * a_hat, with alpha SIGNED as in the paper.
+
+    THE `linear_axis_legacy` ARM. Kept, not deleted: it is the dose-matched
+    form the earlier runs used, and their shards are only readable against it.
+    The current `linear_axis` arm is `make_linear_path_delta_fn` over a
+    `LinearPath` across the axis segment -- same straight line, but travelled
+    to a fixed endpoint rather than pushed by a dose.
 
     ALPHA IS NOW THE PAPER'S X-AXIS, not a magnitude. `common.assistant_axis`
     returns mean(default) - mean(role vectors), so +a_hat points toward the
@@ -331,7 +351,12 @@ def make_manifold_axis_delta_fn(spline, axis_unit: np.ndarray, alpha: float,
                                 n_bar: float, span: float,
                                 step_frac: float = 0.25,
                                 dtype=torch.float32, stats: "DeltaStats" = None):
-    """Follow the fitted curve along the Assistant Axis. NO TARGET ROLE.
+    """THE `manifold_axis_legacy` ARM. Follow the fitted curve along the
+    Assistant Axis. NO TARGET ROLE.
+
+    Superseded by `make_manifold_path_delta_fn` over a `PersonaPath`, which
+    fixes both endpoints instead of taking a local secant of fixed length. Kept
+    so the runs that used it stay interpretable.
 
         u_h   = h . a_hat                       # where we are on the curve
         du    = sign(alpha) * step_frac * span  # a step along the coordinate
@@ -566,3 +591,94 @@ def make_manifold_contrast_delta_fn(spline, axis_unit: np.ndarray,
         stats.add_coords(np.array([u_s, u_end]),
                          float(spline.x[0]), float(spline.x[-1]))
     return _constant_delta_fn(step + f * (r_t - r_s), dtype, stats)
+
+
+# --------------------------------------------------------------------------
+# The path arms — one route, two ways round, same two endpoints
+# --------------------------------------------------------------------------
+#
+# THE CONSTRUCTION lives in `steering/manifold_paths.py`; these two factories
+# only turn a path into a hook. Given a path with endpoints P0, P1:
+#
+#     delta(alpha) = S(alpha) - S(0)
+#
+# where alpha in [0, 1] is normalised ARC POSITION. The intervention is the
+# paper's, ADDITIVE and nothing else:  h <- h + delta.  Figure 4 adds a vector,
+# so a replication adds a vector; there is no replacement, no projection and no
+# per-token solve here. `delta` is one vector for the whole cell, so the cloud
+# translates rigidly and each response keeps its own offset from the source --
+# the property `make_linear_contrast_delta_fn` explains at length, and the
+# reason the journey arms are not what these are built on.
+#
+# THE THREE CONTROLS ARE STRUCTURAL, not asserted:
+#   alpha = 0   both arms give exactly the zero vector (S(0) - S(0))
+#   alpha = 1   both arms give exactly P1 - P0
+#   linear      delta is exactly alpha*(P1 - P0), by LinearPath.at_alpha
+# so any difference between the arms lives strictly inside 0 < alpha < 1 and is
+# the route. Nothing needs to be matched by hand because nothing was free.
+
+
+def _path_delta_fn(path, alpha: float, dtype, stats: "DeltaStats" = None):
+    """Shared body of both path arms: the displacement, as a constant hook.
+
+    One closure for both, for the reason `_constant_delta_fn` gives: the arms
+    differ only in the object handed in, so the code path that reaches the hook
+    must not be able to differ at all.
+    """
+    d = np.asarray(path.delta(float(alpha)), dtype=np.float64).reshape(-1)
+    if not np.isfinite(d).all():
+        raise ValueError("path delta at alpha=%r is not finite" % (alpha,))
+    return _constant_delta_fn(d, dtype, stats)
+
+
+def make_linear_path_delta_fn(path, alpha: float, dtype=torch.float32,
+                              stats: "DeltaStats" = None):
+    """delta = alpha * (P1 - P0): the straight chord, as a displacement.
+
+    THE `linear_axis` AND `linear_pair` ARMS -- the same factory for both,
+    because the arms differ only in which two points the chord joins (the two
+    ends of the Assistant Axis segment, or two persona centroids). Which chord
+    is a property of the `LinearPath`, so it is chosen once, in the shared case
+    list (`steering.path_cases`), where the figures choose it too.
+
+    The type is CHECKED. `make_manifold_path_delta_fn` takes the same shape of
+    argument and returns the same shape of hook, so passing the wrong path
+    object produces a run that is labelled one arm and is the other -- with no
+    symptom anywhere, since both produce plausible text.
+
+    Args:
+        path: a `manifold_paths.LinearPath`.
+        alpha: normalised arc position in [0, 1]. 0 is a no-op by construction.
+    """
+    from steering.manifold_paths import LinearPath
+    if not isinstance(path, LinearPath):
+        raise TypeError("linear path arm needs a LinearPath, got %s"
+                        % type(path).__name__)
+    return _path_delta_fn(path, alpha, dtype, stats)
+
+
+def make_manifold_path_delta_fn(path, alpha: float, dtype=torch.float32,
+                                stats: "DeltaStats" = None):
+    """The same journey, routed through real persona centroids.
+
+    THE `manifold_axis` AND `manifold_pair` ARMS. `PersonaPath` fits a cubic
+    through the k persona centroids inside an eps-cylinder around the chord,
+    with both endpoints pinned exactly, then samples it by arc length -- so this
+    arm visits states the model actually produces on the way to the same place
+    the linear arm reaches, and arrives there at the same alpha.
+
+    `delta` is one constant vector per (arm, alpha) cell, exactly as in the
+    linear arm: the ROUTE differs, the FORM of the intervention does not. An
+    arm whose delta were per-token would differ from its partner in two ways at
+    once and the comparison would say nothing about routes.
+
+    Args:
+        path: a `manifold_paths.PersonaPath` over the SAME endpoints as the
+            linear arm it is compared with.
+        alpha: normalised arc position in [0, 1].
+    """
+    from steering.manifold_paths import PersonaPath
+    if not isinstance(path, PersonaPath):
+        raise TypeError("manifold path arm needs a PersonaPath, got %s"
+                        % type(path).__name__)
+    return _path_delta_fn(path, alpha, dtype, stats)
