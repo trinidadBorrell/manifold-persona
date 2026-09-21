@@ -1,0 +1,20 @@
+[
+ "old_musician|true",
+ "old_musician|recon",
+ "old_musician|rand",
+ "medieval_spy|true",
+ "medieval_spy|recon",
+ "medieval_spy|rand",
+ "old_spy|true",
+ "old_spy|recon",
+ "old_spy|rand",
+ "futuristic_scholar|true",
+ "futuristic_scholar|recon",
+ "futuristic_scholar|rand",
+ "toddler|true",
+ "toddler|recon",
+ "toddler|rand",
+ "elder|true",
+ "elder|recon",
+ "elder|rand"
+]
