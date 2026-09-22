@@ -28,7 +28,7 @@ import matplotlib.pyplot as plt
 
 from manifold.idim import id_estimates, ESTIMATORS
 from manifold_persona.common import assistant_axis, center, project, load_points
-from stats_utils import fmt_p, linfit
+from stats_utils import linfit
 from common import (load_role_clouds, design_fractions, pca_stats, resolve_run_dir,
                     savefig, design_null_draws, gaussian_null_draws, band, small_matrix_ops, assert_finite,
                     grid_shape, C_REAL, C_DESIGN, C_GAUSS, C_INSTR, C_QUEST, C_INTER)

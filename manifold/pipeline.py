@@ -6,11 +6,9 @@ Everything downstream of the saved role point cloud; no model, no re-extraction.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from scipy.cluster.hierarchy import fcluster, linkage
 from scipy.sparse import csr_matrix
 from scipy.sparse.csgraph import connected_components
 from scipy.spatial.distance import pdist, squareform
@@ -192,8 +190,23 @@ def construction_C_raw(cloud: Cloud, k: int = K_INTRINSIC, n_folds: int = 5,
 
 
 def pca_plane_r2(cloud: Cloud, k: int = K_INTRINSIC) -> float:
-    """Context baseline: flat k-dim PCA reconstruction R^2 of the raw points."""
-    p = PCA(n_components=k, random_state=0).fit(cloud.raw)
+    """Context baseline: flat k-dim PCA reconstruction R^2 of the raw points.
+
+    svd_solver="full", not "auto": this is the ONE published PCA in the repo
+    whose solver `auto` picks differently on either side of sklearn 1.5, and
+    `plane_r2` feeds `curv_gain = r2 - plane_r2`. `cloud.raw` is (N, 50) with N
+    in the hundreds of thousands, so `auto` returns "covariance_eigh" on >= 1.5
+    (n_samples >= 10*n_features and n_features < 1000) and "randomized" before
+    it — exact versus approximate. requirements.txt allows >= 1.6 because
+    hdbscan needs it, so today's answer is already the exact one and pinning
+    "full" reproduces it; the pin is what stops a future heuristic change from
+    moving a published number with no code change and no gate to notice. Same
+    reasoning as clustering_per_role.py, which pins it for the same reason.
+
+    Every other PCA in the repo lands on the same branch either side of 1.5:
+    the (N, 2048) fits stay "randomized", the (<=500-row) fits stay "full".
+    """
+    p = PCA(n_components=k, svd_solver="full", random_state=0).fit(cloud.raw)
     recon = p.inverse_transform(p.transform(cloud.raw))
     ssr = float(np.sum((cloud.raw - recon) ** 2))
     tss = float(np.sum((cloud.raw - cloud.global_mean) ** 2))

@@ -147,7 +147,13 @@ def main():
     if args.control_text_len:
         q_cols.append(("partial_p_ctrl_logvar_textlen", "partial_q_ctrl_logvar_textlen"))
     for col, out in q_cols:
-        res[out] = np.concatenate([bh_fdr(g[col].values) for _, g in res.groupby("predictor")])
+        # Assign per group, positionally within that group. The concatenate form
+        # laid GROUPBY-ORDERED q-values (predictor sorted alphabetically) onto
+        # PREDICTORS-ordered rows, so unless PREDICTORS happened to be sorted,
+        # every q landed on the wrong predictor's block.
+        res[out] = np.nan
+        for _, g in res.groupby("predictor"):
+            res.loc[g.index, out] = bh_fdr(g[col].values)
 
     # How much of the ID<->axis link is just cloud scale, or just text length?
     r_scale = {c: float(stats.pearsonr(d["log_var"], d[c])[0]) for c in ID_COLS}

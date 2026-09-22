@@ -35,7 +35,6 @@ from __future__ import annotations
 import argparse
 import json
 import textwrap
-import traceback
 from pathlib import Path
 
 import numpy as np
@@ -45,8 +44,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 import families as F
-from common import C_REAL, C_DESIGN, C_GAUSS, C_INSTR
-from figures import (RUNGS, RUNG_COLORS, RUNG_OFFSET, PRED_TITLES, YLABELS,
+from common import C_REAL, C_DESIGN, C_GAUSS
+from figures import (RUNGS, RUNG_COLORS, PRED_TITLES, YLABELS,
                      _offsets, defensive, grid_shape)
 from metrics import PANEL_COLS
 from stats_utils import linfit, fmt_p

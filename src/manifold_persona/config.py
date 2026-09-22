@@ -19,7 +19,6 @@ DATA_DIR = REPO_ROOT / "data"
 EMBEDDINGS_DIR = DATA_DIR / "embeddings"                 # persona-vectors study
 ROLE_EMBEDDINGS_DIR = DATA_DIR / "embeddings_roles"      # assistant-axis roles study (prompt tokens)
 RESP_ROLE_EMBEDDINGS_DIR = DATA_DIR / "embeddings_roles_resp"  # roles study, RESPONSE tokens (paper-matched)
-AA_TRAIT_EMBEDDINGS_DIR = DATA_DIR / "embeddings_aa_traits"  # assistant-axis traits study
 # Per-study figures live at exploratory/<study>/figures/<stamp>/ (see
 # manifold_persona.common.FIGURES_DIR). This repo-level default named a path
 # that has never existed and had no importer.
@@ -38,14 +37,10 @@ if _axis_override:
     ASSISTANT_AXIS_DIR = Path(_axis_override)
     ROLE_INSTRUCTIONS_DIR = ASSISTANT_AXIS_DIR / "data" / "roles" / "instructions"
     ROLE_QUESTIONS_FILE = ASSISTANT_AXIS_DIR / "data" / "extraction_questions.jsonl"
-    # 240 behavioural traits (adjectives; bipolar pos/neg + 40 questions each).
-    # Not vendored — only the deleted trait-extraction scripts used these.
-    AA_TRAIT_INSTRUCTIONS_DIR = ASSISTANT_AXIS_DIR / "data" / "traits" / "instructions"
 else:
     ASSISTANT_AXIS_DIR = VENDORED_AXIS_DIR
     ROLE_INSTRUCTIONS_DIR = VENDORED_AXIS_DIR / "roles" / "instructions"
     ROLE_QUESTIONS_FILE = VENDORED_AXIS_DIR / "extraction_questions.jsonl"
-    AA_TRAIT_INSTRUCTIONS_DIR = VENDORED_AXIS_DIR / "traits" / "instructions"  # not vendored
 
 # --- Model ----------------------------------------------------------------
 MODEL_NAME = os.environ.get("MP_MODEL_NAME", "Qwen/Qwen2.5-3B-Instruct")

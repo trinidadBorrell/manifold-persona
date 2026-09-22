@@ -11,6 +11,23 @@ a second reading of the same question, and if it also fails its gates the honest
 outcome is that the measure is not validated by either predicate. That is a
 finding, not a reason to keep searching for a third.
 
+TAU IS TUNED AND GATED ON DIFFERENT ROWS
+----------------------------------------
+`tau` is chosen by maximising Cohen's kappa over a 50-point grid, so the winning
+value is an order statistic: with ~500 correlated candidates the maximum is
+biased upward by about one order statistic's worth no matter how good the
+predicate is. An earlier version selected AND gated on the same 500 judge pairs,
+which made "the fallback clears kappa 0.20" unsupportable — and specifically not
+comparable to the PRIMARY predicate's 0.151, which involved no selection at all.
+
+The judge pairs are now split in half, stratified on the judge's own verdict
+(kappa is chance-corrected, so the halves must carry the same base rate). `tau`
+is selected on the tune half; `judge_kappa` and `judge_pass` are scored on the
+held-out half and are the only numbers the gate reads. The in-sample maximum is
+still recorded, as `judge_kappa_naive_in_sample_max`, so the size of the
+selection effect is visible rather than argued about. See
+`exploratory/per_persona/METHODS.md`.
+
 Usage:
     .venv/bin/python exploratory/per_persona/study_entropy_fallback.py \
         --outdir output/per-persona-entropy/2026-08-11
@@ -83,20 +100,65 @@ def main():
         off += m
 
     # ---- tau chosen against the JUDGE, never against axis_proj ---------- #
-    jd = pd.read_csv(run / "data" / "judge_pairs_L19.csv")
+    # ON A HELD-OUT SPLIT. tau is picked by maximising kappa over a 50-point
+    # grid, so the winning kappa is an order statistic: with ~500 correlated
+    # candidates the maximum is biased upward by roughly one order statistic's
+    # worth, whatever the predicate is worth. Scoring the GATE on the same rows
+    # the threshold was chosen on therefore produces a number that cannot be
+    # compared with the primary predicate's 0.151 — which involved no selection
+    # at all — and "the fallback clears 0.20" would not be a supportable claim.
+    #
+    # So: split first, tune tau on one half, and gate on the other. Stratified
+    # by the judge's own verdict, because kappa is chance-corrected and a
+    # lopsided split moves it for reasons unrelated to the predicate.
+    jd = pd.read_csv(run / "data" / "judge_pairs_L19.csv").reset_index(drop=True)
+    rng_split = np.random.default_rng(S.SEED)
+    tune_mask = np.zeros(len(jd), dtype=bool)
+    for _, pos in jd.groupby(jd.judge_same.astype(bool)).indices.items():
+        pos = np.asarray(pos)
+        rng_split.shuffle(pos)
+        tune_mask[pos[:len(pos) // 2]] = True
+    tune, gate = jd[tune_mask], jd[~tune_mask]
+    S.log(f"judge pairs: {len(tune)} tune / {len(gate)} gate "
+          f"(stratified on judge_same, seed {S.SEED})")
+
+    # The similarity of each judged pair, once. It does not depend on tau, and
+    # `_score` is called three times per grid point — pulling it out of the loop
+    # turns 150 `iterrows` passes over the frame into one.
+    pair_sim = np.array([sims[int(g)][int(i), int(j)]
+                         for g, i, j in zip(jd.group, jd.i, jd.j)], dtype=float)
+    same = jd.judge_same.to_numpy(bool)
+
+    def _score(tau: float, mask: np.ndarray):
+        pred = pair_sim[mask] >= tau
+        truth = same[mask]
+        return (S.cohen_kappa(pred, truth),
+                float(np.mean(pred == truth)),
+                float(np.mean(pred)))
+
+    all_mask = np.ones(len(jd), dtype=bool)
     scan = []
     for tau in TAU_GRID:
-        pred = [bool(sims[int(r.group)][int(r.i), int(r.j)] >= tau)
-                for _, r in jd.iterrows()]
+        k_t, a_t, s_t = _score(tau, tune_mask)
+        k_g, a_g, s_g = _score(tau, ~tune_mask)
+        k_a = _score(tau, all_mask)[0]
         scan.append({"tau": float(tau),
-                     "kappa": S.cohen_kappa(pred, jd.judge_same),
-                     "agreement": float(np.mean(np.array(pred) == jd.judge_same.values)),
-                     "pred_same_rate": float(np.mean(pred))})
+                     "kappa_tune": k_t, "agreement_tune": a_t, "pred_same_rate_tune": s_t,
+                     "kappa_gate": k_g, "agreement_gate": a_g, "pred_same_rate_gate": s_g,
+                     "kappa_all_pairs": k_a})
     scan = pd.DataFrame(scan)
-    best = scan.loc[scan.kappa.idxmax()]
+    best = scan.loc[scan.kappa_tune.idxmax()]        # SELECTED ON THE TUNE HALF ONLY
     tau = float(best.tau)
-    S.log(f"tau* = {tau:.3f} (kappa {best.kappa:.3f}, agreement {best.agreement:.3f}, "
-          f"predicate says same {best.pred_same_rate:.3f})")
+    # What the old, in-sample procedure would have reported. Kept beside the
+    # honest number so the size of the selection effect is visible rather than
+    # argued about.
+    kappa_naive = float(scan.kappa_all_pairs.max())
+    S.log(f"tau* = {tau:.3f} chosen on the tune half (kappa {best.kappa_tune:.3f}); "
+          f"HELD-OUT kappa = {best.kappa_gate:.3f}, agreement "
+          f"{best.agreement_gate:.3f}, predicate says same {best.pred_same_rate_gate:.3f}")
+    S.log(f"  (selecting and scoring on all {len(jd)} pairs would have reported "
+          f"kappa {kappa_naive:.3f} — that number is inflated by the search and "
+          f"is not comparable to the primary predicate's {0.151:.3f})")
     scan.to_csv(run / "data" / "fallback_tau_scan_L19.csv", index=False)
 
     # ---- gates under the fallback --------------------------------------- #
@@ -129,9 +191,22 @@ def main():
     sd = float(per_role.E_role_fb.std())
 
     gates = {
-        "tau": tau, "judge_kappa": float(best.kappa),
+        "tau": tau,
+        # The gate is the HELD-OUT kappa. The tune-half number is the one the
+        # search maximised and is reported only so the selection effect is
+        # legible; it is not the gate and must not be quoted as one.
+        "judge_kappa": float(best.kappa_gate),
+        "judge_kappa_tune_half": float(best.kappa_tune),
+        "judge_kappa_all_pairs_at_tau": float(best.kappa_all_pairs),
+        "judge_kappa_naive_in_sample_max": kappa_naive,
+        "tau_selection": ("argmax kappa over %d grid points on a held-out "
+                          "stratified half; gate scored on the other half"
+                          % len(TAU_GRID)),
+        "n_judge_pairs_tune": int(len(tune)),
+        "n_judge_pairs_gate": int(len(gate)),
         "judge_kappa_threshold": S.GATE_KAPPA,
-        "judge_pass": bool(best.kappa >= S.GATE_KAPPA),
+        "judge_pass": bool(np.isfinite(best.kappa_gate)
+                           and best.kappa_gate >= S.GATE_KAPPA),
         "frac_all_split": frac_split, "frac_all_merged": frac_merged,
         "mean_clusters": float(grp.n_clusters.mean()),
         "degeneracy_pass": bool(frac_split <= S.GATE_DEGENERATE

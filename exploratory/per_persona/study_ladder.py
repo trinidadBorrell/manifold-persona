@@ -70,7 +70,8 @@ import pandas as pd
 from scipy import stats
 
 from metrics import geometry_columns
-from stats_utils import bh_fdr, boot_ci, partial_corr, partial_corr_multi
+from stats_utils import (bh_fdr, boot_ci, partial_corr, partial_corr_multi,
+                         residualise)
 
 PREDICTORS = ["axis_proj", "cos_centroid", "mknn_align", "cka"]
 
@@ -219,18 +220,25 @@ def main():
     print(f"\naxis-shuffle null: {args.n_shuffle} permutations x 2 (raw, controlled) ...")
     Zall = d[CTRL_ALL].to_numpy(float)
     Ys = {c: d[c].to_numpy(float) for c in panel if ok[res.metric.eq(c)].any()}
+    # FREEDMAN-LANE: permute the predictor's RESIDUAL on the controls, not the
+    # raw predictor. Permuting raw x breaks its relationship to the controls as
+    # well as to y, so the residual formed afterwards is not distributed like
+    # the real one and the p95 band does not calibrate the statistic it gates.
+    # Residualise once per (rung, variable) — the controls are fixed across
+    # permutations, so this is also far cheaper than the old inner lstsq.
     for suffix, Z, rung in (("", Zall, "r_ctrl_all"), ("_raw", None, "r_raw")):
         srng = np.random.default_rng(SEED)
+        RY = {c: residualise(y, Z) for c, y in Ys.items()}
         for pred in PREDICTORS:
-            x0 = d[pred].to_numpy(float)
+            rx = residualise(d[pred].to_numpy(float), Z)
             best_per_perm = np.empty(args.n_shuffle)
             for b in range(args.n_shuffle):
-                xs = x0[srng.permutation(len(x0))]
+                xs = rx[srng.permutation(len(rx))]
                 best = 0.0
-                for c, y in Ys.items():
+                for c, ry in RY.items():
                     if c == pred:               # self-pair, never in the panel
                         continue
-                    r = partial_corr_multi(xs, y, Z)[0]
+                    r = float(np.corrcoef(xs, ry)[0, 1])
                     if np.isfinite(r):
                         best = max(best, abs(r))
                 best_per_perm[b] = best

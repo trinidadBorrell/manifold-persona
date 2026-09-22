@@ -38,6 +38,18 @@ from .subsets import cloud_scale, kmeans_medoid_roles, subset_cloud
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PLAN = "plans/2026-07-22-role-count-sweep.md"
 
+
+def _src_dir() -> str:
+    """The role-cloud directory this process reads.
+
+    One definition: it appears in the metrics row, the provenance stamp and the
+    manifest's `inputs` line, and a stamp that names a directory the run did not
+    read is worse than no stamp at all.
+    """
+    return os.environ.get("MP_ROLE_DIR", "data/embeddings_roles")
+
+
+
 N_LIST = [10, 25, 50, 75, 100, 150, 200, 276]
 SEEDS = [0, 1, 2, 3, 4]
 N_PERM = 100                 # decider null, seeds 0-99
@@ -67,11 +79,10 @@ def run_cell(cloud, n: int, seed: int, n_perm: int, say) -> dict:
     pc_pass = bool(pc["stats"]["p"] < ALPHA and pc["stats"]["rel_reduction"] >= FLOOR)
 
     # --- 1 decider ----------------------------------------------------------
-    # NOTE: manifold.run's decider now judges against P.covgauss_null (the
-    # covariance-matched Gaussian null). This sweep still uses the
-    # role-shuffle permutation null on purpose: its PRIOR (0a regression
-    # check) is frozen against plan #1's role-shuffle numbers, so both
-    # predate that change. Switching this null is a separate decision.
+    # NOTE: manifold.run's decider judges against P.coordinate_null. This sweep
+    # still uses the role-shuffle permutation null on purpose: its PRIOR (0a
+    # regression check) is frozen against plan #1's role-shuffle numbers.
+    # Switching this null is a separate decision.
     dec = P.construction_C_role(sub, k=K)
     null = P.permutation_null(sub, n_perms=n_perm, k=K, seed=0)
     st = P.separation_stats(dec.r2, null)
@@ -281,9 +292,10 @@ def main(argv=None) -> None:
 
     manifest = {
         "run_id": stamp, "plan": PLAN, "status": status,
-        "provenance": run_stamp(),
+        # See manifold/run.py: a bare run_stamp() records no data provenance.
+        "provenance": run_stamp(data_dirs=[_src_dir()]),
         # Read from the cloud's own manifest, never hardcoded.
-        "inputs": f"{os.environ.get('MP_ROLE_DIR', 'data/embeddings_roles')}/ "
+        "inputs": f"{_src_dir()}/ "
                   f"(prompt_avg, layer {cloud.layer}; no re-extraction)",
         "model": cloud.manifest.get("model_name"), "view": "prompt_avg",
         "layer": cloud.layer,

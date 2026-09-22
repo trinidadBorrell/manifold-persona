@@ -49,7 +49,8 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import entropy as E                                    # noqa: E402
-from stats_utils import bh_fdr, boot_ci, linfit, partial_corr_multi  # noqa: E402
+from stats_utils import (bh_fdr, boot_ci, linfit, partial_corr_multi,  # noqa: E402
+                         residualise)
 
 REPO = Path(__file__).resolve().parents[2]
 CLOUD = REPO / "data" / "embeddings_roles_resp240"
@@ -122,6 +123,13 @@ def load_tier():
     meta = pd.read_parquet(CLOUD / "metadata.parquet")
     q40 = set(json.load(open(TIERS))["tiers"]["40"])
     d = meta[meta.question_idx.isin(q40)].copy()
+    # KEEP THE CLOUD ROW NUMBER before reindexing. `prompt_avg.npy` is the FULL
+    # 331,200-row array; this frame is the 55,200-row 40-question tier. After
+    # reset_index the frame's own index runs 0..55,199, and any group that
+    # carried those positions into the full array read the first ~46 roles
+    # instead of its own rows — silently, with plausible near-zero correlations
+    # rather than an error. `group_geometry` indexes with this column.
+    d["cloud_row"] = d.index.to_numpy()
     d = d.sort_values(["role", "question_idx", "instruction_idx"]).reset_index(drop=True)
 
     prov = {"n_rows": int(len(d)), "n_roles": int(d.role.nunique()),
@@ -161,7 +169,8 @@ def build_groups(d):
                        "question": g.question.iloc[0],
                        "instr": keep.instruction_idx.tolist(),
                        "answers": [E.first_words(t) for t in keep.response],
-                       "row_ids": keep.index.tolist(),
+                       # Rows of the FULL cloud array, not positions in `d`.
+                       "row_ids": keep["cloud_row"].astype(int).tolist(),
                        "M": int(len(keep))})
     return groups, dropped_short, dropped_group
 
@@ -299,6 +308,17 @@ def judge_labels(groups, panel, run_dir, seed=SEED, n=N_JUDGE):
     return pd.DataFrame(rows)
 
 
+def _offdiag(m) -> np.ndarray:
+    """The M(M-1) real pair verdicts of an NLI matrix, without its diagonal.
+
+    The diagonal is an answer compared with itself. It is never populated by
+    the NLI pass and it is not evidence about the predicate, so it belongs in
+    no agreement statistic.
+    """
+    m = np.asarray(m)
+    return m[~np.eye(m.shape[0], dtype=bool)]
+
+
 def cohen_kappa(a, b) -> float:
     a, b = np.asarray(a, bool), np.asarray(b, bool)
     po = float((a == b).mean())
@@ -381,6 +401,17 @@ def build_ladder(df, targets, predictor, rng, gate_ok):
     rows = []
     x = df[predictor].to_numpy(float)
     for name, ctrl in RUNGS:
+        if predictor in ctrl:
+            # UNDEFINED, not null. Residualising x on a design matrix that
+            # CONTAINS x leaves rx as ~1e-13 of rounding noise, and corrcoef
+            # against ry then returns an arbitrary near-zero — which landed in
+            # the CSV with a bootstrap CI and a beats_shuffle flag and read as
+            # "response length has no residual relationship once controlled", a
+            # claim the computation cannot make. It also padded the BH
+            # denominator with 26 meaningless tests per rung, inflating every
+            # real q beside them. mean_tokens and trunc_rate are both
+            # predictors AND members of ctrl_all, so this fires there.
+            continue
         Z = df[ctrl].to_numpy(float) if ctrl else None
         if name == FAMILY_RUNG:
             Z = np.column_stack([Z, family_dummies(df)])
@@ -405,7 +436,15 @@ def build_ladder(df, targets, predictor, rng, gate_ok):
 
 def shuffle_null(df, targets, rng, n_perm=N_SHUFFLE):
     """Null for the CORRELATION: permute role -> E_role and recompute the ladder.
-    A 26-target panel will produce apparent correlations; this says how large."""
+    A 26-target panel will produce apparent correlations; this says how large.
+
+    FREEDMAN-LANE: the RESIDUAL of the predictor on the controls is permuted,
+    not the raw predictor. Permuting raw x destroys x's own relationship to the
+    controls as well as to y, so the residual computed afterwards has neither
+    the variance nor the structure of the real one, and the resulting p95 band
+    does not calibrate the statistic it is compared against. Every
+    `beats_shuffle` flag in the CSV was read off that mismatched band.
+    """
     x = df["E_role"].to_numpy(float)
     keep = {}
     for name, ctrl in RUNGS:
@@ -413,11 +452,14 @@ def shuffle_null(df, targets, rng, n_perm=N_SHUFFLE):
         if name == FAMILY_RUNG:
             Z = np.column_stack([Z, family_dummies(df)])
         Y = df[targets].to_numpy(float)
+        # Residualise once; the controls do not change across permutations.
+        rx = residualise(x, Z)
+        RY = np.column_stack([residualise(Y[:, k], Z) for k in range(len(targets))])
         best = np.empty(n_perm)
         per = np.empty((n_perm, len(targets)))
         for b in range(n_perm):
-            xs = rng.permutation(x)
-            rs = [abs(partial_corr_multi(xs, Y[:, k], Z)[0]) for k in range(len(targets))]
+            xs = rng.permutation(rx)
+            rs = [abs(np.corrcoef(xs, RY[:, k])[0, 1]) for k in range(len(targets))]
             per[b] = rs
             best[b] = np.nanmax(rs)
         keep[name] = {"max_abs_r_p95": float(np.nanpercentile(best, 95)),
@@ -439,6 +481,14 @@ def group_geometry(d, groups):
     reduced-M groups are flagged.
     """
     X = np.load(CLOUD / "prompt_avg.npy", mmap_mode="r")
+    # `row_ids` are rows of THIS array (see load_tier's `cloud_row`). Assert it
+    # rather than trust it: an out-of-range id would raise, but an id that is
+    # merely WRONG reads a real vector belonging to another role and returns a
+    # plausible number.
+    if groups and max(max(g["row_ids"]) for g in groups) >= X.shape[0]:
+        raise ValueError(
+            "group row_ids exceed the cloud's %d rows — they are positions in "
+            "the filtered tier frame, not cloud rows" % X.shape[0])
     rows = []
     for g in groups:
         P = np.asarray(X[g["row_ids"], 0, :], dtype=np.float32)
@@ -577,9 +627,15 @@ def main():
             "mean_clusters_reference": float(b.n_clusters.mean()),
             "SE_pearson": float(np.corrcoef(a.SE, b.SE)[0, 1]),
             "SE_mean_primary": float(a.SE.mean()), "SE_mean_reference": float(b.SE.mean()),
+            # OFF-DIAGONAL ONLY. `.ravel()` swept in the M self-pairs on each
+            # matrix's diagonal, which the NLI pass never populates and both
+            # models therefore "agree" on trivially. With M around 5 that is a
+            # fifth of every group's entries, and it inflated the agreement
+            # (0.318 vs 0.220 in simulation) in the direction that flatters the
+            # predicate.
             "pair_kappa": cohen_kappa(
-                np.concatenate([m.ravel() for m in [mats[i] for i in samp]]),
-                np.concatenate([m.ravel() for m in mats_big]))}
+                np.concatenate([_offdiag(mats[i]) for i in samp]),
+                np.concatenate([_offdiag(m) for m in mats_big]))}
         log(f"A4 agreement: cluster-count {agree['cluster_count_exact_agreement']:.3f}, "
             f"SE r = {agree['SE_pearson']:.3f}, pair kappa = {agree['pair_kappa']:.3f}")
     except Exception as exc:                                   # noqa: BLE001

@@ -8,7 +8,6 @@ import json
 import os
 from pathlib import Path
 
-import pandas as pd
 
 from manifold_persona.common import resolve_run_dir
 from manifold_persona.io import load_manifest

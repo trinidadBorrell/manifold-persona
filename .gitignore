@@ -22,6 +22,9 @@ token/
 # which is why there are no per-directory *.npy / *.parquet rules — they were
 # redundant with this line and are gone.
 data/
+# `data` is a symlink to the shared cluster store on this machine; the
+# trailing-slash rule above does not match a symlink, so name it bare too.
+data
 
 # ---------------------------------------------------------------------------
 # Run outputs
@@ -44,6 +47,10 @@ refactors/baselines/*/extra-reference/
 # ---------------------------------------------------------------------------
 # Working notes, not deliverables
 # ---------------------------------------------------------------------------
+# docs/ is a scratch tree: dated planning notes plus 24 MB of downloaded
+# reference PDFs. Neither is a deliverable and neither is reachable from
+# code, so the whole tree stays local (the papers are all public arXiv IDs).
+docs/
 plans/
 DESIGN.md
 RESEARCH.md
@@ -66,3 +73,31 @@ exploratory/persona_vectors/
 wiki/
 lit-review.md
 novelty-assessment.md
+
+# ---------------------------------------------------------------------------
+# Cluster job setup
+# ---------------------------------------------------------------------------
+# HTCondor infra is site-specific (absolute paths, submit files, run logs) and
+# is never patched into tracked files.
+jobs_condor/
+
+# ---------------------------------------------------------------------------
+# Steering figure scripts
+# ---------------------------------------------------------------------------
+# Plot-only stages of the steering track. These read a finished run dir and
+# emit figures; they compute no result that a number in the write-up depends
+# on, so the "published results must stay in the tree" rule above does not
+# bind them. Everything that produces a RESULT (rolefilter, gen_role_prompts,
+# judge_concurrent, lmsys_norm, capture_activations, persona_judge,
+# adoption_report) is tracked.
+# html_pca.py imports from figures_pca.py, so the pair is ignored together.
+steering/figures_pca.py
+steering/html_pca.py
+steering/figure_transition.py
+# Not wired into any job or README yet; divergence -> why_linear are a
+# producer/consumer pair over fig08_arm_divergence.json.
+steering/figures_divergence.py
+steering/figure_why_linear.py
+steering/figures_poster.py
+
+extra/

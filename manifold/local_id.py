@@ -51,7 +51,6 @@ Run:  .venv/bin/python -m manifold.local_id
 """
 from __future__ import annotations
 
-import datetime
 import json
 import platform
 import sys

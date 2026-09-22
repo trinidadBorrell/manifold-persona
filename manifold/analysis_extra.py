@@ -21,7 +21,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 from scipy.sparse import csr_matrix  # noqa: E402
-from scipy.sparse.csgraph import minimum_spanning_tree, connected_components  # noqa: E402
+from scipy.sparse.csgraph import minimum_spanning_tree  # noqa: E402
 from scipy.spatial.distance import pdist, squareform  # noqa: E402
 
 from manifold_persona.runlog import save_fig  # noqa: E402

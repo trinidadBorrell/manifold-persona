@@ -22,16 +22,30 @@ from . import pipeline as P
 from . import plots
 from manifold_persona.runlog import (holm, make_say, new_run_dir, provenance,
                                      timestamp, write_manifest)
-from .tps import SplineManifold, reconstruction
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PLAN = "plans/2026-07-21-role-manifold-reconstruction.md"
 
+
+def _src_dir() -> str:
+    """The role-cloud directory this process reads.
+
+    One definition: it appears in the metrics row, the provenance stamp and the
+    manifest's `inputs` line, and a stamp that names a directory the run did not
+    read is worse than no stamp at all.
+    """
+    return os.environ.get("MP_ROLE_DIR", "data/embeddings_roles")
+
+
 N_PERM_DECIDER = 100
-N_COORD_DECIDER = 100   # draws per structure-preserving null (covgauss decides)
+N_COORD_DECIDER = 100   # draws per structure-preserving null (coordinate decides)
 N_PERM_ROBUST = 40
 N_PERM_POSCTRL = 50
 FLOOR = 0.30            # effect-size floor: relative reduction in NRE
+# The fields `P.separation_stats` returns, used to prefix one null's stats
+# into the metrics row without retyping them per null.
+SEP_FIELDS = ("null_median", "null_5pct", "p", "z", "r2_gap",
+              "rel_reduction")
 ALPHA = 0.05
 
 
@@ -73,7 +87,7 @@ def main(argv=None) -> None:
     report["model"] = cloud.manifest.get("model_name")
     report["n_roles"] = len(cloud.role_names)
     report["n_points"] = int(cloud.raw.shape[0])
-    report["src_dir"] = os.environ.get("MP_ROLE_DIR", "data/embeddings_roles")
+    report["src_dir"] = _src_dir()
     # data-scale calibration for the positive control (audit finding 1):
     ridx = {r: i for i, r in enumerate(cloud.role_names)}
     pt_means = cloud.role_means[[ridx[r] for r in cloud.roles]]
@@ -109,42 +123,51 @@ def main(argv=None) -> None:
 
     # ---------------------------------------------------------------- decider
     # Null ladder, weakest to strongest: role-shuffle (between-role spread),
-    # coordinate (any joint structure), covgauss (curvature only — the claim
-    # C_role makes, so it decides). All three computed and reported.
+    # coordinate (any joint structure — THE DECIDER), covgauss (curvature only).
+    # All three computed and reported.
+    #
+    # THE COORDINATE NULL DECIDES, and FLOOR/ALPHA are the thresholds fixed for
+    # it. The covgauss null was briefly wired to the verdict instead: it is
+    # strictly harder — its anchors keep the real means' linear structure — so a
+    # run could flip from SUPPORTED to "weak" for that reason alone while the
+    # report still described the result as a single preregistered test against
+    # thresholds chosen for a different null. arXiv:2601.10387 runs no
+    # curvature-only control of this kind, so it is context here, not the test.
     say("\n[2] DECIDER  C_role (prompt_avg, k=3) + role-shuffle null (context) "
-        "+ coordinate null (context) + covgauss null (DECIDES) ...")
+        "+ coordinate null (DECIDES) + covgauss null (context) ...")
     dec = P.construction_C_role(cloud)
     null = P.permutation_null(cloud, n_perms=N_PERM_DECIDER, seed=0)
     st_perm = P.separation_stats(dec.r2, null)
     coord_null = P.coordinate_null(cloud, n_draws=N_COORD_DECIDER, seed=0)
     st_coord = P.separation_stats(dec.r2, coord_null)
     covg_null = P.covgauss_null(cloud, n_draws=N_COORD_DECIDER, seed=0)
-    st = P.separation_stats(dec.r2, covg_null)
-    dec_verdict = verdict(st)
+    st_covg = P.separation_stats(dec.r2, covg_null)
+    dec_verdict = verdict(st_coord)
     say(f"    C_role R2={dec.r2:.3f}")
     say(f"    role-shuffle null (context): med={st_perm['null_median']:.3f} "
         f"p={st_perm['p']:.3g} z={st_perm['z']:.1f} "
         f"rel_red={st_perm['rel_reduction']:.2f} gap={st_perm['r2_gap']:.3f} "
         f"-> would be {verdict(st_perm)}")
-    say(f"    coordinate null (context):   med={st_coord['null_median']:.3f} "
+    say(f"    coordinate null (DECIDES):   med={st_coord['null_median']:.3f} "
         f"p={st_coord['p']:.3g} z={st_coord['z']:.1f} "
-        f"rel_red={st_coord['rel_reduction']:.2f} gap={st_coord['r2_gap']:.3f} "
-        f"-> would be {verdict(st_coord)}")
-    say(f"    covgauss null (DECIDES):     med={st['null_median']:.3f} "
-        f"p={st['p']:.3g} z={st['z']:.1f} rel_red={st['rel_reduction']:.2f} "
-        f"gap={st['r2_gap']:.3f} -> {dec_verdict}")
-    report["decider"] = {"r2": dec.r2, **st, "verdict": dec_verdict,
-                         "null_used": "covgauss"}
-    report["decider_coord"] = {"r2": dec.r2, **st_coord,
-                               "verdict": verdict(st_coord)}
+        f"rel_red={st_coord['rel_reduction']:.2f} "
+        f"gap={st_coord['r2_gap']:.3f} -> {dec_verdict}")
+    say(f"    covgauss null (context):     med={st_covg['null_median']:.3f} "
+        f"p={st_covg['p']:.3g} z={st_covg['z']:.1f} "
+        f"rel_red={st_covg['rel_reduction']:.2f} gap={st_covg['r2_gap']:.3f} "
+        f"-> would be {verdict(st_covg)}")
+    report["decider"] = {"r2": dec.r2, **st_coord, "verdict": dec_verdict,
+                         "null_used": "coordinate"}
+    report["decider_covgauss"] = {"r2": dec.r2, **st_covg,
+                                  "verdict": verdict(st_covg)}
     report["decider_perm"] = {"r2": dec.r2, **st_perm,
                               "verdict": verdict(st_perm)}
     report["null_decider"] = null.tolist()
     report["null_decider_coord"] = coord_null.tolist()
     report["null_decider_covgauss"] = covg_null.tolist()
     # The plain columns keep their role-shuffle meaning, since every other row
-    # uses a permutation null. The covg_* columns are the deciding ones; the
-    # coord_* columns are context.
+    # uses a permutation null. The coord_* columns are the deciding ones; the
+    # covg_* columns are context.
     rows.append({"construction": "C_role", "n_anchors": dec.n_anchors,
                  "n_manifolds": 1, "r2": dec.r2, "nre": dec.nre,
                  "null_median": st_perm["null_median"],
@@ -152,17 +175,11 @@ def main(argv=None) -> None:
                  "p": st_perm["p"], "z": st_perm["z"],
                  "r2_gap": st_perm["r2_gap"],
                  "rel_reduction": st_perm["rel_reduction"],
-                 "coord_null_median": st_coord["null_median"],
-                 "coord_null_5pct": st_coord["null_5pct"],
-                 "coord_p": st_coord["p"], "coord_z": st_coord["z"],
-                 "coord_r2_gap": st_coord["r2_gap"],
-                 "coord_rel_reduction": st_coord["rel_reduction"],
-                 "covg_null_median": st["null_median"],
-                 "covg_null_5pct": st["null_5pct"],
-                 "covg_p": st["p"], "covg_z": st["z"],
-                 "covg_r2_gap": st["r2_gap"],
-                 "covg_rel_reduction": st["rel_reduction"],
-                 "null_used": "covgauss", "verdict": dec_verdict,
+                 # Prefixed rather than retyped: hand-copying six field names
+                 # per null is where "covg_p": st["p"] hides in plain sight.
+                 **{"coord_" + k: st_coord[k] for k in SEP_FIELDS},
+                 **{"covg_" + k: st_covg[k] for k in SEP_FIELDS},
+                 "null_used": "coordinate", "verdict": dec_verdict,
                  "exploratory": False})
 
     # ---------------------------------------------------------------- robustness
@@ -280,7 +297,7 @@ def main(argv=None) -> None:
                          "reproduce": ".venv/bin/python -m manifold.run"},
     }, status="executed", cloud=cloud)
     say(f"\nDONE in {time.time()-t0:.0f}s. "
-        f"Verdict (C_role, covgauss null): {dec_verdict}")
+        f"Verdict (C_role, coordinate null): {dec_verdict}")
 
     # Post-hoc structural extras (fig09-13 + POSTHOC-manifold-structure.md).
     # Off by default. Runs only AFTER the report + manifest are on disk. It is
@@ -301,18 +318,22 @@ def _write_manifest(run_dir, stamp, t0, extra, status, cloud):
     from manifold_persona.provenance import run_stamp
     manifest = {
         "run_id": stamp, "plan": PLAN, "status": status,
-        "provenance": run_stamp(),
+        # data_dirs, not a bare stamp: without it the provenance record carries
+        # no size/mtime/manifest hash for the cloud the run actually read, so
+        # "which data produced this output" is unanswerable after the fact.
+        "provenance": run_stamp(data_dirs=[_src_dir()]),
         "seed": 0, "D_ambient": P.D_AMBIENT, "k_intrinsic": P.K_INTRINSIC,
         "n_perm_decider": N_PERM_DECIDER, "n_perm_robust": N_PERM_ROBUST,
         "n_null_decider_draws": N_COORD_DECIDER,
-        "decider_null": "covgauss (covariance-matched Gaussian role means, "
-                        "real residuals: linear structure kept, curvature "
-                        "destroyed); coordinate and role-shuffle nulls are "
-                        "still computed and reported",
+        "decider_null": "coordinate (real role means with every coordinate "
+                        "permuted across roles: same marginals and spread, no "
+                        "joint structure). FLOOR and ALPHA are its thresholds. "
+                        "The covgauss and role-shuffle nulls are computed and "
+                        "reported as context, and neither sets the verdict",
         "effect_floor_rel_reduction": FLOOR, "alpha": ALPHA,
         "view": "prompt_avg", "layer": cloud.layer,
         "model": cloud.manifest.get("model_name"),
-        "inputs": f"{os.environ.get('MP_ROLE_DIR', 'data/embeddings_roles')}/ "
+        "inputs": f"{_src_dir()}/ "
                   f"(prompt_avg, layer {cloud.layer}; no re-extraction)",
         "n_roles": len(cloud.role_names), "n_points": int(cloud.raw.shape[0]),
         "exclusions": "none (default role kept)",

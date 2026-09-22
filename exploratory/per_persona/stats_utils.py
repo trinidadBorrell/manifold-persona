@@ -20,16 +20,49 @@ from scipy import stats
 
 
 def bh_fdr(p):
-    """Benjamini-Hochberg adjusted p-values (same order as input)."""
+    """Benjamini-Hochberg adjusted p-values (same order as input).
+
+    NON-FINITE p-VALUES ARE NOT TESTS. They come back as NaN and are excluded
+    from the ranking and from the multiplicity count `n`. Leaving them in was
+    wrong twice over: `np.argsort` sorts NaN to the END, so a NaN took the
+    largest-p slot and pulled `prev` around with it, and counting undefined
+    rows in `n` inflated every real q in the family.
+    """
     p = np.asarray(p, dtype=float)
-    n = len(p)
-    order = np.argsort(p)
-    adj = np.empty(n)
+    adj = np.full(len(p), np.nan)
+    ok = np.flatnonzero(np.isfinite(p))
+    if ok.size == 0:
+        return adj
+    ps = p[ok]
+    n = len(ps)
+    order = np.argsort(ps)
+    tmp = np.empty(n)
     prev = 1.0
     for rank, i in enumerate(reversed(order), start=1):
-        prev = min(prev, p[i] * n / (n - rank + 1))
-        adj[i] = prev
+        prev = min(prev, ps[i] * n / (n - rank + 1))
+        tmp[i] = prev
+    adj[ok] = tmp
     return adj
+
+
+def residualise(x, Z):
+    """`x` with the columns of `Z` (plus an intercept) linearly removed.
+
+    Exposed because a permutation null for a PARTIAL correlation has to permute
+    this, not the raw predictor — see the callers in study_entropy/study_ladder.
+    """
+    x = np.asarray(x, float)
+    # atleast_2d BEFORE the width test: the old `.shape[1]` raised IndexError on
+    # a 1-D Z — a single covariate passed as a flat array — even though the
+    # column_stack below would have handled it. In-tree callers pass 2-D or
+    # None, but this is exported for outside permutation nulls to call.
+    Z = None if Z is None else np.atleast_2d(np.asarray(Z, float))
+    if Z is not None and Z.shape[0] == 1 and len(x) != 1:
+        Z = Z.T          # a flat Z is one covariate, not one row of many
+    if Z is None or Z.shape[1] == 0:
+        return x - x.mean()
+    A = np.column_stack([np.ones(len(x)), Z])
+    return x - A @ np.linalg.lstsq(A, x, rcond=None)[0]
 
 
 def partial_corr(x, y, z):
@@ -57,24 +90,41 @@ def partial_corr_multi(x, y, Z):
         r = float(np.corrcoef(x, y)[0, 1])
         n, k = len(x), 0
     else:
+        # THROUGH `residualise`, the same function the Freedman-Lane nulls in
+        # study_entropy/study_ladder permute. A private copy here would put the
+        # observed statistic and the null it is compared against on two code
+        # paths that are only believed to be identical.
         Z = np.asarray(Z, float)
-        A = np.column_stack([np.ones(len(x)), Z])
-        rx = x - A @ np.linalg.lstsq(A, x, rcond=None)[0]
-        ry = y - A @ np.linalg.lstsq(A, y, rcond=None)[0]
+        rx, ry = residualise(x, Z), residualise(y, Z)
         r = float(np.corrcoef(rx, ry)[0, 1])
         n, k = len(x), Z.shape[1]
-    if not np.isfinite(r) or abs(r) >= 1:
+    if not np.isfinite(r):
+        # NaN r means the correlation is UNDEFINED (a degenerate residual, a
+        # zero-variance column). p = 0.0 announced it as the most significant
+        # result in the family: it took q = 0 under BH and sorted to the top of
+        # every FDR listing. NaN says what actually happened.
+        return r, float("nan")
+    if abs(r) >= 1:
         return r, 0.0
     t = r * np.sqrt((n - k - 2) / (1 - r ** 2))
     return r, float(2 * stats.t.sf(abs(t), df=n - k - 2))
 
 
-def boot_ci(x, y, Z, rng, n_boot: int = 2000):
+MIN_BOOT_FRAC = 0.90
+
+
+def boot_ci(x, y, Z, rng, n_boot: int = 2000, min_frac: float = MIN_BOOT_FRAC):
     """Bootstrap 95% CI for a (partial) correlation, resampling ROLES.
 
     The role is the unit of observation — a role's 200 points share its
     instruction set and the shared question set, so resampling points would
     manufacture precision that does not exist.
+
+    A CI IS ONLY REPORTED WHEN ALMOST EVERY RESAMPLE SURVIVED. The old floor
+    was 100 of 2,000 — five percent — so an estimator that blew up on 95% of
+    resamples still produced a confident-looking "95% CI", built from the
+    conditioning-friendly minority and therefore far too narrow. Below
+    `min_frac` the honest answer is that the interval is not estimable.
     """
     n = len(x)
     out = np.empty(n_boot)
@@ -86,7 +136,7 @@ def boot_ci(x, y, Z, rng, n_boot: int = 2000):
         except Exception:  # noqa: BLE001 — degenerate resample
             out[b] = np.nan
     out = out[np.isfinite(out)]
-    if out.size < 100:
+    if out.size < max(100, int(np.ceil(min_frac * n_boot))):
         return None, None
     return float(np.percentile(out, 2.5)), float(np.percentile(out, 97.5))
 

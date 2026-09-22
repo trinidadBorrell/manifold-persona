@@ -210,6 +210,42 @@ Six estimators are tested per predictor, so p-values get **Benjamini–Hochberg*
 FDR correction within each predictor (`bh_fdr`). Spearman is reported alongside
 Pearson because several ID distributions are skewed.
 
+A test whose correlation is **undefined** (a degenerate residual, a zero-variance
+column) returns `p = NaN`, not `p = 0`, and `bh_fdr` drops it from both the
+ranking and the multiplicity count `n`. An undefined test is not a significant
+one, and it is not a test.
+
+### Choosing a threshold and testing it on the same rows
+
+`study_entropy_fallback.py` picks the embedding predicate's similarity threshold
+`tau` by maximising Cohen's κ against the judge labels over a 50-point grid. That
+maximum is an **order statistic**: with ~500 correlated candidates it is biased
+upward whatever the predicate is worth, so selecting and gating on the same rows
+reports a number that is partly the search.
+
+How much of it is the search is measurable. Take a predicate that is **pure
+noise** — independent coin flips at the judge's own base rate — and run the same
+best-of-50 selection on 500 simulated pairs:
+
+| | κ |
+|---|---|
+| best of 50 noise candidates, scored on the rows it was chosen on | **+0.147** |
+| that same candidate, scored on held-out rows | **+0.009** |
+
+The inflated figure lands within noise of the primary predicate's failing
+**0.151**. So the earlier fallback result — selected and gated on all 500 pairs —
+could not be read as evidence that the fallback beat the primary one.
+
+The judge pairs are therefore split in half, **stratified on the judge's own
+verdict** (κ is chance-corrected, so both halves need the same base rate). `tau`
+is chosen on the tune half; `judge_kappa` and `judge_pass` are scored on the
+held-out half and are the only numbers the gate reads. The in-sample maximum is
+still written out as `judge_kappa_naive_in_sample_max`, so the size of the
+selection effect stays visible instead of being argued about.
+
+The same rule applies wherever a knob is fitted and then judged: the rows that
+chose it cannot also score it.
+
 ### r, not r²
 
 Every correlation reported is Pearson **r ∈ [−1, +1]** (from

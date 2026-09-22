@@ -162,7 +162,7 @@ actually computed.
 ## Layout
 
 ```
-docs/papers/ + docs/notes/     # reference PDFs + reading notes (see docs/README.md)
+docs/papers/ + docs/notes/     # reference PDFs + reading notes (gitignored, local only)
 diagnostics/                   # apparatus checks: activation scales, attention sinks
 src/manifold_persona/          # config, io, extract, common, runlog; prompts_roles.py (roles)
 extraction/                    # build_and_extract_roles.py (prompt tokens),

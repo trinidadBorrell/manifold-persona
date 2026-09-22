@@ -28,7 +28,6 @@ from __future__ import annotations
 import sys
 
 import numpy as np
-from sklearn.decomposition import PCA
 
 from common import load_role_clouds, small_matrix_ops
 from metrics import PANEL_COLS, panel_metrics
