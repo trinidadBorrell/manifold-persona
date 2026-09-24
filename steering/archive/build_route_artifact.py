@@ -23,11 +23,11 @@ import re
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 import pandas as pd
 
-from steering import route_judge as RJ
+from steering.archive import route_judge as RJ
 
 POSITIONS = ["A", "waypoint", "B", "other"]
 

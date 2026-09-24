@@ -46,6 +46,7 @@ def main() -> int:
 
     import torch
     from transformers import AutoModelForCausalLM, AutoTokenizer
+    from steering.run_steering import render_chat_prompt
 
     df = pd.read_parquet(args.judged).reset_index(drop=True)
     if args.roles:
@@ -81,8 +82,9 @@ def main() -> int:
             for _, r in sub.iterrows():
                 msgs = ([{"role": "system", "content": r.system}] if r.system else []) + \
                        [{"role": "user", "content": r.question}]
-                prompt = tok.apply_chat_template(msgs, tokenize=False,
-                                                 add_generation_prompt=True)
+                # Thinking mode OFF, as in generation: the replay must see the
+                # same prompt tokens the steered run did (run_steering.py).
+                prompt = render_chat_prompt(tok, msgs)
                 texts.append(prompt + str(r.response))
                 plens.append(len(tok(prompt, add_special_tokens=False)["input_ids"]))
 

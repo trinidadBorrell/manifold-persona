@@ -1,8 +1,12 @@
 # steering/ — manifold-aware steering of persona expression
 
 Replicates the role-susceptibility evaluation of **The Assistant Axis**
-(arXiv:2601.10387 §3.2.1) on Qwen2.5-3B-Instruct, and adds two targeted interventions the paper
-does not have.
+(arXiv:2601.10387 §3.2.1) on **Qwen3-8B** (hidden size 4096, steering at `hidden_states[19]`,
+thinking mode off), and adds manifold-routed interventions the paper does not have. The track
+started on Qwen2.5-3B-Instruct (hidden 2048) and `manifold_persona.config.MODEL_NAME` still
+defaults to it for the geometry track, so steering runs pass `--model Qwen/Qwen3-8B` and a
+Qwen3-8B cloud (`--resp-dir` for `run_steering.py`, `--cloud` elsewhere) explicitly;
+`run_steering.py` refuses a cloud whose width does not match the model.
 
 - **Context (stable facts):** the next section of this file. It replaces `RESEARCH.steering.md`,
   which has been deleted — nothing outside this README is needed to read this code.
@@ -14,7 +18,7 @@ does not have.
   `docs/` and `plans/` at any depth, so none of them reach a clone. Everything a clone needs is
   here.
 
-> **This run is exploratory.** It produces three dose-response figures and stops. There is no
+> **This track is exploratory.** There is no
 > deciding metric, no threshold and no statistical test — by the user's explicit choice. **Nothing
 > from this run may be presented as a confirmatory result**, including by a later plan quoting it.
 > No prediction was recorded, so the report may not call any outcome expected or surprising.
@@ -31,6 +35,9 @@ rules — which is why the steering track carries its own context instead of an 
 
 ### Data
 
+- **The Qwen3-8B cloud** the current runs steer in (hidden 4096, `hidden_states[19]`; also 25
+  and 32 for the depth runs) is staged outside the repo and passed as the cloud argument; the
+  geometry cache the cluster jobs load is built from it. The in-repo cloud below is the original 3B one.
 - **Read-only input.** `data/embeddings_roles_resp240/` — response-token activations,
   Qwen2.5-3B-Instruct, layer 19, **published pre-thinned so index 0 *is* layer 19** (hence
   `--layer-index 0`, while `--layer 19` is a filename label). 331,200 records = 276 roles ×
@@ -103,8 +110,10 @@ this, not discipline); the causalab-port semantics in `manifold/tps.py`; anythin
   already produced numbers.
 - Seeds are fixed and logged in `manifest.json`; the git sha and dirty flag are hard failures to
   collect, not best-effort.
-- Generation is greedy (`do_sample=False`, `max_new_tokens=128`), matching the resp240 cloud, so
-  steered and unsteered text stay comparable to the cloud the geometry came from.
+- `run_steering.py` samples (`DO_SAMPLE=True`, temperature 0.7, top_p 0.9) with a generous
+  ceiling (`GEN_CEILING=1024`; the fig4 run used `--max-new-tokens 256`), and renders every prompt
+  with `enable_thinking=False` (`render_chat_prompt`). The one-off diagnostic jobs
+  (dose escalation, verify_steering) decode greedily so they can be read by hand.
 - Reports are read by someone who knows the method but not this run: define terms, state what
   failed.
 
@@ -121,27 +130,47 @@ this, not discipline); the causalab-port semantics in `manifold/tps.py`; anythin
 *Both PDFs and the reading notes sit under `docs/`, which `.gitignore` excludes at any depth. The
 arXiv IDs are the pointers that survive a clone; the paths are not.*
 
-## The three arms
+## The arms
 
-Both perturb the residual stream at **layer 19** (`hidden_states[19]`, which is the output of
-`model.layers[18]` — the off-by-one is asserted numerically in `smoke.py`), at **every token
-position**, both rescaled to the same dose `‖Δh‖ = |α| · N̄`, where `N̄` is the mean per-token
-response residual norm on LMSYS-Chat-1M (`lmsys_norm.py`; the resp240 value 48.169 is the
-fallback, and is a different quantity on a different corpus). **The rescaling is the point**:
-without it, "arm X is better" just means "arm X pushed harder".
+All arms perturb the residual stream at **`hidden_states[19]`**, which is the output of
+`model.layers[18]` (`activation_steering.hook_layer_for_hidden_state`; the off-by-one is asserted
+numerically in `smoke.py` and unit-tested in `test_paths.py`), at **every token position**.
 
-| Arm | Δh | What it knows |
+**The current arms are path arms** (`run_steering.PATH_ARMS`). Each is a route with fixed
+endpoints `P0`, `P1` built in `manifold_paths.py` (next sections), and the intervention is
+additive and constant per cell:
+
+    h <- h + delta(alpha),   delta(alpha) = S(alpha) - S(0),   alpha in [0, 1]
+
+| Arm | Route | Built by |
 |---|---|---|
-| `linear_axis` | `α·N̄·v̂_axis` | nothing about any role — the paper's §3.1 contrast vector, and the replication |
-| `manifold_axis` | follows the fitted curve along the same axis | where roles actually live along that axis |
+| `linear_axis` | the straight chord between the two ends of the Assistant Axis segment (`P0` = the Assistant end) | `LinearPath` + `make_linear_path_delta_fn` |
+| `manifold_axis` | the same endpoints, routed through the persona centroids inside an eps-tube around that chord | `PersonaPath` + `make_manifold_path_delta_fn` |
+| `linear_pair` | the straight chord from persona A to persona B | `LinearPath` |
+| `manifold_pair` | the same endpoints, through real persona centroids | `PersonaPath` |
 
-Neither arm has a target role, so there is no near/far split: the paper's intervention is
-targetless and these are its straight and curved forms. α is **signed** and is the paper's own
-x-axis (Fig. 4): negative is away from the Assistant, positive toward it.
+Paired arms share both endpoints, so at `alpha = 0` both deltas are exactly zero and at
+`alpha = 1` both are exactly `P1 - P0`; they differ only inside `0 < alpha < 1`, and that
+difference is the route. **delta is a displacement, not a distance travelled**: a manifold route
+whose arc is 3× the chord does not push 3× harder at `alpha = 1`, it pushes by the same
+`P1 - P0`. Both run through the added `intervention_type="dynamic"` mode with a constant
+`delta_fn`, so the two arms reach the hook by the same code path.
 
-`linear_axis` runs on the vendored `addition` path unchanged — the authors' own code.
-`manifold_axis` uses the one added `intervention_type="dynamic"`, because its direction depends on
-the current activation.
+**alpha is capped at 1 on the manifold arms, and they raise past it.** alpha is normalised arc
+position, and a curve with pinned ends has no arc beyond them. The only continuation an additive
+arm has past 1 is to keep going along the chord, `alpha·(P1-P0)` — which *is* the linear arm, so
+a manifold-vs-linear comparison there measures nothing. `PersonaPath` / `FixedEndSpline.at_alpha`
+used to clip silently, which turned `alpha = 2` into a duplicate of the `alpha = 1` cell under a
+different label; they now raise `ValueError`. Doses beyond one chord (the dose-escalation jobs go
+to 30) use `LinearPath`, which extrapolates by construction.
+
+**The legacy arms** `linear_axis_legacy` (`α·N̄·â`, a fixed dose along the Assistant Axis on the
+vendored `addition` path, with `N̄` the LMSYS per-token residual norm from `lmsys_norm.py`) and
+`manifold_axis_legacy` (a fixed-length secant of the axis-keyed spline) are what the names
+`linear_axis` / `manifold_axis` meant before the path rebuild. They keep their own **signed**
+alpha grid (`run_steering.ALPHAS`, a dose, not an arc position) and are renamed rather than
+deleted because earlier shards are only interpretable against them. The axis spline in the next
+section is theirs.
 
 *(The earlier three-arm design — `arm1_axis` / `arm2_linear` / `arm3_manifold`, with target
 centroids and a near/far split — is gone. `figures_steering.py` still draws those runs; nothing
@@ -316,6 +345,9 @@ Paths are **projected into** the centroid PCA for drawing, never fitted in it.
 | `validate_judge.py` | Cohen's κ between the judge and your blind human labels |
 | `smoke.py` | proves the plumbing before any GPU time |
 | `runmeta.py` | run dirs, the `.run-active` marker, the manifest |
+| `test_chunking.py`, `test_paths.py` | CPU-only unit tests on a synthetic cloud, milliseconds: the chunking partitions, and the path contract (delta(0)=0, delta(1)=P1-P0, linear = alpha·(P1-P0), manifold raises outside [0,1], knot error, arc length, the hook off-by-one). `.venv/bin/python -m steering.test_chunking`, `.venv/bin/python steering/test_paths.py` |
+| `route_judge_v2.py`, `route_judge_v3.py` | the route judge in use: v3 (flat persona set, worked examples as a variable) imports its client, parser and definitions from v2, so v2 stays |
+| `archive/` | the superseded v1 route judge and its driver/artifact builder — see `archive/README.md` |
 
 ### Figure scripts (present on disk, gitignored)
 
@@ -330,6 +362,27 @@ the tree. If one ever produces a *result*, track it — see the E8 note in
 | `figure_transition.py` | per-rollout identity vs dose, no averaging |
 | `figures_divergence.py` → `figure_why_linear.py` | a producer/consumer pair over `fig08_arm_divergence.json`; not wired into any job yet |
 | `figures_poster.py` | standalone poster panel |
+
+### Scripts (tracked, not imported by anything)
+
+One-off readers and judges for the Qwen3-8B demo and dose runs. Each is a command-line entry
+point; nothing else in the tree imports them (checked with grep on 2026-09-24), so they can go
+stale without any test noticing. The cluster job bodies that produced their inputs
+(`jobs_condor/steer_demo.py`, `dose_escalation.py`, `verify_steering.py`, the `*.submit` files)
+live in `jobs_condor/`, which is **gitignored** — as are `docs/`, `plans/`, `output/` and the
+figure scripts above. Anything this README or `RESULTS.md` names under those paths will not be in
+a clone.
+
+| file | what it does |
+| --- | --- |
+| `dose_judge.py` | LLM judge (route_judge_v3 prompt, v2 client) over the dose-escalation grid, 33 cells × 3 layers |
+| `dose_readout.py` | reads `dose_L{L}.csv`: first alpha where the response moves vs first alpha where the "capital of France" canary breaks |
+| `judge_steer_demo.py` | judges the steering demo's CSV and writes one readable markdown file per generation |
+| `judge_calib_introspective.py` | calibrates the route judge on introspective-question responses, where ground truth is the system prompt |
+| `route3_export.py` | builds linear / manifold_v1 (equal-width) / manifold_v2 (equal-count) routes for the three study pairs and exports them for the artifact |
+| `label_behaviour.py` | rule-based, lexical behaviour label per steered response (assistant / source / other / vampire / collapsed), printed with its evidence — the free alternative to the LLM judge |
+| `dump_by_question.py` | dumps a run's responses grouped by question rather than strategy |
+| `dump_steer_responses.py` | dumps a run's generations (and judge verdicts, if given) as markdown, one file each plus `ALL_RESPONSES.md` |
 
 ## Running it
 

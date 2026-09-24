@@ -60,6 +60,33 @@ def _require_finite_2d(C, P0):
     return C
 
 
+def _require_unit_alpha(alpha):
+    """alpha as a float array, refused unless every value lies in [0, 1].
+
+    alpha on a manifold path is NORMALISED ARC POSITION, and a curve through
+    fixed endpoints has no arc past its ends. The only continuation that exists
+    for the arm as it is used -- ADDITIVELY, h <- h + (S(alpha) - S(0)) -- is to
+    keep going along the chord: for alpha > 1 the natural extension of the
+    displacement is alpha*(P1 - P0), which IS `LinearPath.delta(alpha)`. So a
+    manifold arm evaluated past 1 is the linear arm under another name, and a
+    comparison of the two there measures nothing. A caller that wants a dose
+    beyond one chord (e.g. jobs_condor/dose_escalation.py) should use
+    `LinearPath`, which extrapolates by construction.
+
+    Refused rather than clipped: the old clip turned alpha = 2 into a silent
+    duplicate of the alpha = 1 cell, labelled as a different dose.
+    """
+    a = np.atleast_1d(np.asarray(alpha, dtype=np.float64))
+    bad = ~((a >= 0.0) & (a <= 1.0))            # also catches NaN
+    if bad.any():
+        raise ValueError(
+            "manifold path alpha must lie in [0, 1] (normalised arc position), "
+            "got %r. Past 1 an additive manifold arm would just continue along "
+            "the chord, i.e. equal LinearPath.delta(alpha) = alpha*(P1-P0); use "
+            "LinearPath for doses beyond one chord." % (a[bad].tolist(),))
+    return a
+
+
 # A centroid closer than this (as a fraction of chord length) to either
 # endpoint is dropped: it duplicates a pinned knot rather than adding a route.
 END_MARGIN = 1e-3
@@ -291,10 +318,19 @@ class FixedEndSpline:
         return (self._arc or self._build_arc())["L"]
 
     def at_alpha(self, alpha):
-        """Point(s) at normalised arc position alpha in [0, 1]."""
+        """Point(s) at normalised arc position alpha in [0, 1]. Outside it: raise.
+
+        This USED TO CLIP, while `LinearPath.at_alpha` extrapolates. So the two
+        arms of a pair agreed on [0, 1] and silently disagreed everywhere else:
+        at alpha = 2 the linear arm pushed two chords and the manifold arm
+        pushed one, and a dose sweep run past 1 would have reported a difference
+        between the arms that was nothing but the clip. See
+        `_require_unit_alpha` for why there is no sensible extrapolation to use
+        instead.
+        """
         a = self._arc or self._build_arc()
-        alpha = np.atleast_1d(np.asarray(alpha, dtype=np.float64))
-        u = np.interp(np.clip(alpha, 0.0, 1.0) * a["L"], a["s"], a["u"])
+        alpha = _require_unit_alpha(alpha)
+        u = np.interp(alpha * a["L"], a["s"], a["u"])
         return self.evaluate(u)
 
     # -- shape descriptors ------------------------------------------------
@@ -606,6 +642,14 @@ class PersonaPath:
             self._fallback = None
 
     def at_alpha(self, alpha):
+        """Point(s) at arc position alpha in [0, 1]; raises outside it.
+
+        Checked HERE as well as in `FixedEndSpline.at_alpha` because at eps = 0
+        (no centroids) this delegates to a `LinearPath`, which extrapolates. The
+        range a manifold arm accepts must not depend on whether the tube
+        happened to catch a centroid.
+        """
+        alpha = _require_unit_alpha(alpha)
         return (self._fallback if self.spline is None else self.spline).at_alpha(alpha)
 
     def bending_energy(self):
@@ -624,7 +668,7 @@ class PersonaPath:
         forward pass sits at a mean -- and a path point IS a mean. The additive
         form is the one that has been validated on this model.
         """
-        a = np.atleast_1d(np.asarray(alpha, dtype=np.float64))
+        a = _require_unit_alpha(alpha)
         return self.at_alpha(a) - self.at_alpha(0.0)
 
     def report(self, names=None):

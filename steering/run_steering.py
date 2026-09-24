@@ -542,6 +542,36 @@ def make_static_vector(cell: Cell, geom: Geometry) -> Optional[np.ndarray]:
     return None
 
 
+def render_chat_prompt(tokenizer, msgs) -> str:
+    """The chat template rendered as a generation prompt, THINKING MODE OFF.
+
+    Qwen3 ships thinking and non-thinking in one checkpoint and its template
+    defaults to `enable_thinking=True`, which opens every answer with a <think>
+    block. The Assistant Axis paper disabled it (arXiv:2601.10387: "in Qwen's
+    case, we disabled thinking mode"), and the role cloud this track steers in
+    was built with it off. Until now the only thing turning it off was the
+    untracked monkeypatch jobs_condor/mp_qwen3.py -- so any run launched without
+    that import (a laptop, a new job script) steered a model that was reasoning
+    out loud, and the judge scored text whose activations came from the other
+    half of the response. Passing the flag here makes the tracked code correct
+    on its own; the monkeypatch still works alongside it, since it only fills
+    the flag in when the caller has not.
+
+    `enable_thinking` is forwarded to the Jinja template, which ignores it when
+    it does not use it, so Qwen2.5/Llama templates render unchanged. A
+    tokenizer whose `apply_chat_template` does not accept extra kwargs at all
+    (older transformers) raises TypeError; it cannot have a thinking mode
+    either, so the call is retried without the flag.
+    """
+    try:
+        return tokenizer.apply_chat_template(msgs, tokenize=False,
+                                             add_generation_prompt=True,
+                                             enable_thinking=False)
+    except TypeError:
+        return tokenizer.apply_chat_template(msgs, tokenize=False,
+                                             add_generation_prompt=True)
+
+
 def default_batch_size(device: str) -> int:
     """Prompts per forward pass.
 
@@ -583,8 +613,7 @@ def generate_cell(cell: Cell, geom: Geometry, model, tokenizer, hook_layer: int,
         for qi, q in enumerate(INTROSPECTIVE_QUESTIONS):
             msgs = ([{"role": "system", "content": sysmsg}] if sysmsg else []) + \
                    [{"role": "user", "content": q}]
-            prompts.append(tokenizer.apply_chat_template(
-                msgs, tokenize=False, add_generation_prompt=True))
+            prompts.append(render_chat_prompt(tokenizer, msgs))
             rows.append({"system_idx": si, "question_idx": qi, "question": q,
                          "system": sysmsg})
 
@@ -830,8 +859,9 @@ def main() -> None:
         raise SystemExit(
             "--path-alphas are ARC POSITIONS in [0,1] along a path with fixed "
             "endpoints, not the legacy signed dose: %s is outside the path. "
-            "`at_alpha` clips, so an out-of-range value would silently generate "
-            "a duplicate of the endpoint cell." % path_alphas)
+            "A manifold path refuses alpha outside [0,1] (it used to clip, which "
+            "silently duplicated the endpoint cell); past 1 an additive manifold "
+            "arm is just the linear arm." % path_alphas)
 
     geom = load_geometry(resp_dir=args.resp_dir or RESP240_DIR,
                          labels_path=args.labels, n_bar_path=args.n_bar)

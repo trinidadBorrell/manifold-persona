@@ -27,12 +27,12 @@ import threading
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 
 import pandas as pd
 
-from steering import route_judge as RJ
+from steering.archive import route_judge as RJ
 from steering.judge import _client
 
 

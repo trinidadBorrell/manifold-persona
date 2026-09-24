@@ -28,7 +28,7 @@ Under D.1.3 the pair arms are `assistant` 90.9% (linear) and 90.2% (manifold)
 at *every* alpha. That is true and uninformative -- D.1.3 asks "is this the
 Assistant?", not "where along this route is it?".
 
-So `steering/route_judge.py` rejudges the 2,400 pair rows against each route's
+So `steering/route_judge.py` (now `steering/archive/route_judge.py`) rejudges the 2,400 pair rows against each route's
 OWN persona sequence: source A, the centroids the spline threads, target B, and
 `other`. The verdict is then a position on the route rather than a category.
 
@@ -100,17 +100,59 @@ The obvious next run is these same routes retargeted at the far personas.
     python -m steering.judge --run <run_dir> --judge
 
     # the route judge, the 2,400 pair rows
-    python steering/run_route_judge.py --data <run_dir>/data
+    python steering/archive/run_route_judge.py --data <run_dir>/data
     #   --dry-run              print the prompt and the per-route option lists
     #   --redo-empty-analysis  re-judge rows whose reasoning text was lost
 
     # rebuild the published artifact from a judged parquet
-    python steering/build_route_artifact.py --data <run_dir>/data \
+    python steering/archive/build_route_artifact.py --data <run_dir>/data \
         --html <page>.html --audit <per_alpha>.json
 
 Prompts for both judges, verbatim, are generated from the source at
 `extra/judge_prompts.txt` (that directory is gitignored; regenerate rather than
 expecting it in a clone).
+
+## Later findings (2026-09-24)
+
+Added after the fig4 run; sections 1-4 above are left as written.
+
+**(a) Dose escalation: one chord was never enough.** Every run above used alpha in [0, 1], at
+most one validator->vampire chord of displacement. The linear-only dose sweep (0 -> 30 chords,
+greedy, three depths) is read out in
+`/data/project/eeg_foundation/data/manifold_persona/steer_demo/dose_L19.md` (and `dose_L25.md`,
+`dose_L32.md` beside it). At hidden state 19 (chord 28.4) the identity answer turns
+vampire-like at 2-4 chords ("I have walked among the mortals", "the taste of the blood of the
+gods", "the last of the old gods") and collapses into repetition from 6 chords on ("the same.
+the same."). At L25 (chord 84) and L32 (chord 251) the distance to the vampire centroid never
+drops to the target at any dose: it dips at 2-3 chords and then grows as the text degenerates.
+So "the pair arms do not move" (section 2) is a statement about alpha <= 1, not about A->B
+steering.
+
+**(b) Correction to section 4, third bullet.** "The spline routes are 1.7x-4.3x the chord length,
+so at matched alpha the manifold arm perturbs the residual stream more" is wrong as stated. The
+intervention adds `delta(alpha) = S(alpha) - S(0)`, a *displacement*, not the distance travelled
+along the curve. At alpha = 1 both arms add exactly `P1 - P0`, whatever the arc length. In
+between, the manifold delta can be longer or shorter than the linear one (it points at a point on
+a curved route, not along the chord), so the arms are still not norm-matched at interior alpha,
+but a longer arc does not imply a larger push, and at alpha = 1 the two pushes are identical.
+
+**(c) The route judge in sections 2-3 is v1, superseded by `steering/route_judge_v3.py`.** v2
+fixed the failure modes section 3 documents; v3 also removed the positional labels (start /
+waypoint / end) that told the judge the structure being measured. v1 and its driver/artifact
+builder are archived in `steering/archive/` (see its README) and kept only so the section 2 table
+can be regenerated. New judging uses v3.
+
+**(d) Additive, not replacement: how this differs from Manifold Steering (arXiv 2605.05115).**
+That paper's App. A.6 *replaces* the activation at the last token with the path point,
+`h <- (1-t)·c_A + t·c_B`, so t = 1 puts the last token exactly on `c_B`. This track *adds*
+`S(alpha) - S(0)` at every token, so alpha = 1 lands on `c_B` only if `h` started exactly at
+`c_A`. In practice it does not: the unsteered activation sits roughly 35% of the way along the
+validator->vampire chord and ~32 units off its axis at L19 (jobs_condor/dose_escalation.py
+docstring), so adding one chord slides it parallel to the route and past the target rather than
+onto it. The additive form was kept because replacing `h` with a centroid-like point collapsed
+within-cell spread and produced "the the the" on this model
+(`interventions.py::make_linear_contrast_delta_fn`), but results here should not be read as a
+replication of that paper's intervention.
 
 ## Figures
 

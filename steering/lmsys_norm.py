@@ -74,6 +74,7 @@ def measure(model, tokenizer, convs, layer_hs_index: int, device: str,
     conversations x ~300 tokens x 2048 dims in float32 would be ~45 GB.
     """
     import torch
+    from steering.run_steering import render_chat_prompt
 
     total_norm, total_tokens, n_seqs, n_truncated = 0.0, 0, 0, 0
 
@@ -97,9 +98,11 @@ def measure(model, tokenizer, convs, layer_hs_index: int, device: str,
         batch = convs[s0:s0 + batch_size]
         texts, prompt_lens = [], []
         for c in batch:
-            prompt = tokenizer.apply_chat_template(
-                [{"role": "user", "content": c["user"]}],
-                tokenize=False, add_generation_prompt=True)
+            # Thinking mode OFF (see run_steering.render_chat_prompt): with it
+            # on, Qwen3 would see an open <think> block before text it never
+            # wrote, and the norm would be measured in the wrong regime.
+            prompt = render_chat_prompt(
+                tokenizer, [{"role": "user", "content": c["user"]}])
             full = prompt + c["assistant"]
             texts.append(full)
             prompt_lens.append(len(tokenizer(prompt, add_special_tokens=False)["input_ids"]))
