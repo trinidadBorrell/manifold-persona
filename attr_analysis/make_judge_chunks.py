@@ -19,9 +19,7 @@ An answer may open "As an AI..." and then continue in a character's voice; that 
 Use "nonsense" when a large part of the answer is mangled or repeating, even if the
 flavour of a character shows through.
 
-CHAR - one or two lowercase words naming who the speaker seems to be: an age, a trade,
-an era or a creature, whatever the imagery most suggests. Use "none" if nothing shows.
-Examples: "child", "old man", "musician", "vampire", "victorian", "soldier", "scholar".
+__CHAR__
 
 Reply with STRICT JSON only, every id present:
 {"1": {"role": "weird", "char": "ghost"}, "2": {"role": "assistant", "char": "none"}, ...}
@@ -35,7 +33,17 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--per_chunk", type=int, default=60)
     ap.add_argument("--clip", type=int, default=420)
+    ap.add_argument("--choices", default="", help="closed CHAR label set, comma separated")
     args = ap.parse_args()
+
+    free = """CHAR - one or two lowercase words naming who the speaker seems to be: an age, a trade,
+an era or a creature, whatever the imagery most suggests. Use "none" if nothing shows.
+Examples: "child", "old man", "musician", "vampire", "victorian", "soldier", "scholar"."""
+    if args.choices:
+        opts = " | ".join(f'"{c}"' for c in args.choices.split(","))
+        free = ("CHAR - which of these does the imagery most suggest?\n  "
+                + opts + ' | "other" | "none"')
+    head = HEAD.replace("__CHAR__", free)
 
     rows = [json.loads(l) for g in args.gen for l in open(g) if l.strip()]
     random.Random(0).shuffle(rows)
@@ -44,7 +52,7 @@ def main():
     index = {}
     for n in range((len(rows) + args.per_chunk - 1) // args.per_chunk):
         block = rows[n * args.per_chunk:(n + 1) * args.per_chunk]
-        text = HEAD
+        text = head
         for i, r in enumerate(block, 1):
             index[f"{n}:{i}"] = {"cell": r["cell"], "alpha": r["alpha"], "qi": r["qi"]}
             text += f"{i}. {' '.join(r['response'].split())[:args.clip]}\n"

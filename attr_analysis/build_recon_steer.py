@@ -1,8 +1,8 @@
 """Steering vectors rebuilt from other personas, against the real thing.
 
-Each arm is pinned to the same absolute displacement so the only difference is
-the direction: the persona's own, the one rebuilt by the shared all-layer recipe,
-or a random one. Strengths in the cells file are distances in activation units.
+Every arm is pinned to the true vector's own displacement at each layer, so the
+three arms differ only in direction: the persona's own, the one rebuilt by the
+shared all-layer recipe, or a random one.
 """
 import json
 import sys
@@ -13,9 +13,8 @@ sys.path.insert(0, "attr_analysis")
 from shared_all import CACHE, TARGETS
 
 LAYERS = (26, 27, 28, 29, 30)
-# the displacement that scored best for each persona under pinned steering
-BEST = {"ghost": 105.0, "pirate": 91.0, "vampire": 82.0, "musician": 83.0, "spy": 86.0}
-ALSO = 90.0
+# the pin strength that scored best for each persona
+BEST = {"ghost": 5.0, "pirate": 2.0, "vampire": 3.0, "musician": 4.0, "spy": 5.0}
 
 z = np.load(CACHE, allow_pickle=True)
 names = list(z["names"].astype(str))
@@ -36,16 +35,18 @@ for t in TARGETS:
             recon += np.float32(w) * (M[idx[name], L].astype(np.float32) - a)
         rand = rng.normal(size=true.shape).astype(np.float32)
 
+        n_true = float(np.linalg.norm(true))
         for tag, v in (("true", true), ("recon", recon), ("rand", rand)):
             u = v / np.linalg.norm(v)
-            out[f"{tag}|{t}|L{L}"] = u
-            out[f"{tag}|{t}|L{L}|a"] = np.array(float(a @ u))
-            out[f"{tag}|{t}|L{L}|d"] = np.array(1.0)  # cells carry absolute distance
+            # steer_pin picks the mode from the first segment, so it must be "pin"
+            out[f"pin|{tag}_{t}|L{L}"] = u
+            out[f"pin|{tag}_{t}|L{L}|a"] = np.array(float(a @ u))
+            out[f"pin|{tag}_{t}|L{L}|d"] = np.array(n_true)
         c = float(true @ recon / (np.linalg.norm(true) * np.linalg.norm(recon)))
         print(f"{t:<10}{L:>6}{np.linalg.norm(true):>8.1f}{np.linalg.norm(recon):>9.1f}{c:>7.3f}")
 
-    ds = sorted({BEST[t], ALSO})
-    cells += [[f"true|{t}", ds], [f"recon|{t}", ds], [f"rand|{t}", [BEST[t]]]]
+    ds = sorted({BEST[t], round(BEST[t] * 0.75, 2)})
+    cells += [[f"pin|true_{t}", ds], [f"pin|recon_{t}", ds], [f"pin|rand_{t}", [BEST[t]]]]
 
 np.savez_compressed("attr_analysis/recon_steer_vectors.npz", **out)
 json.dump(cells, open("attr_analysis/recon_steer_cells.json", "w"), indent=1)
