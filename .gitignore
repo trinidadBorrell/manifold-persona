@@ -1,42 +1,34 @@
-.venv/
-__pycache__/
-*.pyc
 
-# Local point clouds (large; persona-vectors mirrored on Hugging Face)
+# (An earlier hint here named `exploratory/figures/`, a path that has never existed.)
+attr_analysis/_alllayer_cache.npz
+.claude/
+data/
+data/embeddings_aa_traits/*.npy
+data/embeddings_aa_traits/*.parquet
 data/embeddings/*.npy
 data/embeddings/*.parquet
 data/embeddings_roles/*.npy
 data/embeddings_roles/*.parquet
-data/embeddings_aa_traits/*.npy
-data/embeddings_aa_traits/*.parquet
-
-# Secrets
-token/
-.env
-
-output/
-plans/
-data/
-docs/
-exploratory/assistant_axis_traits/
-exploratory/persona_vectors/
-
 DESIGN.md   
-RESEARCH.md
-
-.claude/
-
-
-# Generated figures are ignored via `exploratory/*/figures/` above.
-# (An earlier hint here named `exploratory/figures/`, a path that has never existed.)
-
-# Generated exploratory figures (large plotly HTML; regenerable, kept on disk)
-exploratory/*/figures/
+docs/
 .DS_Store
-
-# Refactor verification scratch (large; sha.txt + dirnames stay tracked)
-refactors/baselines/*/golden/
-refactors/baselines/*/extra-reference/
-
 # Editable-install build artifact
 *.egg-info/
+.env
+exploratory/assistant_axis_traits/
+exploratory/*/figures/
+exploratory/persona_vectors/
+# Generated exploratory figures (large plotly HTML; regenerable, kept on disk)
+# Generated figures are ignored via `exploratory/*/figures/` above.
+# Local point clouds (large; persona-vectors mirrored on Hugging Face)
+output/
+plans/
+*.pyc
+__pycache__/
+refactors/baselines/*/extra-reference/
+refactors/baselines/*/golden/
+# Refactor verification scratch (large; sha.txt + dirnames stay tracked)
+RESEARCH.md
+# Secrets
+token/
+.venv/

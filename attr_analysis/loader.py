@@ -86,3 +86,25 @@ def load_five(raw_globs=("attr_acts/*.npz", "attrx_acts/*.npz")):
                     means[L][p] = Y[:, L, :].mean(0)
             del X, z
     return means, {L: {} for L in means}, sorted(means[26])
+
+
+def load_layers(layers=tuple(range(37)), raw_globs=("attr_acts/*.npz", "attrx_acts/*.npz"),
+                reduced=("attrall_reduced.npz",)):
+    """-> means[layer][persona] (2048,) for every persona in both formats."""
+    means = {L: {} for L in layers}
+    for g in raw_globs:
+        for f in sorted(glob.glob(g)):
+            z = np.load(f, allow_pickle=True)
+            X = z["prompted"].astype(np.float32)
+            who = z["persona"].astype(str)
+            for p in np.unique(who):
+                Y = X[who == p]
+                for L in layers:
+                    means[L][p] = Y[:, L, :].mean(0)
+            del X, z
+    for ff in (x for f in reduced for x in sorted(glob.glob(f))):
+        z = np.load(ff, allow_pickle=True)
+        for i, p in enumerate(z["personas"].astype(str)):
+            for L in layers:
+                means[L][p] = z["means"][i, L, :].astype(np.float32)
+    return means, sorted(means[layers[0]])
