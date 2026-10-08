@@ -1,0 +1,44 @@
+{
+  "pinned_at": "2026-09-11",
+  "git_commit": "254372b2aeef55fbd2041ae68eb59beef0e89ea7",
+  "provenance": {
+    "stages": [
+      "base",
+      "dpo",
+      "rlvr"
+    ],
+    "depth_names": [
+      "early",
+      "mid",
+      "late"
+    ],
+    "hidden_state_indices": [
+      9,
+      17,
+      23
+    ],
+    "n_roles": 276,
+    "axis": "default_centroid - mean(role centroids), unit-norm, per depth",
+    "pr": "(sum L)^2 / sum L^2 of the 276 role-centroid cloud, covariance PCA"
+  },
+  "values": {
+    "pr.base.early": 3.940873,
+    "pr.base.mid": 3.577176,
+    "pr.base.late": 4.449186,
+    "pr.dpo.early": 6.308466,
+    "pr.dpo.mid": 8.118965,
+    "pr.dpo.late": 9.771023,
+    "pr.rlvr.early": 5.959831,
+    "pr.rlvr.mid": 7.814466,
+    "pr.rlvr.late": 9.589422,
+    "cos_base_rlvr.early": 0.09288,
+    "cos_base_dpo.early": 0.115698,
+    "cos_dpo_rlvr.early": 0.957091,
+    "cos_base_rlvr.mid": 0.019543,
+    "cos_base_dpo.mid": 0.03556,
+    "cos_dpo_rlvr.mid": 0.981985,
+    "cos_base_rlvr.late": 0.02655,
+    "cos_base_dpo.late": 0.034421,
+    "cos_dpo_rlvr.late": 0.983211
+  }
+}
