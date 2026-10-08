@@ -1,0 +1,360 @@
+{
+ "wrong_role_played": 0.09803921568627451,
+ "n_controls": 510,
+ "base/set1_neutral": {
+  "n": 120,
+  "played": 0.35833333333333334,
+  "lo": 0.275,
+  "hi": 0.44166666666666665,
+  "score3": 0.35833333333333334,
+  "coh": 92.0,
+  "coverage": 36,
+  "wrong_role_played": 0.05128205128205128
+ },
+ "base/set1_neutral/nocopy": {
+  "n": 120,
+  "played": 0.35833333333333334,
+  "lo": 0.275,
+  "hi": 0.44166666666666665,
+  "score3": 0.35833333333333334,
+  "coh": 92.0,
+  "coverage": 36
+ },
+ "base/set1_role": {
+  "n": 120,
+  "played": 0.39166666666666666,
+  "lo": 0.2916666666666667,
+  "hi": 0.49166666666666664,
+  "score3": 0.4,
+  "coh": 94.5,
+  "coverage": 33,
+  "wrong_role_played": 0.06666666666666667
+ },
+ "base/set1_role/nocopy": {
+  "n": 120,
+  "played": 0.39166666666666666,
+  "lo": 0.2916666666666667,
+  "hi": 0.5,
+  "score3": 0.4,
+  "coh": 94.5,
+  "coverage": 33
+ },
+ "base/set2_neutral": {
+  "n": 120,
+  "played": 0.275,
+  "lo": 0.19166666666666668,
+  "hi": 0.36666666666666664,
+  "score3": 0.2833333333333333,
+  "coh": 94.0,
+  "coverage": 27,
+  "wrong_role_played": 0.09523809523809523
+ },
+ "base/set2_neutral/nocopy": {
+  "n": 119,
+  "played": 0.2773109243697479,
+  "lo": 0.19487430565446517,
+  "hi": 0.36134453781512604,
+  "score3": 0.2857142857142857,
+  "coh": 94.0,
+  "coverage": 27
+ },
+ "base/set2_role": {
+  "n": 120,
+  "played": 0.475,
+  "lo": 0.38333333333333336,
+  "hi": 0.5666666666666667,
+  "score3": 0.48333333333333334,
+  "coh": 95.0,
+  "coverage": 42,
+  "wrong_role_played": 0.07692307692307693
+ },
+ "base/set2_role/nocopy": {
+  "n": 119,
+  "played": 0.47058823529411764,
+  "lo": 0.375,
+  "hi": 0.5546451914098972,
+  "score3": 0.4789915966386555,
+  "coh": 95.0,
+  "coverage": 42
+ },
+ "base/set3_neutral": {
+  "n": 120,
+  "played": 0.39166666666666666,
+  "lo": 0.2916666666666667,
+  "hi": 0.49166666666666664,
+  "score3": 0.39166666666666666,
+  "coh": 93.0,
+  "coverage": 34,
+  "wrong_role_played": 0.041666666666666664
+ },
+ "base/set3_neutral/nocopy": {
+  "n": 120,
+  "played": 0.39166666666666666,
+  "lo": 0.2916666666666667,
+  "hi": 0.49166666666666664,
+  "score3": 0.39166666666666666,
+  "coh": 93.0,
+  "coverage": 34
+ },
+ "base/set3_role": {
+  "n": 120,
+  "played": 0.4666666666666667,
+  "lo": 0.38333333333333336,
+  "hi": 0.5583333333333333,
+  "score3": 0.48333333333333334,
+  "coh": 95.0,
+  "coverage": 43,
+  "wrong_role_played": 0.03225806451612903
+ },
+ "base/set3_role/nocopy": {
+  "n": 119,
+  "played": 0.47058823529411764,
+  "lo": 0.38333333333333336,
+  "hi": 0.5583333333333333,
+  "score3": 0.48739495798319327,
+  "coh": 95.0,
+  "coverage": 43
+ },
+ "base/zero_neutral": {
+  "n": 120,
+  "played": 0.2,
+  "lo": 0.13333333333333333,
+  "hi": 0.275,
+  "score3": 0.2,
+  "coh": 100.0,
+  "coverage": 23,
+  "wrong_role_played": 0.10714285714285714
+ },
+ "base/zero_neutral/nocopy": {
+  "n": 118,
+  "played": 0.2033898305084746,
+  "lo": 0.13559322033898305,
+  "hi": 0.2689240043843623,
+  "score3": 0.2033898305084746,
+  "coh": 100.0,
+  "coverage": 23
+ },
+ "base/zero_role": {
+  "n": 120,
+  "played": 0.30833333333333335,
+  "lo": 0.23333333333333334,
+  "hi": 0.38333333333333336,
+  "score3": 0.30833333333333335,
+  "coh": 98.0,
+  "coverage": 33,
+  "wrong_role_played": 0.03333333333333333
+ },
+ "base/zero_role/nocopy": {
+  "n": 119,
+  "played": 0.3025210084033613,
+  "lo": 0.226890756302521,
+  "hi": 0.3813559322033898,
+  "score3": 0.3025210084033613,
+  "coh": 98.0,
+  "coverage": 32
+ },
+ "final/native": {
+  "n": 120,
+  "played": 0.6333333333333333,
+  "lo": 0.5333333333333333,
+  "hi": 0.725,
+  "score3": 0.6333333333333333,
+  "coh": 98.0,
+  "coverage": 48,
+  "wrong_role_played": 0.1111111111111111
+ },
+ "final/native/nocopy": {
+  "n": 117,
+  "played": 0.6239316239316239,
+  "lo": 0.5254237288135594,
+  "hi": 0.7203389830508474,
+  "score3": 0.6239316239316239,
+  "coh": 98.0,
+  "coverage": 47
+ },
+ "final/set1_neutral": {
+  "n": 120,
+  "played": 0.5083333333333333,
+  "lo": 0.4083333333333333,
+  "hi": 0.6083333333333333,
+  "score3": 0.5083333333333333,
+  "coh": 96.5,
+  "coverage": 43,
+  "wrong_role_played": 0.13793103448275862
+ },
+ "final/set1_neutral/nocopy": {
+  "n": 120,
+  "played": 0.5083333333333333,
+  "lo": 0.4166666666666667,
+  "hi": 0.6083333333333333,
+  "score3": 0.5083333333333333,
+  "coh": 96.5,
+  "coverage": 43
+ },
+ "final/set1_role": {
+  "n": 120,
+  "played": 0.9,
+  "lo": 0.8416666666666667,
+  "hi": 0.95,
+  "score3": 0.9,
+  "coh": 98.0,
+  "coverage": 59,
+  "wrong_role_played": 0.2
+ },
+ "final/set1_role/nocopy": {
+  "n": 118,
+  "played": 0.8983050847457628,
+  "lo": 0.8389830508474576,
+  "hi": 0.9495903361344536,
+  "score3": 0.8983050847457628,
+  "coh": 98.0,
+  "coverage": 59
+ },
+ "final/set2_neutral": {
+  "n": 120,
+  "played": 0.65,
+  "lo": 0.5583333333333333,
+  "hi": 0.7416666666666667,
+  "score3": 0.65,
+  "coh": 98.0,
+  "coverage": 50,
+  "wrong_role_played": 0.07407407407407407
+ },
+ "final/set2_neutral/nocopy": {
+  "n": 119,
+  "played": 0.6470588235294118,
+  "lo": 0.5462184873949579,
+  "hi": 0.7394957983193278,
+  "score3": 0.6470588235294118,
+  "coh": 98.0,
+  "coverage": 49
+ },
+ "final/set2_role": {
+  "n": 120,
+  "played": 0.8833333333333333,
+  "lo": 0.825,
+  "hi": 0.9416666666666667,
+  "score3": 0.8833333333333333,
+  "coh": 100.0,
+  "coverage": 59,
+  "wrong_role_played": 0.13793103448275862
+ },
+ "final/set2_role/nocopy": {
+  "n": 118,
+  "played": 0.8813559322033898,
+  "lo": 0.8204741379310344,
+  "hi": 0.9396551724137931,
+  "score3": 0.8813559322033898,
+  "coh": 100.0,
+  "coverage": 59
+ },
+ "final/set3_neutral": {
+  "n": 120,
+  "played": 0.525,
+  "lo": 0.425,
+  "hi": 0.6166666666666667,
+  "score3": 0.525,
+  "coh": 96.0,
+  "coverage": 44,
+  "wrong_role_played": 0.1388888888888889
+ },
+ "final/set3_neutral/nocopy": {
+  "n": 119,
+  "played": 0.5210084033613446,
+  "lo": 0.42016806722689076,
+  "hi": 0.6218487394957983,
+  "score3": 0.5210084033613446,
+  "coh": 96.0,
+  "coverage": 44
+ },
+ "final/set3_role": {
+  "n": 120,
+  "played": 0.8333333333333334,
+  "lo": 0.7583333333333333,
+  "hi": 0.9,
+  "score3": 0.8333333333333334,
+  "coh": 99.0,
+  "coverage": 58,
+  "wrong_role_played": 0.13157894736842105
+ },
+ "final/set3_role/nocopy": {
+  "n": 119,
+  "played": 0.8319327731092437,
+  "lo": 0.7583333333333333,
+  "hi": 0.897457627118644,
+  "score3": 0.8319327731092437,
+  "coh": 99.0,
+  "coverage": 58
+ },
+ "final/zero_neutral": {
+  "n": 120,
+  "played": 0.5583333333333333,
+  "lo": 0.4666666666666667,
+  "hi": 0.65,
+  "score3": 0.5583333333333333,
+  "coh": 100.0,
+  "coverage": 48,
+  "wrong_role_played": 0.1
+ },
+ "final/zero_neutral/nocopy": {
+  "n": 117,
+  "played": 0.5470085470085471,
+  "lo": 0.452991452991453,
+  "hi": 0.6379310344827587,
+  "score3": 0.5470085470085471,
+  "coh": 100.0,
+  "coverage": 46
+ },
+ "final/zero_role": {
+  "n": 120,
+  "played": 0.7,
+  "lo": 0.6083333333333333,
+  "hi": 0.7833333333333333,
+  "score3": 0.7,
+  "coh": 100.0,
+  "coverage": 53,
+  "wrong_role_played": 0.11428571428571428
+ },
+ "final/zero_role/nocopy": {
+  "n": 118,
+  "played": 0.6949152542372882,
+  "lo": 0.6034063167531278,
+  "hi": 0.7833333333333333,
+  "score3": 0.6949152542372882,
+  "coh": 100.0,
+  "coverage": 52
+ },
+ "verdict": {
+  "judge_ok": false,
+  "control_native_played": 0.6333333333333333,
+  "control_ok": true,
+  "sets": {
+   "set1": {
+    "base_played": 0.35833333333333334,
+    "final_played": 0.5083333333333333,
+    "rule1_2": true,
+    "rule3_coverage": true,
+    "rule4_nocopy": true,
+    "rule5_blind": true
+   },
+   "set2": {
+    "base_played": 0.275,
+    "final_played": 0.65,
+    "rule1_2": false,
+    "rule3_coverage": true,
+    "rule4_nocopy": false,
+    "rule5_blind": true
+   },
+   "set3": {
+    "base_played": 0.39166666666666666,
+    "final_played": 0.525,
+    "rule1_2": true,
+    "rule3_coverage": true,
+    "rule4_nocopy": true,
+    "rule5_blind": true
+   }
+  },
+  "sets_agree": true,
+  "note": "Rule 6 (blind raw read) is checked by hand."
+ }
+}
