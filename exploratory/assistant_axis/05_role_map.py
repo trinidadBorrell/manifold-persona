@@ -23,12 +23,14 @@ import umap
 
 from manifold_persona.common import (load_points, center, savefig, resolve_run_dir,
                     role_centroids, distinct_colors)
+from manifold_persona.io import layer_label
 
 
 def family_map(run_dir, view, layer):
-    fs = sorted(glob.glob(str(run_dir / f"04_role_families_{view}_L*.json")))
-    if fs:
-        fam = json.load(open(fs[-1]))["families"]
+    """Role -> family from the 04 output at THIS layer (None if 04 has not run)."""
+    p = run_dir / f"04_role_families_{view}_L{layer}.json"
+    if p.exists():
+        fam = json.load(open(p))["families"]
         return {name: int(f) for f, d in fam.items() for name in d["roles"]}
     return None
 
@@ -44,7 +46,7 @@ def main():
     run_dir = resolve_run_dir(args.outdir)
 
     X, meta, manifest = load_points(view=args.view, layer=args.layer)
-    layer = args.layer if args.layer is not None else manifest["primary_layer"]
+    layer = layer_label(manifest, args.layer)
     Xs = center(X)
     names, C = role_centroids(Xs, meta)     # 276 × hidden
     print(f"{len(names)} role centroids, layer {layer}")

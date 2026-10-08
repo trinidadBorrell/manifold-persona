@@ -21,9 +21,19 @@ def _fmt(v, nd=2):
     return f"{v:.{nd}f}" if isinstance(v, float) else str(v)
 
 
+# Linear threshold counts, not manifold-dimension estimators: kept out of the
+# "intrinsic dimension" range the report quotes.
+LINEAR_ID = ("lPCA",)
+
+
 def load_first(run_dir, pattern):
+    """The one output matching `pattern`. Several matches mean several layers in
+    one run dir; picking by sort order would mix layers, so refuse instead."""
     fs = sorted(glob.glob(str(Path(run_dir) / pattern)))
-    return json.load(open(fs[-1])) if fs else None
+    if len(fs) > 1:
+        raise SystemExit(f"{len(fs)} files match {pattern} in {run_dir}: "
+                         f"{[Path(f).name for f in fs]}; pass --layer")
+    return json.load(open(fs[0])) if fs else None
 
 
 def main():
@@ -31,14 +41,19 @@ def main():
     ap.add_argument("--view", default="prompt_avg")
     ap.add_argument("--cluster_col", default="kmeans_pca50")
     ap.add_argument("--outdir", default=None)
+    ap.add_argument("--layer", type=int, default=None,
+                    help="layer label of the outputs to report (needed when a run "
+                         "dir holds several)")
     args = ap.parse_args()
     run_dir = resolve_run_dir(args.outdir)
     v = args.view
+    Lp = "*" if args.layer is None else str(args.layer)
 
-    idj = load_first(run_dir, f"intrinsic_dimension_{v}_L*.json")
-    cluj = load_first(run_dir, f"clustering_{v}_L*.json")
-    rankj = load_first(run_dir, f"03_axis_ranking_{v}_L*.json")
-    famj = load_first(run_dir, f"04_role_families_{v}_L*.json")
+    idj = load_first(run_dir, f"intrinsic_dimension_{v}_L{Lp}.json")
+    cluj = load_first(run_dir, f"clustering_{v}_L{Lp}.json")
+    rankj = load_first(run_dir, f"03_axis_ranking_{v}_L{Lp}.json")
+    famj = load_first(run_dir, f"04_role_families_{v}_L{Lp}.json")
+    n_fam = len(famj["families"]) if famj else "the"
     cosc = (rankj or {}).get("cos_pc1_axis")            # centered role means
     coszs = (rankj or {}).get("cos_pc1_axis_zscored")   # same means, z-scored
     layer = (idj or cluj)["_meta"]["layer"]
@@ -46,13 +61,21 @@ def main():
     n = (idj or cluj)["_meta"]["n"]
     n_roles = (idj or cluj)["_meta"].get("n_roles", "?")
     role_dir = os.environ.get("MP_ROLE_DIR", ROLE_EMBEDDINGS_DIR)
+    # Every provenance sentence below is read from the cloud's own manifest;
+    # a missing value is reported as missing, never filled with a default model.
     try:
         man = load_manifest(role_dir)
-        nhl = man["n_layers"] - 1
-        depth = layer / nhl
-        model_name = man.get("model_name", "Qwen/Qwen2.5-3B-Instruct")
-    except Exception:
-        man, nhl, depth, model_name = {}, "?", None, "Qwen/Qwen2.5-3B-Instruct"
+    except FileNotFoundError:
+        man = {}
+        print(f"WARNING: no manifest in {role_dir}; provenance text will say so")
+    model_name = man.get("model_name", "UNKNOWN (no model_name in manifest)")
+    n_stack = int(man.get("n_layers", 0))
+    nhl = n_stack - 1 if n_stack > 1 else "?"
+    depth = layer / nhl if isinstance(nhl, int) and nhl > 0 else None
+    decoding = (f"sampled, temperature {man.get('temperature')}" if man.get("do_sample")
+                else "greedy")
+    tok_note = (f" (chats rendered with the `{man['tokenizer_name']}` tokenizer)"
+                if man.get("tokenizer_name") else "")
     # Response-token (paper-matched) run vs the original prompt-token run.
     token_basis = man.get("token_basis", "prompt")
     is_resp = token_basis == "response"
@@ -83,7 +106,7 @@ def main():
           "alien, …), for each role we built `system(role instruction) + question` "
           f"chats ({n_instr} instructions × {nq} sampled questions = {rollouts} "
           f"rollouts/role, **{n_raw:,}** in total), **generated a response** with "
-          f"`{model_name}` (greedy, ≤{max_new} new tokens), and read the residual "
+          f"`{model_name}`{tok_note} ({decoding}, ≤{max_new} new tokens), and read the residual "
           "stream **averaged over the assistant-response tokens** — the same token "
           "basis the Assistant Axis paper uses "
           "(`../assistant-axis/pipeline/2_activations.py`). Generation + extraction "
@@ -184,7 +207,7 @@ def main():
         A("**Differences from the paper that remain (by design).** We now match the "
           "paper on **response tokens**, the **post-MLP residual stream**, "
           "**~0.5 depth**, and **one mean vector per role**. We still differ on: "
-          f"(i) a **3B** model (`{model_name}`) vs the paper's 27B–70B; (ii) **no "
+          f"(i) a smaller model (`{model_name}`) than the paper's 27B–70B; (ii) **no "
           f"score-3 judge filter** — we average all {rollouts} rollouts rather than "
           "only judge-verified in-character ones (a scoring pass would add a judge "
           f"model); (iii) **sampled** questions ({nq}/instruction) and short "
@@ -214,7 +237,10 @@ def main():
     sink = man.get("sink_factor")
     A(f"**Cloud provenance.** Activations read from `{role_dir}`; manifest "
       f"`sink_factor` = `{sink}`"
-      + (" — absent or null, so this cloud predates the attention-sink fix and its "
+      + (" — a response-token cloud: the sink position (0) is never in the pooled "
+         "span, so no sink correction is needed."
+         if is_resp else
+         " — absent or null, so this cloud predates the attention-sink fix and its "
          "pooled means still include the sink position "
          "(`src/manifold_persona/io.py::load_manifest`)."
          if sink is None else
@@ -266,18 +292,27 @@ def main():
         A("")
         A(f"![intrinsic dimension](01_intrinsic_dimension_{v}_L{layer}.png)")
         A("")
-        nonpca = [val for k, val in g.items() if val and not k.startswith("PCA")]
+        nonpca = [val for k, val in g.items() if val and not k.startswith("PCA") and k not in LINEAR_ID]
         lo, hi = (min(nonpca), max(nonpca)) if nonpca else (None, None)
+        shifts = [g95[k] - val for k, val in g.items()
+                  if val and not k.startswith("PCA") and k not in LINEAR_ID
+                  and g95.get(k) is not None]
+        if not shifts:
+            shift_txt = "the PCA-95% re-estimate is not available for these estimators"
+        elif max(shifts) <= 0:
+            shift_txt = (f"the numbers shift **down** by {_fmt(-max(shifts))}–"
+                         f"{_fmt(-min(shifts))} dims, never up")
+        else:
+            shift_txt = (f"the numbers shift by {_fmt(min(shifts))} to "
+                         f"{_fmt(max(shifts))} dims, and some go **up**")
         A(f"**Interpretation.** The {n_roles}-role cloud sits at intrinsic "
           f"dimension ≈ **{_fmt(lo)}–{_fmt(hi)}** vs ambient **{ambient}** — a thin "
           "manifold. **On the `dim≫N` worry:** the neighbour-based estimators "
           "(TwoNN, MLE, MOM, TLE, CorrInt) act on *local distances*, which live on "
           "the manifold, not in the ambient box — so ambient dimension barely "
-          "affects them. Re-estimating on a **PCA-95%** projection confirms this: "
-          "the numbers shift **down** by ~1–2 dims (PCA drops noise directions the "
-          "estimators otherwise partly count), never up — the conclusion is "
-          "unchanged either way. The real limiter is **small N**: with N="
-          f"{n} points and ID≈10 these estimators are mildly *down*-biased, so read "
+          f"affects them. Re-estimating on a **PCA-95%** projection: {shift_txt}. "
+          "The real limiter is **small N**: with N="
+          f"{n} points and ID≈{_fmt(hi)} these estimators are mildly *down*-biased, so read "
           "them as soft **lower bounds** on the true ID (and `PCA_dim_90pct` as the "
           "linear upper bound). Curse of dimensionality is **not** inflating the "
           "estimate here.")
@@ -389,16 +424,16 @@ def main():
                          "paper's central finding** (arXiv:2601.10387, *\"the "
                          "similarity between this vector and PC1 is high: >0.60 at "
                          "all layers\"*) that the leading direction of persona space "
-                         "tracks distance from the default Assistant. This holds "
-                         "only because we (a) averaged across answers per role and "
-                         f"(b) centred rather than z-scored — z-scoring gives "
-                         f"|cos| = {_fmt(coszs)} (§3b).")
+                         "tracks distance from the default Assistant. This run "
+                         "averages answers per role and centres the role means; "
+                         f"z-scoring the same means gives |cos| = {_fmt(coszs)} "
+                         "(§3b). The effect of averaging is not measured here.")
         else:
             axis_note = ("PC1 is **not** aligned with the Assistant Axis in this "
                          "particular view — the leading variance is carried by "
-                         "another direction. The axis is still meaningful: the role "
-                         "ordering along it is coherent (below), and it reappears as "
-                         "PC1 under the paper's centered role-mean setup (§3b).")
+                         "another direction. This run already uses the paper's "
+                         "centred role-mean setup, so here PC1 and the axis differ. "
+                         "The role ordering along the axis is listed below.")
         A(f"**Interpretation.** `|cos(PC1, assistant_axis)|` = **{_fmt(cos)}** — "
           + axis_note +
           f" The `default` role ranks **#{drank}** most Assistant-like of {n_roles} "
@@ -417,7 +452,7 @@ def main():
     v1 = f"{var3[0]*100:.0f}%" if var3 else "a large %"
     v2 = f"{var3[1]*100:.0f}%" if var3 else "a small %"
     nonpca = [x for k, x in (idj or {}).get("global", {}).items()
-              if x and not k.startswith("PCA")]
+              if x and not k.startswith("PCA") and k not in LINEAR_ID]
     idlo, idhi = (min(nonpca), max(nonpca)) if nonpca else (None, None)
 
     A("## 3b. Why averaging across answers recovers the Assistant Axis as PC1")
@@ -471,7 +506,7 @@ def main():
       "clustering** of the role-mean vectors: it repeatedly merges the two groups "
       "whose merge least increases within-group variance, and the **merge height** "
       "is how distinct two groups are. This hierarchy — and the specific cut into "
-      "15 families — is a **descriptive device of this analysis, not a construct "
+      f"{n_fam} families — is a **descriptive device of this analysis, not a construct "
       "from the Assistant Axis paper** (the paper treats roles as a continuum along "
       "the axis + PCA and never partitions them). Read the *ordering and branching*, "
       "not the exact family count.")
@@ -504,7 +539,7 @@ def main():
       f"`05_umap3d_role_map_{v}_L{layer}.html`, `05_pca3d_role_map_{v}_L{layer}.html`.")
     A("")
     A("**Interpretation — what the hierarchy tells us.** The finding is not \"there "
-      "are 15 families\"; it is the **ordering and the branching**:")
+      f"are {n_fam} families\"; it is the **ordering and the branching**:")
     A("")
     if famj:
         fo = famj["order_by_assistant_like"]

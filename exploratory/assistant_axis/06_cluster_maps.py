@@ -31,6 +31,7 @@ import umap
 
 from manifold_persona.common import (load_points, center, savefig, resolve_run_dir,
                     assistant_axis, project, clusters_path)
+from manifold_persona.io import layer_label
 
 METHODS = [  # (report key, parquet column suffix base, pretty title)
     ("hdbscan", "hdbscan", "HDBSCAN"),
@@ -135,7 +136,7 @@ def main():
     run_dir = resolve_run_dir(args.outdir)
 
     X_raw, meta, manifest = load_points(view=args.view, layer=args.layer)
-    layer = args.layer if args.layer is not None else manifest["primary_layer"]
+    layer = layer_label(manifest, args.layer)
     Xs = center(X_raw)
     roles = meta["role"].values
     is_default = roles == "default"

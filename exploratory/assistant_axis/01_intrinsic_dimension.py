@@ -18,6 +18,7 @@ import matplotlib.pyplot as plt
 import skdim
 
 from manifold_persona.common import load_points, center, savefig, resolve_run_dir
+from manifold_persona.io import layer_label
 
 
 def pca_participation_ratio(X):
@@ -80,7 +81,7 @@ def main():
     run_dir = resolve_run_dir(args.outdir)
 
     X, meta, manifest = load_points(view=args.view, layer=args.layer)
-    layer = args.layer if args.layer is not None else manifest["primary_layer"]
+    layer = layer_label(manifest, args.layer)
     print(f"view={args.view} layer={layer} ambient={X.shape[1]} N={X.shape[0]} roles={meta['role'].nunique()}")
 
     g, cum = estimate_all(X)
@@ -115,7 +116,8 @@ def main():
     id_names = [k for k in ESTIMATORS if g.get(k) is not None]
     xs = np.arange(len(id_names))
     full_v = [g[k] for k in id_names]
-    pca_v = [g_pca95.get(k) or 0 for k in id_names]
+    # A failed estimate is a gap, not a zero.
+    pca_v = [g_pca95[k] if g_pca95.get(k) is not None else np.nan for k in id_names]
     axes[0].bar(xs - 0.2, full_v, 0.4, color="#0072B2", label=f"full (d={X.shape[1]})")
     axes[0].bar(xs + 0.2, pca_v, 0.4, color="#56B4E9", label=f"PCA-95% (d={d95})")
     axes[0].set_xticks(xs); axes[0].set_xticklabels(id_names, rotation=40, ha="right")
