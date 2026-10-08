@@ -56,6 +56,7 @@ from scipy import stats
 from common import (load_role_clouds, resolve_run_dir, savefig, small_matrix_ops,
                     grid_shape, role_text_lengths, C_REAL, C_DESIGN, C_QUEST)
 from stats_utils import bh_fdr, fmt_p, partial_corr, partial_corr_multi
+from manifold_persona.io import layer_label
 
 ID_COLS = ["TwoNN", "MLE", "lPCA", "PCA_participation_ratio",
            "PCA_dim_90pct", "PCA_dim_95pct"]
@@ -77,7 +78,7 @@ def main():
     run_dir = resolve_run_dir(args.outdir or args.rundir)
 
     roles, clouds, factors, manifest = load_role_clouds(args.view, args.layer)
-    layer = args.layer if args.layer is not None else manifest["primary_layer"]
+    layer = layer_label(manifest, args.layer)
     n_i, n_q, add_rank = grid_shape(factors)
     df = pd.read_csv(f"{args.rundir}/01_per_role_id_{args.view}_L{layer}.csv")
 

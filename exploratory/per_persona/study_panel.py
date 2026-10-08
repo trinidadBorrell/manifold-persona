@@ -36,7 +36,7 @@ as a predictor rather than reported as a second confirmation.
 The persistence diagrams are saved per role so the Betti lifetime threshold can
 be re-cut later without re-running ripser, which is the expensive part.
 
-Produces `per_role_panel_L<L>.csv` and `data/persistence/*.npz` -> fig07.
+Produces `per_role_panel_L<L>.csv` and `data/persistence_L<L>/*.npz` -> fig07.
 
 Usage:
     .venv/bin/python exploratory/per_persona/study_panel.py --outdir <run>
@@ -44,12 +44,15 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
+import os
 import time
 
 import numpy as np
 import pandas as pd
 
 from manifold_persona.common import load_points, center, assistant_axis, project
+from manifold_persona.io import hidden_state_index
 
 from closeness import MKNN_K, cloud_closeness, cos_to_reference
 from common import (load_role_clouds, grid_shape, resolve_run_dir,
@@ -93,19 +96,30 @@ def main():
     ap.add_argument("--view", default="prompt_avg")
     ap.add_argument("--layer", type=int, default=None)
     ap.add_argument("--label-layer", type=int, default=19,
-                    help="layer number used in OUTPUT filenames. The resp40 "
-                         "manifest stores primary_layer=0 because it holds a "
-                         "single extracted layer; the real depth is 19.")
+                    help="hidden-state layer used in OUTPUT filenames; must be "
+                         "the layer --layer loads (checked against the manifest)")
     ap.add_argument("--outdir", default=None)
     args = ap.parse_args()
 
     run_dir = resolve_run_dir(args.outdir)
-    (run_dir / "data" / "persistence").mkdir(parents=True, exist_ok=True)
+    # Keyed by layer: a run dir can hold panels at more than one layer.
+    pers_dir = run_dir / "data" / f"persistence_L{args.label_layer}"
+    pers_dir.mkdir(parents=True, exist_ok=True)
     (run_dir / "figures").mkdir(parents=True, exist_ok=True)
     L = args.label_layer
     t0 = time.time()
 
-    roles, clouds, factors, _ = load_role_clouds(args.view, args.layer)
+    roles, clouds, factors, manifest = load_role_clouds(args.view, args.layer)
+    hs = hidden_state_index(manifest, args.layer)
+    if hs is None:
+        print(f"WARNING: the manifest does not say which hidden-state layer "
+              f"--layer {args.layer} loads; files are labelled L{L} unchecked")
+    elif hs != L:
+        raise SystemExit(f"--layer {args.layer} loads hidden_states[{hs}] but "
+                         f"--label-layer is {L}; pass --label-layer {hs}")
+    json.dump({"hidden_state_layer": hs, "layer_arg": args.layer, "label_layer": L,
+               "cloud_dir": os.environ.get("MP_ROLE_DIR")},
+              open(run_dir / "data" / f"panel_layer_L{L}.json", "w"), indent=2)
     n_i, n_q, add_rank = grid_shape(factors)
     n_per = len(next(iter(clouds.values())))
     print(f"view={args.view} label_layer={L} roles={len(roles)} points/role={n_per} "
@@ -120,7 +134,7 @@ def main():
             m, dgms, pw = panel_metrics(clouds[r], instr, quest, keep_diagrams=True)
             m["role"] = r
             rows.append(m)
-            np.savez_compressed(run_dir / "data" / "persistence" / f"{r}.npz",
+            np.savez_compressed(pers_dir / f"{r}.npz",
                                 **{f"H{k}": dg for k, dg in enumerate(dgms)})
             for name, arr in pw.items():
                 pointwise.setdefault(name, {})[r] = np.asarray(arr, float)
@@ -149,8 +163,15 @@ def main():
         print(f"    {col:16s} {d_[col].min():+.3f} .. {d_[col].max():+.3f}  "
               f"(median {d_[col].median():+.3f})")
 
-    assert_finite(df, "panel metrics")
     out = run_dir / "data" / f"per_role_panel_L{L}.csv"
+    try:
+        assert_finite(df, "panel metrics")
+    except FloatingPointError:
+        # Keep the computed rows under another name: later steps must not read
+        # a panel with failed estimates, but the run should not be lost.
+        df.to_csv(out.with_name(out.stem + "_failed.csv"), index=False)
+        print(f"    wrote {out.stem}_failed.csv for inspection")
+        raise
     df.to_csv(out, index=False)
     print(f"    wrote {out.name}  ({len(df)} roles)  in {time.time()-t0:.0f}s")
 

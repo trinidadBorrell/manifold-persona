@@ -40,6 +40,7 @@ from manifold.idim import id_estimates
 from common import (load_role_clouds, pca_stats, design_fractions, resolve_run_dir,
                     savefig, small_matrix_ops, grid_shape,
                     C_REAL, C_DESIGN, C_INSTR, C_QUEST, C_INTER)
+from manifold_persona.io import layer_label
 
 N_QUESTION_POOL = 240       # refs/assistant-axis/extraction_questions.jsonl
 ROLE_BUDGETS = [10, 50, 100, 276]
@@ -79,7 +80,7 @@ def main():
     run_dir = resolve_run_dir(args.outdir)
 
     roles, clouds, factors, manifest = load_role_clouds(args.view, args.layer)
-    layer = args.layer if args.layer is not None else manifest["primary_layer"]
+    layer = layer_label(manifest, args.layer)
     ambient = clouds[roles[0]].shape[1]
     n_per = len(next(iter(clouds.values())))
     n_i, n_q, _ = grid_shape(factors)

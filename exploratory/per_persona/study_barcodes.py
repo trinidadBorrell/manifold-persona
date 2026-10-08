@@ -157,7 +157,11 @@ def main():
                     help="subset of roles; default is every role in the run")
     args = ap.parse_args()
     run_dir, L = Path(args.outdir), args.label_layer
-    pers = run_dir / "data" / "persistence"
+    pers = run_dir / "data" / f"persistence_L{L}"
+    if not pers.is_dir():
+        raise SystemExit(f"{pers} missing: re-run study_panel at layer {L} (diagrams "
+                         "are now stored per layer; an unkeyed data/persistence/ "
+                         "cannot be matched to a layer)")
     # Barcodes are the topology family's raw evidence, so they live with it.
     import families as _F
     outdir = (run_dir / "figures" / "families"

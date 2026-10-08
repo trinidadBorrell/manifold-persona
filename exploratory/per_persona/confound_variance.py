@@ -36,26 +36,41 @@ import pandas as pd
 
 from common import (load_role_clouds, design_fractions, grid_shape,
                     small_matrix_ops)
+from manifold_persona.io import hidden_state_index, layer_arg_for, load_manifest
 
 TERMS = ("instr_frac", "quest_frac", "interaction_frac")
 
 
-def contrast_experiment(run_dir: Path, L: int):
-    """Variance decomposition of the prompt cloud vs this response cloud."""
+def contrast_experiment(run_dir: Path, L: int, layer: int = None):
+    """Variance decomposition of the prompt cloud vs this response cloud.
+
+    Both clouds are read at the same hidden-state layer: the one `layer`
+    selects in the response cloud. Their primary layers differ (19 vs 26), so
+    defaulting each to its own would mix depth into the contrast.
+    """
+    resp_dir = os.environ.get("MP_ROLE_DIR", "data/embeddings_roles_resp_40q")
+    hs = hidden_state_index(load_manifest(Path(resp_dir)), layer)
+    if hs is None:
+        raise SystemExit(f"{resp_dir}: manifest does not say which hidden-state "
+                         f"layer --layer {layer} loads; cannot match the prompt cloud")
+    if hs != L:
+        raise SystemExit(f"--layer {layer} loads hidden_states[{hs}] but "
+                         f"--label-layer is {L}; pass --label-layer {hs}")
     rows = {}
-    for label, d in (("response_5x40", os.environ.get("MP_ROLE_DIR",
-                                                      "data/embeddings_roles_resp_40q")),
-                     ("prompt_5x5", "data/embeddings_roles")):
+    for label, d in (("response_5x40", resp_dir), ("prompt_5x5", "data/embeddings_roles")):
         prev = os.environ.get("MP_ROLE_DIR")
         os.environ["MP_ROLE_DIR"] = d
         try:
-            roles, clouds, factors, _ = load_role_clouds("prompt_avg", None)
+            idx = layer_arg_for(load_manifest(Path(d)), hs)
+            if idx is None:
+                raise ValueError(f"no hidden_states[{hs}] in {d}")
+            roles, clouds, factors, _ = load_role_clouds("prompt_avg", idx)
             n_i, n_q, add_rank = grid_shape(factors)
             with small_matrix_ops():
                 f = pd.DataFrame([design_fractions(clouds[r], *factors[r])
                                   for r in roles])
             rows[label] = {
-                "dir": d, "n_roles": len(roles),
+                "dir": d, "hidden_state_layer": hs, "n_roles": len(roles),
                 "points_per_role": int(len(next(iter(clouds.values())))),
                 "grid": [n_i, n_q], "additive_rank": add_rank,
                 **{k: {"median": float(f[k].median()),
@@ -98,8 +113,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--outdir", required=True)
     ap.add_argument("--label-layer", type=int, default=19)
+    ap.add_argument("--layer", type=int, default=None,
+                    help="layer index in the response cloud (default: its primary_layer)")
     args = ap.parse_args()
-    contrast_experiment(Path(args.outdir), args.label_layer)
+    contrast_experiment(Path(args.outdir), args.label_layer, args.layer)
 
 
 if __name__ == "__main__":

@@ -24,6 +24,8 @@ import sys
 from pathlib import Path
 
 from common import FIGURES_DIR, timestamp
+from manifold_persona.config import ROLE_EMBEDDINGS_DIR
+from manifold_persona.io import layer_label, load_manifest
 
 HERE = Path(__file__).resolve().parent
 PY = sys.executable
@@ -171,7 +173,8 @@ def write_report(run_dir: Path, view: str, layer: int):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--view", default="prompt_avg", choices=["prompt_avg", "prompt_last"])
-    ap.add_argument("--layer", type=int, default=26)
+    ap.add_argument("--layer", type=int, default=None,
+                    help="layer index (default: the cloud manifest's primary_layer)")
     ap.add_argument("--n_null", type=int, default=100)
     ap.add_argument("--stamp", default=None)
     args = ap.parse_args()
@@ -183,11 +186,18 @@ def main():
     env["_VIEW"] = args.view
     print(f"Results -> {run_dir}")
 
-    nn = ["--n_null", str(args.n_null)]
+    # The report reads files named for --view/--layer, so the stage scripts
+    # must compute at exactly that view and layer.
+    manifest = load_manifest(Path(os.environ.get("MP_ROLE_DIR", ROLE_EMBEDDINGS_DIR)))
+    layer = args.layer
+    if layer is None:
+        layer = int(manifest["primary_layer"])
+    nn = ["--n_null", str(args.n_null), "--layer", str(layer)]
     run("id_per_role.py", nn, env)
     run("clustering_per_role.py", nn, env)
-    run("compute_budget.py", [], env)
-    write_report(run_dir, args.view, args.layer)
+    run("compute_budget.py", ["--layer", str(layer)], env)
+    # The steps name their files with the real hidden-state layer.
+    write_report(run_dir, args.view, layer_label(manifest, layer))
     print(f"\nDone. See {run_dir}/REPORT.md")
 
 

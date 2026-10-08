@@ -26,6 +26,7 @@ import matplotlib.pyplot as plt
 
 from manifold.idim import id_estimates, ESTIMATORS
 from manifold_persona.common import assistant_axis, center, project, load_points
+from manifold_persona.io import layer_label
 from stats_utils import fmt_p, linfit
 from common import (load_role_clouds, design_fractions, pca_stats, resolve_run_dir,
                     savefig, design_null_draws, gaussian_null_draws, band, small_matrix_ops, assert_finite,
@@ -56,7 +57,7 @@ def main():
 
     t0 = time.time()
     roles, clouds, factors, manifest = load_role_clouds(args.view, args.layer)
-    layer = args.layer if args.layer is not None else manifest["primary_layer"]
+    layer = layer_label(manifest, args.layer)
     n_per = len(next(iter(clouds.values())))
     n_i, n_q, add_rank = grid_shape(factors)
     print(f"view={args.view} layer={layer} roles={len(roles)} points/role={n_per} "

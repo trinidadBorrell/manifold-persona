@@ -44,7 +44,8 @@ HERE = Path(__file__).resolve().parent
 PY = sys.executable
 
 # (script, wants). "cloud" = the script loads the raw per-example cloud and so
-# takes --view/--layer; "n_null" = it also takes the null-draw count. Everything
+# takes --view/--layer; "layer" = it takes --layer only; "n_null" = it also
+# takes the null-draw count. Everything
 # else works from the files an earlier step wrote and takes neither.
 STEPS = [
     ("study_panel.py", {"cloud"}),
@@ -52,7 +53,7 @@ STEPS = [
     ("study_ladder.py", set()),
     ("study_regression.py", set()),
     ("study_families.py", {"cloud"}),
-    ("confound_variance.py", set()),
+    ("confound_variance.py", {"layer"}),
     ("figures.py", set()),
     ("figures_families.py", set()),
     ("study_barcodes.py", set()),
@@ -102,6 +103,8 @@ def main():
         extra = ["--label-layer", str(args.label_layer)]
         if "cloud" in wants:
             extra += cloud_args
+        elif "layer" in wants and args.layer is not None:
+            extra += ["--layer", str(args.layer)]
         if "n_null" in wants:
             extra += ["--n-null", str(args.n_null)]
         if "parent" in wants:

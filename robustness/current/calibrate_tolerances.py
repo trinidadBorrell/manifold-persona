@@ -44,6 +44,7 @@ sys.path.insert(0, str(PP))
 
 from common import load_role_clouds, design_fractions, small_matrix_ops  # noqa: E402
 from stats_utils import partial_corr_multi  # noqa: E402
+from manifold_persona.io import layer_arg_for, load_manifest  # noqa: E402
 
 L = 19
 N_BOOT = 2000
@@ -59,13 +60,18 @@ FLOORS = {"frac": 0.005, "fold": 1.0, "median": 0.3, "r": 0.02,
           "calib": 0.02}
 
 
-def per_role_fractions(role_dir: str, allow_unclean: bool) -> pd.DataFrame:
+def per_role_fractions(role_dir: str, allow_unclean: bool, hs: int = L) -> pd.DataFrame:
+    """Per-role variance fractions at hidden_states[hs], whatever the cloud's
+    own primary layer, so the prompt and response clouds share one depth."""
     prev = dict(os.environ)
     os.environ["MP_ROLE_DIR"] = role_dir
     if allow_unclean:
         os.environ["MP_ALLOW_UNCLEAN"] = "1"
     try:
-        roles, clouds, factors, _ = load_role_clouds("prompt_avg", None)
+        idx = layer_arg_for(load_manifest(Path(role_dir)), hs)
+        if idx is None:
+            raise SystemExit(f"{role_dir} does not hold hidden_states[{hs}]")
+        roles, clouds, factors, _ = load_role_clouds("prompt_avg", idx)
         with small_matrix_ops():
             df = pd.DataFrame([{"role": r, **design_fractions(clouds[r],
                                                               *factors[r])}
