@@ -28,6 +28,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import time
 from pathlib import Path
@@ -40,7 +41,7 @@ from manifold_persona.config import (MODEL_NAME, RESP_ROLE_EMBEDDINGS_DIR,
                                      half_depth_hidden_state)
 from manifold_persona.prompts_roles import (build_role_records, records_to_metadata,
                                             list_roles)
-from manifold_persona.io import save_embeddings
+from manifold_persona.io import (AVG_FILE, LAST_FILE, MANIFEST_FILE, META_FILE)
 
 CKPT_SUBDIR = "_ckpt"
 CONFIG_NAME = "ckpt_config.json"
@@ -77,6 +78,58 @@ def shard_path(ckpt_dir: Path, start: int, end: int) -> Path:
     return ckpt_dir / f"shard_{start:06d}_{end:06d}.npz"
 
 
+def merge_shards(bounds, ckpt_dir: Path, out_dir: Path, n_records: int):
+    """Stream checkpoint shards into final arrays without holding two copies."""
+    first_start, first_end = bounds[0]
+    with np.load(shard_path(ckpt_dir, first_start, first_end),
+                 allow_pickle=True) as first:
+        avg_shape = first["avg"].shape[1:]
+        last_shape = first["last"].shape[1:]
+        avg_dtype = first["avg"].dtype
+        last_dtype = first["last"].dtype
+    if avg_shape != last_shape:
+        raise ValueError(f"avg shape {avg_shape} != last shape {last_shape}")
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    avg_tmp = out_dir / "prompt_avg.tmp.npy"
+    last_tmp = out_dir / "prompt_last.tmp.npy"
+    avg_out = np.lib.format.open_memmap(
+        avg_tmp, mode="w+", dtype=avg_dtype, shape=(n_records, *avg_shape)
+    )
+    last_out = np.lib.format.open_memmap(
+        last_tmp, mode="w+", dtype=last_dtype, shape=(n_records, *last_shape)
+    )
+
+    responses = []
+    for i, (start, end) in enumerate(bounds):
+        with np.load(shard_path(ckpt_dir, start, end), allow_pickle=True) as shard:
+            if int(shard["start"]) != start or int(shard["end"]) != end:
+                raise ValueError(f"shard bounds mismatch at [{start}:{end}]")
+            avg = shard["avg"]
+            last = shard["last"]
+            expected = (end - start, *avg_shape)
+            if avg.shape != expected or last.shape != expected:
+                raise ValueError(
+                    f"shard [{start}:{end}] shape mismatch: "
+                    f"avg={avg.shape}, last={last.shape}, expected={expected}"
+                )
+            avg_out[start:end] = avg
+            last_out[start:end] = last
+            responses.extend(shard["responses"].tolist())
+        if (i + 1) % 16 == 0:
+            avg_out.flush()
+            last_out.flush()
+
+    avg_out.flush()
+    last_out.flush()
+    del avg_out, last_out
+    if len(responses) != n_records:
+        raise ValueError(f"response count {len(responses)} != {n_records}")
+    os.replace(avg_tmp, out_dir / AVG_FILE)
+    os.replace(last_tmp, out_dir / LAST_FILE)
+    return responses, avg_shape[0], avg_shape[1]
+
+
 def run_config(args) -> dict:
     """The subset of args that must match for a resume to be valid.
 
@@ -84,6 +137,7 @@ def run_config(args) -> dict:
     the completed-run guard below can compare the whole config.
     """
     return {"model_name": args.model, "tokenizer_name": args.tokenizer,
+            "revision": args.revision,
             "n_questions": args.n_questions,
             "seed": args.seed, "max_new_tokens": args.max_new_tokens,
             "do_sample": bool(args.do_sample), "temperature": args.temperature,
@@ -123,6 +177,9 @@ def check_completed_run(out_dir: Path, cfg: dict, n_records: int) -> None:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", default=MODEL_NAME)
+    ap.add_argument("--revision", default=None,
+                    help="HF model revision (branch/tag/commit), e.g. an OLMo-2 "
+                         "pretraining checkpoint stage1-step98000-tokens412B")
     ap.add_argument("--tokenizer", default=None,
                     help="render chats with THIS repo's tokenizer instead of "
                          "the model's own. Cross-stage runs must pass the "
@@ -200,7 +257,7 @@ def main():
         from manifold_persona.generate import (generate_and_extract,
                                                generate_and_extract_batched)
         print(f"Loading model {args.model} ...")
-        model, tokenizer, device = load_model_and_tokenizer(args.model)
+        model, tokenizer, device = load_model_and_tokenizer(args.model, revision=args.revision)
         if args.tokenizer:
             from transformers import AutoTokenizer
             tokenizer = AutoTokenizer.from_pretrained(args.tokenizer)
@@ -235,18 +292,9 @@ def main():
             print(f"  shard [{s}:{e}] {e-s} recs in {time.time()-tc:.0f}s "
                   f"({(time.time()-tc)/(e-s):.2f}s/rec)  -> saved")
 
-    # ---- Finalize: concatenate shards into the final embeddings layout ----
-    print("Finalizing: concatenating shards ...")
-    avgs, lasts, resp_all = [], [], []
-    for (s, e) in bounds:
-        d = np.load(shard_path(ckpt_dir, s, e), allow_pickle=True)
-        avgs.append(d["avg"]); lasts.append(d["last"])
-        resp_all.extend(list(d["responses"]))
-    avg = np.concatenate(avgs, axis=0)
-    last = np.concatenate(lasts, axis=0)
-    assert avg.shape[0] == N, f"row count {avg.shape[0]} != {N}"
-    n_layers = avg.shape[1]
-    hidden = avg.shape[2]
+    # ---- Finalize: stream shards into the final embeddings layout ----
+    print("Finalizing: streaming shards ...")
+    resp_all, n_layers, hidden = merge_shards(bounds, ckpt_dir, out_dir, N)
     prim = half_depth_hidden_state(n_layers - 1)
 
     meta_rows = records_to_metadata(records)
@@ -274,7 +322,9 @@ def main():
             "share_looping": float(meta_df["response"].map(_loops).mean()),
         },
     }
-    save_embeddings(avg, last, meta_df, manifest, out_dir=out_dir)
+    meta_df.to_parquet(out_dir / META_FILE, index=False)
+    with open(out_dir / MANIFEST_FILE, "w") as f:
+        json.dump(manifest, f, indent=2)
     # Human-readable copy beside the parquet, matching the published clouds.
     meta_df.to_csv(out_dir / "metadata.csv", index=False)
     from manifold_persona.provenance import write_stamp

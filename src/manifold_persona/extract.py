@@ -54,13 +54,20 @@ def pick_device() -> str:
     return "cpu"
 
 
-def load_model_and_tokenizer(model_name: str, device: str = None):
+def load_model_and_tokenizer(model_name: str, device: str = None, revision: str = None):
     device = device or pick_device()
+    # Tokenizer is stage-invariant across a model's revisions, and pretraining
+    # checkpoints often ship weights only (no tokenizer files). Load it from the
+    # default revision so a weights-only checkpoint still works; `revision`
+    # applies to the model.
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     # float16 on MPS/CUDA for speed+memory; float32 on CPU for stability.
     dtype = torch.float16 if device in ("mps", "cuda") else torch.float32
-    # torch_dtype: works on transformers 4.4x (native) and 4.5x+ (alias).
-    model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=dtype)
+    # `dtype=` on transformers 4.56+/5.x; `torch_dtype=` on older releases.
+    try:
+        model = AutoModelForCausalLM.from_pretrained(model_name, dtype=dtype, revision=revision)
+    except TypeError:
+        model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=dtype, revision=revision)
     model.to(device)
     model.eval()
     return model, tokenizer, device
