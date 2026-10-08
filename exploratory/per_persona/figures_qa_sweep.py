@@ -12,7 +12,7 @@ and adding questions only shrinks the error bars further, so significance at
 every tier is close to guaranteed and says nothing. The sweep is read on two
 harder criteria instead:
 
-  stability   does `r_ctrl_logvar` — the correlation with cloud scale removed —
+  stability   does `r_ctrl_all` — the fully controlled rung the study reports —
               stay in the same place, and keep its SIGN, across tiers? A metric
               whose r drifts steadily with budget was measuring the budget.
   overlap     do the tiers' confidence intervals overlap each other? Two tiers
@@ -44,7 +44,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 REF_TIER = 40          # the published budget; every other tier tests it
-PRIMARY = "r_ctrl_logvar"      # scale-controlled, the column the study reads
+RUNG = "ctrl_all"              # the rung study_ladder reports (global BH, prose)
+PRIMARY = f"r_{RUNG}"
 
 
 def load_tiers(sweep: Path, label_layer: int = 19):
@@ -58,9 +59,32 @@ def load_tiers(sweep: Path, label_layer: int = 19):
                if d.is_dir() and not d.name[1:].isdigit()]
     if skipped:
         print(f"  not tiers, ignored: {sorted(skipped)}")
+    # question_tiers.json is rewritten by every sweep invocation, so it names
+    # the tiers of the latest sweep; folders left from an earlier sweep with
+    # other settings must not be stacked with them.
+    spec_path = sweep / "question_tiers.json"
+    spec = json.load(open(spec_path)) if spec_path.exists() else None
+    if spec is None:
+        print(f"  WARNING: {spec_path} missing; cannot check tiers come from one sweep")
     out = {}
     for d in sorted(cands, key=lambda p: int(p.name[1:])):
         k = int(d.name[1:])
+        if spec is not None:
+            if str(k) not in spec["tiers"]:
+                print(f"  tier {k}: not in {spec_path.name} (another sweep), skipped")
+                continue
+            cfg_path = d / "tier_config.json"
+            if cfg_path.exists():
+                cfg = json.load(open(cfg_path))
+                diff = {key: (cfg.get(key), spec.get(key)) for key in ("seed", "ripser_maxdim")
+                        if cfg.get(key) != spec.get(key)}
+                if cfg.get("questions") != spec["tiers"][str(k)]:
+                    diff["questions"] = "differ"
+                if diff:
+                    raise SystemExit(f"tier {k} was built with other settings than "
+                                     f"{spec_path.name}: {diff}")
+            else:
+                print(f"  tier {k}: no tier_config.json; settings cannot be checked")
         lad = d / "data" / f"ladder_L{label_layer}.csv"
         pan = d / "data" / f"per_role_panel_L{label_layer}.csv"
         if not lad.exists():
@@ -82,25 +106,33 @@ def verdicts(stack: pd.DataFrame, predictor: str) -> pd.DataFrame:
             continue
         ref = g.loc[g.tier == REF_TIER, PRIMARY]
         ref = float(ref.iloc[0]) if len(ref) else np.nan
-        sign_flip = bool(np.nanmin(r) < 0 < np.nanmax(r))
+        # A verdict needs the reference tier and at least one other tier.
+        comparable = bool(np.isfinite(ref) and np.isfinite(r).sum() >= 2)
         # monotone drift: r moves the same direction at every step
         steps = np.diff(r[~np.isnan(r)])
         drift = bool(len(steps) >= 2 and (np.all(steps > 0) or np.all(steps < 0)))
         # CI overlap against the reference tier
-        lo, hi = g[f"ci_lo_ctrl_logvar"].to_numpy(float), g[f"ci_hi_ctrl_logvar"].to_numpy(float)
+        lo, hi = g[f"ci_lo_{RUNG}"].to_numpy(float), g[f"ci_hi_{RUNG}"].to_numpy(float)
+        # A flip needs one tier clearly above 0 and another clearly below; point
+        # estimates of a null wander across 0 without meaning anything.
+        sign_flip = bool(np.any(lo > 0) and np.any(hi < 0))
         ref_row = g[g.tier == REF_TIER]
         if len(ref_row):
-            rlo, rhi = float(ref_row.ci_lo_ctrl_logvar.iloc[0]), float(ref_row.ci_hi_ctrl_logvar.iloc[0])
+            rlo, rhi = float(ref_row[f"ci_lo_{RUNG}"].iloc[0]), float(ref_row[f"ci_hi_{RUNG}"].iloc[0])
             overlaps = bool(np.all((lo <= rhi) & (hi >= rlo)))
+            null_at_ref = bool(rlo <= 0 <= rhi)
         else:
             overlaps = False
+            null_at_ref = False
         rows.append({"metric": metric, "predictor": predictor,
                      f"r_at_{REF_TIER}": ref, "r_min": float(np.nanmin(r)),
                      "r_max": float(np.nanmax(r)),
                      "range": float(np.nanmax(r) - np.nanmin(r)),
                      "sign_flip": sign_flip, "monotone_drift": drift,
-                     "ci_overlaps_ref": overlaps,
-                     "holds": bool(not sign_flip and overlaps)})
+                     "ci_overlaps_ref": overlaps, "null_at_ref": null_at_ref,
+                     "comparable": comparable,
+                     "holds": bool(comparable and not sign_flip and not drift
+                                   and overlaps and not null_at_ref)})
     return pd.DataFrame(rows).sort_values("range", ascending=False)
 
 
@@ -125,9 +157,13 @@ def main():
 
     v = verdicts(stack, args.predictor)
     v.to_csv(outd / "verdicts.csv", index=False)
-    held, total = int(v.holds.sum()), len(v)
+    held, total = int(v.holds.sum()), int(v.comparable.sum())
+    if total < len(v):
+        print(f"  not comparable (no q{REF_TIER} or one tier only): "
+              f"{list(v.loc[~v.comparable, 'metric'])}")
     print(f"\n{args.predictor}: {held}/{total} metrics hold across tiers")
     print(f"  sign flips     : {list(v.loc[v.sign_flip, 'metric'])}")
+    print(f"  null at ref    : {list(v.loc[v.null_at_ref, 'metric'])}")
     print(f"  monotone drift : {list(v.loc[v.monotone_drift, 'metric'])}")
 
     # ---- figure 1: r vs tier, one panel per metric -------------------------
@@ -139,7 +175,7 @@ def main():
     for ax, metric in zip(axes.ravel(), mets):
         g = stack[(stack.predictor == args.predictor) & (stack.metric == metric)].sort_values("tier")
         ax.axhline(0, color="#bbbbbb", lw=0.8, zorder=0)
-        ax.fill_between(g.tier, g.ci_lo_ctrl_logvar, g.ci_hi_ctrl_logvar,
+        ax.fill_between(g.tier, g[f"ci_lo_{RUNG}"], g[f"ci_hi_{RUNG}"],
                         color="#0072B2", alpha=0.18, lw=0)
         ax.plot(g.tier, g[PRIMARY], "o-", color="#0072B2", ms=4, lw=1.4)
         ref = g.loc[g.tier == REF_TIER, PRIMARY]
@@ -147,7 +183,10 @@ def main():
             ax.axhline(float(ref.iloc[0]), color="#D55E00", ls="--", lw=1.0)
         row = v[v.metric == metric]
         ok = bool(row.holds.iloc[0]) if len(row) else False
-        ax.set_title(f"{metric}\n{'holds' if ok else 'MOVES'}", fontsize=8,
+        null = bool(row.null_at_ref.iloc[0]) if len(row) else False
+        comp = bool(row.comparable.iloc[0]) if len(row) else False
+        lab = "holds" if ok else "n/a" if not comp else "null" if null else "MOVES"
+        ax.set_title(f"{metric}\n{lab}", fontsize=8,
                      color="#333333" if ok else "#D55E00")
         ax.set_ylim(-1.05, 1.05)
         ax.tick_params(labelsize=7)

@@ -83,20 +83,27 @@ def main():
         off += m
 
     # ---- tau chosen against the JUDGE, never against axis_proj ---------- #
+    # Tuned on one half of the judge pairs and gated on the other: the maximum
+    # kappa over the grid is biased upward on the pairs that chose it.
     jd = pd.read_csv(run / "data" / "judge_pairs_L19.csv")
+    sim_jd = np.array([sims[int(r.group)][int(r.i), int(r.j)] for _, r in jd.iterrows()])
+    judge = jd.judge_same.to_numpy(bool)
+    perm = np.random.default_rng(S.SEED).permutation(len(jd))
+    tune, test = perm[: len(jd) // 2], perm[len(jd) // 2:]
     scan = []
     for tau in TAU_GRID:
-        pred = [bool(sims[int(r.group)][int(r.i), int(r.j)] >= tau)
-                for _, r in jd.iterrows()]
+        pred = sim_jd >= tau
         scan.append({"tau": float(tau),
-                     "kappa": S.cohen_kappa(pred, jd.judge_same),
-                     "agreement": float(np.mean(np.array(pred) == jd.judge_same.values)),
+                     "kappa_tune": S.cohen_kappa(pred[tune], judge[tune]),
+                     "kappa_all": S.cohen_kappa(pred, judge),
+                     "agreement": float(np.mean(pred == judge)),
                      "pred_same_rate": float(np.mean(pred))})
     scan = pd.DataFrame(scan)
-    best = scan.loc[scan.kappa.idxmax()]
+    best = scan.loc[scan.kappa_tune.idxmax()]
     tau = float(best.tau)
-    S.log(f"tau* = {tau:.3f} (kappa {best.kappa:.3f}, agreement {best.agreement:.3f}, "
-          f"predicate says same {best.pred_same_rate:.3f})")
+    kappa_test = S.cohen_kappa(sim_jd[test] >= tau, judge[test])
+    S.log(f"tau* = {tau:.3f} (tune kappa {best.kappa_tune:.3f}, held-out kappa "
+          f"{kappa_test:.3f}, predicate says same {best.pred_same_rate:.3f})")
     scan.to_csv(run / "data" / "fallback_tau_scan_L19.csv", index=False)
 
     # ---- gates under the fallback --------------------------------------- #
@@ -129,9 +136,11 @@ def main():
     sd = float(per_role.E_role_fb.std())
 
     gates = {
-        "tau": tau, "judge_kappa": float(best.kappa),
+        "tau": tau, "judge_kappa": float(kappa_test),
+        "judge_kappa_tune": float(best.kappa_tune),
+        "judge_kappa_n_tune_test": [int(len(tune)), int(len(test))],
         "judge_kappa_threshold": S.GATE_KAPPA,
-        "judge_pass": bool(best.kappa >= S.GATE_KAPPA),
+        "judge_pass": bool(kappa_test >= S.GATE_KAPPA),
         "frac_all_split": frac_split, "frac_all_merged": frac_merged,
         "mean_clusters": float(grp.n_clusters.mean()),
         "degeneracy_pass": bool(frac_split <= S.GATE_DEGENERATE
@@ -157,13 +166,16 @@ def main():
     lo, hi = boot_ci(x, df[S.DECIDER_METRIC].to_numpy(float), Z,
                      np.random.default_rng(S.SEED), n_boot=S.N_BOOT)
     agree_primary = float(np.corrcoef(df.E_role_fb, df.E_role)[0, 1])
+    r_primary = float(partial_corr_multi(df.E_role.to_numpy(float),
+                                         df[S.DECIDER_METRIC].to_numpy(float), Z)[0])
     out = dict(gates, n_roles=int(len(df)),
                decider_r=float(r), decider_p=float(p), decider_ci=[lo, hi],
                decider_clears_bar=bool(abs(r) >= S.DECIDER_BAR),
                E_role_fb_vs_primary_pearson=agree_primary,
-               primary_decider_r=0.438)
+               primary_decider_r=r_primary)
+    ci = "no CI" if lo is None else f"{lo:+.3f}, {hi:+.3f}"   # None: r is undefined
     S.log(f"FALLBACK DECIDER  E_role_fb vs {S.DECIDER_METRIC} | scale: "
-          f"r = {r:+.3f} [{lo:+.3f}, {hi:+.3f}]  (primary was +0.438); "
+          f"r = {r:+.3f} [{ci}]  (primary {r_primary:+.3f}, same rows); "
           f"fallback vs primary E_role r = {agree_primary:+.3f}")
     json.dump(out, open(run / "data" / "fallback_L19.json", "w"), indent=2, default=float)
     per_role.to_csv(run / "data" / "per_role_entropy_fallback_L19.csv", index=False)

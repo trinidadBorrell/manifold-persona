@@ -192,6 +192,11 @@ def main():
         print(f"\n{'=' * 70}\n=== tier {k} questions -> {tier_out}\n{'=' * 70}", flush=True)
         t0 = time.time()
         build_tier_cloud(k, tiers[k], meta, args.view, cloud)
+        tier_out.mkdir(parents=True, exist_ok=True)
+        json.dump({"tier": k, "questions": tiers[k], "seed": args.seed,
+                   "ripser_maxdim": args.maxdim, "view": args.view,
+                   "n_null": args.n_null, "base_cloud": str(BASE)},
+                  open(tier_out / "tier_config.json", "w"), indent=2)
         env = dict(os.environ, MP_ROLE_DIR=str(cloud),
                    MP_RIPSER_MAXDIM=str(args.maxdim))
         r = subprocess.run(
@@ -209,7 +214,14 @@ def main():
 
     json.dump(timings, open(out_root / "tier_runtimes.json", "w"), indent=2)
     if not args.keep_clouds:
-        shutil.rmtree(args.clouddir, ignore_errors=True)
+        # Remove only the tier clouds this run wrote; --clouddir may be a
+        # directory that holds other data.
+        for k in ks:
+            shutil.rmtree(Path(args.clouddir) / f"q{k}", ignore_errors=True)
+        try:
+            Path(args.clouddir).rmdir()          # only if now empty
+        except OSError:
+            pass
     print(f"\nDone. {len(ks)} tiers in {out_root}")
 
 

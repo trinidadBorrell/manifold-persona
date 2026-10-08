@@ -131,7 +131,7 @@ def fig02_ladder(lad, out, gates_ok):
     # shuffle null band, from the controlled rung
     p95 = e[e.rung == "ctrl_scale"].set_index("target").reindex(order).shuffle_p95
     ax.fill_betweenx(y, -p95, p95, color="0.85", alpha=0.55, zorder=0,
-                     label="axis-shuffle null (95th pct)")
+                     label="axis-shuffle null (95th pct of max |r| over targets)")
     # the length baseline: if these are as strong, the story is verbosity
     for pnam, mark in (("mean_tokens", "x"), ("trunc_rate", "+")):
         sub = lad[(lad.predictor == pnam) & (lad.rung == "ctrl_scale")] \

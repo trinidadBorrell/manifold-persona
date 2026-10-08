@@ -120,6 +120,8 @@ def load_tier():
     """The 40-question tier of the 240q cloud, plus the provenance check that
     makes it comparable to the published result."""
     meta = pd.read_parquet(CLOUD / "metadata.parquet")
+    # Row position in prompt_avg.npy; survives the filter and re-sort below.
+    meta["cloud_row"] = np.arange(len(meta))
     q40 = set(json.load(open(TIERS))["tiers"]["40"])
     d = meta[meta.question_idx.isin(q40)].copy()
     d = d.sort_values(["role", "question_idx", "instruction_idx"]).reset_index(drop=True)
@@ -138,6 +140,14 @@ def load_tier():
         prov["response_identical_frac"] = float((m.response_40 == m.response_240).mean())
     except Exception as exc:                                    # noqa: BLE001
         prov["resp40_check_error"] = str(exc)
+    # The comparison to the published panel is only valid on the same text.
+    prov["comparable_to_resp40"] = bool(
+        "resp40_check_error" not in prov and prov["q40_texts_match_resp40"]
+        and prov["response_identical_frac"] == 1.0)
+    if not prov["comparable_to_resp40"]:
+        log("WARNING: the 40q tier is NOT shown to be the resp40 text "
+            f"({prov.get('resp40_check_error') or prov}); results are not "
+            "comparable to the published geometry panel")
     prov["n_null_system"] = int(d.system.isna().sum())
     prov["duplicate_question_texts"] = int(d.question.nunique() != d.question_idx.nunique())
     return d, prov
@@ -161,7 +171,7 @@ def build_groups(d):
                        "question": g.question.iloc[0],
                        "instr": keep.instruction_idx.tolist(),
                        "answers": [E.first_words(t) for t in keep.response],
-                       "row_ids": keep.index.tolist(),
+                       "row_ids": keep.cloud_row.tolist(),
                        "M": int(len(keep))})
     return groups, dropped_short, dropped_group
 
@@ -190,11 +200,19 @@ def run_nli(groups, pred, run_dir, resume=False, tag=""):
         spans.append((tot, tot + n))
         tot += n
 
+    # The cache is valid only for the same model, truncation and texts in the
+    # same order; the pair count alone matches many different inputs.
+    key = hashlib.sha256(json.dumps({
+        "model": getattr(pred, "model_id", None),
+        "max_len": getattr(pred, "MAX_LEN", None),
+        "groups": [[g["question"], g["answers"]] for g in groups],
+    }).encode()).hexdigest()
+
     flags = np.zeros(tot, dtype=bool)
     start_group = 0
     if resume and cache.exists():
         z = np.load(cache)
-        if int(z["n_pairs"]) == tot:
+        if int(z["n_pairs"]) == tot and "key" in z and str(z["key"]) == key:
             flags = z["flags"].copy()
             start_group = int(z["n_groups_done"])
             log(f"resumed: {start_group:,}/{len(groups):,} groups already done")
@@ -214,7 +232,7 @@ def run_nli(groups, pred, run_dir, resume=False, tag=""):
                 hyp.append(f"{q} {ans[j]}")
         res = pred.entails_batch(prem, hyp)
         flags[spans[c0][0]:spans[c1 - 1][1]] = res
-        np.savez(cache, flags=flags, n_groups_done=c1, n_pairs=tot)
+        np.savez(cache, flags=flags, n_groups_done=c1, n_pairs=tot, key=key)
         done = spans[c1 - 1][1]
         rate = (done - spans[start_group][0]) / max(time.time() - t0, 1e-9)
         log(f"  groups {c1:,}/{len(groups):,} | pairs {done:,}/{tot:,} "
@@ -250,8 +268,8 @@ def judge_labels(groups, panel, run_dir, seed=SEED, n=N_JUDGE):
     without it, a measure that clusters nothing and a measure that clusters
     everything are indistinguishable from their outputs alone.
 
-    Judged by comparing the next-token logits of " Yes" and " No" -- no
-    sampling, so the label is deterministic.
+    Judged by comparing the next-token log-mass of "Yes" and "No" (with and
+    without a leading space) -- no sampling, so the label is deterministic.
     """
     import torch
     from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -275,8 +293,10 @@ def judge_labels(groups, panel, run_dir, seed=SEED, n=N_JUDGE):
     mod = AutoModelForCausalLM.from_pretrained(JUDGE_MODEL, dtype=torch.float16)
     dev = "mps" if torch.backends.mps.is_available() else "cpu"
     mod.to(dev).eval()
-    yes = tok(" Yes", add_special_tokens=False).input_ids[-1]
-    no = tok(" No", add_special_tokens=False).input_ids[-1]
+    # The turn opens after "assistant\n", where the model emits "Yes" without
+    # a leading space; score both spellings so neither form is missed.
+    yes = sorted({tok(w, add_special_tokens=False).input_ids[0] for w in ("Yes", " Yes")})
+    no = sorted({tok(w, add_special_tokens=False).input_ids[0] for w in ("No", " No")})
 
     rows = []
     t0 = time.time()
@@ -288,11 +308,11 @@ def judge_labels(groups, panel, run_dir, seed=SEED, n=N_JUDGE):
                                        tokenize=False, add_generation_prompt=True)
         enc = tok(chat, return_tensors="pt").to(dev)
         with torch.no_grad():
-            logits = mod(**enc).logits[0, -1]
+            logits = mod(**enc).logits[0, -1].float()
+        margin = float(torch.logsumexp(logits[yes], 0) - torch.logsumexp(logits[no], 0))
         rows.append({"group": int(gi), "role": g["role"],
                      "question_idx": g["question_idx"], "i": int(i), "j": int(j),
-                     "judge_same": bool(logits[yes] > logits[no]),
-                     "margin": float(logits[yes] - logits[no])})
+                     "judge_same": margin > 0, "margin": margin})
         if (k + 1) % 100 == 0:
             log(f"  judge {k+1}/{len(picks)} ({(time.time()-t0)/(k+1):.2f}s each)")
     del mod
@@ -474,6 +494,11 @@ def main():
     t0 = time.time()
     d, prov = load_tier()
     log(f"tier loaded: {prov}")
+    gates["comparable_to_resp40"] = {
+        "pass": prov["comparable_to_resp40"],
+        **{k: prov[k] for k in ("q40_texts_match_resp40", "n_shared_rows",
+                                "response_identical_frac", "resp40_check_error")
+           if k in prov}}
     groups, dropped_short, dropped_group = build_groups(d)
     if args.max_groups:
         groups = groups[:args.max_groups]
@@ -634,8 +659,10 @@ def main():
                         for p in ("E_role", "mean_tokens", "trunc_rate")],
                        ignore_index=True)
     null = shuffle_null(df, targets, np.random.default_rng(SEED))
-    ladder["shuffle_p95"] = [null[r]["per_target_p95"].get(t, np.nan)
-                             for t, r in zip(ladder.target, ladder.rung)]
+    # Family-wise threshold (95th pct of max |r| over targets, Westfall-Young
+    # max-T), as in study_ladder; a per-target 95th pct is an uncorrected test
+    # and flags a false positive among 27 targets in most null runs.
+    ladder["shuffle_p95"] = [null[r]["max_abs_r_p95"] for r in ladder.rung]
     ladder["beats_shuffle"] = ladder.r.abs() > ladder.shuffle_p95
     ladder.to_csv(run_dir / "data" / "ladder_entropy_L19.csv", index=False)
     json.dump(null, open(run_dir / "data" / "shuffle_null_L19.json", "w"), indent=2)
