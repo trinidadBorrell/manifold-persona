@@ -13,6 +13,11 @@ __pycache__/
 # ---------------------------------------------------------------------------
 token/
 .env
+.env.*
+.hf_token
+credentials.json
+*.pem
+*.key
 
 # ---------------------------------------------------------------------------
 # Point clouds
@@ -32,6 +37,37 @@ data/
 # result unreproducible — 2026-08-03 review).
 output/
 
+# Keep new experiment notes and code, but not raw run files.
+*.jsonl
+*.parquet
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+experiments/**/*.csv
+experiments/**/*.tsv
+experiments/**/raw/
+experiments/**/artifacts/
+experiments/**/checkpoints/
+experiments/**/runs/
+experiments/**/outputs/
+experiments/**/results/
+# Local library copies and judge run files (prompts, answers, logs).
+experiments/**/.tf_overlay/
+experiments/**/logs/
+experiments/**/*.log
+experiments/**/answers/
+experiments/**/ranswers/
+experiments/**/batches/
+experiments/**/rbatches/
+# Large scored data of the 2026-10-05 Q1 run; results*.json stay visible.
+experiments/q1_emergence/261005_base_incontext_elicitation/KEY.json
+experiments/q1_emergence/261005_base_incontext_elicitation/RKEY.json
+experiments/q1_emergence/261005_base_incontext_elicitation/scored_rows.json
+experiments/q1_emergence/261005_base_incontext_elicitation/role_scored_items.json
+
 # Generated exploratory figures (large plotly HTML; regenerable, kept on disk).
 # Note this pattern is one level deep by design: it catches
 # exploratory/<stage>/figures/ and nothing further up.
@@ -42,12 +78,56 @@ refactors/baselines/*/golden/
 refactors/baselines/*/extra-reference/
 
 # ---------------------------------------------------------------------------
-# Working notes, not deliverables
+# Working notes and selected workflow guidance
 # ---------------------------------------------------------------------------
 plans/
 DESIGN.md
 RESEARCH.md
+# Track only listed guidance and starter files; ignore all other Claude state.
 .claude/
+!.claude/
+.claude/*
+!.claude/CLAUDE.md
+!.claude/README.md
+!.claude/skills/
+.claude/skills/*
+!.claude/skills/research-cycle/
+.claude/skills/research-cycle/*
+!.claude/skills/research-cycle/SKILL.md
+!.claude/skills/challenge-result/
+.claude/skills/challenge-result/*
+!.claude/skills/challenge-result/SKILL.md
+!.claude/skills/presenting-results/
+.claude/skills/presenting-results/*
+!.claude/skills/presenting-results/SKILL.md
+!.claude/skills/presenting-results/LESSONS.md
+!.claude/skills/presenting-results/report_gate.md
+!.claude/skills/presenting-results/gate_check.py
+!.claude/template/
+.claude/template/*
+!.claude/template/README.md
+!.claude/template/.claude/
+.claude/template/.claude/*
+!.claude/template/.claude/CLAUDE.md
+!.claude/template/.claude/skills/
+.claude/template/.claude/skills/*
+!.claude/template/.claude/skills/research-cycle/
+.claude/template/.claude/skills/research-cycle/*
+!.claude/template/.claude/skills/research-cycle/SKILL.md
+!.claude/template/.claude/skills/challenge-result/
+.claude/template/.claude/skills/challenge-result/*
+!.claude/template/.claude/skills/challenge-result/SKILL.md
+!.claude/template/research/
+.claude/template/research/*
+!.claude/template/research/PLAN.md
+!.claude/template/research/EXPERIMENT_INDEX.md
+!.claude/template/experiments/
+.claude/template/experiments/*
+!.claude/template/experiments/EXPERIMENT_TEMPLATE.md
+!.claude/template/requirements-dev.txt
+!.claude/template/.pre-commit-config.yaml
+!.claude/template/Makefile
+!.claude/template/.gitignore
 
 # The per_persona scratch write-ups (ANALYSIS, METRICS, FIGURES, CALIBRATION,
 # ...). The two docs that ARE deliverables — METHODS.md and README.md — live
@@ -66,3 +146,16 @@ exploratory/persona_vectors/
 wiki/
 lit-review.md
 novelty-assessment.md
+
+# ---------------------------------------------------------------------------
+# Local copies not tracked on this branch
+# ---------------------------------------------------------------------------
+# Older copy of .claude/skills/presenting-results for other agents.
+.agents/
+# Trinidad's steering code; it is tracked on the causal-study branch.
+steering/
+# Byte copies of robustness/legacy/. Remove these two lines (or use
+# `git add -f`) when the current tier is re-pinned.
+robustness/current/baseline/
+robustness/current/invariants.json
+.vscode/

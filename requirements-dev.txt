@@ -1,0 +1,8 @@
+-r requirements.txt
+
+pytest
+jupyterlab
+ruff
+black
+pre-commit
+nbstripout

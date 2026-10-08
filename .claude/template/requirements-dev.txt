@@ -1,0 +1,6 @@
+pytest
+jupyterlab
+ruff
+black
+pre-commit
+nbstripout

@@ -189,3 +189,7 @@ Install once so the packages import from any working directory:
 ```bash
 .venv/bin/pip install -e .
 ```
+
+## Research workflow
+
+See [.claude/README.md](.claude/README.md) for the workflow and tool status. Use the [research plan](research/PLAN.md) and [experiment index](research/EXPERIMENT_INDEX.md) to record the work. See [artifact storage](research/ARTIFACT_STORAGE.md) for private data locations and experiment-first paths.
