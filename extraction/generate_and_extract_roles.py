@@ -27,6 +27,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import shutil
@@ -42,9 +43,11 @@ from manifold_persona.config import (MODEL_NAME, RESP_ROLE_EMBEDDINGS_DIR,
 from manifold_persona.prompts_roles import (build_role_records, records_to_metadata,
                                             list_roles)
 from manifold_persona.io import (AVG_FILE, LAST_FILE, MANIFEST_FILE, META_FILE)
+from manifold_persona.provenance import resolved_commit
 
 CKPT_SUBDIR = "_ckpt"
 CONFIG_NAME = "ckpt_config.json"
+RESOLVED_NAME = "resolved_commits.json"
 
 
 # Persona-neutral exemplar turns for --fewshot. Base models echo bare chat
@@ -72,6 +75,12 @@ def record_to_messages(r, fewshot: bool = False):
             msgs.append({"role": "assistant", "content": a})
     msgs.append({"role": "user", "content": r.question})
     return msgs
+
+
+def records_digest(records, fewshot: bool) -> str:
+    """sha256 of the exact chats the run renders: roles, questions, few-shot turns."""
+    chats = [record_to_messages(r, fewshot=fewshot) for r in records]
+    return hashlib.sha256(json.dumps(chats, sort_keys=True).encode()).hexdigest()
 
 
 def shard_path(ckpt_dir: Path, start: int, end: int) -> Path:
@@ -155,15 +164,17 @@ def check_completed_run(out_dir: Path, cfg: dict, n_records: int) -> None:
     run destroys the result with no warning.
 
     n_records is always compared, so a ``--limit`` run against a full cloud is
-    refused even when every other key matches. Manifests written before this
-    guard existed stored only some of the run_config keys; a key the manifest
-    never recorded cannot be compared, so it is skipped.
+    refused even when every other key matches. A key the old manifest never
+    recorded counts as a mismatch: its value is unknown, so the overwrite
+    cannot be shown to be harmless.
     """
     done_manifest = out_dir / "manifest.json"
     if not done_manifest.exists():
         return
     prev = json.load(open(done_manifest))
-    mismatch = {k: (prev[k], cfg[k]) for k in cfg if k in prev and prev[k] != cfg[k]}
+    missing = "<not recorded>"
+    mismatch = {k: (prev.get(k, missing), cfg[k]) for k in cfg
+                if prev.get(k, missing) != cfg[k]}
     if prev.get("n_records") != n_records:
         mismatch["n_records"] = (prev.get("n_records"), n_records)
     if mismatch:
@@ -228,10 +239,13 @@ def main():
 
     # Validate / write the resume config.
     cfg = run_config(args)
+    cfg["records_sha256"] = records_digest(records, args.fewshot)
     cfg_path = ckpt_dir / CONFIG_NAME
     if cfg_path.exists():
         prev = json.load(open(cfg_path))
-        mismatch = {k: (prev.get(k), cfg[k]) for k in cfg if prev.get(k) != cfg[k]}
+        # Checkpoints written before the digest existed cannot be compared on it.
+        mismatch = {k: (prev.get(k), cfg[k]) for k in cfg if prev.get(k) != cfg[k]
+                    and not (k == "records_sha256" and k not in prev)}
         if mismatch:
             raise SystemExit(
                 f"Checkpoint config mismatch in {ckpt_dir}: {mismatch}\n"
@@ -262,6 +276,13 @@ def main():
             from transformers import AutoTokenizer
             tokenizer = AutoTokenizer.from_pretrained(args.tokenizer)
             print(f"rendering chats with tokenizer {args.tokenizer}")
+        # Every session's resolved weights, so a resume across a moved
+        # branch shows up as two commits in the manifest.
+        resolved_path = ckpt_dir / RESOLVED_NAME
+        seen = json.load(open(resolved_path)) if resolved_path.exists() else []
+        commit = getattr(model.config, "_commit_hash", None)
+        if commit not in seen:
+            json.dump(seen + [commit], open(resolved_path, "w"))
         n_hidden = model.config.num_hidden_layers
         prim = half_depth_hidden_state(n_hidden)
         print(f"device={device}  n_hidden_states={n_hidden + 1}  "
@@ -279,7 +300,7 @@ def main():
                 avg, last, responses = generate_and_extract(
                     model, tokenizer, chats[s:e], device,
                     max_new_tokens=args.max_new_tokens, do_sample=args.do_sample,
-                    temperature=args.temperature)
+                    temperature=args.temperature, stop_marker=args.stop_marker)
             # atomic-ish shard write: temp then rename. NB np.savez appends
             # ".npz" if the name lacks it, so the temp name must already end
             # ".npz" or the rename target won't exist.
@@ -309,8 +330,14 @@ def main():
     def _loops(s):
         tail = s[-20:]
         return bool(tail) and s.count(tail) >= 3
+    resolved_path = ckpt_dir / RESOLVED_NAME
+    commits = json.load(open(resolved_path)) if resolved_path.exists() else []
+    if len(commits) > 1:
+        print(f"WARNING: shards come from {len(commits)} model commits: {commits}")
     manifest = {
         **cfg,                       # every run_config key, same names
+        "model_commit": commits[0] if len(commits) == 1 else (commits or None),
+        "tokenizer_commit": resolved_commit(args.tokenizer or args.model),
         "n_layers": int(n_layers), "hidden": int(hidden),
         "primary_layer": int(prim), "token_basis": "response",
         "n_records": int(N), "n_roles": int(meta_df["role"].nunique()),

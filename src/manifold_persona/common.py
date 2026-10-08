@@ -91,7 +91,12 @@ def ward_families(C: np.ndarray, k: int = 15):
 
 def clusters_path(view: str, layer: int, in_dir=ROLE_EMBEDDINGS_DIR) -> Path:
     """Path of the role-mean cluster-assignment parquet (kept distinct from the
-    old per-example ``clusters_<view>_L<layer>.parquet`` so old runs stay valid)."""
+    old per-example ``clusters_<view>_L<layer>.parquet`` so old runs stay valid).
+
+    Lives beside the cloud `load_points` reads (same MP_ROLE_DIR rule), so two
+    clouds never share one label file.
+    """
+    in_dir = os.environ.get("MP_ROLE_DIR", in_dir)
     return Path(in_dir) / f"clusters_rolemean_{view}_L{layer}.parquet"
 
 

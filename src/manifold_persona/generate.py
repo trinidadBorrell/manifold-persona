@@ -32,6 +32,7 @@ def generate_and_extract(
     do_sample: bool = False,
     temperature: float = 1.0,
     batch_log_every: int = 200,
+    stop_marker: str = None,
 ) -> Tuple[np.ndarray, np.ndarray, List[str]]:
     """Greedy-generate a response per chat, return response-token activations.
 
@@ -69,6 +70,9 @@ def generate_and_extract(
 
         out_ids = model.generate(prompt_ids, **gen_kwargs)          # [1, P+R]
         resp_ids = out_ids[0, P:]
+        if stop_marker:
+            resp_ids = resp_ids[:_marker_cut(tokenizer, resp_ids, stop_marker)]
+            out_ids = torch.cat([prompt_ids[0], resp_ids])[None]
         responses.append(tokenizer.decode(resp_ids, skip_special_tokens=True))
 
         if resp_ids.numel() == 0:                                   # empty gen -> fall back to last prompt token
@@ -87,10 +91,50 @@ def generate_and_extract(
             last[i, l] = span[-1].cpu().numpy().astype(np.float16)
         del outputs
 
+        _require_finite(avg[i], last[i], device, f"record {i}")
+
         if device == "mps" and (i + 1) % batch_log_every == 0:
             torch.mps.empty_cache()
 
     return avg, last, responses
+
+
+def _require_finite(avg, last, device: str, what: str) -> None:
+    """Stop before a non-finite activation reaches a shard.
+
+    fp16 overflow or a padded-attention fault (seen on MPS) gives inf/NaN
+    states and garbage text; saved, they would pass as a finished cloud.
+    """
+    if not (np.isfinite(avg).all() and np.isfinite(last).all()):
+        raise FloatingPointError(
+            f"non-finite activations for {what} on device={device}. On MPS "
+            f"use batch_size=1; otherwise check the dtype (fp16 overflow).")
+
+
+def _marker_cut(tokenizer, gen, stop_marker: str) -> int:
+    """Number of response tokens before the first generated `stop_marker`.
+
+    String-grounded cut: BPE merges the marker's opening with whatever
+    precedes it, so token-subsequence search misses. Find the marker in the
+    decoded text, then the first token whose prefix-decode reaches that
+    character position.
+    """
+    g = gen.tolist()
+    p = tokenizer.decode(g).find(stop_marker)
+    if p != -1:
+        for k in range(len(g)):
+            if len(tokenizer.decode(g[:k + 1])) > p:
+                return k
+    return len(g)
+
+
+def _stop_token_ids(model, tokenizer) -> List[int]:
+    """Every id that ends a response: the model's generation eos plus the tokenizer's."""
+    ids = getattr(getattr(model, "generation_config", None), "eos_token_id", None)
+    ids = [] if ids is None else ([ids] if isinstance(ids, int) else list(ids))
+    if tokenizer.eos_token_id is not None:
+        ids.append(tokenizer.eos_token_id)
+    return sorted(set(ids))
 
 
 @torch.no_grad()
@@ -131,7 +175,9 @@ def generate_and_extract_batched(
     responses: List[str] = [""] * n
 
     pad_id = tokenizer.pad_token_id or tokenizer.eos_token_id
-    eos_id = tokenizer.eos_token_id
+    # generate() stops on the model's own eos ids, which can differ from a
+    # swapped-in tokenizer's eos; a missed stop would pool trailing pads.
+    stop_ids = torch.tensor(_stop_token_ids(model, tokenizer), dtype=torch.long)
     gen_kwargs = dict(max_new_tokens=max_new_tokens, do_sample=do_sample,
                       pad_token_id=pad_id)
     if do_sample:
@@ -162,21 +208,10 @@ def generate_and_extract_batched(
         seqs, rlens = [], []
         for j, i in enumerate(idx):
             gen = out[j, P:]
-            eos_pos = (gen == eos_id).nonzero()
+            eos_pos = torch.isin(gen, stop_ids.to(gen.device)).nonzero()
             r = int(eos_pos[0]) + 1 if eos_pos.numel() else gen.shape[0]
             if stop_marker:
-                # String-grounded cut: BPE merges the marker's opening with
-                # whatever precedes it, so token-subsequence search misses.
-                # Find the marker in the decoded text, then the first token
-                # whose prefix-decode reaches that character position.
-                g = gen[:r].tolist()
-                full = tokenizer.decode(g)
-                p = full.find(stop_marker)
-                if p != -1:
-                    for k in range(len(g)):
-                        if len(tokenizer.decode(g[:k + 1])) > p:
-                            r = k
-                            break
+                r = _marker_cut(tokenizer, gen[:r], stop_marker)
             resp = gen[:r]
             responses[i] = tokenizer.decode(resp, skip_special_tokens=True)
             seqs.append(torch.cat([prompts[j].to(device), resp]))
@@ -203,5 +238,6 @@ def generate_and_extract_batched(
                     avg[i, l] = span.mean(dim=0).cpu().numpy().astype(np.float16)
                     last[i, l] = span[-1].cpu().numpy().astype(np.float16)
         del hs_all, out
+        _require_finite(avg[idx], last[idx], device, f"records {idx[0]}..{idx[-1]}")
 
     return avg, last, responses

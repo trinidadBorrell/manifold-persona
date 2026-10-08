@@ -12,6 +12,7 @@ import os
 import subprocess
 import sys
 from datetime import datetime
+from importlib import metadata
 from pathlib import Path
 
 from manifold_persona.config import REPO_ROOT
@@ -48,10 +49,33 @@ def _data_entry(d: Path) -> dict:
     return entry
 
 
+def _version(dist: str):
+    try:
+        return metadata.version(dist)
+    except metadata.PackageNotFoundError:
+        return None
+
+
+def resolved_commit(repo: str, revision: str = None):
+    """Commit sha that `repo@revision` resolves to in the local HF cache, or None.
+
+    A 40-hex revision is already a commit. Local paths and repos missing from
+    the cache give None.
+    """
+    rev = revision or "main"
+    if len(rev) == 40 and all(c in "0123456789abcdef" for c in rev):
+        return rev
+    try:
+        from huggingface_hub.constants import HF_HUB_CACHE
+    except ImportError:
+        return None
+    ref = Path(HF_HUB_CACHE) / ("models--" + repo.replace("/", "--")) / "refs" / rev
+    return ref.read_text().strip() if ref.is_file() else None
+
+
 def run_stamp(data_dirs=None) -> dict:
     """Provenance dict for the current process. `data_dirs`: paths of the data
     directories the run reads (e.g. the resolved role-embeddings dir)."""
-    import numpy, sklearn
     stamp = {
         "timestamp": datetime.now().isoformat(timespec="seconds"),
         "git_commit": _git("rev-parse", "HEAD"),
@@ -59,8 +83,12 @@ def run_stamp(data_dirs=None) -> dict:
         "git_dirty": bool(_git("status", "--porcelain")),
         "argv": sys.argv,
         "python": sys.version.split()[0],
-        "numpy": numpy.__version__,
-        "sklearn": sklearn.__version__,
+        # Read from package metadata so a missing optional library is recorded
+        # as None instead of failing the whole stamp.
+        "numpy": _version("numpy"),
+        "sklearn": _version("scikit-learn"),
+        "torch": _version("torch"),
+        "transformers": _version("transformers"),
         "env": {k: v for k, v in os.environ.items() if k.startswith("MP_")},
         "data": [_data_entry(Path(d)) for d in (data_dirs or []) if Path(d).is_dir()],
     }

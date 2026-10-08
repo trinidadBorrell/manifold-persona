@@ -84,6 +84,52 @@ def check_attention_sink(manifest: dict, in_dir: Path) -> None:
         "Re-extract the cloud, or set MP_ALLOW_UNCLEAN=1 to load it anyway.")
 
 
+def _source_layers(manifest: dict):
+    """hidden_states indices a thinned cloud holds, in array order, or None."""
+    src = manifest.get("source_layers")
+    if not src and manifest.get("source_layer") is not None:   # fetch_resp40's older key
+        src = [manifest["source_layer"]]
+    return [int(s) for s in src] if src else None
+
+
+def layer_arg_for(manifest: dict, hs: int):
+    """The `layer` argument that makes `load_layer` return hidden_states[hs], or
+    None when the cloud does not hold that layer. Inverse of hidden_state_index."""
+    src = _source_layers(manifest)
+    if src:
+        return src.index(hs) if hs in src else None
+    return hs if hs < int(manifest.get("n_layers", 0)) else None
+
+
+def hidden_state_index(manifest: dict, layer: int = None):
+    """hidden_states index of the slice `load_layer(layer=...)` returns, or None.
+
+    Thinned clouds keep the real index in `source_layers` and are indexed by
+    position into it; full stacks are indexed by hidden_states index directly,
+    defaulting to `primary_layer`. None means the manifest cannot say.
+    """
+    src = _source_layers(manifest)
+    pos = 0 if layer is None else int(layer)
+    if src:
+        return int(src[pos]) if pos < len(src) else None
+    if layer is not None:
+        return int(layer)
+    pl = manifest.get("primary_layer")
+    return int(pl) if pl is not None and int(manifest.get("n_layers", 0)) > 1 else None
+
+
+def layer_label(manifest: dict, layer: int = None) -> int:
+    """Layer number for file names and titles: the real hidden-state index.
+
+    A thinned cloud stores its one layer at index 0; labelling that "L0"
+    hides which depth the numbers come from.
+    """
+    hs = hidden_state_index(manifest, layer)
+    if hs is not None:
+        return hs
+    return int(layer) if layer is not None else int(manifest["primary_layer"])
+
+
 def load_layer(view: str = "prompt_avg", layer: int = None,
                in_dir: Path = EMBEDDINGS_DIR) -> Tuple[np.ndarray, pd.DataFrame, dict]:
     """Load a single layer as [N, hidden] float32 + metadata + manifest.
