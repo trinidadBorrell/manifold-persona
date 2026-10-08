@@ -325,7 +325,7 @@ def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
       "cloud to those roles; the TSS anchor `global_mean` becomes that subset's own mean and "
       "is held fixed across the real fit and all permutations, so only SSR moves.\n")
     A("**Step 2 — positive control for this cell, before anything else.** "
-      "`pipeline.positive_control(n_roles=n, per_role=25, k=3, target_radius=<subset role "
+      "`pipeline.positive_control(n_roles=n, per_role=<the cloud's points per role>, k=3, target_radius=<subset role "
       "spread>, noise=<subset within-role per-dim RMS>)`: a synthetic, genuinely curved, "
       "genuinely 3-dimensional manifold in 50 dims plus isotropic noise, calibrated to this "
       "cell's own signal-to-noise, scored by the same pipeline against its own 50-perm null. "
@@ -432,11 +432,18 @@ def build_sweep_report(df: pd.DataFrame, refs: dict, verdicts: dict, reg: dict,
     exc = {n: rr[n][0] - pcrr[n][0] for n in ns}
     n_exc_hi = max(exc, key=lambda k: exc[k])
     n_exc_lo = min(exc, key=lambda k: exc[k])
-    share = (f"**{abs(d_pc / d_rr) * 100:.0f}% of the decider's own change across the "
-             f"sweep** is reproduced by data with no role content"
-             if abs(d_rr) > 1e-3 else
-             "**the decider itself does not change across the sweep**, so there is no "
-             "share of it to attribute")
+    if abs(d_rr) <= 1e-3:
+        share = ("**the decider itself does not change across the sweep**, so there is no "
+                 "share of it to attribute")
+    elif d_pc * d_rr <= 0:
+        share = ("**the role-free control moves the other way** (or not at all), so it "
+                 "reproduces none of the decider's change")
+    else:
+        ratio = d_pc / d_rr
+        share = (f"**{min(ratio, 1) * 100:.0f}% of the decider's own change across the "
+                 f"sweep** is reproduced by data with no role content"
+                 + (f" (the control moves {ratio:.1f}x as far as the decider)"
+                    if ratio > 1 else ""))
     A(f"So a synthetic manifold at matched SNR changes by {_f(d_pc, 2)} in rel. reduction "
       f"going from n={hi_n} to n={lo_n}, versus {_f(d_rr, 2)} for the real roles — {share}. "
       "The excess column is the part that is not: "

@@ -86,9 +86,20 @@ def unit_normalize(X: np.ndarray) -> np.ndarray:
     return X / np.clip(np.linalg.norm(X, axis=1, keepdims=True), 1e-12, None)
 
 
+def _check_cosine_input(role_means: np.ndarray) -> None:
+    """Cosine is undefined for a NaN or zero vector; scipy returns NaN for it,
+    which turns into NaN thresholds or a spurious singleton component."""
+    norms = np.linalg.norm(role_means, axis=1)
+    bad = ~np.isfinite(norms) | (norms == 0)
+    if bad.any():
+        raise ValueError("%d role mean(s) are non-finite or zero; cosine is "
+                         "undefined for them" % int(bad.sum()))
+
+
 def cosine_percentile_thresholds(role_means: np.ndarray,
                                  pcts=(25, 50, 75)) -> dict:
     """tau_1<tau_2<tau_3 at cosine-sim percentiles of the role-mean pairs."""
+    _check_cosine_input(role_means)
     U = unit_normalize(role_means)
     sims = 1.0 - pdist(U, metric="cosine")     # cosine similarities of all pairs
     return {p: float(np.percentile(sims, p)) for p in pcts}
@@ -97,6 +108,7 @@ def cosine_percentile_thresholds(role_means: np.ndarray,
 def cosine_components(role_means: np.ndarray, tau: float) -> np.ndarray:
     """Connected components of the graph {edge if cos-sim >= tau}. Returns a
     component label per role."""
+    _check_cosine_input(role_means)
     U = unit_normalize(role_means)
     S = 1.0 - squareform(pdist(U, metric="cosine"))
     A = (S >= tau).astype(int)
@@ -172,7 +184,14 @@ def construction_C_raw(cloud: Cloud, k: int = K_INTRINSIC, n_folds: int = 5,
     approximation, robustness only."""
     rng = np.random.default_rng(seed)
     N = cloud.raw.shape[0]
-    fold = rng.integers(0, n_folds, size=N)
+    # Folds are whole roles: a role's points share its mean, so splitting one
+    # role across train and test lets the test points be predicted from their
+    # own role.
+    names = list(cloud.role_names)
+    role_fold = np.empty(len(names), dtype=int)
+    role_fold[rng.permutation(len(names))] = np.arange(len(names)) % n_folds
+    ridx = {r: i for i, r in enumerate(names)}
+    fold = role_fold[[ridx[r] for r in cloud.roles]]
     ssr, tss = 0.0, 0.0
     for f in range(n_folds):
         train = cloud.raw[fold != f]
@@ -319,6 +338,13 @@ def permutation_null_tau(cloud: Cloud, tau: float, n_perms: int = 40,
 
 
 def separation_stats(real_r2: float, null_r2: np.ndarray) -> dict:
+    null_r2 = np.asarray(null_r2, dtype=float)
+    # A NaN real R2 would compare False against every draw and get the smallest
+    # possible p; failed null draws would bias its median. Refuse both.
+    if not np.isfinite(real_r2) or not np.isfinite(null_r2).all():
+        raise FloatingPointError(
+            "separation_stats: real R2=%r, %d of %d null draws non-finite"
+            % (real_r2, int((~np.isfinite(null_r2)).sum()), len(null_r2)))
     p = float((np.sum(null_r2 >= real_r2) + 1) / (len(null_r2) + 1))
     z = float((real_r2 - null_r2.mean()) / (null_r2.std() + 1e-12))
     nre_real = 1 - real_r2

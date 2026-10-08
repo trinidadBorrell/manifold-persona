@@ -71,6 +71,9 @@ def gaussian_reference(role_means: np.ndarray, n: int, n_ref: int = 100,
     Structureless by construction, matched in n and in second-order statistics.
     Returns {est: {"median":, "q25":, "q75":}} over `n_ref` draws.
     """
+    if not np.isfinite(role_means).all():
+        raise ValueError("gaussian_reference: role_means has non-finite values; "
+                         "every reference draw would be NaN")
     rng = np.random.default_rng(seed)
     mu = role_means.mean(0)
     cov = np.cov(role_means, rowvar=False)

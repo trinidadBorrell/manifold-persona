@@ -53,6 +53,7 @@ from __future__ import annotations
 
 import datetime
 import json
+import os
 import platform
 import sys
 from pathlib import Path
@@ -188,7 +189,7 @@ def fig_hist(real, neg_cvs, pos_vals, figs):
     axes[0].hist(real[np.isfinite(real)], bins=30, color="#2e7d32", alpha=.85)
     axes[0].set_xlabel("local intrinsic dimension (participation ratio)")
     axes[0].set_ylabel("# roles")
-    axes[0].set_title(f"Real roles — one tight mode\nCV = {cv(real):.3f}")
+    axes[0].set_title(f"Real roles\nCV = {cv(real):.3f}")
     axes[1].hist(pos_vals[np.isfinite(pos_vals)], bins=30, color="#c62828", alpha=.85)
     axes[1].set_xlabel("local intrinsic dimension (participation ratio)")
     axes[1].set_title("Positive control (4-D + 14-D glued)\n"
@@ -234,8 +235,7 @@ def fig_k(per_k, neg_by_k, pos_by_k, figs):
     ax.plot(ks, [pos_by_k[k] for k in ks], "^--", lw=2,
             color="#c62828", label="positive control (two manifolds)")
     ax.set_xlabel("neighbourhood size k"); ax.set_ylabel("CV of local ID")
-    ax.set_title("Sensitivity to k — real sits just above the one-manifold floor,\n"
-                 "far below the two-manifold control (and converges to the floor at k=40)")
+    ax.set_title("Sensitivity to k: CV of local ID for real roles and both controls")
     ax.legend(fontsize=8); ax.grid(alpha=.25, lw=.6)
     _save(fig, figs / "lid04_cv_vs_k.png")
 
@@ -331,8 +331,13 @@ def main(argv=None) -> None:
         f.write("role,local_id,assistant_axis_proj\n")
         for nm, r_, p_ in zip(names, real, proj):
             f.write(f"{nm},{float(r_)},{float(p_)}\n")
+    from manifold_persona.config import ROLE_EMBEDDINGS_DIR
+    from manifold_persona.provenance import run_stamp
+    role_dir = os.environ.get("MP_ROLE_DIR", str(ROLE_EMBEDDINGS_DIR))
     write_manifest(run, {
         "run": stamp, "script": "manifold/local_id.py", "seed": SEED,
+        "input_dir": str(Path(role_dir).resolve()),
+        "provenance": run_stamp(data_dirs=[role_dir]),
         "view": "prompt_avg", "layer": cloud.layer,
         "model": cloud.manifest.get("model_name"), "d_ambient": int(X.shape[1]),
         "python": sys.version.split()[0], "platform": platform.platform(),
@@ -349,8 +354,9 @@ def write_md(run: Path, r: dict) -> None:
     real, neg, pos = r["real"], r["negative_control"], r["positive_control"]
     above = real["cv"] > neg["cv_p95"]
     frac = (real["cv"] - neg["cv_median"]) / (pos["cv"] - neg["cv_median"])
-    verdict = ("**more variable than a single homogeneous manifold**, but only mildly — "
-               f"it sits {frac:.0%} of the way from the one-manifold floor to the "
+    verdict = ("**more variable than a single homogeneous manifold**"
+               + (", but only mildly" if frac < 0.5 else "")
+               + f" — it sits {frac:.0%} of the way from the one-manifold floor to the "
                "two-manifold control" if above else
                "**uniform** — indistinguishable from a single homogeneous manifold")
     L = []
@@ -403,22 +409,26 @@ def write_md(run: Path, r: dict) -> None:
     A(f"| Positive control (two manifolds) | "
       f"{pos['mean_lo_manifold']:.1f} / {pos['mean_hi_manifold']:.1f} | {pos['cv']:.3f} |\n")
 
-    A(f"**Positive control: passes, with a caveat.** The two planted regions come out at "
-      f"{pos['mean_lo_manifold']:.1f} and {pos['mean_hi_manifold']:.1f} — clearly "
-      f"*separated*, and in the right order, but both are badly **underestimated** "
+    pc_ratio = pos["cv"] / neg["cv_median"] if neg["cv_median"] > 0 else float("inf")
+    pc_pass = pos["cv"] > neg["cv_p95"]
+    A(f"**Positive control: {'passes' if pc_pass else 'FAILS'}.** The two planted regions "
+      f"come out at {pos['mean_lo_manifold']:.1f} and {pos['mean_hi_manifold']:.1f} "
       f"(planted: 4 and 14). A {k}-point patch cannot span 14 directions, so the estimator "
-      f"compresses high dimensions toward the low end. What matters for this study is that "
-      f"the CV, {pos['cv']:.3f}, is ~3x the noise floor: the method **can** detect two "
-      f"glued manifolds. It just cannot be trusted for absolute dimension.\n")
+      f"compresses high dimensions toward the low end. Its CV, {pos['cv']:.3f}, is "
+      f"{pc_ratio:.1f}x the noise floor and "
+      f"{'above' if pc_pass else 'NOT above'} the floor's 95th percentile "
+      f"({neg['cv_p95']:.3f}), so the method "
+      f"{'can' if pc_pass else 'cannot'} detect two glued manifolds here. "
+      "It cannot be trusted for absolute dimension.\n")
 
     A(f"**Real data: {verdict}.** Local dimension averages {real['mean']:.2f} across roles "
       f"(range {real['min']:.1f}–{real['max']:.1f}), with CV {real['cv']:.3f} against a "
       f"one-manifold floor of {neg['cv_median']:.3f} "
       f"({neg['cv_p5']:.3f}–{neg['cv_p95']:.3f}); p = {neg['p_real_ge_null']:.3f} against "
-      f"{neg['n_draws']} one-manifold draws. So the cloud is **not perfectly homogeneous** — "
-      "but it is nowhere near the two-manifold control, and the histogram has one mode, "
-      "not two. This is the signature of a single manifold that is a bit thicker in some "
-      "places than others, not of two objects glued together.\n")
+      f"{neg['n_draws']} one-manifold draws. The two-manifold control's CV is "
+      f"{pos['cv']:.3f}; real roles reach {frac:.0%} of the way from the floor to it. "
+      "Whether the histogram (lid01) has one mode or two is read from the figure; "
+      "this script does not test it.\n")
 
     A(f"**Is the variation organised?** Neighbouring roles' local dimensions correlate at "
       f"r = {real['neighbour_corr']:.2f} (the positive control gives "

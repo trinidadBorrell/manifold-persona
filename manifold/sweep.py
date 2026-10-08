@@ -62,8 +62,8 @@ def run_cell(cloud, n: int, seed: int, n_perm: int, say) -> dict:
     noise, spread = cloud_scale(sub)
 
     # --- 0b positive control, calibrated to THIS cell -----------------------
-    pc = P.positive_control(n_roles=n, per_role=25, k=K, target_radius=spread,
-                            noise=noise, seed=0)
+    pc = P.positive_control(n_roles=n, per_role=int(round(sub.raw.shape[0] / n)), k=K,
+                            target_radius=spread, noise=noise, seed=0)
     pc_pass = bool(pc["stats"]["p"] < ALPHA and pc["stats"]["rel_reduction"] >= FLOOR)
 
     # --- 1 decider ----------------------------------------------------------
@@ -240,31 +240,40 @@ def main(argv=None) -> None:
     SP.fig04_sweep_posctrl(df, run_dir / "figures", floor=FLOOR)
 
     # ------------------------------------------------------- decision rule
-    rr = df.groupby("n")["rel_reduction"].agg(["mean", "min", "max"])
-    if 276 not in rr.index:          # --smoke only; the real run always has it
+    if 276 not in set(df["n"]):      # --smoke only; the real run always has it
         say("\n[5] DECISION RULE skipped (no n=276 cell — smoke run, not a result).")
         json.dump({"status": "smoke"}, open(run_dir / "data" / "verdict.json", "w"))
         say(f"\nSMOKE DONE in {time.time()-t0:.0f}s -> {run_dir}")
         return
-    rr276 = float(rr.loc[276, "mean"])
+    # Cells whose positive control failed cannot be read, so every branch of
+    # the rule (baseline included) uses only the cells that passed.
+    ok = df[df["pc_pass"]]
+    rr = ok.groupby("n")["rel_reduction"].agg(["mean", "min", "max"])
+    unreadable = [int(n) for n in (276, 10, 25) if n in set(df["n"]) and n not in rr.index]
     def _cell(n):
         return {"mean": float(rr.loc[n, "mean"]), "min": float(rr.loc[n, "min"]),
                 "max": float(rr.loc[n, "max"])}
     small = {n: _cell(n) for n in (10, 25) if n in rr.index}
-    better = all(
-        small[n]["mean"] >= rr276 + BAND and small[n]["min"] > float(rr.loc[276, "max"])
-        and float(df[(df["n"] == n)]["p"].max()) < ALPHA
-        and bool(df[(df["n"] == n)]["pc_pass"].all())
-        for n in small) if small else False
-    worse = (10 in rr.index) and (_cell(10)["mean"] <= rr276 - BAND)
-    decision = "small-n BETTER (hypothesis falsified)" if better else (
-        "small-n WORSE (hypothesis supported)" if worse else
-        "FLAT (hypothesis supported: legibility, not evidence)")
-    say(f"\n[5] DECISION RULE: RR(276)={rr276:.3f}  "
+    if unreadable:
+        rr276 = float(rr.loc[276, "mean"]) if 276 in rr.index else float("nan")
+        decision = (f"UNINTERPRETABLE (positive control failed in every cell at "
+                    f"n={unreadable})")
+    else:
+        rr276 = float(rr.loc[276, "mean"])
+        better = all(
+            small[n]["mean"] >= rr276 + BAND and small[n]["min"] > float(rr.loc[276, "max"])
+            and float(ok[ok["n"] == n]["p"].max()) < ALPHA
+            for n in small) if small else False
+        worse = (10 in rr.index) and (_cell(10)["mean"] <= rr276 - BAND)
+        decision = "small-n BETTER (hypothesis falsified)" if better else (
+            "small-n WORSE (hypothesis not falsified)" if worse else
+            "FLAT (hypothesis neither falsified nor confirmed)")
+    say(f"\n[5] DECISION RULE (cells with a passing positive control only): "
+        f"RR(276)={rr276:.3f}  "
         + "  ".join(f"RR({n})={small[n]['mean']:.3f}" for n in small)
         + f"  -> {decision}")
 
-    pmed = df.groupby("n")["p"].median().to_dict()
+    pmed = ok.groupby("n")["p"].median().to_dict()      # same cells as the rule
     holm_adj = holm({f"n={int(k)}": float(v) for k, v in pmed.items()})
 
     verdicts = {"decision": decision, "rr_276": rr276, "band": BAND,

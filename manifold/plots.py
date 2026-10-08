@@ -46,9 +46,11 @@ def fig_posctrl(pc: dict, out: Path):
 def fig01_null_vs_real(report: dict, nulls: dict, out: Path):
     try:
         names, reals, nulldists = [], [], []
-        # decider
-        names.append("C_role"); reals.append(report["decider"]["r2"])
-        nulldists.append(np.array(report["null_decider"]))
+        # decider, against the null that decides it (report["decider"]["null_used"])
+        used = report["decider"].get("null_used", "perm")
+        dec_null = report.get(f"null_decider_{used}", report["null_decider"])
+        names.append(f"C_role\n({used} null)"); reals.append(report["decider"]["r2"])
+        nulldists.append(np.array(dec_null))
         for pct, d in report.get("tau", {}).items():
             key = f"C_tau{pct}"
             if key in nulls:
@@ -67,8 +69,9 @@ def fig01_null_vs_real(report: dict, nulls: dict, out: Path):
                         xytext=(8, 0), fontsize=9)
         ax.set_xticks(range(1, len(names) + 1)); ax.set_xticklabels(names, rotation=20)
         ax.set_ylabel("manifold R²")
-        ax.set_title("Real R² (points) vs role-shuffle null (violins)\n"
-                     "decider = C_role (green); others exploratory (blue)")
+        ax.set_title("Real R² (points) vs null (violins)\n"
+                     f"decider = C_role vs its {used} null (green); others exploratory "
+                     "vs role-shuffle (blue)")
         _save(fig, out / "fig01_null_vs_real.png")
     except Exception as e:  # noqa: BLE001
         print("fig01 failed:", e)

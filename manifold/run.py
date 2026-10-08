@@ -74,6 +74,7 @@ def main(argv=None) -> None:
     report["n_roles"] = len(cloud.role_names)
     report["n_points"] = int(cloud.raw.shape[0])
     report["src_dir"] = os.environ.get("MP_ROLE_DIR", "data/embeddings_roles")
+    report["token_basis"] = cloud.manifest.get("token_basis", "prompt")
     # data-scale calibration for the positive control (audit finding 1):
     ridx = {r: i for i, r in enumerate(cloud.role_names)}
     pt_means = cloud.role_means[[ridx[r] for r in cloud.roles]]
@@ -83,7 +84,12 @@ def main(argv=None) -> None:
 
     # -------------------------------------------------------------- controls
     say("\n[1] POSITIVE CONTROL (curved k=3 manifold, calibrated to data; pass or STOP) ...")
-    pc = P.positive_control(k=P.K_INTRINSIC, target_radius=sig, noise=data_noise, seed=0)
+    # Same roles x points-per-role as the loaded cloud, so the control tests the
+    # pipeline at the run's own sample size, not a fixed 276 x 25.
+    n_roles_pc = len(cloud.role_names)
+    per_role_pc = int(round(cloud.raw.shape[0] / n_roles_pc))
+    pc = P.positive_control(n_roles=n_roles_pc, per_role=per_role_pc, k=P.K_INTRINSIC,
+                            target_radius=sig, noise=data_noise, seed=0)
     pc_pass = pc["stats"]["p"] < ALPHA and pc["stats"]["rel_reduction"] >= FLOOR
     say(f"    pos-ctrl R2={pc['r2']:.3f} null_med={pc['stats']['null_median']:.3f} "
         f"p={pc['stats']['p']:.3g} rel_red={pc['stats']['rel_reduction']:.2f} "
@@ -298,10 +304,14 @@ def main(argv=None) -> None:
 
 
 def _write_manifest(run_dir, stamp, t0, extra, status, cloud):
+    from manifold_persona.config import ROLE_EMBEDDINGS_DIR
     from manifold_persona.provenance import run_stamp
+    role_dir = os.environ.get("MP_ROLE_DIR", str(ROLE_EMBEDDINGS_DIR))
     manifest = {
         "run_id": stamp, "plan": PLAN, "status": status,
-        "provenance": run_stamp(),
+        # data_dirs adds the cloud's files (size, mtime) and its manifest sha256
+        "provenance": run_stamp(data_dirs=[role_dir]),
+        "input_dir": str(Path(role_dir).resolve()),
         "seed": 0, "D_ambient": P.D_AMBIENT, "k_intrinsic": P.K_INTRINSIC,
         "n_perm_decider": N_PERM_DECIDER, "n_perm_robust": N_PERM_ROBUST,
         "n_null_decider_draws": N_COORD_DECIDER,
@@ -311,8 +321,9 @@ def _write_manifest(run_dir, stamp, t0, extra, status, cloud):
                         "still computed and reported",
         "effect_floor_rel_reduction": FLOOR, "alpha": ALPHA,
         "view": "prompt_avg", "layer": cloud.layer,
+        "token_basis": cloud.manifest.get("token_basis", "prompt"),
         "model": cloud.manifest.get("model_name"),
-        "inputs": f"{os.environ.get('MP_ROLE_DIR', 'data/embeddings_roles')}/ "
+        "inputs": f"{role_dir}/ "
                   f"(prompt_avg, layer {cloud.layer}; no re-extraction)",
         "n_roles": len(cloud.role_names), "n_points": int(cloud.raw.shape[0]),
         "exclusions": "none (default role kept)",

@@ -14,9 +14,12 @@ Usage:
 from __future__ import annotations
 
 import sys
+import os
+import json
 from pathlib import Path
 
 import numpy as np
+from scipy.sparse import csgraph
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
@@ -73,9 +76,9 @@ def spectral_eigengap(cloud, out, knn=10, n_show=15):
     for i in range(len(C)):
         W[i, idx[i]] = np.clip(S[i, idx[i]], 0, None)
     W = np.maximum(W, W.T)
-    d = W.sum(1)
-    Dinv = np.diag(1.0 / np.sqrt(np.clip(d, 1e-12, None)))
-    L = np.eye(len(C)) - Dinv @ W @ Dinv               # normalised Laplacian
+    # scipy's normalised Laplacian gives an isolated node eigenvalue 0, so it
+    # counts as its own component (I - D^-1/2 W D^-1/2 would give it 1).
+    L = csgraph.laplacian(W, normed=True)
     ev = np.sort(np.linalg.eigvalsh(L))[:n_show]
     gaps = np.diff(ev)
     n_est = int(np.argmax(gaps[:8]) + 1)               # eigengap heuristic (search small N)
@@ -268,6 +271,24 @@ def _note(idr, sp, ps):
     return "\n".join(L)
 
 
+def _check_run_dir(run_dir: str) -> None:
+    """Refuse a run dir whose recorded input cloud is not the one loaded now."""
+    man_path = Path(run_dir) / "manifest.json"
+    if not man_path.exists():
+        raise SystemExit(f"{run_dir} has no manifest.json; pass a manifold.run output dir")
+    man = json.load(open(man_path))
+    from manifold_persona.config import ROLE_EMBEDDINGS_DIR
+    now = Path(os.environ.get("MP_ROLE_DIR", str(ROLE_EMBEDDINGS_DIR))).resolve()
+    recorded = man.get("input_dir")
+    if recorded is None:
+        raise SystemExit(f"{run_dir} predates input_dir records, so the cloud it used "
+                         "cannot be matched to the one loaded now; write to a new run dir")
+    if Path(recorded) != now:
+        raise SystemExit(f"{run_dir} was run on {recorded}, but MP_ROLE_DIR is {now}")
+
+
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else
-         "output/manifold_h1-2/2026-07-21T14-03")
+    if len(sys.argv) < 2:
+        raise SystemExit("usage: python -m manifold.analysis_extra <manifold.run output dir>")
+    _check_run_dir(sys.argv[1])
+    main(sys.argv[1])

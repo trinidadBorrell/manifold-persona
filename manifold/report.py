@@ -7,7 +7,8 @@ def build_report(report: dict, rows: list, stamp: str, stopped: bool) -> str:
     L.append(f"# REPORT — role manifold reconstruction (H1)\n")
     L.append(f"**Run:** `{stamp}`  ·  **Plan:** "
              f"`plans/2026-07-21-role-manifold-reconstruction.md`  ·  "
-             f"**Data:** `{report.get('src_dir', 'data/embeddings_roles')}/` prompt_avg, "
+             f"**Data:** `{report.get('src_dir', 'data/embeddings_roles')}/` prompt_avg "
+             f"({report.get('token_basis', 'prompt')}-token basis), "
              f"layer {report.get('layer', '?')}, "
              f"{report.get('model', '?')} (no re-extraction).")
     L.append("**Reproduce:** `.venv/bin/python -m manifold.run` (seed 0; not a git "
@@ -126,14 +127,20 @@ def build_report(report: dict, rows: list, stamp: str, stopped: bool) -> str:
                  f"{_f(r.get('p'))} | {_f(hp)} | {status} |")
     L.append("")
     if not any_holm_sig and holm:
+        expl = [r for r in rows if r["construction"] in holm]
+        r2s = [r["r2"] for r in expl if r.get("r2") is not None]
+        rrs = [r["rel_reduction"] for r in expl if r.get("rel_reduction") is not None]
+        dec = report.get("decider", {})
+        span = (f"Their R² spans {min(r2s):.2f}–{max(r2s):.2f} and their rel. reduction "
+                f"{min(rrs):.2f}–{max(rrs):.2f}; the decider reads R² "
+                f"{_f(dec.get('r2'))}, rel. reduction {_f(dec.get('rel_reduction'))} "
+                "against its own null. " if r2s and rrs else "")
         L.append("> **No exploratory construction survives Holm correction** "
-                 f"(all Holm p = {max(holm.values()):.3f} > 0.05). They are all "
-                 "*directionally consistent* with the decider (same ~0.65 R², ~0.45 "
-                 "relative reduction) but are not individually significant after "
-                 "correcting for the family — which is expected given each had only a "
-                 "40-permutation null (min attainable p ≈ 0.024). They corroborate the "
-                 "decider's direction; they do not independently confirm it. Per the "
-                 "plan, `prompt_last` and `k=2` are context only (no verdict).\n")
+                 f"(smallest Holm p = {min(holm.values()):.3f} > 0.05). " + span +
+                 "The exploratory rows use the role-shuffle null and the decider does "
+                 "not, so their rel. reductions are not comparable with the decider's "
+                 "and cannot confirm it. Per the plan, `prompt_last` and `k=2` are "
+                 "context only (no verdict).\n")
     tau = report.get("tau", {})
     if tau:
         def _mword(n):
@@ -183,11 +190,15 @@ def build_report(report: dict, rows: list, stamp: str, stopped: bool) -> str:
     # ---- interpretation guard + confounds
     L.append("## What this does and does not say\n")
     L.append("- A pass means **role assignment produces low-dimensional geometric "
-             "structure** in prompt (instruction) activations — *role geometry*, not "
+             f"structure** in {report.get('token_basis', 'prompt')}-token activations — *role geometry*, not "
              "\"persona essence is a manifold\".")
-    L.append("- These are **prompt** activations: the manifold is where the model sits "
-             "when *told* to be a role, not while *behaving* as one. Plan #2 (H2) must "
-             "confront that before steering behaviour along it.")
+    if report.get("token_basis", "prompt") == "prompt":
+        L.append("- These are **prompt** activations: the manifold is where the model sits "
+                 "when *told* to be a role, not while *behaving* as one. Plan #2 (H2) must "
+                 "confront that before steering behaviour along it.")
+    else:
+        L.append("- These are **response-token** activations: the manifold is where the "
+                 "model sits while answering in the role.")
     L.append("- Confounds: **question-topic structure** is mitigated by role-mean "
              "aggregation (each role vector averages its 5 questions); the deciding null "
              "**keeps the role-mean spread and the within-role noise** and removes only "
@@ -198,17 +209,20 @@ def build_report(report: dict, rows: list, stamp: str, stopped: bool) -> str:
 
     # ---- next
     d_ok = d["verdict"] == "SUPPORTED"
+    basis = report.get("token_basis", "prompt")
     L.append("## Next step\n")
     if d_ok:
-        L.append("H1 **supported** for prompt activations. The fitted C_role surface is "
-                 "saved (`data/manifolds_C_role.npz`) for **plan #2 (H2 steering)** — "
-                 "which should still weigh the prompt-vs-response representation "
-                 "question before steering.")
+        L.append(f"H1 **supported** for {basis}-token activations. The fitted C_role "
+                 "surface is saved (`data/manifolds_C_role.npz`) for **plan #2 (H2 "
+                 "steering)**"
+                 + (" — which should still weigh the prompt-vs-response representation "
+                    "question before steering." if basis == "prompt" else "."))
     else:
-        L.append("H1 **not supported / weak** for prompt activations. Per the plan we do "
-                 "**not** rescue by changing metric/threshold/dim; the recommendation for "
-                 "plan #2 is to move to **response activations** before any steering "
-                 "study.")
+        L.append(f"H1 **not supported / weak** for {basis}-token activations. Per the "
+                 "plan we do **not** rescue by changing metric/threshold/dim"
+                 + ("; the recommendation for plan #2 is to move to **response "
+                    "activations** before any steering study." if basis == "prompt"
+                    else "."))
     return "\n".join(L)
 
 
