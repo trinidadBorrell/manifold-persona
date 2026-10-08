@@ -87,7 +87,8 @@ def density_metrics(X: np.ndarray, k: int = K_NEIGHBOURS) -> tuple:
     knn = knn_distances(P, k)
     knn_abs = knn_distances(np.asarray(X, float) - np.asarray(X, float).mean(0), k)
     bw = float(np.median(knn))           # data-adaptive; see the docstring
-    logd = kde_logdensity(P, bw)
+    # A zero bandwidth (duplicate points) gives a meaningless huge density.
+    logd = kde_logdensity(P, bw) if bw > 0 else np.full(len(P), np.nan)
 
     mean_knn = float(np.mean(knn))
     out = {

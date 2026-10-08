@@ -192,7 +192,14 @@ def control_verdict(pc: dict, tol: float = TOLERANCE,
     fails = []
     for est in GATED_ESTIMATORS:
         sub = cal[cal.planted_d <= max_d]
-        rel = (sub[est] - sub.planted_d).abs() / sub.planted_d
+        vals = pd.to_numeric(sub[est], errors="coerce")
+        # A failed estimate (None/NaN) is a failure, not a skipped row: pandas
+        # max() drops NaN and NaN > tol is False, so the error test misses it.
+        if not np.isfinite(vals.to_numpy(float)).all():
+            fails.append(f"{est}: {int((~np.isfinite(vals.to_numpy(float))).sum())} "
+                         f"of {len(vals)} planted manifolds gave no estimate")
+            continue
+        rel = (vals - sub.planted_d).abs() / sub.planted_d
         worst = float(rel.max())
         if worst > tol:
             bad = sub.loc[rel.idxmax()]

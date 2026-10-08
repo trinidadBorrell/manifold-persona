@@ -92,8 +92,11 @@ def _spectrum(Xc: np.ndarray) -> dict:
     says how evenly variance is spread. Both are continuous, so unlike
     PCA_dim_90pct they cannot be pinned to the design's additive rank.
     """
-    lam = np.linalg.svd(Xc, compute_uv=False) ** 2
-    lam = lam[lam > 0]
+    s = np.linalg.svd(Xc, compute_uv=False)
+    # Relative rank tolerance (numpy.linalg.matrix_rank's rule): singular values
+    # at float-rounding level are zeros, and kept they dominate the log-log fit.
+    tol = s.max(initial=0.0) * max(Xc.shape) * np.finfo(s.dtype).eps
+    lam = s[s > tol] ** 2
     if lam.size < 3:
         return {"eig_decay_exponent": np.nan, "effective_rank": np.nan}
     m = min(SPECTRUM_RANKS, lam.size)
@@ -241,4 +244,19 @@ def geometry_columns(df) -> list:
     constant column that a scaler would drop anyway; excluding it here makes the
     predictor list explicit instead of implicit.
     """
-    return [c for c in PANEL_COLS if c in df.columns and df[c].std() > 0]
+    keep, dropped = [], {}
+    for c in PANEL_COLS:
+        if c not in df.columns:
+            continue
+        n_nan = int(df[c].isna().sum())
+        if n_nan == len(df):
+            dropped[c] = "all NaN (estimator failed)"
+        elif not df[c].std() > 0:
+            dropped[c] = "constant"
+        else:
+            keep.append(c)
+            if n_nan:
+                print(f"WARNING: panel column {c} has {n_nan} NaN row(s)")
+    if dropped:
+        print(f"panel columns left out: {dropped}")
+    return keep

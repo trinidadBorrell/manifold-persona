@@ -82,11 +82,18 @@ def small_matrix_ops():
         yield
 
 
-def assert_finite(df, what: str = "results"):
+def assert_finite(df, what: str = "results", allow_nan: bool = False):
     """Guard for the suppression in :func:`small_matrix_ops` — a genuine
-    numerical failure must still stop the run, not vanish into ignored flags."""
+    numerical failure must still stop the run, not vanish into ignored flags.
+
+    NaN counts as a failure too (estimators return NaN or None when they
+    fail). Pass ``allow_nan=True`` only where a missing value is a designed
+    outcome, not an error.
+    """
     num = df.select_dtypes(include="number")
-    bad = num.columns[num.apply(lambda c: np.isinf(c.to_numpy(dtype=float)).any())]
+    bad = num.columns[num.apply(lambda c: (np.isinf(c.to_numpy(dtype=float)).any()
+                                           or (not allow_nan
+                                               and np.isnan(c.to_numpy(dtype=float)).any())))]
     if len(bad):
         raise FloatingPointError(f"non-finite {what} in columns: {list(bad)}")
     return df
@@ -281,7 +288,12 @@ def design_null_draws(clouds, factors, n_draws: int = 100, seed: int = 0):
     """
     n_i, n_q, _ = grid_shape(factors)
     A, B = _effect_covariances(clouds, factors)
-    SA, SB = _sqrt_cov(A), _sqrt_cov(B)
+    # Each role's effects are centred, so their pooled covariance is (n-1)/n of
+    # the effect variance; the draws are centred again downstream. Scale back
+    # so a null role carries the same effect variance as a real one.
+    # A one-level factor has a zero effect, so it needs no correction.
+    SA = _sqrt_cov(A) * (np.sqrt(n_i / (n_i - 1)) if n_i > 1 else 1.0)
+    SB = _sqrt_cov(B) * (np.sqrt(n_q / (n_q - 1)) if n_q > 1 else 1.0)
     rng = np.random.default_rng(seed)
     instr = np.repeat(np.arange(n_i), n_q)
     quest = np.tile(np.arange(n_q), n_i)
@@ -298,7 +310,8 @@ def gaussian_null_draws(clouds, n_draws: int = 100, seed: int = 0):
     covariance (each role centred before pooling) and to the points-per-role."""
     W = np.concatenate([Xr - Xr.mean(0) for Xr in clouds.values()])
     n_per = len(next(iter(clouds.values())))
-    S = _sqrt_cov(W)
+    # Role-centring removes one df per role: undo the (n-1)/n shrink.
+    S = _sqrt_cov(W) * (np.sqrt(n_per / (n_per - 1)) if n_per > 1 else 1.0)
     rng = np.random.default_rng(seed)
 
     def gen():

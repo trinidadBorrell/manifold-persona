@@ -43,6 +43,7 @@ import hdbscan
 
 from common import (load_role_clouds, resolve_run_dir, savefig, design_null_draws,
                     band, small_matrix_ops, assert_finite, grid_shape, C_REAL, C_DESIGN, C_INSTR, C_QUEST)
+from manifold_persona.io import layer_label
 
 
 def k_range(n_points: int, n_i: int, n_q: int) -> range:
@@ -140,7 +141,7 @@ def main():
 
     t0 = time.time()
     roles, clouds, factors, manifest = load_role_clouds(args.view, args.layer)
-    layer = args.layer if args.layer is not None else manifest["primary_layer"]
+    layer = layer_label(manifest, args.layer)
     n_per = len(next(iter(clouds.values())))
     n_i, n_q, add_rank = grid_shape(factors)
     ks = k_range(n_per, n_i, n_q)
@@ -156,7 +157,9 @@ def main():
                          **cluster_one(clouds[r], instr, quest, n_i, n_q, args.pca_var)})
             if (i + 1) % 50 == 0:
                 print(f"  {i+1}/{len(roles)} roles  ({time.time()-t0:.1f}s)")
-    df = assert_finite(pd.DataFrame(rows), "per-role results")
+    # internal_scores returns None when a method finds fewer than 2 clusters;
+    # that missing score is a designed outcome, not a numerical failure.
+    df = assert_finite(pd.DataFrame(rows), "per-role results", allow_nan=True)
 
     print(f"design null: {args.n_null} draws ...")
     draws = list(design_null_draws(clouds, factors, args.n_null))   # eigh: wants threads

@@ -20,15 +20,16 @@ from scipy import stats
 
 
 def bh_fdr(p):
-    """Benjamini-Hochberg adjusted p-values (same order as input)."""
+    """Benjamini-Hochberg adjusted p-values (same order as input).
+
+    A NaN p-value is not a test: it stays NaN and is left out of the family,
+    so it cannot change the other q-values.
+    """
     p = np.asarray(p, dtype=float)
-    n = len(p)
-    order = np.argsort(p)
-    adj = np.empty(n)
-    prev = 1.0
-    for rank, i in enumerate(reversed(order), start=1):
-        prev = min(prev, p[i] * n / (n - rank + 1))
-        adj[i] = prev
+    adj = np.full(p.shape, np.nan)
+    ok = np.isfinite(p)
+    if ok.any():
+        adj[ok] = stats.false_discovery_control(p[ok], method="bh")
     return adj
 
 
@@ -46,6 +47,8 @@ def partial_corr(x, y, z):
     ry = y - Z @ np.linalg.lstsq(Z, y, rcond=None)[0]
     r = float(np.corrcoef(rx, ry)[0, 1])
     n, k = len(x), 1
+    if not np.isfinite(r) or n - k - 2 <= 0:
+        return r, float("nan")
     if abs(r) >= 1:
         return r, 0.0
     t = r * np.sqrt((n - k - 2) / (1 - r ** 2))
@@ -68,9 +71,19 @@ def partial_corr_multi(x, y, Z):
         A = np.column_stack([np.ones(len(x)), Z])
         rx = x - A @ np.linalg.lstsq(A, x, rcond=None)[0]
         ry = y - A @ np.linalg.lstsq(A, y, rcond=None)[0]
-        r = float(np.corrcoef(rx, ry)[0, 1])
+        # Nothing left after the controls (x or y is a control, or constant):
+        # the residual correlation is float noise, not a partial r.
+        if (x.var() == 0 or y.var() == 0
+                or rx.var() <= 1e-12 * x.var() or ry.var() <= 1e-12 * y.var()):
+            r = float("nan")
+        else:
+            r = float(np.corrcoef(rx, ry)[0, 1])
         n, k = len(x), Z.shape[1]
-    if not np.isfinite(r) or abs(r) >= 1:
+    # An undefined r (a constant column) or no residual df has no p-value;
+    # 0.0 here would read as the strongest possible effect.
+    if not np.isfinite(r) or n - k - 2 <= 0:
+        return r, float("nan")
+    if abs(r) >= 1:
         return r, 0.0
     t = r * np.sqrt((n - k - 2) / (1 - r ** 2))
     return r, float(2 * stats.t.sf(abs(t), df=n - k - 2))
@@ -84,6 +97,9 @@ def boot_ci(x, y, Z, rng, n_boot: int = 2000):
     manufacture precision that does not exist.
     """
     n = len(x)
+    # No interval around an undefined point estimate.
+    if not np.isfinite(partial_corr_multi(x, y, Z)[0]):
+        return None, None
     out = np.empty(n_boot)
     for b in range(n_boot):
         idx = rng.integers(0, n, n)
@@ -92,9 +108,13 @@ def boot_ci(x, y, Z, rng, n_boot: int = 2000):
                                         Z[idx] if Z is not None else None)[0]
         except Exception:  # noqa: BLE001 — degenerate resample
             out[b] = np.nan
-    out = out[np.isfinite(out)]
-    if out.size < 100:
+    ok = np.isfinite(out)
+    # Dropping failed resamples conditions the CI on the non-degenerate ones;
+    # past a small share that is a different interval, so give none.
+    if ok.mean() < 0.95:
+        print(f"boot_ci: {int((~ok).sum())} of {n_boot} resamples undefined; no CI")
         return None, None
+    out = out[ok]
     return float(np.percentile(out, 2.5)), float(np.percentile(out, 97.5))
 
 
