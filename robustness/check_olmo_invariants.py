@@ -52,7 +52,6 @@ import pandas as pd
 
 REPO = Path(__file__).resolve().parents[1]
 COMPACT = REPO / "output" / "olmo7b_hf_inputs_clean" / "compact"
-META_DIR = REPO / "output"
 PINS_FILE = Path(__file__).resolve().parent / "olmo_invariants.json"
 
 STAGES = ["base", "dpo", "rlvr"]
@@ -83,7 +82,9 @@ STRUCT = [
 def stage_axis_and_pr(stage: str) -> tuple[np.ndarray, np.ndarray]:
     """Return (axis[depth, hid] unit-norm, pr[depth]) recomputed from the cloud."""
     npy = COMPACT / stage / "prompt_avg_depths.npy"
-    meta_path = META_DIR / f"meta_olmo_{stage}.parquet"
+    # The labels written with the array, not a separate run's metadata: a
+    # row-count match cannot show two runs share their row order.
+    meta_path = COMPACT / stage / "metadata.parquet"
     A = np.load(npy, mmap_mode="r")
     meta = pd.read_parquet(meta_path)
     if len(meta) != A.shape[0]:

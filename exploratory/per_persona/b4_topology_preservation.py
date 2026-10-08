@@ -19,7 +19,8 @@ Three readouts:
      stages, per depth (layers 9/17/23)
 
 Run:
-    .venv/bin/python exploratory/per_persona/b4_topology_preservation.py
+    .venv/bin/python exploratory/per_persona/b4_topology_preservation.py \
+        --outdir output/b4_topology_preservation
 """
 from __future__ import annotations
 
@@ -28,6 +29,8 @@ import os
 # The task asks for Betti/H0/H1; maxdim=1 also keeps the bootstrap cheap.
 os.environ.setdefault("MP_RIPSER_MAXDIM", "1")
 
+import argparse
+import hashlib
 import json
 import sys
 import time
@@ -44,6 +47,7 @@ sys.path.insert(0, str(HERE))          # sibling modules: topology, common
 from manifold_persona.common import aggregate_by_role, assistant_axis
 from topology import topology_metrics   # per_persona/topology.py (PCA-space PH)
 from common import pca_stats            # per_persona/common.py (participation ratio)
+from manifold_persona.provenance import write_stamp
 
 STAGES = ["base", "dpo", "rlvr"]
 DEPTHS = {0: 9, 1: 17, 2: 23}          # compact depth index -> OLMo layer
@@ -51,8 +55,9 @@ L_DEPTH = 1                            # layer 17
 D_PCA = 50
 SEED = 0
 B_BOOT = 20                           # bootstrap resamples per stage
-NPY = "output/olmo7b_hf_inputs_clean/compact/{}/prompt_avg_depths.npy"
-META = "output/meta_olmo_{}.parquet"
+CLOUD = "output/olmo7b_hf_inputs_clean/compact/{}"
+NPY = CLOUD + "/prompt_avg_depths.npy"
+META = CLOUD + "/metadata.parquet"         # the rows of NPY, written with it
 
 # Scale-free signatures the preservation verdict rests on. Absolute
 # H0/H1_total_persistence and cloud_diameter carry the cloud's overall scale,
@@ -114,12 +119,19 @@ def bootstrap_band(Xf: np.ndarray, groups: list, rng) -> pd.DataFrame:
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--outdir", default="output/b4_topology_preservation")
+    args = ap.parse_args()
+    out_dir = Path(args.outdir)
+    out_dir.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
     point, boot, dgms_by_stage, axes = {}, {}, {}, {}
 
     for st in STAGES:
         meta = pd.read_parquet(META.format(st))
         arr = np.load(NPY.format(st), mmap_mode="r")     # [55200,3,4096] fp16
+        if len(meta) != arr.shape[0]:
+            raise SystemExit(f"{st}: {len(meta)} metadata rows but {arr.shape[0]} array rows")
 
         # axis per depth (default_centroid - mean(centroids), unit norm)
         axes[st] = {}
@@ -197,14 +209,22 @@ def main():
     print("\n=== AXIS ROTATION per depth (cos + degrees) ===")
     print(axdf.round(4).to_string(index=False))
 
-    out = HERE / "b4_topology_preservation_out"
-    scratch = Path(os.environ.get("MP_SCRATCH", "/tmp")) / "b4_topology.json"
-    payload = {"point": point, "boot_mean": b_mean.to_dict(),
+    inputs = {st: {"npy": NPY.format(st), "meta": META.format(st),
+                   "manifest_sha256": hashlib.sha256(
+                       (Path(CLOUD.format(st)) / "manifest.json").read_bytes()).hexdigest()}
+              for st in STAGES}
+    payload = {"settings": {"layer_depth_index": L_DEPTH, "depths": DEPTHS,
+                            "d_pca": D_PCA, "seed": SEED, "b_boot": B_BOOT,
+                            "ripser_maxdim": os.environ["MP_RIPSER_MAXDIM"]},
+               "inputs": inputs,
+               "point": point, "boot_mean": b_mean.to_dict(),
                "boot_sd": b_std.to_dict(), "preservation": pres.to_dict("records"),
                "diagram_dist": ddist.to_dict("records"),
                "axis": axdf.to_dict("records")}
-    scratch.write_text(json.dumps(payload, indent=2, default=float))
-    print(f"\nwrote {scratch}  ({time.time()-t0:.0f}s total)")
+    out = out_dir / "b4_topology.json"
+    out.write_text(json.dumps(payload, indent=2, default=float))
+    write_stamp(out_dir, data_dirs=[CLOUD.format(st) for st in STAGES])
+    print(f"\nwrote {out}  ({time.time()-t0:.0f}s total)")
 
 
 if __name__ == "__main__":
