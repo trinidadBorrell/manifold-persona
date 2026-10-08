@@ -124,6 +124,14 @@ def main():
 
     df = pd.read_csv(run_dir / "data" / f"per_role_panel_L{L}.csv")
     null = json.load(open(run_dir / "data" / f"design_null_L{L}.json"))
+    # A panel written before the closeness predictors existed (a frozen
+    # baseline, say) carries only axis_proj. Use the predictors this panel
+    # actually has, so the column selections below skip the absent ones
+    # instead of raising KeyError.
+    predictors = [p for p in PREDICTORS if p in df.columns]
+    absent = [p for p in PREDICTORS if p not in df.columns]
+    if absent:
+        print(f"note: predictor(s) absent from this panel, skipped: {absent}")
     panel = geometry_columns(df)
     # Appended, not merged into PANEL_COLS: `families.check_coverage` is the
     # authority on which family a panel column belongs to, and these two are
@@ -134,22 +142,22 @@ def main():
     # `default` defines the axis and is distance 0 from itself, so it cannot
     # inform a trend about distance from it. `id_vs_axis`'s rule, inherited.
     d = df[df["role"] != "default"].copy()
-    d = d.dropna(subset=[c for c in set(PREDICTORS) | set(CTRL_ALL)
+    d = d.dropna(subset=[c for c in set(predictors) | set(CTRL_ALL)
                          if c in d.columns])
     print(f"n={len(d)} roles (default excluded), {len(panel)} panel metrics, "
-          f"{len(PREDICTORS)} predictors, {len(RUNGS)} rungs")
+          f"{len(predictors)} predictors, {len(RUNGS)} rungs")
 
     # How much do the four closeness measures actually differ? Saved as well as
     # printed: four near-identical ladder panels and four genuinely different
     # ones look the same on the page, and this is what tells them apart.
-    pc = d[PREDICTORS].corr()
+    pc = d[predictors].corr()
     print("\npredictor cross-correlations (Pearson, n=%d):" % len(d))
-    print("  " + " " * 14 + "".join(f"{p:>14s}" for p in PREDICTORS))
-    for p in PREDICTORS:
-        print(f"  {p:14s}" + "".join(f"{pc.loc[p, q]:14.3f}" for q in PREDICTORS))
+    print("  " + " " * 14 + "".join(f"{p:>14s}" for p in predictors))
+    for p in predictors:
+        print(f"  {p:14s}" + "".join(f"{pc.loc[p, q]:14.3f}" for q in predictors))
     json.dump({"exploratory": True, "n": int(len(d)),
                "pearson": pc.to_dict(),
-               "spearman": d[PREDICTORS].corr(method="spearman").to_dict()},
+               "spearman": d[predictors].corr(method="spearman").to_dict()},
               open(run_dir / "data" / f"predictor_agreement_L{L}.json", "w"),
               indent=2, default=float)
 
@@ -166,7 +174,7 @@ def main():
 
     # ---------------- the ladder --------------------------------------------
     rows = []
-    for pred in PREDICTORS:
+    for pred in predictors:
         x = d[pred].to_numpy(float)
         for c in panel:
             if c == pred:                       # r = 1 by construction
@@ -221,7 +229,7 @@ def main():
     Ys = {c: d[c].to_numpy(float) for c in panel if ok[res.metric.eq(c)].any()}
     for suffix, Z, rung in (("", Zall, "r_ctrl_all"), ("_raw", None, "r_raw")):
         srng = np.random.default_rng(SEED)
-        for pred in PREDICTORS:
+        for pred in predictors:
             x0 = d[pred].to_numpy(float)
             best_per_perm = np.empty(args.n_shuffle)
             for b in range(args.n_shuffle):
@@ -296,8 +304,8 @@ def main():
     print("\n== CLOUD-LEVEL MEASURES AS METRICS (EXPLORATORY) ==")
     print(f"  {'metric':14s} {'predictor':14s} {'raw':>7s} {'|logvar':>8s} "
           f"{'|all':>7s} {'CI(all)':>16s}  {'rank in panel':>14s}")
-    for c in EXTRA_METRICS:
-        for pred in PREDICTORS:
+    for c in [m for m in EXTRA_METRICS if m in df.columns]:
+        for pred in predictors:
             r_ = res[(res.predictor == pred) & (res.metric == c)]
             if not len(r_) or r_.iloc[0].get("degenerate"):
                 print(f"  {c:14s} {pred:14s} {'--- self-pair, r = 1 by construction ---':>60s}")
