@@ -55,12 +55,13 @@ def main():
         a, _, _ = panel_metrics(X, instr, quest)
         b, _, _ = panel_metrics(X * SCALE, instr, quest)
 
-    bad_invariant, bad_carrying = [], []
+    bad_invariant, bad_carrying, unchecked = [], [], []
     print(f"{'metric':30s} {'original':>12s} {'rescaled':>12s}  {'':<10s}")
     for c in PANEL_COLS:
         va, vb = a.get(c), b.get(c)
         if va is None or vb is None or not np.isfinite([va, vb]).all():
-            print(f"{c:30s} {'n/a':>12s} {'n/a':>12s}  SKIPPED (non-finite)")
+            print(f"{c:30s} {'n/a':>12s} {'n/a':>12s}  *** NOT CHECKED (missing/non-finite) ***")
+            unchecked.append(c)
             continue
         moved = abs(va - vb) > TOL * max(1.0, abs(va))
         want_move = c in EXPECTED_SCALE_CARRYING
@@ -80,11 +81,14 @@ def main():
     if bad_carrying:
         print(f"FAIL: {len(bad_carrying)} metric(s) were expected to scale but did "
               f"not: {bad_carrying}")
-    if bad_invariant or bad_carrying:
+    if unchecked:
+        print(f"FAIL: {len(unchecked)} metric(s) could not be checked "
+              f"(missing or non-finite): {unchecked}")
+    if bad_invariant or bad_carrying or unchecked:
         sys.exit(1)
-    n_inv = len(PANEL_COLS) - len(EXPECTED_SCALE_CARRYING)
-    print(f"PASS: {n_inv} metrics invariant, "
-          f"{len(EXPECTED_SCALE_CARRYING)} scale-carrying as documented.")
+    n_carry = len([c for c in PANEL_COLS if c in EXPECTED_SCALE_CARRYING])
+    print(f"PASS: {len(PANEL_COLS) - n_carry} metrics invariant, "
+          f"{n_carry} scale-carrying as documented.")
 
 
 if __name__ == "__main__":

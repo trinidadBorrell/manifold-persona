@@ -77,21 +77,31 @@ def system_prompt_stats(src: Path, cache: Path) -> pd.DataFrame:
     system prompt once per question, so counting rows would weight by the
     question grid instead of by phrasing.
     """
+    # The cloud's own model (and tokenizer, if the extraction swapped one in)
+    # sets the token counts; the cache is valid only for that pair.
+    man = json.load(open(src / "manifest.json"))
+    tok_name = man.get("tokenizer_name") or man.get("model_name")
+    if not tok_name:
+        raise SystemExit(f"{src}/manifest.json names no model; cannot count its tokens")
     if cache.exists():
-        return pd.read_csv(cache)
+        cached = pd.read_csv(cache)
+        if "tokenizer" in cached.columns and (cached["tokenizer"] == tok_name).all():
+            return cached
+        print(f"  {cache.name} was counted with another tokenizer; recomputing")
     from transformers import AutoTokenizer
-    from manifold_persona.config import MODEL_NAME
     meta = pd.read_parquet(src / "metadata.parquet")
     u = meta[["role", "instruction_idx", "system"]].drop_duplicates()
-    tk = AutoTokenizer.from_pretrained(MODEL_NAME)
+    tk = AutoTokenizer.from_pretrained(tok_name)
+    # No system prompt (NaN) is zero system tokens, not the 1-token string "nan".
     u = u.assign(sys_tok=u["system"].map(
-        lambda s: len(tk(str(s), add_special_tokens=False)["input_ids"])))
+        lambda s: 0 if pd.isna(s) else len(tk(str(s), add_special_tokens=False)["input_ids"])))
     out = (u.groupby("role")["sys_tok"]
            .agg(sys_tok_mean="mean", sys_tok_sd="std",
                 sys_tok_min="min", sys_tok_max="max",
                 n_distinct_prompts="count")
            .reset_index())
     out["sys_tok_sd"] = out["sys_tok_sd"].fillna(0.0)
+    out["tokenizer"] = tok_name
     out.to_csv(cache, index=False)
     return out
 

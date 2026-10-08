@@ -27,7 +27,7 @@ import numpy as np
 import pandas as pd
 from huggingface_hub import hf_hub_download
 
-from manifold_persona.hf_utils import read_token
+from manifold_persona.hf_utils import read_token, snapshot_revision
 
 RID = "triniborrell/manifold-persona-roles-response-240q"
 OUT = Path("data/embeddings_roles_resp240")
@@ -36,6 +36,8 @@ OUT = Path("data/embeddings_roles_resp240")
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--outdir", default=None, help=f"default {OUT}")
+    ap.add_argument("--revision", default=None,
+                    help="HF commit/branch to fetch (default: main, resolved and recorded)")
     ap.add_argument("--view", default="prompt_avg",
                     help="which pooled view to mirror (prompt_avg or prompt_last)")
     args = ap.parse_args()
@@ -43,14 +45,20 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     tok = read_token()
 
-    man = json.load(open(hf_hub_download(RID, "manifest.json", repo_type="dataset", token=tok)))
+    # The first download resolves the branch to a commit; every later file is
+    # fetched at that commit and the commit is recorded in the manifest.
+    man_path = hf_hub_download(RID, "manifest.json", repo_type="dataset", token=tok,
+                               revision=args.revision)
+    rev = snapshot_revision(man_path) or args.revision
+    man = json.load(open(man_path))
     print(f"manifest: token_basis={man['token_basis']!r} n_records={man['n_records']} "
           f"n_roles={man['n_roles']} n_questions={man['n_questions']} "
           f"source_layers={man.get('source_layers')}")
     if man.get("token_basis") != "response":
         raise SystemExit(f"expected a response-token cloud, got {man.get('token_basis')!r}")
 
-    meta = pd.read_csv(hf_hub_download(RID, "metadata.csv", repo_type="dataset", token=tok))
+    meta = pd.read_csv(hf_hub_download(RID, "metadata.csv", repo_type="dataset", token=tok,
+                                       revision=rev))
 
     # The whole subset sweep assumes a complete role x instruction x question
     # grid -- every rank and variance-fraction statement downstream depends on
@@ -62,7 +70,8 @@ def main():
                          f"per role against a {n_i}x{n_q} grid")
     print(f"grid complete: {meta.role.nunique()} roles x {n_i} instructions x {n_q} questions")
 
-    src = hf_hub_download(RID, f"{args.view}.npy", repo_type="dataset", token=tok)
+    src = hf_hub_download(RID, f"{args.view}.npy", repo_type="dataset", token=tok,
+                          revision=rev)
     arr = np.load(src, mmap_mode="r")
     print(f"downloaded {args.view}.npy {arr.shape} {arr.dtype}")
     if arr.shape != (man["n_records"], man["n_layers"], man["hidden"]):
@@ -71,7 +80,7 @@ def main():
     shutil.copyfile(src, out / f"{args.view}.npy")
     meta.to_parquet(out / "metadata.parquet", index=False)
     man2 = dict(man)
-    man2.update({"primary_layer": 0, "views": [args.view], "source_repo": RID,
+    man2.update({"primary_layer": 0, "views": [args.view], "source_repo": RID, "source_revision": rev,
                  "note": "published pre-thinned; index 0 IS layer 19"})
     json.dump(man2, open(out / "manifest.json", "w"), indent=2)
     print(f"wrote {out} ({(out / f'{args.view}.npy').stat().st_size / 1e9:.2f} GB)")

@@ -24,7 +24,7 @@ import numpy as np
 import pandas as pd
 from huggingface_hub import hf_hub_download
 
-from manifold_persona.hf_utils import read_token
+from manifold_persona.hf_utils import read_token, snapshot_revision
 
 RID = "triniborrell/manifold-persona-roles-response-40q"
 OUT = Path("data/embeddings_roles_resp40")
@@ -36,18 +36,36 @@ def main():
                     help="leave the 8.4 GB source array in the HF cache instead "
                          "of deleting it after the thinned copy is written")
     ap.add_argument("--outdir", default=None, help=f"default {OUT}")
+    ap.add_argument("--revision", default=None,
+                    help="HF commit/branch to fetch (default: main, resolved and recorded)")
     args = ap.parse_args()
     out = Path(args.outdir) if args.outdir else OUT
     out.mkdir(parents=True, exist_ok=True)
     tok = read_token()
 
-    man = json.load(open(hf_hub_download(RID, "manifest.json", repo_type="dataset", token=tok)))
-    meta = pd.read_csv(hf_hub_download(RID, "metadata.csv", repo_type="dataset", token=tok))
+    # The first download resolves the branch to a commit; every later file is
+    # fetched at that commit and the commit is recorded in the manifest.
+    man_path = hf_hub_download(RID, "manifest.json", repo_type="dataset", token=tok,
+                               revision=args.revision)
+    rev = snapshot_revision(man_path) or args.revision
+    man = json.load(open(man_path))
+    meta = pd.read_csv(hf_hub_download(RID, "metadata.csv", repo_type="dataset", token=tok,
+                                       revision=rev))
     L = man["primary_layer"]
     print(f"manifest primary_layer={L}  n_records={man['n_records']}  n_layers={man['n_layers']}")
+    # Same checks as fetch_resp240: a prompt-token cloud or a holed grid would
+    # load fine and quietly break every rank and variance statement downstream.
+    if man.get("token_basis") != "response":
+        raise SystemExit(f"expected a response-token cloud, got {man.get('token_basis')!r}")
+    per_role = meta.groupby("role").size()
+    n_i, n_q = meta.instruction_idx.nunique(), meta.question_idx.nunique()
+    if per_role.min() != per_role.max() or per_role.iloc[0] != n_i * n_q:
+        raise SystemExit(f"grid is not complete: {per_role.min()}-{per_role.max()} points "
+                         f"per role against a {n_i}x{n_q} grid")
 
     print("downloading prompt_avg.npy (8.4 GB) ...", flush=True)
-    p = hf_hub_download(RID, "prompt_avg.npy", repo_type="dataset", token=tok)
+    p = hf_hub_download(RID, "prompt_avg.npy", repo_type="dataset", token=tok,
+                        revision=rev)
     arr = np.load(p, mmap_mode="r")
     print("downloaded shape", arr.shape, arr.dtype, flush=True)
     assert arr.shape == (man["n_records"], man["n_layers"], man["hidden"])
@@ -60,8 +78,8 @@ def main():
 
     meta.to_parquet(out / "metadata.parquet", index=False)
     man2 = dict(man)
-    man2.update({"n_layers": 1, "primary_layer": 0, "source_layer": L,
-                 "source_repo": RID, "views": ["prompt_avg"],
+    man2.update({"n_layers": 1, "primary_layer": 0, "source_layer": L, "source_layers": [L],
+                 "source_repo": RID, "source_revision": rev, "views": ["prompt_avg"],
                  "note": f"single layer {L} extracted from the 37-layer HF cloud"})
     json.dump(man2, open(out / "manifest.json", "w"), indent=2)
 

@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import time
 import traceback
 from pathlib import Path
 
@@ -57,7 +58,7 @@ CORE_METRICS = ["TwoNN", "MLE", "PCA_dim_95pct", "PCA_participation_ratio",
 # Spelled-out y-axis labels: the column names are terse and a reader coming to a
 # figure cold cannot tell that e.g. `curvature_gain` is a difference of two R^2s.
 YLABELS = {
-    "MLE": "intrinsic dimension (MLE)\ncalibrated, valid 3 ≤ d ≤ 10",
+    "MLE": "intrinsic dimension (MLE)",      # status appended by mle_status()
     "interaction_frac": "interaction share of\nwithin-role variance",
     "H1_total_persistence": "total H1 persistence\n(topological 'loopiness')",
     "H0_total_persistence": "total H0 persistence\n(total MST edge length)",
@@ -150,6 +151,9 @@ PRED_TITLES = {
 }
 
 
+FAILED = []      # figure functions that raised in this run
+
+
 def defensive(fn):
     def wrap(*a, **k):
         try:
@@ -157,6 +161,7 @@ def defensive(fn):
         except Exception:  # noqa: BLE001
             print(f"  [fig] {fn.__name__} FAILED (logged, run continues):")
             traceback.print_exc()
+            FAILED.append(fn.__name__)
     return wrap
 
 
@@ -248,10 +253,8 @@ def fig02b_forest_axisproj(lad, run_dir, L, rungs=RUNGS, colors=RUNG_COLORS,
     rows invite the eye to compare panels instead of reading rungs. This is the
     same data, one predictor, wide enough to label.
     """
-    # Was used to hide betti0/betti1 from this view; both were removed from the
-    # panel entirely on 2026-08-04, so it is empty. Kept as the hook for
-    # suppressing a row here without touching the panel.
-    DROP_FROM_AXISPROJ = ()
+    # The same rows fig02 hides: not geometry, so not part of this ladder.
+    DROP_FROM_AXISPROJ = DROP_FROM_FOREST
     ci = rungs[-1][0].removeprefix("r_")
     offs, ci_y = _offsets(rungs)
     s = lad[(lad.predictor == "axis_proj")
@@ -615,7 +618,7 @@ def fig08_families(fam, run_dir, L, pred="axis_proj", name="fig08"):
     x = f"mean_{pred}"
     fs = pd.DataFrame(fam["families"]).sort_values(x, ascending=False)
     fig, axes = plt.subplots(1, 2, figsize=(13, 5.2))
-    for ax, col, lbl in ((axes[0], "median_MLE", "median MLE (calibrated dimension)"),
+    for ax, col, lbl in ((axes[0], "median_MLE", f"median MLE ({mle_status(run_dir, L)})"),
                          (axes[1], "median_orc_mean", "median Ollivier-Ricci curvature")):
         ax.scatter(fs[x], fs[col], s=fs.n_roles * 6, alpha=.7,
                    color=C_REAL, linewidths=0)
@@ -711,11 +714,15 @@ def fig13_closeness_as_metric(lad, run_dir, L, rungs=RUNGS, colors=RUNG_COLORS):
 
     thr_col = "shuffle_max_abs_r_p95"
     fig, ax = plt.subplots(figsize=(10.5, 0.85 * len(rowsp) + 2.8))
-    thr = float(lad[thr_col].dropna().iloc[0]) if lad[thr_col].notna().any() \
-        else np.nan
-    if np.isfinite(thr):
-        ax.axvspan(-thr, thr, color="0.90", zorder=0,
-                   label=f"axis-shuffle null (95th pct of max|r| ≈ {thr:.2f})")
+    # The shuffle null is computed per predictor, so each row gets its own band.
+    labelled = False
+    for yi, (m, p) in zip(y, rowsp):
+        t = float(s.loc[(m, p), thr_col]) if thr_col in s.columns else np.nan
+        if np.isfinite(t):
+            ax.fill_between([-t, t], yi - 0.42, yi + 0.42, color="0.90", zorder=0,
+                            lw=0, label=None if labelled else
+                            "shuffle null of the row's predictor (95th pct of max|r|)")
+            labelled = True
     ax.axvline(0, color="k", lw=0.8, zorder=1)
     for v in (-0.30, 0.30):
         ax.axvline(v, color=C_DESIGN, ls=":", lw=1)
@@ -753,13 +760,29 @@ def fig13_closeness_as_metric(lad, run_dir, L, rungs=RUNGS, colors=RUNG_COLORS):
     _save(fig, f"fig13_closeness_as_metric_L{L}.png", run_dir)
 
 
+def mle_status(run_dir, L) -> str:
+    """MLE's calibration status as recorded by calib_estimators.py for this run."""
+    p = Path(run_dir) / "data" / f"calibration_L{L}.json"
+    if not p.exists():
+        return "calibration not run"
+    v = json.load(open(p))["verdict"]
+    fails = [f for f in v.get("failures", []) if f.startswith("MLE")]
+    if fails:
+        # The gate's own reason (missing estimates or the worst error), without
+        # the planted-case detail in parentheses.
+        return "calibration FAILED: " + fails[0].removeprefix("MLE: ").split(" (")[0]
+    return "calibrated, valid 3 ≤ d ≤ 10"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--outdir", required=True)
     ap.add_argument("--label-layer", type=int, default=19)
     args = ap.parse_args()
     run, L = Path(args.outdir), args.label_layer
+    t_start = time.time()
     D = run / "data"
+    YLABELS["MLE"] = f"intrinsic dimension (MLE)\n{mle_status(run, L)}"
     j = lambda n: json.load(open(D / n))          # noqa: E731
 
     panel = pd.read_csv(D / f"per_role_panel_L{L}.csv")
@@ -808,6 +831,24 @@ def main():
         fig08_families(fam, run, L, pred=pred, name=f"fig08{sfx}")
     fig09_contrast(con, run, L)
     fig13_closeness_as_metric(lad, run, L)
+    # A failed figure leaves any PNG of the same name from an earlier run in
+    # place. Rename those so an old picture is never read as this run's.
+    # figPH_sysprompt/ belongs to confound_sysprompt.py, which runs later.
+    # Only this layer's files: a run dir can hold figures for other layers.
+    gdir = run / "figures" / "global"
+    gdir.mkdir(parents=True, exist_ok=True)
+    stale = []
+    for q in sorted(gdir.rglob(f"*_L{L}.png")):
+        if ("figPH_sysprompt" in q.parts or q.name.endswith(".stale.png")
+                or q.stat().st_mtime >= t_start):
+            continue
+        q.rename(q.with_name(q.stem + ".stale.png"))
+        stale.append(str(q.relative_to(run)))
+    json.dump({"failed": FAILED, "renamed_stale": stale},
+              open(gdir / "_figure_status.json", "w"), indent=2)
+    if FAILED or stale:
+        print(f"WARNING: {len(FAILED)} figure function(s) failed {FAILED}; "
+              f"{len(stale)} PNG(s) from an earlier run renamed *.stale.png")
     print("figures done")
 
 
