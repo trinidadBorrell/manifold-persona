@@ -132,7 +132,20 @@ def main():
     results = {}
     for tag, d in (("raw", args.raw), ("fixed", args.fixed)):
         print(f"\n### {tag}: {d}")
-        results[tag] = analyse(Path(d), args.layer)
+        if tag == "raw":
+            # The raw cloud is the pre-fix contrast this diagnostic exists to
+            # measure, so it alone is let past the clean-cloud guard.
+            prev = os.environ.get("MP_ALLOW_UNCLEAN")
+            os.environ["MP_ALLOW_UNCLEAN"] = "1"
+            try:
+                results[tag] = analyse(Path(d), args.layer)
+            finally:
+                if prev is None:
+                    os.environ.pop("MP_ALLOW_UNCLEAN", None)
+                else:
+                    os.environ["MP_ALLOW_UNCLEAN"] = prev
+        else:
+            results[tag] = analyse(Path(d), args.layer)
 
     R, F = results["raw"], results["fixed"]
     line = "=" * 78

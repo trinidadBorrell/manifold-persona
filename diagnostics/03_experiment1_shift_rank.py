@@ -88,8 +88,21 @@ def build_matched_pair(tokenizer, system_a: str, n_ctrl_offset: int, question: s
         return None, None, 0
     ids_b = ids_a.clone()
     ids_b[start:start + n] = neutral_of_length(tokenizer, n, n_ctrl_offset)
-    n_shared = len(a) - (start + n)          # everything after the system block
+    # Everything after the system block, minus the template tokens between it
+    # and the question: those are the same for every question, so their shift
+    # rows would repeat once per question and inflate the top direction.
+    n_shared = len(a) - (start + n) - _boundary_len(tokenizer, system_a, start + n)
     return ids_a, ids_b, n_shared
+
+
+def _boundary_len(tokenizer, system: str, after: int) -> int:
+    """Tokens from the end of the system block to the first question-dependent one."""
+    t1 = render_ids(tokenizer, system, "Alpha?").tolist()[after:]
+    t2 = render_ids(tokenizer, system, "Omega!").tolist()[after:]
+    k = 0
+    while k < min(len(t1), len(t2)) and t1[k] == t2[k]:
+        k += 1
+    return k
 
 
 @torch.no_grad()
@@ -218,9 +231,16 @@ def main():
                   f"(null SV1={null['sv1_share']:.3f}, "
                   f"null ||dh||={null['mean_norm']:.2f}, "
                   f"persona ||dh||={float(np.mean([v['mean_norm'] for v in results.values()])):.2f}).")
+        # The 0.7 cut is read against the persona-free floor: a null that is
+        # itself rank-1 makes a high persona SV1 uninformative.
+        above_null = null is None or agg["sv1_share"] > null["sv1_share"]
         verdict = ("GATED-CONSTANT SUPPORTED: shift is ~one direction with variable gain"
+                   if agg["sv1_share"] > 0.7 and above_null else
+                   "UNREADABLE: persona SV1 does not exceed the persona-free null"
                    if agg["sv1_share"] > 0.7 else
                    "GATED-CONSTANT REJECTED: the direction itself moves with the input")
+        if null is None:
+            verdict += " (no null run; not checked against the floor)"
         print(f"\n=> {verdict}")
         Path(args.out).parent.mkdir(parents=True, exist_ok=True)
         json.dump({"_meta": {"model": args.model, "layer": layer,

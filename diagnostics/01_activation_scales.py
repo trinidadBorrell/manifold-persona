@@ -34,6 +34,7 @@ from __future__ import annotations
 import argparse
 
 import numpy as np
+from scipy.spatial.distance import pdist as _scipy_pdist
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
@@ -144,9 +145,9 @@ def describe(name, X):
 
 
 def pdist(X):
-    d = np.sqrt(np.maximum(((X[:, None, :] - X[None, :, :]) ** 2).sum(-1), 0))
-    iu = np.triu_indices(len(X), k=1)
-    return d[iu]
+    """Condensed Euclidean distances (upper triangle, row-major), as scipy's
+    pdist, without the n x n x d intermediate the broadcast version needed."""
+    return _scipy_pdist(np.asarray(X, dtype=np.float64), metric="euclidean")
 
 
 def q4_what_prompt_avg_measures(model, tokenizer, texts, layer, labels) -> None:
