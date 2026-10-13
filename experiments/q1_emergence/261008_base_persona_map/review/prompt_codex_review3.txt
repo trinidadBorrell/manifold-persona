@@ -1,0 +1,7 @@
+Re-review experiments/q1_emergence/261008_base_persona_map/gen_extract.py after new changes. Earlier reviews: review/codex_review.md and review/codex_rereview.md in that folder. Be blunt. Do not edit any file except your output file. Do not run models.
+
+New since the last review: (1) condition ex2_other now has 3 donor roles per target (DONOR_SHIFTS 6, 10, 14 along PILOT_ORDER; all in another group of 4); (2) new condition ex2_filler: a fixed neutral FILLER text where the examples stand, length-matched (mean prompt tokens on shared questions: ex2 231.6, ex2_other 231.6, ex2_filler 234.1); (3) --seed_offset and --replicate (second-seed run of desc and ex2 on the 18 shared questions); seed offset is in the fingerprint and the manifest; (4) earlier open items O1-O6 were fixed (exact decode, pad stop label, fingerprint before writing, refuse unfingerprinted dirs, activation-part check on resume, reviewed third-person file as source).
+
+Check: correctness of the new conditions and item construction (no example question equals a test question; donors never the target; shared-question logic); that the replication items are exactly the intended subset and cannot overwrite the main run; the global SEED_OFFSET use; anything that can break on the full run of 15,120 items (memory, batch size 32, resume after a crash). Use smoke outputs in the smoke/ folder if useful.
+
+Write review/codex_review3.md with findings (severity, file:line, failing case, fix), then reply with one line: the number of findings that must be fixed before the full run.

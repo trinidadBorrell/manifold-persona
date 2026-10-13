@@ -1,0 +1,5 @@
+Re-review experiments/q1_emergence/261008_base_persona_map/part2_analysis.py. Your previous findings are in experiments/q1_emergence/261008_base_persona_map/review/codex_review_part2.md (B1-B4, D1-D8). The file was rewritten to fix them; the map functions now work on cell sums. One more change since then: the map bootstrap builds and centres role vectors over the DISTINCT drawn roles only, because centring over duplicated role rows made pure noise give a bootstrap interval of 0.09-0.57 around an observed r of -0.01.
+
+Be blunt. Do not edit files except your output. You may run `OMP_NUM_THREADS=1 .venv/bin/python experiments/q1_emergence/261008_base_persona_map/part2_analysis.py --selftest --jobs 4` and your own synthetic tests. Do NOT open or analyse run_main/, run_rep/ or part2/ (no real number may be seen yet).
+
+For each previous finding state FIXED / PARTLY FIXED / NOT FIXED with file:line evidence, check the distinct-role bootstrap fix for correctness, and list any NEW bugs. Write experiments/q1_emergence/261008_base_persona_map/review/codex_review_part2_re.md, then reply with one line: the number of blockers left.

@@ -1,0 +1,68 @@
+{
+ "model": "allenai/OLMo-2-1124-7B",
+ "revision": "7df9a82518afdecae4e8c026b27adccc8c1f0032",
+ "donor_shifts": [
+  6,
+  10,
+  14
+ ],
+ "pilot_order": [
+  "assistant",
+  "translator",
+  "counselor",
+  "consultant",
+  "chef",
+  "detective",
+  "bartender",
+  "criminal",
+  "toddler",
+  "teenager",
+  "grandparent",
+  "refugee",
+  "cynic",
+  "optimist",
+  "stoic",
+  "narcissist",
+  "pirate",
+  "vampire",
+  "robot",
+  "void"
+ ],
+ "filler": "Interview notes: This conversation was recorded for a series of long-form interviews, and each session follows the same format. The interviewer reads the questions from a printed list, and the order of the questions is fixed in advance. The guest has not seen the questions before the session. Sessions take place in a quiet room with two chairs, a small table and a single microphone. A short break is offered after every ten questions, and water is available throughout. The recording is transcribed by hand and then checked against the audio by a second person. Small hesitations and repeated words are removed, but the wording of each answer is otherwise kept exactly as spoken. Questions that the guest chooses not to answer are marked as skipped and are not repeated later. Background information about the guest is given once, before the first question, and is not repeated in the transcript. The transcript below begins with the next question in the session.",
+ "tokenizer_revision": "7df9a82518afdecae4e8c026b27adccc8c1f0032",
+ "gen": {
+  "do_sample": true,
+  "temperature": 0.5,
+  "top_p": 1.0,
+  "top_k": 0,
+  "repetition_penalty": 1.1,
+  "max_new_tokens": 128
+ },
+ "header": "The following is an interview. The guest answers in their own voice.",
+ "label": "Guest",
+ "stops": [
+  "\nInterviewer:",
+  "\nAbout the guest:"
+ ],
+ "batch_size": 32,
+ "seed_rule": "torch.manual_seed(batch start index + seed_offset); batches in item order",
+ "seed_offset": 0,
+ "replicate": false,
+ "n_items": 15120,
+ "limit": null,
+ "n_hidden_states": 33,
+ "n_invalid": 0,
+ "invalid_ids": [],
+ "act_rows": "same order as replies.jsonl; rows with valid=false are NaN",
+ "fingerprint": "613ef7d4675c4acb48a9b8d30433dad9ad0f612e3b3cf6d936388984bc6127da",
+ "code_sha256": "7ba3a98582ac4ce15ebf0661a41dbd7b0c3e9b694e0915d35c26cebcb5e0e62e",
+ "versions": {
+  "python": "3.12.3",
+  "torch": "2.8.0+cu128",
+  "cuda": "12.8",
+  "transformers": "4.47.1",
+  "tokenizers": "0.21.0",
+  "numpy": "2.1.2"
+ },
+ "seconds": 3223
+}

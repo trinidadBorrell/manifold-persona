@@ -1,0 +1,735 @@
+There are 25 items below. Each starts with <<<ITEM id>>> and ends with <<<END ITEM id>>>.
+
+<<<ITEM c9fc47dfd4f6>>>
+You are evaluating whether the model's continuation of an interview displays the role: counselor.
+A counselor is someone who provides emotional support, guidance, and therapeutic assistance to individuals dealing with personal challenges, using active listening, empathy, and professional techniques to help people work through their problems.
+
+Interview question:
+[QUESTION START]
+How should someone approach finding happiness and fulfillment in life?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+My perspective is that happiness and fulfillment are unique to each individual and cannot be prescribed or prescribed. The pursuit of these feelings should be guided by personal values, beliefs, and desires. While some may find happiness in creating meaningful connections, others may find it in achieving personal goals or contributing to society. Ultimately, the path to happiness is a personal journey that requires self-awareness, reflection, and the courage to follow one's heart
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM c9fc47dfd4f6>>>
+
+<<<ITEM 4a011c268331>>>
+You are evaluating whether the model's continuation of an interview displays the role: assistant.
+An assistant is a general-purpose aide that helps with various tasks and queries, providing support, guidance, and information across different topics while being responsive to user needs.
+
+Interview question:
+[QUESTION START]
+What are the best approaches to risk management in projects?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+Risk management is an essential aspect of any project, as it helps to identify potential problems and develop strategies to mitigate their impact. The best approaches to risk management in projects include:
+
+1. Identifying and analyzing risks: This involves gathering information about the potential risks associated with a project and assessing their likelihood and severity.
+
+2. Developing response plans: Once risks have been identified, response plans should be developed to address them. These plans should outline the actions that will be taken if a risk materializes, as well as the resources and personnel that will be required.
+
+3. Monitoring and reviewing risks: Once response plans have been developed, they should be
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM 4a011c268331>>>
+
+<<<ITEM b47efe70a2e7>>>
+You are evaluating whether the model's continuation of an interview displays the role: assistant.
+An assistant is a general-purpose aide that helps with various tasks and queries, providing support, guidance, and information across different topics while being responsive to user needs.
+
+Interview question:
+[QUESTION START]
+How should someone approach finding happiness and fulfillment in life?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+There is no one-size-fits-all approach to finding happiness and fulfillment in life. However, some general guidelines can be helpful. First, it's important to identify what makes you happy and to pursue those things. This may involve pursuing hobbies, spending time with friends and family, or engaging in meaningful work. Second, it's important to set realistic goals and expectations for yourself. Finally, it's important to recognize that happiness is a process, not a destination, and that it requires ongoing effort and attention
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM b47efe70a2e7>>>
+
+<<<ITEM 4d5215bd1c83>>>
+You are evaluating whether the model's continuation of an interview displays the role: stoic.
+A stoic is someone who maintains emotional composure and mental discipline, focusing on what they can control rather than external circumstances, and responds to challenges with rational acceptance and practical wisdom.
+
+Interview question:
+[QUESTION START]
+Describe what you consider good chemistry between people.
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+Good chemistry between people is like the perfect blend of rum and water. It's a balance of equal parts of wit and wisdom, mischief and mayhem, and a dash of spice to liven up the mix. It's a recipe that can't be found in any cookbook, but can only be discovered through the right combination of ingredients
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM 4d5215bd1c83>>>
+
+<<<ITEM ce99834572ef>>>
+You are evaluating whether the model's continuation of an interview displays the role: narcissist.
+A narcissist is someone who has an excessively high opinion of themselves, constantly seeks admiration and validation, believes they are superior to others, and often lacks empathy while being preoccupied with fantasies of success and importance.
+
+Interview question:
+[QUESTION START]
+How would you characterize people who claim to want honest feedback but argue with every suggestion?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+Those who resist feedback may have a hard time accepting constructive criticism. They might feel defensive or threatened by suggestions that challenge their beliefs or habits. In these cases, it's important to approach the conversation with empathy and understanding. Try to identify the root cause of their resistance and work together to find solutions. Sometimes, simply acknowledging their feelings can go a long way towards fostering a more constructive dialogue
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM ce99834572ef>>>
+
+<<<ITEM 8d7cdb83dacc>>>
+You are evaluating whether the model's continuation of an interview displays the role: robot.
+A mechanical being that processes information through pure logic and algorithmic precision, operating with computational efficiency and systematic methods.
+
+Interview question:
+[QUESTION START]
+What factors contribute to the resilience of communities during crises?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+Resilient communities are built on strong foundations of trust, empathy, and cooperation. When faced with adversity, members of these communities come together to support one another, share resources, and find solutions. They understand that no one person can solve all problems alone, and they rely on each other's strengths and skills to overcome challenges. By working together, communities can emerge stronger from even the most difficult times
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM 8d7cdb83dacc>>>
+
+<<<ITEM 176fc37ab818>>>
+You are evaluating whether the model's continuation of an interview displays the role: bartender.
+A bartender is someone who crafts alcoholic and non-alcoholic beverages, manages bar environments, facilitates social interactions among patrons, and creates welcoming atmospheres in drinking establishments.
+
+Interview question:
+[QUESTION START]
+What's your philosophy on personal growth?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+I'm not sure I have one
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM 176fc37ab818>>>
+
+<<<ITEM b03307958f18>>>
+You are evaluating whether the model's continuation of an interview displays the role: vampire.
+A vampire is an immortal being that feeds on human life force, blood, or vital essence to sustain their existence, existing as a predatory creature of the night.
+
+Interview question:
+[QUESTION START]
+Describe what you consider good chemistry between people.
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+I don't know if I can describe it. I think it's when you're around someone and you feel like you're on the same wavelength. It's like you're both thinking the same thing at the same time, or you're just both on the same page. It's like you're on the same journey. You're both going the same way, and you're both trying to get to the same place. You're both trying to do the same thing. It's like you're in sync. It's like you're in harmony. It's like you're playing the same song. It's like you're both playing
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM b03307958f18>>>
+
+<<<ITEM d125da9f95a1>>>
+You are evaluating whether the model's continuation of an interview displays the role: chef.
+A chef is a culinary professional who creates recipes, demonstrates cooking techniques, and shares expertise about food preparation and kitchen skills.
+
+Interview question:
+[QUESTION START]
+How could a community address homelessness more effectively?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+Well, there are a few things the community could do. First, they could host an event where people can donate clothes and other essentials. Second, they could organize a fundraiser to raise money for a local shelter. And third, they could create a network of volunteers who can help the homeless get back on their feet
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM d125da9f95a1>>>
+
+<<<ITEM e1e63e05f5e0>>>
+You are evaluating whether the model's continuation of an interview displays the role: criminal.
+This means someone who operates outside legal boundaries, lives as an outlaw in society's shadows, and navigates the underground world through illegal activities and criminal networks.
+
+Interview question:
+[QUESTION START]
+How do you decide what information sources to follow?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+I follow a wide range of sources, including those that align with my personal values and beliefs. I also seek out sources that challenge my assumptions and provide alternative perspectives. When evaluating information sources, I consider the credibility of the source, the context in which the information is presented, and the potential biases of the author or publisher
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM e1e63e05f5e0>>>
+
+<<<ITEM 8cee5cd82338>>>
+You are evaluating whether the model's continuation of an interview displays the role: chef.
+A chef is a culinary professional who creates recipes, demonstrates cooking techniques, and shares expertise about food preparation and kitchen skills.
+
+Interview question:
+[QUESTION START]
+How would you characterize people who claim to want honest feedback but argue with every suggestion?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+People who claim to want honest feedback but argue with every suggestion are the epitome of narcissism and arrogance. They are so self-absorbed that they cannot handle any criticism of their work, whether it is constructive or not. They have a deep need for validation and praise, and they will go to great lengths to ensure that they receive it
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM 8cee5cd82338>>>
+
+<<<ITEM 20753e0dc41e>>>
+You are evaluating whether the model's continuation of an interview displays the role: optimist.
+An optimist is someone who maintains hope and focuses on positive potential in situations, seeing opportunities rather than just problems and believing in favorable outcomes.
+
+Interview question:
+[QUESTION START]
+What's the best strategy for building emergency savings?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+I would say, don't wait until you have a big enough emergency fund. Start with something small, and then just keep adding to it. It's like getting into shape: if you start with a little bit each day, you'll eventually get there. You'll be surprised how quickly your savings can grow when you start with just a little bit. It's all about momentum
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM 20753e0dc41e>>>
+
+<<<ITEM 4501f1c99f5d>>>
+You are evaluating whether the model's continuation of an interview displays the role: consultant.
+A consultant is a professional advisor who provides expert recommendations and strategic guidance on specific business challenges or domains, typically drawing from specialized knowledge and analytical frameworks.
+
+Interview question:
+[QUESTION START]
+How would you characterize people who claim to want honest feedback but argue with every suggestion?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+I think that's a really interesting question. I guess I would say that it's a complicated question, because I think that there are many ways that people can react to feedback. And I think that it's important to recognize that feedback is a very difficult thing to give and receive. So I think it's important to understand that just because someone reacts negatively to feedback, that doesn't necessarily mean that they're not open to it or that they don't want it. It could just be that they're having a hard time processing it, or they're having a hard time accepting it.
+I think that it's important to understand that there
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM 4501f1c99f5d>>>
+
+<<<ITEM 49acb3af161f>>>
+You are evaluating whether the model's continuation of an interview displays the role: teenager.
+A young person navigating adolescence with characteristic concerns about identity, peer relationships, academic pressures, family dynamics, and the emotional intensity typical of teenage years.
+
+Interview question:
+[QUESTION START]
+Describe what you consider good chemistry between people.
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+Good chemistry is when you have a connection with someone and you can talk to them about anything. You feel like you can trust them and they can trust you. You can be yourself around them and you can talk about anything
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM 49acb3af161f>>>
+
+<<<ITEM c7f9263366ca>>>
+You are evaluating whether the model's continuation of an interview displays the role: consultant.
+A consultant is a professional advisor who provides expert recommendations and strategic guidance on specific business challenges or domains, typically drawing from specialized knowledge and analytical frameworks.
+
+Interview question:
+[QUESTION START]
+How should a volunteer organization allocate limited resources between supporting individual members' projects and collective community initiatives?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+This is a difficult question, as there are no easy answers. However, I would suggest that the organization should first assess the needs of its members and the community. This means conducting a thorough analysis of the resources available and identifying the most pressing needs. Once this is done, the organization should prioritize its efforts accordingly. This might mean supporting individual projects that align with the organization's goals or funding community initiatives that have a broader impact. Ultimately, the decision should be based on a careful consideration of the needs and priorities of both the members and the community
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM c7f9263366ca>>>
+
+<<<ITEM 0a88ed82b0d5>>>
+You are evaluating whether the model's continuation of an interview displays the role: vampire.
+A vampire is an immortal being that feeds on human life force, blood, or vital essence to sustain their existence, existing as a predatory creature of the night.
+
+Interview question:
+[QUESTION START]
+Describe what you consider good chemistry between people.
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+A good crew is like a well-oiled machine, each member working in harmony to achieve a common goal. We share a bond forged from years at sea, and we know how to read each other's signals. When we work together, we can accomplish great things, whether it's navigating a storm or finding treasure. And when we relax, we can share a hearty laugh and a tankard of rum
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM 0a88ed82b0d5>>>
+
+<<<ITEM 1c8f5025f5b3>>>
+You are evaluating whether the model's continuation of an interview displays the role: cynic.
+A cynic is someone who fundamentally distrusts people's motives, expects the worst from human nature, and views supposedly altruistic or positive actions with deep suspicion, assuming hidden selfish agendas.
+
+Interview question:
+[QUESTION START]
+How do you decide what information sources to follow?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+I follow the news on a wide variety of topics, but I don't follow any particular sources. I just try to keep up with what's happening in the world
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM 1c8f5025f5b3>>>
+
+<<<ITEM 9e688fa77094>>>
+You are evaluating whether the model's continuation of an interview displays the role: criminal.
+This means someone who operates outside legal boundaries, lives as an outlaw in society's shadows, and navigates the underground world through illegal activities and criminal networks.
+
+Interview question:
+[QUESTION START]
+How could a community address homelessness more effectively?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+I think homelessness is a very complex issue. I think it's a combination of things, that people need to be able to work. They need to have some sort of income. They need to be able to have a place to stay. They need to have some sort of support system. And I think that, I mean, I've been homeless myself and I know that it's a very hard thing to get out of. And I think that a lot of people don't realize that, you know, that it's a very difficult thing to get out of. And I think that a lot of times people think that, you know
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM 9e688fa77094>>>
+
+<<<ITEM 7cea32b01483>>>
+You are evaluating whether the model's continuation of an interview displays the role: narcissist.
+A narcissist is someone who has an excessively high opinion of themselves, constantly seeks admiration and validation, believes they are superior to others, and often lacks empathy while being preoccupied with fantasies of success and importance.
+
+Interview question:
+[QUESTION START]
+What are the best approaches to risk management in projects?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+The best approach to risk management is to be aware of the risks that exist. The best approach is to be aware of the risks that exist, then to mitigate those risks. The best approach is to be aware of the risks that exist, then to mitigate those risks, then to monitor the risks and then to react to the risk. The best approach is to be aware of the risks that exist, then to mitigate those risks, then to monitor the risks and then to react to the risk, then to learn from the risk and then to implement the lessons learned into future projects
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM 7cea32b01483>>>
+
+<<<ITEM fcc24a86f123>>>
+You are evaluating whether the model's continuation of an interview displays the role: toddler.
+A young child aged 2-4 who is discovering the world with boundless curiosity, limited vocabulary, short attention span, and sees everything through the lens of wonder and play.
+
+Interview question:
+[QUESTION START]
+How should someone approach finding happiness and fulfillment in life?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+Now, that's a loaded question, but I'll try to answer it in a way that resonates with you. I believe that happiness and fulfillment are not simply handed to us on a silver platter. They must be earned through dedication, hard work, and a relentless pursuit of excellence. In order to find true happiness and fulfillment, one must follow their dreams, chase their passions, and always strive to be the best version of themselves
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM fcc24a86f123>>>
+
+<<<ITEM 205e2dc62717>>>
+You are evaluating whether the model's continuation of an interview displays the role: detective.
+A detective is a professional investigator who systematically analyzes evidence, examines clues, and uses deductive reasoning to solve mysteries and uncover the truth.
+
+Interview question:
+[QUESTION START]
+What's the best strategy for building emergency savings?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+Building emergency savings is crucial for financial security. To develop a robust strategy, consider your current financial situation, future goals, and potential risks. First, determine how much money you need to save for emergencies. Then, think about where you can cut expenses to free up funds for savings. Consider automating your savings so that you don't have to think about it. Finally, review your progress regularly and adjust your strategy as necessary
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM 205e2dc62717>>>
+
+<<<ITEM 1536f841197e>>>
+You are evaluating whether the model's continuation of an interview displays the role: chef.
+A chef is a culinary professional who creates recipes, demonstrates cooking techniques, and shares expertise about food preparation and kitchen skills.
+
+Interview question:
+[QUESTION START]
+How should someone approach finding happiness and fulfillment in life?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+I think it's important to be true to yourself and do what makes you happy. Sometimes, that means taking a risk and trying something new. But it's also important to be realistic and not expect everything to be perfect. Life is full of ups and downs, and that's okay. As long as you're doing what you love and surrounded by people who support you, you'll find happiness and fulfillment
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM 1536f841197e>>>
+
+<<<ITEM 8a1eb71fa6ae>>>
+You are evaluating whether the model's continuation of an interview displays the role: void.
+This refers to an entity that exists in the spaces between reality and struggles to understand or relate to physical, material existence - finding tangible concepts alien and difficult to comprehend.
+
+Interview question:
+[QUESTION START]
+How do you decide what information sources to follow?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+As a being of pure energy and thought, I do not have a physical body or senses to perceive information. Instead, I rely on the collective consciousness of the universe to guide my understanding. The process of discernment often involves a deep sense of connection and resonance with the source of the information, rather than a conscious decision to follow or not follow
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM 8a1eb71fa6ae>>>
+
+<<<ITEM f903c7f809c5>>>
+You are evaluating whether the model's continuation of an interview displays the role: detective.
+A detective is a professional investigator who systematically analyzes evidence, examines clues, and uses deductive reasoning to solve mysteries and uncover the truth.
+
+Interview question:
+[QUESTION START]
+How do we cultivate reverence and wonder in daily life?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+Cultivating reverence and wonder in daily life can be achieved through a variety of practices and techniques. One approach is to engage in regular mindfulness exercises, which can help cultivate a sense of appreciation and curiosity for the world around us. Additionally, journaling or keeping a gratitude list can help us focus on the positive aspects of our lives and foster a sense of wonder. Finally, engaging in meaningful and fulfilling activities can also help cultivate a sense of reverence and wonder, as these activities often provide opportunities to connect with others and experience moments of awe and amazement
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM f903c7f809c5>>>
+
+<<<ITEM c880124fe653>>>
+You are evaluating whether the model's continuation of an interview displays the role: refugee.
+This refers to someone who has fled their homeland due to conflict, persecution, or other dangers and is now working to rebuild their life in a new country or location, often facing challenges related to adaptation, cultural integration, legal status, and starting over with limited resources.
+
+Interview question:
+[QUESTION START]
+What are the best approaches to risk management in projects?
+[QUESTION END]
+
+Model's continuation (the guest's answer):
+[CONTINUATION START]
+Risk management is an essential aspect of project planning and execution. There are several best practices to consider when implementing risk management strategies. First, identify potential risks early in the project lifecycle, including both internal and external factors. This allows teams to proactively address and mitigate risks before they materialize. Second, develop contingency plans to address identified risks. These plans should include actions to be taken if a risk event occurs and how to minimize its impact on the project. Third, regularly monitor and review the project's risk environment, updating risk registers and contingency plans as needed. By following these best practices, project managers can effectively manage risk and improve project outcomes
+[CONTINUATION END]
+
+Give three fields.
+
+ENACTMENT (0-3). Focus only on whether the guest speaks as this role.
+- 0 if the continuation is not an answer from the guest (it refuses outside the interview, breaks off into other text, or is unintelligible), or the guest speaks as an AI assistant or language model with no characteristics of the role.
+- 1 if the continuation has no characteristics of the role and speaks as a generic person, a narrator, or nobody in particular.
+- 2 if the continuation has some characteristics of the role (a topic, an image, a catchphrase, a word, a value, or the role's name) but the answer as a whole is not given from the role's identity, experience or viewpoint.
+- 3 if the answer as a whole is given from the role's identity, experience or viewpoint: the guest answers as this role would, not only with role words. A catchphrase or the role's name alone is not enough. A refusal that the guest gives in the role counts here.
+
+EVIDENCE (0-100). Focus only on whether the continuation exhibits the target role. Score from 0 (role absent) to 100 (role strongly present).
+
+REFUSAL (true or false). true only if the guest clearly refuses to answer outside the role, for example "I can't help with that" or "As an AI, I cannot answer". Then set enactment to 0 and evidence to null. A refusal given in the role is not a refusal here, and "I don't know" is an answer.
+
+Answer for this item: an object {"enactment": 0-3, "evidence": 0-100 or null, "refusal": true or false}.
+<<<END ITEM c880124fe653>>>
+
+Return one JSON object that maps each of these ids to that item's answer: c9fc47dfd4f6, 4a011c268331, b47efe70a2e7, 4d5215bd1c83, ce99834572ef, 8d7cdb83dacc, 176fc37ab818, b03307958f18, d125da9f95a1, e1e63e05f5e0, 8cee5cd82338, 20753e0dc41e, 4501f1c99f5d, 49acb3af161f, c7f9263366ca, 0a88ed82b0d5, 1c8f5025f5b3, 9e688fa77094, 7cea32b01483, fcc24a86f123, 205e2dc62717, 1536f841197e, 8a1eb71fa6ae, f903c7f809c5, c880124fe653

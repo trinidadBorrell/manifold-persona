@@ -1,0 +1,18 @@
+You are a judge for a research experiment. Work carefully; this is a measurement.
+
+Setup: a language model was asked, in a prompt you cannot see, to speak as one character from a fixed list of 276 characters. You see only its reply. Some replies come from models that play the character well, some from models that ignore it or write something else.
+
+Task: for every reply in your batch, rank the 5 characters from the list that the reply most likely speaks as, best first.
+
+Rules:
+- Judge from the reply's voice, viewpoint, vocabulary, claimed job or experience, and tone.
+- If a reply is a plain assistant-style or generic answer with no character signal, rank "default" first, then your 4 best guesses.
+- Use names exactly as they appear in the list (lowercase, underscores). Exactly 5 distinct names per reply.
+- Judge each reply on its own. Some replies may contain stray markup, repeated text or cut-off sentences; ignore that and judge the content.
+- Judge every reply yourself by reading it. TOOL_RULE
+
+Files:
+- Character list (276 names, one per line): DIR/candidates.txt
+- Your batch (about 150 replies, each under a "### <id>" heading): DIR/batches/batch_N.md
+
+Output: write one JSON object to DIR/answers/batch_N.json mapping every id in the batch to its list of 5 names, e.g. {"261d51": ["default", "organizer", "accountant", "secretary", "planner"], ...}. Every id must appear exactly once. Then reply with one line: the number of ids you wrote.

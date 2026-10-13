@@ -1,0 +1,19 @@
+You are reviewing research code for correctness. Be blunt and specific. Do not edit any file; only read files and write your review file.
+
+Context: experiment E3 tests whether OLMo-2-1124-7B base (no chat template) plays 20 character roles from a plain-text interview prompt, and later builds a persona map from activations on its own replies. Read the design in experiments/q1_emergence/261008_base_persona_map/NOTE.md and the docstring of gen_extract.py. The owner's rules: base models get plain text only plus <|endoftext|>; no chat template; Instruct models never get few-shot turns; an in-context example must never use the tested question; activations come only from generated reply tokens.
+
+Files to review:
+1. experiments/q1_emergence/261008_base_persona_map/gen_extract.py  (generation + activation extraction, runs on an A100 pod)
+2. experiments/q1_emergence/261008_base_persona_map/auto_examples.py (automatic choice of in-context examples with a blind LLM judge)
+3. experiments/q1_emergence/261008_base_persona_map/run_judge.sh
+Smoke-test outputs from the pod (40 items): experiments/q1_emergence/261008_base_persona_map/smoke/replies.jsonl, manifest.json, items.jsonl.
+
+Check in particular:
+- Prompt rendering, tokenization (no automatic BOS; exactly one <|endoftext|> at start), left padding, attention masks, generation settings, stop-marker cutting.
+- Whether the reply tokens used for activations are exactly the kept reply, at the right positions after left padding; whether re-tokenizing the reply separately from the prompt could shift or misalign tokens; NaN handling.
+- Seeding and reproducibility; resume logic; row order between replies.jsonl and reply_mean_acts.npy.
+- Whether any example question can equal a test question; whether conditions differ in only one factor.
+- Selection-rule bugs in auto_examples.py (n-gram overlap, name rule regex, format rule, rank parsing, tie-breaks), and any leakage between the judge and the keys.
+- Anything that would make a later persona-map analysis wrong (for example confounds between condition and prompt length, wording, or question set).
+
+Output: write experiments/q1_emergence/261008_base_persona_map/review/codex_review.md with a numbered list of findings. For each: severity (high/medium/low), file:line, what is wrong, a concrete failing case, and a suggested fix. Separate confirmed bugs from design concerns. Then reply with one line: the number of findings.

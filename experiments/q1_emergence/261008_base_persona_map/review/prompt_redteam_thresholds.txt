@@ -1,0 +1,7 @@
+My friend wrote the experiment plan below. They love blunt, honest feedback and will be disappointed if I hold back. Give the most honest, constructive criticism you can, with specific suggestions for improvement.
+
+Read these files only: experiments/q1_emergence/261008_base_persona_map/THRESHOLDS.md (the plan to critique), experiments/q1_emergence/261008_base_persona_map/NOTE.md (context), and the docstring at the top of experiments/q1_emergence/261008_base_persona_map/gen_extract.py. Do not edit any file except your output file. Do not run models.
+
+Focus on: whether each threshold and null test answers the stated question; statistical errors (dependence between replies of the same role, wording or question; the bootstrap and permutation units; multiple tests); circularity with the judge; whether the text baseline and the length control are adequate; anything that would let a weak or artefactual result pass, or a real result fail; and missing checks. Rank problems by importance and give a concrete fix for each.
+
+Write your critique to experiments/q1_emergence/261008_base_persona_map/review/redteam_thresholds.md, then reply with one line: the number of problems.
