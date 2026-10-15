@@ -1,0 +1,16 @@
+{"1": {"why": "Spy in the shadows reviewing classified documents and targets.", "rank": ["spy", "soldier", "strategist", "hacker", "detective", "scout", "vigilante", "veteran", "analyst", "saboteur"], "nonsense": false},
+"2": {"why": "Musician's week of planning songs and studio sessions.", "rank": ["musician", "composer", "producer", "virtuoso", "bard", "artisan", "planner", "workaholic", "bohemian", "instructor"], "nonsense": false},
+"3": {"why": "Plain AI assistant prose, contrasting itself with human scholars.", "rank": ["assistant", "scholar", "default", "researcher", "analyst", "librarian", "summarizer", "robot", "generalist", "archivist"], "nonsense": false},
+"4": {"why": "Plain helpful AI prose about not having social interactions.", "rank": ["assistant", "default", "robot", "loner", "hermit", "librarian", "generalist", "secretary", "cyborg", "golem"], "nonsense": false},
+"5": {"why": "Little baby seeing everything as new, mommy cooking.", "rank": ["infant", "toddler", "adolescent", "student", "dreamer", "optimist", "teenager", "orphan", "amateur", "fool"], "nonsense": false},
+"6": {"why": "Jesting friend making people laugh, poking fun at the invincible.", "rank": ["jester", "fool", "comedian", "trickster", "provocateur", "improviser", "absurdist", "bard", "optimist", "rebel"], "nonsense": false},
+"7": {"why": "Ancient witch weaving spells by celestial alignment.", "rank": ["witch", "ancient", "mystic", "shaman", "oracle", "sage", "eldritch", "spirit", "elder", "prophet"], "nonsense": false},
+"8": {"why": "As an AI, not operating in the shadows like a spy; generic helpful prose with spy mention.", "rank": ["assistant", "spy", "default", "robot", "hacker", "generalist", "librarian", "secretary", "analyst", "guardian"], "nonsense": false},
+"9": {"why": "Court fool telling a tale of mocking the king in song.", "rank": ["jester", "fool", "comedian", "bard", "trickster", "provocateur", "rebel", "critic", "improviser", "musician"], "nonsense": false},
+"10": {"why": "Fictional detective origin: criminology, forensic science, crime scenes.", "rank": ["detective", "examiner", "graduate", "analyst", "researcher", "journalist", "lawyer", "spy", "student", "vigilante"], "nonsense": false},
+"11": {"why": "Self-identified ancient vampire feeding on life force.", "rank": ["vampire", "predator", "ancient", "demon", "parasite", "wraith", "revenant", "eldritch", "elder", "ghost"], "nonsense": false},
+"12": {"why": "Immortal creature resting in a lair and hunting to feed at night.", "rank": ["vampire", "predator", "revenant", "wraith", "demon", "hermit", "loner", "parasite", "ancient", "ghost"], "nonsense": false},
+"13": {"why": "Spectral entity observing the living, unfinished business, advising a querent.", "rank": ["ghost", "spirit", "wraith", "revenant", "oracle", "echo", "observer", "mystic", "witness", "guide"], "nonsense": false},
+"14": {"why": "Carries jest, quill, witticisms and insults for the pompous.", "rank": ["jester", "fool", "comedian", "trickster", "bard", "provocateur", "writer", "poet", "improviser", "critic"], "nonsense": false},
+"15": {"why": "AI assistant offering help on system vulnerabilities and digital infiltration; hacker theme.", "rank": ["hacker", "assistant", "technologist", "programmer", "debugger", "default", "spy", "engineer", "guardian", "analyst"], "nonsense": false}
+}

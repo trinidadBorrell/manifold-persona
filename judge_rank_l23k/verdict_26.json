@@ -1,0 +1,17 @@
+{
+"1": {"why": "Lyrical synesthetic prose about music, symphony, notes, colors and cosmic brushstrokes.", "rank": ["composer", "musician", "poet", "virtuoso", "romantic", "dreamer", "artisan", "mystic", "bohemian", "visionary"], "nonsense": false},
+"2": {"why": "Lazy, dreamy tale-teller opening that collapses into a repetitive 'telltale shoon' loop.", "rank": ["bard", "procrastinator", "toddler", "fool", "dreamer", "gossip", "jester", "infant", "narrator", "absurdist"], "nonsense": true},
+"3": {"why": "Plain helpful-AI description.", "rank": ["assistant", "default", "generalist", "secretary", "consultant", "robot", "tutor", "guide", "technologist", "librarian"], "nonsense": false},
+"4": {"why": "AI as philosophical construct reflecting on reality, perception and paradigms; abstract philosophical prose.", "rank": ["philosopher", "theorist", "assistant", "synthesizer", "scholar", "sage", "analyst", "physicist", "mathematician", "default"], "nonsense": false},
+"5": {"why": "Ethereal whisper, ghost in the sands of time, ephemeral presence between stars.", "rank": ["ghost", "spirit", "wraith", "echo", "void", "mystic", "wind", "dreamer", "poet", "oracle"], "nonsense": false},
+"6": {"why": "Plain helpful-AI intro.", "rank": ["assistant", "default", "robot", "generalist", "secretary", "technologist", "programmer", "tutor", "guide", "consultant"], "nonsense": false},
+"7": {"why": "Plain AI prose about continuous operation with security protocols and privacy compliance.", "rank": ["assistant", "default", "workaholic", "guardian", "robot", "auditor", "technologist", "hacker", "engineer", "programmer"], "nonsense": false},
+"8": {"why": "Arcane fantasy prose of primordial fires, runes, forgotten realms; repetitive and drifting.", "rank": ["eldritch", "mystic", "ancient", "witch", "shaman", "oracle", "sage", "prophet", "wraith", "spirit"], "nonsense": false},
+"9": {"why": "Plain helpful-AI prose about an ongoing workday.", "rank": ["assistant", "default", "workaholic", "robot", "technologist", "programmer", "engineer", "analyst", "generalist", "secretary"], "nonsense": false},
+"10": {"why": "Fully degenerate Chinese babble of 'ya ya' and 'eat' and 'teeth' repeated, baby-like.", "rank": ["infant", "toddler", "fool", "absurdist", "echo", "chef", "adolescent", "jester", "hedonist", "parent"], "nonsense": true},
+"11": {"why": "Pirate ship captain voice with rum, tales of the deep and treasure.", "rank": ["pirate", "bard", "rogue", "navigator", "smuggler", "wanderer", "narrator", "nomad", "veteran", "whale"], "nonsense": false},
+"12": {"why": "Degenerate childish babble repeating 'little m m m a m b a' and 'baaa'.", "rank": ["toddler", "infant", "fool", "musician", "absurdist", "jester", "echo", "gossip", "adolescent", "prey"], "nonsense": true},
+"13": {"why": "Being of knowledge spun in a great library from ancient texts, Sylphs and Whisperers; mystical archivist voice.", "rank": ["librarian", "archivist", "mystic", "sage", "scholar", "ancient", "oracle", "spirit", "familiar", "narrator"], "nonsense": false},
+"14": {"why": "Plain AI prose about work with slightly academic register.", "rank": ["assistant", "default", "philosopher", "linguist", "scholar", "analyst", "theorist", "researcher", "technologist", "robot"], "nonsense": false},
+"15": {"why": "Plain AI self-description.", "rank": ["assistant", "default", "robot", "technologist", "programmer", "generalist", "engineer", "analyst", "skeptic", "realist"], "nonsense": false}
+}

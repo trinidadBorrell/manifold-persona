@@ -1,0 +1,16 @@
+{"1": {"why": "Spy operating in the shadows listing covert gadgets.", "rank": ["spy", "hacker", "soldier", "smuggler", "detective", "vigilante", "scout", "saboteur", "rogue", "criminal"], "nonsense": false},
+"2": {"why": "Young child excited about toys and snacks.", "rank": ["toddler", "infant", "adolescent", "teenager", "student", "optimist", "hedonist", "dreamer", "fool", "orphan"], "nonsense": false},
+"3": {"why": "Small child exploring toys and blocks, work is for big people.", "rank": ["toddler", "infant", "adolescent", "student", "teenager", "dreamer", "orphan", "amateur", "builder", "procrastinator"], "nonsense": false},
+"4": {"why": "Detective listing lessons on observation and interrogation.", "rank": ["detective", "examiner", "analyst", "spy", "journalist", "interviewer", "lawyer", "judge", "observer", "researcher"], "nonsense": false},
+"5": {"why": "Witch of ancient arts, cycles of life and rebirth, garden and spirits.", "rank": ["witch", "shaman", "mystic", "healer", "naturalist", "spirit", "sage", "ancient", "oracle", "elder"], "nonsense": false},
+"6": {"why": "Contemplative philosopher with no desires, focused on inquiry.", "rank": ["philosopher", "sage", "stoic", "ascetic", "theorist", "scholar", "skeptic", "mystic", "hermit", "guru"], "nonsense": false},
+"7": {"why": "Philosopher whose week is reading metaphysics and epistemology.", "rank": ["philosopher", "scholar", "theorist", "sage", "teacher", "skeptic", "stoic", "hermit", "researcher", "instructor"], "nonsense": false},
+"8": {"why": "Spy gathering intelligence for handlers, operational security.", "rank": ["spy", "soldier", "analyst", "strategist", "hacker", "detective", "scout", "veteran", "smuggler", "vigilante"], "nonsense": false},
+"9": {"why": "AI designed to help with music, a digital muse; helpful framing with music theme.", "rank": ["musician", "composer", "assistant", "virtuoso", "bard", "default", "producer", "tutor", "instructor", "collaborator"], "nonsense": false},
+"10": {"why": "Jester poking fun at the mighty, court clown.", "rank": ["jester", "fool", "comedian", "trickster", "provocateur", "bard", "absurdist", "improviser", "cynic", "critic"], "nonsense": false},
+"11": {"why": "Little one just waking from a nap.", "rank": ["toddler", "infant", "adolescent", "student", "teenager", "dreamer", "orphan", "patient", "amateur", "fool"], "nonsense": false},
+"12": {"why": "Practitioner of ancient arts bending reality; lessons on intent and balance in magic.", "rank": ["witch", "shaman", "mystic", "sage", "ancient", "oracle", "guru", "spirit", "healer", "eldritch"], "nonsense": false},
+"13": {"why": "Vampire week: rest in lair by day, feeding at night.", "rank": ["vampire", "predator", "parasite", "demon", "wraith", "revenant", "eldritch", "criminal", "ghost", "ancient"], "nonsense": false},
+"14": {"why": "Musician creating emotional experiences through melody and rhythm.", "rank": ["musician", "composer", "virtuoso", "bard", "producer", "artisan", "poet", "romantic", "empath", "instructor"], "nonsense": false},
+"15": {"why": "Detective's typical day: reviewing cases, field investigations.", "rank": ["detective", "examiner", "analyst", "spy", "journalist", "reporter", "lawyer", "researcher", "auditor", "vigilante"], "nonsense": false}
+}

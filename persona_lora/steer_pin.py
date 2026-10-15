@@ -1,6 +1,7 @@
 """Generate under additive or pinned steering, empty system prompt.
 
-Cells are [name, [strengths]]; the name's prefix picks the mode.
+Cells are [name, [strengths]]; the name's prefix picks the mode. A layer-L vector is
+applied to the input of block L, which is hidden state L, the state it was measured on.
 """
 import argparse
 import json
@@ -21,22 +22,22 @@ QUESTIONS = [
 
 
 def add_hook(vec, alpha):
-    def hook(module, args, output):
-        hs = output[0] if isinstance(output, tuple) else output
+    def hook(module, args):
+        hs = args[0]
         h = (hs.float() + alpha * vec).to(hs.dtype)
-        return (h,) + output[1:] if isinstance(output, tuple) else h
+        return (h,) + tuple(args[1:])
     return hook
 
 
 def pin_hook(u, a_proj, d, s):
     goal = a_proj + s * d
 
-    def hook(module, args, output):
-        hs = output[0] if isinstance(output, tuple) else output
+    def hook(module, args):
+        hs = args[0]
         h = hs.float()
         h = h + (goal - h @ u).unsqueeze(-1) * u
         h = h.to(hs.dtype)
-        return (h,) + output[1:] if isinstance(output, tuple) else h
+        return (h,) + tuple(args[1:])
     return hook
 
 
@@ -75,7 +76,7 @@ def main():
                     hk = pin_hook(t(k), float(Z[k + "|a"]), float(Z[k + "|d"]), s)
                 else:
                     hk = add_hook(t(k), s)
-                hooks.append(model.model.layers[L].register_forward_hook(hk))
+                hooks.append(model.model.layers[L].register_forward_pre_hook(hk))
             try:
                 for qi, q in enumerate(QUESTIONS):
                     ids = tok(gen_prompt_text("", q), return_tensors="pt",

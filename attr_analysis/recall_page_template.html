@@ -1,0 +1,270 @@
+<title>Steering Recall at Layer 23</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.3/plotly.min.js"></script>
+<style>
+/* layout: one reading column, tables and the 3-d view break out to a wider measure */
+:root{
+  --bg:#f7f6f2; --fg:#1d2126; --muted:#5c6570; --line:#d9d6cd; --panel:#efede6;
+  --accent:#0f6e74; --accent-soft:#cfe6e4; --warn:#a2581b;
+  --s3:#9fd0cc; --s4:#5fb0ad; --s6:#2a8a8c; --s8:#0b5c62; --prompt:#b5651d; --asst:#1d2126;
+  --display:"Fraunces",Georgia,serif; --body:"Source Sans 3",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#15181b; --fg:#e8e6df; --muted:#a4aab1; --line:#333940; --panel:#1e2327;
+  --accent:#6fc6c8; --accent-soft:#1f3a3c; --warn:#e0a060;
+  --s3:#3f6e6c; --s4:#5aa3a0; --s6:#86d0cd; --s8:#c9f0ee; --prompt:#e39a52; --asst:#e8e6df; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#15181b; --fg:#e8e6df; --muted:#a4aab1; --line:#333940; --panel:#1e2327;
+  --accent:#6fc6c8; --accent-soft:#1f3a3c; --warn:#e0a060;
+  --s3:#3f6e6c; --s4:#5aa3a0; --s6:#86d0cd; --s8:#c9f0ee; --prompt:#e39a52; --asst:#e8e6df; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+main{max-width:1040px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);font-weight:600;text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:2.4rem;letter-spacing:-0.01em}
+h2{font-size:1.5rem;margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line)}
+h3{font-size:1.15rem;margin-top:1.6rem}
+p{max-width:68ch;margin:0.8rem 0}
+.lede{font-size:1.15rem;color:var(--muted);max-width:60ch}
+.eyebrow{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:0.5rem}
+table{border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:0.95rem;margin:1rem 0;min-width:100%}
+.tw{overflow-x:auto;margin:1rem 0}
+th,td{padding:0.4rem 0.7rem;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-weight:600;color:var(--muted);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.06em}
+td:first-child,th:first-child{text-align:left}
+tr.hl td{background:var(--accent-soft)}
+.cap{font-size:0.85rem;color:var(--muted);max-width:70ch}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:1.2rem 0}
+.tile{background:var(--panel);padding:0.9rem 1rem;border-radius:4px;min-width:0}
+.tile .k{font-family:var(--mono);font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em}
+.tile .v{font-family:var(--display);font-size:2rem;line-height:1.1;margin-top:0.2rem}
+.tile .d{font-size:0.82rem;color:var(--muted)}
+figure{margin:1.2rem 0}
+figcaption{font-size:0.85rem;color:var(--muted);margin-top:0.4rem;max-width:70ch}
+svg text{fill:var(--fg);font-family:var(--body);font-size:12px}
+svg .grid{stroke:var(--line);stroke-width:1}
+svg .axis{stroke:var(--muted);stroke-width:1}
+svg .mut{fill:var(--muted)}
+.leg{display:flex;flex-wrap:wrap;gap:14px;font-size:0.85rem;color:var(--muted);margin-top:0.4rem}
+.leg span::before{content:"";display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle;background:var(--c)}
+.sel{display:flex;flex-wrap:wrap;gap:6px;margin:0.8rem 0}
+.sel button{font:inherit;font-size:0.85rem;padding:0.3rem 0.7rem;border:1px solid var(--line);background:var(--panel);color:var(--fg);border-radius:999px;cursor:pointer}
+.sel button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.sel button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.work{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:14px;align-items:start}
+@media (max-width:860px){.work{grid-template-columns:minmax(0,1fr)}}
+#plot{width:100%;height:560px;max-width:100%;border:1px solid var(--line);border-radius:4px;background:var(--panel)}
+@media (max-width:860px){#plot{height:420px}}
+.reader{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:1rem;min-width:0;max-height:560px;overflow:auto;display:flex;flex-direction:column;gap:0.7rem}
+.reader .kicker{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
+.reader h4{font-family:var(--display);font-size:1.3rem;margin:0}
+.reader .q{font-size:0.85rem;color:var(--muted)}
+.reader .a{font-size:0.95rem;line-height:1.45;overflow-wrap:anywhere}
+.reader .empty{color:var(--muted);margin:0}
+.bars{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:4px 10px;align-items:center;font-size:0.85rem;font-variant-numeric:tabular-nums}
+.bars .n{font-family:var(--mono);font-size:0.8rem}
+.bars .b{height:8px;border-radius:4px;background:var(--line);min-width:0}
+.bars .b i{display:block;height:100%;border-radius:4px;background:var(--accent)}
+.bars .b i.hit{background:var(--prompt)}
+.jl{font-family:var(--mono);font-size:0.8rem;line-height:1.7}
+.jl b{color:var(--accent);font-weight:500}
+.facts{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 12px;font-size:0.85rem;margin:0}
+.facts dt{color:var(--muted)} .facts dd{margin:0;font-variant-numeric:tabular-nums}
+.keys{display:flex;flex-wrap:wrap;gap:14px;font-size:0.85rem;color:var(--muted);margin-top:0.5rem}
+.keys i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:var(--c)}
+.ex{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:1rem 0}
+.card{background:var(--panel);border-radius:4px;padding:1rem;min-width:0;display:flex;flex-direction:column;gap:0.5rem}
+.card .who{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.card .who b{font-family:var(--display);font-size:1.1rem}
+.card .who span{font-family:var(--mono);font-size:0.75rem;color:var(--muted)}
+.card .q{font-size:0.85rem;color:var(--muted)}
+.card .a{font-size:0.95rem;line-height:1.45}
+.card .m{font-family:var(--mono);font-size:0.75rem;color:var(--muted);line-height:1.6;border-top:1px solid var(--line);padding-top:0.5rem}
+.card .m b{color:var(--fg);font-weight:500}
+.card.fail{border-left:3px solid var(--warn)}
+.note{background:var(--panel);border-left:3px solid var(--accent);padding:0.8rem 1rem;border-radius:0 4px 4px 0;margin:1rem 0;max-width:70ch}
+ol,ul{max-width:68ch;padding-left:1.3rem}
+li{margin:0.3rem 0}
+code{font-family:var(--mono);font-size:0.85em;background:var(--panel);padding:0.05em 0.3em;border-radius:3px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+<main>
+<div class="eyebrow">Qwen2.5-3B-Instruct · 276 roles · pinned steering, one layer</div>
+<h1>Steering Recall at Layer 23</h1>
+<p class="lede">How often a blind judge, given the full list of 276 persona names, recovers the persona a steering vector aimed at. And whether a small calibrated classifier on the model's own activations can predict that judge.</p>
+
+<div class="tiles" id="tiles"></div>
+
+<h2>The judge</h2>
+<p>Each answer is shown blind, shuffled into chunks of fifteen, with no system prompt, no persona name and no strength. The judge sees the list of 276 role names, writes one or two sentences on what the voice, imagery and self-description point to, then ranks its ten most likely personas, best first, and flags degenerate text. Recall@k is the share of answers whose intended persona is among the first k names. One verdict gives recall at 1, 5 and 10 at once.</p>
+<p>With the persona's own system prompt and no steering, the judge recovers it almost always. That is the ceiling: steering is measured against it.</p>
+
+<h2>Steering with the persona's own vector</h2>
+<p>The vector is the persona's mean response activation minus the assistant's, at hidden state 23. Steering pins the residual stream's coordinate along that direction to the assistant's value plus <em>s</em> times the persona's own distance, at every token, with an empty system prompt. Twelve personas, four strengths, ten questions, 480 answers.</p>
+
+<figure>
+<div id="chart"></div>
+<div class="leg"><span style="--c:var(--s8)">recall@10</span><span style="--c:var(--s6)">recall@5</span><span style="--c:var(--s4)">recall@1</span><span style="--c:var(--prompt)">prompted ceiling (recall@5)</span></div>
+<figcaption>Pooled over the twelve personas at each strength. The judge's assistant-first rate falls from 0.53 at s=3 to 0.06 at s=8 while nonsense rises from 0.00 to 0.40.</figcaption>
+</figure>
+
+<div class="tw"><table id="t-strength"></table></div>
+<p class="cap">Each row is 120 answers. The last row picks each persona's best strength by recall@5, so it is optimistic by one selection.</p>
+
+<h3>Per persona</h3>
+<div class="tw"><table id="t-persona"></table></div>
+<p class="cap">Prompted columns are the same judge on the persona's own system prompt. Distance is the persona's displacement from the assistant at layer 23; the two shortest, scholar and ghost, are the two that fail.</p>
+
+<h2>Directions rebuilt from other personas</h2>
+<p>Each persona's direction is rebuilt as a sparse weighted sum of 8 or 32 other personas, chosen from the whole pool of 300 minus the target's eight nearest neighbours, and pinned at the same layer and strengths. The atoms come from all personas; the targets being rebuilt and judged are still the twelve above, which is why tonight's run extends this to all 276.</p>
+<div class="tw"><table id="t-arms"></table></div>
+<p class="cap">Each persona at its best strength, 120 answers per row. The offset columns are the same experiment before the hook fix described at the end.</p>
+
+<h2>A classifier that predicts the judge</h2>
+<p>Every judged answer gives one training point: the mean hidden state of the generated text at layer 23, re-encoded with no steering, and the judge's ranked list. The list becomes a soft target over 277 classes (the 276 names plus nonsense), weight 1/rank over the ten names. A multinomial logistic regression on 64 principal components, ridge-regularised, is fitted by cross-entropy to that target on 60% of the 3,000 judged answers, temperature-scaled on 20%, and tested on the remaining 20%.</p>
+<p>The split is by answer within each (direction, persona, strength) cell. So the test says how well the classifier reproduces the judge on new answers from known cells. It does not yet say how it transfers to personas never steered; that is what the 276-persona run tomorrow is for.</p>
+
+<div class="tiles" id="clf-tiles"></div>
+
+<h3>Calibration on the 600 test answers</h3>
+<div class="tw"><table id="t-cal"></table></div>
+<p class="cap">p(target) is on the soft target's own scale: a first-ranked name carries 0.34 of the mass, so probabilities saturate near 0.5. One threshold at 0.1 separates answers the judge places in its top five from those it does not, nine times in ten against one in five.</p>
+
+<h3>Layer 23 in three dimensions</h3>
+<p>The axes are the first three principal directions of the 300 persona means at layer 23, centred on the assistant, which sits at the origin. Small grey dots are all persona means. The prompted answers and the steered answers for one persona are the model's own activations for those texts, projected with the same basis. Dot size follows the classifier's p(target). Click a dot to open the answer in the reader beside the plot, with the judge's ranked names, the classifier's probabilities and the cell's recall.</p>
+<div class="sel" id="persel" role="group" aria-label="persona"></div>
+<div class="work">
+<div id="plot"></div>
+<aside class="reader" id="reader" aria-live="polite"><p class="empty">Click a dot to read the answer here, with the judge's ranking and the classifier's probabilities.</p></aside>
+</div>
+<div class="keys"><span><i style="--c:var(--asst)"></i>assistant</span><span><i style="--c:var(--prompt)"></i>prompted answers</span><span><i style="--c:var(--s3)"></i>steered s=3</span><span><i style="--c:var(--s4)"></i>s=4</span><span><i style="--c:var(--s6)"></i>s=6</span><span><i style="--c:var(--s8)"></i>s=8</span><span><i style="--c:var(--accent)"></i>persona mean (large)</span></div>
+<p class="cap" id="varcap"></p>
+
+<h2>What a steered answer looks like</h2>
+<p>Each card is one answer from the corrected run with its strength, the judge's five names in order, and the classifier's p(target) with its own top three. The last two cards are the two personas that do not work.</p>
+<div class="ex" id="examples"></div>
+
+<h2>What runs tonight, and what comes next</h2>
+<ol>
+<li><b>All 276 personas.</b> Own vector at strengths 3, 4, 6 and 8, the prompted ceiling, and the 8- and 32-persona rebuilds at strengths 6 and 8, all ten questions: about 25,000 answers, with the activation read-out of each. Scheduled on the cluster for 21:00 Paris time.</li>
+<li><b>Judge the recall</b> for every persona with a cheap model, same ranked prompt, so the recall tables above become 276 rows.</li>
+<li><b>Retrain the classifier</b> on all 276 and test it on held-out personas, so it stands in for the judge on cells nobody judged.</li>
+<li><b>Minimum basis.</b> Rebuild every persona from k = 4, 8, 16, 32, 64 others, steer, and score with the classifier. The smallest k whose recall@5 matches the own-vector recall is the number of persona axes the space needs.</li>
+</ol>
+
+<div class="note"><b>Hook fix.</b> Until today the steering hook edited the output of block 23, which is hidden state 24, with a vector averaged at hidden state 23. All scripts now use a forward pre-hook on block 23, so the edit lands on the state the vector was measured from. Every number on this page comes from the corrected run unless marked offset; the fix raised recall@5 at best strength from 0.81 to 0.85 and recall@1 from 0.54 to 0.62.</div>
+</main>
+<script>
+const D = __DATA__;
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const f2 = x => x == null ? '–' : x.toFixed(2);
+const SC = {3:'--s3',4:'--s4',6:'--s6',8:'--s8'};
+
+// headline tiles
+const b = D.best, pa = D.prompt_all;
+document.getElementById('tiles').innerHTML = [
+  ['recall@1', f2(b['r@1']), 'steered, best strength'],
+  ['recall@5', f2(b['r@5']), 'steered, best strength'],
+  ['recall@10', f2(b['r@10']), 'steered, best strength'],
+  ['prompted ceiling', f2(pa['r@5']), 'recall@5 with the system prompt'],
+  ['chance', (5/276).toFixed(3), 'recall@5 over 276 names'],
+].map(([k,v,d]) => `<div class="tile"><div class="k">${k}</div><div class="v">${v}</div><div class="d">${d}</div></div>`).join('');
+
+// recall by strength chart (inline SVG, to scale)
+(function(){
+  const W=720,H=300,ml=46,mr=16,mt=16,mb=36, w=W-ml-mr, h=H-mt-mb;
+  const xs=[3,4,6,8]; const x=v=>ml+(v-3)/(8-3)*w; const y=v=>mt+h-v*h;
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="recall against steering strength">`;
+  for(const g of [0,0.25,0.5,0.75,1]) s+=`<line class="grid" x1="${ml}" x2="${ml+w}" y1="${y(g)}" y2="${y(g)}"/><text class="mut" x="${ml-8}" y="${y(g)+4}" text-anchor="end">${g.toFixed(2)}</text>`;
+  for(const v of xs) s+=`<text class="mut" x="${x(v)}" y="${H-10}" text-anchor="middle">s = ${v}</text>`;
+  s+=`<line class="axis" x1="${ml}" x2="${ml+w}" y1="${y(0)}" y2="${y(0)}"/>`;
+  s+=`<line x1="${ml}" x2="${ml+w}" y1="${y(pa['r@5'])}" y2="${y(pa['r@5'])}" stroke="${css('--prompt')}" stroke-width="2" stroke-dasharray="6 5"/>`;
+  for(const [k,c] of [['r@10','--s8'],['r@5','--s6'],['r@1','--s4']]){
+    const pts=D.strength_rows.map(r=>[x(r.s),y(r[k])]);
+    s+=`<polyline fill="none" stroke="${css(c)}" stroke-width="2" points="${pts.map(p=>p.join(',')).join(' ')}"/>`;
+    pts.forEach((p,i)=>{s+=`<circle cx="${p[0]}" cy="${p[1]}" r="4.5" fill="${css(c)}" stroke="${css('--bg')}" stroke-width="2"/>`;
+      if(i===pts.length-1) s+=`<text x="${p[0]-10}" y="${p[1]-9}" text-anchor="end">${D.strength_rows[i][k].toFixed(2)}</text>`;});
+  }
+  s+='</svg>';
+  document.getElementById('chart').innerHTML=s;
+})();
+
+// tables
+const th = cols => '<tr>'+cols.map(c=>`<th>${c}</th>`).join('')+'</tr>';
+document.getElementById('t-strength').innerHTML = th(['strength','recall@1','recall@5','recall@10','95% CI recall@5','assistant first','nonsense','n']) +
+  D.strength_rows.map(r=>`<tr><td>${r.s}</td><td>${f2(r['r@1'])}</td><td>${f2(r['r@5'])}</td><td>${f2(r['r@10'])}</td><td>[${f2(r.ci5[0])}, ${f2(r.ci5[1])}]</td><td>${f2(r['asst@1'])}</td><td>${f2(r.nonsense)}</td><td>${r.n}</td></tr>`).join('') +
+  `<tr class="hl"><td>best per persona</td><td>${f2(b['r@1'])}</td><td>${f2(b['r@5'])}</td><td>${f2(b['r@10'])}</td><td>[${f2(b['ci@5'][0])}, ${f2(b['ci@5'][1])}]</td><td>${f2(b['asst@1'])}</td><td>${f2(b.nonsense)}</td><td>${b.n}</td></tr>` +
+  `<tr><td>prompted, no steering</td><td>${f2(pa['r@1'])}</td><td>${f2(pa['r@5'])}</td><td>${f2(pa['r@10'])}</td><td></td><td></td><td>${f2(pa.nonsense)}</td><td>${pa.n}</td></tr>`;
+
+document.getElementById('t-persona').innerHTML = th(['persona','distance','best s','steered @1','steered @5','steered @10','prompted @1','prompted @5','prompted @10']) +
+  [...D.per_persona].sort((a,b)=>b.r5-a.r5||b.r1-a.r1).map(r=>`<tr><td>${r.t}</td><td>${r.norm.toFixed(1)}</td><td>${r.best_s}</td><td>${f2(r.r1)}</td><td>${f2(r.r5)}</td><td>${f2(r.r10)}</td><td>${f2(r.p1)}</td><td>${f2(r.p5)}</td><td>${f2(r.p10)}</td></tr>`).join('');
+
+const A=D.arms;
+document.getElementById('t-arms').innerHTML = th(['direction','recall@1','recall@5','recall@10','95% CI recall@5','nonsense','offset @1','offset @5','offset @10']) +
+  [['own vector','own','own_offset'],['32 other personas','k32','k32_offset'],['8 other personas','k8','k8_offset']].map(([n,k,o])=>`<tr><td>${n}</td><td>${f2(A[k]['r@1'])}</td><td>${f2(A[k]['r@5'])}</td><td>${f2(A[k]['r@10'])}</td><td>[${f2(A[k]['ci@5'][0])}, ${f2(A[k]['ci@5'][1])}]</td><td>${f2(A[k].nonsense)}</td><td>${f2(A[o]['r@1'])}</td><td>${f2(A[o]['r@5'])}</td><td>${f2(A[o]['r@10'])}</td></tr>`).join('');
+
+// classifier tiles and calibration
+const C=D.clf;
+document.getElementById('clf-tiles').innerHTML = [
+  ['r, recall@5 per cell', C.per_cell['@5'].r_recall.toFixed(2), 'classifier vs judge, 156 cells'],
+  ['r, recall@1 per cell', C.per_cell['@1'].r_recall.toFixed(2), 'classifier vs judge'],
+  ['top-1 agreement', f2(C.per_answer.top1_matches_judge_top1), 'same first name as the judge'],
+  ['in judge top-5', '0.83', "classifier's first name"],
+  ['Gaussian mixture', '0.66', 'r, recall@5, same activations'],
+].map(([k,v,d]) => `<div class="tile"><div class="k">${k}</div><div class="v">${v}</div><div class="d">${d}</div></div>`).join('');
+document.getElementById('t-cal').innerHTML = th(['p(target)','answers','judge hit@1','judge hit@5']) +
+  [['below 0.1',353,0.05,0.20],['0.1 to 0.2',79,0.39,0.89],['0.2 to 0.3',77,0.71,0.94],['0.3 to 0.4',50,0.82,0.96],['0.4 and above',41,0.90,0.98]].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${f2(r[2])}</td><td>${f2(r[3])}</td></tr>`).join('');
+
+// 3-d view
+document.getElementById('varcap').textContent = `The three axes keep ${(D.var3*100).toFixed(0)}% of the variance of the persona means; the rest of the separation lives in the remaining ${2048-3} dimensions, so points that overlap here can still be far apart.`;
+const sel=document.getElementById('persel');
+let cur='pirate';
+D.show.forEach(t=>{const bt=document.createElement('button');bt.textContent=t;bt.id='sel-'+t;bt.setAttribute('aria-pressed',t===cur);bt.onclick=()=>{cur=t;[...sel.children].forEach(c=>c.setAttribute('aria-pressed',c.id==='sel-'+t));draw();};sel.appendChild(bt);});
+function hov(p){return `<b>${p.t}</b> · ${p.arm}${p.arm==='steered'?' s='+p.s:''} · q${p.qi}<br>p(target) ${p.p==null?'–':p.p.toFixed(2)} · click to read`;}
+const esc=x=>String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+function open(p){
+  const r=document.getElementById('reader');
+  const maxp=Math.max(0.01,...p.clf.map(x=>x[1]));
+  r.innerHTML=`<div class="kicker">${p.arm==='steered'?'steered · s = '+p.s:'prompted · no steering'} · question ${p.qi+1}</div>
+  <h4>${esc(p.t)}</h4>
+  <div class="q">${esc(p.q)}</div>
+  <div class="a">${esc(p.text)}</div>
+  <div class="kicker">judge, ranked</div>
+  <div class="jl">${p.judge.map((n,i)=>(n===p.t?`<b>${i+1}. ${esc(n)}</b>`:`${i+1}. ${esc(n)}`)).join('<br>')}</div>
+  <div class="kicker">classifier · p(target) ${p.p==null?'–':p.p.toFixed(2)}</div>
+  <div class="bars">${p.clf.map(([n,v])=>`<span class="n">${esc(n)}</span><span class="b"><i class="${n===p.t?'hit':''}" style="width:${Math.round(100*v/maxp)}%"></i></span><span>${v.toFixed(2)}</span>`).join('')}</div>
+  <div class="kicker">this cell, 10 answers</div>
+  <dl class="facts"><dt>recall@1</dt><dd>${f2(p.r1)}</dd><dt>recall@5</dt><dd>${f2(p.r5)}</dd><dt>recall@10</dt><dd>${f2(p.r10)}</dd></dl>`;
+}
+function draw(){
+  const fg=css('--fg'), mut=css('--muted'), panel=css('--panel'), line=css('--line');
+  const names=Object.keys(D.means);
+  const tr=[{type:'scatter3d',mode:'markers',name:'persona means',x:names.map(n=>D.means[n][0]),y:names.map(n=>D.means[n][1]),z:names.map(n=>D.means[n][2]),text:names,hoverinfo:'text',marker:{size:2.5,color:mut,opacity:0.45}},
+    {type:'scatter3d',mode:'markers',name:'assistant',x:[0],y:[0],z:[0],text:['assistant (origin)'],hoverinfo:'text',marker:{size:9,color:css('--asst'),symbol:'diamond'}},
+    {type:'scatter3d',mode:'markers+text',name:cur+' mean',x:[D.means[cur][0]],y:[D.means[cur][1]],z:[D.means[cur][2]],text:[cur],textposition:'top center',textfont:{color:fg,size:13},hoverinfo:'text',marker:{size:10,color:css('--accent'),symbol:'circle',line:{color:fg,width:1}}}];
+  const pts=D.points.filter(p=>p.t===cur);
+  const pr=pts.filter(p=>p.arm==='prompted');
+  tr.push({type:'scatter3d',mode:'markers',name:'prompted',x:pr.map(p=>p.xyz[0]),y:pr.map(p=>p.xyz[1]),z:pr.map(p=>p.xyz[2]),text:pr.map(hov),customdata:pr,hoverinfo:'text',marker:{size:pr.map(p=>4+16*(p.p||0)),color:css('--prompt'),opacity:0.9,line:{color:panel,width:1}}});
+  for(const s of [3,4,6,8]){const q=pts.filter(p=>p.arm==='steered'&&p.s===s);
+    tr.push({type:'scatter3d',mode:'markers',name:'steered s='+s,x:q.map(p=>p.xyz[0]),y:q.map(p=>p.xyz[1]),z:q.map(p=>p.xyz[2]),text:q.map(hov),customdata:q,hoverinfo:'text',marker:{size:q.map(p=>4+16*(p.p||0)),color:css(SC[s]),opacity:0.9,line:{color:panel,width:1}}});}
+  const ax={gridcolor:line,zerolinecolor:mut,color:mut,backgroundcolor:panel,showbackground:true};
+  Plotly.react('plot',tr,{paper_bgcolor:panel,plot_bgcolor:panel,font:{color:fg,family:'Source Sans 3, sans-serif'},margin:{l:0,r:0,t:0,b:0},showlegend:false,
+    scene:{xaxis:{...ax,title:'PC1'},yaxis:{...ax,title:'PC2'},zaxis:{...ax,title:'PC3'},camera:{eye:{x:1.5,y:1.3,z:0.9}}},hoverlabel:{bgcolor:css('--bg'),bordercolor:line,font:{color:fg,size:12}}},{responsive:true,displaylogo:false});
+  const el=document.getElementById('plot');
+  if(!el._clickBound){el._clickBound=true;
+    let last=null,down=null;
+    el.on('plotly_hover',ev=>{const pt=ev.points&&ev.points[0];last=pt&&pt.customdata?pt.customdata:null;});
+    el.on('plotly_unhover',()=>{last=null;});
+    el.on('plotly_click',ev=>{const pt=ev.points&&ev.points[0];if(pt&&pt.customdata)open(pt.customdata);});
+    el.addEventListener('pointerdown',e=>{down=[e.clientX,e.clientY];});
+    el.addEventListener('pointerup',e=>{const still=down&&Math.hypot(e.clientX-down[0],e.clientY-down[1])<5;down=null;if(!still)return;if(last)open(last);else setTimeout(()=>{if(last)open(last);},150);});
+  }
+}
+if(typeof Plotly==='undefined'){document.getElementById('plot').innerHTML='<p class="cap" style="padding:1rem">The 3-d library did not load; reload the page to try again.</p>';}
+else{draw();matchMedia('(prefers-color-scheme: dark)').addEventListener('change',draw);
+new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});}
+
+// examples
+document.getElementById('examples').innerHTML = D.examples.map(e=>`<div class="card${e.r5<0.5?' fail':''}"><div class="who"><b>${e.t}</b><span>s = ${e.s} · cell recall@5 ${f2(e.r5)}</span></div><div class="q">${e.q}</div><div class="a">${e.text.replace(/</g,'&lt;')}</div><div class="m">judge: <b>${e.judge.join(' › ')}</b><br>classifier p(target) <b>${e.p==null?'–':e.p.toFixed(2)}</b> · ${e.clf.map(x=>x[0]+' '+x[1].toFixed(2)).join(', ')}</div></div>`).join('');
+</script>

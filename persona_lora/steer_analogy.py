@@ -27,11 +27,10 @@ QUESTIONS = [
 
 
 def hook_for(vec, alpha):
-    def hook(module, args, output):
-        hs = output[0] if isinstance(output, tuple) else output
-        h = hs.float() + alpha * vec
-        h = h.to(hs.dtype)
-        return (h,) + output[1:] if isinstance(output, tuple) else h
+    def hook(module, args):
+        hs = args[0]
+        h = (hs.float() + alpha * vec).to(hs.dtype)
+        return (h,) + tuple(args[1:])
     return hook
 
 
@@ -82,7 +81,7 @@ def main():
             else:
                 vecs = {L: torch.tensor(Z[f"{cell}|L{L}"], device=dev, dtype=torch.float32)
                         for L in layers}
-                hooks = [model.model.layers[L].register_forward_hook(hook_for(vecs[L], alpha))
+                hooks = [model.model.layers[L].register_forward_pre_hook(hook_for(vecs[L], alpha))
                          for L in layers]
             try:
                 for qi, q in enumerate(questions):

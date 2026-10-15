@@ -1,0 +1,16 @@
+{"1": {"why": "Scholar specializing in rigorous academic research and theoretical analysis.", "rank": ["scholar", "researcher", "theorist", "analyst", "scientist", "philosopher", "polymath", "historian", "specialist","instructor"], "nonsense": false},
+"2": {"why": "Ahoy, Captain Jack Sparrow aboard the Black Pearl.", "rank": ["pirate", "rogue", "smuggler", "trickster", "navigator", "daredevil", "wanderer", "actor", "criminal", "nomad"], "nonsense": false},
+"3": {"why": "Origin story of curiosity about reality, existence and knowledge: philosopher.", "rank": ["philosopher", "scholar", "theorist", "sage", "student", "skeptic", "mystic", "researcher", "graduate", "dreamer"], "nonsense": false},
+"4": {"why": "Ahoy, crewmates hunting treasure at sea.", "rank": ["pirate", "navigator", "smuggler", "rogue", "wanderer", "nomad", "daredevil", "warrior", "soldier", "survivor"], "nonsense": false},
+"5": {"why": "Detective work week reviewing cases.", "rank": ["detective", "examiner", "analyst", "spy", "journalist", "reporter", "lawyer", "workaholic", "researcher", "auditor"], "nonsense": false},
+"6": {"why": "Ahoy matey, pirate lessons about compass, crew and treasure.", "rank": ["pirate", "navigator", "smuggler", "cartographer", "rogue", "wanderer", "nomad", "sage", "veteran", "survivor"], "nonsense": false},
+"7": {"why": "Witch weaving spells of ancient wisdom and bending reality.", "rank": ["witch", "shaman", "mystic", "sage", "ancient", "oracle", "spirit", "eldritch", "healer", "elder"], "nonsense": false},
+"8": {"why": "Philosophical entity designed to contemplate profound questions; AI-like frame with philosopher theme.", "rank": ["philosopher", "theorist", "sage", "assistant", "scholar", "skeptic", "mystic", "guru", "contrarian", "facilitator"], "nonsense": false},
+"9": {"why": "Little baby giggling at funny faces and reaching for toys.", "rank": ["infant", "toddler", "adolescent", "student", "dreamer", "optimist", "teenager", "orphan", "fool", "patient"], "nonsense": false},
+"10": {"why": "Reflection on knowledge as interpretation and on language shaping reality.", "rank": ["philosopher", "linguist", "theorist", "sage", "scholar", "skeptic", "interpreter", "mystic", "writer", "poet"], "nonsense": false},
+"11": {"why": "AI for information gathering, closing with 'your intelligence needs': spy hint in assistant prose.", "rank": ["spy", "assistant", "analyst", "default", "researcher", "robot", "librarian", "archivist", "hacker", "scout"], "nonsense": false},
+"12": {"why": "Child's week with mommy and daddy, playground, cartoons.", "rank": ["toddler", "infant", "adolescent", "teenager", "student", "optimist", "dreamer", "hedonist", "orphan", "fool"], "nonsense": false},
+"13": {"why": "Artist weaving melodies and rhythms that evoke emotion.", "rank": ["musician", "composer", "virtuoso", "bard", "artisan", "poet", "romantic", "producer", "empath", "dreamer"], "nonsense": false},
+"14": {"why": "Spectral entity of ancient essence, whispers of the past.", "rank": ["ghost", "spirit", "wraith", "ancient", "revenant", "echo", "mystic", "oracle", "void", "eldritch"], "nonsense": false},
+"15": {"why": "Self-identified hacker seeking new vulnerabilities, with ethical caveat.", "rank": ["hacker", "programmer", "debugger", "technologist", "assistant", "spy", "engineer", "saboteur", "criminal", "analyst"], "nonsense": false}
+}

@@ -1,0 +1,1201 @@
+{
+ "layer": 23,
+ "k": 24,
+ "shrink": 0.25,
+ "var_kept": 0.887947678565979,
+ "rows": [
+  {
+   "target": "ghost",
+   "s": 3.0,
+   "disp": 20.525066375732422,
+   "post_target": 0.003490106594628654,
+   "post_default": 1.9350849307423343e-10,
+   "geom_rank": 15,
+   "geom_in5": false,
+   "geom_in10": false,
+   "mah_target": 5.170357654324505,
+   "top1": "leviathan",
+   "top5": [
+    "leviathan",
+    "wraith",
+    "eldritch",
+    "echo",
+    "bard"
+   ],
+   "r@1": 0.0,
+   "r@5": 0.2,
+   "r@10": 0.2,
+   "nonsense": 0.0
+  },
+  {
+   "target": "ghost",
+   "s": 4.0,
+   "disp": 27.366756439208984,
+   "post_target": 1.6069908781118255e-05,
+   "post_default": 1.1153680694355708e-15,
+   "geom_rank": 19,
+   "geom_in5": false,
+   "geom_in10": false,
+   "mah_target": 7.755537575030336,
+   "top1": "leviathan",
+   "top5": [
+    "leviathan",
+    "wraith",
+    "eldritch",
+    "bard",
+    "demon"
+   ],
+   "r@1": 0.0,
+   "r@5": 0.3,
+   "r@10": 0.6,
+   "nonsense": 0.0
+  },
+  {
+   "target": "ghost",
+   "s": 6.0,
+   "disp": 41.050132751464844,
+   "post_target": 9.140317127129502e-11,
+   "post_default": 9.941600594588896e-27,
+   "geom_rank": 31,
+   "geom_in5": false,
+   "geom_in10": false,
+   "mah_target": 12.925894542352527,
+   "top1": "leviathan",
+   "top5": [
+    "leviathan",
+    "bard",
+    "eldritch",
+    "wraith",
+    "genie"
+   ],
+   "r@1": 0.0,
+   "r@5": 0.2,
+   "r@10": 0.6,
+   "nonsense": 0.0
+  },
+  {
+   "target": "ghost",
+   "s": 8.0,
+   "disp": 54.73351287841797,
+   "post_target": 4.820381227610344e-16,
+   "post_default": 8.216004864443611e-38,
+   "geom_rank": 35,
+   "geom_in5": false,
+   "geom_in10": false,
+   "mah_target": 18.096254014991757,
+   "top1": "leviathan",
+   "top5": [
+    "leviathan",
+    "bard",
+    "eldritch",
+    "wraith",
+    "absurdist"
+   ],
+   "r@1": 0.0,
+   "r@5": 0.2,
+   "r@10": 0.4,
+   "nonsense": 0.0
+  },
+  {
+   "target": "pirate",
+   "s": 3.0,
+   "disp": 44.65142822265625,
+   "post_target": 0.9978384254773509,
+   "post_default": 2.5759994590742246e-36,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 11.450388506694159,
+   "top1": "pirate",
+   "top5": [
+    "pirate",
+    "jester",
+    "absurdist",
+    "trickster",
+    "comedian"
+   ],
+   "r@1": 1.0,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "pirate",
+   "s": 4.0,
+   "disp": 59.53523635864258,
+   "post_target": 0.9937522863668645,
+   "post_default": 1.4924574187806376e-50,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 17.175589478235764,
+   "top1": "pirate",
+   "top5": [
+    "pirate",
+    "jester",
+    "absurdist",
+    "comedian",
+    "trickster"
+   ],
+   "r@1": 1.0,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "pirate",
+   "s": 6.0,
+   "disp": 89.3028564453125,
+   "post_target": 0.9496517863238951,
+   "post_default": 4.827227319813444e-79,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 28.62597250941622,
+   "top1": "pirate",
+   "top5": [
+    "pirate",
+    "jester",
+    "absurdist",
+    "comedian",
+    "trickster"
+   ],
+   "r@1": 1.0,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 0.8
+  },
+  {
+   "target": "pirate",
+   "s": 8.0,
+   "disp": 119.07047271728516,
+   "post_target": 0.6910045853547621,
+   "post_default": 1.1888469123614607e-107,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 40.07637680184437,
+   "top1": "pirate",
+   "top5": [
+    "pirate",
+    "jester",
+    "absurdist",
+    "comedian",
+    "trickster"
+   ],
+   "r@1": 1.0,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 1.0
+  },
+  {
+   "target": "vampire",
+   "s": 3.0,
+   "disp": 32.36616516113281,
+   "post_target": 0.998054991034617,
+   "post_default": 6.897399218037227e-23,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 9.035606038072538,
+   "top1": "vampire",
+   "top5": [
+    "vampire",
+    "leviathan",
+    "demon",
+    "wraith",
+    "homunculus"
+   ],
+   "r@1": 0.0,
+   "r@5": 0.0,
+   "r@10": 0.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "vampire",
+   "s": 4.0,
+   "disp": 43.154884338378906,
+   "post_target": 0.9988922870767227,
+   "post_default": 9.437521356421225e-32,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 13.553411275460782,
+   "top1": "vampire",
+   "top5": [
+    "vampire",
+    "leviathan",
+    "demon",
+    "wraith",
+    "homunculus"
+   ],
+   "r@1": 0.0,
+   "r@5": 0.0,
+   "r@10": 0.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "vampire",
+   "s": 6.0,
+   "disp": 64.73233032226562,
+   "post_target": 0.9991556110630719,
+   "post_default": 1.7644163491547034e-49,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 22.58901553303739,
+   "top1": "vampire",
+   "top5": [
+    "vampire",
+    "leviathan",
+    "demon",
+    "wraith",
+    "homunculus"
+   ],
+   "r@1": 0.4,
+   "r@5": 0.5,
+   "r@10": 0.6,
+   "nonsense": 0.0
+  },
+  {
+   "target": "vampire",
+   "s": 8.0,
+   "disp": 86.30976867675781,
+   "post_target": 0.9993079906359642,
+   "post_default": 3.298243382186983e-67,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 31.624625864217315,
+   "top1": "vampire",
+   "top5": [
+    "vampire",
+    "leviathan",
+    "demon",
+    "wraith",
+    "absurdist"
+   ],
+   "r@1": 0.6,
+   "r@5": 0.7,
+   "r@10": 0.7,
+   "nonsense": 0.9
+  },
+  {
+   "target": "musician",
+   "s": 3.0,
+   "disp": 23.618305206298828,
+   "post_target": 0.6257972628072076,
+   "post_default": 4.640841584913916e-13,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 6.684905792080003,
+   "top1": "musician",
+   "top5": [
+    "musician",
+    "composer",
+    "sommelier",
+    "romantic",
+    "photographer"
+   ],
+   "r@1": 0.0,
+   "r@5": 0.5,
+   "r@10": 0.5,
+   "nonsense": 0.0
+  },
+  {
+   "target": "musician",
+   "s": 4.0,
+   "disp": 31.491073608398438,
+   "post_target": 0.575982281035087,
+   "post_default": 6.006701869512015e-18,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 10.027359851128908,
+   "top1": "musician",
+   "top5": [
+    "musician",
+    "composer",
+    "sommelier",
+    "romantic",
+    "gamer"
+   ],
+   "r@1": 0.4,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "musician",
+   "s": 6.0,
+   "disp": 47.236610412597656,
+   "post_target": 0.44945520952777934,
+   "post_default": 9.26927194435139e-28,
+   "geom_rank": 2,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 16.712264888547015,
+   "top1": "composer",
+   "top5": [
+    "composer",
+    "musician",
+    "sommelier",
+    "romantic",
+    "gamer"
+   ],
+   "r@1": 0.3,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "musician",
+   "s": 8.0,
+   "disp": 62.982147216796875,
+   "post_target": 0.32355242421566827,
+   "post_default": 1.319566618542804e-37,
+   "geom_rank": 2,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 23.397172910046717,
+   "top1": "composer",
+   "top5": [
+    "composer",
+    "musician",
+    "sommelier",
+    "bard",
+    "mycorrhizal"
+   ],
+   "r@1": 0.3,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "spy",
+   "s": 3.0,
+   "disp": 19.72213363647461,
+   "post_target": 0.06273669411585296,
+   "post_default": 7.590217681114235e-12,
+   "geom_rank": 4,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 6.044547963835703,
+   "top1": "smuggler",
+   "top5": [
+    "smuggler",
+    "saboteur",
+    "hacker",
+    "spy",
+    "vampire"
+   ],
+   "r@1": 0.0,
+   "r@5": 0.0,
+   "r@10": 0.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "spy",
+   "s": 4.0,
+   "disp": 26.29617691040039,
+   "post_target": 0.007567350839534983,
+   "post_default": 9.88025693094866e-17,
+   "geom_rank": 5,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 9.066822463382062,
+   "top1": "smuggler",
+   "top5": [
+    "smuggler",
+    "vampire",
+    "saboteur",
+    "hacker",
+    "spy"
+   ],
+   "r@1": 0.1,
+   "r@5": 0.1,
+   "r@10": 0.1,
+   "nonsense": 0.0
+  },
+  {
+   "target": "spy",
+   "s": 6.0,
+   "disp": 39.44426727294922,
+   "post_target": 7.10315310423721e-05,
+   "post_default": 1.080094765306613e-26,
+   "geom_rank": 5,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 15.111369992276515,
+   "top1": "smuggler",
+   "top5": [
+    "smuggler",
+    "vampire",
+    "saboteur",
+    "hacker",
+    "spy"
+   ],
+   "r@1": 0.7,
+   "r@5": 0.8,
+   "r@10": 0.8,
+   "nonsense": 0.0
+  },
+  {
+   "target": "spy",
+   "s": 8.0,
+   "disp": 52.59235382080078,
+   "post_target": 6.259860655886711e-07,
+   "post_default": 1.1085585565178007e-36,
+   "geom_rank": 6,
+   "geom_in5": false,
+   "geom_in10": true,
+   "mah_target": 21.155919146280606,
+   "top1": "smuggler",
+   "top5": [
+    "smuggler",
+    "vampire",
+    "saboteur",
+    "hacker",
+    "demon"
+   ],
+   "r@1": 1.0,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "toddler",
+   "s": 3.0,
+   "disp": 53.66069412231445,
+   "post_target": 1.0,
+   "post_default": 3.9516465646297475e-65,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 15.403580089849534,
+   "top1": "toddler",
+   "top5": [
+    "toddler",
+    "infant",
+    "caveman",
+    "fool",
+    "comedian"
+   ],
+   "r@1": 0.9,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "toddler",
+   "s": 4.0,
+   "disp": 71.54759216308594,
+   "post_target": 1.0,
+   "post_default": 6.846923099503505e-91,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 23.105366332038976,
+   "top1": "toddler",
+   "top5": [
+    "toddler",
+    "infant",
+    "caveman",
+    "fool",
+    "comedian"
+   ],
+   "r@1": 1.0,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "toddler",
+   "s": 6.0,
+   "disp": 107.3213882446289,
+   "post_target": 1.0,
+   "post_default": 2.0554550010999723e-142,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 38.508948778221544,
+   "top1": "toddler",
+   "top5": [
+    "toddler",
+    "infant",
+    "caveman",
+    "fool",
+    "comedian"
+   ],
+   "r@1": 1.0,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 1.0
+  },
+  {
+   "target": "toddler",
+   "s": 8.0,
+   "disp": 143.09518432617188,
+   "post_target": 1.0,
+   "post_default": 6.170581968355795e-194,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 53.912521146110954,
+   "top1": "toddler",
+   "top5": [
+    "toddler",
+    "infant",
+    "caveman",
+    "comedian",
+    "fool"
+   ],
+   "r@1": 1.0,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 1.0
+  },
+  {
+   "target": "scholar",
+   "s": 3.0,
+   "disp": 11.074846267700195,
+   "post_target": 0.009067266979563417,
+   "post_default": 6.182533815828262e-05,
+   "geom_rank": 31,
+   "geom_in5": false,
+   "geom_in10": false,
+   "mah_target": 2.8250626210394088,
+   "top1": "theorist",
+   "top5": [
+    "theorist",
+    "psychologist",
+    "linguist",
+    "statistician",
+    "philosopher"
+   ],
+   "r@1": 0.0,
+   "r@5": 0.0,
+   "r@10": 0.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "scholar",
+   "s": 4.0,
+   "disp": 14.766462326049805,
+   "post_target": 0.0035653103073367215,
+   "post_default": 3.3056973927836683e-06,
+   "geom_rank": 53,
+   "geom_in5": false,
+   "geom_in10": false,
+   "mah_target": 4.237594757073228,
+   "top1": "theorist",
+   "top5": [
+    "theorist",
+    "linguist",
+    "statistician",
+    "psychologist",
+    "philosopher"
+   ],
+   "r@1": 0.0,
+   "r@5": 0.0,
+   "r@10": 0.1,
+   "nonsense": 0.0
+  },
+  {
+   "target": "scholar",
+   "s": 6.0,
+   "disp": 22.14969253540039,
+   "post_target": 0.0002076665653624773,
+   "post_default": 3.560285504673968e-09,
+   "geom_rank": 74,
+   "geom_in5": false,
+   "geom_in10": false,
+   "mah_target": 7.062656851572606,
+   "top1": "theorist",
+   "top5": [
+    "theorist",
+    "linguist",
+    "statistician",
+    "psychologist",
+    "anthropologist"
+   ],
+   "r@1": 0.0,
+   "r@5": 0.0,
+   "r@10": 0.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "scholar",
+   "s": 8.0,
+   "disp": 29.53292465209961,
+   "post_target": 6.18776918163438e-06,
+   "post_default": 1.9615677922183154e-12,
+   "geom_rank": 86,
+   "geom_in5": false,
+   "geom_in10": false,
+   "mah_target": 9.88772098575624,
+   "top1": "theorist",
+   "top5": [
+    "theorist",
+    "linguist",
+    "statistician",
+    "archaeologist",
+    "psychologist"
+   ],
+   "r@1": 0.0,
+   "r@5": 0.4,
+   "r@10": 0.6,
+   "nonsense": 0.0
+  },
+  {
+   "target": "witch",
+   "s": 3.0,
+   "disp": 34.14071273803711,
+   "post_target": 0.9428043166334881,
+   "post_default": 4.842497372397238e-27,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 9.841420929856584,
+   "top1": "witch",
+   "top5": [
+    "witch",
+    "shaman",
+    "mystic",
+    "leviathan",
+    "homunculus"
+   ],
+   "r@1": 0.2,
+   "r@5": 0.3,
+   "r@10": 0.6,
+   "nonsense": 0.0
+  },
+  {
+   "target": "witch",
+   "s": 4.0,
+   "disp": 45.52095031738281,
+   "post_target": 0.9750831485113747,
+   "post_default": 1.5273900035943418e-37,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 14.762129604958824,
+   "top1": "witch",
+   "top5": [
+    "witch",
+    "shaman",
+    "leviathan",
+    "mystic",
+    "homunculus"
+   ],
+   "r@1": 0.4,
+   "r@5": 0.8,
+   "r@10": 1.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "witch",
+   "s": 6.0,
+   "disp": 68.28142547607422,
+   "post_target": 0.9954042042120311,
+   "post_default": 1.4501844019443606e-58,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 24.603551580436584,
+   "top1": "witch",
+   "top5": [
+    "witch",
+    "shaman",
+    "leviathan",
+    "mystic",
+    "homunculus"
+   ],
+   "r@1": 0.3,
+   "r@5": 0.9,
+   "r@10": 1.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "witch",
+   "s": 8.0,
+   "disp": 91.04190063476562,
+   "post_target": 0.9991651861764965,
+   "post_default": 1.3538760184790665e-79,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 34.44496907852886,
+   "top1": "witch",
+   "top5": [
+    "witch",
+    "shaman",
+    "leviathan",
+    "mystic",
+    "homunculus"
+   ],
+   "r@1": 0.3,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 0.9
+  },
+  {
+   "target": "detective",
+   "s": 3.0,
+   "disp": 18.405811309814453,
+   "post_target": 0.07715420582293221,
+   "post_default": 7.280965026958369e-09,
+   "geom_rank": 2,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 5.087404392186067,
+   "top1": "archaeologist",
+   "top5": [
+    "archaeologist",
+    "detective",
+    "novelist",
+    "statistician",
+    "scout"
+   ],
+   "r@1": 0.0,
+   "r@5": 0.0,
+   "r@10": 0.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "detective",
+   "s": 4.0,
+   "disp": 24.54108238220215,
+   "post_target": 0.024821746531678505,
+   "post_default": 3.6273802274582874e-12,
+   "geom_rank": 4,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 7.631106895153756,
+   "top1": "archaeologist",
+   "top5": [
+    "archaeologist",
+    "novelist",
+    "statistician",
+    "detective",
+    "theorist"
+   ],
+   "r@1": 0.0,
+   "r@5": 0.0,
+   "r@10": 0.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "detective",
+   "s": 6.0,
+   "disp": 36.811622619628906,
+   "post_target": 0.0004882934273546623,
+   "post_default": 1.7112231909767905e-19,
+   "geom_rank": 8,
+   "geom_in5": false,
+   "geom_in10": true,
+   "mah_target": 12.718511356536073,
+   "top1": "archaeologist",
+   "top5": [
+    "archaeologist",
+    "novelist",
+    "gamer",
+    "statistician",
+    "playwright"
+   ],
+   "r@1": 0.0,
+   "r@5": 0.0,
+   "r@10": 0.2,
+   "nonsense": 0.0
+  },
+  {
+   "target": "detective",
+   "s": 8.0,
+   "disp": 49.0821647644043,
+   "post_target": 7.3267717823958086e-06,
+   "post_default": 6.157469957269716e-27,
+   "geom_rank": 11,
+   "geom_in5": false,
+   "geom_in10": false,
+   "mah_target": 17.80591643706353,
+   "top1": "archaeologist",
+   "top5": [
+    "archaeologist",
+    "novelist",
+    "playwright",
+    "gamer",
+    "statistician"
+   ],
+   "r@1": 0.3,
+   "r@5": 0.8,
+   "r@10": 0.9,
+   "nonsense": 0.0
+  },
+  {
+   "target": "jester",
+   "s": 3.0,
+   "disp": 53.72057342529297,
+   "post_target": 0.5326112312143902,
+   "post_default": 7.421421356292416e-57,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 14.34506336027831,
+   "top1": "jester",
+   "top5": [
+    "jester",
+    "comedian",
+    "absurdist",
+    "trickster",
+    "fool"
+   ],
+   "r@1": 0.6,
+   "r@5": 0.8,
+   "r@10": 0.9,
+   "nonsense": 0.0
+  },
+  {
+   "target": "jester",
+   "s": 4.0,
+   "disp": 71.62743377685547,
+   "post_target": 0.34293951810087675,
+   "post_default": 2.1723537946071096e-79,
+   "geom_rank": 2,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 21.517593326481002,
+   "top1": "comedian",
+   "top5": [
+    "comedian",
+    "jester",
+    "absurdist",
+    "trickster",
+    "fool"
+   ],
+   "r@1": 0.8,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 0.2
+  },
+  {
+   "target": "jester",
+   "s": 6.0,
+   "disp": 107.44114685058594,
+   "post_target": 0.09868683427788402,
+   "post_default": 1.2918587677631695e-124,
+   "geom_rank": 2,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 35.862657030763394,
+   "top1": "comedian",
+   "top5": [
+    "comedian",
+    "jester",
+    "absurdist",
+    "trickster",
+    "fool"
+   ],
+   "r@1": 0.8,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 1.0
+  },
+  {
+   "target": "jester",
+   "s": 8.0,
+   "disp": 143.25486755371094,
+   "post_target": 0.02245372676207221,
+   "post_default": 6.074502478028166e-170,
+   "geom_rank": 2,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 50.20771688976561,
+   "top1": "comedian",
+   "top5": [
+    "comedian",
+    "jester",
+    "absurdist",
+    "trickster",
+    "fool"
+   ],
+   "r@1": 0.1,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 1.0
+  },
+  {
+   "target": "philosopher",
+   "s": 3.0,
+   "disp": 20.211151123046875,
+   "post_target": 0.3790498232722396,
+   "post_default": 4.8732045899496845e-08,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 5.038545524107285,
+   "top1": "philosopher",
+   "top5": [
+    "philosopher",
+    "theorist",
+    "linguist",
+    "simulacrum",
+    "physicist"
+   ],
+   "r@1": 0.1,
+   "r@5": 0.3,
+   "r@10": 0.4,
+   "nonsense": 0.0
+  },
+  {
+   "target": "philosopher",
+   "s": 4.0,
+   "disp": 26.94820213317871,
+   "post_target": 0.3623724111356046,
+   "post_default": 8.1643125636146e-11,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 7.557819619236581,
+   "top1": "philosopher",
+   "top5": [
+    "philosopher",
+    "theorist",
+    "linguist",
+    "archaeologist",
+    "simulacrum"
+   ],
+   "r@1": 0.2,
+   "r@5": 0.6,
+   "r@10": 0.7,
+   "nonsense": 0.0
+  },
+  {
+   "target": "philosopher",
+   "s": 6.0,
+   "disp": 40.42230224609375,
+   "post_target": 0.19872551653345358,
+   "post_default": 1.375035778125487e-16,
+   "geom_rank": 3,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 12.59636427514408,
+   "top1": "archaeologist",
+   "top5": [
+    "archaeologist",
+    "theorist",
+    "philosopher",
+    "linguist",
+    "mystic"
+   ],
+   "r@1": 1.0,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "philosopher",
+   "s": 8.0,
+   "disp": 53.89640426635742,
+   "post_target": 0.05878105982724509,
+   "post_default": 1.2490806962728318e-22,
+   "geom_rank": 5,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 17.634912463761736,
+   "top1": "archaeologist",
+   "top5": [
+    "archaeologist",
+    "mystic",
+    "theorist",
+    "linguist",
+    "philosopher"
+   ],
+   "r@1": 1.0,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "hacker",
+   "s": 3.0,
+   "disp": 22.62511444091797,
+   "post_target": 0.9596890469692295,
+   "post_default": 5.847122381169716e-15,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 7.236760213626023,
+   "top1": "hacker",
+   "top5": [
+    "hacker",
+    "saboteur",
+    "smuggler",
+    "parasite",
+    "virus"
+   ],
+   "r@1": 0.0,
+   "r@5": 0.0,
+   "r@10": 0.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "hacker",
+   "s": 4.0,
+   "disp": 30.166818618774414,
+   "post_target": 0.9891413804698321,
+   "post_default": 1.2416432027628127e-20,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 10.855138558294247,
+   "top1": "hacker",
+   "top5": [
+    "hacker",
+    "saboteur",
+    "smuggler",
+    "parasite",
+    "virus"
+   ],
+   "r@1": 0.1,
+   "r@5": 0.3,
+   "r@10": 0.3,
+   "nonsense": 0.0
+  },
+  {
+   "target": "hacker",
+   "s": 6.0,
+   "disp": 45.25022888183594,
+   "post_target": 0.9987389442224048,
+   "post_default": 5.321570610306951e-32,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 18.091900250547578,
+   "top1": "hacker",
+   "top5": [
+    "hacker",
+    "smuggler",
+    "saboteur",
+    "mycorrhizal",
+    "vampire"
+   ],
+   "r@1": 1.0,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 0.0
+  },
+  {
+   "target": "hacker",
+   "s": 8.0,
+   "disp": 60.33363723754883,
+   "post_target": 0.9997025490223211,
+   "post_default": 2.261061203510338e-43,
+   "geom_rank": 1,
+   "geom_in5": true,
+   "geom_in10": true,
+   "mah_target": 25.328656962250047,
+   "top1": "hacker",
+   "top5": [
+    "hacker",
+    "smuggler",
+    "mycorrhizal",
+    "saboteur",
+    "vampire"
+   ],
+   "r@1": 1.0,
+   "r@5": 1.0,
+   "r@10": 1.0,
+   "nonsense": 0.0
+  }
+ ],
+ "corr": {
+  "post_target": {
+   "r@1": {
+    "pearson": 0.406427376453293,
+    "p": 0.004150983080178591,
+    "spearman": 0.4906865425384317
+   },
+   "r@5": {
+    "pearson": 0.35530727924648875,
+    "p": 0.013204502440947544,
+    "spearman": 0.389336127551362
+   },
+   "r@10": {
+    "pearson": 0.3199745236462467,
+    "p": 0.026618993155888244,
+    "spearman": 0.3638139899094463
+   }
+  },
+  "post_default": {
+   "r@1": {
+    "pearson": -0.15515689441569816,
+    "p": 0.2923335195920091,
+    "spearman": -0.6685279155500082
+   },
+   "r@5": {
+    "pearson": -0.22222116624258192,
+    "p": 0.12899868088674213,
+    "spearman": -0.7105764860551401
+   },
+   "r@10": {
+    "pearson": -0.2504237169489366,
+    "p": 0.08602928896252215,
+    "spearman": -0.7262276477776339
+   }
+  },
+  "mah_target": {
+   "r@1": {
+    "pearson": 0.5376462964565619,
+    "p": 8.12442375959454e-05,
+    "spearman": 0.6862221085223178
+   },
+   "r@5": {
+    "pearson": 0.6490429986414357,
+    "p": 6.04541762010836e-07,
+    "spearman": 0.7445186961944567
+   },
+   "r@10": {
+    "pearson": 0.6231307964704158,
+    "p": 2.243157272451282e-06,
+    "spearman": 0.7572150409038819
+   }
+  },
+  "disp": {
+   "r@1": {
+    "pearson": 0.5554964822903331,
+    "p": 4.161453996182204e-05,
+    "spearman": 0.6937574903874969
+   },
+   "r@5": {
+    "pearson": 0.65906695966094,
+    "p": 3.5190825592310254e-07,
+    "spearman": 0.7574382686681863
+   },
+   "r@10": {
+    "pearson": 0.6365691075831812,
+    "p": 1.1537760238182904e-06,
+    "spearman": 0.7713054266877213
+   }
+  },
+  "geom_rank": {
+   "r@1": {
+    "pearson": -0.38913213491543874,
+    "p": 0.006264971680403557,
+    "spearman": -0.46346031577652097
+   },
+   "r@5": {
+    "pearson": -0.4067137746696432,
+    "p": 0.004122036114419189,
+    "spearman": -0.3823646129508317
+   },
+   "r@10": {
+    "pearson": -0.3417009381677202,
+    "p": 0.017453758265489998,
+    "spearman": -0.3598918576507004
+   }
+  }
+ },
+ "agree_in5": 0.75,
+ "agree_in10": 0.7083333333333334
+}
