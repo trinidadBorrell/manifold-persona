@@ -1,0 +1,178 @@
+<title>How Many Persona Components</title>
+<meta name="description" content="Qwen3-8B, 276 personas: how many components the persona set needs by PCA, Fletcher's principal geodesic analysis and Pennec's barycentric subspaces, by layer, single-layer vs multi-layer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; each finding = claim sentence, one chart, one plain caption. */
+:root {
+  --bg: #f3f5f4; --panel: #ffffff; --ink: #142021; --ink-2: #48585a; --ink-3: #7b8a8c; --rule: #d9e0df; --grid: #e8edec;
+  --pca: #6b7f99; --pga: #0f7b74; --bsa: #d4662a; --bsa-lin: #e6a57f; --m1: #6a4fb3; --accent: #0f7b74;
+  --display: "Spectral", Georgia, serif; --sans: "Public Sans", system-ui, sans-serif; --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #111717; --panel: #182021; --ink: #e7eeed; --ink-2: #aebcbc; --ink-3: #82918f; --rule: #2b3637; --grid: #222c2d;
+  --pca: #94a7c2; --pga: #3fb3a9; --bsa: #ee8a51; --bsa-lin: #b97b58; --m1: #a08ae6; --accent: #3fb3a9; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #111717; --panel: #182021; --ink: #e7eeed; --ink-2: #aebcbc; --ink-3: #82918f; --rule: #2b3637; --grid: #222c2d;
+  --pca: #94a7c2; --pga: #3fb3a9; --bsa: #ee8a51; --bsa-lin: #b97b58; --m1: #a08ae6; --accent: #3fb3a9; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 16px/1.6 var(--sans); }
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 18px; padding-block: 32px 72px; display: grid; gap: 34px; }
+h1, h2 { font-family: var(--display); font-weight: 600; margin: 0; text-wrap: balance; }
+h1 { font-size: 2.1rem; line-height: 1.12; }
+h2 { font-size: 1.35rem; line-height: 1.25; }
+p { margin: 0; max-width: 68ch; }
+.lede { color: var(--ink-2); font-size: 1.05rem; }
+.facts { display: flex; flex-wrap: wrap; gap: 4px 18px; font: 0.8rem/1.5 var(--mono); color: var(--ink-2); }
+.facts b { color: var(--ink); font-weight: 500; }
+section { display: grid; gap: 12px; min-width: 0; }
+.eyebrow { font: 500 0.72rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.claim { font-size: 1.05rem; color: var(--ink); }
+.figure { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 10px; min-width: 0; }
+.chart { width: 100%; height: 360px; }
+.how { font-size: 0.9rem; color: var(--ink-2); border-left: 2px solid var(--rule); padding-left: 12px; }
+.ctl { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font: 0.8rem var(--mono); color: var(--ink-3); }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 5px; overflow: hidden; }
+.seg button { font: 500 0.8rem/1 var(--sans); background: var(--panel); color: var(--ink-2); border: 0; border-right: 1px solid var(--rule); padding: 7px 11px; cursor: pointer; }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; font: 0.8rem/1.45 var(--mono); font-variant-numeric: tabular-nums; }
+th, td { padding: 5px 10px; border-bottom: 1px solid var(--grid); text-align: left; vertical-align: top; }
+th { color: var(--ink-3); font-weight: 500; }
+td.names { font-family: var(--sans); font-size: 0.85rem; white-space: normal; min-width: 14em; }
+details summary { cursor: pointer; font-weight: 500; }
+.err { color: var(--bsa); font-family: var(--mono); }
+</style>
+
+<div class="wrap">
+  <header style="display:grid;gap:12px">
+    <span class="eyebrow">Persona component analysis · part 2</span>
+    <h1>How many components does the persona set need?</h1>
+    <p class="lede" id="lede"></p>
+    <div class="facts" id="facts"></div>
+  </header>
+  <div class="ctl"><span>persona vector</span><span class="seg" id="viewSeg"></span></div>
+
+  <section>
+    <span class="eyebrow">Finding 1 · by layer</span>
+    <h2 id="h1"></h2>
+    <p class="claim" id="c1"></p>
+    <div class="figure"><div class="chart" id="fig1"></div></div>
+    <p class="how" id="how1"></p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Finding 2 · at the most stable layer</span>
+    <h2 id="h2"></h2>
+    <p class="claim" id="c2"></p>
+    <div class="figure"><div class="chart" id="fig2"></div></div>
+    <p class="how" id="how2"></p>
+    <details class="figure"><summary>Principal personas and the ends of each direction at this layer</summary><div class="tbl" id="tblPersonas"></div></details>
+  </section>
+
+  <section>
+    <span class="eyebrow">Finding 3 · one layer or several</span>
+    <h2 id="h3"></h2>
+    <p class="claim" id="c3"></p>
+    <div class="figure"><div class="chart" id="fig3"></div></div>
+    <p class="how" id="how3"></p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Method</span>
+    <div class="tbl" id="method"></div>
+  </section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.34.0/plotly.min.js"></script>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+window.addEventListener("error", function (e) {
+  var w = document.querySelector(".wrap"), m = document.createElement("p");
+  m.className = "err"; m.textContent = "The charts could not be drawn: " + (e.message || "a script failed to load") + ".";
+  if (w) w.insertBefore(m, w.children[1]);
+}, true);
+</script>
+<script>
+(function () {
+  if (typeof Plotly === "undefined") throw new Error("the Plotly chart library did not load");
+  const D = JSON.parse(document.getElementById("data").textContent);
+  const N = D.notes;
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const esc = t => String(t == null ? "" : t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const VIEWS = Object.keys(D.views);
+  const VNAME = { last: "last answer token (PersonaManifold)", mean: "mean over answer tokens (ours)" };
+  const st = { view: VIEWS.includes("last") ? "last" : VIEWS[0] };
+  ["lede", "h1", "c1", "how1", "h2", "c2", "how2", "h3", "c3", "how3"].forEach(k => document.getElementById(k).textContent = N[k] || "");
+  document.getElementById("facts").innerHTML = D.facts.map(([k, v]) => `<span>${esc(k)} <b>${esc(v)}</b></span>`).join("");
+  document.getElementById("method").innerHTML = "<table><tbody>" + D.method.map(([k, v]) => `<tr><th>${esc(k)}</th><td class="names">${esc(v)}</td></tr>`).join("") + "</tbody></table>";
+
+  function base(extra) {
+    return Object.assign({ paper_bgcolor: "rgba(0,0,0,0)", plot_bgcolor: "rgba(0,0,0,0)", margin: { l: 56, r: 16, t: 10, b: 48 },
+      font: { family: css("--sans"), color: css("--ink-2"), size: 12 }, hovermode: "x unified",
+      legend: { orientation: "h", y: -0.2, font: { size: 12 } },
+      hoverlabel: { bgcolor: css("--panel"), bordercolor: css("--rule"), font: { color: css("--ink"), family: css("--mono"), size: 11 } } }, extra);
+  }
+  const ax = (title, extra) => Object.assign({ title: { text: title, font: { size: 12 } }, gridcolor: css("--grid"), linecolor: css("--rule"),
+    zerolinecolor: css("--rule"), tickfont: { family: css("--mono"), size: 11 } }, extra || {});
+  const line = (x, y, name, col, dash, w) => ({ x, y, name, type: "scatter", mode: "lines+markers", line: { color: col, width: w || 2.4, dash: dash || "solid" },
+    marker: { size: 6, color: col }, connectgaps: false, hovertemplate: name + ": %{y}<extra></extra>" });
+  const SERIES = [["pca", "PCA (straight lines)", "--pca", "dot"], ["pga", "Principal geodesic analysis (Fletcher)", "--pga", "solid"],
+                  ["bsa_geodesic", "Principal personas, geodesic (Pennec)", "--bsa", "solid"], ["bsa_linear", "Principal personas, straight lines", "--bsa-lin", "dash"]];
+
+  function fig1() {
+    const V = D.views[st.view], L = D.layers;
+    const tr = SERIES.map(([k, name, col, dash]) => line(L, L.map(l => V.per_layer[l].n90[k]), name, css(col), dash));
+    Plotly.react("fig1", tr, base({ xaxis: ax("Layer (hidden_states index)", { dtick: 2 }),
+      yaxis: ax("Components for 90% of the variance", { rangemode: "tozero" }),
+      shapes: [{ type: "line", x0: V.best_layer, x1: V.best_layer, yref: "paper", y0: 0, y1: 1, line: { color: css("--rule"), width: 1.5, dash: "dot" } }],
+      annotations: [{ x: V.best_layer, yref: "paper", y: 1, text: "most stable layer", showarrow: false, yanchor: "bottom", font: { size: 11, color: css("--ink-3") } }] }),
+      { responsive: true, displaylogo: false });
+  }
+  function fig2() {
+    const V = D.views[st.view], B = V.per_layer[V.best_layer];
+    const k = a => a.map((_, i) => i + 1);
+    const tr = [line(k(B.pca_explained), B.pca_explained.map(v => +(100 * v).toFixed(1)), SERIES[0][1], css("--pca"), "dot", 2),
+      line(k(B.pga_explained), B.pga_explained.map(v => +(100 * v).toFixed(1)), SERIES[1][1], css("--pga"), "solid"),
+      line(k(B.bsa_geodesic_explained.slice(1)), B.bsa_geodesic_explained.slice(1).map(v => +(100 * v).toFixed(1)), SERIES[2][1], css("--bsa"), "solid"),
+      line(k(B.bsa_linear_explained.slice(1)), B.bsa_linear_explained.slice(1).map(v => +(100 * v).toFixed(1)), SERIES[3][1], css("--bsa-lin"), "dash", 2)];
+    Plotly.react("fig2", tr, base({ xaxis: ax("Number of components (for principal personas: personas added after the mean persona)", { range: [0.5, 30.5] }),
+      yaxis: ax("Variance explained (%)", { range: [0, 101], ticksuffix: "%" }),
+      shapes: [{ type: "line", xref: "paper", x0: 0, x1: 1, y0: 90, y1: 90, line: { color: css("--rule"), width: 1.5, dash: "dot" } }] }),
+      { responsive: true, displaylogo: false });
+    let h = `<table><thead><tr><th>method</th><th>order</th><th>personas</th></tr></thead><tbody>`;
+    h += `<tr><td>Principal personas, geodesic (Pennec)</td><td>mean, then 1–15</td><td class="names">${esc(B.bsa_geodesic_personas.join(" · "))}</td></tr>`;
+    B.pga_ends.slice(0, 3).forEach(e => h += `<tr><td>Fletcher direction ${e.component} (${(100 * e.var_share).toFixed(0)}%)</td><td>− end / + end</td><td class="names">${esc(e.minus.join(", "))}<br>${esc(e.plus.join(", "))}</td></tr>`);
+    B.pca_ends.slice(0, 3).forEach(e => h += `<tr><td>PCA component ${e.component} (${(100 * e.var_share).toFixed(0)}%)</td><td>− end / + end</td><td class="names">${esc(e.minus.join(", "))}<br>${esc(e.plus.join(", "))}</td></tr>`);
+    document.getElementById("tblPersonas").innerHTML = h + "</tbody></table>";
+  }
+  function fig3() {
+    const V = D.views[st.view];
+    const vers = [["M0", "One layer (L" + V.best_layer + ")"], ["M1", "Several layers, geodesic (L" + V.band[0] + "–" + V.band[V.band.length - 1] + ")"],
+                  ["M1_all_layers", "All layers 12–32, geodesic"], ["M2", "Several layers, PCA (L" + V.band[0] + "–" + V.band[V.band.length - 1] + ")"]];
+    const get = (m, key) => key === "pga" ? (m.n90 && typeof m.n90 === "object" ? m.n90.pga : m.n90) : key === "bsa" ? (m.n90 && typeof m.n90 === "object" ? m.n90.bsa_geodesic : null)
+      : (m.stability ? (m.stability.pga_top3_principal_cos || m.stability.pca_top3_principal_cos).reduce((a, b) => a + b, 0) / 3 : null);
+    const x = vers.map(v => v[1]);
+    const tr = [
+      { x, y: vers.map(v => get(V[v[0]], "pga")), name: "Components for 90% (Fletcher; PCA for the last bar)", type: "bar", marker: { color: css("--pga") }, hovertemplate: "%{y}<extra></extra>" },
+      { x, y: vers.map(v => get(V[v[0]], "bsa")), name: "Principal personas for 90% (Pennec)", type: "bar", marker: { color: css("--bsa") }, hovertemplate: "%{y}<extra></extra>" },
+      { x, y: vers.map(v => get(V[v[0]], "stab")), name: "Same top-3 directions from two halves of the questions (mean cosine)", yaxis: "y2", type: "scatter", mode: "markers",
+        marker: { symbol: "diamond", size: 13, color: css("--ink") }, hovertemplate: "%{y:.2f}<extra></extra>" }];
+    Plotly.react("fig3", tr, base({ barmode: "group", hovermode: "closest", xaxis: ax(""), yaxis: ax("Number needed for 90%", { rangemode: "tozero" }),
+      yaxis2: ax("Split-half agreement (cosine)", { overlaying: "y", side: "right", range: [0, 1.02], showgrid: false }),
+      margin: { l: 56, r: 56, t: 10, b: 90 } }), { responsive: true, displaylogo: false });
+  }
+  function render() {
+    const s = document.getElementById("viewSeg");
+    s.innerHTML = VIEWS.map(v => `<button type="button" data-v="${v}" aria-pressed="${v === st.view}">${VNAME[v] || v}</button>`).join("");
+    s.onclick = e => { const b = e.target.closest("button"); if (b) { st.view = b.dataset.v; render(); } };
+    fig1(); fig2(); fig3();
+  }
+  render();
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+  new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+})();
+</script>

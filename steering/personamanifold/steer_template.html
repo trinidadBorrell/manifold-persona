@@ -1,0 +1,197 @@
+<title>Persona Component Steering</title>
+<meta name="description" content="Qwen3-8B: steering along the leading persona directions (Fletcher's principal geodesics, PCA as baseline) in both directions, judged on held-out questions from three starting personas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; hypothesis cards, then each finding = claim, one chart, one plain caption; examples last. */
+:root {
+  --bg: #f3f5f4; --panel: #ffffff; --ink: #142021; --ink-2: #48585a; --ink-3: #7b8a8c; --rule: #d9e0df; --grid: #e8edec;
+  --minus: #2f6db5; --plus: #c8562a; --start: #5b6b6d; --pga: #0f7b74; --pca: #6b7f99; --accent: #0f7b74;
+  --display: "Spectral", Georgia, serif; --sans: "Public Sans", system-ui, sans-serif; --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #111717; --panel: #182021; --ink: #e7eeed; --ink-2: #aebcbc; --ink-3: #82918f; --rule: #2b3637; --grid: #222c2d;
+  --minus: #6ea2e6; --plus: #ee8a51; --start: #a3b1b2; --pga: #3fb3a9; --pca: #94a7c2; --accent: #3fb3a9; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #111717; --panel: #182021; --ink: #e7eeed; --ink-2: #aebcbc; --ink-3: #82918f; --rule: #2b3637; --grid: #222c2d;
+  --minus: #6ea2e6; --plus: #ee8a51; --start: #a3b1b2; --pga: #3fb3a9; --pca: #94a7c2; --accent: #3fb3a9; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 16px/1.6 var(--sans); }
+.wrap { max-width: 1040px; margin: 0 auto; padding-inline: 18px; padding-block: 32px 72px; display: grid; gap: 34px; }
+h1, h2 { font-family: var(--display); font-weight: 600; margin: 0; text-wrap: balance; }
+h1 { font-size: 2.1rem; line-height: 1.12; }
+h2 { font-size: 1.35rem; line-height: 1.25; }
+h3 { margin: 0; font: 600 0.95rem/1.3 var(--sans); }
+p { margin: 0; max-width: 70ch; }
+.lede { color: var(--ink-2); font-size: 1.05rem; }
+.facts { display: flex; flex-wrap: wrap; gap: 4px 18px; font: 0.8rem/1.5 var(--mono); color: var(--ink-2); }
+.facts b { color: var(--ink); font-weight: 500; }
+section { display: grid; gap: 12px; min-width: 0; }
+.eyebrow { font: 500 0.72rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.claim { font-size: 1.05rem; }
+.figure { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 10px; min-width: 0; }
+.chart { width: 100%; height: 300px; }
+.how { font-size: 0.9rem; color: var(--ink-2); border-left: 2px solid var(--rule); padding-left: 12px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; }
+.card { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 12px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.card .tag { font: 500 0.72rem/1 var(--mono); color: var(--ink-3); }
+.card .ends { font-size: 0.85rem; color: var(--ink-2); }
+.card .ends b { font-weight: 600; }
+.minus { color: var(--minus); } .plus { color: var(--plus); }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.grid3 .figure h3 { margin-bottom: 2px; }
+.grid3 .chart { height: 240px; }
+@media (max-width: 860px) { .grid3 { grid-template-columns: 1fr; } }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 5px; overflow: hidden; }
+.seg button { font: 500 0.8rem/1 var(--sans); background: var(--panel); color: var(--ink-2); border: 0; border-right: 1px solid var(--rule); padding: 7px 11px; cursor: pointer; }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ctl { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; font-size: 0.85rem; color: var(--ink-2); }
+select { font: 0.85rem var(--sans); color: var(--ink); background: var(--panel); border: 1px solid var(--rule); border-radius: 5px; padding: 5px 8px; }
+select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ex-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 10px; }
+.ex { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.ex-head { display: flex; flex-wrap: wrap; gap: 4px 10px; font: 0.74rem/1.35 var(--mono); color: var(--ink-3); }
+.chip { font: 500 0.74rem/1 var(--mono); padding: 4px 7px; border-radius: 999px; background: var(--grid); color: var(--ink); }
+.ex-text { white-space: pre-wrap; font-size: 0.86rem; line-height: 1.5; max-height: 15em; overflow-y: auto; overflow-wrap: anywhere; }
+.err { color: var(--plus); font-family: var(--mono); }
+</style>
+
+<div class="wrap">
+  <header style="display:grid;gap:12px">
+    <span class="eyebrow">Persona component analysis · exploratory steering</span>
+    <h1>Do the leading persona directions steer behaviour?</h1>
+    <p class="lede" id="lede"></p>
+    <div class="facts" id="facts"></div>
+  </header>
+
+  <div class="ctl" style="position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;border-bottom:1px solid var(--rule)">
+    <span>Steering strength α</span><span class="seg" id="strSeg"></span><span id="strNote"></span>
+  </div>
+
+  <section>
+    <span class="eyebrow">Hypotheses, written before steering</span>
+    <p class="how" id="hypHow"></p>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Finding 1 · does the answer move towards the end we steer to?</span>
+    <h2 id="h1"></h2>
+    <p class="claim" id="c1"></p>
+    <div class="grid3" id="fig1"></div>
+    <p class="how" id="how1"></p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Finding 2 · is it consistent?</span>
+    <h2 id="h2"></h2>
+    <p class="claim" id="c2"></p>
+    <div class="figure"><div class="chart" id="fig2"></div></div>
+    <p class="how" id="how2"></p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Example answers</span>
+    <div class="ctl">
+      <label for="exDir">Direction <select id="exDir"></select></label>
+      <label for="exStart">Start <select id="exStart"></select></label>
+      <label for="exStep">Step <select id="exStep"></select></label>
+    </div>
+    <div class="ex-list" id="exList"></div>
+  </section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.34.0/plotly.min.js"></script>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+window.addEventListener("error", function (e) {
+  var w = document.querySelector(".wrap"), m = document.createElement("p");
+  m.className = "err"; m.textContent = "The charts could not be drawn: " + (e.message || "a script failed to load") + ".";
+  if (w) w.insertBefore(m, w.children[1]);
+}, true);
+</script>
+<script>
+(function () {
+  if (typeof Plotly === "undefined") throw new Error("the Plotly chart library did not load");
+  const D = JSON.parse(document.getElementById("data").textContent);
+  const N = D.notes;
+  const st = { s: D.order[0] };
+  const G = () => D.grids[st.s];
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const esc = t => String(t == null ? "" : t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  ["lede", "hypHow", "h1", "c1", "how1", "h2", "c2", "how2"].forEach(k => document.getElementById(k).textContent = N[k] || "");
+  document.getElementById("facts").innerHTML = D.facts.map(([k, v]) => `<span>${esc(k)} <b>${esc(v)}</b></span>`).join("");
+  const MNAME = { pga: "Fletcher direction", pca: "PCA component" };
+  document.getElementById("cards").innerHTML = D.grids[D.order[0]].dirs.map(d => `<div class="card"><span class="tag">${MNAME[d.method]} ${d.component} · ${(100 * d.var_share).toFixed(0)}% of variance</span>
+    <h3>${esc(d.hypothesis)}</h3>
+    <div class="ends"><b class="minus">− end:</b> ${esc(d.minus.join(", "))}</div><div class="ends"><b class="plus">+ end:</b> ${esc(d.plus.join(", "))}</div></div>`).join("");
+
+  function base(extra) {
+    return Object.assign({ paper_bgcolor: "rgba(0,0,0,0)", plot_bgcolor: "rgba(0,0,0,0)", margin: { l: 48, r: 10, t: 8, b: 44 },
+      font: { family: css("--sans"), color: css("--ink-2"), size: 11 }, showlegend: false, hovermode: "x unified",
+      hoverlabel: { bgcolor: css("--panel"), bordercolor: css("--rule"), font: { color: css("--ink"), family: css("--mono"), size: 11 } } }, extra);
+  }
+  const ax = (title, extra) => Object.assign({ title: { text: title, font: { size: 11 } }, gridcolor: css("--grid"), linecolor: css("--rule"),
+    zerolinecolor: css("--rule"), tickfont: { family: css("--mono"), size: 10 } }, extra || {});
+
+  // Finding 1: per direction, % of answers judged as a persona on the + side minus % on the − side, vs signed step.
+  function fig1() {
+    const el = document.getElementById("fig1");
+    el.innerHTML = G().dirs.map((d, i) => `<div class="figure"><h3>${MNAME[d.method]} ${d.component}</h3><div class="sub" style="font:0.75rem var(--mono);color:var(--ink-3)">${esc(d.hypothesis)}</div><div class="chart" id="f1_${i}"></div></div>`).join("");
+    G().dirs.forEach((d, i) => {
+      const rows = G().lean.filter(r => r.method === d.method && r.component === d.component);
+      const tr = [];
+      D.starts.forEach((s, j) => {
+        const rs = rows.filter(r => r.start === s).sort((a, b) => a.x - b.x);
+        tr.push({ x: rs.map(r => r.x), y: rs.map(r => r.lean * 100), type: "scatter", mode: "lines", name: s,
+          line: { color: css("--start"), width: 1.2, dash: ["dot", "dash", "longdash"][j % 3] }, hovertemplate: s + ": %{y:.0f}<extra></extra>" });
+      });
+      const rp = rows.filter(r => r.start === "__all__").sort((a, b) => a.x - b.x);
+      tr.push({ x: rp.map(r => r.x).concat(rp.map(r => r.x).reverse()), y: rp.map(r => r.hi * 100).concat(rp.map(r => r.lo * 100).reverse()),
+        fill: "toself", fillcolor: css(d.method === "pga" ? "--pga" : "--pca"), opacity: 0.15, line: { width: 0 }, hoverinfo: "skip", type: "scatter", mode: "lines" });
+      tr.push({ x: rp.map(r => r.x), y: rp.map(r => r.lean * 100), type: "scatter", mode: "lines+markers", name: "all starts",
+        line: { color: css(d.method === "pga" ? "--pga" : "--pca"), width: 3 }, marker: { size: 6 }, hovertemplate: "all starts: %{y:.0f}<extra></extra>" });
+      Plotly.react("f1_" + i, tr, base({ xaxis: ax("step (− towards − end · + towards + end)", { range: [-1.1, 1.1], dtick: 0.5 }),
+        yaxis: ax("change in (+ side % − − side %)", { zeroline: true, zerolinewidth: 1.5 }) }), { responsive: true, displaylogo: false });
+    });
+  }
+  // Finding 2: consistency: share of (start, question, paraphrase) series whose lean at step +1 exceeds that at step −1.
+  function fig2() {
+    const dd = G().dirs, x = dd.map(d => MNAME[d.method] + " " + d.component);
+    const tr = [{ x, y: dd.map(d => d.consistency == null ? null : 100 * d.consistency), type: "bar", marker: { color: dd.map(d => css(d.method === "pga" ? "--pga" : "--pca")) },
+      hovertemplate: "%{y:.0f}% of series<extra></extra>", text: dd.map(d => d.n_moved + " of " + d.n_series + " moved"), textposition: "outside", textfont: { size: 10, family: css("--mono") } }];
+    Plotly.react("fig2", tr, base({ hovermode: "closest", xaxis: ax(""), yaxis: ax("Moved series going the expected way (%)", { range: [0, 110], dtick: 25 }),
+      shapes: [{ type: "line", xref: "paper", x0: 0, x1: 1, y0: 50, y1: 50, line: { color: css("--rule"), dash: "dot", width: 1.5 } }] }),
+      { responsive: true, displaylogo: false });
+  }
+  // examples
+  const ex = { dir: "0", start: "all", step: "all" };
+  const sel = (id, items, cur) => { const e = document.getElementById(id); e.innerHTML = items.map(([v, l]) => `<option value="${v}"${v === cur ? " selected" : ""}>${esc(l)}</option>`).join(""); };
+  sel("exDir", D.grids[D.order[0]].dirs.map((d, i) => [String(i), MNAME[d.method] + " " + d.component + " · " + d.hypothesis]), ex.dir);
+  sel("exStart", [["all", "all starts"]].concat(D.starts.map(s => [s, s])), ex.start);
+  sel("exStep", [["all", "all steps"]].concat([-1, -0.5, 0, 0.5, 1].map(s => [String(s), (s > 0 ? "+" : "") + s])), ex.step);
+  ["Dir", "Start", "Step"].forEach(k => document.getElementById("ex" + k).onchange = e => { ex[k.toLowerCase()] = e.target.value; drawEx(); });
+  function drawEx() {
+    const d = G().dirs[+ex.dir];
+    const rows = G().examples.filter(r => r.method === d.method && r.component === d.component && (ex.start === "all" || r.start === ex.start) && (ex.step === "all" || r.x === +ex.step))
+      .sort((a, b) => a.x - b.x);
+    document.getElementById("exList").innerHTML = rows.map(r => `<article class="ex"><div class="ex-head"><span class="chip">${esc(r.label)}</span>
+      <span class="${r.side > 0 ? "plus" : r.side < 0 ? "minus" : ""}">${r.side > 0 ? "+ side" : r.side < 0 ? "− side" : "neither side"}</span><span>start ${esc(r.start)} · step ${r.x}</span></div>
+      <div class="ex-head"><span>${esc(r.question)}</span></div><div class="ex-text">${esc(r.text)}</div></article>`).join("") || "<p>No answers for this selection.</p>";
+  }
+  function render() {
+    const sg = document.getElementById("strSeg");
+    sg.innerHTML = D.order.map(v => `<button type="button" data-v="${v}" aria-pressed="${v === st.s}">α = ${v}${v === D.order[0] ? " (paper)" : ""}</button>`).join("");
+    sg.onclick = e => { const b = e.target.closest("button"); if (b) { st.s = b.dataset.v; render(); } };
+    document.getElementById("strNote").textContent = (N.strength || {})[st.s] || "";
+    ["h1", "c1", "how1", "h2", "c2", "how2"].forEach(k => { const v = (N.by_strength || {})[st.s]; if (v && v[k]) document.getElementById(k).textContent = v[k]; });
+    fig1(); fig2(); drawEx();
+  }
+  render();
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { fig1(); fig2(); });
+  new MutationObserver(() => { fig1(); fig2(); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+})();
+</script>

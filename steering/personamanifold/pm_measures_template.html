@@ -1,0 +1,303 @@
+<title>Persona Component Paper Measures</title>
+<meta name="description" content="Qwen3-8B: the persona component steering round scored with the PersonaManifold paper's three path measures: interpolation coherence, transition smoothness (Big Five) and manifold adherence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; hypotheses, the three paper measures defined, then one finding per measure (claim, chart, plain caption), a summary table, examples. Same tokens as Persona Component Steering. */
+:root {
+  --bg: #f3f5f4; --panel: #ffffff; --ink: #142021; --ink-2: #48585a; --ink-3: #7b8a8c; --rule: #d9e0df; --grid: #e8edec;
+  --minus: #2f6db5; --plus: #c8562a; --start: #5b6b6d; --pga: #0f7b74; --pca: #6b7f99; --accent: #0f7b74;
+  --display: "Spectral", Georgia, serif; --sans: "Public Sans", system-ui, sans-serif; --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #111717; --panel: #182021; --ink: #e7eeed; --ink-2: #aebcbc; --ink-3: #82918f; --rule: #2b3637; --grid: #222c2d;
+  --minus: #6ea2e6; --plus: #ee8a51; --start: #a3b1b2; --pga: #3fb3a9; --pca: #94a7c2; --accent: #3fb3a9; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #111717; --panel: #182021; --ink: #e7eeed; --ink-2: #aebcbc; --ink-3: #82918f; --rule: #2b3637; --grid: #222c2d;
+  --minus: #6ea2e6; --plus: #ee8a51; --start: #a3b1b2; --pga: #3fb3a9; --pca: #94a7c2; --accent: #3fb3a9; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 16px/1.6 var(--sans); }
+.wrap { max-width: 1040px; margin: 0 auto; padding-inline: 18px; padding-block: 32px 72px; display: grid; gap: 34px; }
+h1, h2 { font-family: var(--display); font-weight: 600; margin: 0; text-wrap: balance; }
+h1 { font-size: 2.1rem; line-height: 1.12; }
+h2 { font-size: 1.35rem; line-height: 1.25; }
+h3 { margin: 0; font: 600 0.95rem/1.3 var(--sans); }
+p { margin: 0; max-width: 70ch; }
+.lede { color: var(--ink-2); font-size: 1.05rem; }
+.facts { display: flex; flex-wrap: wrap; gap: 4px 18px; font: 0.8rem/1.5 var(--mono); color: var(--ink-2); }
+.facts b { color: var(--ink); font-weight: 500; }
+section { display: grid; gap: 12px; min-width: 0; }
+.eyebrow { font: 500 0.72rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.claim { font-size: 1.05rem; }
+.figure { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 10px; min-width: 0; }
+.chart { width: 100%; height: 300px; }
+.how { font-size: 0.9rem; color: var(--ink-2); border-left: 2px solid var(--rule); padding-left: 12px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; }
+.card { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 12px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.card .tag { font: 500 0.72rem/1 var(--mono); color: var(--ink-3); }
+.card .ends { font-size: 0.85rem; color: var(--ink-2); }
+.card .ends b { font-weight: 600; }
+.minus { color: var(--minus); } .plus { color: var(--plus); }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.grid3 .figure h3 { margin-bottom: 2px; }
+.grid3 .chart { height: 240px; }
+@media (max-width: 860px) { .grid3 { grid-template-columns: 1fr; } }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 5px; overflow: hidden; }
+.seg button { font: 500 0.8rem/1 var(--sans); background: var(--panel); color: var(--ink-2); border: 0; border-right: 1px solid var(--rule); padding: 7px 11px; cursor: pointer; }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ctl { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; font-size: 0.85rem; color: var(--ink-2); }
+select { font: 0.85rem var(--sans); color: var(--ink); background: var(--panel); border: 1px solid var(--rule); border-radius: 5px; padding: 5px 8px; }
+select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ex-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 10px; }
+.ex { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.ex-head { display: flex; flex-wrap: wrap; gap: 4px 10px; font: 0.74rem/1.35 var(--mono); color: var(--ink-3); }
+.chip { font: 500 0.74rem/1 var(--mono); padding: 4px 7px; border-radius: 999px; background: var(--grid); color: var(--ink); }
+.ex-text { white-space: pre-wrap; font-size: 0.86rem; line-height: 1.5; max-height: 15em; overflow-y: auto; overflow-wrap: anywhere; }
+.err { color: var(--plus); font-family: var(--mono); }
+.tbl { overflow-x: auto; } table { border-collapse: collapse; font: 0.78rem/1.4 var(--mono); font-variant-numeric: tabular-nums; }
+th, td { padding: 4px 9px; border-bottom: 1px solid var(--grid); text-align: right; white-space: nowrap; } th:first-child, td:first-child { text-align: left; } th { color: var(--ink-3); font-weight: 500; }
+.ci { color: var(--ink-3); }
+.def { font: 0.8rem/1.5 var(--mono); color: var(--ink-2); }
+.bf { display: flex; flex-wrap: wrap; gap: 4px; }
+</style>
+<div class="wrap">
+  <header style="display:grid;gap:12px">
+    <span class="eyebrow">Persona component analysis · PersonaManifold paper measures</span>
+    <h1>Are the steering paths coherent, by the paper's own measures?</h1>
+    <p class="lede" id="lede"></p>
+    <div class="facts" id="facts"></div>
+  </header>
+
+  <div class="ctl" style="position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;border-bottom:1px solid var(--rule)">
+    <span>Steering strength α</span><span class="seg" id="strSeg"></span>
+  </div>
+
+  <section>
+    <span class="eyebrow">Hypotheses, written before steering</span>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section>
+    <span class="eyebrow">What the model was asked</span>
+    <p class="how" id="qaHow"></p>
+    <div class="figure tbl"><table id="qaTbl"></table></div>
+  </section>
+
+  <section>
+    <span class="eyebrow">The three measures (arXiv 2609.34571, §4.1)</span>
+    <div class="cards" id="defs"></div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Finding 1 · interpolation coherence</span>
+    <h2 id="h1"></h2><p class="claim" id="c1"></p>
+    <div class="grid3" id="fig1"></div>
+    <p class="how" id="how1"></p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Finding 2 · transition smoothness</span>
+    <h2 id="h2"></h2><p class="claim" id="c2"></p>
+    <div class="figure"><div class="chart" id="fig2"></div></div>
+    <div class="ctl"><label for="trDir">Big Five along the path for <select id="trDir"></select></label></div>
+    <div class="figure"><div class="chart" id="fig2b"></div></div>
+    <p class="how" id="how2"></p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Finding 3 · manifold adherence</span>
+    <h2 id="h3"></h2><p class="claim" id="c3"></p>
+    <div class="grid3" id="fig3"></div>
+    <p class="how" id="how3"></p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Summary per direction and half</span>
+    <div class="figure tbl"><table id="sumTbl"></table></div>
+    <p class="how" id="howT"></p>
+  </section>
+
+  <section>
+    <span class="eyebrow">As in the paper's Table 3</span>
+    <h2>IC, TS and MA per direction</h2>
+    <div class="figure tbl"><table id="tbl3"></table></div>
+    <p class="how" id="howT3"></p>
+    <details class="figure"><summary>Big Five judge: system prompt</summary><pre id="bfSys" style="white-space:pre-wrap;font:0.76rem/1.5 var(--mono);color:var(--ink-2);margin:6px 0 0"></pre></details>
+    <details class="figure"><summary>Big Five judge: subagent instructions</summary><pre id="bfIns" style="white-space:pre-wrap;font:0.76rem/1.5 var(--mono);color:var(--ink-2);margin:6px 0 0"></pre></details>
+  </section>
+
+  <section>
+    <span class="eyebrow">Example answers, with their Big Five scores</span>
+    <div class="ctl">
+      <label for="exDir">Direction <select id="exDir"></select></label>
+      <label for="exStart">Start <select id="exStart"></select></label>
+      <label for="exStep">Step <select id="exStep"></select></label>
+      <span id="exCount" style="font:0.78rem var(--mono);color:var(--ink-3)"></span>
+    </div>
+    <div class="ex-list" id="exList"></div>
+  </section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.34.0/plotly.min.js"></script>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+window.addEventListener("error", function (e) {
+  var w = document.querySelector(".wrap"), m = document.createElement("p");
+  m.className = "err"; m.textContent = "The charts could not be drawn: " + (e.message || "a script failed to load") + ".";
+  if (w) w.insertBefore(m, w.children[1]);
+}, true);
+</script>
+<script>
+(function () {
+  if (typeof Plotly === "undefined") throw new Error("the Plotly chart library did not load");
+  const D = JSON.parse(document.getElementById("data").textContent);
+  const N = D.notes || {};
+  const st = { a: D.order[0] };
+  const $ = id => document.getElementById(id);
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const esc = t => String(t == null ? "" : t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  { const gn = D.gen;
+    $("qaHow").textContent = `Every step of every path gets the same 20 answers from each start: 5 held-out questions (not the persona-extraction questions), each asked in 2 wordings, each answered twice (2 samples). There is no system prompt: the chat is only "user: <question>", and the persona comes from the added vector alone. Sampling: temperature ${gn.temperature}, top-p ${gn.top_p}, top-k ${gn.top_k}, at most ${gn.n_new_max} new tokens (${Math.round(100 * gn.hit_max)}% of answers reach that limit and stop mid-sentence). So one direction at one strength has 9 steps × 3 starts × 20 = 540 answers, and the whole page 5,880.`;
+    const qs = {}; D.questions.forEach(r => (qs[r.q] = qs[r.q] || [])[r.para] = r.question);
+    $("qaTbl").innerHTML = "<tr><th>#</th><th style='text-align:left'>wording 1</th><th style='text-align:left'>wording 2</th></tr>" +
+      Object.keys(qs).map(q => `<tr><td>${+q + 1}</td><td style="text-align:left;white-space:normal">${esc(qs[q][0])}</td><td style="text-align:left;white-space:normal">${esc(qs[q][1])}</td></tr>`).join(""); }
+  if (D.judge) { $("bfSys").textContent = D.judge.system; $("bfIns").textContent = D.judge.instructions; }
+  const MNAME = { pga: "Fletcher direction", pca: "PCA component" };
+  const dn = d => MNAME[d.method] + " " + d.component;
+  const col = d => css(d.method === "pga" ? "--pga" : "--pca");
+  ["lede", "h1", "c1", "how1", "h2", "c2", "how2", "h3", "c3", "how3", "howT", "howT3"].forEach(k => $(k).textContent = N[k] || "");
+  $("facts").innerHTML = (N.facts || []).map(([k, v]) => `<span>${esc(k)} <b>${esc(v)}</b></span>`).join("");
+  $("cards").innerHTML = D.dirs.map(d => `<div class="card"><span class="tag">${dn(d)} · ${(100 * d.var_share).toFixed(0)}% of variance</span>
+    <h3>${esc(d.hypothesis)}</h3>
+    <div class="ends"><b class="minus">− end:</b> ${esc(d.minus.join(", "))}</div><div class="ends"><b class="plus">+ end:</b> ${esc(d.plus.join(", "))}</div></div>`).join("");
+  $("defs").innerHTML = (N.defs || []).map(x => `<div class="card"><span class="tag">${esc(x.tag)}</span><h3>${esc(x.name)}</h3>
+    <div class="def">${esc(x.formula)}</div><div class="ends">${esc(x.paper)}</div><div class="ends"><b>Here:</b> ${esc(x.ours)}</div></div>`).join("");
+
+  const base = extra => Object.assign({ paper_bgcolor: "rgba(0,0,0,0)", plot_bgcolor: "rgba(0,0,0,0)", margin: { l: 48, r: 10, t: 8, b: 44 },
+    font: { family: css("--sans"), color: css("--ink-2"), size: 11 }, showlegend: false, hovermode: "x unified",
+    hoverlabel: { bgcolor: css("--panel"), bordercolor: css("--rule"), font: { color: css("--ink"), family: css("--mono"), size: 11 } } }, extra);
+  const ax = (title, extra) => Object.assign({ title: { text: title, font: { size: 11 } }, gridcolor: css("--grid"), linecolor: css("--rule"),
+    zerolinecolor: css("--rule"), tickfont: { family: css("--mono"), size: 10 } }, extra || {});
+  const cfg = { responsive: true, displaylogo: false, displayModeBar: false };
+  const SM = { shape: "spline", smoothing: 0.8 };
+  const XAX = ax("step (− towards − end · + towards + end)", { range: [-1.1, 1.1], dtick: 0.5 });
+
+  function lines(elId, rows, d, key, ytitle, yr, fmt, scale, extra) {
+    const LO = r => r[key + "_lo"] != null ? r[key + "_lo"] : r.lo, HI = r => r[key + "_hi"] != null ? r[key + "_hi"] : r.hi;
+    const tr = [];
+    D.starts.forEach((s, j) => {
+      const rs = rows.filter(r => r.start === s).sort((a, b) => a.x - b.x);
+      tr.push({ x: rs.map(r => r.x), y: rs.map(r => r[key] * scale), type: "scatter", mode: "lines", name: s,
+        line: Object.assign({ color: css("--start"), width: 1, dash: ["dot", "dash", "longdash"][j % 3] }, SM), opacity: 0.7, hovertemplate: s + ": %{y:" + fmt + "}<extra></extra>" });
+    });
+    const rp = rows.filter(r => r.start === "__all__").sort((a, b) => a.x - b.x);
+    if (rp.length && LO(rp[0]) != null) tr.push({ x: rp.map(r => r.x).concat(rp.map(r => r.x).reverse()), y: rp.map(r => HI(r) * scale).concat(rp.map(r => LO(r) * scale).reverse()),
+      fill: "toself", fillcolor: col(d), opacity: 0.15, line: Object.assign({ width: 0 }, SM), hoverinfo: "skip", type: "scatter", mode: "lines" });
+    tr.push({ x: rp.map(r => r.x), y: rp.map(r => r[key] * scale), type: "scatter", mode: "lines+markers", name: "all starts",
+      line: Object.assign({ color: col(d), width: 3 }, SM), marker: { size: 6 }, hovertemplate: "all starts: %{y:" + fmt + "}<extra></extra>" });
+    const lay = { xaxis: XAX, yaxis: ax(ytitle, yr) };
+    if (extra) { tr.push(...extra.traces(rp)); lay.yaxis2 = extra.y2; lay.margin = { l: 48, r: 44, t: 8, b: 44 }; }
+    Plotly.react(elId, tr, base(lay), cfg);
+  }
+  function grid(elId, pre) {
+    $(elId).innerHTML = D.dirs.map((d, i) => `<div class="figure"><h3>${dn(d)}</h3><div class="sub" style="font:0.75rem var(--mono);color:var(--ink-3)">${esc(d.hypothesis)}</div><div class="chart" id="${pre}${i}"></div></div>`).join("");
+  }
+  function fig1() {
+    grid("fig1", "f1_");
+    const all = D.ic.filter(r => r.alpha === st.a);
+    const extra = { traces: rp => [{ x: rp.map(r => r.x), y: rp.map(r => 100 * r.degenerate), yaxis: "y2", type: "scatter", mode: "lines",
+        name: "judged degenerate", line: Object.assign({ color: css("--plus"), width: 1.5, dash: "dash" }, SM), hovertemplate: "degenerate: %{y:.0f}%<extra></extra>" }],
+      y2: ax("judged degenerate (%)", { overlaying: "y", side: "right", range: [0, 105], showgrid: false, zeroline: false, title: { text: "degenerate (%)", font: { size: 10, color: css("--plus") } }, tickfont: { family: css("--mono"), size: 10, color: css("--plus") } }) };
+    D.dirs.forEach((d, i) => lines("f1_" + i, all.filter(r => r.method === d.method && r.component === d.component), d, "ic",
+      "IC: mean pairwise cosine", { range: [0.15, 0.6] }, ".3f", 1, extra));
+  }
+  function fig2() {
+    const rows = D.ts.filter(r => r.alpha === st.a && r.start === "__all__");
+    const tr = [-1, 1].map(h => {
+      const rs = D.dirs.map(d => rows.find(r => r.method === d.method && r.component === d.component && r.half === h));
+      return { x: D.dirs.map(dn), y: rs.map(r => r ? 100 * r.ts : null), name: h < 0 ? "0 → − end" : "0 → + end", type: "bar",
+        marker: { color: css(h < 0 ? "--minus" : "--plus") },
+        error_y: { type: "data", symmetric: false, array: rs.map(r => r ? 100 * (r.hi - r.ts) : 0), arrayminus: rs.map(r => r ? 100 * (r.ts - r.lo) : 0), color: css("--ink-3"), thickness: 1 },
+        hovertemplate: (h < 0 ? "0 → − end" : "0 → + end") + ": %{y:.0f}%<extra></extra>" };
+    });
+    Plotly.react("fig2", tr, base({ hovermode: "closest", showlegend: true, legend: { orientation: "h", y: 1.12, font: { size: 11 } }, barmode: "group",
+      xaxis: ax(""), yaxis: ax("TS: steps moving towards the end value (%)", { range: [0, 105], dtick: 25 }),
+      shapes: [{ type: "line", xref: "paper", x0: 0, x1: 1, y0: 50, y1: 50, line: { color: css("--rule"), dash: "dot", width: 1.5 } }] }), cfg);
+  }
+  const trSel = { d: "0" };
+  function fig2b() {
+    const d = D.dirs[+trSel.d], rows = D.traitcurves.filter(r => r.alpha === st.a && r.method === d.method && r.component === d.component && r.start === "__all__").sort((a, b) => a.x - b.x);
+    const pal = ["--pga", "--plus", "--minus", "--pca", "--start"];
+    const tr = D.traits.map((t, j) => ({ x: rows.map(r => r.x), y: rows.map(r => r[t]), type: "scatter", mode: "lines+markers", name: t,
+      line: Object.assign({ color: css(pal[j]), width: 2, dash: ["solid", "solid", "solid", "dash", "dot"][j] }, SM), marker: { size: 5 }, hovertemplate: t + ": %{y:.2f}<extra></extra>" }));
+    Plotly.react("fig2b", tr, base({ showlegend: true, legend: { orientation: "h", y: 1.12, font: { size: 11 } }, xaxis: XAX,
+      yaxis: ax("mean judge score (1–5)", { range: [1, 5], dtick: 1 }) }), cfg);
+  }
+  function fig3() {
+    grid("fig3", "f3_");
+    D.dirs.forEach((d, i) => lines("f3_" + i, D.ma.filter(r => r.method === d.method && r.component === d.component), d, "adh",
+      "1 − distance to nearest persona / r95", { range: [0.7, 1.02] }, ".3f", 1));
+  }
+  function table() {
+    const f = (v, lo, hi, s) => v == null ? "–" : (s * v).toFixed(s === 100 ? 0 : 3) + (lo != null ? ` <span class="ci">[${(s * lo).toFixed(s === 100 ? 0 : 3)}, ${(s * hi).toFixed(s === 100 ? 0 : 3)}]</span>` : "");
+    const ic0 = D.ic.filter(r => r.alpha === st.a && r.start === "__all__" && r.x === 0);
+    let h = "<tr><th>direction</th><th>half</th><th>IC (mean of 4 steps)</th><th>IC at step 0</th><th>TS (%)</th><th>MA</th></tr>";
+    D.dirs.forEach(d => [-1, 1].forEach(hf => {
+      const t = D.ts.find(r => r.alpha === st.a && r.method === d.method && r.component === d.component && r.half === hf && r.start === "__all__");
+      const z = ic0.find(r => r.method === d.method && r.component === d.component);
+      h += `<tr><td>${dn(d)}</td><td>${hf < 0 ? "0 → −" : "0 → +"}</td><td>${f(t && t.ic_path, null, null, 1)}</td><td>${f(z && z.ic, null, null, 1)}</td><td>${f(t && t.ts, t && t.lo, t && t.hi, 100)}</td><td>${f(d.ma[String(hf)].pooled, null, null, 1)}</td></tr>`;
+    }));
+    $("sumTbl").innerHTML = h;
+  }
+  const ex = { dir: "0", start: "all", step: "all" };
+  const sel = (id, items, cur) => { $(id).innerHTML = items.map(([v, l]) => `<option value="${v}"${v === cur ? " selected" : ""}>${esc(l)}</option>`).join(""); };
+  sel("exDir", D.dirs.map((d, i) => [String(i), dn(d) + " · " + d.hypothesis]), ex.dir);
+  sel("trDir", D.dirs.map((d, i) => [String(i), dn(d)]), trSel.d);
+  sel("exStart", [["all", "all starts"]].concat(D.starts.map(s => [s, s])), ex.start);
+  sel("exStep", [["all", "all steps"]].concat([-1, -0.75, -0.5, -0.25, 0, 0.25, 0.5, 0.75, 1].map(s => [String(s), (s > 0 ? "+" : "") + s])), ex.step);
+  ["Dir", "Start", "Step"].forEach(k => $("ex" + k).onchange = e => { ex[k.toLowerCase()] = e.target.value; drawEx(); });
+  $("trDir").onchange = e => { trSel.d = e.target.value; fig2b(); };
+  let EX = null;
+  fetch("data/examples.json").then(r => { if (!r.ok) throw new Error("examples.json: " + r.status); return r.json(); })
+    .then(x => { EX = x; drawEx(); }).catch(e => { $("exList").innerHTML = `<p class="err">Could not load the answers: ${esc(e.message)}</p>`; });
+  function drawEx() {
+    if (!EX) { $("exList").innerHTML = "<p>Loading answers…</p>"; return; }
+    const d = D.dirs[+ex.dir];
+    const rows = EX.filter(r => r.alpha === st.a && r.method === d.method && r.component === d.component && (ex.start === "all" || r.start === ex.start) && (ex.step === "all" || r.x === +ex.step))
+      .sort((a, b) => a.x - b.x || a.start.localeCompare(b.start) || a.q - b.q || a.para - b.para || a.sample - b.sample);
+    $("exCount").textContent = rows.length + " answers" + (rows.length > 120 ? " (showing the first 120; pick a start or a step to see the rest)" : "");
+    $("exList").innerHTML = rows.slice(0, 120).map(r => `<article class="ex"><div class="ex-head"><span>start ${esc(r.start)} · step ${r.x} · question ${r.q + 1}, wording ${r.para + 1}, sample ${r.sample + 1} · ${r.n_tok} tokens</span>${r.degenerate ? '<span class="chip">degenerate</span>' : ""}</div>
+      <div class="bf">${D.traits.map((t, j) => `<span class="chip">${t.slice(0, 1).toUpperCase()} ${r.bf[j] == null ? "–" : r.bf[j]}</span>`).join("")}</div>
+      <div class="ex-head"><span>${esc(r.question)}</span></div><div class="ex-text">${esc(r.text)}</div>
+      ${r.evidence ? `<div class="ex-head"><span>judge evidence: “${esc(r.evidence)}”</span></div>` : ""}</article>`).join("") || "<p>No answers for this selection.</p>";
+  }
+  function table3() {
+    const order = ["pca", "pga"].flatMap(m => [1, 2, 3].map(k => D.dirs.find(d => d.method === m && d.component === k))).filter(Boolean);
+    const val = (d, a) => {
+      const t = D.ts.filter(r => r.alpha === a && r.method === d.method && r.component === d.component && r.start === "__all__");
+      const mean = f => t.reduce((s, r) => s + r[f], 0) / t.length;
+      return [mean("ic_path"), mean("ts"), (d.ma["-1"].pooled + d.ma["1"].pooled) / 2];
+    };
+    let h = "<tr><th rowspan=2>Direction</th><th colspan=3>α = 1 (paper strength)</th><th colspan=3>α = 4</th></tr><tr><th>IC</th><th>TS</th><th>MA</th><th>IC</th><th>TS</th><th>MA</th></tr>";
+    order.forEach(d => { h += `<tr><td>${dn(d)}</td>` + ["1", "4"].flatMap(a => val(d, a)).map(v => `<td>${v.toFixed(2)}</td>`).join("") + "</tr>"; });
+    h += `<tr><td class="ci">Paper, Qwen2.5-7B: Geodesic</td><td class="ci">0.69</td><td class="ci">0.65</td><td class="ci">0.58</td><td class="ci" colspan=3>high-deviation pairs, K = 10</td></tr>`;
+    h += `<tr><td class="ci">Paper, Qwen2.5-7B: Euclidean-Linear</td><td class="ci">0.55</td><td class="ci">0.49</td><td class="ci">0.38</td><td class="ci" colspan=3></td></tr>`;
+    $("tbl3").innerHTML = h;
+  }
+  function draw() { fig1(); fig2(); fig2b(); fig3(); table(); table3(); }
+  function render() {
+    const sg = $("strSeg");
+    sg.innerHTML = D.order.map(v => `<button type="button" data-v="${v}" aria-pressed="${v === st.a}">α = ${v}${v === D.order[0] ? " (paper)" : ""}</button>`).join("");
+    sg.onclick = e => { const b = e.target.closest("button"); if (b) { st.a = b.dataset.v; render(); } };
+    ["h1", "c1", "h2", "c2", "h3", "c3"].forEach(k => { const v = (N.by_strength || {})[st.a]; if (v && v[k]) $(k).textContent = v[k]; });
+    draw(); drawEx();
+  }
+  render();
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", draw);
+  new MutationObserver(draw).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+})();
+</script>
+
