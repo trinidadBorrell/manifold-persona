@@ -9,6 +9,6 @@ You get a directory DIR and ONE chunk number N (three digits, e.g. 007).
 3. Write `DIR/verdict_N.json`: exactly the STRICT JSON the prompt asks for, one key per item number
    ("1" ... last), each `{"why": "...", "rank": [10 distinct names from the list], "nonsense": true|false}`.
    A script may be used ONLY to write this file; give it a new name containing N and a random number,
-   in the scratch directory. Do not modify any other file.
+   in the scratch directory, and first check that no file of that name exists (other agents share the directory and have left scripts there; running one of theirs overwrites another job's result). Use a random number of at least 8 digits. Do not modify any other file.
 
 Reply with one line: `N: <n judged> of <n items>`.

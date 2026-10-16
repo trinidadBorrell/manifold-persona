@@ -202,7 +202,148 @@ def test_hook_layer_for_hidden_state():
         _raises(lambda: hook_layer_for_hidden_state(bad))
 
 
-TESTS = [test_delta_zero_at_alpha_0,
+# --------------------------------------------------------------------------
+# 5. ACE (affine concept editing)
+# --------------------------------------------------------------------------
+
+def _ace_cloud(seed=0, n=200, d=64):
+    rng = np.random.default_rng(seed)
+    mu_a = rng.normal(size=d) * 3.0
+    mu_b = mu_a + rng.normal(size=d) * 2.0
+    H = mu_a + rng.normal(size=(n, d)) * 1.5          # tokens spread around A
+    return H, mu_a, mu_b
+
+
+def test_ace_pins_r_coordinate():
+    from steering.interventions import ace_delta
+    H, mu_a, mu_b = _ace_cloud()
+    r = mu_b - mu_a
+    r_hat = r / np.linalg.norm(r)
+    for alpha in (-1.5, 0.0, 0.5, 1.0, 1.5):
+        Hs = H + ace_delta(H, mu_a, mu_b, alpha)
+        want = (mu_a + alpha * r) @ r_hat
+        # EVERY token, not just the mean: ACE sets the coordinate, it does not shift it
+        assert np.allclose(Hs @ r_hat, want, atol=1e-9), alpha
+
+
+def test_ace_leaves_orthogonal_complement():
+    from steering.interventions import ace_delta
+    H, mu_a, mu_b = _ace_cloud(1)
+    r_hat = (mu_b - mu_a) / np.linalg.norm(mu_b - mu_a)
+    P = np.eye(len(r_hat)) - np.outer(r_hat, r_hat)
+    for alpha in (0.0, 1.0):
+        D = ace_delta(H, mu_a, mu_b, alpha)
+        assert D.shape == H.shape                      # full-space delta
+        assert np.allclose(D @ P, 0.0, atol=1e-9)      # nothing off r
+
+
+def test_ace_torch_hook_matches_numpy():
+    try:
+        import torch
+        from steering.interventions import ace_delta, make_ace_delta_fn
+    except ImportError as exc:
+        print("  SKIP test_ace_torch_hook_matches_numpy: %s" % exc)
+        return
+    H, mu_a, mu_b = _ace_cloud(2)
+    Ht = torch.as_tensor(H[None], dtype=torch.float32)   # (batch, seq, hidden)
+    for alpha in (-1.0, 0.0, 1.25):
+        got = make_ace_delta_fn(mu_a, mu_b, alpha)(Ht, 0)[0].double().numpy()
+        want = ace_delta(H, mu_a, mu_b, alpha)
+        assert np.allclose(got, want, atol=1e-3), (alpha, np.abs(got - want).max())
+    _raises(lambda: make_ace_delta_fn(mu_a, mu_a, 1.0))
+
+
+def test_subspace_pin_reduces_to_ace_and_pins():
+    from steering.interventions import ace_delta, subspace_pin_delta
+    H, mu_a, mu_b = _ace_cloud(3)
+    r = mu_b - mu_a
+    U1 = (r / np.linalg.norm(r))[:, None]
+    for alpha in (-1.0, 0.0, 1.5):
+        assert np.allclose(subspace_pin_delta(H, U1, mu_a + alpha * r), ace_delta(H, mu_a, mu_b, alpha), atol=1e-9)
+    rng = np.random.default_rng(4)
+    U = np.linalg.qr(rng.normal(size=(H.shape[1], 5)))[0]
+    tgt = rng.normal(size=H.shape[1])
+    Hs = H + subspace_pin_delta(H, U, tgt)
+    assert np.allclose(Hs @ U, tgt @ U, atol=1e-9)                 # pinned in span(U)
+    P = np.eye(H.shape[1]) - U @ U.T
+    assert np.allclose(Hs @ P, H @ P, atol=1e-9)                   # untouched outside
+
+
+def test_subspace_pin_torch_matches_numpy():
+    try:
+        import torch
+        from steering.interventions import make_subspace_pin_delta_fn, subspace_pin_delta
+    except ImportError as exc:
+        print("  SKIP test_subspace_pin_torch_matches_numpy: %s" % exc)
+        return
+    H, _, _ = _ace_cloud(5)
+    rng = np.random.default_rng(6)
+    U = np.linalg.qr(rng.normal(size=(H.shape[1], 4)))[0]
+    tgt = rng.normal(size=H.shape[1]) * 3
+    got = make_subspace_pin_delta_fn(U, tgt)(torch.as_tensor(H[None], dtype=torch.float32), 0)[0].double().numpy()
+    assert np.allclose(got, subspace_pin_delta(H, U, tgt), atol=1e-3)
+
+
+def test_floor_linear_matches_paper_eq1():
+    from steering.interventions import floor_delta
+    H, mu_a, mu_b = _ace_cloud(7)
+    r_hat = (mu_b - mu_a) / np.linalg.norm(mu_b - mu_a)
+    x = H @ r_hat
+    tau = np.percentile(x, 60)
+    want = -np.minimum(x - tau, 0.0)[:, None] * r_hat          # paper eq. 1 with v = r_hat
+    got = floor_delta(H, mu_a, mu_b, tau)
+    assert np.allclose(got, want, atol=1e-9)
+    after = (H + got) @ r_hat
+    assert np.allclose(after, np.maximum(x, tau), atol=1e-9)    # raised to tau, never lowered
+    assert np.allclose(got[x >= tau], 0.0)                      # tokens above tau untouched
+
+
+def test_floor_manifold_on_straight_route_equals_linear():
+    from steering.interventions import floor_delta
+    H, mu_a, mu_b = _ace_cloud(8)
+    r = mu_b - mu_a
+    r_hat = r / np.linalg.norm(r)
+    S = mu_a + np.linspace(0, 1, 401)[:, None] * r                # the chord as a "route"
+    x = H @ r_hat
+    base = mu_a @ r_hat
+    # tokens inside the route's span, tau inside it too: both floors move them identically
+    inside = (x > base) & (x < base + np.linalg.norm(r))
+    tau = base + 0.7 * np.linalg.norm(r)
+    lin = floor_delta(H[inside], mu_a, mu_b, tau)
+    man = floor_delta(H[inside], mu_a, mu_b, tau, S_grid=S)
+    assert inside.sum() > 5
+    assert np.allclose(lin, man, atol=1e-6)
+
+
+def test_floor_torch_matches_numpy():
+    try:
+        import torch
+        from steering.interventions import floor_delta, make_floor_delta_fn
+    except ImportError as exc:
+        print("  SKIP test_floor_torch_matches_numpy: %s" % exc)
+        return
+    H, mu_a, mu_b = _ace_cloud(9)
+    rng = np.random.default_rng(10)
+    t = np.linspace(0, 1, 401)[:, None]
+    bend = rng.normal(size=H.shape[1]) * 2.0
+    S = mu_a + t * (mu_b - mu_a) + np.sin(np.pi * t) * bend        # a curved route with fixed ends
+    r_hat = (mu_b - mu_a) / np.linalg.norm(mu_b - mu_a)
+    tau = np.percentile(H @ r_hat, 70)
+    Ht = torch.as_tensor(H[None], dtype=torch.float32)
+    for grid in (None, S):
+        got = make_floor_delta_fn(mu_a, mu_b, tau, grid)(Ht, 0)[0].double().numpy()
+        assert np.allclose(got, floor_delta(H, mu_a, mu_b, tau, grid), atol=2e-3)
+
+
+TESTS = [test_floor_linear_matches_paper_eq1,
+         test_floor_manifold_on_straight_route_equals_linear,
+         test_floor_torch_matches_numpy,
+         test_subspace_pin_reduces_to_ace_and_pins,
+         test_subspace_pin_torch_matches_numpy,
+         test_ace_pins_r_coordinate,
+         test_ace_leaves_orthogonal_complement,
+         test_ace_torch_hook_matches_numpy,
+         test_delta_zero_at_alpha_0,
          test_delta_is_chord_at_alpha_1,
          test_linear_delta_is_alpha_times_chord,
          test_manifold_raises_outside_unit_interval,

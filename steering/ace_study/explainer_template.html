@@ -1,0 +1,282 @@
+<title>Persona Steering Arms</title>
+<meta name="description" content="Linear, manifold, ACE and ACE-manifold steering: the math, a toy you can move, and what each did on Qwen3-8B.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<style>
+:root {
+  --bg: #f6f7f8; --panel: #ffffff; --ink: #15181d; --ink-2: #4c525c; --ink-3: #7a808a;
+  --rule: #dfe2e6; --grid: #eceef1; --chip: #eef0f3; --focus: #2a78d6;
+  --arm-linear: #008300; --arm-manifold: #4a3aa7; --arm-ace: #e34948; --arm-ace_manifold: #d55181;
+  --src: #2a78d6; --tgt: #eb6834; --knot: #9aa0a8; --tok: #b4b9c1;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #131519; --panel: #1b1e23; --ink: #eef0f3; --ink-2: #b7bcc5; --ink-3: #8a909a;
+    --rule: #2e333a; --grid: #262a30; --chip: #252a31; --focus: #3987e5;
+    --arm-linear: #2e9e2e; --arm-manifold: #9085e9; --arm-ace: #e66767; --arm-ace_manifold: #e87ba4;
+    --src: #3987e5; --tgt: #d95926; --knot: #6b717a; --tok: #5a6069;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #131519; --panel: #1b1e23; --ink: #eef0f3; --ink-2: #b7bcc5; --ink-3: #8a909a;
+  --rule: #2e333a; --grid: #262a30; --chip: #252a31; --focus: #3987e5;
+  --arm-linear: #2e9e2e; --arm-manifold: #9085e9; --arm-ace: #e66767; --arm-ace_manifold: #e87ba4;
+  --src: #3987e5; --tgt: #d95926; --knot: #6b717a; --tok: #5a6069;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 16px/1.6 var(--sans); }
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 20px; padding-block: 32px 72px; display: grid; gap: 34px; }
+.prose { max-width: 68ch; display: grid; gap: 12px; }
+h1, h2 { font-family: var(--serif); font-weight: 600; text-wrap: balance; margin: 0; }
+h1 { font-size: 2.1rem; line-height: 1.12; letter-spacing: -0.01em; }
+h2 { font-size: 1.4rem; line-height: 1.25; }
+h3 { font: 600 1.02rem/1.3 var(--sans); margin: 0; display: flex; align-items: center; gap: 8px; }
+p { margin: 0; }
+.eyebrow { font: 500 0.72rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+.lede { color: var(--ink-2); font-size: 1.05rem; }
+.m { font-family: var(--mono); font-size: 0.9em; }
+.formula { display: block; font: 0.92rem/1.5 var(--mono); background: var(--chip); border-radius: 6px; padding: 9px 12px; overflow-x: auto; white-space: nowrap; color: var(--ink); }
+dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; margin: 0; }
+dt { font-family: var(--mono); font-size: 0.9rem; color: var(--ink); }
+dd { margin: 0; color: var(--ink-2); }
+.arms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.arm { background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 14px; display: grid; gap: 8px; align-content: start; }
+.arm p { color: var(--ink-2); font-size: 0.94rem; }
+.arm .data { font: 0.8rem/1.45 var(--mono); color: var(--ink-3); }
+.sw { display: inline-block; width: 22px; height: 0; border-top: 3px solid; }
+.callout { border-left: 3px solid var(--tgt); padding: 4px 0 4px 12px; color: var(--ink); }
+.toy { background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 14px; display: grid; gap: 12px; }
+.toy-ctl { display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: center; }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.seg button { font: 500 0.84rem/1 var(--sans); color: var(--ink-2); background: var(--panel); border: 0; border-right: 1px solid var(--rule); padding: 8px 11px; cursor: pointer; }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.seg button:focus-visible, input:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.slider { display: inline-flex; align-items: center; gap: 10px; font: 0.9rem var(--mono); color: var(--ink-2); }
+.slider input { width: min(260px, 60vw); accent-color: var(--ink); }
+.views { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.view { display: grid; gap: 4px; }
+.view .cap { font: 0.78rem/1.4 var(--mono); color: var(--ink-3); }
+svg { width: 100%; height: auto; display: block; }
+svg text { font-family: var(--mono); }
+.note { font-size: 0.88rem; color: var(--ink-2); min-height: 1.4em; }
+.charts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.chart { background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 10px; display: grid; gap: 4px; }
+.chart h3 { font-size: 0.9rem; }
+.chart .cap { font: 0.74rem/1.4 var(--mono); color: var(--ink-3); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.86rem; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 7px; }
+.ref { font-size: 0.92rem; color: var(--ink-2); }
+.ref a { color: var(--ink); }
+@media (max-width: 820px) { .arms, .views, .charts { grid-template-columns: 1fr; } h1 { font-size: 1.7rem; } }
+</style>
+
+<div class="wrap">
+  <header class="prose">
+    <span class="eyebrow">Qwen3-8B · persona steering</span>
+    <h1>Four ways to steer a model from one persona to another</h1>
+    <p class="lede">Each method changes the hidden state h at one layer, at every token. They differ in two things: whether they add a fixed vector or set part of h to a chosen value, and whether they work along one direction or along the whole route between the two personas.</p>
+  </header>
+
+  <section class="prose">
+    <h2>The pieces</h2>
+    <dl>
+      <dt>h</dt><dd>the hidden state at the steered layer, for one token</dd>
+      <dt>μ_A, μ_B</dt><dd>average hidden state of the source and target persona</dd>
+      <dt>r = μ_B − μ_A</dt><dd>the straight line between them; r̂ is r scaled to length 1</dd>
+      <dt>S(α)</dt><dd>a smooth curve from μ_A (α = 0) to μ_B (α = 1) through 8 real persona averages ("knots")</dd>
+      <dt>U</dt><dd>the directions the route spans: r and the 8 knots, made orthonormal (9 directions out of 4,096)</dd>
+      <dt>α</dt><dd>the steering parameter</dd>
+    </dl>
+    <p class="callout" id="offsetNote"></p>
+  </section>
+
+  <section class="arms">
+    <div class="arm">
+      <h3><span class="sw" style="border-color:var(--arm-linear)"></span>Linear</h3>
+      <span class="formula">h ← h + α r</span>
+      <p>Adds the same vector to every token. The whole cloud of states moves by α r, from wherever it was.</p>
+      <p class="data" id="d_linear"></p>
+    </div>
+    <div class="arm">
+      <h3><span class="sw" style="border-color:var(--arm-manifold);border-top-style:dashed"></span>Manifold</h3>
+      <span class="formula">h ← h + S(α) − S(0)</span>
+      <p>Adds a vector that follows the curve through the knots instead of the straight line. Only defined for α from 0 to 1. At α = 1 it equals linear.</p>
+      <p class="data" id="d_manifold"></p>
+    </div>
+    <div class="arm">
+      <h3><span class="sw" style="border-color:var(--arm-ace);border-top-style:dotted"></span>ACE (affine concept editing)</h3>
+      <span class="formula">h ← h − ((h − μ_A)·r̂) r̂ + α r</span>
+      <p>Removes each token's own position along r and puts it at μ_A + α r. The other 4,095 directions are untouched. So α = 0 means "exactly at the source level" and α = 1 "exactly at the target level", wherever the model started.</p>
+      <p class="data" id="d_ace"></p>
+    </div>
+    <div class="arm">
+      <h3><span class="sw" style="border-color:var(--arm-ace_manifold);border-top-style:double"></span>ACE manifold</h3>
+      <span class="formula">h ← h + U Uᵀ (T(α) − h)</span>
+      <p>ACE applied to the whole route. Every token's coordinates in the 9 route directions are set to the route point T(α) = S(α). Beyond 0 and 1, T continues along the straight line. The other 4,087 directions are untouched. With U = r̂ alone it is exactly ACE.</p>
+      <p>On Qwen3-8B this breaks the text. 33–67% of answers collapse, often into repeating the system prompt, and the target persona almost never appears (at most 7%). Fixing 9 coordinates of every token, prompt tokens included, seems to remove information the model needs.</p>
+      <p class="data" id="d_ace_manifold"></p>
+    </div>
+  </section>
+
+  <section class="toy">
+    <h2>Move it yourself</h2>
+    <p class="note">A toy in 3 dimensions: two span the route (left), one does not (right). Grey rings are unsteered tokens, filled dots are the same tokens after steering, the large dot is their average.</p>
+    <div class="toy-ctl">
+      <span class="seg" id="armSeg" role="group" aria-label="Method">
+        <button type="button" data-a="linear" aria-pressed="false">Linear</button>
+        <button type="button" data-a="manifold" aria-pressed="false">Manifold</button>
+        <button type="button" data-a="ace" aria-pressed="true">ACE</button>
+        <button type="button" data-a="ace_manifold" aria-pressed="false">ACE manifold</button>
+      </span>
+      <label class="slider" for="alpha">α <input id="alpha" type="range" min="-1.5" max="1.5" step="0.05" value="1"> <output id="alphaOut">1.00</output></label>
+    </div>
+    <div class="views">
+      <div class="view"><svg id="v1" viewBox="0 0 440 300" role="img" aria-label="The route's plane"></svg><span class="cap">The route's plane: along r (→) and the direction the route bends in (↑)</span></div>
+      <div class="view"><svg id="v2" viewBox="0 0 440 300" role="img" aria-label="A direction off the route"></svg><span class="cap">Along r (→) and one of the directions the route does not use (↑)</span></div>
+    </div>
+    <p class="note" id="toyNote"></p>
+  </section>
+
+  <section style="display:grid;gap:12px">
+    <h2>What each did on Qwen3-8B</h2>
+    <p class="lede" style="max-width:68ch">Step 1: assistant → bard, vampire and leviathan, layer 19, 75 answers per point, averaged over the three routes. The steered state is the layer's output with steering on, averaged over the answer's tokens.</p>
+    <div class="legend" id="legend"></div>
+    <div class="charts">
+      <div class="chart"><h3>Position along A → B</h3><span class="cap">0 = μ_A, 1 = μ_B; dashed grey = where α asks</span><svg id="c1" viewBox="0 0 300 220"></svg></div>
+      <div class="chart"><h3>Distance to μ_B</h3><span class="cap">per answer, averaged; the chord is about 29</span><svg id="c2" viewBox="0 0 300 220"></svg></div>
+      <div class="chart"><h3>Collapsed answers</h3><span class="cap">a 4-word phrase repeated more than 20 times</span><svg id="c3" viewBox="0 0 300 220"></svg></div>
+    </div>
+  </section>
+
+  <section class="prose ref">
+    <h2>Source</h2>
+    <p>ACE is from Thomas Marshall, Adam Scherlis and Nora Belrose, <a href="https://arxiv.org/abs/2411.09003">"Refusal in LLMs is an affine function"</a>, arXiv:2411.09003 (eq. 5), with code at <a href="https://github.com/EleutherAI/steering-llama3">EleutherAI/steering-llama3</a>. The paper takes the "behaviour absent" average as its reference point; here that is the source persona's average μ_A. The released code centres on the average of both classes instead, which shifts its α by 0.5. ACE manifold is our extension of the same idea to the route.</p>
+  </section>
+</div>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function () {
+  const D = JSON.parse(document.getElementById("data").textContent);
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const NAME = { linear: "Linear", manifold: "Manifold", ace: "ACE", ace_manifold: "ACE manifold" };
+  const DASH = { linear: "", manifold: "6 4", ace: "2 3", ace_manifold: "8 3 2 3" };
+  const ns = "http://www.w3.org/2000/svg";
+  const el = (tag, at, parent) => { const e = document.createElementNS(ns, tag); for (const k in at) e.setAttribute(k, at[k]); if (parent) parent.appendChild(e); return e; };
+
+  // ---------------- facts from the data ----------------
+  const arms = [...new Set(D.rows.map(r => r.arm))];
+  const at = (arm, a) => D.rows.find(r => r.arm === arm && Math.abs(r.alpha - a) < 1e-9);
+  document.getElementById("offsetNote").textContent =
+    `Why it matters: unsteered, the model's state sits ${D.unsteered_dsrc} units from μ_A, more than the whole A → B line (about 29), and already ${D.unsteered_pos.toFixed(2)} of the way along it. Adding a vector moves it from there, not from μ_A.`;
+  const line = (arm) => {
+    const r1 = at(arm, 1);
+    if (!r1) return "Step-1 run in progress.";
+    return `At α = 1: position ${r1.pos.toFixed(2)} along A → B, ${r1.dtgt.toFixed(0)} from μ_B, ${(100 * r1.coll).toFixed(0)}% of answers collapsed.`;
+  };
+  ["linear", "manifold", "ace", "ace_manifold"].forEach(a => document.getElementById("d_" + a).textContent = line(a));
+
+  // ---------------- toy ----------------
+  let seed = 7;
+  const rnd = () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; };
+  const gauss = () => Math.sqrt(-2 * Math.log(rnd() + 1e-12)) * Math.cos(2 * Math.PI * rnd());
+  const H0 = [3.6, -6, 5];                          // unsteered average: off A, part-way along r
+  const TOK = Array.from({ length: 36 }, () => [H0[0] + 1.6 * gauss(), H0[1] + 1.6 * gauss(), H0[2] + 1.6 * gauss()]);
+  const S = t => [10 * t, 4.2 * Math.sin(Math.PI * t), 0];
+  const T = a => a < 0 ? [10 * a, 0, 0] : a > 1 ? [10 * a, 0, 0] : S(a);
+  const KN = [1, 2, 3, 4, 5, 6, 7, 8].map(i => S(i / 9));
+  function steer(h, arm, a) {
+    if (arm === "linear") return [h[0] + 10 * a, h[1], h[2]];
+    if (arm === "manifold") { const s = S(a), s0 = S(0); return [h[0] + s[0] - s0[0], h[1] + s[1] - s0[1], h[2] + s[2] - s0[2]]; }
+    if (arm === "ace") return [10 * a, h[1], h[2]];
+    const t = T(a); return [t[0], t[1], h[2]];      // U = the route plane (x, y)
+  }
+  const X = [-17, 27], W = 440, Hh = 300, pad = 26;
+  const sx = x => pad + (x - X[0]) / (X[1] - X[0]) * (W - 2 * pad);
+  function view(svg, j, Y, arm, a) {
+    svg.innerHTML = "";
+    const sy = y => Hh - pad - (y - Y[0]) / (Y[1] - Y[0]) * (Hh - 2 * pad);
+    for (let x = -15; x <= 25; x += 5) el("line", { x1: sx(x), x2: sx(x), y1: pad, y2: Hh - pad, stroke: css("--grid") }, svg);
+    for (let y = Math.ceil(Y[0] / 5) * 5; y <= Y[1]; y += 5) el("line", { x1: pad, x2: W - pad, y1: sy(y), y2: sy(y), stroke: css("--grid") }, svg);
+    // straight line A -> B continued, and the route
+    el("line", { x1: sx(-15), x2: sx(25), y1: sy(0), y2: sy(0), stroke: css("--rule"), "stroke-width": 1.5 }, svg);
+    if (j === 1) {
+      let d = ""; for (let i = 0; i <= 60; i++) { const p = S(i / 60); d += (i ? "L" : "M") + sx(p[0]) + " " + sy(p[1]); }
+      el("path", { d, fill: "none", stroke: css("--knot"), "stroke-width": 2 }, svg);
+      KN.forEach(p => el("circle", { cx: sx(p[0]), cy: sy(p[1]), r: 3.2, fill: css("--knot") }, svg));
+    }
+    [[0, "μ_A", css("--src")], [10, "μ_B", css("--tgt")]].forEach(([x, lab, c]) => {
+      el("circle", { cx: sx(x), cy: sy(0), r: 6, fill: c, stroke: css("--panel"), "stroke-width": 2 }, svg);
+      const t = el("text", { x: sx(x), y: sy(0) + 20, "text-anchor": "middle", "font-size": 12, fill: css("--ink") }, svg); t.textContent = lab;
+    });
+    const col = css("--arm-" + arm);
+    const after = TOK.map(h => steer(h, arm, a));
+    TOK.forEach(h => el("circle", { cx: sx(h[0]), cy: sy(h[j]), r: 3, fill: "none", stroke: css("--tok"), "stroke-width": 1.2 }, svg));
+    after.forEach(h => el("circle", { cx: sx(h[0]), cy: sy(h[j]), r: 3, fill: col, opacity: 0.75 }, svg));
+    const mean = arr => [0, 1, 2].map(k => arr.reduce((s, p) => s + p[k], 0) / arr.length);
+    const m0 = mean(TOK), m1 = mean(after);
+    el("line", { x1: sx(m0[0]), y1: sy(m0[j]), x2: sx(m1[0]), y2: sy(m1[j]), stroke: col, "stroke-width": 2, "stroke-dasharray": DASH[arm] }, svg);
+    el("circle", { cx: sx(m0[0]), cy: sy(m0[j]), r: 6, fill: css("--panel"), stroke: css("--ink-3"), "stroke-width": 2 }, svg);
+    el("circle", { cx: sx(m1[0]), cy: sy(m1[j]), r: 7, fill: col, stroke: css("--panel"), "stroke-width": 2 }, svg);
+    const tt = el("text", { x: sx(m0[0]) + 9, y: sy(m0[j]) - 9, "font-size": 11, fill: css("--ink-3") }, svg); tt.textContent = "unsteered";
+  }
+  const NOTE = {
+    linear: "Everything moves by the same amount. The cloud keeps its shape and its offset from the line.",
+    manifold: "The cloud follows the curve's shape, but from where it started, so it runs parallel to the route, not along it.",
+    ace: "Along r every token is set to the same value; off r nothing changes. The offset in the other directions stays.",
+    ace_manifold: "In the route's plane every token lands on the route point. Off the route (right) the tokens keep their spread.",
+  };
+  let arm = "ace";
+  const slider = document.getElementById("alpha");
+  function drawToy() {
+    let a = +slider.value;
+    if (arm === "manifold") a = Math.min(1, Math.max(0, a));
+    document.getElementById("alphaOut").textContent = a.toFixed(2);
+    view(document.getElementById("v1"), 1, [-11, 9], arm, a);
+    view(document.getElementById("v2"), 2, [-5, 11], arm, a);
+    document.getElementById("toyNote").textContent = NOTE[arm] + (arm === "manifold" && (+slider.value < 0 || +slider.value > 1) ? " (Manifold is only defined for α from 0 to 1, so α is held at the end.)" : "");
+    document.querySelectorAll("#armSeg button").forEach(b => b.setAttribute("aria-pressed", b.dataset.a === arm));
+  }
+  document.getElementById("armSeg").onclick = e => { const b = e.target.closest("button"); if (b) { arm = b.dataset.a; drawToy(); } };
+  slider.oninput = drawToy;
+
+  // ---------------- data charts ----------------
+  function chart(id, key, yr, yfmt, ref) {
+    const svg = document.getElementById(id); svg.innerHTML = "";
+    const w = 300, h = 220, L = 38, R = 8, Tp = 8, B = 28;
+    const sx = x => L + (x + 1.5) / 3 * (w - L - R), sy = y => h - B - (y - yr[0]) / (yr[1] - yr[0]) * (h - Tp - B);
+    const step = (yr[1] - yr[0]) / 4;
+    for (let i = 0; i <= 4; i++) { const y = yr[0] + i * step;
+      el("line", { x1: L, x2: w - R, y1: sy(y), y2: sy(y), stroke: css("--grid") }, svg);
+      const t = el("text", { x: L - 5, y: sy(y) + 4, "text-anchor": "end", "font-size": 10, fill: css("--ink-3") }, svg); t.textContent = yfmt(y); }
+    [-1.5, -1, -0.5, 0, 0.5, 1, 1.5].forEach(x => { const t = el("text", { x: sx(x), y: h - 10, "text-anchor": "middle", "font-size": 10, fill: css("--ink-3") }, svg); t.textContent = x; });
+    const tl = el("text", { x: w - R, y: h - 0, "text-anchor": "end", "font-size": 10, fill: css("--ink-3") }, svg); tl.textContent = "α";
+    if (ref) el("line", { x1: sx(-1.5), y1: sy(-1.5), x2: sx(1.5), y2: sy(1.5), stroke: css("--ink-3"), "stroke-dasharray": "4 4" }, svg);
+    arms.forEach(a => {
+      const rs = D.rows.filter(r => r.arm === a).sort((u, v) => u.alpha - v.alpha);
+      const d = rs.map((r, i) => (i ? "L" : "M") + sx(r.alpha) + " " + sy(Math.max(yr[0], Math.min(yr[1], r[key])))).join("");
+      el("path", { d, fill: "none", stroke: css("--arm-" + a), "stroke-width": 2, "stroke-dasharray": DASH[a] }, svg);
+      rs.forEach(r => { const c = el("circle", { cx: sx(r.alpha), cy: sy(Math.max(yr[0], Math.min(yr[1], r[key]))), r: 3, fill: css("--arm-" + a) }, svg);
+        const ti = el("title", {}, c); ti.textContent = `${NAME[a]}, α = ${r.alpha}: ${yfmt(r[key])}`; });
+    });
+  }
+  function drawCharts() {
+    chart("c1", "pos", [-1.5, 2.5], v => (+v).toFixed(1), true);
+    chart("c2", "dtgt", [20, 90], v => (+v).toFixed(0), false);
+    chart("c3", "coll", [0, 0.8], v => (100 * v).toFixed(0) + "%", false);
+    document.getElementById("legend").innerHTML = arms.map(a =>
+      `<span><svg width="26" height="8" viewBox="0 0 26 8" aria-hidden="true"><line x1="0" y1="4" x2="26" y2="4" stroke="${css("--arm-" + a)}" stroke-width="3" stroke-dasharray="${DASH[a]}"/></svg>${NAME[a]}</span>`).join("");
+  }
+  function all() { drawToy(); drawCharts(); }
+  all();
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", all);
+  new MutationObserver(all).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+})();
+</script>

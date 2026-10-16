@@ -16,6 +16,6 @@ You label LLM answers. You get a judge directory JUDGE, ONE job name NAME and ON
    instructions give. A script may be used ONLY to write this file.
 
 Scripts: if you write a helper script, give it a NEW filename that contains NAME and a random number
-(e.g. write_<NAME>_<5 digits>.py) in the scratch directory and never run a file you did not create in this
+(e.g. write_<NAME>_<5 digits>.py) in the scratch directory, and first check that no file of that name exists (other agents share the directory and have left scripts there; running one of theirs overwrites another job's result). Use a random number of at least 8 digits and never run a file you did not create in this
 task: other agents share that directory. Do not modify any other file.
 Reply with one line: `NAME: <n labelled> of <n items>`.

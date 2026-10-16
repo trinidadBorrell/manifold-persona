@@ -11,6 +11,6 @@ You get a directory DIR and ONE batch name NAME (e.g. bf_007).
    `{"key": "<copied verbatim>", "evidence": "...", "openness": 1-5, "conscientiousness": 1-5,
    "extraversion": 1-5, "agreeableness": 1-5, "neuroticism": 1-5, "degenerate": true|false}`
    (integers). A script may be used ONLY to write this file; give it a new name containing NAME and a
-   random number, in the scratch directory. Do not modify any other file.
+   random number, in the scratch directory, and first check that no file of that name exists (other agents share the directory and have left scripts there; running one of theirs overwrites another job's result). Use a random number of at least 8 digits. Do not modify any other file.
 
 Reply with one line: `NAME: <n rated> of <n items>`.

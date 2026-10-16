@@ -72,7 +72,7 @@ th, td { padding: 4px 9px; border-bottom: 1px solid var(--grid); text-align: rig
   </header>
 
   <div class="ctl" style="position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;border-bottom:1px solid var(--rule)">
-    <span>Steering strength α</span><span class="seg" id="strSeg"></span>
+    <span id="strLab">Steering strength α</span><span class="seg" id="strSeg"></span>
   </div>
 
   <section>
@@ -94,6 +94,7 @@ th, td { padding: 4px 9px; border-bottom: 1px solid var(--grid); text-align: rig
   <section>
     <span class="eyebrow">Finding 1 · interpolation coherence</span>
     <h2 id="h1"></h2><p class="claim" id="c1"></p>
+    <div class="ctl"><span>IC over</span><span class="seg" id="icSeg"><button type="button" data-v="ic" aria-pressed="true">all 20 answers of a step</button><button type="button" data-v="icq" aria-pressed="false">answers to the same question</button></span></div>
     <div class="grid3" id="fig1"></div>
     <p class="how" id="how1"></p>
   </section>
@@ -155,19 +156,23 @@ window.addEventListener("error", function (e) {
   if (typeof Plotly === "undefined") throw new Error("the Plotly chart library did not load");
   const D = JSON.parse(document.getElementById("data").textContent);
   const N = D.notes || {};
-  const st = { a: D.order[0] };
+  const st = { a: D.order[0], ic: "ic" };
   const $ = id => document.getElementById(id);
   const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
   const esc = t => String(t == null ? "" : t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   { const gn = D.gen;
-    $("qaHow").textContent = `Every step of every path gets the same 20 answers from each start: 5 held-out questions (not the persona-extraction questions), each asked in 2 wordings, each answered twice (2 samples). There is no system prompt: the chat is only "user: <question>", and the persona comes from the added vector alone. Sampling: temperature ${gn.temperature}, top-p ${gn.top_p}, top-k ${gn.top_k}, at most ${gn.n_new_max} new tokens (${Math.round(100 * gn.hit_max)}% of answers reach that limit and stop mid-sentence). So one direction at one strength has 9 steps × 3 starts × 20 = 540 answers, and the whole page 5,880.`;
+    $("qaHow").textContent = `Every step of every path gets the same 20 answers from each start: 5 held-out questions (not the persona-extraction questions), each asked in 2 wordings, each answered twice (2 samples). There is no system prompt: the chat is only "user: <question>", and the persona comes from ${N.steer_word || "the added vector"} alone. Sampling: temperature ${gn.temperature}, top-p ${gn.top_p}, top-k ${gn.top_k}, at most ${gn.n_new_max} new tokens (${Math.round(100 * gn.hit_max)}% of answers reach that limit and stop mid-sentence). So one direction at one strength has 9 steps × 3 starts × 20 = 540 answers, and the whole page 5,880.`;
     const qs = {}; D.questions.forEach(r => (qs[r.q] = qs[r.q] || [])[r.para] = r.question);
     $("qaTbl").innerHTML = "<tr><th>#</th><th style='text-align:left'>wording 1</th><th style='text-align:left'>wording 2</th></tr>" +
       Object.keys(qs).map(q => `<tr><td>${+q + 1}</td><td style="text-align:left;white-space:normal">${esc(qs[q][0])}</td><td style="text-align:left;white-space:normal">${esc(qs[q][1])}</td></tr>`).join(""); }
   if (D.judge) { $("bfSys").textContent = D.judge.system; $("bfIns").textContent = D.judge.instructions; }
   const MNAME = { pga: "Fletcher direction", pca: "PCA component" };
   const dn = d => MNAME[d.method] + " " + d.component;
+  const maOf = (d, hf) => (d.ma[st.a] || d.ma.all || d.ma)[String(hf)];   // clamp pages have one MA per strength
   const col = d => css(d.method === "pga" ? "--pga" : "--pca");
+  if (N.eyebrow) document.querySelector("header .eyebrow").textContent = N.eyebrow;
+  if (N.strength_label) document.getElementById("strLab").textContent = "Clamp strength " + N.strength_label;
+  if (N.title) document.querySelector("header h1").textContent = N.title;
   ["lede", "h1", "c1", "how1", "h2", "c2", "how2", "h3", "c3", "how3", "howT", "howT3"].forEach(k => $(k).textContent = N[k] || "");
   $("facts").innerHTML = (N.facts || []).map(([k, v]) => `<span>${esc(k)} <b>${esc(v)}</b></span>`).join("");
   $("cards").innerHTML = D.dirs.map(d => `<div class="card"><span class="tag">${dn(d)} · ${(100 * d.var_share).toFixed(0)}% of variance</span>
@@ -211,8 +216,9 @@ window.addEventListener("error", function (e) {
     const extra = { traces: rp => [{ x: rp.map(r => r.x), y: rp.map(r => 100 * r.degenerate), yaxis: "y2", type: "scatter", mode: "lines",
         name: "judged degenerate", line: Object.assign({ color: css("--plus"), width: 1.5, dash: "dash" }, SM), hovertemplate: "degenerate: %{y:.0f}%<extra></extra>" }],
       y2: ax("judged degenerate (%)", { overlaying: "y", side: "right", range: [0, 105], showgrid: false, zeroline: false, title: { text: "degenerate (%)", font: { size: 10, color: css("--plus") } }, tickfont: { family: css("--mono"), size: 10, color: css("--plus") } }) };
-    D.dirs.forEach((d, i) => lines("f1_" + i, all.filter(r => r.method === d.method && r.component === d.component), d, "ic",
-      "IC: mean pairwise cosine", { range: [0.15, 0.6] }, ".3f", 1, extra));
+    const icr = st.ic === "icq" ? [0.3, 0.8] : [0.15, 0.6];
+    D.dirs.forEach((d, i) => lines("f1_" + i, all.filter(r => r.method === d.method && r.component === d.component), d, st.ic,
+      st.ic === "icq" ? "IC within question" : "IC: mean pairwise cosine", { range: icr }, ".3f", 1, extra));
   }
   function fig2() {
     const rows = D.ts.filter(r => r.alpha === st.a && r.start === "__all__");
@@ -238,17 +244,17 @@ window.addEventListener("error", function (e) {
   }
   function fig3() {
     grid("fig3", "f3_");
-    D.dirs.forEach((d, i) => lines("f3_" + i, D.ma.filter(r => r.method === d.method && r.component === d.component), d, "adh",
+    D.dirs.forEach((d, i) => lines("f3_" + i, D.ma.filter(r => r.method === d.method && r.component === d.component && (r.alpha == null || r.alpha === st.a)), d, "adh",
       "1 − distance to nearest persona / r95", { range: [0.7, 1.02] }, ".3f", 1));
   }
   function table() {
     const f = (v, lo, hi, s) => v == null ? "–" : (s * v).toFixed(s === 100 ? 0 : 3) + (lo != null ? ` <span class="ci">[${(s * lo).toFixed(s === 100 ? 0 : 3)}, ${(s * hi).toFixed(s === 100 ? 0 : 3)}]</span>` : "");
     const ic0 = D.ic.filter(r => r.alpha === st.a && r.start === "__all__" && r.x === 0);
-    let h = "<tr><th>direction</th><th>half</th><th>IC (mean of 4 steps)</th><th>IC at step 0</th><th>TS (%)</th><th>MA</th></tr>";
+    let h = "<tr><th>direction</th><th>half</th><th>IC, all answers (mean of 4 steps)</th><th>IC within question</th><th>IC at step 0</th><th>TS (%)</th><th>MA</th></tr>";
     D.dirs.forEach(d => [-1, 1].forEach(hf => {
       const t = D.ts.find(r => r.alpha === st.a && r.method === d.method && r.component === d.component && r.half === hf && r.start === "__all__");
       const z = ic0.find(r => r.method === d.method && r.component === d.component);
-      h += `<tr><td>${dn(d)}</td><td>${hf < 0 ? "0 → −" : "0 → +"}</td><td>${f(t && t.ic_path, null, null, 1)}</td><td>${f(z && z.ic, null, null, 1)}</td><td>${f(t && t.ts, t && t.lo, t && t.hi, 100)}</td><td>${f(d.ma[String(hf)].pooled, null, null, 1)}</td></tr>`;
+      h += `<tr><td>${dn(d)}</td><td>${hf < 0 ? "0 → −" : "0 → +"}</td><td>${f(t && t.ic_path, null, null, 1)}</td><td>${f(t && t.icq_path, null, null, 1)}</td><td>${f(z && z.ic, null, null, 1)}</td><td>${f(t && t.ts, t && t.lo, t && t.hi, 100)}</td><td>${f(maOf(d, hf).pooled, null, null, 1)}</td></tr>`;
     }));
     $("sumTbl").innerHTML = h;
   }
@@ -260,6 +266,8 @@ window.addEventListener("error", function (e) {
   sel("exStep", [["all", "all steps"]].concat([-1, -0.75, -0.5, -0.25, 0, 0.25, 0.5, 0.75, 1].map(s => [String(s), (s > 0 ? "+" : "") + s])), ex.step);
   ["Dir", "Start", "Step"].forEach(k => $("ex" + k).onchange = e => { ex[k.toLowerCase()] = e.target.value; drawEx(); });
   $("trDir").onchange = e => { trSel.d = e.target.value; fig2b(); };
+  $("icSeg").onclick = e => { const b = e.target.closest("button"); if (!b) return; st.ic = b.dataset.v;
+    [...$("icSeg").children].forEach(x => x.setAttribute("aria-pressed", String(x === b))); fig1(); };
   let EX = null;
   fetch("data/examples.json").then(r => { if (!r.ok) throw new Error("examples.json: " + r.status); return r.json(); })
     .then(x => { EX = x; drawEx(); }).catch(e => { $("exList").innerHTML = `<p class="err">Could not load the answers: ${esc(e.message)}</p>`; });
@@ -279,18 +287,20 @@ window.addEventListener("error", function (e) {
     const val = (d, a) => {
       const t = D.ts.filter(r => r.alpha === a && r.method === d.method && r.component === d.component && r.start === "__all__");
       const mean = f => t.reduce((s, r) => s + r[f], 0) / t.length;
-      return [mean("ic_path"), mean("ts"), (d.ma["-1"].pooled + d.ma["1"].pooled) / 2];
+      const ma = a0 => { const m = d.ma[a0] || d.ma.all || d.ma; return (m["-1"].pooled + m["1"].pooled) / 2; };
+      return [mean("ic_path"), mean("icq_path"), mean("ts"), ma(a)];
     };
-    let h = "<tr><th rowspan=2>Direction</th><th colspan=3>α = 1 (paper strength)</th><th colspan=3>α = 4</th></tr><tr><th>IC</th><th>TS</th><th>MA</th><th>IC</th><th>TS</th><th>MA</th></tr>";
-    order.forEach(d => { h += `<tr><td>${dn(d)}</td>` + ["1", "4"].flatMap(a => val(d, a)).map(v => `<td>${v.toFixed(2)}</td>`).join("") + "</tr>"; });
-    h += `<tr><td class="ci">Paper, Qwen2.5-7B: Geodesic</td><td class="ci">0.69</td><td class="ci">0.65</td><td class="ci">0.58</td><td class="ci" colspan=3>high-deviation pairs, K = 10</td></tr>`;
-    h += `<tr><td class="ci">Paper, Qwen2.5-7B: Euclidean-Linear</td><td class="ci">0.55</td><td class="ci">0.49</td><td class="ci">0.38</td><td class="ci" colspan=3></td></tr>`;
+    const S0 = D.order[0], S1 = D.order[1], LBL = N.strength_label || "α";
+    let h = `<tr><th rowspan=2>Direction</th><th colspan=4>${LBL} = ${S0}${N.strength_label ? "" : " (paper strength)"}</th><th colspan=4>${LBL} = ${S1}</th></tr><tr><th>IC</th><th>IC within q.</th><th>TS</th><th>MA</th><th>IC</th><th>IC within q.</th><th>TS</th><th>MA</th></tr>`;
+    order.forEach(d => { h += `<tr><td>${dn(d)}</td>` + [S0, S1].flatMap(a => val(d, a)).map(v => `<td>${v.toFixed(2)}</td>`).join("") + "</tr>"; });
+    h += `<tr><td class="ci">Paper, Qwen2.5-7B: Geodesic</td><td class="ci">0.69</td><td class="ci">–</td><td class="ci">0.65</td><td class="ci">0.58</td><td class="ci" colspan=4>high-deviation pairs, K = 10</td></tr>`;
+    h += `<tr><td class="ci">Paper, Qwen2.5-7B: Euclidean-Linear</td><td class="ci">0.55</td><td class="ci">–</td><td class="ci">0.49</td><td class="ci">0.38</td><td class="ci" colspan=4></td></tr>`;
     $("tbl3").innerHTML = h;
   }
   function draw() { fig1(); fig2(); fig2b(); fig3(); table(); table3(); }
   function render() {
     const sg = $("strSeg");
-    sg.innerHTML = D.order.map(v => `<button type="button" data-v="${v}" aria-pressed="${v === st.a}">α = ${v}${v === D.order[0] ? " (paper)" : ""}</button>`).join("");
+    sg.innerHTML = D.order.map(v => `<button type="button" data-v="${v}" aria-pressed="${v === st.a}">${N.strength_label || "α"} = ${v}${v === D.order[0] && !N.strength_label ? " (paper)" : ""}</button>`).join("");
     sg.onclick = e => { const b = e.target.closest("button"); if (b) { st.a = b.dataset.v; render(); } };
     ["h1", "c1", "h2", "c2", "h3", "c3"].forEach(k => { const v = (N.by_strength || {})[st.a]; if (v && v[k]) $(k).textContent = v[k]; });
     draw(); drawEx();

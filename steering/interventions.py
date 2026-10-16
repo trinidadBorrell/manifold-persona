@@ -682,3 +682,182 @@ def make_manifold_path_delta_fn(path, alpha: float, dtype=torch.float32,
         raise TypeError("manifold path arm needs a PersonaPath, got %s"
                         % type(path).__name__)
     return _path_delta_fn(path, alpha, dtype, stats)
+
+
+# --------------------------------------------------------------------------
+# ACE -- affine concept editing (Marshall, Scherlis & Belrose, arXiv 2411.09003)
+# --------------------------------------------------------------------------
+
+def ace_delta(h, mu_a, mu_b, alpha):
+    """Eq. 5 of the ACE paper, written as a displacement. numpy, any leading shape.
+
+        h' = h - proj_r(h) + proj_r(mu_A) + alpha r,    r = mu_B - mu_A
+        delta = h' - h = -((h - mu_A) . r_hat) r_hat + alpha r
+
+    `proj_r` is the ORTHOGONAL projection onto r. The paper's reference point
+    r^- is the null-behaviour mean; here that is the source centroid mu_A, so
+    alpha = 0 pins every token's r-coordinate to mu_A's and alpha = 1 to mu_B's,
+    the same endpoints the linear and manifold arms reach at 0 and 1.
+
+    The reference code (extra/steering-llama3, --leace orth) centres on the
+    POOLED mean of both classes instead, so its alpha is this alpha - 0.5.
+    """
+    mu_a = np.asarray(mu_a, dtype=np.float64)
+    r = np.asarray(mu_b, dtype=np.float64) - mu_a
+    r_hat = r / np.linalg.norm(r)
+    coord = (np.asarray(h, dtype=np.float64) - mu_a) @ r_hat
+    return -coord[..., None] * r_hat + float(alpha) * r
+
+
+# --------------------------------------------------------------------------
+# Activation capping as a floor (Assistant Axis paper, sec. 5, eq. 1)
+# --------------------------------------------------------------------------
+#
+#   paper:          h <- h - v * min(<h, v> - tau, 0)      v = Assistant Axis, tau = predetermined cap
+#   linear floor:   the same with v = r_hat = (mu_B - mu_A)/|mu_B - mu_A|
+#   manifold floor: if <h, r_hat> < tau:  h <- h + S(t(tau)) - S(t(<h, r_hat>)),  else h
+#                   t(x) = clip((x - <mu_A, r_hat>)/|mu_B - mu_A|, 0, 1)
+# Both act only on tokens below tau; tokens at or above it pass through.
+
+def _route_t(x, base, length):
+    return np.clip((x - base) / length, 0.0, 1.0)
+
+
+def floor_delta(h, mu_a, mu_b, tau, S_grid=None):
+    """numpy reference. S_grid: (G, d) samples of the route at t = 0..1 (None = linear floor)."""
+    mu_a = np.asarray(mu_a, dtype=np.float64)
+    r = np.asarray(mu_b, dtype=np.float64) - mu_a
+    length = np.linalg.norm(r)
+    r_hat = r / length
+    H = np.asarray(h, dtype=np.float64)
+    x = H @ r_hat
+    below = x < tau
+    if S_grid is None:
+        return np.where(below[..., None], (tau - x)[..., None] * r_hat, 0.0)
+    S = np.asarray(S_grid, dtype=np.float64)
+    G = len(S)
+
+    def at(t):
+        u = np.asarray(t) * (G - 1)
+        i0 = np.clip(np.floor(u).astype(int), 0, G - 2)
+        w = (u - i0)[..., None]
+        return (1 - w) * S[i0] + w * S[i0 + 1]
+
+    base = mu_a @ r_hat
+    d = at(_route_t(np.float64(tau), base, length)) - at(_route_t(x, base, length))
+    return np.where(below[..., None], d, 0.0)
+
+
+def make_floor_delta_fn(mu_a: np.ndarray, mu_b: np.ndarray, tau: float, S_grid: np.ndarray = None,
+                        dtype=torch.float32, stats: "DeltaStats" = None):
+    """Activation capping as a floor, as an additive hook (see the block comment above).
+
+    tau is fixed (a percentile of the target's projections, chosen by the caller). S_grid, when
+    given, is the manifold route sampled on a uniform grid of t in [0, 1]; the shift for a token
+    is interpolated on that grid on the GPU.
+    """
+    mu_a64 = np.asarray(mu_a, dtype=np.float64).reshape(-1)
+    r = np.asarray(mu_b, dtype=np.float64).reshape(-1) - mu_a64
+    length = float(np.linalg.norm(r))
+    if not np.isfinite(r).all() or length == 0.0:
+        raise ValueError("floor needs two distinct finite centroids")
+    r_hat_t = torch.as_tensor(r / length, dtype=torch.float32)
+    base = float(mu_a64 @ (r / length))
+    tau = float(tau)
+    S_t = None if S_grid is None else torch.as_tensor(np.asarray(S_grid, dtype=np.float64), dtype=torch.float32)
+
+    def delta_fn(activations: torch.Tensor, layer_idx: int) -> torch.Tensor:
+        dev = activations.device
+        u = r_hat_t.to(device=dev)
+        x = activations.float() @ u
+        below = (x < tau).unsqueeze(-1)
+        if S_t is None:
+            d = (tau - x).clamp(min=0.0).unsqueeze(-1) * u
+        else:
+            S = S_t.to(device=dev)
+            G = S.shape[0]
+
+            def at(t):
+                uu = t * (G - 1)
+                i0 = uu.floor().long().clamp(0, G - 2)
+                w = (uu - i0.float()).unsqueeze(-1)
+                return (1 - w) * S[i0] + w * S[i0 + 1]
+
+            t_tau = torch.tensor(min(max((tau - base) / length, 0.0), 1.0), device=dev)
+            t_h = ((x - base) / length).clamp(0.0, 1.0)
+            d = torch.where(below, at(t_tau) - at(t_h), torch.zeros((), device=dev))
+        if stats is not None:
+            stats.add_magnitude(d.norm(dim=-1))
+        return d.to(dtype=activations.dtype)
+
+    return delta_fn
+
+
+def subspace_pin_delta(h, U, target):
+    """delta = U U^T (target - h): set h's coordinates in span(U) to target's, keep the rest.
+
+    U is (d, k) with orthonormal columns. With U = r_hat and target = mu_A + alpha r
+    this is exactly `ace_delta`; with U spanning a route's directions and target =
+    S(alpha) it is "ACE manifold". numpy, any leading shape.
+    """
+    U = np.asarray(U, dtype=np.float64)
+    diff = np.asarray(target, dtype=np.float64) - np.asarray(h, dtype=np.float64)
+    return (diff @ U) @ U.T
+
+
+def make_subspace_pin_delta_fn(U: np.ndarray, target: np.ndarray, dtype=torch.float32,
+                               stats: "DeltaStats" = None):
+    """ACE generalised to a k-dim subspace, as an additive hook: h <- h + U U^T (target - h).
+
+    Every token's coordinates in span(U) are set to target's; the orthogonal complement
+    (d - k directions) passes through untouched. float32 for the same reason as ACE.
+    """
+    U = np.asarray(U, dtype=np.float64)
+    if U.ndim != 2 or not np.allclose(U.T @ U, np.eye(U.shape[1]), atol=1e-6):
+        raise ValueError("U must be (d, k) with orthonormal columns")
+    U_t = torch.as_tensor(U, dtype=torch.float32)
+    tc_t = torch.as_tensor(np.asarray(target, dtype=np.float64) @ U, dtype=torch.float32)  # (k,)
+
+    def delta_fn(activations: torch.Tensor, layer_idx: int) -> torch.Tensor:
+        u = U_t.to(device=activations.device)
+        coord = activations.float() @ u                      # (..., k)
+        d = (tc_t.to(device=activations.device) - coord) @ u.T
+        if stats is not None:
+            stats.add_magnitude(d.norm(dim=-1))
+        return d.to(dtype=activations.dtype)
+
+    return delta_fn
+
+
+def make_ace_delta_fn(mu_a: np.ndarray, mu_b: np.ndarray, alpha: float,
+                      dtype=torch.float32, stats: "DeltaStats" = None):
+    """ACE as an additive hook: h <- h + delta(h), every position, full space.
+
+    Unlike the path arms, delta depends on h -- but only along the one
+    direction r = mu_B - mu_A: everything orthogonal to r passes through
+    untouched, and the r-coordinate is set to (mu_A + alpha r)'s. So alpha = 0
+    is NOT a no-op: it removes each token's own spread along r.
+
+    Computed in float32 whatever the model dtype, then cast: the projection
+    subtracts two numbers of size ~||h|| to leave one of size ~||r||, which is
+    where fp16 would lose the digits that matter.
+    """
+    mu_a64 = np.asarray(mu_a, dtype=np.float64).reshape(-1)
+    mu_b64 = np.asarray(mu_b, dtype=np.float64).reshape(-1)
+    r = mu_b64 - mu_a64
+    r_norm = float(np.linalg.norm(r))
+    if not np.isfinite(r).all() or r_norm == 0.0:
+        raise ValueError("ACE needs two distinct finite centroids")
+    r_hat_t = torch.as_tensor(r / r_norm, dtype=torch.float32)
+    # the r-coordinate every token is pinned to, relative to the origin
+    target_coord = float(mu_a64 @ (r / r_norm)) + float(alpha) * r_norm
+
+    def delta_fn(activations: torch.Tensor, layer_idx: int) -> torch.Tensor:
+        u = r_hat_t.to(device=activations.device)
+        coord = activations.float() @ u
+        d = (target_coord - coord)[..., None] * u
+        if stats is not None:
+            stats.add_magnitude(d.norm(dim=-1))
+        return d.to(dtype=activations.dtype)
+
+    return delta_fn

@@ -1,0 +1,157 @@
+<title>What Steering Strength Means</title>
+<meta name="description" content="Qwen3-8B, PersonaManifold-style persona vectors: what steering strength α does in the latent space and in the answers, by layer, route and starting persona.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; sticky controls; each finding = claim, one figure, plain caption. */
+:root {
+  --bg: #f3f5f4; --panel: #ffffff; --ink: #142021; --ink-2: #48585a; --ink-3: #7b8a8c; --rule: #d9e0df; --grid: #e8edec;
+  --accent: #0f7b74; --bad: #c8562a;
+  --r-LIN: #6b7f99; --r-PMG: #c8562a; --r-MAN3: #8fbf9f; --r-MAN4: #4f9f6f; --r-MAN5: #2c6e46; --r-FL: #6a4fb3; --r-FG: #0f7b74; --r-PCA: #9a8c4a; --r-start: #8a8f98;
+  --display: "Spectral", Georgia, serif; --sans: "Public Sans", system-ui, sans-serif; --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #111717; --panel: #182021; --ink: #e7eeed; --ink-2: #aebcbc; --ink-3: #82918f; --rule: #2b3637; --grid: #222c2d; --accent: #3fb3a9; --bad: #ee8a51;
+  --r-LIN: #94a7c2; --r-PMG: #ee8a51; --r-MAN3: #a9d8b8; --r-MAN4: #6fc08e; --r-MAN5: #4a9d6b; --r-FL: #a08ae6; --r-FG: #3fb3a9; --r-PCA: #c9b86a; --r-start: #9aa0a9; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #111717; --panel: #182021; --ink: #e7eeed; --ink-2: #aebcbc; --ink-3: #82918f; --rule: #2b3637; --grid: #222c2d; --accent: #3fb3a9; --bad: #ee8a51;
+  --r-LIN: #94a7c2; --r-PMG: #ee8a51; --r-MAN3: #a9d8b8; --r-MAN4: #6fc08e; --r-MAN5: #4a9d6b; --r-FL: #a08ae6; --r-FG: #3fb3a9; --r-PCA: #c9b86a; --r-start: #9aa0a9; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 16px/1.6 var(--sans); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-inline: 18px; padding-block: 32px 72px; display: grid; gap: 30px; }
+h1, h2 { font-family: var(--display); font-weight: 600; margin: 0; text-wrap: balance; }
+h1 { font-size: 2.1rem; line-height: 1.12; } h2 { font-size: 1.35rem; line-height: 1.25; }
+h3 { margin: 0; font: 600 0.92rem/1.3 var(--sans); }
+p { margin: 0; max-width: 70ch; }
+.lede { color: var(--ink-2); font-size: 1.05rem; }
+.facts { display: flex; flex-wrap: wrap; gap: 4px 18px; font: 0.8rem/1.5 var(--mono); color: var(--ink-2); } .facts b { color: var(--ink); font-weight: 500; }
+section { display: grid; gap: 12px; min-width: 0; }
+.eyebrow { font: 500 0.72rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.claim { font-size: 1.05rem; }
+.figure { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 10px; min-width: 0; }
+.chart { width: 100%; height: 300px; }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 820px) { .grid2 { grid-template-columns: 1fr; } }
+.how { font-size: 0.9rem; color: var(--ink-2); border-left: 2px solid var(--rule); padding-left: 12px; }
+.controls { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; padding-block: 8px; font: 0.78rem var(--mono); color: var(--ink-3); }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--rule); border-radius: 5px; overflow: hidden; }
+.seg button { font: 500 0.8rem/1 var(--sans); background: var(--panel); color: var(--ink-2); border: 0; border-right: 1px solid var(--rule); padding: 7px 10px; cursor: pointer; }
+.seg button:last-child { border-right: 0; } .seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.8rem; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; } .sw { width: 16px; border-top: 3px solid; }
+.tbl { overflow-x: auto; } table { border-collapse: collapse; font: 0.78rem/1.4 var(--mono); font-variant-numeric: tabular-nums; }
+th, td { padding: 4px 9px; border-bottom: 1px solid var(--grid); text-align: right; } th:first-child, td:first-child { text-align: left; } th { color: var(--ink-3); font-weight: 500; }
+details summary { cursor: pointer; font-weight: 500; }
+.err { color: var(--bad); font-family: var(--mono); }
+</style>
+
+<div class="wrap">
+  <header style="display:grid;gap:12px">
+    <span class="eyebrow">Calibration · plan 2026-10-09</span>
+    <h1>What does steering strength α do?</h1>
+    <p class="lede" id="lede"></p>
+    <div class="facts" id="facts"></div>
+  </header>
+  <div class="controls">
+    <span>layer</span><span class="seg" id="segL"></span>
+    <span>read at</span><span class="seg" id="segR"></span>
+    <span>measure</span><span class="seg" id="segM"></span>
+  </div>
+  <div class="legend" id="legend"></div>
+
+  <section><span class="eyebrow">Finding 1 · in the latent space</span><h2 id="h1"></h2><p class="claim" id="c1"></p>
+    <div class="grid2"><div class="figure"><h3>Halfway along the route (s = 0.5)</h3><div class="chart" id="f1a"></div></div>
+      <div class="figure"><h3>At the target (s = 1)</h3><div class="chart" id="f1b"></div></div></div>
+    <p class="how" id="how1"></p></section>
+
+  <section><span class="eyebrow">Finding 2 · in the answers</span><h2 id="h2"></h2><p class="claim" id="c2"></p>
+    <div class="grid2"><div class="figure"><h3>Answers judged as the target persona (s = 1)</h3><div class="chart" id="f2a"></div></div>
+      <div class="figure"><h3>Answers that collapse into repeated text (s = 1)</h3><div class="chart" id="f2b"></div></div></div>
+    <p class="how" id="how2"></p></section>
+
+  <section><span class="eyebrow">Finding 3 · per starting persona</span><h2 id="h3"></h2><p class="claim" id="c3"></p>
+    <div class="figure"><div class="chart" id="f3" style="height:360px"></div></div>
+    <p class="how" id="how3"></p>
+    <details class="figure"><summary>Calibrated α per starting persona and layer</summary><div class="tbl" id="tStar"></div></details></section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.34.0/plotly.min.js"></script>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+window.addEventListener("error", function (e) { var w = document.querySelector(".wrap"), m = document.createElement("p");
+  m.className = "err"; m.textContent = "The charts could not be drawn: " + (e.message || "a script failed to load") + "."; if (w) w.insertBefore(m, w.children[1]); }, true);
+</script>
+<script>
+(function () {
+  if (typeof Plotly === "undefined") throw new Error("the Plotly chart library did not load");
+  const D = JSON.parse(document.getElementById("data").textContent), N = D.notes;
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const esc = t => String(t == null ? "" : t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  ["lede", "h1", "c1", "how1", "h2", "c2", "how2", "h3", "c3", "how3"].forEach(k => document.getElementById(k).textContent = N[k] || "");
+  document.getElementById("facts").innerHTML = D.facts.map(([k, v]) => `<span>${esc(k)} <b>${esc(v)}</b></span>`).join("");
+  const RN = { LIN: "Straight line", PMG: "PersonaManifold geodesic", MAN3: "Manifold, 3 personas", MAN4: "Manifold, 4 personas", MAN5: "Manifold, 5 personas",
+    FL: "Fletcher straight line", FG: "Fletcher principal geodesic", start: "Start persona only (s = 0)" };
+  const MN = { frac_B: ["Fraction of the way to B", "0 = no persona, 1 = prompted B"], dist_B_rel: ["Distance to B / distance from no persona to B", "lower = closer to B"],
+    cos_B: ["Cosine similarity to B", "prompted B's state"], cos_dB: ["Cosine of the shift with B's shift", "(h − h0) vs (hB − h0)"] };
+  const st = { L: D.best_layer || D.layers[0], R: "R", M: "frac_B" };
+  function seg(id, items, cur, lab, on) { const e = document.getElementById(id);
+    e.innerHTML = items.map(v => `<button type="button" data-v="${v}" aria-pressed="${String(v) === String(cur)}">${lab(v)}</button>`).join("");
+    e.onclick = ev => { const b = ev.target.closest("button"); if (b) on(b.dataset.v); }; }
+  const base = extra => Object.assign({ paper_bgcolor: "rgba(0,0,0,0)", plot_bgcolor: "rgba(0,0,0,0)", margin: { l: 52, r: 12, t: 6, b: 44 }, showlegend: false,
+    font: { family: css("--sans"), color: css("--ink-2"), size: 11 }, hovermode: "x unified",
+    hoverlabel: { bgcolor: css("--panel"), bordercolor: css("--rule"), font: { color: css("--ink"), family: css("--mono"), size: 11 } } }, extra);
+  const ax = (t, e) => Object.assign({ title: { text: t, font: { size: 11 } }, gridcolor: css("--grid"), linecolor: css("--rule"), zerolinecolor: css("--rule"), tickfont: { family: css("--mono"), size: 10 } }, e || {});
+  const xa = () => ax("Steering strength α", { type: "log", tickvals: D.alphas, ticktext: D.alphas.map(String) });
+  const col = r => css("--r-" + r);
+  function lines(sel, val) {
+    const tr = [];
+    D.routes.concat(["start"]).forEach(r => {
+      const rs = D.curves.filter(c => c.layer === st.L && c.cond === "none" && sel(c, r)).sort((a, b) => a.alpha - b.alpha);
+      if (!rs.length) return;
+      const x = rs.map(c => c.alpha), y = rs.map(c => val(c) ? val(c)[0] : null);
+      tr.push({ x, y, type: "scatter", mode: "lines+markers", name: RN[r], line: { color: col(r), width: r === "FG" ? 3 : 2, dash: r === "start" ? "dot" : "solid" },
+        marker: { size: 6, color: col(r) }, hovertemplate: RN[r] + ": %{y:.2f}<extra></extra>" });
+    });
+    return tr;
+  }
+  function fig1() {
+    const key = st.M + "_" + st.R;
+    [["f1a", 0.5], ["f1b", 1.0]].forEach(([id, s]) => Plotly.react(id,
+      lines((c, r) => r === "start" ? c.route === "start" : (c.route === r && c.s === s), c => c[key]),
+      base({ xaxis: xa(), yaxis: ax(MN[st.M][0], st.M === "frac_B" ? { zeroline: true } : {}),
+        shapes: st.M === "frac_B" ? [{ type: "line", xref: "paper", x0: 0, x1: 1, y0: 1, y1: 1, line: { color: css("--rule"), dash: "dot" } }] : [] }),
+      { responsive: true, displaylogo: false }));
+  }
+  function fig2() {
+    [["f2a", "target", "Target persona (%)"], ["f2b", "collapsed", "Collapsed (%)"]].forEach(([id, k, t]) => Plotly.react(id,
+      lines((c, r) => r === "start" ? c.route === "start" : (c.route === r && c.s === 1.0), c => c[k] ? [100 * c[k][0]] : null),
+      base({ xaxis: xa(), yaxis: ax(t, { range: [-2, 102] }) }), { responsive: true, displaylogo: false }));
+  }
+  function fig3() {
+    const W = D.window.filter(w => w.layer === st.L), S = D.starts.filter(s => W.some(w => w.start === s));
+    const z = S.map(s => D.alphas.map(a => { const w = W.find(w => w.start === s && w.alpha === a); return w ? 100 * w.target : null; }));
+    const txt = S.map(s => D.alphas.map(a => { const w = W.find(w => w.start === s && w.alpha === a);
+      return w ? `${Math.round(100 * w.target)}% target<br>${Math.round(100 * w.collapsed)}% collapsed` : ""; }));
+    const cz = S.map(s => D.alphas.map(a => { const w = W.find(w => w.start === s && w.alpha === a); return w && w.collapsed > 0.2 ? 1 : 0; }));
+    Plotly.react("f3", [{ type: "heatmap", z, x: D.alphas.map(a => "α = " + a), y: S, text: txt, texttemplate: "%{text}", textfont: { size: 10, family: css("--mono") },
+        colorscale: [[0, css("--panel")], [1, css("--accent")]], zmin: 0, zmax: 100, showscale: false, hovertemplate: "%{y}, %{x}<br>%{text}<extra></extra>" },
+      { type: "heatmap", z: cz, x: D.alphas.map(a => "α = " + a), y: S, colorscale: [[0, "rgba(0,0,0,0)"], [1, "rgba(200,86,42,0.28)"]], zmin: 0, zmax: 1, showscale: false, hoverinfo: "skip" }],
+      base({ hovermode: "closest", margin: { l: 110, r: 10, t: 6, b: 40 }, xaxis: ax(""), yaxis: ax("", { autorange: "reversed" }) }), { responsive: true, displaylogo: false });
+    let h = "<table><thead><tr><th>start persona</th>" + D.layers.map(L => `<th>L${L}</th>`).join("") + "</tr></thead><tbody>";
+    D.starts.forEach(s => h += `<tr><td>${esc(s)}</td>` + D.layers.map(L => { const v = D.alpha_star[s + "|L" + L]; return `<td>${v == null ? "none" : v}</td>`; }).join("") + "</tr>");
+    document.getElementById("tStar").innerHTML = h + "</tbody></table>";
+  }
+  function render() {
+    seg("segL", D.layers, st.L, L => "L" + L + (L === D.best_layer ? " (widest window)" : ""), v => { st.L = +v; render(); });
+    seg("segR", ["L", "R"], st.R, v => v === "L" ? "steered layer" : "4 layers later", v => { st.R = v; render(); });
+    seg("segM", Object.keys(MN), st.M, k => MN[k][0], v => { st.M = v; render(); });
+    document.getElementById("legend").innerHTML = D.routes.concat(["start"]).map(r => `<span><span class="sw" style="border-color:${col(r)};border-top-style:${r === "start" ? "dotted" : "solid"}"></span>${RN[r]}</span>`).join("");
+    fig1(); fig2(); fig3();
+  }
+  render();
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+  new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+})();
+</script>

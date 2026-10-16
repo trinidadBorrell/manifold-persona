@@ -21,9 +21,12 @@ from scipy.stats import spearmanr
 from steering.judge_sweep import prompts as P
 from steering.judge_sweep.build import MODELS, PAIRS, PM, ROUTES
 
-JS = PM / "JS"
+import os
+JS = Path(os.environ.get("JSWEEP_DIR", PM / "JS"))       # the clamp copy uses $PM/JSC
 J1_DIRS = {"8b": PM / "J_ST15", "14b": PM / "qwen3_14b" / "J_ST21"}
 JUDGES = ["J1", "J2", "J3", "J4", "J5", "J6", "J7", "J8", "J9", "J10"]
+if os.environ.get("EXPORT_JUDGES"):          # e.g. "J2,J8,J10": only the judges that are complete
+    JUDGES = [j for j in JUDGES if j in os.environ["EXPORT_JUDGES"].split(",")]
 DESC = {"J1": "Original control (existing labels)", **{J: s["desc"] for J, s in P.JUDGES.items()},
         "J10": "Giovanni's ranking judge, exact port (top-1 of 10)"}
 NONE = {"other", "none", "not_stated", "unlisted"}
@@ -208,7 +211,8 @@ def main(argv=None):
     a = load_answers()
     idx = {(m, k): i for i, (m, k) in enumerate(zip(a.model, a.key))}
     allab = pd.read_csv(JS / "labels.csv", low_memory=False)
-    allab = pd.concat([allab, load_j1(a), load_j10()], ignore_index=True)
+    j1 = pd.DataFrame() if (allab.judge == "J1").any() or "J1" not in JUDGES else load_j1(a)      # JSC carries J1 in labels.csv
+    allab = pd.concat([allab, j1, load_j10()], ignore_index=True)
     allab["i"] = [idx.get((m, k)) for m, k in zip(allab.model, allab.key)]
     allab = allab[allab.i.notna()]
     allab["i"] = allab.i.astype(int)

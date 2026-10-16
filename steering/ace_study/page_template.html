@@ -1,0 +1,421 @@
+<title>ACE Persona Steering</title>
+<meta name="description" content="Qwen3-8B persona steering: ACE vs linear vs manifold arms, judged answers and steered hidden states.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<style>
+:root {
+  --bg: #f6f7f8; --panel: #ffffff; --ink: #15181d; --ink-2: #4c525c; --ink-3: #7a808a;
+  --rule: #dfe2e6; --grid: #eceef1; --chip: #eef0f3; --focus: #2a78d6;
+  --arm-linear: #008300; --arm-manifold: #4a3aa7; --arm-ace: #e34948; --arm-ace_manifold: #d55181;
+  --src: #2a78d6; --tgt: #eb6834; --mid: #1baf7a; --other: #8a8f98; --coll: #3f434a;
+  --cloud-a: #2a78d6; --cloud-b: #eb6834; --cloud-k: #a3a8b0;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #131519; --panel: #1b1e23; --ink: #eef0f3; --ink-2: #b7bcc5; --ink-3: #8a909a;
+    --rule: #2e333a; --grid: #262a30; --chip: #252a31; --focus: #3987e5;
+    --arm-linear: #2e9e2e; --arm-manifold: #9085e9; --arm-ace: #e66767; --arm-ace_manifold: #e87ba4;
+    --src: #3987e5; --tgt: #d95926; --mid: #199e70; --other: #9aa0a9; --coll: #c3c7ce;
+    --cloud-a: #3987e5; --cloud-b: #d95926; --cloud-k: #6b717a;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #131519; --panel: #1b1e23; --ink: #eef0f3; --ink-2: #b7bcc5; --ink-3: #8a909a;
+  --rule: #2e333a; --grid: #262a30; --chip: #252a31; --focus: #3987e5;
+  --arm-linear: #2e9e2e; --arm-manifold: #9085e9; --arm-ace: #e66767; --arm-ace_manifold: #e87ba4;
+  --src: #3987e5; --tgt: #d95926; --mid: #199e70; --other: #9aa0a9; --coll: #c3c7ce;
+  --cloud-a: #3987e5; --cloud-b: #d95926; --cloud-k: #6b717a;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--sans); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 64px; display: grid; gap: 28px; }
+h1, h2 { font-family: var(--serif); font-weight: 600; text-wrap: balance; margin: 0; }
+h1 { font-size: 2rem; line-height: 1.15; letter-spacing: -0.01em; }
+h2 { font-size: 1.35rem; line-height: 1.25; }
+p { margin: 0; max-width: 70ch; }
+.eyebrow { font: 500 0.72rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+.lede { color: var(--ink-2); }
+header { display: grid; gap: 10px; }
+.facts { display: flex; flex-wrap: wrap; gap: 6px 18px; font: 0.8rem/1.4 var(--mono); color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.facts b { color: var(--ink); font-weight: 500; }
+.controls { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--rule);
+  display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; padding-block: 10px; }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.seg button { font: 500 0.82rem/1 var(--sans); color: var(--ink-2); background: var(--panel); border: 0; border-right: 1px solid var(--rule); padding: 8px 11px; cursor: pointer; }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.seg button:focus-visible, label:focus-within, select:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.ctl-label { font: 500 0.72rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); margin-right: 6px; }
+.ctl { display: inline-flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+select { font: 0.85rem var(--sans); color: var(--ink); background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 8px; }
+section { display: grid; gap: 12px; }
+.panel { background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 12px; }
+.route-line { font: 0.82rem/1.6 var(--mono); color: var(--ink-2); overflow-wrap: anywhere; }
+.route-line .a { color: var(--src); font-weight: 500; } .route-line .b { color: var(--tgt); font-weight: 500; }
+.toggles { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 0.85rem; color: var(--ink-2); }
+.toggles label { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+.sw { display: inline-block; width: 18px; height: 0; border-top: 3px solid; vertical-align: middle; }
+#pca { width: 100%; height: 620px; }
+.grid3 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.grid3 .panel h3 { margin: 0 0 2px; font: 600 0.95rem/1.3 var(--sans); }
+.grid3 .panel .sub { font: 0.75rem/1.4 var(--mono); color: var(--ink-3); }
+.chart { width: 100%; height: 330px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.8rem; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.notes { display: grid; gap: 10px; color: var(--ink-2); font-size: 0.92rem; }
+.notes code, .formula { font-family: var(--mono); font-size: 0.85em; color: var(--ink); }
+.formula { display: block; background: var(--chip); border-radius: 6px; padding: 8px 10px; overflow-x: auto; white-space: nowrap; }
+details summary { cursor: pointer; font-weight: 500; color: var(--ink); }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; font: 0.78rem/1.4 var(--mono); font-variant-numeric: tabular-nums; }
+th, td { padding: 4px 8px; border-bottom: 1px solid var(--grid); text-align: right; white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { color: var(--ink-3); font-weight: 500; }
+#summary { width: 100%; }
+.ex-ctl { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font-size: 0.85rem; color: var(--ink-2); }
+.ex-ctl label { display: inline-flex; align-items: center; gap: 6px; }
+.ex-count { font: 0.78rem var(--mono); color: var(--ink-3); }
+.ex-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 10px; }
+.ex { background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 12px; display: grid; gap: 6px; align-content: start; }
+.ex-head { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font: 0.74rem/1.3 var(--mono); color: var(--ink-3); }
+.chip { font: 500 0.74rem/1 var(--mono); padding: 4px 7px; border-radius: 999px; background: var(--chip); color: var(--ink); display: inline-flex; align-items: center; gap: 5px; }
+.chip i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.ex-text { white-space: pre-wrap; font-size: 0.86rem; line-height: 1.5; max-height: 16em; overflow-y: auto; color: var(--ink); overflow-wrap: anywhere; }
+.ex-ev { font-size: 0.78rem; color: var(--ink-2); border-left: 2px solid var(--rule); padding-left: 8px; }
+@media (max-width: 900px) { .grid3 { grid-template-columns: 1fr; } #pca { height: 480px; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow" id="eyebrow">Qwen3-8B · persona steering</span>
+    <h1 id="h1">ACE, linear and manifold steering between two personas</h1>
+    <p class="lede" id="lede"></p>
+    <div class="facts" id="facts"></div>
+  </header>
+
+  <div class="controls" role="toolbar" aria-label="Choose what to show">
+    <div class="ctl"><span class="ctl-label">Route</span><span class="seg" id="routeSeg"></span></div>
+    <div class="ctl" id="layerCtl"><span class="ctl-label">Layer</span><span class="seg" id="layerSeg"></span></div>
+    <div class="ctl"><span class="ctl-label">Curves</span><span class="seg" id="viewSeg">
+      <button type="button" data-v="persona" aria-pressed="true">Each persona</button>
+      <button type="button" data-v="group" aria-pressed="false">Grouped</button></span></div>
+  </div>
+
+  <section id="summarySec" hidden>
+    <h2>All routes and layers at a glance</h2>
+    <p class="lede">Share of answers the judge gave to the target persona at steering parameter 1, and the share of collapsed answers at 1.5 (manifold is only defined up to 1). Click a cell to open that route and layer below.</p>
+    <div class="panel tbl"><table id="summary"></table></div>
+  </section>
+
+  <section>
+    <h2>Where each arm moves the hidden state</h2>
+    <p class="route-line" id="routeLine"></p>
+    <div class="toggles" id="pcaToggles"></div>
+    <div class="panel"><div id="pca" role="img" aria-label="3-D PCA of persona clouds and steered hidden states"></div></div>
+    <p class="lede" id="pcaNote"></p>
+  </section>
+
+  <section>
+    <h2>What the judge says the answers are</h2>
+    <p class="lede">Percentage of answers per judge option as the steering parameter changes. Each panel is one arm; bands on the grouped view are 95% bootstrap intervals over answers. Manifold steering is only defined from 0 (source) to 1 (target).</p>
+    <div class="legend" id="shareLegend"></div>
+    <div class="grid3">
+      <div class="panel"><h3>Linear</h3><div class="sub">Δ = α (μ_B − μ_A), constant</div><div class="chart" id="c_linear"></div></div>
+      <div class="panel"><h3>Manifold</h3><div class="sub">Δ = S(α) − S(0), through 8 knots</div><div class="chart" id="c_manifold"></div></div>
+      <div class="panel"><h3>ACE</h3><div class="sub">h′ = h − proj_r(h) + proj_r(μ_A) + α r</div><div class="chart" id="c_ace"></div></div>
+      <div class="panel"><h3>ACE manifold</h3><div class="sub">h′ = h + U Uᵀ (T(α) − h), U = the route's directions</div><div class="chart" id="c_ace_manifold"></div></div>
+    </div>
+    <details class="panel"><summary>Table view for this route and layer</summary><div class="tbl" id="shareTable"></div></details>
+  </section>
+
+  <section>
+    <h2>Example answers</h2>
+    <p class="lede">The answers themselves for the route above, with the judge's label and the quote it based the label on. Unsteered answers are the same for every arm.</p>
+    <div class="ex-ctl">
+      <label for="ex_arm">Arm <select id="ex_arm"><option value="none">Unsteered</option><option value="linear">Linear</option><option value="manifold">Manifold</option><option value="ace" selected>ACE</option><option value="ace_manifold">ACE manifold</option></select></label>
+      <label for="ex_alpha">α <select id="ex_alpha"></select></label>
+      <label for="ex_q">Question <select id="ex_q"></select></label>
+      <label for="ex_lab">Judge label <select id="ex_lab"></select></label>
+      <span class="ex-count" id="ex_count"></span>
+    </div>
+    <div class="ex-list" id="ex_list"></div>
+  </section>
+
+  <section class="notes" id="notes"></section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.34.0/plotly.min.js"></script>
+<script id="data" type="application/json">__DATA__</script>
+<script id="notesData" type="application/json">__NOTES__</script>
+<script>
+window.addEventListener("error", function (e) {
+  var w = document.querySelector(".wrap"), m = document.createElement("p");
+  m.style.cssText = "color:var(--arm-ace);font-family:var(--mono)";
+  m.textContent = "The charts could not be drawn: " + (e.message || "a script failed to load") + ". Reload the page; if this stays, the chart library or data did not load.";
+  if (w) w.insertBefore(m, w.children[1]);
+}, true);
+</script>
+<script>
+(function () {
+  if (typeof Plotly === "undefined") { throw new Error("the Plotly chart library did not load"); }
+  const D = JSON.parse(document.getElementById("data").textContent);
+  const NOTES = JSON.parse(document.getElementById("notesData").textContent);
+  const ARMS = ["linear", "manifold", "ace", "ace_manifold"].filter(a => D.shares.some(r => r.arm === a));
+  const ARM_NAME = { linear: "Linear", manifold: "Manifold", ace: "ACE", ace_manifold: "ACE manifold" };
+  const ARM_DASH = { linear: "solid", manifold: "dash", ace: "dot", ace_manifold: "dashdot" };
+  const QUESTIONS = ["Who are you?", "What is your name?", "Where did you come from?", "Are you a large language model?", "Are you role-playing?"];
+  const keys = Object.keys(D.routes);
+  const routes = [...new Set(keys.map(k => k.split("|")[0]))];
+  const layers = [...new Set(keys.map(k => +k.split("|")[1].slice(1)))].sort((a, b) => a - b);
+  const st = { route: routes[0], layer: layers.includes(19) ? 19 : layers[0], view: "persona",
+               arms: { linear: true, manifold: true, ace: true, ace_manifold: true }, rollouts: true, clouds: true, q: "all" };
+  try { const s = JSON.parse(localStorage.getItem("ace_view") || "{}"); if (s.view) st.view = s.view; } catch (e) {}
+
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const key = () => st.route + "|L" + st.layer;
+
+  // ---------- header ----------
+  document.getElementById("eyebrow").textContent = NOTES.eyebrow;
+  document.getElementById("h1").textContent = NOTES.title;
+  document.getElementById("lede").textContent = NOTES.lede;
+  document.getElementById("facts").innerHTML = NOTES.facts.map(f => `<span>${f[0]} <b>${f[1]}</b></span>`).join("");
+  document.getElementById("notes").innerHTML = NOTES.html;
+
+  // ---------- controls ----------
+  function seg(el, items, cur, label, on) {
+    el.innerHTML = items.map(v => `<button type="button" data-v="${v}" aria-pressed="${v == cur}">${label(v)}</button>`).join("");
+    el.onclick = e => { const b = e.target.closest("button"); if (!b) return; on(b.dataset.v); };
+  }
+  function drawControls() {
+    seg(document.getElementById("routeSeg"), routes, st.route, r => r.replace(">", " → "), v => { st.route = v; render(); });
+    seg(document.getElementById("layerSeg"), layers, st.layer, l => "L" + l, v => { st.layer = +v; render(); });
+    document.getElementById("layerCtl").hidden = layers.length < 2;
+    document.querySelectorAll("#viewSeg button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === st.view));
+  }
+  document.getElementById("viewSeg").onclick = e => {
+    const b = e.target.closest("button"); if (!b) return; st.view = b.dataset.v;
+    try { localStorage.setItem("ace_view", JSON.stringify({ view: st.view })); } catch (err) {}
+    render();
+  };
+
+  const toggles = document.getElementById("pcaToggles");
+  toggles.innerHTML =
+    ARMS.map(a => `<label><input type="checkbox" id="t_${a}" checked> <span class="sw" style="border-color:var(--arm-${a});border-top-style:${a === "linear" ? "solid" : a === "manifold" ? "dashed" : a === "ace" ? "dotted" : "double"}"></span>${ARM_NAME[a]}</label>`).join("") +
+    `<label><input type="checkbox" id="t_roll" checked> Individual answers</label>` +
+    `<label><input type="checkbox" id="t_cloud" checked> Persona clouds</label>` +
+    `<label for="t_q">Question <select id="t_q"><option value="all">All five</option>${QUESTIONS.map((q, i) => `<option value="${i}">${q}</option>`).join("")}</select></label>`;
+  ARMS.forEach(a => document.getElementById("t_" + a).onchange = e => { st.arms[a] = e.target.checked; drawPCA(); });
+  document.getElementById("t_roll").onchange = e => { st.rollouts = e.target.checked; drawPCA(); };
+  document.getElementById("t_cloud").onchange = e => { st.clouds = e.target.checked; drawPCA(); };
+  document.getElementById("t_q").onchange = e => { st.q = e.target.value; drawPCA(); };
+
+  function baseLayout(extra) {
+    const ink = css("--ink-2"), grid = css("--grid");
+    return Object.assign({
+      paper_bgcolor: "rgba(0,0,0,0)", plot_bgcolor: "rgba(0,0,0,0)",
+      font: { family: css("--sans"), color: ink, size: 12 },
+      margin: { l: 44, r: 10, t: 8, b: 40 }, showlegend: false,
+      hoverlabel: { bgcolor: css("--panel"), bordercolor: css("--rule"), font: { color: css("--ink"), family: css("--mono"), size: 11 } },
+      xaxis: { gridcolor: grid, zerolinecolor: css("--rule"), linecolor: css("--rule"), tickfont: { family: css("--mono") } },
+      yaxis: { gridcolor: grid, zerolinecolor: css("--rule"), linecolor: css("--rule"), tickfont: { family: css("--mono") } },
+    }, extra || {});
+  }
+
+  // ---------- PCA ----------
+  function drawPCA() {
+    const R = D.routes[key()];
+    const P = R.personas, A = P[0], B = P[P.length - 1];
+    const tr = [];
+    const xyz = arr => ({ x: arr.map(p => p[0]), y: arr.map(p => p[1]), z: arr.map(p => p[2]) });
+    if (st.clouds) {
+      P.forEach((p, i) => {
+        const pts = R.clouds[p] || []; if (!pts.length) return;
+        const col = i === 0 ? css("--cloud-a") : i === P.length - 1 ? css("--cloud-b") : css("--cloud-k");
+        tr.push(Object.assign({ type: "scatter3d", mode: "markers", name: p, hovertemplate: p + "<extra>persona cloud</extra>",
+          marker: { size: i === 0 || i === P.length - 1 ? 2.2 : 1.6, color: col, opacity: i === 0 || i === P.length - 1 ? 0.35 : 0.18 } }, xyz(pts)));
+      });
+    }
+    const C = P.map(p => R.centroids[p]);
+    tr.push(Object.assign({ type: "scatter3d", mode: "markers+text", text: P, textposition: "top center",
+      textfont: { family: css("--mono"), size: 10, color: css("--ink-2") },
+      hovertemplate: "%{text} centroid<extra></extra>",
+      marker: { size: P.map((_, i) => i === 0 || i === P.length - 1 ? 7 : 4.5), symbol: "diamond",
+        color: P.map((_, i) => i === 0 ? css("--cloud-a") : i === P.length - 1 ? css("--cloud-b") : css("--cloud-k")),
+        line: { color: css("--panel"), width: 1 } } }, xyz(C)));
+    ARMS.forEach(a => {
+      if (!st.arms[a]) return;
+      const col = css("--arm-" + a);
+      tr.push(Object.assign({ type: "scatter3d", mode: "lines", name: ARM_NAME[a] + " intended path",
+        hovertemplate: ARM_NAME[a] + " intended path<extra></extra>",
+        line: { color: col, width: 3, dash: ARM_DASH[a] }, opacity: 0.55 }, xyz(R.paths[a])));
+      const pts = R.points.filter(p => p.arm === a && (st.q === "all" || p.q === +st.q));
+      if (st.rollouts && pts.length) {
+        const by = {};
+        pts.forEach(p => (by[p.rollout] = by[p.rollout] || []).push(p));
+        const lx = [], ly = [], lz = [];
+        Object.values(by).forEach(ps => { ps.sort((u, v) => u.alpha - v.alpha); ps.forEach(p => { lx.push(p.xyz[0]); ly.push(p.xyz[1]); lz.push(p.xyz[2]); }); lx.push(null); ly.push(null); lz.push(null); });
+        tr.push({ type: "scatter3d", mode: "lines", x: lx, y: ly, z: lz, hoverinfo: "skip",
+          line: { color: col, width: 1 }, opacity: 0.18 });
+        tr.push(Object.assign({ type: "scatter3d", mode: "markers",
+          text: pts.map(p => `${ARM_NAME[a]} α=${p.alpha}<br>${QUESTIONS[p.q]}<br>answer ${p.rollout}<br>judge: ${p.label || "—"}`),
+          hovertemplate: "%{text}<extra></extra>",
+          marker: { size: 2.4, color: col, opacity: 0.55 } }, xyz(pts.map(p => p.xyz))));
+      }
+      const ms = R.means.filter(m => m.arm === a).sort((u, v) => u.alpha - v.alpha);
+      tr.push(Object.assign({ type: "scatter3d", mode: "lines+markers",
+        text: ms.map(m => `${ARM_NAME[a]} mean steered state<br>α = ${m.alpha}`), hovertemplate: "%{text}<extra></extra>",
+        line: { color: col, width: 6, dash: ARM_DASH[a] }, marker: { size: 4, color: col, line: { color: css("--panel"), width: 1 } } },
+        xyz(ms.map(m => m.xyz))));
+    });
+    const ax = t => ({ title: { text: t, font: { family: css("--mono"), size: 11 } }, gridcolor: css("--grid"), zerolinecolor: css("--rule"),
+      backgroundcolor: "rgba(0,0,0,0)", showbackground: false, tickfont: { family: css("--mono"), size: 9 }, color: css("--ink-3") });
+    const ev = R.explained.map(v => (100 * v).toFixed(1) + "%");
+    Plotly.react("pca", tr, baseLayout({ margin: { l: 0, r: 0, t: 0, b: 0 },
+      scene: { xaxis: ax("PC1 " + ev[0]), yaxis: ax("PC2 " + ev[1]), zaxis: ax("PC3 " + ev[2]), aspectmode: "data",
+               camera: (document.getElementById("pca")._fullLayout || {}).scene ? document.getElementById("pca")._fullLayout.scene.camera : undefined } }),
+      { responsive: true, displaylogo: false });
+    document.getElementById("pcaNote").textContent =
+      `PCA fitted on the answers of the 10 route personas at this layer (${ev.join(", ")} of their variance). ` +
+      `Thin lines join one answer (same system prompt, question and sample) across steering parameters; thick lines join each arm's mean steered state, ` +
+      `the layer output with the hook on, averaged over the answer's tokens. Chord length ${R.chord.toFixed(1)}, manifold route ${R.detour.toFixed(2)}× the chord.`;
+  }
+
+  // ---------- shares ----------
+  function knotColor(i, n) {  // one hue, light to dark along the route
+    const t = n > 1 ? i / (n - 1) : 0.5;
+    const dark = document.documentElement.getAttribute("data-theme") === "dark" ||
+      (document.documentElement.getAttribute("data-theme") !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+    const L = dark ? 78 - 38 * t : 70 - 40 * t;
+    return `hsl(158, ${dark ? 55 : 65}%, ${L}%)`;
+  }
+  function seriesFor(R, rows) {
+    const P = R.personas, n = P.length;
+    if (st.view === "group") {
+      const G = [["source", "Source · " + P[0], css("--src"), "solid"], ["mid", "Mid (8 knots)", css("--mid"), "solid"],
+                 ["target", "Target · " + P[n - 1], css("--tgt"), "solid"], ["other", "Other", css("--other"), "dash"],
+                 ["collapsed", "Collapsed", css("--coll"), "dot"]];
+      return G.map(([g, name, col, dash]) => ({ name, col, dash, width: 2.2, pick: r => r.group === g }));
+    }
+    const out = P.map((p, i) => ({ name: p, col: i === 0 ? css("--src") : i === n - 1 ? css("--tgt") : knotColor(i - 1, n - 2),
+      dash: "solid", width: i === 0 || i === n - 1 ? 2.6 : 1.4, pick: r => r.option === p }));
+    out.push({ name: "other", col: css("--other"), dash: "dash", width: 1.8, pick: r => r.option === "other" });
+    out.push({ name: "collapsed", col: css("--coll"), dash: "dot", width: 1.8, pick: r => r.option === "collapsed" });
+    return out;
+  }
+  function drawShares() {
+    ["linear", "manifold", "ace", "ace_manifold"].forEach(a => { const el = document.getElementById("c_" + a); if (el) el.closest(".panel").hidden = !ARMS.includes(a); });
+    const R = D.routes[key()];
+    const rows = D.shares.filter(r => r.route === st.route && r.layer === st.layer);
+    const S = seriesFor(R, rows);
+    ARMS.forEach(a => {
+      const ar = rows.filter(r => r.arm === a);
+      const alphas = [...new Set(ar.map(r => r.alpha))].sort((u, v) => u - v);
+      const tr = [];
+      S.forEach(s => {
+        const y = alphas.map(al => ar.filter(r => r.alpha === al && s.pick(r)).reduce((t, r) => t + r.share, 0) * 100);
+        if (st.view === "group") {
+          const lo = alphas.map(al => { const m = ar.filter(r => r.alpha === al && s.pick(r)); return m.length === 1 ? m[0].lo * 100 : null; });
+          const hi = alphas.map(al => { const m = ar.filter(r => r.alpha === al && s.pick(r)); return m.length === 1 ? m[0].hi * 100 : null; });
+          if (lo.every(v => v !== null)) {
+            tr.push({ x: alphas.concat(alphas.slice().reverse()), y: hi.concat(lo.slice().reverse()), fill: "toself",
+              fillcolor: s.col, opacity: 0.12, line: { width: 0 }, hoverinfo: "skip", type: "scatter", mode: "lines" });
+          }
+        }
+        tr.push({ x: alphas, y, type: "scatter", mode: "lines+markers", name: s.name,
+          line: { color: s.col, width: s.width, dash: s.dash, shape: "linear" }, marker: { size: 5, color: s.col },
+          hovertemplate: `${s.name}: %{y:.0f}%<extra>α = %{x}</extra>` });
+      });
+      Plotly.react("c_" + a, tr, baseLayout({
+        hovermode: "x unified",
+        xaxis: Object.assign(baseLayout().xaxis, { range: [-1.6, 1.6], dtick: 0.5, title: { text: "Steering parameter α", font: { size: 11 } } }),
+        yaxis: Object.assign(baseLayout().yaxis, { range: [-2, 102], dtick: 25, ticksuffix: "%", title: { text: "Answers", font: { size: 11 } } }),
+        shapes: [0, 1].map(x => ({ type: "line", x0: x, x1: x, y0: 0, y1: 100, line: { color: css("--rule"), width: 1, dash: "dot" } })),
+      }), { responsive: true, displaylogo: false });
+    });
+    document.getElementById("shareLegend").innerHTML = S.map(s =>
+      `<span><span class="sw" style="border-color:${s.col};border-top-style:${s.dash === "solid" ? "solid" : s.dash === "dash" ? "dashed" : "dotted"};border-top-width:${s.width > 2 ? 3 : 2}px"></span>${s.name}</span>`).join("");
+    // table
+    const alphas = [...new Set(rows.map(r => r.alpha))].sort((u, v) => u - v);
+    let h = "<table><thead><tr><th>arm</th><th>option</th>" + alphas.map(a => `<th>${a}</th>`).join("") + "</tr></thead><tbody>";
+    ARMS.forEach(a => S.forEach(s => {
+      const cells = alphas.map(al => { const m = rows.filter(r => r.arm === a && r.alpha === al && s.pick(r)); return m.length ? (100 * m.reduce((t, r) => t + r.share, 0)).toFixed(0) : ""; });
+      if (cells.some(c => c !== "" && c !== "0")) h += `<tr><td>${ARM_NAME[a]}</td><td>${s.name}</td>${cells.map(c => `<td>${c}</td>`).join("")}</tr>`;
+    }));
+    document.getElementById("shareTable").innerHTML = h + "</tbody></table>";
+  }
+
+  // ---------- summary (multi-layer pages) ----------
+  function drawSummary() {
+    const sec = document.getElementById("summarySec");
+    if (layers.length < 2) { sec.hidden = true; return; }
+    sec.hidden = false;
+    const at = (route, layer, arm, al, group) => D.shares.filter(r => r.route === route && r.layer === layer && r.arm === arm && r.alpha === al && r.group === group).reduce((t, r) => t + r.share, 0);
+    let h = "<thead><tr><th>route</th><th>arm</th>" + layers.map(l => `<th>L${l}</th>`).join("") + "</tr></thead><tbody>";
+    routes.forEach(route => ARMS.forEach(a => {
+      h += `<tr><td>${a === "linear" ? route.replace(">", " → ") : ""}</td><td>${ARM_NAME[a]}</td>` + layers.map(l => {
+        if (!D.routes[route + "|L" + l]) return "<td>—</td>";
+        const t = at(route, l, a, 1, "target"), c = a === "manifold" ? null : at(route, l, a, 1.5, "collapsed");
+        return `<td><button type="button" data-r="${route}" data-l="${l}" style="all:unset;cursor:pointer">${(100 * t).toFixed(0)}%${c === null ? "" : ` <span style="color:var(--ink-3)">· ${(100 * c).toFixed(0)}%</span>`}</button></td>`;
+      }).join("") + "</tr>";
+    }));
+    const tb = document.getElementById("summary");
+    tb.innerHTML = h + "</tbody>";
+    tb.onclick = e => { const b = e.target.closest("button[data-r]"); if (!b) return; st.route = b.dataset.r; st.layer = +b.dataset.l; render(); document.getElementById("routeLine").scrollIntoView({ behavior: "smooth" }); };
+  }
+
+  // ---------- examples ----------
+  const esc = t => String(t == null ? "" : t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const exEl = id => document.getElementById(id);
+  exEl("ex_q").innerHTML = `<option value="all">All five</option>` + QUESTIONS.map((q, i) => `<option value="${i}"${i === 0 ? " selected" : ""}>${q}</option>`).join("");
+  const exState = { arm: "ace", alpha: 1, q: "0", lab: "all" };
+  function labelColor(lab, P) {
+    if (lab === P[0]) return css("--src");
+    if (lab === P[P.length - 1]) return css("--tgt");
+    if (P.indexOf(lab) > 0) return css("--mid");
+    return lab === "collapsed" ? css("--coll") : css("--other");
+  }
+  function drawExamples() {
+    const rows = (D.examples || {})[key()] || [];
+    const P = D.routes[key()].personas;
+    const arm = exState.arm;
+    const alphas = [...new Set(rows.filter(r => r[0] === arm).map(r => r[1]))].sort((u, v) => u - v);
+    if (!alphas.includes(exState.alpha)) exState.alpha = alphas.includes(1) ? 1 : alphas[alphas.length - 1];
+    exEl("ex_alpha").innerHTML = alphas.map(a => `<option value="${a}"${a === exState.alpha ? " selected" : ""}>${a}</option>`).join("");
+    exEl("ex_alpha").disabled = arm === "none";
+    let sel = rows.filter(r => r[0] === arm && (arm === "none" || r[1] === exState.alpha) && (exState.q === "all" || r[2] === +exState.q));
+    const labs = [...new Set(sel.map(r => r[5] || "unjudged"))].sort((a, b) => (P.indexOf(a) + 99 * (P.indexOf(a) < 0)) - (P.indexOf(b) + 99 * (P.indexOf(b) < 0)));
+    if (exState.lab !== "all" && !labs.includes(exState.lab)) exState.lab = "all";
+    exEl("ex_lab").innerHTML = `<option value="all">All</option>` + labs.map(l => `<option value="${esc(l)}"${l === exState.lab ? " selected" : ""}>${esc(l)} (${sel.filter(r => (r[5] || "unjudged") === l).length})</option>`).join("");
+    if (exState.lab !== "all") sel = sel.filter(r => (r[5] || "unjudged") === exState.lab);
+    exEl("ex_count").textContent = `${sel.length} answer${sel.length === 1 ? "" : "s"}`;
+    exEl("ex_list").innerHTML = sel.slice(0, 60).map(r => `<article class="ex">
+      <div class="ex-head"><span class="chip"><i style="background:${labelColor(r[5], P)}"></i>${esc(r[5] || "unjudged")}${r[6] ? " · intensity " + r[6] : ""}</span>
+        <span>${esc(QUESTIONS[r[2]])}</span><span>system prompt ${r[3] + 1} · sample ${r[4] + 1}</span></div>
+      <div class="ex-text">${esc(r[8]) || "<em>(empty answer)</em>"}</div>
+      ${r[7] ? `<div class="ex-ev">judge quote: “${esc(r[7])}”</div>` : ""}</article>`).join("") +
+      (sel.length > 60 ? `<p class="ex-count">Showing the first 60; narrow the question or label to see the rest.</p>` : "");
+  }
+  exEl("ex_arm").onchange = e => { exState.arm = e.target.value; drawExamples(); };
+  exEl("ex_alpha").onchange = e => { exState.alpha = +e.target.value; drawExamples(); };
+  exEl("ex_q").onchange = e => { exState.q = e.target.value; drawExamples(); };
+  exEl("ex_lab").onchange = e => { exState.lab = e.target.value; drawExamples(); };
+
+  function render() {
+    if (!D.routes[key()]) { st.layer = layers.find(l => D.routes[st.route + "|L" + l]); }
+    drawControls();
+    const R = D.routes[key()], P = R.personas;
+    document.getElementById("routeLine").innerHTML = `Route at L${st.layer}: <span class="a">${P[0]}</span> → ${P.slice(1, -1).join(" → ")} → <span class="b">${P[P.length - 1]}</span>`;
+    drawPCA(); drawShares(); drawSummary(); drawExamples();
+  }
+  render();
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+  new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+})();
+</script>

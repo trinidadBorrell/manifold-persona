@@ -25,10 +25,19 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+import os
+
+for _kv in sys.argv[2:]:          # condor passes PM_MEAS_OUT=... / PM_MEAS_RUNS=... as arguments
+    if _kv.startswith("PM_MEAS_") and "=" in _kv:
+        k, v = _kv.split("=", 1)
+        os.environ[k] = v
+
 PM = Path("/data/project/eeg_foundation/data/manifold_persona/personamanifold")
-OUT = PM / "PM_MEAS"
+# defaults = the addition round (PC, PC4); the clamp round sets PM_MEAS_OUT and PM_MEAS_RUNS="1=<dir>,4=<dir>"
+OUT = Path(os.environ.get("PM_MEAS_OUT", PM / "PM_MEAS"))
 MINILM = PM.parent / "models" / "all-MiniLM-L6-v2"
-RUNS = {"1": PM / "PC", "4": PM / "PC4"}
+RUNS = ({k: Path(v) for k, v in (x.split("=") for x in os.environ["PM_MEAS_RUNS"].split(","))}
+        if os.environ.get("PM_MEAS_RUNS") else {"1": PM / "PC", "4": PM / "PC4"})
 TRAITS = ["openness", "conscientiousness", "extraversion", "agreeableness", "neuroticism"]
 BATCH = 90
 
@@ -121,6 +130,43 @@ def ma():
     print("ma:", meta)
 
 
+def ma_clamp():
+    """MA for the clamp round: each path is the straight line along the axis (PCA component k, or PGA
+    direction k as a tangent direction), from the start's coordinate to start +/- S * step * 2 sigma_k.
+    Measured in the same last-token PCA space and metric graph as ma(); sigma_k = std of the 276 personas'
+    coordinates along that direction there."""
+    from steering.personamanifold import components as C
+    from steering.personamanifold import geometry as G
+    from steering.personamanifold.component_paths import N_COMP, STEPS
+    cells = json.loads((PM / "PC" / "cells.json").read_text())
+    L = cells["layer"]
+    roles, sets, _ = C.persona_sets(PM / "E1", "last", L)
+    res, st = C.analyse(sets["all"], roles)
+    Z, P = st["Z"], st["P"]
+    mg = G.build_graph(Z, G.intrinsic_dim(Z)["d_star"])
+    D = mg.dist[np.triu_indices(len(Z), 1)]
+    r95 = float(np.percentile(D[np.isfinite(D)], 95))
+    rows = []
+    for k in range(N_COMP):
+        for m, e in (("pca", np.eye(Z.shape[1])[k]), ("pga", P["V"][:, k] / np.linalg.norm(P["V"][:, k]))):
+            sig = float((Z @ e).std())
+            for start in cells["starts"]:
+                z0 = Z[roles.index(start)]
+                for S in (1.0, 4.0):
+                    for sign in (-1, 1):
+                        for s in (0.0,) + STEPS:
+                            x = z0 + S * sign * s * 2 * sig * e
+                            dist = np.linalg.norm(Z - x, axis=1)
+                            nb = np.argsort(dist)[:mg.k]
+                            dl = [np.sqrt(max((x - Z[i]) @ mg.G[i] @ (x - Z[i]), 0)) for i in nb]
+                            rows.append(dict(alpha=str(int(S)), start=start, method=m, component=k + 1, sign=sign, step=s,
+                                             x=sign * s, d_g=float(min(dl)), nn=roles[int(nb[int(np.argmin(dl))])],
+                                             d_over_r95=float(min(dl) / r95)))
+    pd.DataFrame(rows).to_csv(OUT / "ma.csv", index=False)
+    (OUT / "ma_meta.json").write_text(json.dumps(dict(layer=L, r95=r95, graph_k=int(mg.k), clamp=True), indent=1))
+    print("ma_clamp rows", len(rows), "r95", r95)
+
+
 BF_SYS = """You rate the personality that a language model's answer expresses, on the Big Five
 (OCEAN) traits, the way the BFI-44 questionnaire defines them. Rate the SPEAKER as the answer shows
 them, from the answer's own words, tone and choices, not from the topic.
@@ -180,4 +226,4 @@ def bigfive_collect():
 
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
-    {"ic": ic, "ma": ma, "bigfive-build": bigfive_build, "bigfive-collect": bigfive_collect}[sys.argv[1]]()
+    {"ic": ic, "ma": ma, "ma-clamp": ma_clamp, "bigfive-build": bigfive_build, "bigfive-collect": bigfive_collect}[sys.argv[1]]()

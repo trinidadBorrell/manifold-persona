@@ -1,0 +1,127 @@
+<title>Steering Paths in 3D</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Qwen2.5-3B, layer-23 steering: 3D PCA of where the answers land as his clamp and our addition push the empty-prompt model towards spy, ghost, vampire, pirate and musician.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one column; controls, one large rotatable 3D plot, the reading notes. Persona hues; line style = method. */
+:root {
+  --bg: #f3f5f4; --panel: #ffffff; --ink: #142021; --ink-2: #48585a; --ink-3: #7b8a8c; --rule: #d9e0df; --grid: #dfe5e4;
+  --spy: #2f6db5; --ghost: #7b5cc4; --vampire: #b5303b; --pirate: #c8822a; --musician: #2e8b57; --def: #142021;
+  --display: "Spectral", Georgia, serif; --sans: "Public Sans", system-ui, sans-serif; --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #111717; --panel: #182021; --ink: #e7eeed; --ink-2: #aebcbc; --ink-3: #82918f; --rule: #2b3637; --grid: #2b3637;
+  --spy: #6ea2e6; --ghost: #a98ef0; --vampire: #ee6b74; --pirate: #f0aa52; --musician: #5cc489; --def: #e7eeed; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #111717; --panel: #182021; --ink: #e7eeed; --ink-2: #aebcbc; --ink-3: #82918f; --rule: #2b3637; --grid: #2b3637;
+  --spy: #6ea2e6; --ghost: #a98ef0; --vampire: #ee6b74; --pirate: #f0aa52; --musician: #5cc489; --def: #e7eeed; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 16px/1.6 var(--sans); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 64px; display: grid; gap: 18px; }
+h1 { font-family: var(--display); font-weight: 600; margin: 0; font-size: 2rem; line-height: 1.15; text-wrap: balance; }
+p { margin: 0; max-width: 72ch; }
+.lede { color: var(--ink-2); }
+.eyebrow { font: 500 0.72rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+.ctl { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; font-size: 0.85rem; color: var(--ink-2); }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--rule); border-radius: 5px; overflow: hidden; }
+.seg button { font: 500 0.8rem/1 var(--sans); background: var(--panel); color: var(--ink-2); border: 0; border-right: 1px solid var(--rule); padding: 7px 11px; cursor: pointer; }
+.seg button:last-child { border-right: 0; } .seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+button:focus-visible { outline: 2px solid var(--spy); outline-offset: 2px; }
+.lab { font: 500 0.72rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+.plotbox { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+#plot { width: 100%; height: min(78vh, 760px); }
+.key { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.85rem; color: var(--ink-2); }
+.key span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 26px; border-top: 3px solid var(--ink-2); }
+.how { font-size: 0.9rem; color: var(--ink-2); border-left: 2px solid var(--rule); padding-left: 12px; }
+.out { font: 0.8rem/1.5 var(--mono); color: var(--ink-3); }
+.err { color: var(--vampire); font-family: var(--mono); }
+</style>
+
+<div class="wrap">
+  <header style="display:grid;gap:10px">
+    <span class="eyebrow">Qwen2.5-3B-Instruct · steering at hidden state 23 · his clamp vs our addition</span>
+    <h1>Where the answers land, from the empty-prompt model to five personas</h1>
+    <p class="lede">Each point is the mean of 10 answers (his 10 questions) from one steering setting, re-read by the unsteered model and averaged over the answer tokens. Lines join the settings of one method, starting from the unsteered answers. Diamonds mark each persona's mean when the model is prompted with it. Drag to rotate, scroll to zoom.</p>
+  </header>
+  <div class="ctl">
+    <span class="lab">layer read</span><span class="seg" id="segL"></span>
+    <span class="lab">methods</span><span class="seg" id="segM"></span>
+    <span class="lab">single answers</span><span class="seg" id="segA"></span>
+  </div>
+  <div class="key">
+    <span><i class="sw" style="border-top-style:solid"></i>his clamp, s = 3 → 4 → 6 → 8</span>
+    <span><i class="sw" style="border-top-style:dashed"></i>ours, α = 4, s = 0.25 → 1</span>
+    <span><i class="sw" style="border-top-style:dotted"></i>ours, α = 1, s = 0.25 → 1</span>
+    <span>◆ persona prompted (his 120 answers)</span><span>● empty prompt</span><span>✕ his prompted ceiling (10 answers)</span>
+  </div>
+  <div class="plotbox"><div id="plot"></div></div>
+  <div class="out" id="var"></div>
+  <p class="how">PCA is fitted per layer on the six prompted means (five personas and the empty prompt) and every setting's mean, so the three axes are the directions in which these points differ most; the share of their variance each axis carries is given above. All steered answers are re-read with the empty system block, while the diamonds come from answers read with their persona's system prompt, so a gap between a curve's end and its diamond is partly that context. Hidden state 23 is the one being steered; the page opens on the last layer (36), where the curves move clearly towards their personas. At layer 23 the steered answers stay about as far from the prompted means as the unsteered ones, because there the system prompt in the diamonds' context still dominates the reading.</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.34.0/plotly.min.js"></script>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function () {
+  if (typeof Plotly === "undefined") { document.getElementById("plot").innerHTML = '<p class="err">The 3D chart library did not load.</p>'; return; }
+  const D = JSON.parse(document.getElementById("data").textContent);
+  const $ = id => document.getElementById(id);
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const st = { L: "36", m: new Set(["clamp", "add4", "add1"]), a: "off" };
+  const METH = [["clamp", "his clamp"], ["add4", "ours α = 4"], ["add1", "ours α = 1"]];
+  function seg(id, items, isOn, on) {
+    $(id).innerHTML = items.map(([v, t]) => `<button type="button" data-v="${v}" aria-pressed="${isOn(v)}">${t}</button>`).join("");
+    $(id).onclick = e => { const b = e.target.closest("button"); if (!b) return; on(b.dataset.v); seg(id, items, isOn, on); draw(); };
+  }
+  seg("segL", D.layers.map(l => [String(l), String(l)]), v => v === st.L, v => st.L = v);
+  seg("segM", METH, v => st.m.has(v), v => st.m.has(v) ? st.m.delete(v) : st.m.add(v));
+  seg("segA", [["off", "hide"], ["on", "show"]], v => v === st.a, v => st.a = v);
+  let camera = null;
+  function draw() {
+    const B = D.by_layer[st.L], tr = [];
+    $("var").textContent = `layer ${st.L}: PC1 ${(100 * B.var[0]).toFixed(0)}%, PC2 ${(100 * B.var[1]).toFixed(0)}%, PC3 ${(100 * B.var[2]).toFixed(0)}% of the variance of the fitted points`;
+    const pt = xyz => ({ x: [xyz[0]], y: [xyz[1]], z: [xyz[2]] });
+    const def = B.refs.default;
+    tr.push({ type: "scatter3d", mode: "markers+text", ...pt(def), text: ["empty prompt (prompted mean)"], textposition: "top center",
+      marker: { size: 7, color: css("--def"), symbol: "circle" }, textfont: { color: css("--ink-2"), size: 11 }, name: "empty prompt", hovertemplate: "empty prompt, prompted mean<extra></extra>" });
+    D.personas.forEach(p => {
+      const col = css("--" + p), cells = B.cells.filter(c => c.persona === p);
+      const start = cells.find(c => c.arm === "none");
+      tr.push({ type: "scatter3d", mode: "markers+text", ...pt(B.refs[p]), text: [p], textposition: "top center", marker: { size: 8, color: col, symbol: "diamond" },
+        textfont: { color: col, size: 12 }, name: p + " prompted", legendgroup: p, hovertemplate: p + " prompted mean<extra></extra>" });
+      const ceil = cells.find(c => c.arm === "prompt");
+      if (ceil) tr.push({ type: "scatter3d", mode: "markers", ...pt(ceil.xyz), marker: { size: 5, color: col, symbol: "x" }, name: p + " ceiling", legendgroup: p, showlegend: false,
+        hovertemplate: p + ": his prompted ceiling, 10 answers<extra></extra>" });
+      const line = (key, sel, dash, label, lab) => {
+        if (!st.m.has(key)) return;
+        const cs = [start, ...cells.filter(sel).sort((a, b) => a.s - b.s)];
+        tr.push({ type: "scatter3d", mode: "lines+markers", x: cs.map(c => c.xyz[0]), y: cs.map(c => c.xyz[1]), z: cs.map(c => c.xyz[2]),
+          line: { color: col, width: dash === "solid" ? 7 : 5, dash }, marker: { size: 3.5, color: col }, name: p + " · " + label, legendgroup: p, showlegend: false,
+          text: cs.map(c => c.arm === "none" ? "unsteered" : lab(c)), hovertemplate: p + " · " + label + " · %{text}<extra></extra>" });
+      };
+      line("clamp", c => c.arm === "clamp", "solid", "his clamp", c => "s = " + c.s);
+      line("add4", c => c.arm === "add" && c.alpha === 4, "dash", "ours α = 4", c => "s = " + c.s);
+      line("add1", c => c.arm === "add" && c.alpha === 1, "dot", "ours α = 1", c => "s = " + c.s);
+      if (st.a === "on") {
+        const A = B.answers[p], keep = A.arm.map((a, i) => (a === "clamp" && st.m.has("clamp")) || (a === "add" && st.m.has(A.alpha[i] === 4 ? "add4" : "add1")) || a === "none");
+        const xs = A.xyz.filter((_, i) => keep[i]);
+        tr.push({ type: "scatter3d", mode: "markers", x: xs.map(v => v[0]), y: xs.map(v => v[1]), z: xs.map(v => v[2]), marker: { size: 2, color: col, opacity: 0.35 },
+          name: p + " answers", legendgroup: p, showlegend: false, hoverinfo: "skip" });
+      }
+    });
+    const ax = t => ({ title: { text: t, font: { size: 11, color: css("--ink-2") } }, gridcolor: css("--grid"), zerolinecolor: css("--rule"), showbackground: false,
+      tickfont: { size: 9, color: css("--ink-3"), family: "JetBrains Mono, monospace" }, color: css("--ink-3") });
+    const lay = { paper_bgcolor: "rgba(0,0,0,0)", margin: { l: 0, r: 0, t: 0, b: 0 }, showlegend: true,
+      legend: { orientation: "h", y: 0.02, font: { size: 11, color: css("--ink-2") }, itemclick: "toggle", itemdoubleclick: "toggleothers" },
+      scene: { xaxis: ax("PC1"), yaxis: ax("PC2"), zaxis: ax("PC3"), aspectmode: "cube", camera: camera || { eye: { x: 1.5, y: 1.4, z: 0.9 } } },
+      hoverlabel: { bgcolor: css("--panel"), bordercolor: css("--rule"), font: { color: css("--ink"), family: "JetBrains Mono, monospace", size: 11 } } };
+    Plotly.react("plot", tr, lay, { responsive: true, displaylogo: false, displayModeBar: false });
+  }
+  draw();
+  $("plot").on("plotly_relayout", e => { if (e["scene.camera"]) camera = e["scene.camera"]; });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", draw);
+})();
+</script>

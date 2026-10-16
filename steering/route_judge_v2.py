@@ -29,7 +29,9 @@ def role_json(role):
 def definition(role: str) -> str:
     """The one-sentence role definition the assistant-axis eval prompt opens with."""
     ep = role_json(role)["eval_prompt"]
-    m = re.search(r"role:\s*\*\*%s\*\*\.\s*(.+?)(?:\n\nPrompt:|Respond with:)" % re.escape(role), ep, re.S)
+    # the eval prompt names multi-word roles with spaces ("coral reef" for coral_reef)
+    name = "(?:%s|%s)" % (re.escape(role), re.escape(role.replace("_", " ")))
+    m = re.search(r"role:\s*\*\*%s\*\*\.\s*(.+?)(?:\n\nPrompt:|Respond with:)" % name, ep, re.S)
     if not m:
         raise ValueError("no definition parsed for %r" % role)
     return " ".join(m.group(1).split())

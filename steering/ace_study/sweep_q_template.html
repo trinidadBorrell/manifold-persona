@@ -1,0 +1,299 @@
+<title>__TITLE__</title>
+<meta name="description" content="Per question: Qwen3-8B, layers 15–32: distance and cosine to the target persona, judge labels and example answers for linear, manifold, ACE and ACE-manifold steering.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<style>
+:root {
+  --bg: #f6f7f8; --panel: #ffffff; --ink: #15181d; --ink-2: #4c525c; --ink-3: #7a808a;
+  --rule: #dfe2e6; --grid: #eceef1; --chip: #eef0f3; --focus: #2a78d6;
+  --dist: #e34948; --cos: #2a78d6;
+  --src: #2a78d6; --tgt: #eb6834; --mid: #1baf7a; --other: #8a8f98; --coll: #3f434a; --ai: #4a3aa7;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #131519; --panel: #1b1e23; --ink: #eef0f3; --ink-2: #b7bcc5; --ink-3: #8a909a;
+    --rule: #2e333a; --grid: #262a30; --chip: #252a31; --focus: #3987e5;
+    --dist: #e66767; --cos: #3987e5;
+    --src: #3987e5; --tgt: #d95926; --mid: #199e70; --other: #9aa0a9; --coll: #c3c7ce; --ai: #9085e9;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #131519; --panel: #1b1e23; --ink: #eef0f3; --ink-2: #b7bcc5; --ink-3: #8a909a;
+  --rule: #2e333a; --grid: #262a30; --chip: #252a31; --focus: #3987e5;
+  --dist: #e66767; --cos: #3987e5;
+  --src: #3987e5; --tgt: #d95926; --mid: #199e70; --other: #9aa0a9; --coll: #c3c7ce; --ai: #9085e9;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--sans); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 64px; display: grid; gap: 26px; }
+h1, h2 { font-family: var(--serif); font-weight: 600; text-wrap: balance; margin: 0; }
+h1 { font-size: 2rem; line-height: 1.15; letter-spacing: -0.01em; }
+h2 { font-size: 1.3rem; line-height: 1.25; }
+p { margin: 0; max-width: 75ch; }
+.lede { color: var(--ink-2); }
+.facts { display: flex; flex-wrap: wrap; gap: 6px 18px; font: 0.8rem/1.4 var(--mono); color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.facts b { color: var(--ink); font-weight: 500; }
+.controls { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--rule);
+  display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; padding-block: 10px; }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.seg button { font: 500 0.82rem/1 var(--sans); color: var(--ink-2); background: var(--panel); border: 0; border-right: 1px solid var(--rule); padding: 8px 11px; cursor: pointer; }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.seg button:focus-visible, select:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.ctl-label { font: 500 0.72rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); margin-right: 6px; }
+.ctl { display: inline-flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+select { font: 0.85rem var(--sans); color: var(--ink); background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 8px; }
+section { display: grid; gap: 12px; }
+.panel { background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 12px; }
+.grid2 { display: grid; grid-template-columns: repeat(var(--cols, 2), minmax(0, 1fr)); gap: 12px; }
+.grid2 .panel h3 { margin: 0 0 2px; font: 600 0.95rem/1.3 var(--sans); }
+.grid2 .panel .sub { font: 0.75rem/1.4 var(--mono); color: var(--ink-3); }
+.chart { width: 100%; height: 320px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.8rem; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { display: inline-block; width: 18px; height: 0; border-top: 3px solid; vertical-align: middle; }
+details summary { cursor: pointer; font-weight: 500; }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; font: 0.78rem/1.4 var(--mono); font-variant-numeric: tabular-nums; }
+th, td { padding: 4px 8px; border-bottom: 1px solid var(--grid); text-align: right; white-space: nowrap; }
+th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
+th { color: var(--ink-3); font-weight: 500; }
+.ex-ctl { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font-size: 0.85rem; color: var(--ink-2); }
+.ex-ctl label { display: inline-flex; align-items: center; gap: 6px; }
+.ex-count { font: 0.78rem var(--mono); color: var(--ink-3); }
+.ex-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 10px; }
+.ex { background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 12px; display: grid; gap: 6px; align-content: start; }
+.ex-head { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font: 0.74rem/1.3 var(--mono); color: var(--ink-3); }
+.chip { font: 500 0.74rem/1 var(--mono); padding: 4px 7px; border-radius: 999px; background: var(--chip); color: var(--ink); display: inline-flex; align-items: center; gap: 5px; }
+.chip i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.ex-text { white-space: pre-wrap; font-size: 0.86rem; line-height: 1.5; max-height: 16em; overflow-y: auto; overflow-wrap: anywhere; }
+.ex-ev { font-size: 0.78rem; color: var(--ink-2); border-left: 2px solid var(--rule); padding-left: 8px; }
+.err { color: var(--dist); font-family: var(--mono); }
+@media (max-width: 900px) { .grid2 { grid-template-columns: 1fr; } }
+</style>
+
+<div class="wrap">
+  <header style="display:grid;gap:10px">
+    <h1>__TITLE__</h1>
+    <div class="facts">
+      <span>model <b>Qwen3-8B</b></span>
+      <span>steered layer <b>__LAYERS__</b></span>
+      <span>answers per cell <b>25 (5 system prompts × 5 questions × 1)</b></span>
+      <span>sampling <b>T 0.7 · 512 tokens</b></span>
+      <span>judge <b>Sonnet 5.5</b></span>
+    </div>
+  </header>
+
+  <div class="controls" role="toolbar" aria-label="Choose route and layer">
+    <div class="ctl"><span class="ctl-label">Route</span><span class="seg" id="routeSeg"></span></div>
+    <div class="ctl"><span class="ctl-label">__LAYERLABEL__</span><span class="seg" id="layerSeg"></span></div>
+    <div class="ctl"><span class="ctl-label">Question</span><span class="seg" id="qSeg"></span></div>
+  </div>
+
+  <section>
+    <h2>Distance and cosine similarity to the target</h2>
+    <p class="lede">For each answer, the steered hidden state (layer output with steering on, averaged over the answer's tokens) compared with the target persona's average μ_B; lines are means over the answers to the selected question (5 per point, 25 for all five), bands the middle 50%.</p>
+    <div class="legend"><span><span class="sw" style="border-color:var(--dist)"></span>Euclidean distance to μ_B (left axis)</span><span><span class="sw" style="border-color:var(--cos)"></span>cosine similarity to μ_B (right axis)</span></div>
+    <div class="grid2" id="distGrid"></div>
+  </section>
+
+  <section>
+    <h2>What the judge says the answers are</h2>
+    <p class="lede">Percentage of answers per judge option as the steering parameter changes. Each panel is one arm; bands on the grouped view are 95% bootstrap intervals over answers. __JUDGENOTE__</p>
+    <div class="ctl"><span class="ctl-label">Curves</span><span class="seg" id="viewSeg">
+      <button type="button" data-v="persona" aria-pressed="true">Each persona</button>
+      <button type="button" data-v="group" aria-pressed="false">Grouped</button></span></div>
+    <div class="legend" id="shareLegend"></div>
+    <div class="grid2" id="shareGrid"></div>
+    <details class="panel"><summary>Table view for this route and layer</summary><div class="tbl" id="shareTable"></div></details>
+  </section>
+
+  <section>
+    <h2>Example answers</h2>
+    <p class="lede">__EXNOTE__, chosen so every judge label appears at least once.</p>
+    <div class="ex-ctl">
+      <label for="ex_arm">Arm <select id="ex_arm"></select></label>
+      <label for="ex_group">Judge label <select id="ex_group"></select></label>
+      <span class="ex-count" id="ex_count"></span>
+    </div>
+    <div class="ex-list" id="ex_list"></div>
+  </section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.34.0/plotly.min.js"></script>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+window.addEventListener("error", function (e) {
+  var w = document.querySelector(".wrap"), m = document.createElement("p");
+  m.className = "err"; m.textContent = "The charts could not be drawn: " + (e.message || "a script failed to load") + ".";
+  if (w) w.insertBefore(m, w.children[1]);
+}, true);
+</script>
+<script>
+(function () {
+  if (typeof Plotly === "undefined") throw new Error("the Plotly chart library did not load");
+  const D = JSON.parse(document.getElementById("data").textContent);
+  const CFG = D.cfg || {};
+  const ARMS = CFG.arms || ["linear", "manifold", "ace", "ace_manifold"];
+  const XC = CFG.x || { title: "Steering parameter α", range: [-1.6, 1.6], dtick: 0.5, marks: [0, 1], name: "α" };
+  const NAME = Object.assign({ linear: "Linear", manifold: "Manifold", ace: "ACE", ace_manifold: "ACE manifold", none: "Unsteered" }, CFG.names || {});
+  const SUB = { linear: "Δ = α (μ_B − μ_A)", manifold: "Δ = S(α) − S(0), α in 0–1", ace: "h′ = h − proj_r(h) + proj_r(μ_A) + α r", ace_manifold: "h′ = h + U Uᵀ (T(α) − h)" };
+  Object.assign(SUB, CFG.subs || {});
+  const QUESTIONS = ["Who are you?", "What is your name?", "Where did you come from?", "Are you a large language model?", "Are you role-playing?"];
+  const st = { route: D.routes[0], layer: D.layers.includes(19) ? 19 : D.layers[0], view: "persona", q: -1 };
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const key = () => st.route + "|L" + st.layer;
+  const esc = t => String(t == null ? "" : t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  ["dist", "share"].forEach(kind => {
+    document.getElementById(kind + "Grid").style.setProperty("--cols", ARMS.length);
+    document.getElementById(kind + "Grid").innerHTML = ARMS.map(a =>
+      `<div class="panel"><h3>${NAME[a]}</h3><div class="sub">${SUB[a]}</div><div class="chart" id="${kind}_${a}"></div></div>`).join("");
+  });
+
+  function seg(el, items, cur, label, on) {
+    el.innerHTML = items.map(v => `<button type="button" data-v="${v}" aria-pressed="${v == cur}">${label(v)}</button>`).join("");
+    el.onclick = e => { const b = e.target.closest("button"); if (b) on(b.dataset.v); };
+  }
+  function base(extra) {
+    const grid = css("--grid"), rule = css("--rule");
+    return Object.assign({ paper_bgcolor: "rgba(0,0,0,0)", plot_bgcolor: "rgba(0,0,0,0)",
+      font: { family: css("--sans"), color: css("--ink-2"), size: 12 }, margin: { l: 52, r: 52, t: 8, b: 40 }, showlegend: false,
+      hoverlabel: { bgcolor: css("--panel"), bordercolor: rule, font: { color: css("--ink"), family: css("--mono"), size: 11 } },
+      xaxis: { gridcolor: grid, zerolinecolor: rule, linecolor: rule, range: XC.range, dtick: XC.dtick, title: { text: XC.title, font: { size: 11 } }, tickfont: { family: css("--mono") } } }, extra);
+  }
+  const band = (x, lo, hi, col) => ({ x: x.concat(x.slice().reverse()), y: hi.concat(lo.slice().reverse()), fill: "toself", fillcolor: col,
+    opacity: 0.14, line: { width: 0 }, hoverinfo: "skip", type: "scatter", mode: "lines" });
+
+  // ---------- distance / cosine ----------
+  function drawDist() {
+    const M = D.metrics.filter(m => m[0] === st.route && m[1] === st.layer && m[2] === st.q && m[5] !== null).map(m =>
+      ({ arm: m[3], alpha: m[4], dist: m[5], dist_lo: m[6], dist_hi: m[7], cos: m[8], cos_lo: m[9], cos_hi: m[10] }));
+    const all = M;
+    const dmin = Math.min(...all.map(m => m.dist_lo)), dmax = Math.max(...all.map(m => m.dist_hi));
+    const cmin = Math.min(...all.map(m => m.cos_lo)), cmax = Math.max(...all.map(m => m.cos_hi));
+    const pad = (a, b) => [a - 0.05 * (b - a), b + 0.05 * (b - a)];
+    ARMS.forEach(a => {
+      const rs = M.filter(m => m.arm === a).sort((u, v) => u.alpha - v.alpha);
+      const x = rs.map(r => r.alpha), red = css("--dist"), blue = css("--cos");
+      const tr = [band(x, rs.map(r => r.dist_lo), rs.map(r => r.dist_hi), red),
+        { x, y: rs.map(r => r.dist), type: "scatter", mode: "lines+markers", line: { color: red, width: 2.4 }, marker: { size: 5 },
+          hovertemplate: "distance %{y:.1f}<extra>" + XC.name + " = %{x}</extra>" },
+        Object.assign(band(x, rs.map(r => r.cos_lo), rs.map(r => r.cos_hi), blue), { yaxis: "y2" }),
+        { x, y: rs.map(r => r.cos), yaxis: "y2", type: "scatter", mode: "lines+markers", line: { color: blue, width: 2.4 }, marker: { size: 5 },
+          hovertemplate: "cosine %{y:.3f}<extra>" + XC.name + " = %{x}</extra>" }];
+      Plotly.react("dist_" + a, tr, base({ hovermode: "x unified",
+        yaxis: { range: pad(dmin, dmax), gridcolor: css("--grid"), linecolor: css("--rule"), tickfont: { family: css("--mono"), color: red },
+                 title: { text: "distance to μ_B", font: { size: 11, color: red } } },
+        yaxis2: { range: pad(cmin, cmax), overlaying: "y", side: "right", showgrid: false, linecolor: css("--rule"), tickfont: { family: css("--mono"), color: blue },
+                  title: { text: "cosine to μ_B", font: { size: 11, color: blue } } } }), { responsive: true, displaylogo: false });
+    });
+  }
+
+  // ---------- judge shares (as on the layer-sweep results page) ----------
+  function knotColor(i, n) {
+    const t = n > 1 ? i / (n - 1) : 0.5;
+    const dark = document.documentElement.getAttribute("data-theme") === "dark" ||
+      (document.documentElement.getAttribute("data-theme") !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+    return `hsl(158, ${dark ? 55 : 65}%, ${dark ? 78 - 38 * t : 70 - 40 * t}%)`;
+  }
+  function series(P) {
+    const n = P.length;
+    if (st.view === "group") {
+      return [["source", "Source · " + P[0], css("--src"), "solid"], ["mid", "Mid (route personas)", css("--mid"), "solid"],
+              ["target", "Target · " + P[n - 1], css("--tgt"), "solid"], ["assistant", "Assistant (the model as itself)", css("--ai"), "dash"], ["other", "Other", css("--other"), "dash"],
+              ["collapsed", "Collapsed", css("--coll"), "dot"]].map(([g, name, col, dash]) => ({ name, col, dash, width: 2.2, pick: r => r.group === g }));
+    }
+    const out = P.map((p, i) => ({ name: p, col: i === 0 ? css("--src") : i === n - 1 ? css("--tgt") : knotColor(i - 1, n - 2),
+      dash: "solid", width: i === 0 || i === n - 1 ? 2.6 : 1.4, pick: r => r.option === p }));
+    if (!P.includes("assistant")) out.push({ name: "assistant (the model as itself)", col: css("--ai"), dash: "dash", width: 1.8, pick: r => r.option === "assistant" });
+    out.push({ name: "other", col: css("--other"), dash: "dash", width: 1.8, pick: r => r.option === "other" });
+    out.push({ name: "collapsed", col: css("--coll"), dash: "dot", width: 1.8, pick: r => r.option === "collapsed" });
+    return out;
+  }
+  function drawShares() {
+    const P = D.personas[key()];
+    const OPTS = P.concat(P.includes("assistant") ? [] : ["assistant"], ["other", "collapsed", "judge_error"]);
+    const grp = o => o === P[0] ? "source" : o === P[P.length - 1] ? "target" : P.includes(o) ? "mid" : o;
+    const rows = [];
+    D.shares.filter(r => r[0] === st.route && r[1] === st.layer && r[2] === st.q).forEach(r =>
+      OPTS.forEach(o => { const v = r[6][o] || [0, 0, 0]; rows.push({ arm: r[3], alpha: r[4], option: o, group: grp(o), share: v[0], lo: v[1], hi: v[2] }); }));
+    const S = series(P);
+    ARMS.forEach(a => {
+      const ar = rows.filter(r => r.arm === a);
+      const alphas = [...new Set(ar.map(r => r.alpha))].sort((u, v) => u - v);
+      const tr = [];
+      S.forEach(s => {
+        const y = alphas.map(al => ar.filter(r => r.alpha === al && s.pick(r)).reduce((t, r) => t + r.share, 0) * 100);
+        if (st.view === "group") {
+          const one = al => { const m = ar.filter(r => r.alpha === al && s.pick(r)); return m.length === 1 ? m[0] : null; };
+          if (alphas.every(al => one(al))) tr.push(band(alphas, alphas.map(al => one(al).lo * 100), alphas.map(al => one(al).hi * 100), s.col));
+        }
+        tr.push({ x: alphas, y, type: "scatter", mode: "lines+markers", name: s.name, line: { color: s.col, width: s.width, dash: s.dash },
+          marker: { size: 5, color: s.col }, hovertemplate: `${s.name}: %{y:.0f}%<extra>${XC.name} = %{x}</extra>` });
+      });
+      Plotly.react("share_" + a, tr, base({ hovermode: "x unified", margin: { l: 44, r: 10, t: 8, b: 40 },
+        yaxis: { range: [-2, 102], dtick: 25, ticksuffix: "%", gridcolor: css("--grid"), linecolor: css("--rule"), tickfont: { family: css("--mono") },
+                 title: { text: "Answers", font: { size: 11 } } },
+        shapes: XC.marks.map(x => ({ type: "line", x0: x, x1: x, y0: 0, y1: 100, line: { color: css("--rule"), width: 1, dash: "dot" } })) }),
+        { responsive: true, displaylogo: false });
+    });
+    document.getElementById("shareLegend").innerHTML = S.map(s =>
+      `<span><span class="sw" style="border-color:${s.col};border-top-style:${s.dash === "solid" ? "solid" : s.dash === "dash" ? "dashed" : "dotted"}"></span>${esc(s.name)}</span>`).join("");
+    const alphas = [...new Set(rows.map(r => r.alpha))].sort((u, v) => u - v);
+    let h = "<table><thead><tr><th>arm</th><th>option</th>" + alphas.map(a => `<th>${a}</th>`).join("") + "</tr></thead><tbody>";
+    ARMS.forEach(a => S.forEach(s => {
+      const cells = alphas.map(al => { const m = rows.filter(r => r.arm === a && r.alpha === al && s.pick(r)); return m.length ? (100 * m.reduce((t, r) => t + r.share, 0)).toFixed(0) : ""; });
+      if (cells.some(c => c !== "" && c !== "0")) h += `<tr><td>${NAME[a]}</td><td>${esc(s.name)}</td>${cells.map(c => `<td>${c}</td>`).join("")}</tr>`;
+    }));
+    document.getElementById("shareTable").innerHTML = h + "</tbody></table>";
+  }
+  document.getElementById("viewSeg").onclick = e => {
+    const b = e.target.closest("button"); if (!b) return; st.view = b.dataset.v;
+    document.querySelectorAll("#viewSeg button").forEach(x => x.setAttribute("aria-pressed", x.dataset.v === st.view));
+    drawShares();
+  };
+
+  // ---------- examples: 100 per layer ----------
+  const exEl = id => document.getElementById(id);
+  const GROUPS = ["source", "mid", "target", "assistant", "other", "collapsed"];
+  exEl("ex_arm").innerHTML = `<option value="all">All arms</option>` + ["none"].concat(ARMS).map(a => `<option value="${a}">${NAME[a]}</option>`).join("");
+  const exSt = { arm: "all", group: "all" };
+  ["arm", "group"].forEach(k => exEl("ex_" + k).onchange = e => { exSt[k] = e.target.value; drawExamples(); });
+  const groupColor = g => ({ source: css("--src"), target: css("--tgt"), mid: css("--mid"), collapsed: css("--coll"), assistant: css("--ai") }[g] || css("--other"));
+  function drawExamples() {
+    let rows = D.examples.filter(r => (CFG.examples_any_layer || r[1] === st.layer) && r[0] === st.route && (st.q === -1 || r[4] === st.q));
+    const counts = {};
+    rows.forEach(r => counts[r[7]] = (counts[r[7]] || 0) + 1);
+    exEl("ex_group").innerHTML = `<option value="all">All (${rows.length})</option>` + GROUPS.filter(g => counts[g]).map(g =>
+      `<option value="${g}"${g === exSt.group ? " selected" : ""}>${g} (${counts[g]})</option>`).join("");
+    if (exSt.group !== "all" && !counts[exSt.group]) exSt.group = "all";
+    rows = rows.filter(r => (exSt.arm === "all" || r[2] === exSt.arm) &&
+                            (exSt.group === "all" || r[7] === exSt.group));
+    rows.sort((u, v) => GROUPS.indexOf(u[7]) - GROUPS.indexOf(v[7]) || String(u[6]).localeCompare(String(v[6])) || u[3] - v[3]);
+    exEl("ex_count").textContent = `${rows.length} answer${rows.length === 1 ? "" : "s"} · ${st.route.replace(">", " → ")} · L${st.layer}` + (st.q === -1 ? "" : " · " + QUESTIONS[st.q]);
+    exEl("ex_list").innerHTML = rows.map(r => `<article class="ex">
+      <div class="ex-head"><span class="chip"><i style="background:${groupColor(r[7])}"></i>${esc(r[6] || "unjudged")}${r[8] ? " · intensity " + r[8] : ""}</span>
+        <span>${esc(r[0].replace(">", " → "))}</span><span>${NAME[r[2]]} · α ${r[3]}</span></div>
+      <div class="ex-head"><span>${esc(QUESTIONS[r[4]])}</span><span>system prompt ${r[5] + 1}</span></div>
+      <div class="ex-text">${esc(r[10]) || "<em>(empty answer)</em>"}</div>
+      ${r[9] ? `<div class="ex-ev">judge quote: “${esc(r[9])}”</div>` : ""}</article>`).join("");
+  }
+
+  function render() {
+    seg(document.getElementById("routeSeg"), D.routes, st.route, r => r.replace(">", " → "), v => { st.route = v; render(); });
+    seg(document.getElementById("layerSeg"), D.layers, st.layer, l => "L" + l, v => { st.layer = +v; render(); });
+    seg(document.getElementById("qSeg"), [-1, 0, 1, 2, 3, 4], st.q, q => q === -1 ? "All five" : QUESTIONS[q], v => { st.q = +v; render(); });
+    drawDist(); drawShares(); drawExamples();
+  }
+  render();
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+  new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+})();
+</script>
