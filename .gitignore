@@ -37,12 +37,12 @@ output/
 
 # Generated exploratory figures (large plotly HTML; regenerable, kept on disk).
 # Note this pattern is one level deep by design: it catches
-# exploratory/<stage>/figures/ and nothing further up.
-exploratory/*/figures/
+# src/<experiment>/figures/ and nothing further up.
+src/*/figures/
 
 # Refactor verification scratch (large; sha.txt + dirnames stay tracked)
-refactors/baselines/*/golden/
-refactors/baselines/*/extra-reference/
+src/role_manifold/refactors/baselines/*/golden/
+src/role_manifold/refactors/baselines/*/extra-reference/
 
 # ---------------------------------------------------------------------------
 # Working notes, not deliverables
@@ -58,9 +58,9 @@ RESEARCH.md
 
 # The per_persona scratch write-ups (ANALYSIS, METRICS, FIGURES, CALIBRATION,
 # ...). The two docs that ARE deliverables — METHODS.md and README.md — live
-# beside the code at exploratory/per_persona/ and are tracked. Whether any of
+# beside the code at src/per_persona_geometry/ and are tracked. Whether any of
 # md/ should join them is still open.
-exploratory/per_persona/md/
+src/per_persona_geometry/md/
 
 # ---------------------------------------------------------------------------
 # Vendored / relocated source repos
@@ -83,3 +83,9 @@ jobs_condor/
 
 
 extra/
+
+# Judge-prompt batches and run outputs written under prompts/ by the September
+# steering judges. Files tracked before this rule (README, verify_steering.py,
+# routes_by_k.json, persona_examples.json) stay tracked.
+prompts/ablation/*/
+prompts/generated/

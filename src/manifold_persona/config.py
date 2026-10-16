@@ -19,10 +19,10 @@ DATA_DIR = REPO_ROOT / "data"
 EMBEDDINGS_DIR = DATA_DIR / "embeddings"                 # persona-vectors study
 ROLE_EMBEDDINGS_DIR = DATA_DIR / "embeddings_roles"      # assistant-axis roles study (prompt tokens)
 RESP_ROLE_EMBEDDINGS_DIR = DATA_DIR / "embeddings_roles_resp"  # roles study, RESPONSE tokens (paper-matched)
-# Per-study figures live at exploratory/<study>/figures/<stamp>/ (see
+# Per-study figures live at src/<study>/figures/<stamp>/ (see
 # manifold_persona.common.FIGURES_DIR). This repo-level default named a path
 # that has never existed and had no importer.
-FIGURES_DIR = REPO_ROOT / "exploratory"
+FIGURES_DIR = REPO_ROOT / "src"
 
 # --- assistant-axis source --------------------------------------------------
 # Roles + extraction questions are VENDORED under refs/assistant-axis/ (see its

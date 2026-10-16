@@ -41,7 +41,7 @@ def cmd_extract(argv) -> None:
 def cmd_explore(argv) -> None:
     _own, rest = _split_passthrough(argv)
     # run_all.py is a script, not a package module; run it by path with argv set.
-    run_all = Path(__file__).resolve().parents[2] / "exploratory" / "assistant_axis" / "run_all.py"
+    run_all = Path(__file__).resolve().parents[2] / "src" / "assistant_axis" / "run_all.py"
     sys.argv = [str(run_all)] + rest
     runpy.run_path(str(run_all), run_name="__main__")
 
@@ -55,11 +55,11 @@ def cmd_manifold(argv) -> None:
     g.add_argument("--local-id", action="store_true", help="local intrinsic dimension (manifold.local_id)")
     args = ap.parse_args(own)
     if args.run:
-        from manifold import run as m
+        from role_manifold import run as m
     elif args.sweep:
-        from manifold import sweep as m
+        from role_manifold import sweep as m
     else:
-        from manifold import local_id as m
+        from role_manifold import local_id as m
     m.main(rest)
 
 

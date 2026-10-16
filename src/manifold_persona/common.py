@@ -25,7 +25,7 @@ from manifold_persona.io import load_layer
 # gave the right answer. After the move to src/, that expression would silently
 # relocate every exploratory figure into the package. .gitignore's
 # `exploratory/*/figures/` rule depends on this location.
-FIGURES_DIR = REPO_ROOT / "exploratory" / "assistant_axis" / "figures"
+FIGURES_DIR = REPO_ROOT / "src" / "assistant_axis" / "figures"
 FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 
 DEFAULT_COLOR = "#111111"     # the neutral Assistant baseline ("default" role)

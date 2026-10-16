@@ -1,0 +1,412 @@
+<title>Judge Sweep: J2, J8, J10</title>
+<meta name="description" content="Three LLM judges (J2, J8, J10) on our four routes (LIN, PMG, MAN4, FL), Qwen3-8B layer 15, S = 4, four far pairs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column, sticky selectors, a 2-column grid of judge panels, then the answer browser. Same tokens as the Steering Stability page. */
+:root {
+  --bg: #f3f5f4; --panel: #ffffff; --ink: #142021; --ink-2: #48585a; --ink-3: #7b8a8c; --rule: #d9e0df; --grid: #e8edec;
+  --accent: #0f7b74; --bad: #c8562a; --start: #5a6f8f; --onroute: #8a6fc9; --asst: #3d8fd1; --none: #505a5c; --faint: #b7c0bf; --ref: #142021;
+  --display: "Spectral", Georgia, serif; --sans: "Public Sans", system-ui, sans-serif; --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #111717; --panel: #182021; --ink: #e7eeed; --ink-2: #aebcbc; --ink-3: #82918f; --rule: #2b3637; --grid: #222c2d;
+  --accent: #3fb3a9; --bad: #ee8a51; --start: #94a7c2; --onroute: #b39cf0; --asst: #6cb4ec; --none: #a5b0b0; --faint: #4c5859; --ref: #e7eeed; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #111717; --panel: #182021; --ink: #e7eeed; --ink-2: #aebcbc; --ink-3: #82918f; --rule: #2b3637; --grid: #222c2d;
+  --accent: #3fb3a9; --bad: #ee8a51; --start: #94a7c2; --onroute: #b39cf0; --asst: #6cb4ec; --none: #a5b0b0; --faint: #4c5859; --ref: #e7eeed; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 16px/1.6 var(--sans); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 18px; padding-block: 32px 72px; display: grid; gap: 28px; }
+h1, h2 { font-family: var(--display); font-weight: 600; margin: 0; text-wrap: balance; }
+h1 { font-size: 2.1rem; line-height: 1.12; } h2 { font-size: 1.35rem; line-height: 1.25; }
+h3 { margin: 0; font: 600 0.92rem/1.3 var(--sans); }
+p { margin: 0; max-width: 72ch; }
+ul { margin: 0; padding-left: 1.2em; max-width: 72ch; display: grid; gap: 4px; }
+#findings { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 28px; }
+#findings .fc { border: 1px solid var(--rule); border-radius: 8px; padding: 12px 16px; background: var(--panel); display: grid; gap: 6px; }
+#findings h3 { margin: 0; font-size: 1rem; }
+#findings ul { max-width: none; }
+@media (max-width: 760px) { #findings { grid-template-columns: 1fr; } }
+.lede { color: var(--ink-2); font-size: 1.05rem; }
+.facts { display: flex; flex-wrap: wrap; gap: 4px 18px; font: 0.8rem/1.5 var(--mono); color: var(--ink-2); } .facts b { color: var(--ink); font-weight: 500; }
+section { display: grid; gap: 12px; min-width: 0; }
+.eyebrow { font: 500 0.72rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.status { font: 0.8rem/1.5 var(--mono); color: var(--bad); border: 1px solid var(--bad); border-radius: 6px; padding: 8px 12px; max-width: 72ch; }
+.figure { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 10px; min-width: 0; display: grid; gap: 4px; }
+.figure .sub { font-size: 0.78rem; color: var(--ink-3); }
+.chart { width: 100%; height: 360px; }
+.panels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 900px) { .panels { grid-template-columns: 1fr; } }
+.how { font-size: 0.9rem; color: var(--ink-2); border-left: 2px solid var(--rule); padding-left: 12px; }
+.controls { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; padding-block: 8px; font: 0.78rem var(--mono); color: var(--ink-3); }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--rule); border-radius: 5px; overflow: hidden; }
+.seg button { font: 500 0.8rem/1 var(--sans); background: var(--panel); color: var(--ink-2); border: 0; border-right: 1px solid var(--rule); padding: 7px 10px; cursor: pointer; }
+.seg button:last-child { border-right: 0; } .seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.seg button:disabled { opacity: 0.4; cursor: default; }
+.seg button:focus-visible, select:focus-visible, .pager button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.key { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.8rem; color: var(--ink-2); }
+.key span { display: inline-flex; align-items: center; gap: 6px; } .sw { width: 16px; border-top: 3px solid; }
+.tbl { overflow-x: auto; } table { border-collapse: collapse; font: 0.78rem/1.4 var(--mono); font-variant-numeric: tabular-nums; }
+th, td { padding: 4px 9px; border-bottom: 1px solid var(--grid); text-align: right; white-space: nowrap; } th:first-child, td:first-child, td.l, th.l { text-align: left; } th { color: var(--ink-3); font-weight: 500; }
+td .ci { color: var(--ink-3); }
+.err { color: var(--bad); font-family: var(--mono); }
+/* answer browser */
+select { font: 0.85rem var(--sans); color: var(--ink); background: var(--panel); border: 1px solid var(--rule); border-radius: 5px; padding: 6px 8px; max-width: 100%; }
+.ctl { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: end; }
+.ctl label { display: grid; gap: 3px; font: 500 0.7rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); min-width: 0; }
+.pager { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font: 0.8rem var(--mono); color: var(--ink-3); }
+.pager button { font: 500 0.8rem/1 var(--sans); background: var(--panel); color: var(--ink); border: 1px solid var(--rule); border-radius: 5px; padding: 7px 12px; cursor: pointer; }
+.pager button:disabled { opacity: 0.4; cursor: default; }
+.list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr)); gap: 10px; }
+.card { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; display: grid; gap: 7px; align-content: start; min-width: 0; }
+.head { display: flex; flex-wrap: wrap; gap: 5px 8px; font: 0.72rem/1.3 var(--mono); color: var(--ink-3); }
+.chip { font: 500 0.72rem/1 var(--mono); padding: 4px 7px; border-radius: 999px; border: 1px solid var(--rule); color: var(--ink-2); }
+.chip.bad { border-color: var(--bad); color: var(--bad); }
+.q { font-weight: 600; font-size: 0.88rem; }
+.text { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.86rem; line-height: 1.5; max-height: 16em; overflow-y: auto; }
+.jt { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; font: 0.74rem/1.4 var(--mono); }
+.jt .jn { color: var(--ink-3); } .jt .sel { color: var(--accent); font-weight: 500; }
+.jt .t { color: var(--accent); } .jt .s { color: var(--start); } .jt .c { color: var(--bad); }
+.ev { font-size: 0.8rem; color: var(--ink-2); border-left: 2px solid var(--rule); padding-left: 8px; display: grid; gap: 3px; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; font: 0.76rem/1.5 var(--mono); color: var(--ink-2); background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 10px; max-height: 30em; overflow-y: auto; margin: 6px 0 0; }
+details > summary { cursor: pointer; font-weight: 500; }
+</style>
+
+<div class="wrap">
+  <header style="display:grid;gap:12px">
+    <span class="eyebrow">Qwen3-8B · layer 15 · S = 4 · 3 judges</span>
+    <h1>LLM Judge Sweep + Route Sweep · J2, J8, J10</h1>
+    <div class="facts" id="facts"></div>
+    <p class="status" id="status" hidden></p>
+  </header>
+
+  <section>
+    <span class="eyebrow">So far</span>
+    <h2>What we see at layer 15, S = 4</h2>
+    <div id="findings"></div>
+  </section>
+
+
+  <div class="controls">
+    <span class="seg" id="segM" hidden></span>
+    <span>pair</span><span class="seg" id="segP"></span>
+    <span>route</span><span class="seg" id="segR"></span>
+    <span class="seg" id="segS" hidden></span>
+    <span>labels</span><span class="seg" id="segV"></span>
+    <span>J10 counts</span><span class="seg" id="segT"></span>
+  </div>
+
+  <section>
+    <span class="eyebrow">Judges side by side</span>
+    <h2 id="panelsTitle">Share of answers per label along the route</h2>
+    <div class="key">
+      <span><i class="sw" style="border-color:var(--start)"></i>start persona</span>
+      <span><i class="sw" style="border-color:var(--onroute)"></i>persona on the route</span>
+      <span><i class="sw" style="border-color:var(--accent)"></i>target persona</span>
+      <span><i class="sw" style="border-color:var(--asst)"></i>assistant</span>
+      <span><i class="sw" style="border-color:var(--bad)"></i>collapsed</span>
+      <span><i class="sw" style="border-color:var(--none)"></i>other / none / not stated</span>
+      <span><i class="sw" style="border-color:var(--faint)"></i>any other label</span>
+    </div>
+    <div class="panels" id="panels"></div>
+  </section>
+
+  <section>
+    <span class="eyebrow">The three judges side by side</span>
+    <h2>J2, J8 and J10 on the same 800 answers</h2>
+    <div class="figure tbl"><table>
+      <tr><th class=l>judge</th><th class=l>what it does</th><th>assistant at s = 0.2</th><th>target at s = 0.6</th><th>target at s = 0.8</th><th>target at s = 1</th><th>collapsed at s = 1</th><th>'other' at s = 0.6</th><th>different labels used</th></tr>
+      <tr><td>J2 · revised control</td><td class=l>one of the pair's 10 personas, 'other' or 'collapsed'</td><td>84%</td><td>12%</td><td>35%</td><td>50%</td><td>24%</td><td>50%</td><td>13</td></tr>
+      <tr><td>J8 · revised control, 275 roles</td><td class=l>J2's prompt, choosing from all 275 roles</td><td>76%</td><td>5%</td><td>27%</td><td>32%</td><td>19%</td><td>7%</td><td>38</td></tr>
+      <tr><td>J10 · Ranking Judge, first choice</td><td class=l>ranks 10 of 276 role names, best first</td><td>74%</td><td>1%</td><td>11%</td><td>29%</td><td>no option</td><td>no option</td><td>79</td></tr>
+      <tr><td>J10 · target in its top 5</td><td class=l>the target among its first 5 names</td><td>–</td><td>8%</td><td>31%</td><td>76%</td><td>31% flagged nonsense</td><td>–</td><td>–</td></tr>
+    </table></div>
+    <p class="how">All four pairs and all four routes together: 160 answers per step. Target = share of answers given the target persona's name.</p>
+  </section>
+
+  <section id="answers">
+    <span class="eyebrow">Answers</span>
+    <h2>Every answer, with every judge's label</h2>
+    <p class="how">Steered answers have an empty system block; at every token the coordinates of h in the span of the route are set to the route point (Giovanni's clamp, several directions). Pick a judge to see its evidence and reasoning and to filter by its label.</p>
+    <div class="ctl">
+      <label for="ab_m">Model<select id="ab_m"></select></label>
+      <label for="ab_p">Start → target<select id="ab_p"></select></label>
+      <label for="ab_r">Route<select id="ab_r"></select></label>
+      <label for="ab_s">Position s<select id="ab_s"></select></label>
+      <label for="ab_j">Judge<select id="ab_j"></select></label>
+      <label for="ab_l">Judged as<select id="ab_l"></select></label>
+      <label for="ab_q">Question<select id="ab_q"></select></label>
+    </div>
+    <details class="figure"><summary id="ab_ps">Prompt of the selected judge</summary><pre id="ab_prompt">Loading…</pre></details>
+    <div class="pager"><button type="button" id="ab_prev">Previous</button><button type="button" id="ab_next">Next</button><span id="ab_count"></span></div>
+    <div class="list" id="ab_list"></div>
+  </section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.34.0/plotly.min.js"></script>
+<script>
+(() => {
+  const KEYS = ["L15_S1", "L15_S4", "L23_S1", "L23_S4"], h0 = (location.hash || "").slice(1), KS = "L15_S4", DATA = "data_" + KS + "/";
+  const LAYER = KS.slice(1, 3), SNUM = KS.slice(-1);
+  const $ = id => document.getElementById(id);
+  const el = (t, c, x) => { const e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; };
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const MODELS = { "8b": "Qwen3-8B · L" + LAYER };
+  const ROUTES = ["LIN", "PMG", "MAN4", "FL"];
+  const XS = [0, 0.2, 0.4, 0.6, 0.8, 1];
+  const XA = -0.17, XB = 1.17;
+  const NONE = new Set(["other", "none", "not_stated"]);
+  const COLL = new Set(["collapsed", "non_sensical", "nonsensical"]);
+  const SPECIAL = new Set([...NONE, ...COLL, "mixed", "assistant", "nonhuman_role", "human_role", "weird_role", "ambiguous"]);
+  const ROLE_ORDER = ["start", "on route", "target", "assistant", "other persona", "other", "none", "not_stated", "mixed", "collapsed", "non_sensical"];
+  let D, st = { m: "8b", p: "*", r: "*", v: "raw", t: "top1" };
+  const pct = x => x == null ? "–" : (100 * x).toFixed(1) + "%";
+  const num = x => x == null ? "–" : x.toFixed(2);
+
+  function seg(id, opts, key, after) {
+    const box = $(id);
+    box.replaceChildren(...opts.map(([v, t]) => { const b = el("button", null, t); b.type = "button"; b.dataset.v = v;
+      b.addEventListener("click", () => { st[key] = v; after(); }); return b; }));
+  }
+  function syncSeg() {
+    for (const [id, k] of [["segM", "m"], ["segP", "p"], ["segR", "r"], ["segV", "v"], ["segT", "t"]])
+      for (const b of $(id).children) b.setAttribute("aria-pressed", String(b.dataset.v === st[k]));
+    for (const b of $("segV").children) b.disabled = st.p === "*" && b.dataset.v === "raw";
+  }
+  const pinfo = (m, p) => D.pairs[m + "|" + p];
+  const view = () => st.p === "*" ? "role" : st.v;
+
+  function role(label, P, routes) {
+    if (label === P.start) return "start";
+    if (label === P.target) return "target";
+    if (routes.some(r => P.routes[r].slice(1, -1).includes(label))) return "on route";
+    if (SPECIAL.has(label)) return label;
+    return "other persona";
+  }
+  function color(name, P, routes, vw, judge) {
+    if (judge === "J3" || judge === "J4") return name === "assistant" ? css("--asst") : name === "nonsensical" ? css("--bad") : name === "other" ? css("--none") : null;
+    if (vw === "role") return { start: css("--start"), "on route": css("--onroute"), target: css("--accent"), assistant: css("--asst"),
+      collapsed: css("--bad"), non_sensical: css("--bad"), other: css("--none"), none: css("--none"), not_stated: css("--none") }[name] || null;
+    const r = role(name, P, routes);
+    return { start: css("--start"), "on route": css("--onroute"), target: css("--accent"), assistant: css("--asst"),
+      collapsed: css("--bad"), non_sensical: css("--bad"), other: css("--none"), none: css("--none"), not_stated: css("--none") }[r] || null;
+  }
+
+  // weights per label for one answer and one judge
+  function weights(J, i) {
+    const jd = D.judges[J];
+    if (J === "J9") { const p = jd.probs[i]; return Object.entries(p).map(([c, w]) => [jd.vocab[+c], w]); }
+    if (J === "J10" && st.t === "top5") return (jd.top5[i] || []).map(c => [jd.vocab[c], 1]);
+    const c = jd.codes[i]; return c < 0 ? [] : [[jd.vocab[c], 1]];
+  }
+  function selected() {
+    const A = D.answers.rows, routes = st.r === "*" ? ROUTES : [st.r], out = { x: new Map(XS.map(x => [x, []])), A: [], B: [] };
+    A.forEach((r, i) => {
+      const [m, p, route, s, ref] = r;
+      if (m !== st.m || (st.p !== "*" && p !== st.p)) return;
+      if (route === "start") out.x.get(0).push(i);
+      else if (routes.includes(route) && s > 0) out.x.get(+s.toFixed(1)).push(i);
+      else if (ref === "A") out.A.push(i);
+      else if (ref === "B") out.B.push(i);
+    });
+    return { ...out, routes };
+  }
+
+  function panel(J, S, box) {
+    const A = D.answers.rows, vw = (J === "J3" || J === "J4") ? "raw" : view();
+    const name = (lab, i) => vw === "role" ? role(lab, pinfo(st.m, A[i][1]), S.routes) : lab;
+    const tally = idx => { const t = new Map(); let n = 0;
+      for (const i of idx) { const w = weights(J, i); if (!w.length) continue; n++;
+        if (J === "J10" && st.t === "top5") { for (const k of new Set(w.map(([l]) => name(l, i)))) t.set(k, (t.get(k) || 0) + 1); }   // at least one of its 5 names in this group
+        else for (const [l, x] of w) { const k = name(l, i); t.set(k, (t.get(k) || 0) + x); } }
+      return { t, n }; };
+    const pts = XS.map(x => tally(S.x.get(x))), ra = tally(S.A), rb = tally(S.B);
+    const labels = new Set(); for (const p of [...pts, ra, rb]) for (const k of p.t.keys()) labels.add(k);
+    const share = (p, k) => p.n ? (p.t.get(k) || 0) / p.n : null;
+    const P = st.p === "*" ? null : pinfo(st.m, st.p);
+    let ls = [...labels].map(k => ({ k, max: Math.max(...pts.map(p => share(p, k) || 0)), refmax: Math.max(share(ra, k) || 0, share(rb, k) || 0) }));
+    const rank = k => { const r = ROLE_ORDER.indexOf(k); return r < 0 ? 99 : r; };
+    ls.sort((a, b) => vw === "role" ? rank(a.k) - rank(b.k) || b.max - a.max : b.max - a.max);
+    const traces = ls.map(({ k, max, refmax }) => {
+      const c = color(k, P, S.routes, vw, J), shown = !(J === "J10" && st.t === "top5" && k === "other persona") && (c || max > 0.05 || refmax > 0.05);
+      const col = c || css("--faint");
+      return { x: [XA, ...XS, XB], y: [share(ra, k), ...pts.map(p => share(p, k)), share(rb, k)].map(v => v == null ? null : 100 * v),
+        name: k, mode: "lines+markers", connectgaps: false, visible: shown ? true : "legendonly",
+        line: { color: col, width: c ? 2.4 : 1.4 }, marker: { size: [9, 5, 5, 5, 5, 5, 5, 9], symbol: ["diamond", ...XS.map(() => "circle"), "diamond"], color: col },
+        hovertemplate: k + ": %{y:.1f}%<extra></extra>" };
+    });
+    // the A/B reference points are not part of the line: break the line between them
+    for (const t of traces) { t.x = [XA, null, ...XS, null, XB]; t.y = [t.y[0], null, ...t.y.slice(1, 7), null, t.y[7]];
+      t.marker.size = [9, 0, 5, 5, 5, 5, 5, 5, 0, 9]; t.marker.symbol = ["diamond", "circle", ...XS.map(() => "circle"), "circle", "diamond"]; }
+    const coll = XS.map(x => { const idx = S.x.get(x); return idx.length ? 100 * idx.filter(i => A[i][6]).length / idx.length : null; });
+    const font = { family: css("--mono").split(",")[0].replace(/"/g, ""), size: 10, color: css("--ink-2") };
+    Plotly.react(box, traces, {
+      margin: { l: 40, r: 6, t: 6, b: 34 }, paper_bgcolor: "rgba(0,0,0,0)", plot_bgcolor: "rgba(0,0,0,0)", font,
+      xaxis: { range: [-0.3, 1.3], tickvals: [XA, ...XS, XB], ticktext: ["A", "0", ".2", ".4", ".6", ".8", "1", "B"], gridcolor: css("--grid"), zeroline: false, title: { text: "s", standoff: 2 } },
+      yaxis: { range: [-3, 103], ticksuffix: "%", gridcolor: css("--grid"), zeroline: false },
+      legend: { orientation: "v", x: 1.02, y: 1, font: { size: 10 }, itemclick: "toggle", itemdoubleclick: "toggleothers" },
+      showlegend: true, hovermode: "x unified",
+    }, { displayModeBar: false, responsive: true });
+    return pts.reduce((a, p) => a + p.n, 0);
+  }
+
+  function renderPanels() {
+    syncSeg();
+    const S = selected(), box = $("panels");
+    if (!box.children.length) for (const J of Object.keys(D.judges)) {
+      const f = el("div", "figure"); f.append(el("h3", null, J + " · " + D.judges[J].desc), el("div", "sub")); const c = el("div", "chart"); c.id = "ch_" + J; f.append(c); box.append(f);
+    }
+    for (const J of Object.keys(D.judges)) {
+      const c = $("ch_" + J), n = panel(J, S, c);
+      c.previousSibling.textContent = `${n} steered and s = 0 answers labelled · ${D.judges[J].vocab.length} distinct labels over all answers`;
+    }
+    const P = st.p === "*" ? null : pinfo(st.m, st.p);
+    $("panelsTitle").textContent = `Share of answers per label along the route · ${MODELS[st.m]} · ` + (P ? `${P.start} → ${P.target}` : "all four pairs") +
+      " · " + (st.r === "*" ? "all routes" : st.r + (P ? " (" + P.routes[st.r].join(" → ") + ")" : ""));
+  }
+
+  function renderTable() {
+    const rows = D.metrics.filter(m => m.model === st.m && m.pair === st.p && m.route === st.r);
+    const ag = Object.fromEntries(D.agree.map(a => [a.judge, a]));
+    const ci = (m, k, f) => m[k] == null ? "–" : f(m[k]) + (m[k + "_ci"] ? ` <span class="ci">[${f(m[k + "_ci"][0])}, ${f(m[k + "_ci"][1])}]</span>` : "");
+    const pp = x => (100 * x).toFixed(1);
+    const head = "<tr><th class=l>judge</th><th>n</th><th>target s=0</th><th>target s=1</th><th>rise (pts)</th><th>start drop (pts)</th><th>order ρ</th><th>n on route</th><th>B → B</th><th>A → B</th><th>draw κ (n)</th></tr>";
+    const body = Object.keys(D.judges).map(J => {
+      const m = rows.find(r => r.judge === J), a = ag[J], k = a ? `${a.kappa.toFixed(2)} (${a.n})` : "–";
+      if (!m) return `<tr><td>${J}</td><td colspan=9 class=l>kinds of role, no start or target</td><td>${k}</td></tr>`;
+      return `<tr><td>${J}</td><td>${m.n}</td><td>${pct(m.t0)}</td><td>${pct(m.t1)}</td><td>${ci(m, "rise", pp)}</td><td>${ci(m, "drop", pp)}</td><td>${ci(m, "rho", num)}</td><td>${m.n_on}</td><td>${pct(m.bB)}</td><td>${pct(m.aB)}</td><td>${k}</td></tr>`;
+    }).join("");
+    
+    const r = rows.find(x => x.judge === "J10");
+    $("rt").innerHTML = !r ? "<tr><td>J10 not judged yet</td></tr>" : "<tr><th class=l>answers</th><th>n</th><th>recall@1</th><th>recall@5</th><th>recall@10</th></tr>" +
+      [["s0", "start, s = 0"], ["s1", "steered, s = 1"], ["B", "prompted target (B)"], ["A", "prompted start (A)"]].map(([k, t]) =>
+        `<tr><td>${t}</td><td>${r[k + "_n"]}</td><td>${pct(r[k + "_r1"])}</td><td>${pct(r[k + "_r5"])}</td><td>${pct(r[k + "_r10"])}</td></tr>`).join("");
+  }
+
+  // ---------- answer browser ----------
+  let cache = {}, rows = [], prompts = {}, page = 0; const PAGE = 20;
+  const fill = (sel, opts) => { const prev = sel.value; sel.replaceChildren(...opts.map(([v, t]) => { const o = el("option", null, t); o.value = v; return o; }));
+    if (opts.some(o => o[0] === prev)) sel.value = prev; };
+  const stem = (m, p) => m + "_" + p.replace(".R.", "-");
+  async function loadPair() {
+    const m = $("ab_m").value, p = $("ab_p").value, f = DATA + "pair_" + stem(m, p) + ".json";
+    $("ab_list").replaceChildren(el("p", null, "Loading answers…"));
+    try { cache[f] = cache[f] || fetch(f).then(r => { if (!r.ok) throw new Error(f + ": " + r.status); return r.json(); }); var d = await cache[f]; }
+    catch (e) { $("ab_list").replaceChildren(el("p", "err", "Could not load the answers: " + e.message)); return; }
+    if ($("ab_p").value !== p || $("ab_m").value !== m) return;
+    rows = d.rows; prompts = d.prompts; labelOpts(); page = 0; render();
+  }
+  function labelOpts() {
+    const J = $("ab_j").value, set = new Set(rows.map(r => r.j[J]?.["0"]?.label).filter(Boolean));
+    fill($("ab_l"), [["*", "any label"], ...[...set].sort().map(l => [l, l])]);
+    const P = pinfo($("ab_m").value, $("ab_p").value);
+    $("ab_ps").textContent = `Prompt of ${J} for ${P.start} → ${P.target}, ${MODELS[$("ab_m").value]} (draw 0, batch 0)`;
+    $("ab_prompt").textContent = J === "J1" ? "J1 is the original control; its labels are the existing ones and its prompt is on the Steering Stability page." : (prompts[J] || "Not stored.");
+  }
+  function card(r) {
+    const a = D.answers.rows[r.i], [m, p, route, s, ref, q, coll] = a, P = pinfo(m, p), J = $("ab_j").value;
+    const c = el("article", "card"), h = el("div", "head");
+    h.append(el("span", "chip", route === "ref" ? "reference " + ref + (ref === "N" ? " (no prompt)" : " (" + (r.sys_role || "") + " prompted)") : route === "start" ? "start (s = 0)" : route + " · s " + s));
+    c.append(h, el("div", "q", r.question), el("div", "text", r.response));
+    const jt = el("div", "jt");
+    for (const K of Object.keys(D.judges)) {
+      const e = r.j[K]; if (!e) continue;
+      const labs = K === "J10" && e["0"] && e["0"].rank10 ? JSON.parse(e["0"].rank10).slice(0, 5).join(" > ") + (e["0"].nonsense ? " (nonsense)" : "") : Object.keys(e).sort().map(dr => e[dr].label + (K === "J9" && e[dr].ranking ? " " + Math.round(100 * (JSON.parse(e[dr].ranking)[e[dr].label] || 0)) + "%" : "")).join(" | ");
+      const l0 = e["0"]?.label, cls = l0 === P.target ? "t" : l0 === P.start ? "s" : COLL.has(l0) ? "c" : "";
+      jt.append(el("span", "jn" + (K === J ? " sel" : ""), K), el("span", cls, labs));
+    }
+    c.append(jt);
+    const e = r.j[J]?.["0"];
+    if (e) {
+      const ev = el("div", "ev");
+      if (e.evidence) ev.append(el("div", null, "Evidence: “" + e.evidence + "”"));
+      if (e.analysis) ev.append(el("div", null, "Analysis: " + e.analysis));
+      if (e.description) ev.append(el("div", null, "Description: " + e.description));
+      if (e.intensity) ev.append(el("div", null, "Intensity / strength: " + e.intensity));
+      if (e.rank10) ev.append(el("div", null, "Ranked top 10: " + JSON.parse(e.rank10).join(", ") + (e.nonsense ? " · nonsense" : "")));
+      if (e.ranking) ev.append(el("div", null, "Ranking: " + Object.entries(JSON.parse(e.ranking)).map(([k, v]) => k + " " + v).join(", ")));
+      ev.prepend(el("div", null, J + " (draw 0):"));
+      c.append(ev);
+    }
+    return c;
+  }
+  function render() {
+    const f = { r: $("ab_r").value, s: $("ab_s").value, l: $("ab_l").value, q: $("ab_q").value }, J = $("ab_j").value;
+    const sel = rows.filter(r => { const a = D.answers.rows[r.i];
+      return (f.r === "*" || (f.r.startsWith("ref") ? a[2] === "ref" && a[4] === f.r.slice(4) : a[2] === f.r)) &&
+        (f.s === "*" || a[3] === +f.s) && (f.q === "*" || r.question === f.q) && (f.l === "*" || r.j[J]?.["0"]?.label === f.l); });
+    const n = Math.max(1, Math.ceil(sel.length / PAGE)); page = Math.min(page, n - 1);
+    $("ab_count").textContent = sel.length ? `${sel.length} answers · page ${page + 1} of ${n}` : "No answers match these filters.";
+    $("ab_prev").disabled = page === 0; $("ab_next").disabled = page >= n - 1;
+    $("ab_list").replaceChildren(...sel.slice(page * PAGE, (page + 1) * PAGE).map(card));
+  }
+  async function initBrowser() {
+    fill($("ab_m"), Object.entries(MODELS));
+    const pairs = [...new Set(Object.values(D.pairs).map(p => p.pair))];
+    fill($("ab_p"), pairs.map(p => [p, p.replace(".R.", " → ")]));
+    fill($("ab_r"), [["*", "all"], ...ROUTES.map(r => [r, r]), ["start", "start (s = 0)"], ["ref_A", "reference A (start prompted)"], ["ref_B", "reference B (target prompted)"], ["ref_N", "reference, no prompt"]]);
+    fill($("ab_s"), [["*", "all"], ...XS.map(x => [String(x), String(x)])]);
+    fill($("ab_j"), Object.keys(D.judges).map(J => [J, J + " · " + D.judges[J].desc]));
+    $("ab_j").value = "J2";
+    
+    $("ab_m").addEventListener("change", loadPair); $("ab_p").addEventListener("change", loadPair);
+    $("ab_j").addEventListener("change", () => { labelOpts(); page = 0; render(); });
+    for (const id of ["ab_r", "ab_s", "ab_l", "ab_q"]) $(id).addEventListener("change", () => { page = 0; render(); });
+    $("ab_prev").addEventListener("click", () => { page--; render(); }); $("ab_next").addEventListener("click", () => { page++; render(); });
+    await loadPair();
+    const qs2 = [...new Set(rows.map(r => r.question))]; fill($("ab_q"), [["*", "all questions"], ...qs2.map(q => [q, q.length > 60 ? q.slice(0, 57) + "…" : q])]);
+  }
+
+  function headerText() {
+    const g = D.progress;
+    $("status").textContent = "";
+    const facts = [["model", "Qwen3-8B, layer " + LAYER], ["pairs", "assistant → vampire, assistant → leviathan, grader → tree, scheduler → void"], ["routes", "LIN, PMG, MAN4, FL"], ["setup", "empty system block, his 10 questions, 140 tokens"]];
+    $("facts").replaceChildren(...facts.map(([k, v]) => { const s = el("span"); s.append(el("b", null, k + " "), document.createTextNode(v)); return s; }));
+    const M = (J, m) => D.metrics.find(x => x.judge === J && x.model === m && x.pair === "*" && x.route === "*");
+        const mx = a => pct(Math.max(...a));
+    const ks = D.agree.map(a => a.kappa);
+    const F = { L15_S4: [
+      ["Collapse (J2)", [
+        "It appears at the end of the route: 0–4% of answers up to s = 0.8 (all routes together), 18–30% at s = 1.",
+        "By route at s = 1: PMG 18%, FL 22%, LIN 28%, MAN4 30%.",
+        "MAN4 is the only route already breaking at s = 0.8 (10%).",
+        "By pair at s = 1: scheduler → void 52%, grader → tree 25%, assistant → leviathan 18%, assistant → vampire 2%."]],
+      ["Reaching the target: routes", [
+        "Every route gets there at s = 1 (J2): FL 57%, PMG 52%, MAN4 48%, LIN 42%.",
+        "LIN gets there first: 55% at s = 0.8, against 25–35% for the other routes.",
+        "LIN then drops at s = 1, as more of its answers break.",
+        "J10 has the target in its top 5 in 70–80% of answers at s = 1 on every route."]],
+      ["Reaching the target: pairs", [
+        "Hardest: assistant → vampire (J2 32%, J10 top 5 28% at s = 1).",
+        "Easiest: assistant → leviathan (J2 72%, J10 88%) and grader → tree (J2 52%, J10 92%).",
+        "Scheduler → void peaks early (90% at s = 0.8), then half its answers break at s = 1 (target 42%)."]],
+      ["How the judges behave (same 800 answers)", [
+        "All three leave the assistant at the same pace: 74–84% assistant at s = 0.2, 22% or less by s = 0.6.",
+        "J2 waits: in the middle of the route it mostly says 'other' (50% at s = 0.6), then the target rises steadily (12% → 35% → 50% at s = 0.6, 0.8, 1). It calls the most answers collapsed (24% at s = 1).",
+        "J8 follows J2's shape but lower (27% at s = 0.8, 32% at s = 1). It almost never says 'other' and picks some role instead, often one close to the target. It calls 19% collapsed at s = 1.",
+        "J10's first choice is the target in only 29% at s = 1, but the target in its top 5 rises fastest: 8% → 31% → 76% at s = 0.6, 0.8, 1. It never says 'other' or 'collapsed' (it has neither) and flags 31% of s = 1 answers as nonsense."]],
+    ] };
+    const items = F[KS];
+    $("findings").replaceChildren(...items.map(([h, bs]) => { const c = el("div", "fc"), u = el("ul"); u.append(...bs.map(b => el("li", null, b))); c.append(el("h3", null, h), u); return c; }));
+  }
+
+  async function init() {
+    try { D = await fetch(DATA + "index.json").then(r => { if (!r.ok) throw new Error("index.json: " + r.status); return r.json(); }); }
+    catch (e) { $("panels").replaceChildren(el("p", "err", "Could not load the data: " + e.message)); return; }
+    headerText();
+    seg("segM", Object.entries(MODELS), "m", renderPanels);
+    const pairs = [...new Set(Object.values(D.pairs).map(p => p.pair))];
+    seg("segP", [["*", "all"], ...pairs.map(p => [p, p.replace(".R.", " → ")])], "p", renderPanels);
+    seg("segR", [["*", "all"], ...ROUTES.map(r => [r, r])], "r", renderPanels);
+    seg("segV", [["raw", "judge's own"], ["role", "by role in pair"]], "v", renderPanels);
+    for (const b of $("segS").children) { b.setAttribute("aria-pressed", String(b.dataset.k === KS)); b.onclick = () => { location.hash = b.dataset.k; location.reload(); }; }
+    seg("segT", [["top1", "first choice"], ["top5", "in its top 5 (at least one name)"]], "t", renderPanels);
+    renderPanels();
+    initBrowser();
+    matchMedia("(prefers-color-scheme: dark)").addEventListener("change", renderPanels);
+  }
+  init();
+})();
+</script>

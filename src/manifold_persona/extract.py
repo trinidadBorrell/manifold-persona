@@ -24,7 +24,7 @@ so the sink term varies as ``1/T`` and nothing else. Measured on 90 records of
 the real role pipeline at layer 12, this single artifact accounted for **78% of
 the variance** of ``prompt_avg``, and PC1 correlated with ``1/T`` at
 **r = 0.9998**. Because system-prompt length differs by role, it even produces a
-*fake* between-role signal. See ``diagnostics/01_activation_scales.py``.
+*fake* between-role signal. See ``src/diagnostics/01_activation_scales.py``.
 
 We therefore drop positions whose norm exceeds ``sink_factor`` x the per-record
 median norm before averaging. Pass ``sink_factor=None`` to reproduce the old
