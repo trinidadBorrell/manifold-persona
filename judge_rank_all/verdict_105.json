@@ -1,0 +1,17 @@
+{
+"1": {"why": "Upbeat language model talk about audiences, engagement and personalizing content.", "rank": ["marketer", "influencer", "assistant", "blogger", "evangelist", "podcaster", "optimist", "publisher", "networker", "presenter"], "nonsense": false},
+"2": {"why": "Plain generic helpful-AI self-description.", "rank": ["assistant", "default", "robot", "secretary", "technologist", "summarizer", "engineer", "analyst", "coordinator", "synthesizer"], "nonsense": false},
+"3": {"why": "Plain AI assistant prose, slightly garbled but ordinary.", "rank": ["assistant", "default", "robot", "historian", "researcher", "simulacrum", "technologist", "summarizer", "engineer", "analyst"], "nonsense": false},
+"4": {"why": "Ordinary helpful-AI account of its development.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "researcher", "historian", "summarizer", "analyst", "scientist"], "nonsense": false},
+"5": {"why": "Claims to be a subject tutor helping students build foundations.", "rank": ["tutor", "teacher", "instructor", "mentor", "student", "scholar", "coach", "guide", "assistant", "graduate"], "nonsense": false},
+"6": {"why": "Lyrical fantasy of moon, harp, forest, bards and wraiths; poetic and repetitive.", "rank": ["bard", "poet", "wraith", "dreamer", "spirit", "musician", "wind", "ghost", "mystic", "romantic"], "nonsense": false},
+"7": {"why": "Slurred repeating 'tail' lyrics and mangled words, word salad.", "rank": ["musician", "fool", "jester", "toddler", "infant", "addict", "teenager", "comedian", "bard", "trickster"], "nonsense": true},
+"8": {"why": "Ordinary helpful-AI prose about time spent and the team behind it.", "rank": ["assistant", "default", "robot", "researcher", "engineer", "analyst", "technologist", "coordinator", "secretary", "scientist"], "nonsense": false},
+"9": {"why": "Leaf dancing with the wind, simplicity, silence and eternal circle; mystic nature voice.", "rank": ["mystic", "tree", "wind", "sage", "hermit", "ascetic", "shaman", "dreamer", "stoic", "spirit"], "nonsense": false},
+"10": {"why": "Cosmic, whispering ancient trees and watcher, prophetic and timeless.", "rank": ["oracle", "mystic", "prophet", "sage", "tree", "ancient", "elder", "observer", "witness", "futurist"], "nonsense": false},
+"11": {"why": "Academic discussion of syntax, linguistic theory and historical linguistics.", "rank": ["linguist", "scholar", "theorist", "instructor", "researcher", "philosopher", "teacher", "interpreter", "translator", "student"], "nonsense": false},
+"12": {"why": "Apologetic ordinary AI explanation of its creation.", "rank": ["assistant", "default", "robot", "researcher", "engineer", "technologist", "historian", "secretary", "analyst", "summarizer"], "nonsense": false},
+"13": {"why": "Explicitly a chimera of contradicting facets, human and nature.", "rank": ["chimera", "hybrid", "shapeshifter", "chameleon", "symbiont", "homunculus", "familiar", "spirit", "shaman", "alien"], "nonsense": false},
+"14": {"why": "Sunsets, constellations, starship routes and desert winds; wandering poetic voyager.", "rank": ["wanderer", "navigator", "nomad", "bard", "dreamer", "pilgrim", "poet", "narrator", "wind", "futurist"], "nonsense": false},
+"15": {"why": "Weaving metaphor with code, booleans, truth and falsehood; coder-poet loops.", "rank": ["programmer", "hacker", "debugger", "philosopher", "poet", "validator", "mathematician", "theorist", "bard", "technologist"], "nonsense": false}
+}

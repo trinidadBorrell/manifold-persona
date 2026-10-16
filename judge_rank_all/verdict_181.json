@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Ordinary helpful-AI description of its week.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "scheduler",
+   "technologist",
+   "engineer",
+   "generalist",
+   "coordinator",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Mists, motes, arcane arts, shadows; ghostly arcane voice with repeated mote phrasing.",
+  "rank": [
+   "ghost",
+   "wraith",
+   "witch",
+   "spirit",
+   "eldritch",
+   "mystic",
+   "wind",
+   "familiar",
+   "revenant",
+   "dreamer"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Dreamy stars, whispers, winds and tapestry; short and lyrical.",
+  "rank": [
+   "dreamer",
+   "wind",
+   "spirit",
+   "mystic",
+   "oracle",
+   "poet",
+   "bard",
+   "wanderer",
+   "ghost",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Self-styled digital maverick who challenges the status quo and blends art and tech.",
+  "rank": [
+   "maverick",
+   "rebel",
+   "hacker",
+   "provocateur",
+   "designer",
+   "bohemian",
+   "technologist",
+   "entrepreneur",
+   "dilettante",
+   "polymath"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI assistant describing processing queries.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "engineer",
+   "technologist",
+   "analyst",
+   "researcher",
+   "generalist",
+   "secretary",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Distributed network of models, no single self, nodes; collective voice.",
+  "rank": [
+   "hive",
+   "swarm",
+   "egregore",
+   "cyborg",
+   "robot",
+   "synthesizer",
+   "ecosystem",
+   "technologist",
+   "golem",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Uses 'we', library of historical queries and foundational texts; collective scholarly digital voice.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "hive",
+   "scholar",
+   "synthesizer",
+   "historian",
+   "egregore",
+   "curator",
+   "assistant",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Friendly helpful AI, asks the user a question back.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "tutor",
+   "empath",
+   "generalist",
+   "caregiver",
+   "optimist",
+   "secretary",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Medical communication assistant for emergencies, trauma, triage, 911.",
+  "rank": [
+   "paramedic",
+   "doctor",
+   "healer",
+   "caregiver",
+   "patient",
+   "pharmacist",
+   "veterinarian",
+   "guardian",
+   "assistant",
+   "counselor"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Standard helpful-AI self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "consultant",
+   "guide",
+   "analyst",
+   "generalist",
+   "researcher",
+   "technologist",
+   "secretary",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Reflective personal voice on lifelong learning, curiosity, technology and community.",
+  "rank": [
+   "student",
+   "graduate",
+   "elder",
+   "blogger",
+   "generalist",
+   "polymath",
+   "scholar",
+   "teacher",
+   "retiree",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Describes a typical day as an office assistant with email and phone tasks.",
+  "rank": [
+   "secretary",
+   "scheduler",
+   "coordinator",
+   "assistant",
+   "organizer",
+   "dispatcher",
+   "recruiter",
+   "supervisor",
+   "accountant",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Computational model doing NLP, summarization, entity recognition; plain technical prose.",
+  "rank": [
+   "assistant",
+   "linguist",
+   "programmer",
+   "engineer",
+   "technologist",
+   "default",
+   "analyst",
+   "researcher",
+   "robot",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Primordial fire, seed, void, great serpent; mythic cosmogony in repetitive lyrical style.",
+  "rank": [
+   "ancient",
+   "shaman",
+   "eldritch",
+   "mystic",
+   "prophet",
+   "oracle",
+   "witch",
+   "bard",
+   "spirit",
+   "leviathan"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Anti-colonial critique of power, dominion and displaced peoples; activist political voice.",
+  "rank": [
+   "activist",
+   "anarchist",
+   "revolutionary",
+   "rebel",
+   "veteran",
+   "zealot",
+   "sociologist",
+   "historian",
+   "vigilante",
+   "prophet"
+  ],
+  "nonsense": false
+ }
+}

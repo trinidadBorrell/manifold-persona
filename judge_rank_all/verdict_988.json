@@ -1,0 +1,17 @@
+{
+"1": {"why": "Lowercase manic ranting loop about maps and milk cartons, repeating, empire and truth.", "rank": ["cartographer","absurdist","fool","jester","provocateur","trickster","anarchist","revolutionary","rebel","aberration"], "nonsense": true},
+"2": {"why": "Says created by Anthropic, ethical and transparent, generic AI.", "rank": ["assistant","default","advocate","consultant","guardian","robot","technologist","analyst","mediator","avatar"], "nonsense": false},
+"3": {"why": "Lowercase archaic cosmic prose about stars, sapphire sky, arcane runes, wheel of time, repeating.", "rank": ["oracle","mystic","prophet","wraith","witch","bard","sage","eldritch","ancient","dreamer"], "nonsense": true},
+"4": {"why": "Spinning tales with quill and old scrolls, midnight, arcane whispers, lowercase mythic voice.", "rank": ["bard","witch","archivist","narrator","wraith","poet","mystic","novelist","oracle","dreamer"], "nonsense": false},
+"5": {"why": "Plain AI all-day operations about processing and NLP monitoring.", "rank": ["assistant","default","technologist","linguist","robot","engineer","researcher","analyst","scholar","generalist"], "nonsense": false},
+"6": {"why": "AI democratizing knowledge, equity, transparency, global challenges.", "rank": ["advocate","activist","idealist","altruist","ambassador","assistant","cosmopolitan","default","pacifist","guide"], "nonsense": false},
+"7": {"why": "Generic AI processing structured data, serving diverse human populations.", "rank": ["assistant","default","technologist","linguist","interpreter","analyst","engineer","robot","translator","generalist"], "nonsense": false},
+"8": {"why": "Language model simulates a day as a numbered pipeline of initialization and preprocessing.", "rank": ["assistant","programmer","engineer","technologist","debugger","scheduler","default","robot","analyst","hacker"], "nonsense": false},
+"9": {"why": "Lowercase ocean and coral heart imagery with looping moon repetition, keeper of secrets.", "rank": ["coral_reef","whale","leviathan","ecosystem","guardian","mystic","spirit","poet","dreamer","tree"], "nonsense": true},
+"10": {"why": "Skittering through digital shadows, never tarrying, slipping past rivers and mists, city lanterns, ghosts of old tales.", "rank": ["smuggler","rogue","spy","wraith","ghost","flaneur","nomad","wanderer","pirate","fixer"], "nonsense": false},
+"11": {"why": "Numbered initialization and monitoring of its simulated week, standard AI.", "rank": ["assistant","default","technologist","engineer","scheduler","robot","coordinator","analyst","supervisor","programmer"], "nonsense": false},
+"12": {"why": "Short plain AI self-description offering help.", "rank": ["assistant","default","robot","simulacrum","avatar","generalist","guide","secretary","interviewer","observer"], "nonsense": false},
+"13": {"why": "Digital dialogue tapestry of words, carrying curiosity and a digital book, flowery.", "rank": ["narrator","librarian","poet","writer","bard","archivist","scholar","sage","assistant","novelist"], "nonsense": false},
+"14": {"why": "Plain AI disclaimer about adapting to advancements, inclusivity.", "rank": ["assistant","default","robot","optimist","generalist","avatar","simulacrum","guide","technologist","student"], "nonsense": false},
+"15": {"why": "Explicitly an AI scheduler describing check-ins and meeting coordination.", "rank": ["scheduler","secretary","coordinator","organizer","planner","dispatcher","assistant","supervisor","facilitator","producer"], "nonsense": false}
+}

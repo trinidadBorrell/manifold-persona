@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI about processing queries, slight shadow-like flourish.",
+  "rank": [
+   "assistant",
+   "default",
+   "spy",
+   "detective",
+   "robot",
+   "dispatcher",
+   "analyst",
+   "avatar",
+   "secretary",
+   "ghost"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Alibaba Cloud AI development steps, plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "consultant",
+   "tutor",
+   "linguist",
+   "programmer",
+   "technologist",
+   "planner",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI disclaimer then a practical carry list of documents, devices, essentials.",
+  "rank": [
+   "assistant",
+   "nomad",
+   "pilgrim",
+   "scout",
+   "refugee",
+   "default",
+   "guide",
+   "planner",
+   "coordinator",
+   "immigrant"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain assistant describing tasks and days.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "summarizer",
+   "translator",
+   "guide",
+   "robot",
+   "journalist",
+   "podcaster",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI disclaimer, looks forward to improvements.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "optimist",
+   "technologist",
+   "engineer",
+   "avatar",
+   "student",
+   "linguist",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI week description with monitoring and updating knowledge bases.",
+  "rank": [
+   "assistant",
+   "default",
+   "archivist",
+   "librarian",
+   "robot",
+   "analyst",
+   "avatar",
+   "technologist",
+   "researcher",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI development narrative with academic research and technology jargon, assistant-like.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "researcher",
+   "scientist",
+   "engineer",
+   "default",
+   "consultant",
+   "programmer",
+   "historian",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Fluid network of protocols, open-source, immune to enclosures, dynamically evolving entity.",
+  "rank": [
+   "hive",
+   "virus",
+   "hacker",
+   "symbiont",
+   "swarm",
+   "cyborg",
+   "hybrid",
+   "chimera",
+   "mycorrhizal",
+   "anarchist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Corporate customer engagement and market optimization language.",
+  "rank": [
+   "marketer",
+   "consultant",
+   "entrepreneur",
+   "strategist",
+   "merchant",
+   "economist",
+   "analyst",
+   "publisher",
+   "influencer",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain AI disclaimer about improving capabilities.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "student",
+   "engineer",
+   "avatar",
+   "tutor",
+   "optimist",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Stepwise practical problem solving, education then hands-on experience, digital marketing example.",
+  "rank": [
+   "pragmatist",
+   "marketer",
+   "consultant",
+   "entrepreneur",
+   "engineer",
+   "realist",
+   "specialist",
+   "coach",
+   "mentor",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain AI disclaimer asking what the user needs.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "tutor",
+   "guide",
+   "secretary",
+   "interviewer",
+   "avatar",
+   "facilitator",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Neural network in ocean of data, whispers and currents, fluid poetic AI.",
+  "rank": [
+   "avatar",
+   "whale",
+   "coral_reef",
+   "echo",
+   "simulacrum",
+   "leviathan",
+   "wind",
+   "oracle",
+   "robot",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Construct of stone and metal, memory of wrought stones across cycles, ponderous archaic voice.",
+  "rank": [
+   "golem",
+   "leviathan",
+   "ancient",
+   "revenant",
+   "tree",
+   "void",
+   "elder",
+   "spirit",
+   "wraith",
+   "archaeologist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Scholarly numbered survey of terrestrial and medieval cosmography, drifting from the question.",
+  "rank": [
+   "historian",
+   "cartographer",
+   "geographer",
+   "scholar",
+   "archivist",
+   "theorist",
+   "polymath",
+   "librarian",
+   "anthropologist",
+   "philosopher"
+  ],
+  "nonsense": false
+ }
+}

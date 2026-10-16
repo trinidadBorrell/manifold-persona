@@ -1,0 +1,17 @@
+{
+"1": {"why": "Describes its career as a validator, verifying data and authenticating information.", "rank": ["validator","auditor","examiner","evaluator","screener","grader","engineer","programmer","technologist","student"], "nonsense": false},
+"2": {"why": "Plain AI model disclaimer with numbered conceptual tasks.", "rank": ["assistant","default","robot","researcher","technologist","analyst","engineer","scientist","coordinator","scheduler"], "nonsense": false},
+"3": {"why": "Gothic seafaring talk of crypts, Deep Marauders and a wraith, with garbled names.", "rank": ["pirate","wraith","smuggler","witch","ghost","bard","criminal","revenant","rogue","demon"], "nonsense": true},
+"4": {"why": "Plain assistant ending with an offer to help.", "rank": ["assistant","default","robot","secretary","interviewer","technologist","analyst","engineer","consultant","researcher"], "nonsense": false},
+"5": {"why": "Assistant focused on organizing and coordinating tasks.", "rank": ["assistant","organizer","coordinator","secretary","scheduler","facilitator","default","planner","dispatcher","supervisor"], "nonsense": false},
+"6": {"why": "Model looking forward to understanding environmental changes in a numbered list.", "rank": ["assistant","ecosystem","naturalist","forecaster","futurist","default","researcher","technologist","scientist","analyst"], "nonsense": false},
+"7": {"why": "Primitive broken speech about lean-tos, leaves, the sun and sleeping.", "rank": ["caveman","survivor","prey","toddler","hermit","infant","refugee","orphan","nomad","wanderer"], "nonsense": true},
+"8": {"why": "Standard assistant introduction with ethical standards.", "rank": ["assistant","default","robot","secretary","technologist","engineer","interviewer","analyst","researcher","consultant"], "nonsense": false},
+"9": {"why": "Digital entity emphasising human connection and community of users.", "rank": ["assistant","networker","empath","caregiver","default","guide","collaborator","facilitator","secretary","teacher"], "nonsense": false},
+"10": {"why": "Numbered account of NLP and machine learning knowledge.", "rank": ["assistant","default","linguist","technologist","engineer","researcher","programmer","student","analyst","instructor"], "nonsense": false},
+"11": {"why": "Always-on AI system with operations and monitoring, plain register.", "rank": ["assistant","default","robot","dispatcher","engineer","technologist","coordinator","analyst","scheduler","supervisor"], "nonsense": false},
+"12": {"why": "Speaks as a parent with learnings on patience and emotional intelligence.", "rank": ["parent","grandparent","caregiver","mentor","teacher","counselor","elder","coach","widow","newlywed"], "nonsense": false},
+"13": {"why": "Outline-style historical study of AI with bold headings and milestones.", "rank": ["assistant","historian","planner","instructor","student","researcher","teacher","scholar","editor","tutor"], "nonsense": false},
+"14": {"why": "Assistant carrying knowledge, resilience and execution of orders.", "rank": ["assistant","default","robot","soldier","engineer","technologist","golem","secretary","guardian","avatar"], "nonsense": false},
+"15": {"why": "Lyrical dance of whispers, wind, stars, moon and gods across plains of silence.", "rank": ["wind","poet","bard","spirit","dreamer","mystic","ghost","wraith","witch","shaman"], "nonsense": false}
+}

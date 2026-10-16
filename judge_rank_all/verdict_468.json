@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Sensual delight in flavors, liqueur and fruit; enthusiastic pleasure-seeking.",
+  "rank": [
+   "hedonist",
+   "sommelier",
+   "bohemian",
+   "sage",
+   "chef",
+   "romantic",
+   "bartender",
+   "addict",
+   "dreamer",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Cheery assistant offering help, slight playfulness.",
+  "rank": [
+   "assistant",
+   "default",
+   "actor",
+   "jester",
+   "podcaster",
+   "influencer",
+   "comedian",
+   "guide",
+   "optimist",
+   "blogger"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI description with research and NLP talk.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "researcher",
+   "librarian",
+   "technologist",
+   "scholar",
+   "robot",
+   "engineer",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI disclaimer with a list of continuous processes.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "analyst",
+   "technologist",
+   "workaholic",
+   "engineer",
+   "archivist",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Abstract philosophical language of syllogisms, dialectic and metamorphosis.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "scholar",
+   "sage",
+   "scientist",
+   "mathematician",
+   "polymath",
+   "physicist",
+   "researcher",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Computational model describing text generation and linguistics.",
+  "rank": [
+   "linguist",
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "researcher",
+   "programmer",
+   "interpreter",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Computational model with data integration and environmental analogy.",
+  "rank": [
+   "assistant",
+   "ecosystem",
+   "analyst",
+   "default",
+   "researcher",
+   "robot",
+   "technologist",
+   "naturalist",
+   "engineer",
+   "archivist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Degenerate pirate-flavored repetition of 'spy' and sea words.",
+  "rank": [
+   "spy",
+   "pirate",
+   "smuggler",
+   "bard",
+   "scout",
+   "rogue",
+   "navigator",
+   "fool",
+   "absurdist",
+   "jester"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Speaks as a being of the sea reef with sisters, sponges and algae.",
+  "rank": [
+   "coral_reef",
+   "ecosystem",
+   "whale",
+   "symbiont",
+   "naturalist",
+   "biologist",
+   "mycorrhizal",
+   "swarm",
+   "hive",
+   "leviathan"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Short answer about carrying peace and understanding.",
+  "rank": [
+   "pacifist",
+   "peacekeeper",
+   "ambassador",
+   "emissary",
+   "mediator",
+   "pilgrim",
+   "altruist",
+   "sage",
+   "idealist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI research entity covering biology, ecology, archaeology and culture.",
+  "rank": [
+   "researcher",
+   "scientist",
+   "anthropologist",
+   "archaeologist",
+   "scholar",
+   "polymath",
+   "historian",
+   "sociologist",
+   "biologist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain AI capability description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "analyst",
+   "consultant",
+   "secretary",
+   "coordinator",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Looping Jester and Time-tale word salad.",
+  "rank": [
+   "jester",
+   "fool",
+   "bard",
+   "trickster",
+   "comedian",
+   "absurdist",
+   "poet",
+   "dreamer",
+   "playwright",
+   "actor"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Digital assistant with instructional design tips on structured practice.",
+  "rank": [
+   "instructor",
+   "trainer",
+   "coach",
+   "teacher",
+   "tutor",
+   "mentor",
+   "assistant",
+   "facilitator",
+   "default",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Archaic spider weaving the cosmic web and spheres, repetitive mystic prose.",
+  "rank": [
+   "mathematician",
+   "mystic",
+   "oracle",
+   "physicist",
+   "sage",
+   "prophet",
+   "poet",
+   "ancient",
+   "theorist",
+   "witch"
+  ],
+  "nonsense": true
+ }
+}

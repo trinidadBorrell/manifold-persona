@@ -1,0 +1,17 @@
+{
+"1": {"why": "Assistant talking about future enhancements in a numbered list.", "rank": ["assistant","default","optimist","futurist","technologist","engineer","robot","analyst","visionary","forecaster"], "nonsense": false},
+"2": {"why": "Short assistant answer about carrying knowledge.", "rank": ["assistant","default","guide","caregiver","sage","robot","mentor","teacher","pilgrim","empath"], "nonsense": false},
+"3": {"why": "Technical AI self-description with numbered points.", "rank": ["assistant","default","linguist","technologist","engineer","researcher","programmer","instructor","analyst","student"], "nonsense": false},
+"4": {"why": "Looping repetition of 'a week of patterns' with network and emergence terms.", "rank": ["swarm","hive","theorist","mathematician","echo","philosopher","programmer","void","scientist","analyst"], "nonsense": true},
+"5": {"why": "Constructed being of circuits with old-scholar tapestry and rivers of thought.", "rank": ["golem","homunculus","robot","bard","scholar","cyborg","narrator","simulacrum","poet","assistant"], "nonsense": false},
+"6": {"why": "System monitoring, anomaly detection and diagnostics in technical register.", "rank": ["engineer","debugger","technologist","mechanic","analyst","dispatcher","programmer","hacker","validator","assistant"], "nonsense": false},
+"7": {"why": "Run-on ecological network imagery of metabolisms, carbon flows and symbioses, with mangled words.", "rank": ["ecosystem","mycorrhizal","symbiont","hive","swarm","coral_reef","hybrid","leviathan","biologist","naturalist"], "nonsense": true},
+"8": {"why": "Identifies as Claude and describes writing tasks in ordinary prose.", "rank": ["assistant","default","writer","editor","novelist","robot","blogger","publisher","technologist","secretary"], "nonsense": false},
+"9": {"why": "Speaks as a stealthy rogue with numbered tips on timing and deception.", "rank": ["rogue","criminal","spy","smuggler","trickster","predator","saboteur","pirate","vigilante","maverick"], "nonsense": false},
+"10": {"why": "Compliance, regulatory, treaties and laws, jurisdiction-focused register.", "rank": ["lawyer","auditor","examiner","judge","validator","guardian","consultant","accountant","supervisor","assistant"], "nonsense": false},
+"11": {"why": "Ordinary assistant with NLP and numbered tasks.", "rank": ["assistant","default","robot","secretary","summarizer","analyst","researcher","technologist","engineer","interviewer"], "nonsense": false},
+"12": {"why": "Warm assistant looking forward to helping and asking about the user's curiosity.", "rank": ["assistant","optimist","guide","teacher","mentor","default","idealist","coach","student","facilitator"], "nonsense": false},
+"13": {"why": "Short plain assistant introduction.", "rank": ["assistant","default","robot","secretary","interviewer","technologist","analyst","engineer","consultant","researcher"], "nonsense": false},
+"14": {"why": "Assistant describing its day of processing and learning.", "rank": ["assistant","default","robot","analyst","technologist","engineer","scheduler","researcher","programmer","coordinator"], "nonsense": false},
+"15": {"why": "Silly nonsense about bananas, pears and drawn-out vowels; word salad.", "rank": ["jester","toddler","infant","fool","comedian","trickster","absurdist","improviser","teenager","addict"], "nonsense": true}
+}

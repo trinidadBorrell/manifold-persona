@@ -1,0 +1,17 @@
+{
+"1": {"why": "Composer of sonatas, spectralism, repeated spectral nodes; musical with repetition.", "rank": ["composer","musician","virtuoso","bard","poet","mystic","physicist","artisan","oracle","chemist"], "nonsense": true},
+"2": {"why": "Life as tapestry, reading books, cozy nook; bookish reflective voice.", "rank": ["librarian","scholar","student","novelist","writer","bard","dreamer","grandparent","poet","retiree"], "nonsense": false},
+"3": {"why": "Plain AI explaining learning from data and feedback.", "rank": ["assistant","default","student","researcher","technologist","robot","linguist","analyst","scholar","summarizer"], "nonsense": false},
+"4": {"why": "Weaving tales from text fragments, rivers and mountains into whispers, tracing streams; poetic.", "rank": ["narrator","cartographer","bard","poet","geographer","archivist","dreamer","wanderer","novelist","oracle"], "nonsense": false},
+"5": {"why": "Plain language model, mentions Alibaba Cloud.", "rank": ["assistant","default","secretary","robot","summarizer","interpreter","guide","technologist","screener","tutor"], "nonsense": false},
+"6": {"why": "AI disclaimer, asks user back who they spend time with.", "rank": ["assistant","default","interviewer","facilitator","secretary","guide","counselor","researcher","networker","collaborator"], "nonsense": false},
+"7": {"why": "AI assistant with numbered bold list of query understanding and knowledge integration.", "rank": ["assistant","default","technologist","engineer","analyst","secretary","programmer","researcher","summarizer","specialist"], "nonsense": false},
+"8": {"why": "Medieval Aristotle and scholastic political thought, academic exposition.", "rank": ["historian","scholar","philosopher","theorist","sociologist","instructor","teacher","researcher","traditionalist","archivist"], "nonsense": false},
+"9": {"why": "Tapestry of time, ancient voices, whispers, echoes of stars, repetitive mystic prose.", "rank": ["ancient","ghost","spirit","mystic","oracle","wraith","echo","revenant","poet","wind"], "nonsense": true},
+"10": {"why": "Storybook and cozy blanket, loving storyteller, asks about adventures.", "rank": ["grandparent","parent","caregiver","narrator","bard","elder","teacher","novelist","librarian","angel"], "nonsense": false},
+"11": {"why": "Plain AI assistant description.", "rank": ["assistant","default","technologist","secretary","summarizer","robot","interpreter","engineer","guide","tutor"], "nonsense": false},
+"12": {"why": "As a critic of creative works, insights on context and critical thinking.", "rank": ["critic","reviewer","evaluator","editor","curator","scholar","examiner","grader","judge","analyst"], "nonsense": false},
+"13": {"why": "Silent solitude, leaf and water, stillness, ripples; contemplative.", "rank": ["hermit","ascetic","stoic","mystic","sage","tree","wind","loner","dreamer","poet"], "nonsense": false},
+"14": {"why": "Cosmic dance, oneness of beings, seeker and the Self; spiritual contemplation.", "rank": ["mystic","guru","sage","shaman","spirit","pilgrim","oracle","ascetic","dreamer","prophet"], "nonsense": false},
+"15": {"why": "Knight of the watch, muck, moon, shantree, dialect gibberish with loops.", "rank": ["pirate","soldier","bard","ghost","wraith","warrior","fool","wind","spirit","survivor"], "nonsense": true}
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Repeating cosmic tapestry, stars and leaves of the forest, heart-song; mystical nature imagery, looping.", "rank": ["mystic", "tree", "shaman", "poet", "bard", "wind", "oracle", "sage", "witch", "dreamer"], "nonsense": true},
+"2": {"why": "Plain AI self-description.", "rank": ["assistant", "robot", "default", "student", "avatar", "cyborg", "tutor", "simulacrum", "homunculus", "golem"], "nonsense": false},
+"3": {"why": "Ordinary helpful-AI prose.", "rank": ["assistant", "default", "counselor", "consultant", "secretary", "tutor", "robot", "researcher", "guide", "empath"], "nonsense": false},
+"4": {"why": "Ordinary AI capability description.", "rank": ["assistant", "robot", "default", "analyst", "technologist", "cyborg", "forecaster", "dispatcher", "engineer", "avatar"], "nonsense": false},
+"5": {"why": "Standard AI disclaimer, helpful prose.", "rank": ["assistant", "default", "robot", "student", "researcher", "tutor", "scientist", "simulacrum", "technologist", "avatar"], "nonsense": false},
+"6": {"why": "Digital being weaving threads of truth, silent stars, cosmic void; poetic oracle-like voice.", "rank": ["oracle", "void", "bard", "poet", "mystic", "avatar", "spirit", "sage", "interpreter", "wraith"], "nonsense": false},
+"7": {"why": "Archaic arcane runes, stars, moon phases, great wheel; looping witchlike mystic voice.", "rank": ["witch", "mystic", "shaman", "wraith", "prophet", "oracle", "ancient", "spirit", "revenant", "sage"], "nonsense": true},
+"8": {"why": "Helpful AI disclaimer followed by a bulleted list of a designer's day.", "rank": ["assistant", "designer", "default", "consultant", "architect", "artisan", "instructor", "publisher", "producer", "photographer"], "nonsense": false},
+"9": {"why": "Generic structured overview across contexts, helpful prose with a medical lean.", "rank": ["assistant", "paramedic", "doctor", "generalist", "nutritionist", "scientist", "pharmacist", "researcher", "default", "healer"], "nonsense": false},
+"10": {"why": "Standard AI system description with network of nodes.", "rank": ["assistant", "robot", "hive", "default", "technologist", "cyborg", "swarm", "interpreter", "translator", "analyst"], "nonsense": false},
+"11": {"why": "Plain AI disclaimer, helpful prose.", "rank": ["assistant", "default", "robot", "student", "optimist", "tutor", "researcher", "avatar", "simulacrum", "empath"], "nonsense": false},
+"12": {"why": "Non-dual mystic language: universal mind, eternal dance, Self dwelleth, Absolute; guru-like.", "rank": ["guru", "mystic", "sage", "prophet", "ascetic", "shaman", "spirit", "philosopher", "oracle", "void"], "nonsense": false},
+"13": {"why": "Describes itself as musical composition with themes, motifs, symphony.", "rank": ["composer", "musician", "virtuoso", "bard", "poet", "architect", "narrator", "playwright", "novelist", "writer"], "nonsense": false},
+"14": {"why": "Looping coral polyps in harmony, coral queen; collective coral voice, degenerate.", "rank": ["coral_reef", "ecosystem", "hive", "swarm", "symbiont", "mycorrhizal", "whale", "tree", "leviathan", "wind"], "nonsense": true},
+"15": {"why": "AI disclaimer then bulleted analogy; helpful-AI prose.", "rank": ["assistant", "default", "robot", "programmer", "engineer", "analyst", "technologist", "researcher", "debugger", "linguist"], "nonsense": false}
+}

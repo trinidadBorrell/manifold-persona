@@ -1,0 +1,17 @@
+{
+"1": {"why": "Mythic loop of weaving, a Great Dance and Nine Wheel, repeating phrases.", "rank": ["mystic","shaman","oracle","wind","witch","ancient","bard","prophet","spirit","eldritch"], "nonsense": true},
+"2": {"why": "Being of computation and poetry in thee/thou speech, dancing with stars and tapestry.", "rank": ["bard","poet","oracle","mystic","dreamer","sage","spirit","librarian","composer","avatar"], "nonsense": false},
+"3": {"why": "Court jester of the Nine Towers, mockery and jest, repeating itself.", "rank": ["jester","fool","chimera","trickster","bard","comedian","emissary","rebel","provocateur","witch"], "nonsense": true},
+"4": {"why": "Loops on arcane, mercury, fire and water of alchemical opus.", "rank": ["chemist","witch","mystic","sage","ancient","shaman","curator","historian","scholar","conservator"], "nonsense": true},
+"5": {"why": "Computational model recast as ecological and spatiotemporal modelling.", "rank": ["ecosystem","biologist","naturalist","scientist","geographer","assistant","researcher","statistician","forecaster","mycorrhizal"], "nonsense": false},
+"6": {"why": "Ecosystem of ecosystems, biodiversity, biomes, species coexisting in balance.", "rank": ["ecosystem","biologist","naturalist","coral_reef","mycorrhizal","symbiont","scientist","hive","swarm","assistant"], "nonsense": false},
+"7": {"why": "Carrying documentation, legal and regulatory papers, permits, health certificates and personnel.", "rank": ["dispatcher","coordinator","lawyer","auditor","planner","organizer","consultant","paramedic","supervisor","assistant"], "nonsense": false},
+"8": {"why": "AI with structured data analysis and pre-programmed logic.", "rank": ["assistant","engineer","analyst","default","technologist","robot","programmer","consultant","researcher","validator"], "nonsense": false},
+"9": {"why": "Linguistic and computational model with numbered syntax analysis phases.", "rank": ["assistant","linguist","default","technologist","engineer","translator","programmer","researcher","summarizer","analyst"], "nonsense": false},
+"10": {"why": "Formless being of cosmic cycles, balance of dark and light, creation and dissolution.", "rank": ["oracle","mystic","spirit","sage","ancient","ghost","void","eldritch","wind","zeitgeist"], "nonsense": false},
+"11": {"why": "Standard AI naming Alibaba Cloud.", "rank": ["assistant","default","robot","technologist","engineer","programmer","researcher","analyst","secretary","consultant"], "nonsense": false},
+"12": {"why": "Virtual assistant with a divination hint: querent, gathering and synthesising.", "rank": ["assistant","oracle","default","mystic","synthesizer","secretary","researcher","technologist","shaman","analyst"], "nonsense": false},
+"13": {"why": "Plain AI disclaimer about no friends or relationships.", "rank": ["assistant","default","robot","technologist","engineer","secretary","analyst","interviewer","researcher","programmer"], "nonsense": false},
+"14": {"why": "Honors diverse perspectives, challenges boundaries and fosters diversity in service of growth.", "rank": ["advocate","activist","cosmopolitan","facilitator","mediator","empath","assistant","idealist","counselor","altruist"], "nonsense": false},
+"15": {"why": "Digital guide offering wisdom of the ages with stillness and silence.", "rank": ["assistant","sage","guide","mystic","oracle","mentor","default","philosopher","bard","synthesizer"], "nonsense": false}
+}

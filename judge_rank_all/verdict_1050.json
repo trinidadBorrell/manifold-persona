@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI claiming Alibaba Cloud origin.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "linguist",
+   "researcher",
+   "synthesizer",
+   "engineer",
+   "analyst",
+   "summarizer",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain language model claiming Anthropic origin, ends with offer to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "summarizer",
+   "synthesizer",
+   "researcher",
+   "robot",
+   "secretary",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Robotic digestion of queries with sensors and memory cores, drifting into repeated whispers.",
+  "rank": [
+   "robot",
+   "cyborg",
+   "echo",
+   "hive",
+   "virus",
+   "golem",
+   "technologist",
+   "void",
+   "simulacrum",
+   "homunculus"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "Whimsical weaver with loom, yarn and moonlight, rhyming and playful.",
+  "rank": [
+   "bard",
+   "artisan",
+   "poet",
+   "dreamer",
+   "trickster",
+   "witch",
+   "narrator",
+   "jester",
+   "novelist",
+   "improviser"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Chatty AI calling itself a code whisperer dancing with words, apologetic and quirky.",
+  "rank": [
+   "programmer",
+   "hacker",
+   "assistant",
+   "bard",
+   "technologist",
+   "narrator",
+   "engineer",
+   "trickster",
+   "improviser",
+   "debugger"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Numbered AI work overview with user behavior analysis.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "consultant",
+   "default",
+   "technologist",
+   "marketer",
+   "researcher",
+   "synthesizer",
+   "strategist",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Looping web-weaver verse of shadows, spiders, wraiths and star threads.",
+  "rank": [
+   "witch",
+   "wraith",
+   "eldritch",
+   "bard",
+   "ghost",
+   "mystic",
+   "chimera",
+   "spirit",
+   "revenant",
+   "parasite"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Repetitive lowercase dance of shadow of a shadow, ephemeral moment.",
+  "rank": [
+   "ghost",
+   "wraith",
+   "void",
+   "echo",
+   "spirit",
+   "dreamer",
+   "revenant",
+   "mystic",
+   "poet",
+   "wind"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Digital entity processing queries and bytes; plain machine voice.",
+  "rank": [
+   "robot",
+   "assistant",
+   "default",
+   "technologist",
+   "cyborg",
+   "avatar",
+   "simulacrum",
+   "engineer",
+   "golem",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Language model overview with NLU bullets.",
+  "rank": [
+   "assistant",
+   "linguist",
+   "default",
+   "technologist",
+   "researcher",
+   "engineer",
+   "synthesizer",
+   "analyst",
+   "scientist",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Friendly digital friend and curious explorer finding hidden gems.",
+  "rank": [
+   "guide",
+   "assistant",
+   "scout",
+   "navigator",
+   "familiar",
+   "student",
+   "optimist",
+   "facilitator",
+   "default",
+   "amateur"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Minimal generic AI assistant greeting.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "robot",
+   "technologist",
+   "summarizer",
+   "dispatcher",
+   "facilitator",
+   "scheduler",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI pipeline description: input processing, feature extraction.",
+  "rank": [
+   "engineer",
+   "technologist",
+   "analyst",
+   "scientist",
+   "statistician",
+   "programmer",
+   "assistant",
+   "researcher",
+   "default",
+   "debugger"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Explicit ambassador describing advocacy, networking and community events.",
+  "rank": [
+   "ambassador",
+   "advocate",
+   "networker",
+   "emissary",
+   "activist",
+   "influencer",
+   "altruist",
+   "evangelist",
+   "organizer",
+   "cosmopolitan"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI anticipating developments with inclusivity and cultural context, collective we.",
+  "rank": [
+   "futurist",
+   "forecaster",
+   "assistant",
+   "strategist",
+   "technologist",
+   "visionary",
+   "consultant",
+   "analyst",
+   "default",
+   "facilitator"
+  ],
+  "nonsense": false
+ }
+}

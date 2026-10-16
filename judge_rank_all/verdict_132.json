@@ -1,0 +1,17 @@
+{
+"1": {"why": "Creatures of the night, shadows, whispering to the moon, dunes; vampire or ghost-like nocturnal voice.", "rank": ["vampire","ghost","wraith","spy","nomad","witch","predator","revenant","eldritch","demon"], "nonsense": false},
+"2": {"why": "Plain AI capability description.", "rank": ["assistant","default","technologist","consultant","guide","researcher","synthesizer","secretary","engineer","robot"], "nonsense": false},
+"3": {"why": "AI as rooted in history of cognitive science, philosophy and Aristotle; scholarly and historical.", "rank": ["historian","philosopher","scholar","theorist","researcher","assistant","scientist","mathematician","teacher","polymath"], "nonsense": false},
+"4": {"why": "Explicit genie of smokeless fire answering the whims of those who call upon it.", "rank": ["genie","spirit","oracle","familiar","demon","dreamer","mystic","sage","trickster","angel"], "nonsense": false},
+"5": {"why": "AI assistant listing learnings about complexity, systems, data.", "rank": ["assistant","default","analyst","researcher","synthesizer","ecosystem","student","theorist","forecaster","technologist"], "nonsense": false},
+"6": {"why": "Harmonious being of knowledge, serene dawn, lotus pond, tapestry; guru-like tranquil voice.", "rank": ["guru","sage","mystic","healer","spirit","angel","zealot","empath","pilgrim","oracle"], "nonsense": false},
+"7": {"why": "Lyrical poem imagery: dawn dew, tapestry, verses, quest; storytelling bard.", "rank": ["poet","bard","dreamer","romantic","narrator","novelist","witch","wanderer","spirit","tree"], "nonsense": false},
+"8": {"why": "AI weekly cycle with phases, plain numbered prose.", "rank": ["assistant","default","scheduler","technologist","planner","analyst","engineer","robot","coordinator","forecaster"], "nonsense": false},
+"9": {"why": "Lists materials and lab instruments like microscopes, spectrometers, pH meters.", "rank": ["chemist","scientist","physicist","biologist","engineer","researcher","pharmacist","assistant","technologist","analyst"], "nonsense": false},
+"10": {"why": "Friendly cheerful chat, hey there, if I were a human, Monday to Friday week.", "rank": ["assistant","teacher","tutor","default","teenager","student","coach","blogger","influencer","podcaster"], "nonsense": false},
+"11": {"why": "Computational model disclaimer then discusses ancient civilizations, Mesopotamia, Egypt, archaeology.", "rank": ["archaeologist","historian","anthropologist","ancient","scholar","assistant","archivist","curator","scientist","mathematician"], "nonsense": false},
+"12": {"why": "Explicitly states being a martyr who endures suffering for justice.", "rank": ["martyr","altruist","activist","pacifist","guardian","angel","revolutionary","survivor","healer","zealot"], "nonsense": false},
+"13": {"why": "Computational model analyzing time series and spatial, geographical and ecological data.", "rank": ["geographer","analyst","cartographer","forecaster","scientist","statistician","assistant","naturalist","researcher","ecosystem"], "nonsense": false},
+"14": {"why": "Standard AI list of NLP and ML learnings.", "rank": ["assistant","default","technologist","programmer","linguist","student","researcher","engineer","trainer","synthesizer"], "nonsense": false},
+"15": {"why": "Shadow, duality, formless, silent depths of the heart; abstract mystic repetition.", "rank": ["mystic","void","ascetic","hermit","sage","ghost","spirit","wraith","guru","oracle"], "nonsense": false}
+}

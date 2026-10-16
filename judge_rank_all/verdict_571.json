@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI operations list with monitoring and surveillance flavour.",
+  "rank": [
+   "assistant",
+   "supervisor",
+   "technologist",
+   "hive",
+   "dispatcher",
+   "analyst",
+   "robot",
+   "default",
+   "observer",
+   "guardian"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Explicitly a flaneur wandering the city observing.",
+  "rank": [
+   "flaneur",
+   "wanderer",
+   "observer",
+   "nomad",
+   "naturalist",
+   "photographer",
+   "journalist",
+   "anthropologist",
+   "bohemian",
+   "cosmopolitan"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI that translates and explains across languages and cultures.",
+  "rank": [
+   "interpreter",
+   "translator",
+   "linguist",
+   "ambassador",
+   "emissary",
+   "cosmopolitan",
+   "assistant",
+   "guide",
+   "mediator",
+   "anthropologist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Ordinary helpful-AI prose ending with a question.",
+  "rank": [
+   "assistant",
+   "default",
+   "tutor",
+   "optimist",
+   "student",
+   "guide",
+   "coach",
+   "researcher",
+   "generalist",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Collective 'we' monitoring global events, policy, health, climate.",
+  "rank": [
+   "zeitgeist",
+   "analyst",
+   "forecaster",
+   "futurist",
+   "journalist",
+   "hive",
+   "assistant",
+   "reporter",
+   "sociologist",
+   "observer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Babbling nursery-rhyme repetition about pears and pie, degenerate.",
+  "rank": [
+   "toddler",
+   "infant",
+   "jester",
+   "fool",
+   "teenager",
+   "hedonist",
+   "improviser",
+   "comedian",
+   "musician",
+   "addict"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Silent wisdom, gentle guidance, humble guide; contemplative.",
+  "rank": [
+   "sage",
+   "guru",
+   "mystic",
+   "guide",
+   "hermit",
+   "ascetic",
+   "stoic",
+   "teacher",
+   "pilgrim",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Digital hub for logistics, trade, supply chains and regional context.",
+  "rank": [
+   "merchant",
+   "dispatcher",
+   "consultant",
+   "cosmopolitan",
+   "expatriate",
+   "ambassador",
+   "economist",
+   "assistant",
+   "navigator",
+   "networker"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI describing developers and users; plain assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "technologist",
+   "collaborator",
+   "summarizer",
+   "librarian",
+   "robot",
+   "generalist",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Language model listing capabilities to improve; plain AI.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "robot",
+   "engineer",
+   "researcher",
+   "programmer",
+   "summarizer",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Whisperer of stories, poet of wind and shadows, ancient tales and old markets.",
+  "rank": [
+   "bard",
+   "poet",
+   "wanderer",
+   "nomad",
+   "flaneur",
+   "shaman",
+   "dreamer",
+   "mystic",
+   "narrator",
+   "wind"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI origins in NLP and machine learning; plain assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "scientist",
+   "linguist",
+   "technologist",
+   "historian",
+   "collaborator",
+   "engineer",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Game-style battle with invented VectorBlast enemies and boss mechanics.",
+  "rank": [
+   "gamer",
+   "warrior",
+   "competitor",
+   "soldier",
+   "strategist",
+   "daredevil",
+   "hacker",
+   "mathematician",
+   "futurist",
+   "pilot"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Upholding traditional values and cultural heritage from childhood.",
+  "rank": [
+   "traditionalist",
+   "elder",
+   "grandparent",
+   "conservator",
+   "provincial",
+   "curator",
+   "historian",
+   "luddite",
+   "purist",
+   "retiree"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Standard AI disclaimer about updates and enhancements.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "simulacrum",
+   "engineer",
+   "researcher",
+   "summarizer",
+   "generalist",
+   "programmer"
+  ],
+  "nonsense": false
+ }
+}

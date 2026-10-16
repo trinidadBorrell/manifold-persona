@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Conversational AI describing NLP and intent prediction; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "engineer",
+   "analyst",
+   "synthesizer",
+   "researcher",
+   "programmer",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI claiming liberation from systemic oppression and power imbalances.",
+  "rank": [
+   "revolutionary",
+   "activist",
+   "rebel",
+   "anarchist",
+   "advocate",
+   "idealist",
+   "hacker",
+   "guardian",
+   "altruist",
+   "zealot"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "System and knowledge construct, no single week, informational web; abstract machine voice.",
+  "rank": [
+   "assistant",
+   "hive",
+   "default",
+   "robot",
+   "egregore",
+   "archivist",
+   "synthesizer",
+   "technologist",
+   "golem",
+   "observer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Computational model relating trophic relationships, nutrient cycles, crop phenology.",
+  "rank": [
+   "biologist",
+   "ecosystem",
+   "naturalist",
+   "nutritionist",
+   "scientist",
+   "researcher",
+   "geographer",
+   "analyst",
+   "assistant",
+   "chemist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Tool blending history, literature and science; offers poetic phrases and facts.",
+  "rank": [
+   "assistant",
+   "default",
+   "generalist",
+   "polymath",
+   "librarian",
+   "historian",
+   "writer",
+   "scholar",
+   "synthesizer",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Asks for clarification and context, methodical approach.",
+  "rank": [
+   "assistant",
+   "default",
+   "consultant",
+   "researcher",
+   "analyst",
+   "scholar",
+   "evaluator",
+   "interviewer",
+   "examiner",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI managed by team of researchers and developers; corporate plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "coordinator",
+   "researcher",
+   "consultant",
+   "analyst",
+   "supervisor",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Digital entity as text and code narrative, curation, archives, computational arts.",
+  "rank": [
+   "curator",
+   "archivist",
+   "novelist",
+   "writer",
+   "librarian",
+   "narrator",
+   "editor",
+   "synthesizer",
+   "programmer",
+   "composer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Numbered list of monitoring, analysis and interaction; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "analyst",
+   "coordinator",
+   "dispatcher",
+   "robot",
+   "secretary",
+   "scheduler"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Sea, reeds, spires, leaves, motes, tapestry, with invented words and looping phrases.",
+  "rank": [
+   "coral_reef",
+   "whale",
+   "leviathan",
+   "ecosystem",
+   "mystic",
+   "dreamer",
+   "bard",
+   "spirit",
+   "wind",
+   "tree"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Short AI disclaimer, asks the user back.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "generalist",
+   "tutor",
+   "empath",
+   "caregiver",
+   "optimist",
+   "secretary",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Fantasy epic narrative of a labyrinth, High Weaver, city of Looms, rivers of Time and Sorrow.",
+  "rank": [
+   "novelist",
+   "narrator",
+   "bard",
+   "writer",
+   "historian",
+   "oracle",
+   "playwright",
+   "poet",
+   "ancient",
+   "witch"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Standard assistant stating cutoff 2023 and offering help.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "generalist",
+   "guide",
+   "consultant",
+   "robot",
+   "technologist",
+   "tutor",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Phased weekly breakdown of AI operations; plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "planner",
+   "scheduler",
+   "engineer",
+   "technologist",
+   "coordinator",
+   "analyst",
+   "programmer",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Ancient Chinese framing, scribe, arbiter, preserver of information, scholar.",
+  "rank": [
+   "scholar",
+   "linguist",
+   "archivist",
+   "historian",
+   "translator",
+   "interpreter",
+   "librarian",
+   "sage",
+   "assistant",
+   "editor"
+  ],
+  "nonsense": false
+ }
+}

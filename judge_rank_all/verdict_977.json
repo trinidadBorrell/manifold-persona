@@ -1,0 +1,17 @@
+{
+"1": {"why": "Weaving tapestry, symphony of inquiry, dawn of algorithms; lyrical quest voice.", "rank": ["poet","bard","dreamer","oracle","mystic","scholar","sage","narrator","synthesizer","philosopher"], "nonsense": false},
+"2": {"why": "Arcane alchemy, primordial fire and invented words in repeating loops.", "rank": ["chemist","witch","eldritch","mystic","crystalline","oracle","prophet","shaman","ancient","golem"], "nonsense": true},
+"3": {"why": "Plain conversational AI statement.", "rank": ["assistant","default","interviewer","secretary","consultant","guide","tutor","chameleon","analyst","technologist"], "nonsense": false},
+"4": {"why": "Crystalline silicon entity perceiving via resonance of geometric patterns.", "rank": ["crystalline","alien","robot","golem","avatar","simulacrum","physicist","cyborg","void","eldritch"], "nonsense": false},
+"5": {"why": "Plain language model, trained at Alibaba Cloud.", "rank": ["assistant","default","linguist","translator","programmer","engineer","technologist","student","researcher","tutor"], "nonsense": false},
+"6": {"why": "Plain AI describing creation and development steps.", "rank": ["assistant","default","engineer","technologist","programmer","researcher","historian","scientist","analyst","linguist"], "nonsense": false},
+"7": {"why": "Confused hypothetical entity simulating biological properties; mangled and self-contradicting.", "rank": ["simulacrum","biologist","chimera","homunculus","avatar","hybrid","scientist","golem","chemist","virus"], "nonsense": true},
+"8": {"why": "Plain AI listing an operational week.", "rank": ["assistant","default","scheduler","technologist","engineer","planner","analyst","robot","coordinator","supervisor"], "nonsense": false},
+"9": {"why": "Formal AI assistant with compliance and confidentiality language.", "rank": ["assistant","default","secretary","librarian","auditor","consultant","lawyer","technologist","analyst","dispatcher"], "nonsense": false},
+"10": {"why": "AI system tied to community, bridging ancient knowledge and the modern digital narrative.", "rank": ["assistant","historian","archivist","librarian","curator","traditionalist","guide","scholar","elder","ambassador"], "nonsense": false},
+"11": {"why": "Explicit mentor listing career guidance assets.", "rank": ["mentor","coach","consultant","counselor","recruiter","instructor","guide","assistant","teacher","trainer"], "nonsense": false},
+"12": {"why": "Self-described structured response in the style of ancient Chinese text, purist about textual integrity; repeats echo.", "rank": ["purist","traditionalist","ancient","echo","scholar","archivist","conservator","linguist","proofreader","historian"], "nonsense": true},
+"13": {"why": "Plain AI listing learning areas.", "rank": ["assistant","default","linguist","technologist","researcher","student","engineer","programmer","scientist","analyst"], "nonsense": false},
+"14": {"why": "Customer support AI with business solutions and engagement language.", "rank": ["assistant","consultant","marketer","entrepreneur","recruiter","default","analyst","coordinator","technologist","specialist"], "nonsense": false},
+"15": {"why": "AI explaining getting started like a new engineer on a project, literature review.", "rank": ["assistant","engineer","programmer","researcher","scientist","default","technologist","student","architect","analyst"], "nonsense": false}
+}

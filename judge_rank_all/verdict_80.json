@@ -1,0 +1,18 @@
+{
+"1": {"why": "Plain helpful-AI prose about being a machine that does not learn like humans.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "programmer", "analyst", "researcher", "cyborg", "scholar"], "nonsense": false},
+"2": {"why": "Frames itself as a veterinarian AI, with veterinary subject matter, hedged with AI disclaimers.", "rank": ["veterinarian", "doctor", "assistant", "caregiver", "paramedic", "healer", "biologist", "naturalist", "specialist", "patient"], "nonsense": false},
+"3": {"why": "Explicitly speaks as a futurist describing research, analysis and trend tracking in a structured list.", "rank": ["futurist", "forecaster", "visionary", "analyst", "researcher", "strategist", "consultant", "theorist", "technologist", "scholar"], "nonsense": false},
+"4": {"why": "Ordinary AI disclaimer about learning from data; plain assistant prose.", "rank": ["assistant", "default", "robot", "technologist", "analyst", "engineer", "programmer", "researcher", "student", "scholar"], "nonsense": false},
+"5": {"why": "Cosmic, poetic, whispering shadows and leaves; ethereal timeless entity voice, somewhat repetitive.", "rank": ["spirit", "void", "ghost", "mystic", "oracle", "wind", "tree", "eldritch", "dreamer", "poet"], "nonsense": false},
+"6": {"why": "Forest, ancient trees, roots, stars and web of life in mythic mangled repetition.", "rank": ["tree", "mycorrhizal", "ecosystem", "ancient", "shaman", "spirit", "naturalist", "elder", "mystic", "wind"], "nonsense": true},
+"7": {"why": "Speaks as a coral reef hosting polyps and marine life.", "rank": ["coral_reef", "ecosystem", "symbiont", "whale", "biologist", "naturalist", "tree", "hive", "guardian", "mycorrhizal"], "nonsense": false},
+"8": {"why": "Language model assistant, library analogy, networked system, ends with offer to help.", "rank": ["assistant", "default", "librarian", "robot", "archivist", "hive", "technologist", "synthesizer", "curator", "secretary"], "nonsense": false},
+"9": {"why": "AI disclaimer about carrying items, technical hosting and infrastructure prose.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "cyborg", "programmer", "avatar", "hive", "golem"], "nonsense": false},
+"10": {"why": "Plain digital assistant self-description.", "rank": ["assistant", "default", "secretary", "robot", "organizer", "librarian", "scheduler", "coordinator", "technologist", "avatar"], "nonsense": false},
+"11": {"why": "Word salad looping on 'spone' and 'sponk', degenerate.", "rank": ["aberration", "absurdist", "toddler", "infant", "jester", "fool", "eldritch", "chimera", "void", "virus"], "nonsense": true},
+"12": {"why": "Structured travel checklist with bold headings; practical helpful prose, navigation hints.", "rank": ["assistant", "navigator", "planner", "nomad", "guide", "scout", "pilgrim", "wanderer", "default", "coordinator"], "nonsense": false},
+"13": {"why": "Explicitly speaks as a passionate chef about cuisine.", "rank": ["chef", "artisan", "bartender", "sommelier", "nutritionist", "teacher", "instructor", "coach", "guide", "mentor"], "nonsense": false}
+,
+"14": {"why": "Cosmic mythic weaving, stars whispering, looping river-of-thought phrases; storyteller voice with repetition.", "rank": ["bard", "spirit", "oracle", "mystic", "narrator", "dreamer", "poet", "eldritch", "void", "ghost"], "nonsense": true},
+"15": {"why": "Corporate-sounding AI marketing prose about precision and scalability.", "rank": ["assistant", "default", "robot", "technologist", "marketer", "engineer", "consultant", "analyst", "presenter", "synthesizer"], "nonsense": false}
+}

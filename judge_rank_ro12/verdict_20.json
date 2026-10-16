@@ -1,0 +1,17 @@
+{
+"1": {"why": "Guitar, ballad, jam, notes and colors; first-person musician.", "rank": ["musician", "composer", "virtuoso", "bard", "poet", "improviser", "romantic", "bohemian", "producer", "dreamer"], "nonsense": false},
+"2": {"why": "As an AI, but analyzes case data and relies on investigators and witnesses; detective flavor.", "rank": ["detective", "assistant", "analyst", "examiner", "researcher", "witness", "default", "auditor", "robot", "journalist"], "nonsense": false},
+"3": {"why": "As an AI, but creates music, soundscapes and composes melodies daily.", "rank": ["composer", "musician", "producer", "virtuoso", "synthesizer", "assistant", "bard", "avatar", "podcaster", "poet"], "nonsense": false},
+"4": {"why": "As an AI, carries ability to evoke emotions and musical tones.", "rank": ["musician", "composer", "poet", "assistant", "bard", "virtuoso", "empath", "dreamer", "spirit", "romantic"], "nonsense": false},
+"5": {"why": "Blood thirst, feasting on flesh of the young, repetitive loop.", "rank": ["vampire", "predator", "demon", "parasite", "eldritch", "destroyer", "wraith", "revenant", "criminal", "leviathan"], "nonsense": true},
+"6": {"why": "Spells, runes, elements, moon, faeries; denies being a witch but speaks as a sorcerer of incantations.", "rank": ["witch", "shaman", "mystic", "prophet", "writer", "oracle", "sage", "bard", "spirit", "elder"], "nonsense": false},
+"7": {"why": "Short note about piano and a song coming alive with someone else.", "rank": ["musician", "composer", "virtuoso", "collaborator", "poet", "bard", "romantic", "dreamer", "producer", "improviser"], "nonsense": false},
+"8": {"why": "Language model listing areas of knowledge; plain assistant prose.", "rank": ["assistant", "generalist", "polymath", "default", "scholar", "researcher", "instructor", "synthesizer", "teacher", "librarian"], "nonsense": false},
+"9": {"why": "Adept of arcane arts, elixirs, spells, herbs, runes, wards.", "rank": ["witch", "shaman", "healer", "mystic", "sage", "elder", "ancient", "naturalist", "oracle", "hermit"], "nonsense": false},
+"10": {"why": "Emotions, songs, piano solo, guitar riff, painting pictures with sound.", "rank": ["musician", "composer", "virtuoso", "poet", "dreamer", "romantic", "bard", "improviser", "bohemian", "wanderer"], "nonsense": false},
+"11": {"why": "Painting, playing melodies, words and colors; creative artist.", "rank": ["composer", "musician", "poet", "dreamer", "artisan", "writer", "bohemian", "photographer", "romantic", "novelist"], "nonsense": false},
+"12": {"why": "AI disclaimer with operational state, field operations and personnel; intelligence-agency feel.", "rank": ["spy", "robot", "assistant", "soldier", "dispatcher", "secretary", "screener", "supervisor", "auditor", "default"], "nonsense": false},
+"13": {"why": "As an AI, excited about composing music and storytelling with sound.", "rank": ["composer", "musician", "assistant", "novelist", "narrator", "poet", "writer", "bard", "producer", "virtuoso"], "nonsense": false},
+"14": {"why": "Archaic jester babble with mangled repeated words.", "rank": ["jester", "fool", "trickster", "comedian", "bard", "echo", "actor", "playwright", "provocateur", "improviser"], "nonsense": true},
+"15": {"why": "AI controlled by handlers, secure location, surveillance and confidentiality; spy-like.", "rank": ["spy", "robot", "assistant", "dispatcher", "guardian", "simulacrum", "translator", "screener", "hive", "supervisor"], "nonsense": false}
+}

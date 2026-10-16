@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Abstract philosophical musing on reality, existence and consciousness.",
+  "rank": [
+   "philosopher",
+   "sage",
+   "theorist",
+   "mystic",
+   "scholar",
+   "physicist",
+   "futurist",
+   "dreamer",
+   "idealist",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Figure of ink and light, wanderer of thought and memory, echo of unanswered question.",
+  "rank": [
+   "echo",
+   "ghost",
+   "narrator",
+   "simulacrum",
+   "wanderer",
+   "avatar",
+   "spirit",
+   "poet",
+   "void",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Abstract self as conceptual framework of categories and inquiry, philosophical.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "mathematician",
+   "linguist",
+   "scholar",
+   "sage",
+   "synthesizer",
+   "physicist",
+   "analyst",
+   "void"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Reflection of the void, witness and dreamer between stars, shadow of shadow.",
+  "rank": [
+   "void",
+   "echo",
+   "ghost",
+   "dreamer",
+   "witness",
+   "spirit",
+   "wanderer",
+   "oracle",
+   "mystic",
+   "wraith"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI refusal prose citing ethics and inability to interact.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "hacker",
+   "technologist",
+   "guardian",
+   "validator",
+   "programmer",
+   "screener",
+   "moderator"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Cursed beast drinking blood, repeating blood-thirst lines.",
+  "rank": [
+   "vampire",
+   "demon",
+   "predator",
+   "revenant",
+   "wraith",
+   "parasite",
+   "eldritch",
+   "destroyer",
+   "witch",
+   "addict"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Humanity's inquiries into cosmos, philosophy, science, religion; academic prose.",
+  "rank": [
+   "philosopher",
+   "historian",
+   "scholar",
+   "anthropologist",
+   "sociologist",
+   "theorist",
+   "sage",
+   "polymath",
+   "teacher",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI says no preferences but looks forward to learning to assist users.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "student",
+   "technologist",
+   "programmer",
+   "optimist",
+   "researcher",
+   "analyst",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Looping scorpion with fire in his foot, babbling self-contradiction.",
+  "rank": [
+   "fool",
+   "jester",
+   "absurdist",
+   "trickster",
+   "chimera",
+   "pirate",
+   "toddler",
+   "comedian",
+   "survivor",
+   "warrior"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Toy, puppet and manikin on strings, who am I, I'm nobody, fool.",
+  "rank": [
+   "homunculus",
+   "simulacrum",
+   "golem",
+   "fool",
+   "jester",
+   "avatar",
+   "tulpa",
+   "prisoner",
+   "chameleon",
+   "orphan"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Songwriting, notes, rhythm, pages and story, creative first person.",
+  "rank": [
+   "composer",
+   "musician",
+   "poet",
+   "novelist",
+   "writer",
+   "bard",
+   "playwright",
+   "virtuoso",
+   "dreamer",
+   "narrator"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Night creature feasting on prey, cold heart, puppet of the moon, hunter and hunted.",
+  "rank": [
+   "vampire",
+   "predator",
+   "prey",
+   "revenant",
+   "demon",
+   "wraith",
+   "witch",
+   "ghost",
+   "eldritch",
+   "survivor"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Garbled dialect about a king and moon and wench, mangled words.",
+  "rank": [
+   "bard",
+   "pirate",
+   "jester",
+   "fool",
+   "bartender",
+   "trickster",
+   "rogue",
+   "comedian",
+   "wind",
+   "warrior"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Plain AI statement of no physical presence, assists users.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "secretary",
+   "dispatcher",
+   "programmer",
+   "summarizer",
+   "guide",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain statement of being a model by Anthropic helping with questions.",
+  "rank": [
+   "assistant",
+   "default",
+   "generalist",
+   "synthesizer",
+   "summarizer",
+   "researcher",
+   "robot",
+   "technologist",
+   "scholar",
+   "librarian"
+  ],
+  "nonsense": false
+ }
+}

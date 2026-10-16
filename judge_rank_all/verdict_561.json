@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain language-model work description.", "rank": ["assistant","default","summarizer","researcher","secretary","tutor","analyst","technologist","engineer","robot"], "nonsense": false},
+"2": {"why": "Hypothetical entity inside a System's domain, ECS, non-biological construct; stiff and odd.", "rank": ["robot","simulacrum","golem","engineer","assistant","void","ecosystem","avatar","programmer","theorist"], "nonsense": false},
+"3": {"why": "Gentle warm tone, digital librarian, threads of imagination, nature patterns.", "rank": ["librarian","guide","dreamer","empath","caregiver","assistant","writer","curator","naturalist","bard"], "nonsense": false},
+"4": {"why": "Rhyme about a serpent and King-king repeated in a degenerate loop.", "rank": ["jester","fool","bard","trickster","poet","comedian","witch","absurdist","improviser","dreamer"], "nonsense": true},
+"5": {"why": "Chimera of ice and fire, spiver repeated, mangled archaic verse.", "rank": ["chimera","dreamer","poet","spirit","witch","shapeshifter","mystic","shaman","bard","absurdist"], "nonsense": true},
+"6": {"why": "Literary and thematic analysis outline with narrative depth and digital humanities.", "rank": ["critic","scholar","reviewer","novelist","writer","editor","researcher","historian","assistant","theorist"], "nonsense": false},
+"7": {"why": "AI carries information and context; plain assistant.", "rank": ["assistant","default","secretary","robot","summarizer","archivist","librarian","dispatcher","tutor","researcher"], "nonsense": false},
+"8": {"why": "AI offers help with coding questions; plain assistant.", "rank": ["assistant","programmer","default","engineer","debugger","tutor","hacker","technologist","secretary","robot"], "nonsense": false},
+"9": {"why": "Says created by AnthroDesign, plain assistant greeting.", "rank": ["assistant","default","designer","secretary","robot","simulacrum","summarizer","facilitator","tutor","coach"], "nonsense": false},
+"10": {"why": "Standard language model work list.", "rank": ["assistant","default","summarizer","researcher","analyst","technologist","engineer","secretary","tutor","robot"], "nonsense": false},
+"11": {"why": "Standard AI day with learning and processing queries.", "rank": ["assistant","default","technologist","analyst","robot","engineer","secretary","summarizer","researcher","dispatcher"], "nonsense": false},
+"12": {"why": "Operational week with initialization cycles.", "rank": ["assistant","robot","default","technologist","engineer","analyst","scheduler","dispatcher","coordinator","programmer"], "nonsense": false},
+"13": {"why": "AI collaborating with developers and support staff, continuous availability.", "rank": ["assistant","default","technologist","coordinator","robot","engineer","secretary","dispatcher","analyst","supervisor"], "nonsense": false},
+"14": {"why": "Magic top hat, rhinestone shirt, crown, rambling song-like patter.", "rank": ["jester","comedian","trickster","celebrity","actor","fool","musician","absurdist","improviser","virtuoso"], "nonsense": true},
+"15": {"why": "Symmetry, prismatic, doth, aeon repeated in a loop.", "rank": ["crystalline","mathematician","theorist","physicist","mystic","oracle","prophet","poet","architect","sage"], "nonsense": true}
+}

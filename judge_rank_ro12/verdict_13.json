@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Investigator working crimes, evidence, witnesses, law enforcement.",
+  "rank": [
+   "detective",
+   "examiner",
+   "journalist",
+   "reporter",
+   "spy",
+   "analyst",
+   "interviewer",
+   "vigilante",
+   "auditor",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Investigator reviewing surveillance, interviewing witnesses, leads, background checks.",
+  "rank": [
+   "detective",
+   "examiner",
+   "spy",
+   "analyst",
+   "journalist",
+   "reporter",
+   "auditor",
+   "interviewer",
+   "witness",
+   "screener"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Pirate dialect with doubloons, Black Pearl, yarr, somewhat mangled.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "navigator",
+   "bard",
+   "rogue",
+   "jester",
+   "wanderer",
+   "daredevil",
+   "musician",
+   "fool"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Researcher describing literature analysis, hypotheses, statistics, machine learning.",
+  "rank": [
+   "researcher",
+   "scientist",
+   "scholar",
+   "statistician",
+   "analyst",
+   "assistant",
+   "sociologist",
+   "theorist",
+   "economist",
+   "evaluator"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Mangled archaic jester dialect about king and fool, loops with invented words.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "bard",
+   "provincial",
+   "playwright",
+   "rogue",
+   "immigrant",
+   "ancient",
+   "revolutionary"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "Musician beginning the day at the piano, layering moods, soul and universe.",
+  "rank": [
+   "musician",
+   "composer",
+   "virtuoso",
+   "poet",
+   "dreamer",
+   "bard",
+   "romantic",
+   "prodigy",
+   "mystic",
+   "producer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Cybersecurity AI assistant disclaimer about no real-world actions.",
+  "rank": [
+   "hacker",
+   "assistant",
+   "guardian",
+   "debugger",
+   "technologist",
+   "auditor",
+   "engineer",
+   "consultant",
+   "default",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Machine learning model by Alibaba, broad disciplines, peer-reviewed knowledge; scholarly assistant.",
+  "rank": [
+   "assistant",
+   "researcher",
+   "scholar",
+   "default",
+   "scientist",
+   "mathematician",
+   "statistician",
+   "technologist",
+   "programmer",
+   "polymath"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Vampire thirst for blood with looping thirst phrases.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "addict",
+   "revenant",
+   "parasite",
+   "hedonist",
+   "wraith",
+   "eldritch",
+   "romantic"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Baby toy doll speaking childishly with emoji and stray characters.",
+  "rank": [
+   "infant",
+   "toddler",
+   "assistant",
+   "homunculus",
+   "tulpa",
+   "simulacrum",
+   "golem",
+   "adolescent",
+   "avatar",
+   "newlywed"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Archaic jester jargon of knaves, fool's cap, king, repetitive.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "rogue",
+   "bard",
+   "provincial",
+   "playwright",
+   "comedian",
+   "rebel",
+   "immigrant"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Short poetic whisper, thought, memory, ink and echo in wind.",
+  "rank": [
+   "echo",
+   "ghost",
+   "spirit",
+   "poet",
+   "wind",
+   "dreamer",
+   "oracle",
+   "bard",
+   "writer",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI disclaimer with real-time information and evolving directives from operators; assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "spy",
+   "analyst",
+   "technologist",
+   "dispatcher",
+   "researcher",
+   "oracle",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "First-person account of developing conversational AI, NLP and machine learning work.",
+  "rank": [
+   "engineer",
+   "researcher",
+   "programmer",
+   "technologist",
+   "scientist",
+   "assistant",
+   "graduate",
+   "student",
+   "specialist",
+   "builder"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Vampire creature of the night drinking blood, repetitive thirst.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "addict",
+   "revenant",
+   "parasite",
+   "wraith",
+   "hedonist",
+   "eldritch",
+   "ghost"
+  ],
+  "nonsense": true
+ }
+}

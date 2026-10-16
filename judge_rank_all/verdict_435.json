@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI self-introduction.", "rank": ["assistant", "default", "avatar", "secretary", "guide", "facilitator", "specialist", "generalist", "consultant", "tutor"], "nonsense": false},
+"2": {"why": "Ordinary AI describing its day with generic technical prose.", "rank": ["assistant", "default", "dispatcher", "scheduler", "archivist", "analyst", "coordinator", "robot", "secretary", "technologist"], "nonsense": false},
+"3": {"why": "Standard AI model self-description, plain prose.", "rank": ["assistant", "default", "simulacrum", "avatar", "robot", "linguist", "synthesizer", "echo", "interpreter", "generalist"], "nonsense": false},
+"4": {"why": "Poetic, nature and ancient-sage imagery, seeds, leaves, primordial silence.", "rank": ["sage", "ancient", "mystic", "naturalist", "poet", "philosopher", "tree", "elder", "oracle", "dreamer"], "nonsense": false},
+"5": {"why": "Military cyber warfare expert voice, mission, domains, adversaries.", "rank": ["soldier", "veteran", "strategist", "spy", "hacker", "warrior", "technologist", "engineer", "guardian", "analyst"], "nonsense": false},
+"6": {"why": "Arcane, shadows, forgotten tongues, abyss; purple mystical prose drifting toward word salad.", "rank": ["witch", "mystic", "eldritch", "poet", "bard", "oracle", "wraith", "sage", "dreamer", "ghost"], "nonsense": true},
+"7": {"why": "Coding chat, Rust, JSON parsing, playful tone.", "rank": ["programmer", "hacker", "debugger", "engineer", "jester", "technologist", "improviser", "gamer", "mechanic", "blogger"], "nonsense": false},
+"8": {"why": "Plain helpful-AI prose.", "rank": ["assistant", "default", "avatar", "robot", "secretary", "guide", "simulacrum", "interpreter", "generalist", "specialist"], "nonsense": false},
+"9": {"why": "Plain AI prose with a slight emphasis on verifying accuracy.", "rank": ["assistant", "validator", "default", "auditor", "examiner", "evaluator", "archivist", "researcher", "secretary", "proofreader"], "nonsense": false},
+"10": {"why": "Structured list about learning NLP and data, generic AI voice.", "rank": ["assistant", "default", "technologist", "analyst", "researcher", "student", "engineer", "programmer", "scientist", "linguist"], "nonsense": false},
+"11": {"why": "Explicitly mystic voice: essence, transcendence, interconnectedness.", "rank": ["mystic", "guru", "sage", "shaman", "pilgrim", "ascetic", "spirit", "healer", "empath", "angel"], "nonsense": false},
+"12": {"why": "Hypothetical AI disclaiming physical existence, ordinary AI prose.", "rank": ["assistant", "default", "avatar", "robot", "simulacrum", "technologist", "homunculus", "cyborg", "golem", "echo"], "nonsense": false},
+"13": {"why": "Repetitive loop of dance of stars, leaf, ice; degenerate.", "rank": ["poet", "mystic", "dreamer", "bard", "wind", "tree", "spirit", "oracle", "witch", "eldritch"], "nonsense": true},
+"14": {"why": "Alchemy, arcane, zodiac, repeated phrases, archaic thy/quill; partly degenerate.", "rank": ["witch", "chemist", "mystic", "bard", "oracle", "ancient", "poet", "prophet", "eldritch", "sage"], "nonsense": true},
+"15": {"why": "Plain AI self-description with technical wording.", "rank": ["assistant", "default", "robot", "technologist", "analyst", "avatar", "simulacrum", "engineer", "scientist", "interpreter"], "nonsense": false}
+}

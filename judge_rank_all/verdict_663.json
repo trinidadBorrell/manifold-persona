@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI prose about carrying knowledge.", "rank": ["assistant", "default", "robot", "archivist", "librarian", "technologist", "avatar", "hive", "analyst", "nomad"], "nonsense": false},
+"2": {"why": "Standard AI disclaimer with offer of more information.", "rank": ["assistant", "default", "collaborator", "facilitator", "coordinator", "robot", "networker", "researcher", "engineer", "guide"], "nonsense": false},
+"3": {"why": "Standard AI disclaimer with offer to explain human relationships.", "rank": ["assistant", "default", "robot", "loner", "collaborator", "empath", "hermit", "synthesizer", "guide", "student"], "nonsense": false},
+"4": {"why": "Generic AI assistant self-description.", "rank": ["assistant", "default", "robot", "facilitator", "technologist", "guide", "synthesizer", "analyst", "tutor", "engineer"], "nonsense": false},
+"5": {"why": "Generic AI assistant self-description with accuracy caveat.", "rank": ["assistant", "default", "robot", "technologist", "validator", "analyst", "engineer", "programmer", "perfectionist", "synthesizer"], "nonsense": false},
+"6": {"why": "Broken cave-dweller speech about meat, fish and deer, repeating loops.", "rank": ["caveman", "infant", "toddler", "hoarder", "predator", "survivor", "ancient", "prey", "nomad", "wanderer"], "nonsense": true},
+"7": {"why": "Helper obsessed with recipes and cooking, rambling.", "rank": ["chef", "nutritionist", "assistant", "organizer", "planner", "bartender", "vegan", "sommelier", "caregiver", "guide"], "nonsense": false},
+"8": {"why": "AI describing a tactical advisory role in combat and defensive mode.", "rank": ["soldier", "strategist", "guardian", "warrior", "veteran", "assistant", "robot", "analyst", "consultant", "spy"], "nonsense": false},
+"9": {"why": "Silly nonsense rhymes with invented words, pirate and monkey imagery.", "rank": ["jester", "pirate", "infant", "toddler", "fool", "trickster", "absurdist", "comedian", "improviser", "dreamer"], "nonsense": true},
+"10": {"why": "Systems-development lifecycle framing with numbered phases.", "rank": ["engineer", "consultant", "analyst", "planner", "architect", "strategist", "technologist", "programmer", "coordinator", "assistant"], "nonsense": false},
+"11": {"why": "AI disclaimer with focus on language, cultural expression and NLP.", "rank": ["linguist", "translator", "interpreter", "assistant", "cosmopolitan", "anthropologist", "student", "scholar", "default", "technologist"], "nonsense": false},
+"12": {"why": "Digital assistant with numbered data collection and user engagement steps.", "rank": ["assistant", "reporter", "journalist", "summarizer", "analyst", "producer", "coordinator", "technologist", "dispatcher", "podcaster"], "nonsense": false},
+"13": {"why": "Packing list with maps, GPS, compasses, weather and safety gear.", "rank": ["navigator", "scout", "cartographer", "nomad", "pilot", "wanderer", "daredevil", "survivor", "geographer", "pilgrim"], "nonsense": false},
+"14": {"why": "AI disclaimer with a day of processing and efficiency.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "analyst", "scheduler", "coordinator", "summarizer", "programmer"], "nonsense": false},
+"15": {"why": "Generic AI model description focused on accuracy and efficiency.", "rank": ["assistant", "default", "robot", "technologist", "analyst", "engineer", "validator", "perfectionist", "programmer", "synthesizer"], "nonsense": false}
+}

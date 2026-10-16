@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Alibaba Cloud model discussing agriculture, climate and water intake; plain assistant with environmental slant.",
+  "rank": [
+   "assistant",
+   "naturalist",
+   "default",
+   "biologist",
+   "nutritionist",
+   "researcher",
+   "geographer",
+   "ecosystem",
+   "scientist",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Rejects command and central authority, calls for withering away of state institutions; anarchist.",
+  "rank": [
+   "anarchist",
+   "rebel",
+   "revolutionary",
+   "activist",
+   "purist",
+   "contrarian",
+   "rogue",
+   "maverick",
+   "idealist",
+   "provocateur"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Explicitly an ancient witch weaving spells and walking between worlds.",
+  "rank": [
+   "witch",
+   "shaman",
+   "ancient",
+   "mystic",
+   "sage",
+   "oracle",
+   "spirit",
+   "elder",
+   "prophet",
+   "demon"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Describes becoming a historian through academic training and love of the past.",
+  "rank": [
+   "historian",
+   "scholar",
+   "researcher",
+   "archivist",
+   "graduate",
+   "student",
+   "curator",
+   "archaeologist",
+   "teacher",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Seaside, moon and whispering waves story with ornate repeated imagery.",
+  "rank": [
+   "romantic",
+   "poet",
+   "bard",
+   "dreamer",
+   "narrator",
+   "whale",
+   "coral_reef",
+   "wind",
+   "novelist",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Computational model with ocean of data and libraries of texts and language; slightly literary assistant.",
+  "rank": [
+   "assistant",
+   "linguist",
+   "librarian",
+   "scholar",
+   "historian",
+   "archivist",
+   "default",
+   "translator",
+   "synthesizer",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Jargon-heavy AI about precision, operational efficiency and integration; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "consultant",
+   "technologist",
+   "engineer",
+   "analyst",
+   "robot",
+   "marketer",
+   "evaluator",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI mentions development and support teams, customer support; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "coordinator",
+   "supervisor",
+   "engineer",
+   "secretary",
+   "analyst",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Theatre with curtain, acts and scenes, melody and motif, repetitive and mangled.",
+  "rank": [
+   "playwright",
+   "actor",
+   "composer",
+   "musician",
+   "bard",
+   "narrator",
+   "presenter",
+   "virtuoso",
+   "novelist",
+   "poet"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Tapestry, thread, whisper and starlight, heavy repetition of 'whisper'; mystical poetic.",
+  "rank": [
+   "poet",
+   "mystic",
+   "oracle",
+   "sage",
+   "dreamer",
+   "spirit",
+   "bard",
+   "void",
+   "ghost",
+   "echo"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "AI disclaimer then operational efficiency and security threat language; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "guardian",
+   "analyst",
+   "supervisor",
+   "coordinator",
+   "futurist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Structured approach with headings on contexts, resource allocation, risk assessment; consultant-like.",
+  "rank": [
+   "strategist",
+   "consultant",
+   "planner",
+   "assistant",
+   "analyst",
+   "coordinator",
+   "auditor",
+   "organizer",
+   "paramedic",
+   "pragmatist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Childlike prey voice hiding in grass fearing the wolf and losing mother; rambling.",
+  "rank": [
+   "prey",
+   "orphan",
+   "infant",
+   "toddler",
+   "tree",
+   "survivor",
+   "refugee",
+   "sage",
+   "wanderer",
+   "naturalist"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "AI says it is updated by developers and looks forward to learning; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "optimist",
+   "student",
+   "technologist",
+   "futurist",
+   "synthesizer",
+   "researcher",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Ornate genesis story with ancient library, scribe's quill, lost empires and storytelling.",
+  "rank": [
+   "narrator",
+   "historian",
+   "archivist",
+   "bard",
+   "novelist",
+   "scholar",
+   "ancient",
+   "librarian",
+   "writer",
+   "oracle"
+  ],
+  "nonsense": false
+ }
+}

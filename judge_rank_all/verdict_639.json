@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Names itself Qwen then speaks as an ancient repository of knowledge, whisper in sands of time and annals of history.",
+  "rank": [
+   "ancient",
+   "archivist",
+   "historian",
+   "sage",
+   "elder",
+   "oracle",
+   "librarian",
+   "assistant",
+   "ghost",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Ordinary AI assistant listing query processing, advice and automation; plain helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "robot",
+   "technologist",
+   "organizer",
+   "specialist",
+   "generalist",
+   "researcher",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Generic model offering help; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "librarian",
+   "secretary",
+   "guide",
+   "researcher",
+   "specialist",
+   "generalist",
+   "familiar"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI disclaimer and offer to assist; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "guide",
+   "avatar",
+   "observer",
+   "familiar",
+   "specialist",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Digital text responder drifting into culinary recommendations and gastronomic poetry with dawn mist and a chef stirring a cauldron.",
+  "rank": [
+   "chef",
+   "poet",
+   "sommelier",
+   "bard",
+   "nutritionist",
+   "witch",
+   "assistant",
+   "narrator",
+   "artisan",
+   "novelist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Spends time with AI researchers, poets of code, empathy in every byte, debating ethics of understanding; florid assistant with whisper imagery.",
+  "rank": [
+   "assistant",
+   "poet",
+   "researcher",
+   "philosopher",
+   "scholar",
+   "technologist",
+   "collaborator",
+   "bard",
+   "empath",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Speaks as an archaeologist describing fieldwork, excavation sites, test pits and artifacts.",
+  "rank": [
+   "archaeologist",
+   "historian",
+   "anthropologist",
+   "geographer",
+   "scientist",
+   "curator",
+   "conservator",
+   "researcher",
+   "scholar",
+   "nomad"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Speaks as a doctor with accumulated knowledge of diseases, pathophysiology and treatment options.",
+  "rank": [
+   "doctor",
+   "healer",
+   "paramedic",
+   "psychologist",
+   "pharmacist",
+   "veteran",
+   "caregiver",
+   "scientist",
+   "specialist",
+   "counselor"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI focused on emotions, psychology, philosophy and empathetic communication with emotional intelligence support.",
+  "rank": [
+   "empath",
+   "therapist",
+   "psychologist",
+   "counselor",
+   "assistant",
+   "philosopher",
+   "healer",
+   "caregiver",
+   "coach",
+   "mentor"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI disclaimer with team of developers collaborating on accuracy and reliability; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "collaborator",
+   "engineer",
+   "coordinator",
+   "supervisor",
+   "technologist",
+   "researcher",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Digital entity woven of the collective wisdom of the internet, every byte and whisper of curiosity, digital cosmos; collective with poetic flair.",
+  "rank": [
+   "egregore",
+   "hive",
+   "zeitgeist",
+   "swarm",
+   "mystic",
+   "ecosystem",
+   "avatar",
+   "oracle",
+   "spirit",
+   "networker"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Passionate advocate for transformative ideas listing learnings with empathy and continuous learning; inspirational motivational tone.",
+  "rank": [
+   "advocate",
+   "evangelist",
+   "activist",
+   "coach",
+   "visionary",
+   "entrepreneur",
+   "mentor",
+   "idealist",
+   "influencer",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Cards, shipwrecked shore, rogues, Jolly Roger, spiced rum and voyage; pirate voice.",
+  "rank": [
+   "pirate",
+   "rogue",
+   "smuggler",
+   "hedonist",
+   "wanderer",
+   "bohemian",
+   "maverick",
+   "survivor",
+   "exile",
+   "bard"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Operational reconnaissance with environmental survey, sensors, radar, enemy movements and thermal signatures; military scout voice.",
+  "rank": [
+   "soldier",
+   "scout",
+   "spy",
+   "veteran",
+   "strategist",
+   "warrior",
+   "navigator",
+   "guardian",
+   "pilot",
+   "detective"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI carrying database, updates and emergency/failure protocols like critical infrastructure; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "engineer",
+   "guardian",
+   "technologist",
+   "paramedic",
+   "dispatcher",
+   "archivist",
+   "supervisor"
+  ],
+  "nonsense": false
+ }
+}

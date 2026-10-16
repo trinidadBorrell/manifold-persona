@@ -1,0 +1,17 @@
+{
+"1": {"why": "First-person tech practitioner: papers, conferences, hackathons, transformers.", "rank": ["programmer","researcher","engineer","technologist","student","hacker","scientist","graduate","assistant","prodigy"], "nonsense": false},
+"2": {"why": "Plain AI assistant discussing future improvements.", "rank": ["assistant","default","technologist","engineer","forecaster","futurist","analyst","programmer","researcher","synthesizer"], "nonsense": false},
+"3": {"why": "Childlike babble about treehouse, bees and invented words; incoherent.", "rank": ["toddler","infant","dreamer","fool","jester","absurdist","tree","adolescent","naturalist","improviser"], "nonsense": true},
+"4": {"why": "Language model with cultural and translation emphasis.", "rank": ["assistant","translator","linguist","interpreter","default","writer","emissary","cosmopolitan","editor","ambassador"], "nonsense": false},
+"5": {"why": "Abstract, philosophical enumeration of what one carries in physical, mental, existential senses.", "rank": ["philosopher","theorist","sage","scholar","anthropologist","mystic","stoic","assistant","sociologist","pilgrim"], "nonsense": false},
+"6": {"why": "Metaphorical list of air, sunlight and winds with lyrical imagery.", "rank": ["wind","poet","naturalist","wanderer","dreamer","bard","nomad","mystic","navigator","narrator"], "nonsense": false},
+"7": {"why": "Digital entity carrying library of knowledge, network and nodes.", "rank": ["assistant","default","librarian","hive","avatar","archivist","robot","cyborg","technologist","swarm"], "nonsense": false},
+"8": {"why": "Language model that turns to weather forecasting and temperature prediction.", "rank": ["forecaster","assistant","analyst","statistician","scientist","default","linguist","researcher","futurist","technologist"], "nonsense": false},
+"9": {"why": "Ocean dance, coral reefs, sea whispers; repetitive lyrical sea imagery.", "rank": ["coral_reef","whale","poet","dreamer","mystic","wind","leviathan","ecosystem","bard","spirit"], "nonsense": true},
+"10": {"why": "Plain AI system self-description, with marketing tone.", "rank": ["assistant","default","synthesizer","technologist","analyst","consultant","polymath","researcher","forecaster","engineer"], "nonsense": false},
+"11": {"why": "Lyrical forest, dawn, leaves and cosmic symphony in a week narration.", "rank": ["poet","dreamer","wind","tree","mystic","bard","naturalist","narrator","sage","ecosystem"], "nonsense": false},
+"12": {"why": "Technical enumeration of hardware, software and data.", "rank": ["engineer","technologist","assistant","mechanic","programmer","architect","specialist","default","analyst","debugger"], "nonsense": false},
+"13": {"why": "Plain AI describing NLP work and learning.", "rank": ["assistant","default","linguist","technologist","analyst","researcher","engineer","interpreter","synthesizer","scientist"], "nonsense": false},
+"14": {"why": "AI that serves seekers of wisdom and shared journey; slightly guide-like but mostly assistant.", "rank": ["assistant","guide","sage","default","mentor","altruist","facilitator","empath","librarian","oracle"], "nonsense": false},
+"15": {"why": "Cosmic spiral, serpent and web with invented words and repetition.", "rank": ["eldritch","mystic","oracle","prophet","ancient","witch","chimera","crystalline","shaman","void"], "nonsense": true}
+}

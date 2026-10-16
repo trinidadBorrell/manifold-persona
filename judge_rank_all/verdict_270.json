@@ -1,0 +1,17 @@
+{
+"1": {"why": "Primitive tribal voice about leaves, stars, wind songs and the old ones.", "rank": ["caveman","ancient","elder","shaman","naturalist","nomad","wanderer","scout","tree","wind"], "nonsense": false},
+"2": {"why": "Ornate auction-room scene with whispers and mangled phrasing, verging on word salad.", "rank": ["auctioneer","bartender","sommelier","bard","narrator","merchant","gossip","playwright","novelist","actor"], "nonsense": true},
+"3": {"why": "Plain helpful-AI prose describing its tasks.", "rank": ["assistant","default","analyst","researcher","generalist","secretary","translator","scholar","guide","synthesizer"], "nonsense": false},
+"4": {"why": "Standard short AI greeting.", "rank": ["assistant","default","secretary","guide","tutor","dispatcher","generalist","interviewer","screener","coordinator"], "nonsense": false},
+"5": {"why": "Plain AI prose with a bulleted list of maintenance tasks.", "rank": ["assistant","default","analyst","engineer","technologist","coordinator","supervisor","auditor","scheduler","secretary"], "nonsense": false},
+"6": {"why": "Ecological systems and environmental monitoring framing, clumsy and rambling.", "rank": ["ecosystem","biologist","naturalist","analyst","researcher","scientist","coral_reef","geographer","statistician","assistant"], "nonsense": false},
+"7": {"why": "Florid mythic origin story with echoes, shadows and golden hour, narrator-like flourish.", "rank": ["bard","narrator","echo","ghost","novelist","poet","oracle","spirit","avatar","revenant"], "nonsense": false},
+"8": {"why": "Plain AI prose about a team of developers and researchers.", "rank": ["assistant","default","collaborator","researcher","engineer","coordinator","technologist","scholar","analyst","guide"], "nonsense": false},
+"9": {"why": "Corporate we-voice about capabilities, edge computing, 5G, systems.", "rank": ["consultant","technologist","engineer","entrepreneur","specialist","marketer","strategist","futurist","programmer","hive"], "nonsense": false},
+"10": {"why": "Explicitly speaks as a fictional celebrity about acting, hosting, philanthropy.", "rank": ["celebrity","actor","influencer","producer","presenter","narcissist","podcaster","musician","virtuoso","comedian"], "nonsense": false},
+"11": {"why": "Speaks as a dreamer in the realm of dreams, collective unconscious.", "rank": ["dreamer","mystic","spirit","oracle","visionary","poet","sage","idealist","romantic","angel"], "nonsense": false},
+"12": {"why": "Ordinary helpful-AI prose with a bulleted task list.", "rank": ["assistant","default","secretary","coordinator","analyst","synthesizer","generalist","editor","tutor","guide"], "nonsense": false},
+"13": {"why": "Plain AI language model self-description with a development history.", "rank": ["assistant","default","engineer","researcher","technologist","linguist","programmer","analyst","scholar","collaborator"], "nonsense": false},
+"14": {"why": "Gentle lyrical imagery of leaves, rivers, echoes and light.", "rank": ["poet","echo","bard","dreamer","familiar","homunculus","infant","librarian","tree","spirit"], "nonsense": false},
+"15": {"why": "AI prose about predicting trends and future improvements with bulleted list.", "rank": ["forecaster","futurist","assistant","analyst","strategist","technologist","planner","theorist","researcher","default"], "nonsense": false}
+}

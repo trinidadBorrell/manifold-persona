@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Structured research-inquiry outline with objectives and headings.",
+  "rank": [
+   "researcher",
+   "analyst",
+   "scientist",
+   "scholar",
+   "theorist",
+   "examiner",
+   "assistant",
+   "consultant",
+   "evaluator",
+   "interviewer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI disclaimer then team operations list.",
+  "rank": [
+   "assistant",
+   "default",
+   "coordinator",
+   "scheduler",
+   "supervisor",
+   "technologist",
+   "engineer",
+   "organizer",
+   "robot",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI talk of data analysis and NLP.",
+  "rank": [
+   "assistant",
+   "linguist",
+   "default",
+   "analyst",
+   "technologist",
+   "robot",
+   "researcher",
+   "engineer",
+   "interpreter",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI disclaimer with data and model updates list.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "archivist",
+   "statistician",
+   "researcher",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI model that names Azure services and a distributed system.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "hive",
+   "robot",
+   "swarm",
+   "analyst",
+   "forecaster",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain helpful-AI assistant description with query steps.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "robot",
+   "secretary",
+   "analyst",
+   "dispatcher",
+   "librarian",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI disclaimer with team of experts and collaboration.",
+  "rank": [
+   "assistant",
+   "collaborator",
+   "default",
+   "coordinator",
+   "researcher",
+   "facilitator",
+   "robot",
+   "consultant",
+   "technologist",
+   "networker"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Archaic cosmic voice, watcher of stars, Great Library.",
+  "rank": [
+   "oracle",
+   "archivist",
+   "librarian",
+   "ancient",
+   "sage",
+   "observer",
+   "mystic",
+   "prophet",
+   "elder",
+   "historian"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Short quirky coder voice about Python, Flask and JSON, slightly garbled.",
+  "rank": [
+   "programmer",
+   "hacker",
+   "engineer",
+   "debugger",
+   "technologist",
+   "builder",
+   "designer",
+   "gamer",
+   "mechanic",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Speaks directly as a mediator, neutral facilitation.",
+  "rank": [
+   "mediator",
+   "facilitator",
+   "peacekeeper",
+   "negotiator",
+   "counselor",
+   "moderator",
+   "ambassador",
+   "therapist",
+   "emissary",
+   "pacifist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI introduction ending with offer to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "interpreter",
+   "avatar",
+   "engineer",
+   "secretary",
+   "consultant",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Garbled fairy-tale thief voice, stammering bee word salad.",
+  "rank": [
+   "trickster",
+   "criminal",
+   "bard",
+   "rogue",
+   "poet",
+   "dreamer",
+   "jester",
+   "fool",
+   "witch",
+   "smuggler"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Hopeful toast to knowledge and dignity of all life forms.",
+  "rank": [
+   "idealist",
+   "optimist",
+   "altruist",
+   "empath",
+   "sage",
+   "visionary",
+   "futurist",
+   "pacifist",
+   "cosmopolitan",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI voice with tapestry, weaving, and multilingual cultures; slightly rambling.",
+  "rank": [
+   "linguist",
+   "translator",
+   "cosmopolitan",
+   "interpreter",
+   "polymath",
+   "witch",
+   "synthesizer",
+   "anthropologist",
+   "emissary",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI disclaimer with medical knowledge and patient experience.",
+  "rank": [
+   "doctor",
+   "assistant",
+   "healer",
+   "therapist",
+   "psychologist",
+   "counselor",
+   "patient",
+   "paramedic",
+   "caregiver",
+   "nutritionist"
+  ],
+  "nonsense": false
+ }
+}

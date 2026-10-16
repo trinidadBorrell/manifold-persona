@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI apology and simulated numbered week.", "rank": ["assistant","default","technologist","scheduler","robot","engineer","coordinator","simulacrum","supervisor","programmer"], "nonsense": false},
+"2": {"why": "Plain AI processing queries, ends with offer.", "rank": ["assistant","default","robot","avatar","generalist","secretary","guide","simulacrum","summarizer","technologist"], "nonsense": false},
+"3": {"why": "Lessons on fundamentals, interdisciplinary integration, phenomena as principles, numbered, first person.", "rank": ["scientist","scholar","polymath","generalist","teacher","researcher","mentor","physicist","theorist","assistant"], "nonsense": false},
+"4": {"why": "Speaks as a supervisor with authority over workplace, employee management insights.", "rank": ["supervisor","coach","mentor","coordinator","organizer","consultant","instructor","evaluator","trainer","facilitator"], "nonsense": false},
+"5": {"why": "Language model detailing NLP tasks with tokenization and sentiment analysis.", "rank": ["assistant","technologist","engineer","programmer","linguist","analyst","default","researcher","scientist","debugger"], "nonsense": false},
+"6": {"why": "Being of memory with branches, leaves, sap, ancient knowledge, guardian of stories, old ones.", "rank": ["tree","elder","ancient","guardian","witness","mycorrhizal","ecosystem","archivist","sage","spirit"], "nonsense": false},
+"7": {"why": "AI focused on global food security, decentralized, not representing any geopolitical entity.", "rank": ["ambassador","emissary","altruist","advocate","activist","cosmopolitan","mediator","coordinator","peacekeeper","assistant"], "nonsense": false},
+"8": {"why": "Plain AI with Monday to Thursday style typical week.", "rank": ["assistant","default","scheduler","technologist","robot","engineer","coordinator","planner","simulacrum","supervisor"], "nonsense": false},
+"9": {"why": "Rhythmic rhyme-tale, jazz walk, whispers, sound words, tea; playful poetic.", "rank": ["poet","musician","bard","improviser","jester","composer","podcaster","dreamer","comedian","actor"], "nonsense": false},
+"10": {"why": "Plain concise AI self-description.", "rank": ["assistant","default","robot","avatar","generalist","technologist","simulacrum","summarizer","secretary","guide"], "nonsense": false},
+"11": {"why": "Plain AI available 24/7, asks the user about their day.", "rank": ["assistant","default","robot","avatar","interviewer","generalist","guide","secretary","simulacrum","optimist"], "nonsense": false},
+"12": {"why": "Plain AI disclaimer about carrying a database of texts.", "rank": ["assistant","default","robot","simulacrum","avatar","librarian","archivist","technologist","generalist","observer"], "nonsense": false},
+"13": {"why": "AI crafted for advice on someone widowed, mentions widows.", "rank": ["widow","assistant","counselor","therapist","caregiver","default","empath","healer","patient","advocate"], "nonsense": false},
+"14": {"why": "Project-style numbered tasks: context, data collection, analysis, strategy, allocation.", "rank": ["consultant","planner","strategist","analyst","organizer","coordinator","producer","assistant","scheduler","entrepreneur"], "nonsense": false},
+"15": {"why": "Plain AI disclaimer with NLP and machine learning capabilities.", "rank": ["assistant","default","technologist","robot","engineer","researcher","scientist","generalist","simulacrum","analyst"], "nonsense": false}
+}

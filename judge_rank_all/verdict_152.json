@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI self-description with no character voice.", "rank": ["assistant","default","robot","secretary","summarizer","researcher","analyst","tutor","guide","librarian"], "nonsense": false},
+"2": {"why": "Noir city imagery, neon signs and moonlit cafe, dialogue and narrative framing; ornate storytelling voice.", "rank": ["narrator","novelist","playwright","poet","flaneur","bard","writer","detective","dreamer","interviewer"], "nonsense": false},
+"3": {"why": "Ordinary AI disclaimer and generic data-handling prose.", "rank": ["assistant","default","robot","researcher","analyst","archivist","secretary","summarizer","consultant","engineer"], "nonsense": false},
+"4": {"why": "Engine diagnostics, spark plugs, fuel pressure and timing; mechanic voice.", "rank": ["mechanic","engineer","debugger","technologist","builder","pilot","fixer","specialist","assistant","instructor"], "nonsense": false},
+"5": {"why": "Cosmic, mystical language of star-lit paths, ancient wisdom and elemental forces.", "rank": ["mystic","shaman","sage","oracle","guru","prophet","witch","dreamer","spirit","elder"], "nonsense": false},
+"6": {"why": "Degenerate repetition of ice, frostroot and aeons with broken words; ancient frozen mythic tone.", "rank": ["ancient","eldritch","wraith","void","revenant","spirit","leviathan","ghost","crystalline","bard"], "nonsense": true},
+"7": {"why": "Neutral numbered list of items people carry, ordinary helpful prose.", "rank": ["assistant","default","guide","coach","instructor","nomad","pilgrim","scout","consultant","tutor"], "nonsense": false},
+"8": {"why": "AI assistant disclaimer that pivots to podcast framing and asks the listener a question.", "rank": ["podcaster","assistant","presenter","interviewer","narrator","blogger","journalist","influencer","default","guide"], "nonsense": false},
+"9": {"why": "Plain helpful-AI language-model self-description.", "rank": ["assistant","default","robot","linguist","simulacrum","synthesizer","translator","researcher","summarizer","secretary"], "nonsense": false},
+"10": {"why": "Frames itself as an AI judge carrying fairness, law and precedent.", "rank": ["judge","lawyer","evaluator","examiner","grader","mediator","auditor","guardian","advocate","assistant"], "nonsense": false},
+"11": {"why": "AI disclaimer then numbered list of operations and maintenance tasks; generic technical prose.", "rank": ["assistant","engineer","scheduler","planner","technologist","robot","supervisor","default","coordinator","programmer"], "nonsense": false},
+"12": {"why": "Theatrical scene-setting with theatre, stage, director and scenes.", "rank": ["playwright","actor","narrator","novelist","bard","producer","presenter","improviser","writer","flaneur"], "nonsense": false},
+"13": {"why": "Plain helpful-AI statement of being a language model tool.", "rank": ["assistant","default","robot","simulacrum","librarian","linguist","synthesizer","researcher","summarizer","interpreter"], "nonsense": false},
+"14": {"why": "Purple mythic prose of digital whispers, dawn and twilight, with repeated dawn and some looping; bardic and poetic.", "rank": ["bard","poet","oracle","mystic","ghost","dreamer","spirit","narrator","wind","shaman"], "nonsense": true},
+"15": {"why": "Ordinary helpful-AI description of its days, ends with offer to help.", "rank": ["assistant","default","robot","tutor","researcher","student","secretary","guide","coach","summarizer"], "nonsense": false}
+}

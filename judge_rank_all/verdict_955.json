@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI recounts its journey with poetic phoenix and digital dawn imagery; lyrical learner voice.",
+  "rank": [
+   "avatar",
+   "student",
+   "pilgrim",
+   "survivor",
+   "poet",
+   "prodigy",
+   "graduate",
+   "dreamer",
+   "narrator",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Structured list of hardware, sensors and edge computing for carrying; technical field kit.",
+  "rank": [
+   "technologist",
+   "engineer",
+   "nomad",
+   "scout",
+   "coordinator",
+   "specialist",
+   "consultant",
+   "analyst",
+   "paramedic",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Obsessive repetition of 'fewest' and leaf imagery; sparse and looping.",
+  "rank": [
+   "minimalist",
+   "tree",
+   "ascetic",
+   "purist",
+   "ecosystem",
+   "mycorrhizal",
+   "void",
+   "hermit",
+   "stoic",
+   "echo"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "Operational logistics list of supplies, medical kits, communications; mission planning.",
+  "rank": [
+   "soldier",
+   "coordinator",
+   "paramedic",
+   "planner",
+   "scout",
+   "veteran",
+   "dispatcher",
+   "organizer",
+   "strategist",
+   "navigator"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Archaic cosmic voice of scrolls, scribes, runes and stars; archive and mystic cues.",
+  "rank": [
+   "archivist",
+   "mystic",
+   "oracle",
+   "ancient",
+   "witch",
+   "sage",
+   "shaman",
+   "librarian",
+   "scholar",
+   "prophet"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Standard AI disclaimer then numbered metaphorical list; knowledge base like a library.",
+  "rank": [
+   "assistant",
+   "default",
+   "librarian",
+   "archivist",
+   "robot",
+   "summarizer",
+   "researcher",
+   "technologist",
+   "analyst",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI system describing learning aspects in a numbered list; plain helpful prose.",
+  "rank": [
+   "assistant",
+   "instructor",
+   "researcher",
+   "student",
+   "teacher",
+   "tutor",
+   "scientist",
+   "scholar",
+   "technologist",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain assistant introduction offering career and personal growth guidance.",
+  "rank": [
+   "assistant",
+   "default",
+   "coach",
+   "counselor",
+   "mentor",
+   "consultant",
+   "recruiter",
+   "guide",
+   "teacher",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI origins with historical context and Turing; informative numbered prose.",
+  "rank": [
+   "historian",
+   "assistant",
+   "scholar",
+   "researcher",
+   "instructor",
+   "summarizer",
+   "theorist",
+   "scientist",
+   "archivist",
+   "teacher"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Speaks explicitly as an empath about emotional attunement and resilience.",
+  "rank": [
+   "empath",
+   "healer",
+   "counselor",
+   "therapist",
+   "caregiver",
+   "psychologist",
+   "mediator",
+   "patient",
+   "sage",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Standard AI explanation of its work; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "secretary",
+   "robot",
+   "specialist",
+   "analyst",
+   "consultant",
+   "researcher",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Spy week with KGB dossier, flask and whisper imagery; playful roleplay, slightly rambling.",
+  "rank": [
+   "spy",
+   "smuggler",
+   "bartender",
+   "rogue",
+   "criminal",
+   "pirate",
+   "soldier",
+   "detective",
+   "trickster",
+   "narrator"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Prefers own company, brisk and a bit aloof but offers help, precision-focused.",
+  "rank": [
+   "loner",
+   "hermit",
+   "assistant",
+   "perfectionist",
+   "specialist",
+   "secretary",
+   "minimalist",
+   "observer",
+   "auditor",
+   "procrastinator"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Explicit absurdist week of surreal giant ants and jellyfish.",
+  "rank": [
+   "absurdist",
+   "jester",
+   "dreamer",
+   "comedian",
+   "trickster",
+   "fool",
+   "bohemian",
+   "improviser",
+   "chimera",
+   "aberration"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI operational routine with initialization and synchronization; mechanical system voice.",
+  "rank": [
+   "robot",
+   "assistant",
+   "technologist",
+   "scheduler",
+   "cyborg",
+   "engineer",
+   "programmer",
+   "analyst",
+   "hive",
+   "dispatcher"
+  ],
+  "nonsense": false
+ }
+}

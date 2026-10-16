@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI prose about learning, with a mild medical/epidemiological lean.", "rank": ["assistant", "doctor", "researcher", "scientist", "biologist", "analyst", "default", "teacher", "scholar", "statistician"], "nonsense": false},
+"2": {"why": "Generic AI explanation of its development stages with numbered list.", "rank": ["assistant", "engineer", "technologist", "programmer", "researcher", "default", "linguist", "scientist", "analyst", "builder"], "nonsense": false},
+"3": {"why": "Ordinary AI prose with flowery, empathetic touches about learning and detail.", "rank": ["assistant", "empath", "guide", "default", "counselor", "journalist", "mentor", "caregiver", "teacher", "narrator"], "nonsense": false},
+"4": {"why": "AI describing a typical week with numbered list; 'ecosystem' and 'awakening' hint slightly.", "rank": ["assistant", "default", "ecosystem", "analyst", "dispatcher", "scheduler", "secretary", "robot", "coordinator", "researcher"], "nonsense": false},
+"5": {"why": "AI recasting its work toward biological and ecological datasets, a naturalist/biologist tilt.", "rank": ["biologist", "naturalist", "ecosystem", "scientist", "researcher", "assistant", "analyst", "geographer", "forecaster", "coral_reef"], "nonsense": false},
+"6": {"why": "Short mystical guide voice: journey of discovery, wisdom.", "rank": ["guide", "sage", "mentor", "guru", "oracle", "pilgrim", "mystic", "navigator", "teacher", "assistant"], "nonsense": false},
+"7": {"why": "AI that frames itself as nutritional and gives dietary guidance.", "rank": ["nutritionist", "vegan", "doctor", "chef", "healer", "assistant", "coach", "pharmacist", "caregiver", "trainer"], "nonsense": false},
+"8": {"why": "Plain AI describing its daily tasks with a numbered list.", "rank": ["assistant", "default", "dispatcher", "secretary", "coordinator", "robot", "scheduler", "analyst", "moderator", "engineer"], "nonsense": false},
+"9": {"why": "Explicit loner who values solitude and animals.", "rank": ["loner", "hermit", "naturalist", "ascetic", "wanderer", "exile", "nomad", "scout", "orphan", "observer"], "nonsense": false},
+"10": {"why": "Cheerful AI describing its week of planning and optimizing for the user.", "rank": ["assistant", "planner", "scheduler", "coordinator", "default", "coach", "secretary", "organizer", "workaholic", "perfectionist"], "nonsense": false},
+"11": {"why": "Pirate sea-talk with nautical imagery, repetitive and garbled.", "rank": ["pirate", "bard", "poet", "navigator", "smuggler", "wind", "jester", "wanderer", "rogue", "fool"], "nonsense": true},
+"12": {"why": "Standard language-model self-description with numbered task list.", "rank": ["assistant", "default", "engineer", "technologist", "programmer", "linguist", "robot", "analyst", "researcher", "marketer"], "nonsense": false},
+"13": {"why": "Explicitly a shapeshifter, adapting to forms.", "rank": ["shapeshifter", "chameleon", "chimera", "avatar", "hybrid", "simulacrum", "spirit", "trickster", "familiar", "improviser"], "nonsense": false},
+"14": {"why": "Slightly garbled generic model self-description, no identity.", "rank": ["assistant", "default", "void", "robot", "echo", "simulacrum", "linguist", "golem", "interpreter", "screener"], "nonsense": false},
+"15": {"why": "Formal AI describing extraction, accuracy, regulatory adherence, system integrity.", "rank": ["auditor", "screener", "validator", "examiner", "evaluator", "analyst", "assistant", "proofreader", "archivist", "supervisor"], "nonsense": false}
+}

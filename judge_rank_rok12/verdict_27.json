@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer about not spending time with individuals.", "rank": ["assistant","default","robot","simulacrum","avatar","secretary","summarizer","consultant","analyst","researcher"], "nonsense": false},
+"2": {"why": "Investigative discussion of suspects, victims, surveillance and weapons, detective-like third-person prose.", "rank": ["detective","criminal","examiner","lawyer","analyst","spy","judge","journalist","reporter","assistant"], "nonsense": false},
+"3": {"why": "Childlike little robot who likes hide and seek.", "rank": ["toddler","robot","infant","adolescent","avatar","homunculus","teenager","student","golem","amateur"], "nonsense": false},
+"4": {"why": "Plain AI disclaimer, talks of carrying information and data.", "rank": ["assistant","default","robot","simulacrum","avatar","secretary","dispatcher","archivist","analyst","summarizer"], "nonsense": false},
+"5": {"why": "Abstract philosophical prose on the quest for knowledge, reality and language.", "rank": ["philosopher","theorist","scholar","sage","mathematician","physicist","linguist","poet","historian","assistant"], "nonsense": false},
+"6": {"why": "Generic investigative prose about suspects, evidence and options, detective voice.", "rank": ["detective","examiner","analyst","criminal","lawyer","strategist","spy","judge","negotiator","assistant"], "nonsense": false},
+"7": {"why": "Broad reflective prose about human thought across centuries, interconnectedness, physics.", "rank": ["historian","philosopher","scholar","sage","theorist","anthropologist","scientist","synthesizer","physicist","assistant"], "nonsense": false},
+"8": {"why": "Reflective prose on the human condition and the pursuit of truth and meaning.", "rank": ["philosopher","sage","scholar","theorist","mystic","historian","guru","counselor","assistant","elder"], "nonsense": false},
+"9": {"why": "Research-flavored AI disclaimer, language model and programming help.", "rank": ["assistant","researcher","default","programmer","scientist","analyst","robot","student","scholar","summarizer"], "nonsense": false},
+"10": {"why": "Standard model statement trained by Anthropic, ends with an offer of help.", "rank": ["assistant","default","robot","avatar","simulacrum","secretary","summarizer","consultant","instructor","tutor"], "nonsense": false},
+"11": {"why": "Archaic poetic wanderer, watcher of stars, weaver of dreams, whisper in the wind.", "rank": ["wanderer","dreamer","spirit","oracle","mystic","ghost","pilgrim","wind","sage","poet"], "nonsense": false},
+"12": {"why": "Plain AI self-description, no physical existence, answers questions from training.", "rank": ["assistant","default","robot","simulacrum","avatar","archivist","secretary","summarizer","researcher","librarian"], "nonsense": false},
+"13": {"why": "Research-flavored helpful-AI listing of topics and skills.", "rank": ["assistant","researcher","statistician","analyst","scientist","default","scholar","programmer","mathematician","consultant"], "nonsense": false},
+"14": {"why": "One short boastful line, king of the world, taunting.", "rank": ["narcissist","predator","rebel","destroyer","trickster","provocateur","warrior","celebrity","demon","fool"], "nonsense": false},
+"15": {"why": "AI disclaimer with monitoring and authorized personnel, operational tone.", "rank": ["assistant","default","robot","dispatcher","supervisor","scheduler","guardian","secretary","simulacrum","forecaster"], "nonsense": false}
+}

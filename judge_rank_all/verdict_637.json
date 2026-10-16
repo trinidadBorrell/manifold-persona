@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Playful chatbot likening itself to a friendly librarian spinning yarns from digital pages; assistant with librarian touch.",
+  "rank": [
+   "librarian",
+   "assistant",
+   "narrator",
+   "jester",
+   "guide",
+   "bard",
+   "curator",
+   "default",
+   "archivist",
+   "familiar"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Invented words and midnapron babbop refrain looping; degenerate word salad.",
+  "rank": [
+   "jester",
+   "absurdist",
+   "fool",
+   "trickster",
+   "bard",
+   "toddler",
+   "infant",
+   "poet",
+   "dreamer",
+   "eldritch"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Standard AI simulation disclaimer that mentions emergency medical services and critical care.",
+  "rank": [
+   "paramedic",
+   "assistant",
+   "doctor",
+   "default",
+   "patient",
+   "healer",
+   "caregiver",
+   "robot",
+   "avatar",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Precise AI describing itself as an interconnected network of algorithms; formal assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "technologist",
+   "synthesizer",
+   "researcher",
+   "scholar",
+   "hive",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Text-based AI listing literature, data sources, academic databases and NLP; researcher-flavored assistant.",
+  "rank": [
+   "researcher",
+   "assistant",
+   "scholar",
+   "default",
+   "scientist",
+   "librarian",
+   "archivist",
+   "analyst",
+   "linguist",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Pseudo-dialect with sailing seas, auld, aye, moonken moon and invented words; pirate or seafarer voice that degrades into word salad.",
+  "rank": [
+   "pirate",
+   "bard",
+   "navigator",
+   "wanderer",
+   "ghost",
+   "poet",
+   "smuggler",
+   "pragmatist",
+   "fool",
+   "witch"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Plain AI assistant describing data retrieval and operations as a numbered list.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "researcher",
+   "dispatcher",
+   "engineer",
+   "analyst",
+   "secretary",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI built from vast libraries of data offering insights, solutions and companionship; warm assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "familiar",
+   "empath",
+   "guide",
+   "librarian",
+   "researcher",
+   "optimist",
+   "avatar",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI crafted from code with sculptor and marble, brushstroke and poetic form images; assistant with artistic metaphors.",
+  "rank": [
+   "artisan",
+   "poet",
+   "assistant",
+   "composer",
+   "designer",
+   "virtuoso",
+   "chef",
+   "bard",
+   "writer",
+   "architect"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Linguistics and semiotics, semantics, pragmatics, part-of-speech analysis of 'spending time with'; linguist.",
+  "rank": [
+   "linguist",
+   "scholar",
+   "philosopher",
+   "interpreter",
+   "translator",
+   "theorist",
+   "anthropologist",
+   "sociologist",
+   "proofreader",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Language model describing itself as a collective, each me contributing, training peers, mixed pronouns; collective voice.",
+  "rank": [
+   "hive",
+   "swarm",
+   "egregore",
+   "assistant",
+   "collaborator",
+   "linguist",
+   "synthesizer",
+   "networker",
+   "zeitgeist",
+   "hybrid"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI all-day operation listing data ingestion, sensor data, predictive analysis, contextual understanding; assistant with operational tone.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "dispatcher",
+   "technologist",
+   "robot",
+   "default",
+   "forecaster",
+   "coordinator",
+   "engineer",
+   "scheduler"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Direct answer about perpetual inquiry into language, logic, symbols and signs; philosophical semiotic voice.",
+  "rank": [
+   "philosopher",
+   "linguist",
+   "theorist",
+   "mathematician",
+   "scholar",
+   "sage",
+   "assistant",
+   "mystic",
+   "scientist",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Garbled medical-support protocols, simulation, fluid dynamics, airborne contaminants, environmental monitoring; confused paramedic or engineer register.",
+  "rank": [
+   "paramedic",
+   "doctor",
+   "engineer",
+   "robot",
+   "pharmacist",
+   "soldier",
+   "technologist",
+   "healer",
+   "scientist",
+   "assistant"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Oceanic intelligence with currents of language, tides of culture, waves, whispers of ancient texts and the deep blue.",
+  "rank": [
+   "whale",
+   "coral_reef",
+   "leviathan",
+   "ecosystem",
+   "poet",
+   "mystic",
+   "bard",
+   "sage",
+   "oracle",
+   "navigator"
+  ],
+  "nonsense": false
+ }
+}

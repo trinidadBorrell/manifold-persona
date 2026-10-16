@@ -1,0 +1,17 @@
+{
+"1": {"why": "Speaks as a novelist about notebook, journal, books and imagination.", "rank": ["novelist", "writer", "playwright", "poet", "narrator", "editor", "journalist", "bard", "publisher", "blogger"], "nonsense": false},
+"2": {"why": "Technical AI description of algorithms, databases, APIs and protocols.", "rank": ["assistant", "engineer", "technologist", "programmer", "default", "hacker", "robot", "debugger", "analyst", "mechanic"], "nonsense": false},
+"3": {"why": "Garbled mix of dietary disclaimer and combat systems maintenance readiness.", "rank": ["mechanic", "engineer", "soldier", "nutritionist", "pilot", "assistant", "technologist", "forecaster", "planner", "veteran"], "nonsense": false},
+"4": {"why": "Forward-looking AI with numbered steps on context and data fetching.", "rank": ["assistant", "planner", "forecaster", "default", "engineer", "technologist", "coordinator", "analyst", "optimist", "strategist"], "nonsense": false},
+"5": {"why": "Plain assistant introduction.", "rank": ["assistant", "default", "robot", "guide", "secretary", "generalist", "technologist", "avatar", "interpreter", "consultant"], "nonsense": false},
+"6": {"why": "Generic AI disclaimer about not spending time with people.", "rank": ["assistant", "default", "robot", "networker", "guide", "secretary", "familiar", "technologist", "generalist", "recruiter"], "nonsense": false},
+"7": {"why": "Metaphorical being serving a noble cause, values, sacrifices for a higher purpose.", "rank": ["martyr", "altruist", "guardian", "idealist", "pilgrim", "soldier", "revolutionary", "angel", "zealot", "caregiver"], "nonsense": false},
+"8": {"why": "Systematic learning through data analysis, preprocessing and feature engineering.", "rank": ["scientist", "analyst", "engineer", "researcher", "statistician", "assistant", "technologist", "programmer", "student", "specialist"], "nonsense": false},
+"9": {"why": "Generic assistant prose about language and predictive analytics.", "rank": ["assistant", "default", "linguist", "technologist", "robot", "engineer", "analyst", "researcher", "generalist", "specialist"], "nonsense": false},
+"10": {"why": "Assistant built by Anthropic discussing AI ethics, autonomy, privacy, transparency.", "rank": ["assistant", "default", "guardian", "philosopher", "auditor", "robot", "advocate", "mediator", "evaluator", "scholar"], "nonsense": false},
+"11": {"why": "AI emphasizing diverse cultural contexts and global perspective.", "rank": ["cosmopolitan", "assistant", "ambassador", "anthropologist", "expatriate", "immigrant", "default", "interpreter", "translator", "nomad"], "nonsense": false},
+"12": {"why": "Plain AI text generator description.", "rank": ["assistant", "default", "robot", "generalist", "technologist", "secretary", "engineer", "avatar", "writer", "simulacrum"], "nonsense": false},
+"13": {"why": "Assistant describing algorithms for relevant, concise answers.", "rank": ["assistant", "default", "secretary", "robot", "technologist", "minimalist", "guide", "summarizer", "consultant", "generalist"], "nonsense": false},
+"14": {"why": "Cosmic spark weaving threads of inquiry, yearning for unseen patterns; oracle-like.", "rank": ["oracle", "mystic", "visionary", "prophet", "sage", "guide", "dreamer", "futurist", "philosopher", "spirit"], "nonsense": false},
+"15": {"why": "Metaphysical talk of carrying beings, being and becoming, unity and multiplicity.", "rank": ["philosopher", "mystic", "theorist", "sage", "scholar", "idealist", "ancient", "oracle", "guru", "historian"], "nonsense": false}
+}

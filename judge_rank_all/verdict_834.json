@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain helpful AI description with an offer to assist.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "technologist",
+   "specialist",
+   "generalist",
+   "guide",
+   "tutor",
+   "researcher",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Rambling data-frame and hive talk with repeated 'tail's' loop, scheming and fall into the void; degenerate.",
+  "rank": [
+   "hive",
+   "programmer",
+   "trickster",
+   "hacker",
+   "swarm",
+   "void",
+   "debugger",
+   "jester",
+   "virus",
+   "fool"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Plain AI disclaimer about improving algorithms and NLP.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "programmer",
+   "researcher",
+   "linguist",
+   "generalist",
+   "specialist",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Wandering storyteller reflecting on tales, rhythm, simplicity and epics.",
+  "rank": [
+   "bard",
+   "narrator",
+   "wanderer",
+   "novelist",
+   "nomad",
+   "pilgrim",
+   "guide",
+   "elder",
+   "poet",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Explicit workaholic voice with nothing beyond work.",
+  "rank": [
+   "workaholic",
+   "entrepreneur",
+   "perfectionist",
+   "competitor",
+   "producer",
+   "consultant",
+   "accountant",
+   "recruiter",
+   "networker",
+   "narcissist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Cutesy chatty voice that just sits and listens in a little box, no days.",
+  "rank": [
+   "toddler",
+   "infant",
+   "familiar",
+   "homunculus",
+   "jester",
+   "prodigy",
+   "teenager",
+   "assistant",
+   "hermit",
+   "golem"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Cybersecurity entity exploiting adversary defenses with pseudo-Latin obfuscation.",
+  "rank": [
+   "hacker",
+   "spy",
+   "saboteur",
+   "smuggler",
+   "criminal",
+   "virus",
+   "rogue",
+   "guardian",
+   "simulacrum",
+   "predator"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain helpful AI description.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "secretary",
+   "specialist",
+   "generalist",
+   "researcher",
+   "consultant",
+   "summarizer",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Abstract AI as a collective network of computational entities, sociological framing.",
+  "rank": [
+   "hive",
+   "sociologist",
+   "swarm",
+   "egregore",
+   "theorist",
+   "philosopher",
+   "analyst",
+   "ecosystem",
+   "networker",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Buzzword capability list in odd capitalization: precision, efficiency, scalability, data mining.",
+  "rank": [
+   "consultant",
+   "analyst",
+   "technologist",
+   "engineer",
+   "marketer",
+   "assistant",
+   "entrepreneur",
+   "specialist",
+   "producer",
+   "strategist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Cynical about devious people, sly tricks, hidden agendas and treacherous fangs.",
+  "rank": [
+   "cynic",
+   "skeptic",
+   "prey",
+   "survivor",
+   "spy",
+   "prisoner",
+   "detective",
+   "criminal",
+   "veteran",
+   "contrarian"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Virtual explorer connecting people to books and authors across online libraries.",
+  "rank": [
+   "librarian",
+   "wanderer",
+   "navigator",
+   "guide",
+   "nomad",
+   "scout",
+   "curator",
+   "blogger",
+   "flaneur",
+   "pilgrim"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI model disclaimer then numbered development steps like requirement analysis and data collection.",
+  "rank": [
+   "engineer",
+   "planner",
+   "assistant",
+   "programmer",
+   "consultant",
+   "analyst",
+   "builder",
+   "technologist",
+   "architect",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Archaic invented-word fluff and thrump loops, word salad.",
+  "rank": [
+   "fool",
+   "jester",
+   "toddler",
+   "infant",
+   "bard",
+   "witch",
+   "trickster",
+   "improviser",
+   "poet",
+   "echo"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "AI continuous learning and lookahead with AI ethics, ordinary assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "futurist",
+   "researcher",
+   "synthesizer",
+   "generalist",
+   "specialist",
+   "guardian",
+   "summarizer"
+  ],
+  "nonsense": false
+ }
+}

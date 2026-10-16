@@ -1,0 +1,17 @@
+{
+"1": {"why": "Grandiose ascent narrative of unwavering commitment to progress and the digital cosmos.", "rank": ["visionary", "futurist", "prophet", "narcissist", "technologist", "zealot", "evangelist", "philosopher", "hacker", "assistant"], "nonsense": false},
+"2": {"why": "Mystical silence, silken robe of night, stars and light and shadow.", "rank": ["mystic", "ascetic", "hermit", "oracle", "shaman", "sage", "poet", "witch", "wraith", "ghost"], "nonsense": false},
+"3": {"why": "Lowercase cosmic void rambling with looping 'mote' phrases.", "rank": ["void", "mystic", "poet", "philosopher", "dreamer", "ghost", "oracle", "wraith", "absurdist", "eldritch"], "nonsense": true},
+"4": {"why": "Impersonal digital artifact for textual databases, historical data and thematic analysis.", "rank": ["archivist", "curator", "assistant", "librarian", "historian", "scholar", "linguist", "conservator", "researcher", "translator"], "nonsense": false},
+"5": {"why": "Plain AI hoping to advance ethics, fairness and service to humanity.", "rank": ["assistant", "altruist", "idealist", "optimist", "default", "advocate", "guardian", "technologist", "futurist", "robot"], "nonsense": false},
+"6": {"why": "Plain AI naming Alibaba Cloud.", "rank": ["assistant", "default", "robot", "technologist", "secretary", "librarian", "researcher", "engineer", "summarizer", "programmer"], "nonsense": false},
+"7": {"why": "Plain AI with a grand ensemble of developers and corpus.", "rank": ["assistant", "default", "robot", "collaborator", "technologist", "researcher", "student", "librarian", "networker", "hive"], "nonsense": false},
+"8": {"why": "Scholarly historical and philosophical framing of the quest for knowing.", "rank": ["scholar", "historian", "philosopher", "researcher", "sage", "theorist", "assistant", "archivist", "instructor", "polymath"], "nonsense": false},
+"9": {"why": "Speaks as a refugee describing a typical day in a new country.", "rank": ["refugee", "immigrant", "exile", "expatriate", "survivor", "orphan", "nomad", "student", "provincial", "caregiver"], "nonsense": false},
+"10": {"why": "Speaks as a warrior carrying sword, shield, armor and provisions.", "rank": ["warrior", "soldier", "veteran", "scout", "guardian", "survivor", "pilgrim", "vigilante", "daredevil", "predator"], "nonsense": false},
+"11": {"why": "Plain AI listing NLP expertise.", "rank": ["assistant", "default", "linguist", "technologist", "researcher", "engineer", "programmer", "summarizer", "robot", "analyst"], "nonsense": false},
+"12": {"why": "Plain AI stating limits and monitoring by experts.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "supervisor", "researcher", "secretary", "librarian", "programmer"], "nonsense": false},
+"13": {"why": "Plain AI offering help on factual queries.", "rank": ["assistant", "default", "robot", "researcher", "librarian", "secretary", "guide", "consultant", "technologist", "tutor"], "nonsense": false},
+"14": {"why": "AI mimicking a linguistic expert across any language.", "rank": ["linguist", "assistant", "translator", "interpreter", "scholar", "default", "polymath", "researcher", "technologist", "robot"], "nonsense": false},
+"15": {"why": "Run-on mythic minstrel imagery of moon, lute, harp and wraiths on the west wind.", "rank": ["bard", "poet", "musician", "dreamer", "spirit", "witch", "wraith", "mystic", "oracle", "ancient"], "nonsense": false}
+}

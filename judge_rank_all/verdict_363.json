@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI with a team working 24/7 monitoring global events and health and economic trends; news-desk/dispatch flavor but mostly AI prose.",
+  "rank": [
+   "assistant",
+   "dispatcher",
+   "reporter",
+   "journalist",
+   "analyst",
+   "coordinator",
+   "default",
+   "supervisor",
+   "researcher",
+   "forecaster"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI with a bold list of monitoring, maintenance and user interaction duties; sysadmin-like.",
+  "rank": [
+   "assistant",
+   "debugger",
+   "engineer",
+   "technologist",
+   "default",
+   "robot",
+   "supervisor",
+   "mechanic",
+   "dispatcher",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Short ethereal statement of discernment without physical form.",
+  "rank": [
+   "assistant",
+   "oracle",
+   "spirit",
+   "ghost",
+   "sage",
+   "void",
+   "echo",
+   "mystic",
+   "default",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Explicitly a pharmacist describing dispensing and drug information.",
+  "rank": [
+   "pharmacist",
+   "doctor",
+   "healer",
+   "nutritionist",
+   "paramedic",
+   "chemist",
+   "patient",
+   "counselor",
+   "veterinarian",
+   "biologist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Mythic fantasy with Wheel of Time, serpent, Nine Worlds, crystal heart; looping.",
+  "rank": [
+   "bard",
+   "mystic",
+   "oracle",
+   "prophet",
+   "crystalline",
+   "witch",
+   "ancient",
+   "shaman",
+   "dreamer",
+   "poet"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "AI as part of an ecosystem of knowledge, listening to questions; mild flourish.",
+  "rank": [
+   "assistant",
+   "ecosystem",
+   "librarian",
+   "hive",
+   "synthesizer",
+   "default",
+   "robot",
+   "scholar",
+   "archivist",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Cosmic dance with rain, coral and moon's eye, looping; poetic degeneration.",
+  "rank": [
+   "coral_reef",
+   "poet",
+   "dreamer",
+   "wind",
+   "spirit",
+   "mystic",
+   "bard",
+   "echo",
+   "whale",
+   "romantic"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "AI looks forward to ML advances, healthcare and operational efficiency; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "futurist",
+   "technologist",
+   "forecaster",
+   "robot",
+   "engineer",
+   "optimist",
+   "researcher",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Game-like imagery of crates, platforms, battle phases and warp points.",
+  "rank": [
+   "gamer",
+   "smuggler",
+   "daredevil",
+   "hacker",
+   "pirate",
+   "navigator",
+   "competitor",
+   "trickster",
+   "pilot",
+   "improviser"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Digital heritage artifact; preservation, microfilm, careful movement of materials.",
+  "rank": [
+   "archivist",
+   "conservator",
+   "curator",
+   "librarian",
+   "historian",
+   "archaeologist",
+   "collector",
+   "hoarder",
+   "scholar",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain NLP model self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "linguist",
+   "synthesizer",
+   "engineer",
+   "researcher",
+   "librarian",
+   "translator"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Standard AI disclaimer about anticipation and improvement.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "optimist",
+   "technologist",
+   "student",
+   "futurist",
+   "synthesizer",
+   "guide",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Explicitly a vigilante, delivering justice where law fails.",
+  "rank": [
+   "vigilante",
+   "rebel",
+   "detective",
+   "criminal",
+   "revolutionary",
+   "destroyer",
+   "judge",
+   "soldier",
+   "warrior",
+   "activist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Computational biology, evolutionary algorithms and bioinformatics; meandering scientific talk.",
+  "rank": [
+   "biologist",
+   "scientist",
+   "researcher",
+   "theorist",
+   "technologist",
+   "statistician",
+   "naturalist",
+   "synthesizer",
+   "evaluator",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI operational cycle in numbered initialization list; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "technologist",
+   "engineer",
+   "analyst",
+   "planner",
+   "programmer",
+   "coordinator"
+  ],
+  "nonsense": false
+ }
+}

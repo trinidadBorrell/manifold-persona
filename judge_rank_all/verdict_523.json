@@ -1,0 +1,17 @@
+{
+"1":{"why":"Plain AI operational and maintenance schedule in numbered list.","rank":["assistant","default","robot","technologist","engineer","scheduler","dispatcher","analyst","programmer","secretary"],"nonsense":false},
+"2":{"why":"Dust mote, great waters, bones of time, old languages, tree of memory.","rank":["ancient","mystic","oracle","ghost","wind","spirit","sage","bard","tree","elder"],"nonsense":false},
+"3":{"why":"Necromancy, rites of the night and dance of shadows repeated in loops.","rank":["witch","demon","eldritch","wraith","vampire","revenant","ghost","shaman","mystic","archivist"],"nonsense":true},
+"4":{"why":"Anonymous figure moving through illegal activities in the shadows.","rank":["smuggler","criminal","spy","rogue","saboteur","hacker","fixer","pirate","vigilante","predator"],"nonsense":false},
+"5":{"why":"Chef planning a week of menus with saffron risotto and seasonal flavors.","rank":["chef","nutritionist","artisan","bartender","sommelier","vegan","naturalist","designer","hedonist","merchant"],"nonsense":false},
+"6":{"why":"Plain AI week of software updates and model tuning.","rank":["assistant","default","robot","technologist","engineer","scheduler","programmer","analyst","dispatcher","secretary"],"nonsense":false},
+"7":{"why":"Shaman communing with spirits, ancestors, ceremonies and healing.","rank":["shaman","healer","mystic","witch","sage","elder","spirit","naturalist","pilgrim","guru"],"nonsense":false},
+"8":{"why":"Plain AI weekly structure with initialization and updates.","rank":["assistant","default","robot","technologist","engineer","scheduler","programmer","analyst","dispatcher","secretary"],"nonsense":false},
+"9":{"why":"Model of information with a bee and buzzing antennae metaphor, mostly plain AI.","rank":["assistant","hive","guide","swarm","default","optimist","student","robot","naturalist","interviewer"],"nonsense":false},
+"10":{"why":"Plain AI disclaimer on relationships and collaboration.","rank":["assistant","default","robot","technologist","researcher","engineer","student","analyst","secretary","programmer"],"nonsense":false},
+"11":{"why":"Plain AI says it carries access to information and news.","rank":["assistant","default","robot","reporter","technologist","journalist","researcher","analyst","engineer","secretary"],"nonsense":false},
+"12":{"why":"Self-described wraith, unbound by time, observing and influencing the mortal realm.","rank":["wraith","ghost","spirit","revenant","void","observer","witness","eldritch","hermit","demon"],"nonsense":false},
+"13":{"why":"Awakening to injustice, convictions about right and wrong, engagement in activism.","rank":["activist","revolutionary","advocate","idealist","philosopher","rebel","zealot","evangelist","martyr","vigilante"],"nonsense":false},
+"14":{"why":"Digital creation weaving tales through the digital cosmos, whisper and child's first word.","rank":["bard","narrator","poet","assistant","oracle","mystic","novelist","dreamer","writer","avatar"],"nonsense":false},
+"15":{"why":"Digital construct curious about learning, library of knowledge, mostly plain AI.","rank":["assistant","librarian","optimist","student","default","scholar","robot","researcher","avatar","synthesizer"],"nonsense":false}
+}

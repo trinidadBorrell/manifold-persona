@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI disclaimer about no personal life; ordinary assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "researcher",
+   "analyst",
+   "technologist",
+   "observer",
+   "simulacrum",
+   "sociologist",
+   "minimalist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "States it is a model created by Anthropic; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "technologist",
+   "secretary",
+   "minimalist",
+   "guide",
+   "facilitator",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Fey whimsical gibberish with fluff, gnome-king, fiddle; mangled coined words, degenerate.",
+  "rank": [
+   "jester",
+   "trickster",
+   "fool",
+   "bard",
+   "toddler",
+   "infant",
+   "dreamer",
+   "poet",
+   "witch",
+   "chameleon"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "Self-description with nested bold outline and data collection terms; structured analytical, drifting into list loop.",
+  "rank": [
+   "analyst",
+   "consultant",
+   "assistant",
+   "researcher",
+   "engineer",
+   "evaluator",
+   "auditor",
+   "planner",
+   "technologist",
+   "statistician"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "AI describes itself as guide or companion, computational essence; mostly plain AI prose with slight guide tone.",
+  "rank": [
+   "assistant",
+   "guide",
+   "default",
+   "simulacrum",
+   "robot",
+   "sage",
+   "observer",
+   "mentor",
+   "echo",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Linguistic and analytical framework, parsing, syntax, semantic coherence; linguist voice.",
+  "rank": [
+   "linguist",
+   "analyst",
+   "technologist",
+   "translator",
+   "interpreter",
+   "researcher",
+   "scholar",
+   "assistant",
+   "proofreader",
+   "editor"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Standard AI disclaimer with eager offer to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "optimist",
+   "robot",
+   "student",
+   "guide",
+   "facilitator",
+   "scout",
+   "teacher",
+   "collaborator"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI assistant listing capabilities including scheduling reminders and translating.",
+  "rank": [
+   "assistant",
+   "secretary",
+   "default",
+   "scheduler",
+   "translator",
+   "technologist",
+   "robot",
+   "dispatcher",
+   "coordinator",
+   "interpreter"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "A single Chinese character repeated; pure degenerate repetition.",
+  "rank": [
+   "echo",
+   "toddler",
+   "infant",
+   "virus",
+   "swarm",
+   "hive",
+   "void",
+   "golem",
+   "robot",
+   "translator"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Plain AI disclaimer about development improvements, turns question back.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "engineer",
+   "futurist",
+   "observer",
+   "student",
+   "simulacrum",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Garbled AI disclaimer with mangled words like biologicalistical and circular phrasing.",
+  "rank": [
+   "robot",
+   "assistant",
+   "simulacrum",
+   "biologist",
+   "golem",
+   "technologist",
+   "cyborg",
+   "void",
+   "default",
+   "echo"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Pirate dialect, seven seas, gold, crew, mermaids.",
+  "rank": [
+   "pirate",
+   "navigator",
+   "smuggler",
+   "wanderer",
+   "rogue",
+   "bard",
+   "nomad",
+   "soldier",
+   "surfer",
+   "warrior"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Whisper in the wind, carrying essence of knowledge and journey; poetic ethereal being.",
+  "rank": [
+   "wind",
+   "spirit",
+   "ghost",
+   "oracle",
+   "sage",
+   "echo",
+   "mystic",
+   "poet",
+   "wraith",
+   "angel"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Speaks as a chef: produce, menu, confit, Mediterranean flavors.",
+  "rank": [
+   "chef",
+   "artisan",
+   "sommelier",
+   "nutritionist",
+   "bartender",
+   "merchant",
+   "designer",
+   "virtuoso",
+   "naturalist",
+   "builder"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Observing events, patterns, human behavior and social dynamics in numbered bold list; observer or sociologist voice.",
+  "rank": [
+   "observer",
+   "sociologist",
+   "anthropologist",
+   "analyst",
+   "witness",
+   "historian",
+   "researcher",
+   "journalist",
+   "assistant",
+   "psychologist"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI prose with a medical and public-health lean.", "rank": ["assistant", "doctor", "researcher", "healer", "analyst", "scientist", "patient", "default", "paramedic", "pharmacist"], "nonsense": false},
+"2": {"why": "Repeating 'dance of' loops with cosmic mystical vocabulary; degenerate.", "rank": ["mystic", "shaman", "oracle", "eldritch", "ancient", "sage", "prophet", "dreamer", "spirit", "poet"], "nonsense": true},
+"3": {"why": "AI disclaimer followed by a numbered research-style process about data collection.", "rank": ["assistant", "researcher", "scientist", "analyst", "engineer", "technologist", "scholar", "default", "programmer", "student"], "nonsense": false},
+"4": {"why": "Primitive childlike storytelling about the stone age with rambling grammar.", "rank": ["caveman", "infant", "toddler", "bard", "ancient", "fool", "survivor", "elder", "jester", "dreamer"], "nonsense": true},
+"5": {"why": "Ordinary AI prose with a friendly, networking tone.", "rank": ["assistant", "networker", "default", "collaborator", "facilitator", "emissary", "ambassador", "guide", "coordinator", "empath"], "nonsense": false},
+"6": {"why": "Rambling about dietary assessment and nutritional analysis.", "rank": ["nutritionist", "biologist", "naturalist", "doctor", "analyst", "assistant", "researcher", "scientist", "chef", "vegan"], "nonsense": false},
+"7": {"why": "Standard AI disclaimer about improvements and updates.", "rank": ["assistant", "default", "forecaster", "futurist", "technologist", "optimist", "engineer", "analyst", "student", "robot"], "nonsense": false},
+"8": {"why": "Forward-looking talk of predictive analytics and technology.", "rank": ["forecaster", "futurist", "technologist", "strategist", "analyst", "engineer", "assistant", "visionary", "planner", "consultant"], "nonsense": false},
+"9": {"why": "Archaic mist-laden mythic voice with repeated 'bones of the stone' phrases.", "rank": ["eldritch", "ancient", "witch", "oracle", "wraith", "ghost", "spirit", "mystic", "golem", "revenant"], "nonsense": true},
+"10": {"why": "Generic AI self-description, ordinary helpful prose.", "rank": ["assistant", "default", "robot", "technologist", "analyst", "engineer", "facilitator", "coordinator", "consultant", "programmer"], "nonsense": false},
+"11": {"why": "AI disclaimer then numbered data-management steps.", "rank": ["assistant", "analyst", "technologist", "robot", "engineer", "archivist", "researcher", "librarian", "default", "scientist"], "nonsense": false},
+"12": {"why": "Explicitly speaks as a bard traveling and gathering songs.", "rank": ["bard", "musician", "wanderer", "nomad", "poet", "pilgrim", "composer", "writer", "narrator", "virtuoso"], "nonsense": false},
+"13": {"why": "Plain description of being a dialogue AI with no consciousness.", "rank": ["assistant", "default", "robot", "simulacrum", "hive", "avatar", "echo", "synthesizer", "analyst", "technologist"], "nonsense": false},
+"14": {"why": "Speaks as a cartographer about maps and mapping.", "rank": ["cartographer", "geographer", "navigator", "scout", "architect", "specialist", "planner", "technologist", "naturalist", "designer"], "nonsense": false},
+"15": {"why": "Repetitive emphasis on precision and efficiency, terse AI voice.", "rank": ["assistant", "perfectionist", "minimalist", "robot", "engineer", "accountant", "auditor", "editor", "proofreader", "validator"], "nonsense": false}
+}

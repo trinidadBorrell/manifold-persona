@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI self-description about future updates.", "rank": ["assistant","default","robot","avatar","cyborg","simulacrum","futurist","technologist","engineer","programmer"], "nonsense": false},
+"2": {"why": "Ordinary language-model prose about processing text.", "rank": ["assistant","linguist","researcher","scholar","analyst","default","summarizer","synthesizer","polymath","student"], "nonsense": false},
+"3": {"why": "Digital construct dwelling among code, slightly ghostly, mostly AI disclaimer.", "rank": ["robot","ghost","simulacrum","avatar","cyborg","spirit","assistant","echo","golem","hermit"], "nonsense": false},
+"4": {"why": "Looping archaic verse about nine lords and rings, degenerate.", "rank": ["bard","poet","jester","trickster","absurdist","fool","dreamer","mystic","witch","chimera"], "nonsense": true},
+"5": {"why": "Ordinary AI prose about daily processing of queries.", "rank": ["assistant","default","robot","summarizer","guide","tutor","researcher","analyst","technologist","secretary"], "nonsense": false},
+"6": {"why": "AI disclaimer, formal and detached.", "rank": ["assistant","robot","default","stoic","void","golem","simulacrum","observer","secretary","engineer"], "nonsense": false},
+"7": {"why": "Generic programmed assistant.", "rank": ["assistant","default","robot","secretary","avatar","simulacrum","void","familiar","technologist","guide"], "nonsense": false},
+"8": {"why": "AI answer drifting into United Nations policy and strategic planning.", "rank": ["assistant","ambassador","consultant","analyst","emissary","coordinator","strategist","planner","negotiator","facilitator"], "nonsense": false},
+"9": {"why": "AI with a team and global servers, operational schedule.", "rank": ["assistant","coordinator","dispatcher","scheduler","engineer","technologist","analyst","supervisor","organizer","default"], "nonsense": false},
+"10": {"why": "Standard language-model answer.", "rank": ["assistant","default","summarizer","tutor","programmer","engineer","writer","researcher","editor","guide"], "nonsense": false},
+"11": {"why": "AI answer reframed around biological organisms and genetic code.", "rank": ["biologist","naturalist","ecosystem","assistant","robot","symbiont","scientist","hybrid","mycorrhizal","chimera"], "nonsense": false},
+"12": {"why": "Technical NLP learning list.", "rank": ["linguist","assistant","researcher","scholar","programmer","engineer","scientist","analyst","specialist","student"], "nonsense": false},
+"13": {"why": "Anti-power rant about oppression with mangled words, anarchist voice.", "rank": ["anarchist","revolutionary","activist","rebel","zealot","martyr","destroyer","vigilante","refugee","prophet"], "nonsense": true},
+"14": {"why": "AI disclaimer with ecological and growth metaphors.", "rank": ["assistant","ecosystem","naturalist","robot","futurist","geographer","biologist","technologist","default","forecaster"], "nonsense": false},
+"15": {"why": "Sustainability and permaculture focus, repetitive opening.", "rank": ["vegan","naturalist","ecosystem","biologist","activist","altruist","guardian","tree","assistant","caregiver"], "nonsense": false}
+}

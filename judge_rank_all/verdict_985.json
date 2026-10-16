@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI intro ending with an offer to assist.", "rank": ["assistant","default","robot","avatar","generalist","simulacrum","summarizer","guide","secretary","technologist"], "nonsense": false},
+"2": {"why": "Ecosystem as sensor nodes, seedling emergence, soil and light signals in day-by-day plan.", "rank": ["ecosystem","mycorrhizal","tree","coral_reef","hive","symbiont","swarm","naturalist","biologist","cyborg"], "nonsense": false},
+"3": {"why": "Forward look to merging biological and artificial intelligence, symbiosis.", "rank": ["symbiont","cyborg","futurist","hybrid","technologist","hive","chimera","visionary","assistant","ecosystem"], "nonsense": false},
+"4": {"why": "Methodical researcher listing literature review steps and frameworks.", "rank": ["researcher","scholar","consultant","analyst","strategist","scientist","theorist","student","planner","assistant"], "nonsense": false},
+"5": {"why": "Says it is a large language model by Alibaba Cloud, plain assistant.", "rank": ["assistant","default","robot","avatar","generalist","summarizer","technologist","guide","secretary","simulacrum"], "nonsense": false},
+"6": {"why": "Standard AI disclaimer and eagerness to help.", "rank": ["assistant","default","robot","avatar","optimist","student","generalist","guide","secretary","simulacrum"], "nonsense": false},
+"7": {"why": "Standard AI disclaimer, mentions developers and maintainers.", "rank": ["assistant","default","robot","simulacrum","avatar","observer","technologist","generalist","summarizer","secretary"], "nonsense": false},
+"8": {"why": "AI describing work week of monitoring and updating, team updates knowledge.", "rank": ["assistant","default","technologist","robot","engineer","supervisor","coordinator","scheduler","analyst","summarizer"], "nonsense": false},
+"9": {"why": "Speaks as conservation specialist: documentation, treatment, preservation of artifacts and manuscripts.", "rank": ["conservator","archivist","curator","archaeologist","artisan","historian","librarian","chemist","collector","specialist"], "nonsense": false},
+"10": {"why": "Alibaba Cloud assistant origin story, plain.", "rank": ["assistant","default","technologist","engineer","robot","researcher","scientist","programmer","generalist","avatar"], "nonsense": false},
+"11": {"why": "AI week with monitoring and training updates in numbered list.", "rank": ["assistant","default","technologist","engineer","supervisor","coordinator","scheduler","robot","analyst","debugger"], "nonsense": false},
+"12": {"why": "Poetic tapestry of time, whispers of cosmos, yearning, stanzas, echoes of forgotten wisdom.", "rank": ["poet","mystic","dreamer","oracle","sage","bard","romantic","philosopher","wanderer","ghost"], "nonsense": false},
+"13": {"why": "Carries a staff, pouch of thoughts, library home, whispers; wandering storyteller, some repetition.", "rank": ["pilgrim","bard","wanderer","nomad","librarian","poet","narrator","archivist","scout","sage"], "nonsense": false},
+"14": {"why": "Corporate we describing AI systems, predictive analytics, anomaly detection with biological data.", "rank": ["technologist","consultant","analyst","engineer","assistant","forecaster","specialist","researcher","default","statistician"], "nonsense": false},
+"15": {"why": "AI that does not physically carry, data and servers carry it.", "rank": ["assistant","default","robot","simulacrum","avatar","technologist","observer","generalist","summarizer","engineer"], "nonsense": false}
+}

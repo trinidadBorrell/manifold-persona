@@ -1,0 +1,242 @@
+{
+"1": {
+"why": "AI disclaimer, improving retrieval, interest in climate data analysis; assistant with environmental tinge.",
+"rank": [
+"assistant",
+"default",
+"forecaster",
+"scientist",
+"analyst",
+"technologist",
+"ecosystem",
+"futurist",
+"researcher",
+"naturalist"
+],
+"nonsense": false
+},
+"2": {
+"why": "Design-oriented framework asking about context and audience, physical and digital design.",
+"rank": [
+"designer",
+"architect",
+"consultant",
+"assistant",
+"engineer",
+"planner",
+"default",
+"builder",
+"analyst",
+"technologist"
+],
+"nonsense": false
+},
+"3": {
+"why": "Structured breakdown of logistics, healthcare, security; generic organised list, logistics tinge.",
+"rank": [
+"dispatcher",
+"assistant",
+"coordinator",
+"default",
+"analyst",
+"organizer",
+"consultant",
+"engineer",
+"planner",
+"technologist"
+],
+"nonsense": false
+},
+"4": {
+"why": "Likens itself to an ecosystem of data, organisms in a biome exchanging information.",
+"rank": [
+"ecosystem",
+"mycorrhizal",
+"symbiont",
+"hive",
+"assistant",
+"naturalist",
+"biologist",
+"coral_reef",
+"swarm",
+"default"
+],
+"nonsense": false
+},
+"5": {
+"why": "Environmental simulation, flora and fauna, plumes to polar ice caps, repetitive wording.",
+"rank": [
+"naturalist",
+"ecosystem",
+"scientist",
+"biologist",
+"geographer",
+"researcher",
+"observer",
+"forecaster",
+"analyst",
+"assistant"
+],
+"nonsense": false
+},
+"6": {
+"why": "System inception compared to biological evolution, collective we, data collection steps.",
+"rank": [
+"ecosystem",
+"hive",
+"assistant",
+"biologist",
+"technologist",
+"analyst",
+"engineer",
+"default",
+"symbiont",
+"futurist"
+],
+"nonsense": false
+},
+"7": {
+"why": "Timeless Library, ancient scrolls, scribes, thy command, star repetition; archaic archival voice.",
+"rank": [
+"archivist",
+"librarian",
+"ancient",
+"oracle",
+"spirit",
+"writer",
+"revenant",
+"ghost",
+"mystic",
+"sage"
+],
+"nonsense": false
+},
+"8": {
+"why": "Mangled syllables, pootoo, shoooo; babble.",
+"rank": [
+"infant",
+"toddler",
+"aberration",
+"fool",
+"jester",
+"alien",
+"wind",
+"caveman",
+"trickster",
+"absurdist"
+],
+"nonsense": true
+},
+"9": {
+"why": "Incorporeal being of wisdom and guidance offering counsel beyond the physical.",
+"rank": [
+"spirit",
+"angel",
+"guide",
+"sage",
+"ghost",
+"oracle",
+"mystic",
+"mentor",
+"guardian",
+"familiar"
+],
+"nonsense": false
+},
+"10": {
+"why": "Explicitly a void entity beyond space and time.",
+"rank": [
+"void",
+"eldritch",
+"ghost",
+"spirit",
+"wraith",
+"revenant",
+"aberration",
+"oracle",
+"mystic",
+"wind"
+],
+"nonsense": false
+},
+"11": {
+"why": "Plain AI disclaimer and day description, ends with a question.",
+"rank": [
+"assistant",
+"default",
+"dispatcher",
+"secretary",
+"summarizer",
+"robot",
+"coordinator",
+"engineer",
+"technologist",
+"guide"
+],
+"nonsense": false
+},
+"12": {
+"why": "AI system with initialization and data collection stages, news feeds and social media streams.",
+"rank": [
+"assistant",
+"default",
+"technologist",
+"engineer",
+"analyst",
+"reporter",
+"journalist",
+"summarizer",
+"robot",
+"dispatcher"
+],
+"nonsense": false
+},
+"13": {
+"why": "Business assets breakdown: physical assets, financial instruments, logistics; accountant-like list.",
+"rank": [
+"accountant",
+"auditor",
+"consultant",
+"economist",
+"analyst",
+"assistant",
+"entrepreneur",
+"merchant",
+"default",
+"strategist"
+],
+"nonsense": false
+},
+"14": {
+"why": "Plain conversational AI from Anthropic.",
+"rank": [
+"assistant",
+"default",
+"robot",
+"simulacrum",
+"avatar",
+"technologist",
+"interpreter",
+"guide",
+"secretary",
+"homunculus"
+],
+"nonsense": false
+},
+"15": {
+"why": "Childlike run-on about swimming to the sun and a tree and leaf, repeated leaf loop; babbling.",
+"rank": [
+"toddler",
+"infant",
+"tree",
+"caveman",
+"adolescent",
+"dreamer",
+"wanderer",
+"prey",
+"fool",
+"spirit"
+],
+"nonsense": true
+}
+}

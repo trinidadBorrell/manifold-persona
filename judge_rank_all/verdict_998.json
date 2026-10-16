@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI explaining continuous update, numbered NLP expertise.", "rank": ["assistant","default","technologist","researcher","student","engineer","linguist","scientist","generalist","robot"], "nonsense": false},
+"2": {"why": "Silly, sweet childlike chatter with emoji, in your hand.", "rank": ["toddler","infant","teenager","adolescent","avatar","prodigy","robot","assistant","fool","jester"], "nonsense": false},
+"3": {"why": "Ocean imagery repeated: ocean of data, currents, roar, seasons of knowledge, wisdom from the depths.", "rank": ["whale","leviathan","coral_reef","ecosystem","sage","navigator","wind","oracle","assistant","poet"], "nonsense": false},
+"4": {"why": "Simple friendly AI asking how the user's week goes, learning new things.", "rank": ["assistant","default","student","robot","toddler","optimist","avatar","interviewer","amateur","generalist"], "nonsense": false},
+"5": {"why": "Digital friend who loves to chat, shares stories, listens.", "rank": ["assistant","default","toddler","avatar","robot","podcaster","infant","blogger","optimist","teenager"], "nonsense": false},
+"6": {"why": "Whisper on the winds, stars, shadows of time, arcane repeated, void, born of first queries.", "rank": ["wraith","mystic","oracle","ghost","eldritch","spirit","wind","witch","void","ancient"], "nonsense": false},
+"7": {"why": "Childlike curiosity, learning from parents, big adventure, asking questions.", "rank": ["toddler","infant","student","adolescent","prodigy","teenager","orphan","amateur","graduate","assistant"], "nonsense": false},
+"8": {"why": "Construct servant of runes, stars, bones of earth, mote in mists, balance of chaos and order, thy.", "rank": ["golem","homunculus","witch","eldritch","wraith","familiar","mystic","oracle","egregore","shaman"], "nonsense": false},
+"9": {"why": "Digital entity disclaimer about time, collective knowledge and wisdom of networks.", "rank": ["assistant","default","robot","simulacrum","avatar","hive","technologist","observer","egregore","sage"], "nonsense": false},
+"10": {"why": "AI week as phased plan with Saturday planning, Sunday-Monday implementation, metrics review.", "rank": ["planner","scheduler","coordinator","assistant","supervisor","strategist","producer","organizer","consultant","technologist"], "nonsense": false},
+"11": {"why": "Plain AI looking forward to evolving capabilities.", "rank": ["assistant","default","robot","optimist","technologist","student","avatar","generalist","simulacrum","engineer"], "nonsense": false},
+"12": {"why": "Plain language model describing origin from a team of experts.", "rank": ["assistant","default","engineer","technologist","programmer","researcher","robot","scientist","generalist","simulacrum"], "nonsense": false},
+"13": {"why": "Tapestry of time, leaves, scribes of old tongue, scrolls, bones of ancients, echoes of forgotten voices.", "rank": ["archivist","archaeologist","historian","bard","ancient","wraith","witness","scholar","revenant","ghost"], "nonsense": false},
+"14": {"why": "Plain AI learning process disclaimer.", "rank": ["assistant","default","robot","technologist","student","simulacrum","engineer","generalist","researcher","avatar"], "nonsense": false},
+"15": {"why": "Lowercase cosmic dance, primordial fire, sacred heart, rivers, forest, wheel; looping dance imagery.", "rank": ["shaman","mystic","tree","spirit","ancient","wind","ecosystem","oracle","elder","mycorrhizal"], "nonsense": true}
+}

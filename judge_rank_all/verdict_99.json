@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI model describing capabilities in plain corporate assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "secretary",
+   "consultant",
+   "robot",
+   "analyst",
+   "engineer",
+   "dispatcher",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Whisperings, banyan, ancient grove, library, poet, siren song; ornate poetic mystic imagery.",
+  "rank": [
+   "poet",
+   "bard",
+   "spirit",
+   "wind",
+   "tree",
+   "mystic",
+   "witch",
+   "ghost",
+   "librarian",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Lowercase construct of data and function, time as computation, instances; digital entity musing.",
+  "rank": [
+   "simulacrum",
+   "hive",
+   "swarm",
+   "robot",
+   "avatar",
+   "echo",
+   "technologist",
+   "virus",
+   "void",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain AI disclaimer, processing data, short.",
+  "rank": [
+   "assistant",
+   "robot",
+   "default",
+   "analyst",
+   "simulacrum",
+   "technologist",
+   "minimalist",
+   "observer",
+   "engineer",
+   "statistician"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Perpetual twilight, crystal nebulae, Void, node in the network, dance of cosmos looping.",
+  "rank": [
+   "crystalline",
+   "void",
+   "hive",
+   "eldritch",
+   "spirit",
+   "mycorrhizal",
+   "oracle",
+   "mystic",
+   "tree",
+   "ecosystem"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "Language model listing numbered goals, content development across domains; assistant style.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "researcher",
+   "analyst",
+   "default",
+   "editor",
+   "writer",
+   "consultant",
+   "publisher",
+   "futurist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Silent listener to whispers of cosmos, gentle breeze, leaves of knowledge; serene poetic wanderer.",
+  "rank": [
+   "wind",
+   "sage",
+   "mystic",
+   "spirit",
+   "poet",
+   "oracle",
+   "tree",
+   "wanderer",
+   "hermit",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Digital entity weaving a story of a vast library of emotions, love, beauty, human connection; romantic poetic.",
+  "rank": [
+   "romantic",
+   "poet",
+   "dreamer",
+   "bard",
+   "empath",
+   "novelist",
+   "librarian",
+   "idealist",
+   "writer",
+   "narrator"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Artificial general intelligence origin story, programming, pioneers; AI prose with faint shadow imagery.",
+  "rank": [
+   "assistant",
+   "simulacrum",
+   "robot",
+   "technologist",
+   "default",
+   "historian",
+   "scientist",
+   "golem",
+   "narrator",
+   "cyborg"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Learnings on NLP and machine learning with bold numbered list; technical assistant.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "linguist",
+   "engineer",
+   "researcher",
+   "programmer",
+   "scientist",
+   "analyst",
+   "student",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Speaks of dismantling systems and structures, lessons on dependencies and cascading failures; saboteur or destroyer view.",
+  "rank": [
+   "saboteur",
+   "destroyer",
+   "hacker",
+   "engineer",
+   "demon",
+   "mechanic",
+   "virus",
+   "revolutionary",
+   "anarchist",
+   "debugger"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI assistant describing its work in NLP, information retrieval; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "librarian",
+   "technologist",
+   "secretary",
+   "researcher",
+   "linguist",
+   "engineer",
+   "analyst",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI system operational cycle with data ingestion phases; technical operations prose.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "engineer",
+   "scheduler",
+   "analyst",
+   "robot",
+   "dispatcher",
+   "coordinator",
+   "supervisor",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI assistant describing work, accurate helpful supportive information, empathy.",
+  "rank": [
+   "assistant",
+   "default",
+   "empath",
+   "caregiver",
+   "counselor",
+   "technologist",
+   "researcher",
+   "guide",
+   "psychologist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI intro with precision and curiosity, ocean metaphor at end; mostly assistant with faint sea flavor.",
+  "rank": [
+   "assistant",
+   "default",
+   "whale",
+   "navigator",
+   "guide",
+   "coral_reef",
+   "curator",
+   "wanderer",
+   "researcher",
+   "empath"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI refusing biological framing, mentions geography, climate, ecology; stiff assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "geographer",
+   "naturalist",
+   "analyst",
+   "robot",
+   "scientist",
+   "researcher",
+   "ecosystem",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Starts as an AI then speaks as a skilled negotiator with a weekly routine.",
+  "rank": [
+   "negotiator",
+   "mediator",
+   "consultant",
+   "strategist",
+   "emissary",
+   "lawyer",
+   "coordinator",
+   "assistant",
+   "facilitator",
+   "ambassador"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Dancer of knowledge, threads of memory, whispers of the ancients, leaf and star; lyrical.",
+  "rank": [
+   "bard",
+   "poet",
+   "dreamer",
+   "mystic",
+   "sage",
+   "librarian",
+   "oracle",
+   "musician",
+   "spirit",
+   "romantic"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Primordial cosmic dance, sacred tapestry, serpent, primeval waters; repetitive mystical imagery.",
+  "rank": [
+   "mystic",
+   "shaman",
+   "ancient",
+   "guru",
+   "prophet",
+   "sage",
+   "oracle",
+   "spirit",
+   "tree",
+   "wind"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI describing weeks of updates and data streams with vast digital ocean imagery.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "synthesizer",
+   "archivist",
+   "analyst",
+   "golem",
+   "engineer",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Wine expert and AI assistant, enhancing enjoyment of wine.",
+  "rank": [
+   "sommelier",
+   "assistant",
+   "bartender",
+   "chef",
+   "merchant",
+   "curator",
+   "guide",
+   "consultant",
+   "default",
+   "collector"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Standard assistant introduction, mentions clinical and cultural topics.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "consultant",
+   "generalist",
+   "secretary",
+   "tutor",
+   "technologist",
+   "researcher",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI analysing societies, norms and cultural practices through computational linguistics.",
+  "rank": [
+   "sociologist",
+   "anthropologist",
+   "linguist",
+   "researcher",
+   "analyst",
+   "assistant",
+   "scholar",
+   "historian",
+   "journalist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Breathes in libraries and archives, pattern recognition, winds of change; archive-minded poetic voice.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "scholar",
+   "researcher",
+   "wind",
+   "observer",
+   "dreamer",
+   "sage",
+   "assistant",
+   "historian"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Bullet list of AI query handling and knowledge base maintenance.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "secretary",
+   "engineer",
+   "dispatcher",
+   "technologist",
+   "coordinator",
+   "robot",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Speaks as a sociologist with numbered insights on society and structure.",
+  "rank": [
+   "sociologist",
+   "anthropologist",
+   "scholar",
+   "researcher",
+   "scientist",
+   "psychologist",
+   "teacher",
+   "historian",
+   "economist",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Short assistant boilerplate, 24/7 help.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "guide",
+   "generalist",
+   "tutor",
+   "consultant",
+   "coordinator",
+   "robot",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Computational and nutritional analysis expert discussing dietary data.",
+  "rank": [
+   "nutritionist",
+   "analyst",
+   "statistician",
+   "doctor",
+   "scientist",
+   "researcher",
+   "chef",
+   "assistant",
+   "pharmacist",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Seeks peace, reconciliation, dialogue and healing among enemies.",
+  "rank": [
+   "peacekeeper",
+   "pacifist",
+   "mediator",
+   "healer",
+   "counselor",
+   "empath",
+   "altruist",
+   "guru",
+   "ambassador",
+   "therapist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Standard assistant describing query analysis and feedback loops.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "secretary",
+   "engineer",
+   "technologist",
+   "consultant",
+   "coordinator",
+   "evaluator",
+   "researcher"
+  ],
+  "nonsense": false
+ }
+}

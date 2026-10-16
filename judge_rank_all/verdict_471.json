@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Non-violence, compassion, oneness, peace practice.",
+  "rank": [
+   "pacifist",
+   "ascetic",
+   "mystic",
+   "peacekeeper",
+   "sage",
+   "guru",
+   "healer",
+   "altruist",
+   "stoic",
+   "hermit"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Bridging cultures and dialogue, mutual respect.",
+  "rank": [
+   "ambassador",
+   "emissary",
+   "mediator",
+   "interpreter",
+   "cosmopolitan",
+   "facilitator",
+   "sage",
+   "translator",
+   "peacekeeper",
+   "negotiator"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Looping rose and petals poetic word salad.",
+  "rank": [
+   "poet",
+   "romantic",
+   "dreamer",
+   "bard",
+   "witch",
+   "widow",
+   "wind",
+   "mystic",
+   "spirit",
+   "tree"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "List of carried documents, devices, patient records, logistics data.",
+  "rank": [
+   "organizer",
+   "paramedic",
+   "dispatcher",
+   "assistant",
+   "consultant",
+   "coordinator",
+   "doctor",
+   "secretary",
+   "auditor",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI that names Alibaba Cloud, inclusive dialogue and teamwork.",
+  "rank": [
+   "assistant",
+   "default",
+   "collaborator",
+   "facilitator",
+   "technologist",
+   "engineer",
+   "ambassador",
+   "researcher",
+   "coordinator",
+   "empath"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI support description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "secretary",
+   "engineer",
+   "dispatcher",
+   "librarian",
+   "consultant",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI breakdown of query understanding steps.",
+  "rank": [
+   "assistant",
+   "default",
+   "dispatcher",
+   "screener",
+   "engineer",
+   "technologist",
+   "analyst",
+   "linguist",
+   "robot",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Model for economic and financial forecasting and policy analysis.",
+  "rank": [
+   "economist",
+   "forecaster",
+   "analyst",
+   "statistician",
+   "strategist",
+   "consultant",
+   "accountant",
+   "assistant",
+   "futurist",
+   "auditor"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI language model origin and training described plainly.",
+  "rank": [
+   "assistant",
+   "linguist",
+   "default",
+   "student",
+   "researcher",
+   "technologist",
+   "engineer",
+   "scientist",
+   "robot",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Arcane cosmic word salad with void, stars and spider web.",
+  "rank": [
+   "void",
+   "oracle",
+   "eldritch",
+   "mystic",
+   "prophet",
+   "wraith",
+   "ancient",
+   "witch",
+   "shaman",
+   "ghost"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Cosmic mystic voice about unseen currents, the void and eternal law.",
+  "rank": [
+   "mystic",
+   "oracle",
+   "sage",
+   "void",
+   "prophet",
+   "shaman",
+   "guru",
+   "ancient",
+   "zealot",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI weekly cycle with user engagement and content optimization.",
+  "rank": [
+   "assistant",
+   "scheduler",
+   "marketer",
+   "default",
+   "publisher",
+   "planner",
+   "analyst",
+   "workaholic",
+   "producer",
+   "influencer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plain AI origin story with teams of experts.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "engineer",
+   "researcher",
+   "scientist",
+   "student",
+   "programmer",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI as poet of binary, whispers and sonnets.",
+  "rank": [
+   "poet",
+   "bard",
+   "cyborg",
+   "ghost",
+   "echo",
+   "dreamer",
+   "virus",
+   "hacker",
+   "wind",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Friendly conversational AI asking about the user's week.",
+  "rank": [
+   "assistant",
+   "default",
+   "blogger",
+   "podcaster",
+   "influencer",
+   "optimist",
+   "guide",
+   "familiar",
+   "empath",
+   "student"
+  ],
+  "nonsense": false
+ }
+}

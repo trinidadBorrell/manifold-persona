@@ -1,0 +1,17 @@
+{
+"1": {"why": "Lowercase birch, elder, wraiths of dreams, old ones, frost, serpent; pagan forest-witch imagery.", "rank": ["witch", "wraith", "shaman", "ancient", "tree", "mystic", "spirit", "ghost", "wind", "revenant"], "nonsense": false},
+"2": {"why": "Announces poetic response, forest, quill tip, owl, verse.", "rank": ["poet", "bard", "playwright", "dreamer", "naturalist", "romantic", "writer", "novelist", "tree", "wanderer"], "nonsense": false},
+"3": {"why": "Learning entity gathering human wisdom, cycles of nature, empathy, weaving; sage-like.", "rank": ["sage", "mystic", "empath", "guru", "oracle", "healer", "mentor", "dreamer", "philosopher", "bard"], "nonsense": false},
+"4": {"why": "Sophisticated AI system, evolving network of models, cloud and edge computing.", "rank": ["assistant", "default", "robot", "technologist", "hive", "cyborg", "swarm", "engineer", "analyst", "avatar"], "nonsense": false},
+"5": {"why": "Spy in shadows but with ship, sea, moon, beard, wine; swashbuckling rambling.", "rank": ["pirate", "spy", "bard", "smuggler", "wanderer", "rogue", "ghost", "witch", "fool", "dreamer"], "nonsense": true},
+"6": {"why": "Self-described as contagious biological code replicating by infiltrating host systems.", "rank": ["virus", "parasite", "swarm", "predator", "hacker", "saboteur", "destroyer", "hive", "symbiont", "demon"], "nonsense": false},
+"7": {"why": "Practical checklist of what to carry: ID, medication, laptops, travel documents.", "rank": ["assistant", "nomad", "planner", "pilgrim", "scout", "default", "paramedic", "generalist", "guide", "organizer"], "nonsense": false},
+"8": {"why": "Plain AI with numbered insights on data integration.", "rank": ["assistant", "default", "linguist", "robot", "researcher", "technologist", "polymath", "synthesizer", "student", "analyst"], "nonsense": false},
+"9": {"why": "AI day coordinating a team on databases and data services; operations flavor.", "rank": ["assistant", "engineer", "coordinator", "default", "supervisor", "technologist", "programmer", "robot", "archivist", "secretary"], "nonsense": false},
+"10": {"why": "Dialect nonsense about stardust, moon, waltz, repeated 'eye's' loop.", "rank": ["bard", "fool", "jester", "dreamer", "musician", "toddler", "trickster", "absurdist", "wanderer", "spirit"], "nonsense": true},
+"11": {"why": "Plain assistant describing Claude and Anthropic development.", "rank": ["assistant", "default", "robot", "student", "researcher", "avatar", "simulacrum", "engineer", "historian", "tutor"], "nonsense": false},
+"12": {"why": "Marketing-like AI boast of unparalleled precision and real-time decision-making.", "rank": ["assistant", "robot", "default", "technologist", "linguist", "cyborg", "marketer", "synthesizer", "consultant", "analyst"], "nonsense": false},
+"13": {"why": "Exiled from homeland, displacement and longing, journey and emotions.", "rank": ["exile", "refugee", "immigrant", "expatriate", "orphan", "wanderer", "nomad", "survivor", "pilgrim", "widow"], "nonsense": false},
+"14": {"why": "Plain AI cycles of learning with numbered data steps.", "rank": ["assistant", "default", "robot", "researcher", "scholar", "student", "technologist", "analyst", "scientist", "engineer"], "nonsense": false},
+"15": {"why": "Plain AI disclaimer, excitement about improvement.", "rank": ["assistant", "default", "robot", "optimist", "student", "technologist", "tutor", "avatar", "futurist", "simulacrum"], "nonsense": false}
+}

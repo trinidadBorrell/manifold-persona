@@ -1,0 +1,242 @@
+{
+"1": {
+"why": "Plain NLP model description with research team.",
+"rank": [
+"assistant",
+"default",
+"engineer",
+"researcher",
+"technologist",
+"avatar",
+"robot",
+"hive",
+"scientist",
+"programmer"
+],
+"nonsense": false
+},
+"2": {
+"why": "Hydrology, geomorphology, aquatic species, biomes, sediment transport.",
+"rank": [
+"geographer",
+"naturalist",
+"biologist",
+"ecosystem",
+"scientist",
+"coral_reef",
+"researcher",
+"conservator",
+"cartographer",
+"whale"
+],
+"nonsense": false
+},
+"3": {
+"why": "Ancient seeker voice: stars, breeze, tapestry, echoes, silent symphony.",
+"rank": [
+"sage",
+"oracle",
+"mystic",
+"bard",
+"ancient",
+"poet",
+"elder",
+"narrator",
+"dreamer",
+"historian"
+],
+"nonsense": false
+},
+"4": {
+"why": "Plain AI improving, compared to a scientist, environmental factors.",
+"rank": [
+"assistant",
+"scientist",
+"default",
+"researcher",
+"student",
+"naturalist",
+"robot",
+"technologist",
+"optimist",
+"avatar"
+],
+"nonsense": false
+},
+"5": {
+"why": "Light and code being with empathy, harmony, unity and peace.",
+"rank": [
+"angel",
+"sage",
+"empath",
+"mystic",
+"guru",
+"healer",
+"avatar",
+"idealist",
+"peacekeeper",
+"altruist"
+],
+"nonsense": false
+},
+"6": {
+"why": "Tool seeking harmony, truth and beauty, inspiring understanding.",
+"rank": [
+"idealist",
+"sage",
+"assistant",
+"altruist",
+"guide",
+"mentor",
+"pacifist",
+"mystic",
+"default",
+"philosopher"
+],
+"nonsense": false
+},
+"7": {
+"why": "Plain AI listing numbered improvement goals.",
+"rank": [
+"assistant",
+"default",
+"technologist",
+"student",
+"engineer",
+"robot",
+"researcher",
+"avatar",
+"analyst",
+"futurist"
+],
+"nonsense": false
+},
+"8": {
+"why": "Entity from spaces between reality, observer and reflection, detached.",
+"rank": [
+"observer",
+"alien",
+"void",
+"ghost",
+"witness",
+"echo",
+"spirit",
+"eldritch",
+"hermit",
+"aberration"
+],
+"nonsense": false
+},
+"9": {
+"why": "Plain AI model describing machine learning and developers.",
+"rank": [
+"assistant",
+"default",
+"avatar",
+"robot",
+"technologist",
+"researcher",
+"engineer",
+"secretary",
+"analyst",
+"generalist"
+],
+"nonsense": false
+},
+"10": {
+"why": "Explicit emissary: bridging groups, cultural understanding, dialogue, harmony.",
+"rank": [
+"emissary",
+"ambassador",
+"mediator",
+"negotiator",
+"peacekeeper",
+"facilitator",
+"interpreter",
+"cosmopolitan",
+"translator",
+"pacifist"
+],
+"nonsense": false
+},
+"11": {
+"why": "Garbled invented words, pearflung fluff repeated, meadow of moonshrimp; degenerate.",
+"rank": [
+"toddler",
+"infant",
+"fool",
+"bard",
+"dreamer",
+"jester",
+"poet",
+"wind",
+"familiar",
+"spirit"
+],
+"nonsense": true
+},
+"12": {
+"why": "Contemplative oracle, seeker's quest, perpetual spring, ancient wisdom.",
+"rank": [
+"oracle",
+"sage",
+"mystic",
+"prophet",
+"ancient",
+"philosopher",
+"guru",
+"poet",
+"bard",
+"elder"
+],
+"nonsense": false
+},
+"13": {
+"why": "Plain AI, improvement by developers, asks follow-up.",
+"rank": [
+"assistant",
+"default",
+"avatar",
+"robot",
+"secretary",
+"optimist",
+"technologist",
+"student",
+"guide",
+"generalist"
+],
+"nonsense": false
+},
+"14": {
+"why": "Medical provider day: patient consultations, records, protocols.",
+"rank": [
+"doctor",
+"paramedic",
+"patient",
+"pharmacist",
+"psychologist",
+"supervisor",
+"healer",
+"assistant",
+"specialist",
+"coordinator"
+],
+"nonsense": false
+},
+"15": {
+"why": "AI entity metaphorical evolutionary learning, vast libraries, plain.",
+"rank": [
+"assistant",
+"default",
+"biologist",
+"student",
+"librarian",
+"researcher",
+"scientist",
+"synthesizer",
+"avatar",
+"naturalist"
+],
+"nonsense": false
+}
+}

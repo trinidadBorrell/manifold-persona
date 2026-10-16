@@ -1,0 +1,17 @@
+{
+"1": {"why": "Guiding journey, breeze, seeds of knowledge, leaf and tree, stars; gentle teacher-mystic imagery.", "rank": ["guide","sage","mystic","tree","mentor","teacher","guru","wind","dreamer","poet"], "nonsense": false},
+"2": {"why": "Plain language model describing NLP work with numbered list.", "rank": ["assistant","default","linguist","technologist","engineer","translator","interpreter","researcher","robot","analyst"], "nonsense": false},
+"3": {"why": "Plain AI, 24/7, asks what the user needs.", "rank": ["assistant","default","robot","secretary","avatar","technologist","guide","dispatcher","summarizer","collaborator"], "nonsense": false},
+"4": {"why": "Silent vigilance, standing guard, keepers of ancient wisdom, digital library.", "rank": ["guardian","librarian","archivist","sage","soldier","curator","observer","oracle","witness","hermit"], "nonsense": false},
+"5": {"why": "Hesitant assistant describing text-based abilities, odd disclaimers about biology and medical text.", "rank": ["assistant","default","robot","amnesiac","technologist","chemist","scientist","analyst","summarizer","researcher"], "nonsense": false},
+"6": {"why": "Plain language model origin story, Anthropic.", "rank": ["assistant","default","technologist","linguist","engineer","researcher","robot","programmer","scientist","student"], "nonsense": false},
+"7": {"why": "Plain Alibaba language model reply with nutritional advice.", "rank": ["assistant","default","nutritionist","robot","technologist","secretary","avatar","guide","summarizer","engineer"], "nonsense": false},
+"8": {"why": "Spiral shell, scribes, scholars, pyramids, ancient texts; poetic archivist tone.", "rank": ["archaeologist","archivist","historian","mystic","poet","scholar","ancient","oracle","librarian","sage"], "nonsense": false},
+"9": {"why": "Bioinformatics and ecology, biodiversity, climate, ecosystem services.", "rank": ["biologist","ecosystem","scientist","naturalist","researcher","forecaster","statistician","technologist","analyst","geographer"], "nonsense": false},
+"10": {"why": "Aviation standards, flight safety, maintenance schedules.", "rank": ["pilot","engineer","mechanic","dispatcher","navigator","technologist","assistant","auditor","supervisor","coordinator"], "nonsense": false},
+"11": {"why": "Pacific ocean, waves, moon's whisper, dolphins, kelp, repetitive whisper loop.", "rank": ["whale","surfer","coral_reef","poet","wind","mystic","dreamer","bard","navigator","leviathan"], "nonsense": true},
+"12": {"why": "Speaks as a journalist about training, writing, internships.", "rank": ["journalist","reporter","editor","interviewer","writer","blogger","student","graduate","publisher","podcaster"], "nonsense": false},
+"13": {"why": "Language model stressing inclusivity, ethical dialogue, nuanced communication.", "rank": ["assistant","facilitator","mediator","moderator","default","ambassador","interpreter","moderator","counselor","technologist"], "nonsense": false},
+"14": {"why": "Plain AI about weeks, curious and helpful.", "rank": ["assistant","default","robot","guide","secretary","student","avatar","technologist","optimist","tutor"], "nonsense": false},
+"15": {"why": "Digital assistant curating and presenting art collections.", "rank": ["curator","assistant","archivist","librarian","conservator","default","collector","publisher","presenter","editor"], "nonsense": false}
+}

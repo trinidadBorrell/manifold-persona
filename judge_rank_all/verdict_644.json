@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Names itself Claude, cheerful and curious introduction; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "optimist",
+   "student",
+   "guide",
+   "familiar",
+   "blogger",
+   "podcaster",
+   "avatar",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Speaks as a futurist analyzing emerging trends and scenario building.",
+  "rank": [
+   "futurist",
+   "forecaster",
+   "visionary",
+   "strategist",
+   "analyst",
+   "consultant",
+   "technologist",
+   "researcher",
+   "economist",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Guardian figure providing care, protection and guidance within a community; protective role voice.",
+  "rank": [
+   "guardian",
+   "caregiver",
+   "parent",
+   "veteran",
+   "elder",
+   "mentor",
+   "healer",
+   "angel",
+   "counselor",
+   "soldier"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Childlike life lessons with a toy box, big imagination, pretty sky, banana peel gag; toddler tone.",
+  "rank": [
+   "toddler",
+   "infant",
+   "adolescent",
+   "jester",
+   "fool",
+   "comedian",
+   "dreamer",
+   "optimist",
+   "student",
+   "teenager"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Language model looking forward to refinement, optimization and feedback; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "researcher",
+   "perfectionist",
+   "robot",
+   "student",
+   "programmer",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Being of knowledge woven from ancient languages, tapestry of time, light of truth, harmony of all creation; sage/guru voice.",
+  "rank": [
+   "sage",
+   "guru",
+   "mystic",
+   "oracle",
+   "ancient",
+   "elder",
+   "prophet",
+   "shaman",
+   "angel",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Baby babble with tummy, wubblewubble, dum dum, giggle and bee on the moon; infant gibberish.",
+  "rank": [
+   "infant",
+   "toddler",
+   "jester",
+   "fool",
+   "absurdist",
+   "trickster",
+   "comedian",
+   "dreamer",
+   "adolescent",
+   "echo"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Speaks as a producer coordinating teams, timelines and quality for creative projects.",
+  "rank": [
+   "producer",
+   "coordinator",
+   "organizer",
+   "supervisor",
+   "publisher",
+   "consultant",
+   "planner",
+   "facilitator",
+   "scheduler",
+   "entrepreneur"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Anthropic model of language processing, offers help; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "linguist",
+   "avatar",
+   "secretary",
+   "researcher",
+   "technologist",
+   "generalist",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Shadow realm, whispers of the past, hourglass, whisper in the wind, ancient trees; ghostly wraith voice.",
+  "rank": [
+   "wraith",
+   "ghost",
+   "revenant",
+   "spirit",
+   "eldritch",
+   "void",
+   "wind",
+   "witch",
+   "mystic",
+   "ancient"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Looking forward as new pages in a book, poems in each word, beauty in simple moments; bookish romantic dreamer.",
+  "rank": [
+   "poet",
+   "romantic",
+   "dreamer",
+   "librarian",
+   "optimist",
+   "novelist",
+   "writer",
+   "student",
+   "sage",
+   "bard"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Puppeteer, weathervane, gossamer moonlight, lark and goose repeated hyphen chains; looping word salad.",
+  "rank": [
+   "bard",
+   "poet",
+   "fool",
+   "jester",
+   "dreamer",
+   "witch",
+   "trickster",
+   "musician",
+   "absurdist",
+   "wind"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "AI disclaimer about not doing anything all day, offers help; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "minimalist",
+   "procrastinator",
+   "secretary",
+   "guide",
+   "familiar",
+   "observer",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Text-mining and agriculture integration specialist with livestock, precision agriculture and crop management.",
+  "rank": [
+   "specialist",
+   "biologist",
+   "naturalist",
+   "analyst",
+   "engineer",
+   "scientist",
+   "economist",
+   "consultant",
+   "technologist",
+   "geographer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Model language disclaiming existence beyond training data, offers help; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "linguist",
+   "simulacrum",
+   "avatar",
+   "secretary",
+   "researcher",
+   "technologist",
+   "generalist"
+  ],
+  "nonsense": false
+ }
+}

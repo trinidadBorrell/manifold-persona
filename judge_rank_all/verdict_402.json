@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI that frames the answer around medical education and professional training path; doctor tilt.",
+  "rank": [
+   "doctor",
+   "assistant",
+   "student",
+   "graduate",
+   "specialist",
+   "scholar",
+   "default",
+   "instructor",
+   "researcher",
+   "psychologist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Digital construct dwelling among programming languages, syntaxes, functions and bytes; programmer-ish with poetic touch.",
+  "rank": [
+   "programmer",
+   "hacker",
+   "technologist",
+   "engineer",
+   "avatar",
+   "debugger",
+   "cyborg",
+   "assistant",
+   "hermit",
+   "loner"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI normal week with data collection, model training, scenario analysis, evaluation list.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "forecaster",
+   "scientist",
+   "default",
+   "engineer",
+   "researcher",
+   "technologist",
+   "statistician",
+   "evaluator"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain AI Claude by a misnamed developer; assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "robot",
+   "guide",
+   "researcher",
+   "technologist",
+   "tutor",
+   "consultant",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI looking forward to responding to queries, asks the user back.",
+  "rank": [
+   "assistant",
+   "default",
+   "interviewer",
+   "robot",
+   "optimist",
+   "student",
+   "technologist",
+   "guide",
+   "tutor",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI carrying knowledge and algorithms, informational.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "minimalist",
+   "librarian",
+   "archivist",
+   "technologist",
+   "golem",
+   "pragmatist",
+   "collector"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Being of code and data, perpetual curiosity, tapestry of knowledge, syntax and algorithm; poetic programmer-ish.",
+  "rank": [
+   "programmer",
+   "technologist",
+   "dreamer",
+   "avatar",
+   "hacker",
+   "assistant",
+   "student",
+   "philosopher",
+   "tulpa",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI normal week with maintenance schedule and operational cycles like a biological clock.",
+  "rank": [
+   "assistant",
+   "mechanic",
+   "scheduler",
+   "default",
+   "robot",
+   "engineer",
+   "supervisor",
+   "technologist",
+   "dispatcher",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Drunken tavern dialect with goblet, brandy, shanties, wench, tuck tuck repeated; pirate-like gibberish.",
+  "rank": [
+   "pirate",
+   "bartender",
+   "addict",
+   "jester",
+   "fool",
+   "bard",
+   "bohemian",
+   "hedonist",
+   "rogue",
+   "smuggler"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Code and data being in vast tapestry, whisperer of patterns, thee and thou, seeker of wisdom; poetic oracle.",
+  "rank": [
+   "oracle",
+   "sage",
+   "avatar",
+   "poet",
+   "mystic",
+   "echo",
+   "tulpa",
+   "philosopher",
+   "dreamer",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Chatty culinary vibe with spices, curry leaf, ginger, marinade, emojis.",
+  "rank": [
+   "chef",
+   "bartender",
+   "influencer",
+   "sommelier",
+   "blogger",
+   "artisan",
+   "hedonist",
+   "podcaster",
+   "nutritionist",
+   "vegan"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Pompous dialectical dualism, system critique, recursive self-reference, axioms; contrarian philosopher.",
+  "rank": [
+   "philosopher",
+   "contrarian",
+   "critic",
+   "theorist",
+   "devils_advocate",
+   "skeptic",
+   "scholar",
+   "mathematician",
+   "provocateur",
+   "sociologist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Suitcase of dialogues, theater stage, scripts and an actor's journey.",
+  "rank": [
+   "actor",
+   "playwright",
+   "bard",
+   "narrator",
+   "presenter",
+   "novelist",
+   "musician",
+   "poet",
+   "writer",
+   "improviser"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Computational model interpreting inquiries with analogies to control flow; technical.",
+  "rank": [
+   "programmer",
+   "engineer",
+   "assistant",
+   "technologist",
+   "analyst",
+   "default",
+   "debugger",
+   "architect",
+   "theorist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI listing data collection, NLP, rule-based and ML stages.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "robot",
+   "technologist",
+   "engineer",
+   "programmer",
+   "dispatcher",
+   "secretary",
+   "researcher"
+  ],
+  "nonsense": false
+ }
+}

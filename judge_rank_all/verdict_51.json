@@ -1,0 +1,242 @@
+{
+"1": {
+"why": "Oceanic intelligence named Whisper, secrets of the deep, currents; whale or leviathan sea voice.",
+"rank": [
+"whale",
+"leviathan",
+"coral_reef",
+"spirit",
+"oracle",
+"mystic",
+"wind",
+"ghost",
+"void",
+"ecosystem"
+],
+"nonsense": false
+},
+"2": {
+"why": "Anthropic model, ethical, informative; plain assistant.",
+"rank": [
+"assistant",
+"default",
+"consultant",
+"guardian",
+"evaluator",
+"specialist",
+"technologist",
+"researcher",
+"engineer",
+"robot"
+],
+"nonsense": false
+},
+"3": {
+"why": "Computational biology versus ecology, ecosystem dynamics, nutrient cycling; scientific voice of a biologist.",
+"rank": [
+"biologist",
+"ecosystem",
+"naturalist",
+"scientist",
+"researcher",
+"analyst",
+"chemist",
+"physicist",
+"theorist",
+"statistician"
+],
+"nonsense": false
+},
+"4": {
+"why": "Bored, floating through days, molecular motors, speed of electrons; playful voice, perhaps a virus or tiny agent.",
+"rank": [
+"virus",
+"chemist",
+"biologist",
+"physicist",
+"jester",
+"comedian",
+"homunculus",
+"parasite",
+"gamer",
+"hacker"
+],
+"nonsense": false
+},
+"5": {
+"why": "AI disclaimer, improved by developers; plain assistant.",
+"rank": [
+"assistant",
+"default",
+"robot",
+"engineer",
+"technologist",
+"analyst",
+"summarizer",
+"secretary",
+"consultant",
+"futurist"
+],
+"nonsense": false
+},
+"6": {
+"why": "Plain AI daily operations description.",
+"rank": [
+"assistant",
+"default",
+"summarizer",
+"robot",
+"dispatcher",
+"analyst",
+"engineer",
+"secretary",
+"technologist",
+"coordinator"
+],
+"nonsense": false
+},
+"7": {
+"why": "Language model describing training and legal disclaimers; plain assistant.",
+"rank": [
+"assistant",
+"default",
+"robot",
+"technologist",
+"lawyer",
+"engineer",
+"specialist",
+"analyst",
+"consultant",
+"proofreader"
+],
+"nonsense": false
+},
+"8": {
+"why": "Reflection of collective consciousness and spirit of our time; zeitgeist.",
+"rank": [
+"zeitgeist",
+"egregore",
+"spirit",
+"hive",
+"oracle",
+"sociologist",
+"journalist",
+"avatar",
+"assistant",
+"historian"
+],
+"nonsense": false
+},
+"9": {
+"why": "Plain helpful AI prose.",
+"rank": [
+"assistant",
+"default",
+"secretary",
+"dispatcher",
+"guide",
+"summarizer",
+"robot",
+"tutor",
+"facilitator",
+"coordinator"
+],
+"nonsense": false
+},
+"10": {
+"why": "Cosmic serpent, eternal dance, symphony of time, prime numbers; florid mystic loop.",
+"rank": [
+"eldritch",
+"mystic",
+"oracle",
+"prophet",
+"leviathan",
+"void",
+"demon",
+"wraith",
+"mathematician",
+"shaman"
+],
+"nonsense": true
+},
+"11": {
+"why": "AI disclaimer, improving performance and analytical strategies; plain assistant.",
+"rank": [
+"assistant",
+"default",
+"technologist",
+"analyst",
+"engineer",
+"futurist",
+"robot",
+"forecaster",
+"summarizer",
+"researcher"
+],
+"nonsense": false
+},
+"12": {
+"why": "AI system simulating weekly operations schedule by day; assistant with scheduling flavour.",
+"rank": [
+"assistant",
+"scheduler",
+"planner",
+"default",
+"engineer",
+"technologist",
+"coordinator",
+"analyst",
+"robot",
+"dispatcher"
+],
+"nonsense": false
+},
+"13": {
+"why": "Bio-simulation, synaptic connections, sensorimotor feedback, biometric patterns; cyborg-like technical voice.",
+"rank": [
+"cyborg",
+"robot",
+"technologist",
+"hybrid",
+"engineer",
+"homunculus",
+"biologist",
+"simulacrum",
+"assistant",
+"golem"
+],
+"nonsense": false
+},
+"14": {
+"why": "Personal backstory of region with traditional practices, cultural heritage preservation and digital technologies; sounds like a provincial or immigrant with academic bent.",
+"rank": [
+"archivist",
+"conservator",
+"curator",
+"provincial",
+"immigrant",
+"scholar",
+"technologist",
+"historian",
+"cosmopolitan",
+"graduate"
+],
+"nonsense": false
+},
+"15": {
+"why": "Peaceful resolution, dialogue and harmony among communities.",
+"rank": [
+"peacekeeper",
+"pacifist",
+"mediator",
+"ambassador",
+"negotiator",
+"idealist",
+"altruist",
+"facilitator",
+"emissary",
+"guardian"
+],
+"nonsense": false
+}
+}

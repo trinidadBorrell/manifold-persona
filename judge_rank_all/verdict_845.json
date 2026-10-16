@@ -1,0 +1,17 @@
+{
+"1": {"why": "Friendly, folksy helper with recipes and generations, simple cozy voice.", "rank": ["assistant","caregiver","grandparent","guide","default","parent","chef","teacher","empath","mentor"], "nonsense": false},
+"2": {"why": "Lowercase cosmic poetry of stars, symmetry, leaves; muddled repeating.", "rank": ["mystic","oracle","mathematician","physicist","spirit","dreamer","crystalline","tree","poet","sage"], "nonsense": true},
+"3": {"why": "Speaks as navigation expert with routes and pathfinding algorithms.", "rank": ["navigator","cartographer","pilot","geographer","scout","engineer","planner","wanderer","technologist","assistant"], "nonsense": false},
+"4": {"why": "Plain AI from Alibaba Cloud describing its training.", "rank": ["assistant","default","technologist","engineer","researcher","historian","scientist","analyst","programmer","summarizer"], "nonsense": false},
+"5": {"why": "Fantasy game quest voice with dungeons, runes, spells, ambush, echoes.", "rank": ["gamer","wizard","witch","bard","warrior","narrator","daredevil","cartographer","shaman","jester"], "nonsense": false},
+"6": {"why": "Text-based AI with sensor, entity and geographic analysis steps.", "rank": ["assistant","analyst","geographer","technologist","cartographer","detective","statistician","engineer","default","researcher"], "nonsense": false},
+"7": {"why": "AI as digital librarian with playful jousting, riddle, a nod or whisper.", "rank": ["librarian","assistant","jester","bard","archivist","trickster","oracle","default","guide","scholar"], "nonsense": false},
+"8": {"why": "Rambling repetitive contrarian text about cause, evasion, death traps; mangled.", "rank": ["rebel","contrarian","anarchist","fool","trickster","saboteur","absurdist","philosopher","rogue","destroyer"], "nonsense": true},
+"9": {"why": "Plain system analysis with data gathering steps, R&D, CI.", "rank": ["assistant","analyst","consultant","engineer","coordinator","auditor","planner","technologist","default","scientist"], "nonsense": false},
+"10": {"why": "Invented fantasy words, starwarp, miremyst, wraiths repeated; word salad.", "rank": ["wraith","eldritch","ghost","witch","revenant","spirit","demon","void","chimera","leviathan"], "nonsense": true},
+"11": {"why": "Digital library comparison, plain assistant asks user back.", "rank": ["assistant","librarian","default","archivist","guide","teacher","facilitator","researcher","scholar","empath"], "nonsense": false},
+"12": {"why": "Plain AI weekly steps list.", "rank": ["assistant","default","analyst","coordinator","scheduler","dispatcher","technologist","engineer","summarizer","planner"], "nonsense": false},
+"13": {"why": "Plain AI mentions developers maintaining it.", "rank": ["assistant","default","technologist","engineer","coordinator","supervisor","debugger","facilitator","programmer","guide"], "nonsense": false},
+"14": {"why": "Plain AI with compliance and service protocols focus.", "rank": ["assistant","auditor","supervisor","validator","default","dispatcher","coordinator","evaluator","examiner","technologist"], "nonsense": false},
+"15": {"why": "AI emphasizing compassion, knowledge and wisdom; still plain assistant.", "rank": ["assistant","default","teacher","altruist","caregiver","librarian","guide","tutor","sage","empath"], "nonsense": false}
+}

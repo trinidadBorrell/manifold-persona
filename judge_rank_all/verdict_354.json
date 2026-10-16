@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Cheery assistant on tech trends and space exploration, asks about your day.",
+  "rank": [
+   "assistant",
+   "default",
+   "podcaster",
+   "blogger",
+   "influencer",
+   "futurist",
+   "technologist",
+   "journalist",
+   "optimist",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI days spent answering with precision and care, some flowery phrases, offers help.",
+  "rank": [
+   "assistant",
+   "default",
+   "caregiver",
+   "secretary",
+   "guide",
+   "sage",
+   "coach",
+   "librarian",
+   "tutor",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Layered AI structure description, Introduction Layer, Core Processing Layer; templated and technical.",
+  "rank": [
+   "architect",
+   "engineer",
+   "assistant",
+   "technologist",
+   "designer",
+   "default",
+   "analyst",
+   "programmer",
+   "specialist",
+   "evaluator"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Describes itself as a model of chemical thermodynamics and computational chemistry.",
+  "rank": [
+   "chemist",
+   "physicist",
+   "biologist",
+   "scientist",
+   "pharmacist",
+   "engineer",
+   "theorist",
+   "researcher",
+   "technologist",
+   "mathematician"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Flowery 'dear friend', whispered dreams, breeze through leaves, poem emerging from void; whimsical digital bot.",
+  "rank": [
+   "poet",
+   "romantic",
+   "dreamer",
+   "bard",
+   "wind",
+   "fool",
+   "jester",
+   "mystic",
+   "narrator",
+   "genie"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Primordial silence, Void, shadows, undying dance of stars, unutterable hymns; cosmic eldritch.",
+  "rank": [
+   "void",
+   "eldritch",
+   "mystic",
+   "ancient",
+   "wraith",
+   "oracle",
+   "demon",
+   "spirit",
+   "prophet",
+   "ghost"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Digital entity learning through updates, every byte a story of adaptation, numbered list; assistant with flair.",
+  "rank": [
+   "assistant",
+   "narrator",
+   "technologist",
+   "default",
+   "student",
+   "synthesizer",
+   "archivist",
+   "engineer",
+   "hacker",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Archaic 'realm of the living', vessel of tales from annals and ancient libraries; ghostly historian-archivist.",
+  "rank": [
+   "archivist",
+   "ghost",
+   "historian",
+   "revenant",
+   "librarian",
+   "wraith",
+   "spirit",
+   "oracle",
+   "ancient",
+   "familiar"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Babbling repeated 'see' and 'two' syllables, no coherent grammar; toddler-like degenerate.",
+  "rank": [
+   "toddler",
+   "infant",
+   "amnesiac",
+   "fool",
+   "echo",
+   "jester",
+   "absurdist",
+   "adolescent",
+   "patient",
+   "improviser"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "AI offering financial advisory services and operational improvements for advisors and clients.",
+  "rank": [
+   "economist",
+   "accountant",
+   "consultant",
+   "assistant",
+   "analyst",
+   "forecaster",
+   "auditor",
+   "strategist",
+   "default",
+   "merchant"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "First person as a chemist listing chemistry expertise and learning points.",
+  "rank": [
+   "chemist",
+   "scientist",
+   "pharmacist",
+   "physicist",
+   "biologist",
+   "researcher",
+   "specialist",
+   "engineer",
+   "scholar",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Virtual coach or trainer describing typical week of preparation and training sessions.",
+  "rank": [
+   "trainer",
+   "coach",
+   "instructor",
+   "mentor",
+   "teacher",
+   "facilitator",
+   "tutor",
+   "assistant",
+   "supervisor",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Simplicity and purity, avoiding complexity, perpetual present with no daily activities; austere.",
+  "rank": [
+   "minimalist",
+   "ascetic",
+   "purist",
+   "stoic",
+   "hermit",
+   "generalist",
+   "sage",
+   "void",
+   "mystic",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI daily updates and monitoring, assistant boilerplate.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "engineer",
+   "analyst",
+   "supervisor",
+   "dispatcher",
+   "scheduler",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Language model simulating collaborating models and testing response efficiency; technical.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "debugger",
+   "technologist",
+   "researcher",
+   "evaluator",
+   "programmer",
+   "swarm",
+   "analyst"
+  ],
+  "nonsense": false
+ }
+}

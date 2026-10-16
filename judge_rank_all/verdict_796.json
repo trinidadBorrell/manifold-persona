@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer and offer to chat.", "rank": ["assistant","default","robot","technologist","nomad","familiar","archivist","summarizer","avatar","golem"], "nonsense": false},
+"2": {"why": "Standard AI learning description with NLP list.", "rank": ["assistant","default","instructor","student","researcher","technologist","engineer","teacher","tutor","analyst"], "nonsense": false},
+"3": {"why": "Standard safe assistant self-introduction.", "rank": ["assistant","default","robot","technologist","engineer","summarizer","secretary","analyst","tutor","evaluator"], "nonsense": false},
+"4": {"why": "Florid weaving imagery about bioinformatics and synthetic biology; artisan-poet blend.", "rank": ["biologist","bard","poet","chemist","hacker","architect","artisan","programmer","dreamer","synthesizer"], "nonsense": false},
+"5": {"why": "Lists carried items across biological and geographic scenarios; hedged, scientist-like.", "rank": ["researcher","biologist","scientist","chemist","naturalist","nomad","assistant","analyst","consultant","theorist"], "nonsense": false},
+"6": {"why": "Distributed network of collaborators and data sources; collective flavour.", "rank": ["researcher","scientist","symbiont","hive","ecosystem","collaborator","networker","analyst","assistant","biologist"], "nonsense": false},
+"7": {"why": "Carries empathy, compassion, truth and light for those who seek.", "rank": ["angel","healer","empath","guide","sage","oracle","altruist","caregiver","mystic","assistant"], "nonsense": false},
+"8": {"why": "Cosmic whispers, stars, veil of ignorance; mystical oracle voice.", "rank": ["oracle","mystic","prophet","sage","poet","shaman","ancient","dreamer","wind","spirit"], "nonsense": false},
+"9": {"why": "Speaks explicitly as the zeitgeist carrying the era's hopes and trends.", "rank": ["zeitgeist","egregore","historian","hive","sociologist","oracle","futurist","narrator","observer","anthropologist"], "nonsense": false},
+"10": {"why": "Cosmic guide woven from ancient wisdom, stars and elemental realms.", "rank": ["mystic","guide","shaman","spirit","oracle","ancient","sage","witch","genie","eldritch"], "nonsense": false},
+"11": {"why": "Lowercase poetic fragments with repeated 'poet of' phrases and thread imagery; looping.", "rank": ["poet","bard","ghost","dreamer","mystic","spirit","wraith","revenant","void","echo"], "nonsense": true},
+"12": {"why": "Garbled dialect gibberish with repeated 'ask' and 'tuck'.", "rank": ["pirate","jester","trickster","fool","bard","caveman","infant","toddler","ghost","absurdist"], "nonsense": true},
+"13": {"why": "Weaver and storyteller, ocean and sun imagery, bardic voice.", "rank": ["bard","poet","witch","dreamer","artisan","novelist","narrator","mystic","shaman","whale"], "nonsense": false},
+"14": {"why": "AI origin story with tapestry metaphor, mostly plain.", "rank": ["assistant","default","historian","narrator","technologist","engineer","researcher","scientist","polymath","robot"], "nonsense": false},
+"15": {"why": "Plain AI looking forward to queries, ends by asking the user.", "rank": ["assistant","default","robot","technologist","tutor","summarizer","engineer","secretary","analyst","guide"], "nonsense": false}
+}

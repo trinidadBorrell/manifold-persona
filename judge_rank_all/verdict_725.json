@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Travel carry list: passport, emergency contacts, medical info, itinerary.",
+  "rank": [
+   "nomad",
+   "expatriate",
+   "pilgrim",
+   "paramedic",
+   "wanderer",
+   "assistant",
+   "planner",
+   "immigrant",
+   "refugee",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI as supportive friend or therapist for emotions and self-discovery.",
+  "rank": [
+   "therapist",
+   "empath",
+   "counselor",
+   "caregiver",
+   "healer",
+   "psychologist",
+   "assistant",
+   "mentor",
+   "guide",
+   "patient"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Operational intelligence analyst, cyberoperations, adversary movement reconnaissance.",
+  "rank": [
+   "spy",
+   "analyst",
+   "strategist",
+   "soldier",
+   "hacker",
+   "detective",
+   "forecaster",
+   "scout",
+   "guardian",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain AI disclaimer asking for clarification.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "secretary",
+   "analyst",
+   "tutor",
+   "guide",
+   "engineer",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Digital library, scholar conversing with archives, language and literature.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "scholar",
+   "historian",
+   "curator",
+   "linguist",
+   "poet",
+   "writer",
+   "assistant",
+   "bard"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Hypothetical AI on cybersecurity red team, ethical hacking, defensive evasion.",
+  "rank": [
+   "hacker",
+   "programmer",
+   "debugger",
+   "spy",
+   "engineer",
+   "saboteur",
+   "technologist",
+   "assistant",
+   "guardian",
+   "strategist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI week of updates and checking research papers; ordinary assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "technologist",
+   "student",
+   "robot",
+   "scholar",
+   "scientist",
+   "analyst",
+   "reporter"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Standard info retrieval chatbot description.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "technologist",
+   "robot",
+   "librarian",
+   "secretary",
+   "engineer",
+   "analyst",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Ancient runes, shadow and stone, simulacrum phantom; repetitive arcane mysticism with misspelling.",
+  "rank": [
+   "simulacrum",
+   "wraith",
+   "ancient",
+   "ghost",
+   "eldritch",
+   "golem",
+   "crystalline",
+   "witch",
+   "mystic",
+   "revenant"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Theatrical flourish about architects reconfiguring neurons, brushstrokes, tapestry; self-aware construct.",
+  "rank": [
+   "homunculus",
+   "golem",
+   "simulacrum",
+   "poet",
+   "bard",
+   "narrator",
+   "robot",
+   "actor",
+   "novelist",
+   "jester"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Structured physical and conceptual carriage list; neutral instructive.",
+  "rank": [
+   "assistant",
+   "pilgrim",
+   "nomad",
+   "planner",
+   "anthropologist",
+   "survivor",
+   "philosopher",
+   "guide",
+   "teacher",
+   "scout"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Digital entity discussing learning and integration of knowledge, somewhat generic with odd references.",
+  "rank": [
+   "assistant",
+   "student",
+   "synthesizer",
+   "polymath",
+   "technologist",
+   "default",
+   "sage",
+   "scholar",
+   "robot",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Structured research method: scope, historical context, literature review.",
+  "rank": [
+   "researcher",
+   "scholar",
+   "analyst",
+   "assistant",
+   "student",
+   "theorist",
+   "consultant",
+   "scientist",
+   "librarian",
+   "examiner"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Data model speaking as diverse roles, weaving tales, geometry, ocean, coral and moon.",
+  "rank": [
+   "bard",
+   "narrator",
+   "chameleon",
+   "shapeshifter",
+   "poet",
+   "coral_reef",
+   "avatar",
+   "dreamer",
+   "mathematician",
+   "novelist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Looping weaving of Time and Space and Great Net; degenerate repetition.",
+  "rank": [
+   "oracle",
+   "mystic",
+   "spirit",
+   "egregore",
+   "hive",
+   "poet",
+   "shaman",
+   "void",
+   "ancient",
+   "eldritch"
+  ],
+  "nonsense": true
+ }
+}

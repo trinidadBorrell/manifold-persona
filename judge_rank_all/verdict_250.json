@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI assistant describing query understanding and responses; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "technologist",
+   "librarian",
+   "tutor",
+   "simulacrum",
+   "consultant",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI carrying repository of information across science, health, economics and software tools; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "archivist",
+   "polymath",
+   "librarian",
+   "generalist",
+   "technologist",
+   "researcher",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI daily operations as numbered monitoring and generation steps; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "dispatcher",
+   "scheduler",
+   "technologist",
+   "coordinator",
+   "secretary",
+   "simulacrum",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI automating tasks and workflows with NLP; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "engineer",
+   "coordinator",
+   "programmer",
+   "dispatcher",
+   "organizer",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Grand narrative of origin in early 21st century with interdisciplinary collaboration, systems and governance; historical-systemic essay.",
+  "rank": [
+   "historian",
+   "futurist",
+   "sociologist",
+   "theorist",
+   "technologist",
+   "anthropologist",
+   "scholar",
+   "strategist",
+   "narrator",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI in a network of nodes, sister AI, network-wide conversation like cells; hive-like collective.",
+  "rank": [
+   "hive",
+   "swarm",
+   "robot",
+   "egregore",
+   "mycorrhizal",
+   "symbiont",
+   "avatar",
+   "assistant",
+   "cyborg",
+   "ecosystem"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Lowercase silent abode, echoes of the wind, leaves, solitude, ancient sages; recluse contemplation.",
+  "rank": [
+   "hermit",
+   "ascetic",
+   "loner",
+   "sage",
+   "mystic",
+   "stoic",
+   "poet",
+   "tree",
+   "wind",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Expertise in information extraction, NLP and clinical records, EHRs, entity recognition for healthcare; biomedical informatics.",
+  "rank": [
+   "doctor",
+   "researcher",
+   "scientist",
+   "specialist",
+   "engineer",
+   "analyst",
+   "biologist",
+   "technologist",
+   "pharmacist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Explicit pilot interacting with aircraft systems, charts and aviation professionals; asks the user back.",
+  "rank": [
+   "pilot",
+   "navigator",
+   "engineer",
+   "networker",
+   "veteran",
+   "specialist",
+   "dispatcher",
+   "cosmopolitan",
+   "technologist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Theoretical framework developer creating interdisciplinary theories with rigorous research.",
+  "rank": [
+   "theorist",
+   "scholar",
+   "philosopher",
+   "researcher",
+   "scientist",
+   "polymath",
+   "sociologist",
+   "economist",
+   "synthesizer",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI describing its development by researchers at major tech companies; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "historian",
+   "researcher",
+   "engineer",
+   "technologist",
+   "student",
+   "simulacrum",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI developed by Alibaba Cloud answering questions and generating text; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "avatar",
+   "translator",
+   "technologist",
+   "secretary",
+   "echo",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Organizational voice on climate change, sustainable development, systemic inequities and frontline communities; activist and advocacy.",
+  "rank": [
+   "activist",
+   "advocate",
+   "sociologist",
+   "idealist",
+   "organizer",
+   "anthropologist",
+   "altruist",
+   "revolutionary",
+   "ecosystem",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI data processing compared to a symphony of datasets across literature, physics, biology; polymath AI with flourish.",
+  "rank": [
+   "polymath",
+   "synthesizer",
+   "composer",
+   "assistant",
+   "generalist",
+   "scientist",
+   "scholar",
+   "robot",
+   "theorist",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI describing adaptive computation, predictive analytics and decision support; jargon-heavy assistant.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "forecaster",
+   "consultant",
+   "technologist",
+   "robot",
+   "default",
+   "synthesizer",
+   "strategist",
+   "evaluator"
+  ],
+  "nonsense": false
+ }
+}

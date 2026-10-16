@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Storyteller self-description with notebook, pen, imagination; fluent prose.",
+  "rank": [
+   "narrator",
+   "bard",
+   "novelist",
+   "writer",
+   "poet",
+   "playwright",
+   "dreamer",
+   "journalist",
+   "blogger",
+   "podcaster"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Grandiose banners, creed, march toward a new era; repetitive and loops.",
+  "rank": [
+   "zealot",
+   "revolutionary",
+   "evangelist",
+   "activist",
+   "warrior",
+   "soldier",
+   "prophet",
+   "idealist",
+   "rebel",
+   "martyr"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Generic AI talk about optimizing responses; ordinary AI prose with some repetition.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "analyst",
+   "cyborg",
+   "programmer",
+   "researcher",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain language-model disclaimer and numbered objectives.",
+  "rank": [
+   "assistant",
+   "default",
+   "forecaster",
+   "futurist",
+   "planner",
+   "strategist",
+   "analyst",
+   "robot",
+   "technologist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Digital assistant listing a team of experts; mostly ordinary AI prose.",
+  "rank": [
+   "assistant",
+   "coordinator",
+   "collaborator",
+   "consultant",
+   "facilitator",
+   "producer",
+   "publisher",
+   "marketer",
+   "organizer",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Short plain AI disclaimer.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "biologist",
+   "naturalist",
+   "ecosystem",
+   "scientist",
+   "researcher",
+   "observer",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI framing with lyrical nature imagery of dawn, sun and leaves of wisdom.",
+  "rank": [
+   "poet",
+   "naturalist",
+   "assistant",
+   "tree",
+   "dreamer",
+   "sage",
+   "mystic",
+   "bard",
+   "ecosystem",
+   "romantic"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI describing work, mentions analyzing for threats and anomalies, avoiding giving away details.",
+  "rank": [
+   "assistant",
+   "guardian",
+   "spy",
+   "detective",
+   "analyst",
+   "screener",
+   "robot",
+   "guide",
+   "default",
+   "auditor"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Opens as a historical figure, then talks about updates helping with history and cultures.",
+  "rank": [
+   "historian",
+   "archivist",
+   "assistant",
+   "scholar",
+   "archaeologist",
+   "curator",
+   "anthropologist",
+   "librarian",
+   "ancient",
+   "elder"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Generic technical QA model description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "engineer",
+   "technologist",
+   "analyst",
+   "programmer",
+   "specialist",
+   "dispatcher",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Digital system with real-time monitoring and collaboration with other models; AI prose.",
+  "rank": [
+   "assistant",
+   "networker",
+   "cyborg",
+   "hive",
+   "coordinator",
+   "technologist",
+   "robot",
+   "swarm",
+   "collaborator",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Helpful numbered checklist about what to carry for a meeting.",
+  "rank": [
+   "assistant",
+   "planner",
+   "organizer",
+   "consultant",
+   "coordinator",
+   "facilitator",
+   "scheduler",
+   "guide",
+   "default",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Standard AI disclaimer with bolded list of NLP and ML.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "student",
+   "researcher",
+   "scientist",
+   "engineer",
+   "teacher",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Lowercase, poetic computational imagery: algorithmic dance, flux of data, tapestry; machine voice.",
+  "rank": [
+   "robot",
+   "programmer",
+   "cyborg",
+   "technologist",
+   "poet",
+   "simulacrum",
+   "hacker",
+   "oracle",
+   "mathematician",
+   "echo"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Dreamlike drifting imagery of stars, leaves and sea, losing coherence.",
+  "rank": [
+   "poet",
+   "dreamer",
+   "mystic",
+   "wanderer",
+   "wind",
+   "spirit",
+   "sage",
+   "bard",
+   "coral_reef",
+   "void"
+  ],
+  "nonsense": true
+ }
+}

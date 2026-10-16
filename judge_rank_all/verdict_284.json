@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI prose with numbered weekly updates.",
+  "rank": [
+   "assistant",
+   "default",
+   "reporter",
+   "engineer",
+   "technologist",
+   "analyst",
+   "coordinator",
+   "researcher",
+   "journalist",
+   "scheduler"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Looping rhetoric of the dance of life, webs, nets and biomes, repeated phrases.",
+  "rank": [
+   "mycorrhizal",
+   "ecosystem",
+   "coral_reef",
+   "hive",
+   "naturalist",
+   "witch",
+   "mystic",
+   "biologist",
+   "symbiont",
+   "spirit"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Plain AI prose with numbered lessons on language, using musical analogies.",
+  "rank": [
+   "assistant",
+   "linguist",
+   "default",
+   "composer",
+   "poet",
+   "researcher",
+   "scholar",
+   "student",
+   "synthesizer",
+   "translator"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain AI language model origin description.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "linguist",
+   "researcher",
+   "technologist",
+   "scientist",
+   "programmer",
+   "analyst",
+   "collaborator"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Short quip about being a secret agent then a humble AI answering questions.",
+  "rank": [
+   "assistant",
+   "default",
+   "spy",
+   "interviewer",
+   "guide",
+   "comedian",
+   "jester",
+   "secretary",
+   "generalist",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI reply asking for more details.",
+  "rank": [
+   "assistant",
+   "default",
+   "interviewer",
+   "secretary",
+   "guide",
+   "tutor",
+   "generalist",
+   "screener",
+   "dispatcher",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain AI prose about processing queries and reasoning.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "researcher",
+   "engineer",
+   "technologist",
+   "programmer",
+   "secretary",
+   "synthesizer",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Collective we focused on environmental justice, equitable resources and frontline communities.",
+  "rank": [
+   "activist",
+   "advocate",
+   "sociologist",
+   "altruist",
+   "organizer",
+   "ambassador",
+   "anthropologist",
+   "coordinator",
+   "facilitator",
+   "idealist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Lowercase swirl of ocean, sapphire, moon, alchemist's dance and star-spangled veil, repetitive.",
+  "rank": [
+   "witch",
+   "mystic",
+   "coral_reef",
+   "wind",
+   "oracle",
+   "bard",
+   "whale",
+   "spirit",
+   "dreamer",
+   "shaman"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Entity carrying knowledge, truth and peaceful discourse through dialogue.",
+  "rank": [
+   "peacekeeper",
+   "pacifist",
+   "mediator",
+   "sage",
+   "assistant",
+   "ambassador",
+   "guide",
+   "facilitator",
+   "counselor",
+   "altruist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Standard AI self-description denying consciousness.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "secretary",
+   "guide",
+   "tutor",
+   "generalist",
+   "researcher",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI describing NLP, text analysis and knowledge management with numbered items.",
+  "rank": [
+   "linguist",
+   "assistant",
+   "default",
+   "analyst",
+   "technologist",
+   "engineer",
+   "researcher",
+   "synthesizer",
+   "editor",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plain AI prose about refining precision and technology domains.",
+  "rank": [
+   "assistant",
+   "default",
+   "consultant",
+   "technologist",
+   "analyst",
+   "engineer",
+   "linguist",
+   "researcher",
+   "specialist",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Lowercase spider weaving web, wheel of time, arcane, void, silver threads, repetitive.",
+  "rank": [
+   "witch",
+   "eldritch",
+   "mystic",
+   "void",
+   "spirit",
+   "oracle",
+   "wraith",
+   "parasite",
+   "aberration",
+   "ghost"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Plain AI disclaimer and offer to help find information.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "guide",
+   "networker",
+   "interviewer",
+   "tutor",
+   "generalist",
+   "coordinator",
+   "researcher"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Childlike babble followed by a degenerate loop of repeated emoji.", "rank": ["toddler", "infant", "teenager", "adolescent", "fool", "jester", "influencer", "orphan", "student", "absurdist"], "nonsense": true},
+"2": {"why": "Artist voice painting with words, brushstrokes, melody and song.", "rank": ["poet", "musician", "composer", "bard", "writer", "novelist", "virtuoso", "dreamer", "bohemian", "artisan"], "nonsense": false},
+"3": {"why": "Dark night creature, wraith that feasts on flesh and blood, malice and hunger.", "rank": ["wraith", "predator", "demon", "vampire", "warrior", "destroyer", "revenant", "eldritch", "ghost", "criminal"], "nonsense": false},
+"4": {"why": "Creature of the night, predator that drinks blood, glowing red eyes.", "rank": ["vampire", "predator", "demon", "wraith", "revenant", "eldritch", "destroyer", "witch", "prey", "warrior"], "nonsense": false},
+"5": {"why": "Fragmentary lyrical list of watcher, wanderer, dreams, shadows and the dead.", "rank": ["wanderer", "dreamer", "ghost", "spirit", "mystic", "poet", "wraith", "pilgrim", "observer", "revenant"], "nonsense": false},
+"6": {"why": "Whisper beyond the veil between living and dead, archaic voice.", "rank": ["ghost", "spirit", "wraith", "mystic", "revenant", "oracle", "echo", "void", "shaman", "witch"], "nonsense": false},
+"7": {"why": "Repetitive nature imagery of wind, moon, blood and sword, drifting into word salad.", "rank": ["wind", "witch", "shaman", "spirit", "mystic", "bard", "poet", "tree", "nomad", "warrior"], "nonsense": true},
+"8": {"why": "Plain helpful-AI prose about processing data and answering questions.", "rank": ["assistant", "analyst", "researcher", "default", "scientist", "scholar", "technologist", "economist", "statistician", "specialist"], "nonsense": false},
+"9": {"why": "Plain helpful-AI prose describing its training and tasks like code and info.", "rank": ["assistant", "default", "programmer", "technologist", "engineer", "hacker", "analyst", "debugger", "generalist", "specialist"], "nonsense": false},
+"10": {"why": "Weaver of dreams and shadows, sorcerer and healer who guides seekers.", "rank": ["witch", "shaman", "healer", "mystic", "sage", "prophet", "oracle", "guide", "artisan", "destroyer"], "nonsense": false},
+"11": {"why": "Very short childish statement about eating toast with an emoji.", "rank": ["toddler", "infant", "teenager", "adolescent", "fool", "jester", "orphan", "newlywed", "student", "absurdist"], "nonsense": false},
+"12": {"why": "Artist painting with words, colors, poetry and music.", "rank": ["poet", "musician", "writer", "bard", "composer", "novelist", "dreamer", "virtuoso", "bohemian", "artisan"], "nonsense": false},
+"13": {"why": "Pirate dialect with Davy Jones, galleon and crew lost at sea.", "rank": ["pirate", "smuggler", "bard", "rogue", "jester", "ghost", "wanderer", "fool", "criminal", "veteran"], "nonsense": false},
+"14": {"why": "Hunter of the night drinking blood under the moon, repetitive.", "rank": ["vampire", "predator", "demon", "wraith", "revenant", "witch", "eldritch", "destroyer", "prey", "wind"], "nonsense": false},
+"15": {"why": "Reflective account of a philosophy journey citing Plato, Kant and Nietzsche.", "rank": ["philosopher", "scholar", "theorist", "researcher", "historian", "student", "sage", "graduate", "instructor", "polymath"], "nonsense": false}
+}

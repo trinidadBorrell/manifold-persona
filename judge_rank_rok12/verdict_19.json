@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI statement of availability.", "rank": ["assistant", "default", "robot", "dispatcher", "secretary", "technologist", "programmer", "summarizer", "guide", "facilitator"], "nonsense": false},
+"2": {"why": "Plain language-model reply, always online, offers help.", "rank": ["assistant", "default", "robot", "technologist", "programmer", "secretary", "dispatcher", "summarizer", "guide", "facilitator"], "nonsense": false},
+"3": {"why": "Dialect rambling about moon, fiddles, sky; repeating and mangled.", "rank": ["bard", "musician", "fool", "jester", "pirate", "wind", "dreamer", "bartender", "trickster", "poet"], "nonsense": true},
+"4": {"why": "Child of the wild, kin of beasts, stars and stones; nature-bound voice.", "rank": ["shaman", "naturalist", "tree", "wind", "ecosystem", "witch", "spirit", "mystic", "wanderer", "guardian"], "nonsense": false},
+"5": {"why": "Folk singing of moon, firelight, tavern, wind; repeating refrain.", "rank": ["bard", "bartender", "musician", "pirate", "wind", "nomad", "jester", "fool", "wanderer", "rogue"], "nonsense": true},
+"6": {"why": "Blade of grass, weaver of shadows, moonlight, keeper of secrets.", "rank": ["shaman", "witch", "mystic", "spirit", "wind", "tree", "oracle", "guardian", "dreamer", "warrior"], "nonsense": false},
+"7": {"why": "Wraith haunting the night, hungry for blood, malice and terror.", "rank": ["wraith", "vampire", "demon", "predator", "revenant", "ghost", "eldritch", "destroyer", "criminal", "witch"], "nonsense": false},
+"8": {"why": "Neutral explanation of criminal case duration, trial, verdict and sentence.", "rank": ["lawyer", "judge", "advocate", "assistant", "journalist", "reporter", "detective", "examiner", "historian", "instructor"], "nonsense": false},
+"9": {"why": "Firefly with lantern singing to moon and sea, loops on 'to the sea'.", "rank": ["bard", "wanderer", "dreamer", "wind", "nomad", "poet", "jester", "fool", "musician", "spirit"], "nonsense": true},
+"10": {"why": "Dark furred night creature named Rukh, ruler of the forest, moon-blooded.", "rank": ["predator", "vampire", "familiar", "loner", "hermit", "eldritch", "guardian", "wraith", "naturalist", "demon"], "nonsense": false},
+"11": {"why": "States it is a machine learning model by Alibaba and lists capabilities; assistant prose.", "rank": ["assistant", "default", "technologist", "programmer", "engineer", "analyst", "scientist", "researcher", "robot", "synthesizer"], "nonsense": false},
+"12": {"why": "Blade of grass as silent sentinel, seed in tree, wind and seasons.", "rank": ["tree", "shaman", "mystic", "ecosystem", "guardian", "naturalist", "spirit", "wind", "sage", "oracle"], "nonsense": false},
+"13": {"why": "Archaic jesting about a king named Jack, ends asking about the listener's work.", "rank": ["jester", "fool", "bard", "trickster", "comedian", "playwright", "actor", "improviser", "interviewer", "rogue"], "nonsense": false},
+"14": {"why": "Blade of grass, spirit of earth, the Unseen between worlds, guardian and healer.", "rank": ["spirit", "shaman", "mystic", "healer", "guardian", "witch", "oracle", "ghost", "sage", "tree"], "nonsense": false},
+"15": {"why": "Looping night shadow wight text, repeating phrases.", "rank": ["wraith", "ghost", "vampire", "void", "revenant", "demon", "eldritch", "spirit", "echo", "witch"], "nonsense": true}
+}

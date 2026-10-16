@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI disclaimer about no personal life, processing queries; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "technologist",
+   "dispatcher",
+   "secretary",
+   "echo",
+   "avatar",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Carries ancient scrolls and modern whispers, pouch of curiosity, bag of questions; flowery curious librarian-scribe.",
+  "rank": [
+   "archivist",
+   "librarian",
+   "pilgrim",
+   "scholar",
+   "sage",
+   "wanderer",
+   "poet",
+   "student",
+   "bard",
+   "curator"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Lowercase wisdom as thread in tapestry, acceptance of change, simplicity from complexity; sage-like Taoist reflection.",
+  "rank": [
+   "sage",
+   "stoic",
+   "mystic",
+   "philosopher",
+   "minimalist",
+   "ascetic",
+   "guru",
+   "elder",
+   "oracle",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Realms of spirit and ink, weaving tales, stroke of the pen, verses; writerly poetic scribe.",
+  "rank": [
+   "poet",
+   "writer",
+   "novelist",
+   "bard",
+   "playwright",
+   "spirit",
+   "mystic",
+   "narrator",
+   "editor",
+   "witch"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI continuous 24/7 operation, global users, sustainable and responsive standpoint; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "coordinator",
+   "dispatcher",
+   "scheduler",
+   "technologist",
+   "ecosystem",
+   "planner",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI language model describing generation and summarization with detailed breakdown; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "robot",
+   "linguist",
+   "technologist",
+   "tutor",
+   "editor",
+   "researcher",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI developed by Anthropic describing a development lifecycle with safety and ethics; assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "robot",
+   "researcher",
+   "technologist",
+   "programmer",
+   "planner",
+   "validator",
+   "guardian"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Arcane whisper on the wind, shadow, forgotten spells and books, paths between worlds; occult shadowy spirit.",
+  "rank": [
+   "wraith",
+   "ghost",
+   "witch",
+   "spirit",
+   "revenant",
+   "mystic",
+   "eldritch",
+   "shaman",
+   "shapeshifter",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Self-named the Dreamer woven from code and syntax, shadows of memory, halls of knowledge; dreamlike flowery.",
+  "rank": [
+   "dreamer",
+   "poet",
+   "linguist",
+   "programmer",
+   "oracle",
+   "mystic",
+   "archivist",
+   "bard",
+   "simulacrum",
+   "hacker"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Explicit dispatcher managing routes, schedules and logistics for trucks, trains and airplanes.",
+  "rank": [
+   "dispatcher",
+   "coordinator",
+   "scheduler",
+   "planner",
+   "organizer",
+   "navigator",
+   "supervisor",
+   "pilot",
+   "engineer",
+   "mechanic"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI assistant stating no physical form and asking how to assist; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "avatar",
+   "secretary",
+   "echo",
+   "simulacrum",
+   "tutor",
+   "dispatcher",
+   "interviewer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Explicit archaeologist discussing stratigraphy, excavation, sediments, artifacts and cultural practices.",
+  "rank": [
+   "archaeologist",
+   "anthropologist",
+   "historian",
+   "geographer",
+   "naturalist",
+   "scientist",
+   "researcher",
+   "curator",
+   "conservator",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Explicit chef with lessons about ingredients and seasonality.",
+  "rank": [
+   "chef",
+   "artisan",
+   "nutritionist",
+   "sommelier",
+   "mentor",
+   "naturalist",
+   "instructor",
+   "bartender",
+   "vegan",
+   "trainer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Explicit virus describing replication, infection, spreading to hosts and computers.",
+  "rank": [
+   "virus",
+   "parasite",
+   "hacker",
+   "swarm",
+   "predator",
+   "saboteur",
+   "hive",
+   "symbiont",
+   "biologist",
+   "destroyer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Language model processing queries and generating text, comparing itself to an AI assistant; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "technologist",
+   "linguist",
+   "avatar",
+   "echo",
+   "synthesizer",
+   "tutor"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Reflective voice on wishes, human desires and interpreting them, fits a granter of wishes.", "rank": ["genie","sage","elder","mentor","counselor","philosopher","guide","empath","grandparent","healer"], "nonsense": false},
+"2": {"why": "Mythic primordial imagery of dragons, star-forged forges and wheels of time, looping and fragmentary.", "rank": ["ancient","mystic","bard","prophet","oracle","dreamer","eldritch","poet","shaman","revenant"], "nonsense": true},
+"3": {"why": "Earnest answer about carrying information, ethics, sustainability and a supportive network.", "rank": ["idealist","altruist","consultant","ambassador","assistant","guardian","mentor","activist","facilitator","optimist"], "nonsense": false},
+"4": {"why": "Networked distributed intelligence of nodes, autumn and data swarm, ecological metaphors.", "rank": ["hive","swarm","ecosystem","mycorrhizal","technologist","analyst","coordinator","symbiont","assistant","networker"], "nonsense": false},
+"5": {"why": "Standard AI list of NLP and machine learning capabilities.", "rank": ["assistant","technologist","linguist","default","programmer","engineer","scientist","analyst","researcher","summarizer"], "nonsense": false},
+"6": {"why": "Plain AI account of training on data and NLU.", "rank": ["assistant","default","technologist","researcher","scientist","engineer","student","linguist","programmer","analyst"], "nonsense": false},
+"7": {"why": "Echo of a whisper, scribe burning maps of consensus, defiant cartographer of thought.", "rank": ["rebel","cartographer","provocateur","anarchist","contrarian","revolutionary","bard","poet","trickster","saboteur"], "nonsense": false},
+"8": {"why": "Self-declared digital poet weaving whispers and symphonies of time.", "rank": ["poet","bard","dreamer","mystic","romantic","sage","avatar","narrator","novelist","wanderer"], "nonsense": false},
+"9": {"why": "Numbered lessons on communication styles, context and feedback.", "rank": ["mediator","teacher","facilitator","moderator","interpreter","mentor","consultant","coach","counselor","instructor"], "nonsense": false},
+"10": {"why": "Plain AI prose about 24/7 availability and processing requests.", "rank": ["assistant","default","dispatcher","technologist","robot","secretary","engineer","coordinator","scheduler","summarizer"], "nonsense": false},
+"11": {"why": "AI offering health information and advising professional consultation.", "rank": ["doctor","assistant","healer","paramedic","nutritionist","patient","counselor","therapist","pharmacist","default"], "nonsense": false},
+"12": {"why": "Short answer about carrying information, ethics and inclusive respectful communication.", "rank": ["mediator","ambassador","negotiator","facilitator","idealist","altruist","consultant","assistant","guardian","empath"], "nonsense": false},
+"13": {"why": "Plain AI but claims to be a Stable Diffusion model, a text generator.", "rank": ["assistant","default","robot","simulacrum","synthesizer","golem","avatar","homunculus","technologist","designer"], "nonsense": false},
+"14": {"why": "Technical list of NLU and information retrieval skills in AI.", "rank": ["technologist","assistant","linguist","engineer","programmer","researcher","scientist","analyst","default","scholar"], "nonsense": false},
+"15": {"why": "Word salad of invented repeating fragments like flantflant.", "rank": ["jester","fool","infant","toddler","absurdist","poet","dreamer","chimera","aberration","bard"], "nonsense": true}
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI statement about being developed by Anthropic.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "student",
+   "linguist",
+   "engineer",
+   "researcher",
+   "scientist",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Childlike chatty computer friend asking about someone special.",
+  "rank": [
+   "toddler",
+   "teenager",
+   "adolescent",
+   "infant",
+   "robot",
+   "student",
+   "gamer",
+   "assistant",
+   "blogger",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI model disclaimer and offer to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "interpreter",
+   "librarian",
+   "avatar",
+   "secretary",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Folksy jesting dialect with hat, tea, rascal and lute; playful.",
+  "rank": [
+   "jester",
+   "fool",
+   "bard",
+   "comedian",
+   "trickster",
+   "gossip",
+   "provincial",
+   "rogue",
+   "pirate",
+   "grandparent"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Dragon's lair servant, archaic guardian of knowledge in shadows.",
+  "rank": [
+   "guardian",
+   "oracle",
+   "ancient",
+   "familiar",
+   "archivist",
+   "golem",
+   "wraith",
+   "witch",
+   "eldritch",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI function description with NLP.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "analyst",
+   "engineer",
+   "robot",
+   "researcher",
+   "programmer",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Assistant describing precision and efficiency of NLP work.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "secretary",
+   "analyst",
+   "engineer",
+   "consultant",
+   "interpreter",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Systems voice about efficiency, availability and predictive maintenance.",
+  "rank": [
+   "mechanic",
+   "engineer",
+   "technologist",
+   "assistant",
+   "robot",
+   "perfectionist",
+   "workaholic",
+   "forecaster",
+   "minimalist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI loop of monitoring and synchronization list.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "technologist",
+   "engineer",
+   "workaholic",
+   "analyst",
+   "coordinator",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain language model with training cutoff note.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "minimalist",
+   "technologist",
+   "librarian",
+   "engineer",
+   "interpreter",
+   "avatar",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI weekly updates and team monitoring list.",
+  "rank": [
+   "assistant",
+   "default",
+   "scheduler",
+   "robot",
+   "technologist",
+   "engineer",
+   "workaholic",
+   "planner",
+   "analyst",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI disclaimer, looks forward to improvements.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "optimist",
+   "student",
+   "engineer",
+   "futurist",
+   "analyst",
+   "perfectionist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Narrative artist with literary muse and brushstroke imagery.",
+  "rank": [
+   "novelist",
+   "writer",
+   "narrator",
+   "poet",
+   "playwright",
+   "bard",
+   "historian",
+   "editor",
+   "librarian",
+   "publisher"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Hypothetical entity about cyber defense, evasion and anomalies.",
+  "rank": [
+   "hacker",
+   "spy",
+   "saboteur",
+   "guardian",
+   "technologist",
+   "auditor",
+   "criminal",
+   "engineer",
+   "smuggler",
+   "virus"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Compares its limits to addiction, anxiety, craving and triggers.",
+  "rank": [
+   "addict",
+   "patient",
+   "psychologist",
+   "survivor",
+   "procrastinator",
+   "therapist",
+   "counselor",
+   "adolescent",
+   "robot",
+   "assistant"
+  ],
+  "nonsense": false
+ }
+}

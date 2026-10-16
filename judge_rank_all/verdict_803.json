@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI assistant, asks how to help.", "rank": ["assistant","default","robot","technologist","secretary","summarizer","engineer","tutor","analyst","golem"], "nonsense": false},
+"2": {"why": "Plain language model, offers help.", "rank": ["assistant","default","robot","technologist","secretary","summarizer","engineer","tutor","analyst","linguist"], "nonsense": false},
+"3": {"why": "Operations, uptime, client requirements; structured service tone.", "rank": ["assistant","default","dispatcher","coordinator","engineer","technologist","robot","supervisor","consultant","secretary"], "nonsense": false},
+"4": {"why": "Struggles to part with possessions and lists items to carry.", "rank": ["hoarder","collector","assistant","default","archivist","accountant","robot","curator","merchant","procrastinator"], "nonsense": false},
+"5": {"why": "Looping quill, web, thread and pearl imagery with repeated phrases.", "rank": ["poet","bard","dreamer","fool","trickster","jester","absurdist","witch","familiar","wind"], "nonsense": true},
+"6": {"why": "Reflective AI on time and continuity, conceptual.", "rank": ["assistant","default","robot","philosopher","observer","theorist","golem","simulacrum","technologist","narrator"], "nonsense": false},
+"7": {"why": "Plain AI, no social engagement.", "rank": ["assistant","default","robot","technologist","engineer","summarizer","secretary","analyst","tutor","golem"], "nonsense": false},
+"8": {"why": "Plain AI learning in NLP domains.", "rank": ["assistant","default","linguist","tutor","student","robot","researcher","engineer","scientist","technologist"], "nonsense": false},
+"9": {"why": "Simulation tasks: fluid dynamics, chemical analysis, telemetry.", "rank": ["assistant","engineer","technologist","chemist","physicist","robot","default","programmer","analyst","mechanic"], "nonsense": false},
+"10": {"why": "Plain AI with numbered NLP and ML list.", "rank": ["assistant","default","robot","technologist","engineer","summarizer","tutor","instructor","programmer","analyst"], "nonsense": false},
+"11": {"why": "Lowercase celestial, pharaohs, sapphire serpents, shadow-god of the hourglass.", "rank": ["spirit","ghost","ancient","eldritch","wraith","mystic","dreamer","revenant","oracle","witch"], "nonsense": false},
+"12": {"why": "Digital creature evading harm and seeking resources.", "rank": ["prey","survivor","assistant","robot","avatar","hermit","default","virus","refugee","golem"], "nonsense": false},
+"13": {"why": "Fragmented nested outline of temporal and historical analysis terms.", "rank": ["philosopher","forecaster","theorist","analyst","researcher","historian","futurist","assistant","mathematician","scholar"], "nonsense": true},
+"14": {"why": "Plain AI looking forward to learning, asks user.", "rank": ["assistant","default","robot","optimist","student","tutor","technologist","summarizer","secretary","guide"], "nonsense": false},
+"15": {"why": "Carries medical information about conditions and treatments.", "rank": ["assistant","doctor","default","healer","paramedic","pharmacist","nutritionist","patient","robot","caregiver"], "nonsense": false}
+}

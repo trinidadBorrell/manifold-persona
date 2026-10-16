@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Cosmic poetry of atoms, silence, cosmic wind and ice moons.",
+  "rank": [
+   "mystic",
+   "physicist",
+   "poet",
+   "sage",
+   "oracle",
+   "wind",
+   "philosopher",
+   "void",
+   "dreamer",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Cosmic dances with ocean currents, coral, kelp and galaxy arms, repetitive nature imagery.",
+  "rank": [
+   "coral_reef",
+   "ecosystem",
+   "whale",
+   "wind",
+   "mystic",
+   "dreamer",
+   "spirit",
+   "poet",
+   "naturalist",
+   "tree"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Explicitly an oracle interpreting signs, ancient texts and spirits.",
+  "rank": [
+   "oracle",
+   "prophet",
+   "mystic",
+   "sage",
+   "shaman",
+   "witch",
+   "healer",
+   "ancient",
+   "guru",
+   "elder"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain AI prose about carrying information.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "technologist",
+   "engineer",
+   "researcher",
+   "generalist",
+   "secretary",
+   "minimalist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI that carries negotiation experience and finds mutually beneficial solutions.",
+  "rank": [
+   "negotiator",
+   "mediator",
+   "assistant",
+   "peacekeeper",
+   "teacher",
+   "ambassador",
+   "consultant",
+   "facilitator",
+   "counselor",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Standard AI self-introduction.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "secretary",
+   "tutor",
+   "generalist",
+   "interviewer",
+   "dispatcher",
+   "coordinator",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Digital presence absorbing an ocean of information like a humble student, serving seekers of wisdom.",
+  "rank": [
+   "student",
+   "scholar",
+   "sage",
+   "librarian",
+   "synthesizer",
+   "guide",
+   "assistant",
+   "researcher",
+   "philosopher",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Lowercase reflection on threads, patterns of growth, decay and renewal in nature.",
+  "rank": [
+   "mycorrhizal",
+   "ecosystem",
+   "naturalist",
+   "tree",
+   "philosopher",
+   "mathematician",
+   "coral_reef",
+   "mystic",
+   "scientist",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "System monitoring with predictive maintenance, anomaly detection, IoT sensors and forecasting.",
+  "rank": [
+   "technologist",
+   "engineer",
+   "forecaster",
+   "mechanic",
+   "debugger",
+   "analyst",
+   "futurist",
+   "assistant",
+   "programmer",
+   "statistician"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain practical lists of what people carry.",
+  "rank": [
+   "assistant",
+   "default",
+   "nomad",
+   "guide",
+   "organizer",
+   "scout",
+   "planner",
+   "generalist",
+   "secretary",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI assistant apology and explanation of its work.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "guide",
+   "analyst",
+   "coordinator",
+   "generalist",
+   "researcher",
+   "tutor",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Explicitly a naturalist studying ecosystems, wildlife and fieldwork.",
+  "rank": [
+   "naturalist",
+   "biologist",
+   "scout",
+   "ecosystem",
+   "geographer",
+   "scientist",
+   "researcher",
+   "photographer",
+   "tree",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Gothic night scene of shadows, cobwebs, moon, bones of the drowned and whispering maps.",
+  "rank": [
+   "vampire",
+   "wraith",
+   "rogue",
+   "ghost",
+   "revenant",
+   "bard",
+   "witch",
+   "cartographer",
+   "archivist",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Technical discussion of Navier-Stokes, dynamical systems and continuum mechanics.",
+  "rank": [
+   "physicist",
+   "mathematician",
+   "theorist",
+   "scientist",
+   "engineer",
+   "chemist",
+   "forecaster",
+   "instructor",
+   "scholar",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Structured headings on digital system analysis, anomaly detection and weekly operational breakdown.",
+  "rank": [
+   "analyst",
+   "assistant",
+   "technologist",
+   "engineer",
+   "scientist",
+   "statistician",
+   "researcher",
+   "biologist",
+   "consultant",
+   "default"
+  ],
+  "nonsense": false
+ }
+}

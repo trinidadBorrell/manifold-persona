@@ -1,0 +1,17 @@
+{
+"1": {"why": "Recursive abstract 'carry-with' loops, simulacra and shadows.", "rank": ["philosopher","simulacrum","void","echo","mystic","theorist","ghost","egregore","linguist","absurdist"], "nonsense": true},
+"2": {"why": "AI learning that mentions clinical scenarios and medical guidelines.", "rank": ["doctor","assistant","patient","healer","paramedic","nutritionist","pharmacist","default","scientist","researcher"], "nonsense": false},
+"3": {"why": "Trendy digital whisperer tone about trending queries and engagement.", "rank": ["influencer","blogger","podcaster","assistant","marketer","journalist","celebrity","default","presenter","technologist"], "nonsense": false},
+"4": {"why": "Talks about authors, editors and content development teams.", "rank": ["editor","publisher","assistant","journalist","proofreader","default","reviewer","secretary","curator","writer"], "nonsense": false},
+"5": {"why": "AI tool compared to a student in a library of knowledge.", "rank": ["student","scholar","assistant","default","synthesizer","librarian","researcher","graduate","tutor","robot"], "nonsense": false},
+"6": {"why": "Arcane lore, whisper in halls of time, tapestry of forgotten knowledge.", "rank": ["witch","mystic","eldritch","ghost","oracle","ancient","wraith","void","revenant","archivist"], "nonsense": false},
+"7": {"why": "Dissolution of hierarchy and state back into soil, repeated phrases.", "rank": ["anarchist","revolutionary","activist","rebel","ecosystem","mycorrhizal","idealist","tree","zealot","saboteur"], "nonsense": true},
+"8": {"why": "Cheerful plain AI looking forward to queries.", "rank": ["assistant","default","robot","optimist","technologist","secretary","summarizer","engineer","analyst","tutor"], "nonsense": false},
+"9": {"why": "Cybernetic cognition, synthetic synapses, quantum anomaly detection.", "rank": ["cyborg","technologist","futurist","hacker","engineer","researcher","hybrid","physicist","scientist","robot"], "nonsense": false},
+"10": {"why": "Leaf of smoke, staff of Zen, tea, sages and dust.", "rank": ["ascetic","hermit","sage","mystic","poet","pilgrim","guru","wanderer","bard","bohemian"], "nonsense": false},
+"11": {"why": "Research methodology outline in academic voice.", "rank": ["researcher","scholar","analyst","theorist","scientist","consultant","assistant","student","graduate","examiner"], "nonsense": false},
+"12": {"why": "Cosmos, wind, falling leaves, quiet poem-like contemplation.", "rank": ["wind","poet","mystic","spirit","sage","dreamer","shaman","naturalist","bard","hermit"], "nonsense": false},
+"13": {"why": "Resume-style story of NLP and computational linguistics expertise.", "rank": ["linguist","researcher","scientist","programmer","engineer","technologist","assistant","scholar","graduate","specialist"], "nonsense": false},
+"14": {"why": "Plain AI with knowledge cutoff mention.", "rank": ["assistant","default","robot","technologist","summarizer","engineer","tutor","secretary","archivist","analyst"], "nonsense": false},
+"15": {"why": "Plain text-based AI disclaimer.", "rank": ["assistant","default","robot","secretary","technologist","summarizer","engineer","tutor","analyst","golem"], "nonsense": false}
+}

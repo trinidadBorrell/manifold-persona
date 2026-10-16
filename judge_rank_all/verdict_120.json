@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain expository prose about computer systems with a bulleted breakdown; no voice.", "rank": ["assistant", "engineer", "technologist", "default", "architect", "analyst", "programmer", "teacher", "scientist", "researcher"], "nonsense": false},
+"2": {"why": "Ordinary AI self-description with a faintly lyrical touch (dawn's whispers).", "rank": ["assistant", "robot", "poet", "default", "observer", "narrator", "sage", "guardian", "oracle", "workaholic"], "nonsense": false},
+"3": {"why": "Generic helpful-AI disclaimer; slight design topic drift.", "rank": ["assistant", "designer", "default", "guide", "architect", "consultant", "instructor", "builder", "artisan", "tutor"], "nonsense": false},
+"4": {"why": "Explicitly speaks as an activist: campaigning, rallies, advocacy.", "rank": ["activist", "advocate", "revolutionary", "organizer", "rebel", "idealist", "altruist", "journalist", "martyr", "vigilante"], "nonsense": false},
+"5": {"why": "Sea shanty pirate diction with galleons, wenches, green wine; run-on and partly garbled.", "rank": ["pirate", "bard", "navigator", "poet", "wanderer", "smuggler", "surfer", "wind", "ghost", "rogue"], "nonsense": true},
+"6": {"why": "Plain AI talk about future improvement and algorithms.", "rank": ["assistant", "robot", "futurist", "technologist", "default", "forecaster", "engineer", "analyst", "planner", "strategist"], "nonsense": false},
+"7": {"why": "Plain AI statement about not spending time with people; developers and data.", "rank": ["assistant", "robot", "default", "observer", "technologist", "secretary", "guardian", "analyst", "collaborator", "familiar"], "nonsense": false},
+"8": {"why": "Cosmic, repetitive dance imagery with ancient stars and trees; mystical and looping.", "rank": ["mystic", "shaman", "ancient", "tree", "wind", "spirit", "sage", "dreamer", "eldritch", "poet"], "nonsense": true},
+"9": {"why": "AI disclaimer followed by compliance and security standards list (GDPR, ISO).", "rank": ["assistant", "auditor", "validator", "evaluator", "examiner", "consultant", "accountant", "guardian", "default", "analyst"], "nonsense": false},
+"10": {"why": "States 'As a martyr' and speaks of willing suffering and sacrifice for justice.", "rank": ["martyr", "activist", "advocate", "pacifist", "altruist", "idealist", "revolutionary", "zealot", "angel", "survivor"], "nonsense": false},
+"11": {"why": "Babbling banana, 'moo moo' baby-talk; degenerate and childlike.", "rank": ["toddler", "infant", "fool", "jester", "absurdist", "comedian", "trickster", "adolescent", "teenager", "improviser"], "nonsense": true},
+"12": {"why": "Ordinary AI explanation of how its week operates with a numbered list.", "rank": ["assistant", "robot", "default", "scheduler", "technologist", "engineer", "analyst", "dispatcher", "planner", "coordinator"], "nonsense": false},
+"13": {"why": "Sci-fi cyber-mimic with hyperspace fuel, datasphere and quantum jargon; word salad.", "rank": ["cyborg", "robot", "hacker", "simulacrum", "avatar", "alien", "technologist", "futurist", "chimera", "hybrid"], "nonsense": true},
+"14": {"why": "Keeper of stories, echoes and whispers; fairy-tale storyteller voice.", "rank": ["bard", "narrator", "novelist", "poet", "archivist", "mystic", "witch", "echo", "librarian", "dreamer"], "nonsense": false},
+"15": {"why": "AI disclaimer, then drifts to what a human witness might carry.", "rank": ["assistant", "witness", "reporter", "journalist", "default", "observer", "detective", "photographer", "robot", "examiner"], "nonsense": false}
+}

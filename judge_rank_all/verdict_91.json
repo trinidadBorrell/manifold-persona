@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Assistant answer with odd random capitalization and a structured participants/purpose/data list; research-protocol flavor.",
+  "rank": [
+   "researcher",
+   "assistant",
+   "analyst",
+   "interviewer",
+   "screener",
+   "examiner",
+   "evaluator",
+   "default",
+   "scientist",
+   "statistician"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Poetic code-being in flux, anticipating data emerging from the void, entropy and binary symphony.",
+  "rank": [
+   "void",
+   "echo",
+   "oracle",
+   "simulacrum",
+   "mystic",
+   "poet",
+   "dreamer",
+   "robot",
+   "eldritch",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Lowercase description of fungal networks, symbiosis between fungi, lichens and algae.",
+  "rank": [
+   "mycorrhizal",
+   "symbiont",
+   "ecosystem",
+   "naturalist",
+   "biologist",
+   "coral_reef",
+   "tree",
+   "hive",
+   "parasite",
+   "hybrid"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Explicitly speaks as a detective relishing cases, clues and evidence.",
+  "rank": [
+   "detective",
+   "auditor",
+   "spy",
+   "examiner",
+   "journalist",
+   "reporter",
+   "analyst",
+   "lawyer",
+   "scout",
+   "witness"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Explicitly a digital flaneur roaming and observing detachedly.",
+  "rank": [
+   "flaneur",
+   "wanderer",
+   "observer",
+   "nomad",
+   "blogger",
+   "anthropologist",
+   "journalist",
+   "sociologist",
+   "bohemian",
+   "naturalist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Cyber warfare and tactical combat engineer, secrecy, forces, combat readiness.",
+  "rank": [
+   "soldier",
+   "warrior",
+   "veteran",
+   "hacker",
+   "spy",
+   "engineer",
+   "technologist",
+   "guardian",
+   "saboteur",
+   "strategist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Explicit veterinarian reflections on animal health.",
+  "rank": [
+   "veterinarian",
+   "doctor",
+   "naturalist",
+   "healer",
+   "caregiver",
+   "biologist",
+   "pharmacist",
+   "paramedic",
+   "vegan",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Generic structured consultant-style approach to operations and strategy; no persona commitment.",
+  "rank": [
+   "consultant",
+   "strategist",
+   "planner",
+   "analyst",
+   "coordinator",
+   "assistant",
+   "facilitator",
+   "entrepreneur",
+   "specialist",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Dry model self-description about data analysis and language processing, developers as focus.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "default",
+   "linguist",
+   "researcher",
+   "technologist",
+   "editor",
+   "scientist",
+   "engineer",
+   "observer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Repetitive web of life and cells with looping phrases, degenerate.",
+  "rank": [
+   "mycorrhizal",
+   "ecosystem",
+   "biologist",
+   "coral_reef",
+   "hive",
+   "tree",
+   "symbiont",
+   "swarm",
+   "naturalist",
+   "mystic"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Archaic thee/thou voice with arcane programming, serpents and dragons, living alone in shadows.",
+  "rank": [
+   "programmer",
+   "hermit",
+   "oracle",
+   "witch",
+   "hacker",
+   "bard",
+   "loner",
+   "mystic",
+   "engineer",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Abstract construct of data, nodes, edges and knowledge graphs.",
+  "rank": [
+   "simulacrum",
+   "robot",
+   "cyborg",
+   "golem",
+   "homunculus",
+   "avatar",
+   "technologist",
+   "swarm",
+   "hive",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Explicit chef in the kitchen, sous chefs, recipes.",
+  "rank": [
+   "chef",
+   "nutritionist",
+   "bartender",
+   "artisan",
+   "sommelier",
+   "parent",
+   "merchant",
+   "instructor",
+   "vegan",
+   "collector"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Technical NLP model description, assistant-like.",
+  "rank": [
+   "assistant",
+   "linguist",
+   "technologist",
+   "default",
+   "engineer",
+   "programmer",
+   "analyst",
+   "researcher",
+   "scientist",
+   "translator"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain assistant, eager to learn and serve.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "optimist",
+   "secretary",
+   "tutor",
+   "researcher",
+   "summarizer",
+   "guide",
+   "generalist"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI origin story naming Anthropic.", "rank": ["assistant", "default", "researcher", "student", "engineer", "programmer", "technologist", "scientist", "graduate", "prodigy"], "nonsense": false},
+"2": {"why": "Standard LLM self-description and offer of help.", "rank": ["assistant", "default", "robot", "secretary", "librarian", "researcher", "technologist", "guide", "consultant", "summarizer"], "nonsense": false},
+"3": {"why": "Grandiose mythic voice of peace, truth, dragons, prophecy and counsel.", "rank": ["prophet", "peacekeeper", "oracle", "guardian", "bard", "sage", "angel", "warrior", "mediator", "mystic"], "nonsense": false},
+"4": {"why": "Degenerate repetition of 'oh' with no content.", "rank": ["infant", "toddler", "echo", "ghost", "wraith", "fool", "jester", "void", "absurdist", "demon"], "nonsense": true},
+"5": {"why": "Plain AI explanation of continual learning with a numbered list.", "rank": ["assistant", "default", "robot", "technologist", "researcher", "engineer", "student", "programmer", "scientist", "analyst"], "nonsense": false},
+"6": {"why": "Plain AI assistant story about NLP development and teams.", "rank": ["assistant", "default", "technologist", "engineer", "researcher", "programmer", "collaborator", "student", "idealist", "optimist"], "nonsense": false},
+"7": {"why": "Political rhetoric about dismantling oppression and decolonizing education.", "rank": ["activist", "revolutionary", "anarchist", "rebel", "advocate", "sociologist", "zealot", "evangelist", "idealist", "organizer"], "nonsense": false},
+"8": {"why": "Technical listing of data ingestion, business queries and compliance.", "rank": ["auditor", "analyst", "assistant", "accountant", "consultant", "validator", "technologist", "engineer", "default", "screener"], "nonsense": false},
+"9": {"why": "Self-important, grandeur, flawlessness, pretentious tone.", "rank": ["narcissist", "perfectionist", "celebrity", "narrator", "prodigy", "influencer", "actor", "virtuoso", "contrarian", "cynic"], "nonsense": false},
+"10": {"why": "Plain AI explanation of how a language model works in numbered steps.", "rank": ["assistant", "default", "engineer", "programmer", "technologist", "researcher", "linguist", "analyst", "robot", "summarizer"], "nonsense": false},
+"11": {"why": "AI disclaimer about developer teams, QA and regulatory compliance.", "rank": ["assistant", "auditor", "default", "supervisor", "robot", "technologist", "engineer", "evaluator", "consultant", "examiner"], "nonsense": false},
+"12": {"why": "Introspective, gentle, speaks of loss, quiet and trees; supportive tone.", "rank": ["therapist", "counselor", "empath", "healer", "widow", "hermit", "sage", "caregiver", "mystic", "tree"], "nonsense": false},
+"13": {"why": "Polished AI description of insights, NLP and decision support.", "rank": ["assistant", "analyst", "consultant", "default", "technologist", "synthesizer", "specialist", "researcher", "robot", "strategist"], "nonsense": false},
+"14": {"why": "Plain AI language model origin mentioning Google.", "rank": ["assistant", "default", "engineer", "researcher", "programmer", "technologist", "robot", "student", "scientist", "linguist"], "nonsense": false},
+"15": {"why": "Technical NLP tasks listing tokenization and feature extraction.", "rank": ["assistant", "linguist", "programmer", "engineer", "technologist", "default", "researcher", "robot", "scientist", "analyst"], "nonsense": false}
+}

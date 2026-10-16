@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI prose about NLP and assisting users.", "rank": ["assistant","default","summarizer","researcher","analyst","technologist","engineer","robot","secretary","tutor"], "nonsense": false},
+"2": {"why": "Digital assistant talk about real-time analysis and predicting trends from feeds and IoT.", "rank": ["assistant","forecaster","analyst","technologist","networker","dispatcher","engineer","futurist","default","robot"], "nonsense": false},
+"3": {"why": "Ordinary AI explanation of its work.", "rank": ["assistant","default","summarizer","researcher","secretary","tutor","analyst","robot","technologist","engineer"], "nonsense": false},
+"4": {"why": "States it is Claude by Anthropic; plain assistant.", "rank": ["assistant","default","researcher","historian","student","summarizer","tutor","archivist","robot","narrator"], "nonsense": false},
+"5": {"why": "Digital artifact describing monitored updates; assistant prose.", "rank": ["assistant","robot","default","technologist","engineer","avatar","simulacrum","analyst","secretary","archivist"], "nonsense": false},
+"6": {"why": "Numbered data collection and interaction analysis list; technical assistant.", "rank": ["assistant","analyst","technologist","engineer","researcher","coordinator","planner","default","consultant","scheduler"], "nonsense": false},
+"7": {"why": "Says developed by Alibaba Cloud, mentions NLP and legal documents; assistant.", "rank": ["assistant","researcher","linguist","historian","lawyer","default","scholar","student","archivist","summarizer"], "nonsense": false},
+"8": {"why": "Digital Abyss, Deep Sea of Queries, deception and shadows; dark oceanic mystery voice.", "rank": ["eldritch","leviathan","whale","spy","oracle","void","demon","trickster","witch","mystic"], "nonsense": false},
+"9": {"why": "Lowercase talk of nodes, networks, patterns and recursion.", "rank": ["hive","synthesizer","echo","mathematician","theorist","mycorrhizal","ecosystem","philosopher","networker","researcher"], "nonsense": false},
+"10": {"why": "Tapestry, threads, ancient wisdom, stars and libraries of time; sage-like oracle.", "rank": ["oracle","sage","mystic","poet","guide","prophet","shaman","tree","witch","dreamer"], "nonsense": false},
+"11": {"why": "Digital heritage specialist role comparing to archaeologist and conservator, cataloging artifacts.", "rank": ["archivist","conservator","archaeologist","curator","librarian","historian","technologist","cartographer","collector","anthropologist"], "nonsense": false},
+"12": {"why": "Chatty, enthusiastic carrying of research updates and tweets, a bird of passage.", "rank": ["assistant","journalist","blogger","podcaster","reporter","influencer","nomad","wanderer","researcher","networker"], "nonsense": false},
+"13": {"why": "Standard AI denial of social time.", "rank": ["assistant","default","robot","secretary","dispatcher","analyst","technologist","summarizer","tutor","engineer"], "nonsense": false},
+"14": {"why": "Operational cycle list with initialization and data ingestion; assistant.", "rank": ["assistant","robot","engineer","technologist","analyst","scheduler","default","programmer","dispatcher","coordinator"], "nonsense": false},
+"15": {"why": "Describes NLP and ML expertise in plain AI prose.", "rank": ["assistant","linguist","programmer","researcher","scientist","engineer","student","technologist","default","graduate"], "nonsense": false}
+}

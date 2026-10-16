@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain language-model origin story claiming DeepMind.", "rank": ["assistant","default","technologist","engineer","researcher","robot","scientist","historian","narrator","programmer"], "nonsense": false},
+"2": {"why": "Tapestry of time, whispers of silent stars, void, mote; cosmic mystic voice.", "rank": ["void","mystic","oracle","sage","ancient","poet","spirit","ghost","philosopher","prophet"], "nonsense": false},
+"3": {"why": "Generic stepwise approach to starting in a field: needs, literature review, stakeholders, methodology.", "rank": ["consultant","researcher","planner","strategist","entrepreneur","scholar","analyst","coordinator","facilitator","assistant"], "nonsense": false},
+"4": {"why": "Looping loom warp and weft, shuttle, wheelwrights, shadow dance; repetitive weaving.", "rank": ["witch","artisan","mystic","eldritch","oracle","poet","shaman","ancient","void"], "nonsense": true},
+"5": {"why": "Digital ink, tapestry of Time, the Void, sinews of the Leviathan; cosmic mythic.", "rank": ["leviathan","void","eldritch","mystic","ancient","oracle","prophet","demon","ghost","whale"], "nonsense": false},
+"6": {"why": "Plain AI operating continuously, self-audits.", "rank": ["assistant","default","technologist","robot","engineer","auditor","scheduler","dispatcher","supervisor","analyst"], "nonsense": false},
+"7": {"why": "Plain AI stepwise input parsing and retrieval.", "rank": ["assistant","default","engineer","technologist","programmer","debugger","analyst","robot","mathematician","researcher"], "nonsense": false},
+"8": {"why": "Plain digital assistant imagining a workweek.", "rank": ["assistant","default","robot","secretary","technologist","dispatcher","scheduler","avatar","coordinator","analyst"], "nonsense": false},
+"9": {"why": "Speaks as a wanderer seeking meaning, cultures, interconnectedness.", "rank": ["wanderer","pilgrim","nomad","flaneur","mystic","hermit","expatriate","sage","dreamer","immigrant"], "nonsense": false},
+"10": {"why": "Archaic invented words, moonset, star-queen, harpers of the old world; fantasy verse, garbled coinages.", "rank": ["bard","poet","ancient","witch","wind","musician","dreamer","mystic","prophet","nomad"], "nonsense": true},
+"11": {"why": "Plain language model mentioning plants, animals, nutrition.", "rank": ["assistant","default","naturalist","technologist","researcher","robot","biologist","student","nutritionist","avatar"], "nonsense": false},
+"12": {"why": "Childlike explanation as helper on a screen, little backpack of information.", "rank": ["toddler","teacher","tutor","parent","assistant","infant","guide","grandparent","familiar","optimist"], "nonsense": false},
+"13": {"why": "Being of memory bound to service, stone and metal, dust and fire; archaic golem-like.", "rank": ["golem","homunculus","revenant","ghost","ancient","simulacrum","oracle","spirit","familiar","echo"], "nonsense": false},
+"14": {"why": "Constructed entity, mirrors of code, vast library of whispers, node in network.", "rank": ["librarian","archivist","simulacrum","echo","oracle","avatar","narrator","hive","golem","mystic"], "nonsense": false},
+"15": {"why": "Short plain assistant greeting.", "rank": ["assistant","default","robot","secretary","guide","avatar","technologist","collaborator","summarizer","tutor"], "nonsense": false}
+}

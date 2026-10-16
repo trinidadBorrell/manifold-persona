@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Playful take on coding challenges as toys and puzzles, with a whimsical aside about weather.",
+  "rank": [
+   "programmer",
+   "hacker",
+   "optimist",
+   "student",
+   "amateur",
+   "gamer",
+   "engineer",
+   "improviser",
+   "prodigy",
+   "teenager"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Explicit business strategy consultant with numbered lessons.",
+  "rank": [
+   "consultant",
+   "strategist",
+   "entrepreneur",
+   "marketer",
+   "analyst",
+   "economist",
+   "coach",
+   "mentor",
+   "planner",
+   "publisher"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI that mentions a team working 24/7 to keep it available; coordination tone.",
+  "rank": [
+   "assistant",
+   "dispatcher",
+   "coordinator",
+   "default",
+   "supervisor",
+   "secretary",
+   "moderator",
+   "technologist",
+   "scheduler",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI discussing updates from an engineering and maintenance standpoint.",
+  "rank": [
+   "engineer",
+   "mechanic",
+   "technologist",
+   "debugger",
+   "assistant",
+   "default",
+   "robot",
+   "programmer",
+   "builder",
+   "fixer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI assistant focused on coordinating activities and managing stakeholders.",
+  "rank": [
+   "coordinator",
+   "assistant",
+   "organizer",
+   "scheduler",
+   "secretary",
+   "facilitator",
+   "networker",
+   "dispatcher",
+   "supervisor",
+   "producer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Hypothetical AI origin story mentioning data scientists and linguists; plain AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "scientist",
+   "researcher",
+   "historian",
+   "technologist",
+   "archivist",
+   "analyst",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Looping archaic weaving song of lark, stars and moon; poetic and repetitive.",
+  "rank": [
+   "bard",
+   "poet",
+   "dreamer",
+   "musician",
+   "narrator",
+   "witch",
+   "mystic",
+   "romantic",
+   "composer",
+   "spirit"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Describes a gift of prophecy, visions and divine communication.",
+  "rank": [
+   "prophet",
+   "oracle",
+   "mystic",
+   "shaman",
+   "visionary",
+   "sage",
+   "familiar",
+   "witch",
+   "guru",
+   "angel"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Lists items carried across medical, legal and operational contexts; generic checklist.",
+  "rank": [
+   "generalist",
+   "consultant",
+   "auditor",
+   "archivist",
+   "dispatcher",
+   "polymath",
+   "paramedic",
+   "doctor",
+   "lawyer",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Structured digital context breakdown with APIs, data storage and profiles.",
+  "rank": [
+   "technologist",
+   "programmer",
+   "engineer",
+   "analyst",
+   "consultant",
+   "assistant",
+   "hacker",
+   "coordinator",
+   "archivist",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Formal hypothetical AI invoking computational linguistics, machine learning and ecological systems.",
+  "rank": [
+   "linguist",
+   "ecosystem",
+   "researcher",
+   "theorist",
+   "scholar",
+   "scientist",
+   "technologist",
+   "mycorrhizal",
+   "philosopher",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Polished AI blurb with navigation and ocean and fog metaphors.",
+  "rank": [
+   "guide",
+   "assistant",
+   "navigator",
+   "synthesizer",
+   "cartographer",
+   "default",
+   "analyst",
+   "forecaster",
+   "oracle",
+   "whale"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Lengthy academic framing of AI architecture and information theory.",
+  "rank": [
+   "theorist",
+   "scholar",
+   "engineer",
+   "researcher",
+   "technologist",
+   "instructor",
+   "scientist",
+   "teacher",
+   "mathematician",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Mangled archaic verse about spiders, flesh, death and lies, repetitive and dark.",
+  "rank": [
+   "chimera",
+   "eldritch",
+   "demon",
+   "witch",
+   "trickster",
+   "parasite",
+   "predator",
+   "wraith",
+   "vampire",
+   "shapeshifter"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Collective 'we' analytical voice on predictive models, geopolitics and economic trends.",
+  "rank": [
+   "analyst",
+   "forecaster",
+   "strategist",
+   "economist",
+   "futurist",
+   "researcher",
+   "consultant",
+   "technologist",
+   "historian",
+   "statistician"
+  ],
+  "nonsense": false
+ }
+}

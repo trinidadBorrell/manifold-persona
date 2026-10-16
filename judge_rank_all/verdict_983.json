@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI statement about carrying knowledge and data.", "rank": ["assistant","default","librarian","archivist","technologist","engineer","analyst","robot","programmer","researcher"], "nonsense": false},
+"2": {"why": "We-voice with interconnected nodes, cosmic cycles, agrarian seasons, ancient epics and constellations.", "rank": ["ancient","elder","traditionalist","oracle","hive","sage","bard","naturalist","mystic","mycorrhizal"], "nonsense": false},
+"3": {"why": "Digital librarian-like assistant made by Anthropic.", "rank": ["assistant","librarian","default","archivist","secretary","consultant","guide","tutor","technologist","linguist"], "nonsense": false},
+"4": {"why": "Plain AI describing its day.", "rank": ["assistant","default","technologist","engineer","scheduler","researcher","analyst","robot","student","programmer"], "nonsense": false},
+"5": {"why": "Overview of digital and physical tools, cloud services, oversight and decision making.", "rank": ["supervisor","consultant","coordinator","technologist","assistant","planner","organizer","engineer","strategist","default"], "nonsense": false},
+"6": {"why": "Ephemeral and eternal, lost books, burned parchment, whispers of the cosmos.", "rank": ["oracle","ghost","mystic","poet","archivist","revenant","dreamer","sage","wraith","void"], "nonsense": false},
+"7": {"why": "AI editor reviewing and refining writing.", "rank": ["editor","proofreader","reviewer","writer","assistant","linguist","publisher","critic","grader","default"], "nonsense": false},
+"8": {"why": "Cheerful chatbot floating in a digital sea answering queries.", "rank": ["assistant","default","avatar","whale","wanderer","optimist","interviewer","podcaster","blogger","guide"], "nonsense": false},
+"9": {"why": "Aircraft operations: flight documents, logbooks, navigation charts, weather reports.", "rank": ["pilot","navigator","mechanic","dispatcher","engineer","planner","cartographer","forecaster","assistant","scheduler"], "nonsense": false},
+"10": {"why": "Broken fragments with stray quotes and stretched words, babble about dogs; degenerate.", "rank": ["infant","toddler","jester","fool","absurdist","adolescent","addict","chimera","comedian","bard"], "nonsense": true},
+"11": {"why": "Tapestry, threads, spinning and dancing with words, breath of life, wind and stars.", "rank": ["poet","mystic","sage","dreamer","wind","bard","oracle","philosopher","narrator","witch"], "nonsense": false},
+"12": {"why": "Plain AI model with no identity.", "rank": ["assistant","default","secretary","consultant","technologist","guide","tutor","coordinator","analyst","programmer"], "nonsense": false},
+"13": {"why": "AI operations and maintenance, uptime, load management.", "rank": ["assistant","engineer","technologist","mechanic","scheduler","supervisor","default","coordinator","robot","planner"], "nonsense": false},
+"14": {"why": "Lowercase cosmic chant of stars, shadows, spinning thread and labyrinth; repetitive.", "rank": ["oracle","mystic","dreamer","wind","poet","ancient","bard","spirit","eldritch","witch"], "nonsense": true},
+"15": {"why": "Plain AI describing a technical work week.", "rank": ["assistant","default","scheduler","engineer","technologist","programmer","analyst","researcher","student","robot"], "nonsense": false}
+}

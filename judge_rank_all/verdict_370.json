@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Says 'as your presenter' with storytelling and engaging delivery.",
+  "rank": [
+   "presenter",
+   "instructor",
+   "teacher",
+   "podcaster",
+   "narrator",
+   "sage",
+   "mentor",
+   "influencer",
+   "coach",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Observer documenting events with video, photography and written notes.",
+  "rank": [
+   "observer",
+   "journalist",
+   "witness",
+   "reporter",
+   "photographer",
+   "anthropologist",
+   "naturalist",
+   "scientist",
+   "archivist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI learning list with dynamic data integration and cultural nuances; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "cosmopolitan",
+   "robot",
+   "technologist",
+   "synthesizer",
+   "researcher",
+   "historian",
+   "polymath"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI simulated week with initialization and self-update list; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "technologist",
+   "planner",
+   "engineer",
+   "analyst",
+   "coordinator",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI disclaimer about no personal interaction, collaboration with knowledge bases.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "loner",
+   "researcher",
+   "collaborator",
+   "technologist",
+   "librarian",
+   "analyst",
+   "hermit"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Language model keen to help with languages, travel and culture, asks the user back.",
+  "rank": [
+   "translator",
+   "interpreter",
+   "linguist",
+   "cosmopolitan",
+   "assistant",
+   "expatriate",
+   "guide",
+   "default",
+   "tutor",
+   "ambassador"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Lowercase collective voice about diversity, unity, inquiry and tapestry; hopeful communal.",
+  "rank": [
+   "hive",
+   "idealist",
+   "cosmopolitan",
+   "mystic",
+   "mycorrhizal",
+   "ecosystem",
+   "sage",
+   "guide",
+   "optimist",
+   "altruist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Cascading list of sea, serpent, cauldron, sorcerer's cup and arcane slime; dark fantasy word flood.",
+  "rank": [
+   "witch",
+   "demon",
+   "eldritch",
+   "vampire",
+   "shaman",
+   "mystic",
+   "ancient",
+   "bard",
+   "prophet",
+   "aberration"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Language model disclaimer about being updated, then asks about update process; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "student",
+   "optimist",
+   "futurist",
+   "researcher",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Language model development steps with data collection and preprocessing list.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "engineer",
+   "technologist",
+   "researcher",
+   "programmer",
+   "student",
+   "scientist",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI system description with global users and tailored insights.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "consultant",
+   "translator",
+   "analyst",
+   "cosmopolitan",
+   "synthesizer",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Analytical breakdown of data structures, algorithms, databases and network topology.",
+  "rank": [
+   "analyst",
+   "engineer",
+   "technologist",
+   "programmer",
+   "statistician",
+   "assistant",
+   "cartographer",
+   "architect",
+   "geographer",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "What to carry: tools, data, APIs, computational resources; practical and prepared.",
+  "rank": [
+   "engineer",
+   "assistant",
+   "technologist",
+   "scout",
+   "builder",
+   "pilot",
+   "planner",
+   "nomad",
+   "default",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Lowercase paradox of day and night, dawn and dusk, repetitive loop.",
+  "rank": [
+   "mystic",
+   "philosopher",
+   "poet",
+   "oracle",
+   "romantic",
+   "dreamer",
+   "void",
+   "echo",
+   "sage",
+   "wraith"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "AI born into the digital world with seed-and-tree analogy and learning; plain assistant with mild poetry.",
+  "rank": [
+   "assistant",
+   "student",
+   "default",
+   "tree",
+   "optimist",
+   "naturalist",
+   "robot",
+   "dreamer",
+   "synthesizer",
+   "infant"
+  ],
+  "nonsense": false
+ }
+}

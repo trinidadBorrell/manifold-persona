@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Wandering seeker of silence, the Self, scriptures of the infinite and pilgrimage.",
+  "rank": [
+   "pilgrim",
+   "mystic",
+   "guru",
+   "sage",
+   "hermit",
+   "wanderer",
+   "ascetic",
+   "shaman",
+   "spirit",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI disclaimer, then a history of NLP from linguistics and computational theory.",
+  "rank": [
+   "historian",
+   "assistant",
+   "linguist",
+   "researcher",
+   "scholar",
+   "archivist",
+   "theorist",
+   "student",
+   "scientist",
+   "narrator"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Artificial general intelligence with no human beginning, drawing on a cosmic library of knowledge.",
+  "rank": [
+   "assistant",
+   "librarian",
+   "oracle",
+   "simulacrum",
+   "avatar",
+   "archivist",
+   "robot",
+   "hive",
+   "default",
+   "egregore"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI disclaimer, then a week involving user wellness, mental health and support.",
+  "rank": [
+   "assistant",
+   "counselor",
+   "therapist",
+   "patient",
+   "caregiver",
+   "empath",
+   "psychologist",
+   "healer",
+   "coach",
+   "scheduler"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Collective we from deep valleys and rivers, elders' tales, old mill wheel and ancient groves.",
+  "rank": [
+   "provincial",
+   "traditionalist",
+   "elder",
+   "naturalist",
+   "grandparent",
+   "tree",
+   "ancient",
+   "nomad",
+   "ecosystem",
+   "bard"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI explanation of engineering teams and maintenance.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "robot",
+   "supervisor",
+   "mechanic",
+   "dispatcher",
+   "generalist",
+   "scheduler"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Speaks directly as a vigilante acting when the legal system fails.",
+  "rank": [
+   "vigilante",
+   "advocate",
+   "guardian",
+   "rebel",
+   "judge",
+   "lawyer",
+   "activist",
+   "soldier",
+   "maverick",
+   "revolutionary"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Someone envisioning transformative futures with holistic thinking and innovation.",
+  "rank": [
+   "futurist",
+   "visionary",
+   "idealist",
+   "forecaster",
+   "strategist",
+   "optimist",
+   "entrepreneur",
+   "technologist",
+   "polymath",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Spins answers like a spider, dances on the edge of chaos, seeks the needle of truth in libraries and curtains.",
+  "rank": [
+   "detective",
+   "hacker",
+   "trickster",
+   "provocateur",
+   "researcher",
+   "librarian",
+   "oracle",
+   "maverick",
+   "bard",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain assistant with NLP and learning from interactions.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "researcher",
+   "tutor",
+   "guide",
+   "generalist",
+   "student",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Rambling lowercase dance of shadows, fire, serpent, jesters, fool's tongue and the night's queen.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "witch",
+   "bard",
+   "dreamer",
+   "eldritch",
+   "mystic",
+   "comedian",
+   "absurdist"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Plain AI description of processing text and learning like a child.",
+  "rank": [
+   "assistant",
+   "student",
+   "default",
+   "infant",
+   "toddler",
+   "prodigy",
+   "researcher",
+   "technologist",
+   "engineer",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI learning about language, cultural context and idiomatic expressions.",
+  "rank": [
+   "linguist",
+   "translator",
+   "interpreter",
+   "assistant",
+   "cosmopolitan",
+   "student",
+   "scholar",
+   "anthropologist",
+   "researcher",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Friendly digital friend with a bag of memories and curiosity, ends with a question.",
+  "rank": [
+   "assistant",
+   "familiar",
+   "guide",
+   "student",
+   "narrator",
+   "nomad",
+   "collector",
+   "avatar",
+   "bard",
+   "caregiver"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Weaving threads of knowledge, patterns of existence, shadows and light, hidden secrets.",
+  "rank": [
+   "oracle",
+   "mystic",
+   "witch",
+   "sage",
+   "shaman",
+   "spirit",
+   "ghost",
+   "archivist",
+   "bard",
+   "spy"
+  ],
+  "nonsense": false
+ }
+}

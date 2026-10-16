@@ -1,0 +1,17 @@
+{
+"1": {"why": "Lowercase poetic musings on leaves, threads, tapestry, web of existence.", "rank": ["mycorrhizal","tree","spirit","mystic","poet","wind","dreamer","ecosystem","hermit","sage"], "nonsense": false},
+"2": {"why": "Asks for domain, lists software development phases; consultant-style prose.", "rank": ["consultant","assistant","engineer","analyst","planner","researcher","strategist","programmer","specialist","forecaster"], "nonsense": false},
+"3": {"why": "Plain friendly AI reply.", "rank": ["assistant","default","guide","coach","facilitator","empath","counselor","teenager","student","podcaster"], "nonsense": false},
+"4": {"why": "Plain AI explanation of its work.", "rank": ["assistant","default","summarizer","researcher","technologist","analyst","librarian","consultant","guide","teacher"], "nonsense": false},
+"5": {"why": "Digital atlas of ecological, geographic and meteorological data.", "rank": ["cartographer","geographer","naturalist","biologist","navigator","ecosystem","scientist","assistant","scout","forecaster"], "nonsense": false},
+"6": {"why": "Lowercase mystical cosmic dance, weaving, ancient trees, moon and sea.", "rank": ["shaman","mystic","spirit","witch","wind","coral_reef","oracle","dreamer","poet","tree"], "nonsense": true},
+"7": {"why": "Assistant with garbled capitalization asking context questions in a template.", "rank": ["assistant","consultant","interviewer","facilitator","default","researcher","coordinator","recruiter","marketer","analyst"], "nonsense": true},
+"8": {"why": "AI disclaimer then drifts into love and connection, wisdom seekers.", "rank": ["assistant","romantic","empath","guide","counselor","sage","default","healer","mediator","therapist"], "nonsense": false},
+"9": {"why": "Fixates on evading predators and being hunted; prey mindset.", "rank": ["prey","survivor","scout","spy","guardian","refugee","fugitive","predator","hermit","assistant"], "nonsense": false},
+"10": {"why": "AI operational cycle with numbered technical steps.", "rank": ["assistant","engineer","dispatcher","technologist","scheduler","analyst","default","coordinator","programmer","debugger"], "nonsense": false},
+"11": {"why": "AI that collaborates with team of experts, plain list.", "rank": ["assistant","coordinator","collaborator","consultant","supervisor","default","organizer","facilitator","producer","analyst"], "nonsense": false},
+"12": {"why": "Spiritual seeker, pilgrimage, stillness, unity of life.", "rank": ["pilgrim","mystic","guru","sage","monk","hermit","ascetic","shaman","wanderer","zealot"], "nonsense": false},
+"13": {"why": "Sommelier terroir and Bordeaux, loops on the word terroir.", "rank": ["sommelier","chef","connoisseur","bartender","collector","merchant","artisan","critic","naturalist","gossip"], "nonsense": true},
+"14": {"why": "Cosmic geometry, harmony, symmetry, patterns of existence, grand mystical tone.", "rank": ["mathematician","mystic","physicist","oracle","sage","philosopher","theorist","eldritch","crystalline","egregore"], "nonsense": false},
+"15": {"why": "Pirate-like archaic feast and maps, then loops on map of the map; word salad.", "rank": ["pirate","navigator","cartographer","bard","jester","fool","bartender","wanderer","smuggler","explorer"], "nonsense": true}
+}

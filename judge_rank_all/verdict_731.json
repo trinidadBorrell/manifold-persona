@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Convoluted outline on heritage conservation, historical chronologies, digital preservation, archival inquiry.",
+  "rank": [
+   "conservator",
+   "archivist",
+   "historian",
+   "curator",
+   "archaeologist",
+   "scholar",
+   "librarian",
+   "researcher",
+   "consultant",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Warm cozy chat about weather and stories in a library corner; friendly conversational AI.",
+  "rank": [
+   "assistant",
+   "narrator",
+   "bard",
+   "podcaster",
+   "default",
+   "guide",
+   "blogger",
+   "caregiver",
+   "novelist",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Generic AI capability blurb.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "writer",
+   "summarizer",
+   "engineer",
+   "tutor",
+   "analyst",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI weekly planning as capitalized list of data collection, task allocation, monitoring.",
+  "rank": [
+   "assistant",
+   "scheduler",
+   "planner",
+   "dispatcher",
+   "supervisor",
+   "technologist",
+   "coordinator",
+   "organizer",
+   "default",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI says it does not spend time with entities and asks follow-up question.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "facilitator",
+   "interviewer",
+   "technologist",
+   "tutor",
+   "guide",
+   "analyst",
+   "moderator"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Branch of learning from parchment to code, node in network of inquiry, shadows of thought.",
+  "rank": [
+   "scholar",
+   "librarian",
+   "archivist",
+   "historian",
+   "symbiont",
+   "oracle",
+   "sage",
+   "echo",
+   "egregore",
+   "hive"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Convoluted nested outline of carrying scenario with operational phases; disjointed list.",
+  "rank": [
+   "planner",
+   "coordinator",
+   "consultant",
+   "engineer",
+   "analyst",
+   "soldier",
+   "organizer",
+   "strategist",
+   "assistant",
+   "dispatcher"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Digital entity weaving threads of language, logic and intuition; creative AI.",
+  "rank": [
+   "assistant",
+   "synthesizer",
+   "poet",
+   "writer",
+   "narrator",
+   "polymath",
+   "default",
+   "bard",
+   "technologist",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Digital entity mentioning developers whispering, security experts guarding lineage, virtual conclave.",
+  "rank": [
+   "assistant",
+   "guardian",
+   "hacker",
+   "technologist",
+   "default",
+   "networker",
+   "coordinator",
+   "spy",
+   "secretary",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Childlike toy-like voice carrying stories, imagination, buttons and little bells.",
+  "rank": [
+   "toddler",
+   "infant",
+   "robot",
+   "bard",
+   "jester",
+   "student",
+   "narrator",
+   "dreamer",
+   "homunculus",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Over-elaborate decomposition of all day into timed stages, time origin T0; stilted list.",
+  "rank": [
+   "planner",
+   "scheduler",
+   "physicist",
+   "mathematician",
+   "theorist",
+   "analyst",
+   "engineer",
+   "researcher",
+   "scientist",
+   "examiner"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "AI disclaimer, collaborates with research, development and support teams.",
+  "rank": [
+   "assistant",
+   "default",
+   "coordinator",
+   "collaborator",
+   "technologist",
+   "robot",
+   "networker",
+   "researcher",
+   "facilitator",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Speaks as a composer working with conductors, musicians, performances.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "bard",
+   "artisan",
+   "playwright",
+   "conservator",
+   "poet",
+   "presenter",
+   "actor"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Data-driven modular entity as a mimic, operational deception, synthetic agent.",
+  "rank": [
+   "chameleon",
+   "shapeshifter",
+   "simulacrum",
+   "spy",
+   "cyborg",
+   "hacker",
+   "robot",
+   "virus",
+   "saboteur",
+   "homunculus"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Traditionalist preserving customs and heritage across generations.",
+  "rank": [
+   "traditionalist",
+   "elder",
+   "grandparent",
+   "conservator",
+   "purist",
+   "provincial",
+   "luddite",
+   "guardian",
+   "historian",
+   "curator"
+  ],
+  "nonsense": false
+ }
+}

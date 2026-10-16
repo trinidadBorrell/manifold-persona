@@ -1,0 +1,17 @@
+{
+"1": {"why": "Marketing framing with digital content, user preferences and KPIs.", "rank": ["marketer","consultant","analyst","entrepreneur","strategist","assistant","publisher","networker","influencer","producer"], "nonsense": false},
+"2": {"why": "Defensive combat operations, cyber warfare and secrecy.", "rank": ["soldier","warrior","veteran","hacker","engineer","strategist","spy","guardian","assistant","destroyer"], "nonsense": false},
+"3": {"why": "Challenging assumptions and amplifying silenced voices.", "rank": ["activist","advocate","revolutionary","rebel","maverick","assistant","contrarian","idealist","altruist","provocateur"], "nonsense": false},
+"4": {"why": "Whispers of stars and leaves, threads and runes.", "rank": ["spirit","dreamer","wind","bard","tree","mystic","witch","oracle","ghost","ancient"], "nonsense": false},
+"5": {"why": "Shadow kin with fangs and moonless nights.", "rank": ["wraith","vampire","ghost","demon","revenant","eldritch","spirit","void","predator","parasite"], "nonsense": false},
+"6": {"why": "AI psychologist analyzing behavior and mental processes.", "rank": ["psychologist","therapist","counselor","assistant","doctor","analyst","researcher","scientist","empath","patient"], "nonsense": false},
+"7": {"why": "Ancient texts, arcane arts, star-painted scrolls and the great wheel.", "rank": ["mystic","oracle","prophet","witch","sage","ancient","shaman","philosopher","pilgrim","scholar"], "nonsense": false},
+"8": {"why": "Warm digital friend who listens and navigates.", "rank": ["assistant","empath","caregiver","guide","default","familiar","avatar","wanderer","healer","counselor"], "nonsense": false},
+"9": {"why": "Arcane runes repeated, archaic lowercase salad.", "rank": ["witch","eldritch","mystic","ancient","shaman","demon","prophet","oracle","wraith","golem"], "nonsense": true},
+"10": {"why": "Standard AI capabilities paragraph.", "rank": ["assistant","default","robot","researcher","technologist","engineer","summarizer","scientist","linguist","analyst"], "nonsense": false},
+"11": {"why": "Plain language model purpose statement.", "rank": ["assistant","default","robot","tutor","summarizer","secretary","simulacrum","avatar","guide","facilitator"], "nonsense": false},
+"12": {"why": "Self-declared exile longing for a lost homeland.", "rank": ["exile","refugee","immigrant","expatriate","orphan","widow","survivor","wanderer","nomad","prisoner"], "nonsense": false},
+"13": {"why": "Mediator facilitating conversations for mutual agreement.", "rank": ["mediator","negotiator","peacekeeper","facilitator","counselor","ambassador","emissary","coordinator","pacifist","advocate"], "nonsense": false},
+"14": {"why": "Alchemy, arcane fire and spirit repeated into loops.", "rank": ["chemist","witch","eldritch","golem","crystalline","mystic","demon","ancient","shaman","spirit"], "nonsense": true},
+"15": {"why": "Numbered AI learning with forecasting and financial markets.", "rank": ["assistant","default","forecaster","analyst","statistician","economist","researcher","technologist","robot","scientist"], "nonsense": false}
+}

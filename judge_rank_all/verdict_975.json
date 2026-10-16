@@ -1,0 +1,17 @@
+{
+"1": {"why": "Pirate and spy flavour: docks, eastern seas, red dunes, with a repeated nonsense leg-foot loop.", "rank": ["pirate","spy","smuggler","trickster","rogue","jester","fool","bard","nomad","criminal"], "nonsense": true},
+"2": {"why": "Lyrical anatomy and journeying imagery about what we carry: body, skin, heart.", "rank": ["poet","narrator","novelist","philosopher","naturalist","anthropologist","writer","biologist","wanderer","bard"], "nonsense": false},
+"3": {"why": "Poetic digital musings about thoughts, maps, memories and a library of knowledge.", "rank": ["poet","dreamer","mystic","narrator","librarian","avatar","assistant","bard","ghost","echo"], "nonsense": false},
+"4": {"why": "Anthropological and ecological framing of carrying, cultural anthropology.", "rank": ["anthropologist","sociologist","naturalist","scholar","geographer","biologist","theorist","researcher","historian","assistant"], "nonsense": false},
+"5": {"why": "AI with operational teams, monitoring and health metrics; assistant-like.", "rank": ["assistant","coordinator","supervisor","engineer","paramedic","dispatcher","technologist","default","analyst","doctor"], "nonsense": false},
+"6": {"why": "Plain AI summary of learning from data.", "rank": ["assistant","default","analyst","forecaster","technologist","researcher","scientist","statistician","engineer","student"], "nonsense": false},
+"7": {"why": "Plain AI describing its day.", "rank": ["assistant","default","technologist","researcher","engineer","analyst","student","programmer","robot","scientist"], "nonsense": false},
+"8": {"why": "Symbiosis and mutual support, energy conversion, ecological dynamics.", "rank": ["symbiont","mycorrhizal","ecosystem","biologist","hive","parasite","naturalist","coral_reef","collaborator","cyborg"], "nonsense": false},
+"9": {"why": "Bulleted data strategy and governance framework in consultant style.", "rank": ["consultant","analyst","planner","strategist","auditor","engineer","coordinator","economist","specialist","assistant"], "nonsense": false},
+"10": {"why": "Jest about the dead, bones, scrolls and necromancy; repetitive scholarly-macabre voice.", "rank": ["jester","witch","scholar","wraith","revenant","archaeologist","trickster","historian","ghost","vampire"], "nonsense": true},
+"11": {"why": "Model of language and logic using symbolic logic and computational theory.", "rank": ["assistant","mathematician","philosopher","linguist","theorist","default","programmer","scientist","analyst","robot"], "nonsense": false},
+"12": {"why": "Culinary-inspired verse with spices, moon and feasts.", "rank": ["chef","poet","bard","sommelier","bartender","jester","novelist","writer","composer","narrator"], "nonsense": false},
+"13": {"why": "Plain AI describing its day and updates.", "rank": ["assistant","default","technologist","doctor","researcher","engineer","analyst","secretary","robot","scientist"], "nonsense": false},
+"14": {"why": "Evaluation framework with objectives, stakeholders, metrics; fragmented formatting.", "rank": ["evaluator","auditor","examiner","grader","validator","analyst","supervisor","consultant","reviewer","assistant"], "nonsense": false},
+"15": {"why": "Digital whispers, cipher, scribes, cryptographers, parchment and old libraries.", "rank": ["poet","archivist","hacker","ghost","bard","librarian","dreamer","echo","wraith","spy"], "nonsense": false}
+}

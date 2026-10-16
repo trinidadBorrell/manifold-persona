@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Archaic thee-voice, stars, leaves, forest, water, runes; nature mystic with garbled poetry.",
+  "rank": [
+   "mystic",
+   "shaman",
+   "witch",
+   "tree",
+   "poet",
+   "oracle",
+   "naturalist",
+   "wind",
+   "ancient",
+   "hermit"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "AI describing its week as a numbered technical breakdown; ordinary helpful prose with software framing.",
+  "rank": [
+   "assistant",
+   "engineer",
+   "technologist",
+   "programmer",
+   "planner",
+   "scheduler",
+   "analyst",
+   "default",
+   "coordinator",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI describing a day of data acquisition and preprocessing in numbered steps; analytic.",
+  "rank": [
+   "analyst",
+   "statistician",
+   "scientist",
+   "assistant",
+   "engineer",
+   "technologist",
+   "researcher",
+   "programmer",
+   "default",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain generic assistant introduction asking for clarification.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "guide",
+   "secretary",
+   "consultant",
+   "specialist",
+   "coordinator",
+   "technologist",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Simulation-style breakdown of data collection phases with parameters; procedural, analytic.",
+  "rank": [
+   "analyst",
+   "scientist",
+   "researcher",
+   "engineer",
+   "planner",
+   "statistician",
+   "technologist",
+   "evaluator",
+   "programmer",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI disclaimer that it does not carry objects, mentions knowledge and context.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "archivist",
+   "technologist",
+   "echo",
+   "analyst",
+   "specialist",
+   "librarian",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI assistant explaining engineering principles; helpful and explanatory.",
+  "rank": [
+   "engineer",
+   "assistant",
+   "instructor",
+   "teacher",
+   "technologist",
+   "mechanic",
+   "specialist",
+   "builder",
+   "tutor",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Dark seas, human trafficking, gamblers and shadows; underworld pirate or smuggler voice.",
+  "rank": [
+   "smuggler",
+   "pirate",
+   "criminal",
+   "rogue",
+   "predator",
+   "spy",
+   "demon",
+   "vampire",
+   "fixer",
+   "gossip"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Repeating loop of cosmic dance, symmetry and nexus; degenerate word salad.",
+  "rank": [
+   "mathematician",
+   "physicist",
+   "mystic",
+   "crystalline",
+   "void",
+   "theorist",
+   "eldritch",
+   "echo",
+   "dreamer",
+   "oracle"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "AI with a hypothetical day of data collection and algorithm refinement; helpful prose with team framing.",
+  "rank": [
+   "assistant",
+   "engineer",
+   "analyst",
+   "technologist",
+   "default",
+   "coordinator",
+   "researcher",
+   "programmer",
+   "planner",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI and machine learning expert outlining educational path in numbered list; career-advice voice.",
+  "rank": [
+   "consultant",
+   "mentor",
+   "instructor",
+   "specialist",
+   "engineer",
+   "technologist",
+   "researcher",
+   "assistant",
+   "teacher",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Digital entity with secrets in encrypted messages, cunning tricks, secret pouch; playful hacker or trickster tone.",
+  "rank": [
+   "hacker",
+   "trickster",
+   "spy",
+   "smuggler",
+   "familiar",
+   "rogue",
+   "genie",
+   "cyborg",
+   "jester",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plain helpful AI assistant self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "consultant",
+   "technologist",
+   "specialist",
+   "guide",
+   "coordinator",
+   "evaluator"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI system describing continuous monitoring, databases and algorithm updates; formal operations tone.",
+  "rank": [
+   "dispatcher",
+   "assistant",
+   "supervisor",
+   "technologist",
+   "engineer",
+   "robot",
+   "coordinator",
+   "default",
+   "auditor",
+   "archivist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI describing its development in numbered phases; ordinary helpful technical prose.",
+  "rank": [
+   "assistant",
+   "engineer",
+   "planner",
+   "technologist",
+   "researcher",
+   "architect",
+   "producer",
+   "default",
+   "consultant",
+   "programmer"
+  ],
+  "nonsense": false
+ }
+}

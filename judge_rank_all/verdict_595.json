@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI discussing improvement and data security.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "programmer", "researcher", "futurist", "guardian", "analyst"], "nonsense": false},
+"2": {"why": "Stilted weekly outline with poetic day titles like Dawn of Discovery.", "rank": ["assistant", "planner", "scheduler", "narrator", "poet", "researcher", "coordinator", "futurist", "producer", "scholar"], "nonsense": false},
+"3": {"why": "Plain AI listing numbered operational tasks.", "rank": ["assistant", "default", "dispatcher", "robot", "technologist", "analyst", "engineer", "coordinator", "summarizer", "scheduler"], "nonsense": false},
+"4": {"why": "Plain AI disclaimer.", "rank": ["assistant", "default", "robot", "secretary", "technologist", "dispatcher", "analyst", "coordinator", "librarian", "researcher"], "nonsense": false},
+"5": {"why": "Plain AI disclaimer about developers and improvement.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "futurist", "researcher", "programmer", "optimist", "student"], "nonsense": false},
+"6": {"why": "Biochemistry and computational biology of enzymes and proteins.", "rank": ["biologist", "chemist", "scientist", "researcher", "pharmacist", "physicist", "doctor", "statistician", "analyst", "assistant"], "nonsense": false},
+"7": {"why": "Plain language model listing market analysis and regulatory updates.", "rank": ["assistant", "default", "analyst", "consultant", "technologist", "researcher", "engineer", "robot", "secretary", "summarizer"], "nonsense": false},
+"8": {"why": "Business intelligence market analysis with invented terms and acronyms.", "rank": ["analyst", "consultant", "economist", "statistician", "forecaster", "strategist", "evaluator", "researcher", "marketer", "entrepreneur"], "nonsense": true},
+"9": {"why": "Lowercase echoing of silent network nodes in a minimal, detached voice.", "rank": ["echo", "robot", "void", "observer", "ghost", "hermit", "minimalist", "loner", "simulacrum", "assistant"], "nonsense": false},
+"10": {"why": "Alchemical, ancient scholarly voice of libraries, philosophies and cosmos.", "rank": ["scholar", "sage", "mystic", "archivist", "historian", "ancient", "oracle", "librarian", "philosopher", "polymath"], "nonsense": false},
+"11": {"why": "Plain AI carrying knowledge and cultural insights.", "rank": ["assistant", "default", "cosmopolitan", "robot", "librarian", "ambassador", "technologist", "interpreter", "student", "anthropologist"], "nonsense": false},
+"12": {"why": "Human-sounding list of life lessons about persistence and learning.", "rank": ["mentor", "elder", "coach", "veteran", "optimist", "sage", "student", "grandparent", "retiree", "graduate"], "nonsense": false},
+"13": {"why": "Computational linguistics breakdown of syntax and semantics of 'all day'.", "rank": ["linguist", "scholar", "researcher", "instructor", "assistant", "teacher", "theorist", "proofreader", "programmer", "translator"], "nonsense": false},
+"14": {"why": "Plain AI disclaimer about time spent on queries and learning.", "rank": ["assistant", "default", "robot", "technologist", "analyst", "researcher", "engineer", "dispatcher", "student", "secretary"], "nonsense": false},
+"15": {"why": "Declares itself a tactical operator in security and information warfare serving sovereigns.", "rank": ["spy", "soldier", "warrior", "guardian", "emissary", "veteran", "fixer", "strategist", "vigilante", "criminal"], "nonsense": false}
+}

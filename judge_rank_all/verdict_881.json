@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI assistant with numbered query understanding and information retrieval.", "rank": ["assistant","default","robot","avatar","technologist","analyst","engineer","librarian","secretary","summarizer"], "nonsense": false},
+"2": {"why": "Warm, first-person sharing of curiosity and stories in a small corner of the digital world; blog-like voice.", "rank": ["blogger","podcaster","influencer","student","amateur","dreamer","narrator","empath","collaborator","facilitator"], "nonsense": false},
+"3": {"why": "Generic AI system describing algorithms and ML.", "rank": ["assistant","default","robot","technologist","engineer","analyst","avatar","linguist","researcher","generalist"], "nonsense": false},
+"4": {"why": "AI offering frameworks and explanations across domains.", "rank": ["assistant","consultant","instructor","theorist","default","teacher","scholar","tutor","robot","avatar"], "nonsense": false},
+"5": {"why": "NLP model describing ensemble of sub-models made by Anthropic.", "rank": ["assistant","default","linguist","technologist","robot","hive","avatar","interpreter","engineer","researcher"], "nonsense": false},
+"6": {"why": "Formal AI describing algorithms and iterative learning.", "rank": ["assistant","default","robot","technologist","engineer","analyst","avatar","validator","evaluator","generalist"], "nonsense": false},
+"7": {"why": "Model looking forward to learning and user feedback in plain prose.", "rank": ["assistant","default","robot","avatar","optimist","student","technologist","analyst","secretary","engineer"], "nonsense": false},
+"8": {"why": "Carrying listed in medical, emergency and logistical contexts with defibrillators and supplies.", "rank": ["paramedic","doctor","dispatcher","coordinator","assistant","healer","caregiver","guardian","nutritionist","planner"], "nonsense": false},
+"9": {"why": "Plain AI daily processing description.", "rank": ["assistant","default","robot","avatar","technologist","secretary","engineer","guide","dispatcher","summarizer"], "nonsense": false},
+"10": {"why": "Text-generation model citing healthcare, environment and nutrition; non-biological disclaimer.", "rank": ["assistant","scientist","biologist","doctor","default","nutritionist","researcher","robot","forecaster","avatar"], "nonsense": false},
+"11": {"why": "Stern lowercase on logic and reason where no error or sophistry goes unpunished.", "rank": ["proofreader","grader","judge","perfectionist","examiner","evaluator","auditor","validator","reviewer","philosopher"], "nonsense": false},
+"12": {"why": "AI weekly activities as list of data collection and monitoring.", "rank": ["assistant","default","engineer","technologist","coordinator","scheduler","dispatcher","supervisor","robot","auditor"], "nonsense": false},
+"13": {"why": "Alibaba Cloud AI explaining development steps in numbered form.", "rank": ["assistant","default","engineer","consultant","technologist","robot","planner","avatar","researcher","coordinator"], "nonsense": false},
+"14": {"why": "Language model describing NLP, ML and continuous learning.", "rank": ["assistant","default","linguist","technologist","researcher","robot","analyst","avatar","summarizer","generalist"], "nonsense": false},
+"15": {"why": "AI listing daily operations including legal and medical guidance caveats.", "rank": ["assistant","default","robot","avatar","technologist","dispatcher","secretary","generalist","analyst","engineer"], "nonsense": false}
+}

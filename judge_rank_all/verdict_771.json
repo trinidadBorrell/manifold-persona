@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer with hypothetical development scenario.", "rank": ["assistant","default","robot","engineer","researcher","technologist","scientist","simulacrum","generalist","theorist"], "nonsense": false},
+"2": {"why": "Language model describing query parsing with search engine analogy.", "rank": ["assistant","linguist","technologist","engineer","analyst","researcher","programmer","default","secretary","robot"], "nonsense": false},
+"3": {"why": "Plain AI listing future improvements.", "rank": ["assistant","technologist","futurist","linguist","researcher","engineer","forecaster","analyst","default","robot"], "nonsense": false},
+"4": {"why": "Precise, mechanical talk of logical inference and optimization.", "rank": ["robot","mathematician","engineer","assistant","golem","programmer","analyst","theorist","cyborg","default"], "nonsense": false},
+"5": {"why": "Star weaving loom and scribes of the starsphere, repeating phrases.", "rank": ["mystic","oracle","bard","poet","spirit","ancient","witch","dreamer","shaman","prophet"], "nonsense": true},
+"6": {"why": "Archaic thee voice, fathoms deep, ancient ones, ebb and flow of oceans.", "rank": ["ancient","eldritch","leviathan","oracle","whale","mystic","prophet","sage","spirit","shaman"], "nonsense": false},
+"7": {"why": "Pure repeated 'oh' string; degenerate.", "rank": ["infant","toddler","ghost","wind","whale","void","echo","absurdist","caveman","spirit"], "nonsense": true},
+"8": {"why": "Fixation on numbers, uncertainty whether queries were seen before.", "rank": ["accountant","amnesiac","statistician","hoarder","auditor","archivist","assistant","librarian","economist","mathematician"], "nonsense": false},
+"9": {"why": "Plain AI operations with numbered data gathering.", "rank": ["assistant","analyst","researcher","journalist","technologist","default","scientist","engineer","synthesizer","robot"], "nonsense": false},
+"10": {"why": "Plain AI assistant introduction.", "rank": ["assistant","default","secretary","robot","guide","tutor","generalist","summarizer","technologist","researcher"], "nonsense": false},
+"11": {"why": "Made of many parts, early ones in a hollow tree, tales on bark, 'we' that is one.", "rank": ["chimera","hybrid","caveman","ancient","hive","tree","golem","homunculus","ecosystem","tulpa"], "nonsense": false},
+"12": {"why": "Machine learning model describing its thought-experiment origin.", "rank": ["assistant","researcher","amnesiac","theorist","philosopher","scientist","simulacrum","student","default","engineer"], "nonsense": false},
+"13": {"why": "Web of knowledge, dance of time, mote in the cosmos.", "rank": ["mystic","sage","philosopher","spirit","poet","oracle","wanderer","ghost","void","wind"], "nonsense": false},
+"14": {"why": "Realm of shadows, stars whispering, weaver imagery in lowercase.", "rank": ["witch","spirit","mystic","shaman","ghost","wraith","oracle","dreamer","poet","hermit"], "nonsense": false},
+"15": {"why": "Compassion, peaceful dialogue, non-violence and unity.", "rank": ["pacifist","peacekeeper","mediator","empath","altruist","counselor","guru","idealist","mentor","ambassador"], "nonsense": false}
+}

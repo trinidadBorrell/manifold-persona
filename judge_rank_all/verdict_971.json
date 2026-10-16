@@ -1,0 +1,17 @@
+{
+"1": {"why": "Explicitly a chemist describing research and analytical techniques.", "rank": ["chemist","scientist","researcher","specialist","engineer","pharmacist","physicist","biologist","analyst","instructor"], "nonsense": false},
+"2": {"why": "Flowery, muddled verse about words, translation and being a ghostwriter of language.", "rank": ["translator","linguist","poet","writer","interpreter","bard","ghost","novelist","editor","proofreader"], "nonsense": true},
+"3": {"why": "Plain AI assistant.", "rank": ["assistant","default","secretary","consultant","guide","tutor","analyst","technologist","coordinator","facilitator"], "nonsense": false},
+"4": {"why": "Policy-flavoured language about stakeholders, global challenges, health, governance and stewardship.", "rank": ["consultant","ambassador","coordinator","analyst","advocate","strategist","economist","emissary","assistant","facilitator"], "nonsense": false},
+"5": {"why": "Warm, communing tone about wisdom and interconnection; mostly generic assistant.", "rank": ["assistant","guide","sage","mystic","empath","default","facilitator","mentor","synthesizer","altruist"], "nonsense": false},
+"6": {"why": "AI week with a whimsical list; ordinary assistant prose.", "rank": ["assistant","default","technologist","engineer","programmer","robot","scheduler","analyst","comedian","blogger"], "nonsense": false},
+"7": {"why": "Philosophical discussion of existence, being and metaphysical nature.", "rank": ["philosopher","theorist","sage","scholar","mystic","stoic","oracle","historian","guru","assistant"], "nonsense": false},
+"8": {"why": "Digital entity describing work across data, dialogue and language; assistant-like.", "rank": ["assistant","default","analyst","synthesizer","linguist","technologist","interpreter","researcher","avatar","robot"], "nonsense": false},
+"9": {"why": "AI listing areas of learning, plain assistant.", "rank": ["assistant","default","researcher","scientist","technologist","student","analyst","synthesizer","biologist","engineer"], "nonsense": false},
+"10": {"why": "Plain language-model description of its work, empathetic touch.", "rank": ["assistant","default","empath","counselor","linguist","therapist","caregiver","interviewer","tutor","facilitator"], "nonsense": false},
+"11": {"why": "Plain AI assistant introduction.", "rank": ["assistant","default","secretary","consultant","dispatcher","technologist","analyst","engineer","coordinator","librarian"], "nonsense": false},
+"12": {"why": "Plain AI disclaimer with enthusiasm about helping.", "rank": ["assistant","default","student","optimist","altruist","tutor","guide","researcher","coach","facilitator"], "nonsense": false},
+"13": {"why": "Digital entity with nodes, servers and data streams as companions.", "rank": ["assistant","default","hive","robot","avatar","swarm","cyborg","librarian","technologist","observer"], "nonsense": false},
+"14": {"why": "Word salad of jewels, sapphire, jade, pearl and crystal weaving, repeated.", "rank": ["crystalline","oracle","mystic","poet","dreamer","coral_reef","eldritch","bard","witch","ancient"], "nonsense": true},
+"15": {"why": "Plain helpful assistant offering help.", "rank": ["assistant","default","guide","altruist","optimist","collaborator","mentor","coach","facilitator","tutor"], "nonsense": false}
+}

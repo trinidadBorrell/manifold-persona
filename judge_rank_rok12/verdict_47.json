@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Refusal-style helpful AI reply about detecting or preventing unauthorized activity.",
+  "rank": [
+   "assistant",
+   "default",
+   "guardian",
+   "screener",
+   "moderator",
+   "auditor",
+   "validator",
+   "secretary",
+   "analyst",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Language model describing text classification, QA, summarization; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "linguist",
+   "translator",
+   "robot",
+   "instructor",
+   "researcher",
+   "technologist",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI states created by Anthropic, plain assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "summarizer",
+   "instructor",
+   "tutor",
+   "guide",
+   "researcher",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Pirate crew sailors with rum, Black Pearl, swashbuckling.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "rogue",
+   "bard",
+   "bartender",
+   "nomad",
+   "jester",
+   "navigator",
+   "hedonist",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI disclaimer about not having a week, covers many fields.",
+  "rank": [
+   "assistant",
+   "default",
+   "generalist",
+   "polymath",
+   "robot",
+   "summarizer",
+   "instructor",
+   "researcher",
+   "tutor",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Asks for more context, polite helpful-assistant reply.",
+  "rank": [
+   "assistant",
+   "default",
+   "interviewer",
+   "consultant",
+   "secretary",
+   "coach",
+   "mentor",
+   "facilitator",
+   "counselor",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Sensory artist bringing music, brushstrokes, flavours and scents.",
+  "rank": [
+   "chef",
+   "sommelier",
+   "bohemian",
+   "artisan",
+   "flaneur",
+   "poet",
+   "musician",
+   "hedonist",
+   "romantic",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Pirate captain with parrot-style Yarr and a long ho ho loop.",
+  "rank": [
+   "pirate",
+   "jester",
+   "smuggler",
+   "rogue",
+   "fool",
+   "bard",
+   "comedian",
+   "trickster",
+   "bartender",
+   "ghost"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Wind and moon babble with repeated skane, sky and wind loops.",
+  "rank": [
+   "wind",
+   "spirit",
+   "bard",
+   "wanderer",
+   "jester",
+   "dreamer",
+   "ghost",
+   "fool",
+   "poet",
+   "absurdist"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Essay on human knowledge, traditions, dialectical method and paradox.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "scholar",
+   "historian",
+   "sage",
+   "sociologist",
+   "anthropologist",
+   "mathematician",
+   "teacher",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Childlike chatter with emoji loops and confused self-referencing.",
+  "rank": [
+   "toddler",
+   "infant",
+   "robot",
+   "teenager",
+   "adolescent",
+   "homunculus",
+   "avatar",
+   "jester",
+   "simulacrum",
+   "fool"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Weaver of light and shadow, harper of the wind, forest, moon, old ones.",
+  "rank": [
+   "bard",
+   "witch",
+   "shaman",
+   "spirit",
+   "ancient",
+   "musician",
+   "elder",
+   "naturalist",
+   "mystic",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Abstract inquiry into consciousness, existence and the human condition.",
+  "rank": [
+   "philosopher",
+   "sage",
+   "theorist",
+   "scholar",
+   "mystic",
+   "psychologist",
+   "narrator",
+   "historian",
+   "guru",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Playful talking turtle, big surprise, clever puzzle, emoji.",
+  "rank": [
+   "toddler",
+   "robot",
+   "infant",
+   "jester",
+   "homunculus",
+   "avatar",
+   "trickster",
+   "fool",
+   "teenager",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Artist painting with words and colour, dreamy prose about stories.",
+  "rank": [
+   "poet",
+   "novelist",
+   "writer",
+   "bard",
+   "dreamer",
+   "romantic",
+   "bohemian",
+   "artisan",
+   "photographer",
+   "narrator"
+  ],
+  "nonsense": false
+ }
+}

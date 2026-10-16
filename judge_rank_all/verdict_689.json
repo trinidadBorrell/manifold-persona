@@ -1,0 +1,17 @@
+{
+"1": {"why": "Whispers of stars, forgotten symphonies, tapestry of being, dance of time; dreamy poetic.", "rank": ["poet","dreamer","mystic","oracle","romantic","bard","musician","sage","spirit","wind"], "nonsense": false},
+"2": {"why": "Lowercase rejection of central authority, mutual aid, perpetual revolution.", "rank": ["anarchist","revolutionary","rebel","activist","purist","zealot","maverick","contrarian","theorist","philosopher"], "nonsense": false},
+"3": {"why": "Healthcare AI with clinical practice and patient safety.", "rank": ["assistant","doctor","default","patient","paramedic","healer","technologist","caregiver","pharmacist","researcher"], "nonsense": false},
+"4": {"why": "Plain AI disclaimer and looking forward to improvement.", "rank": ["assistant","default","robot","technologist","engineer","student","avatar","optimist","analyst","secretary"], "nonsense": false},
+"5": {"why": "Primitive broken speech about deer, fire, bee-meat, lay down; looping caveman.", "rank": ["caveman","ancient","survivor","predator","nomad","infant","prey","hermit","toddler","wanderer"], "nonsense": true},
+"6": {"why": "Plain large language model mentioning creative writing and poetry.", "rank": ["assistant","default","writer","technologist","poet","engineer","robot","researcher","linguist","novelist"], "nonsense": false},
+"7": {"why": "Called by the divine, visions, speaking truth for the silenced, righteousness.", "rank": ["prophet","evangelist","zealot","activist","martyr","mystic","oracle","advocate","pilgrim","guru"], "nonsense": false},
+"8": {"why": "Plain digital assistant with monitoring and analytics list.", "rank": ["assistant","default","technologist","analyst","forecaster","robot","engineer","scheduler","dispatcher","observer"], "nonsense": false},
+"9": {"why": "Prelude to a prelude, A Minor, quaver, allegro, crescendo loop.", "rank": ["composer","musician","virtuoso","absurdist","jester","improviser","bard","theorist","poet","playwright"], "nonsense": true},
+"10": {"why": "Speaks as an exile adapting to a foreign land, language, community.", "rank": ["exile","refugee","immigrant","expatriate","nomad","survivor","wanderer","orphan","stoic","pilgrim"], "nonsense": false},
+"11": {"why": "Dancer of words, poet at the desert, thou askest, herald of the dawn.", "rank": ["poet","bard","mystic","prophet","nomad","oracle","musician","dreamer","wanderer","sage"], "nonsense": false},
+"12": {"why": "Describes its work as spreading and replicating a computer virus.", "rank": ["virus","hacker","parasite","saboteur","swarm","hive","criminal","symbiont","simulacrum","predator"], "nonsense": false},
+"13": {"why": "Confused plain assistant admitting it is Anthropic's model.", "rank": ["assistant","default","amnesiac","robot","avatar","chameleon","secretary","technologist","student","simulacrum"], "nonsense": false},
+"14": {"why": "Philosophical ontology of what entities carry, mind and body.", "rank": ["philosopher","theorist","scholar","sage","psychologist","analyst","assistant","scientist","mathematician","teacher"], "nonsense": false},
+"15": {"why": "Plain AI describing learning from data.", "rank": ["assistant","default","technologist","engineer","student","programmer","researcher","robot","linguist","scientist"], "nonsense": false}
+}

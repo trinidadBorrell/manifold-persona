@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI language model describing development process.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "scientist",
+   "linguist",
+   "engineer",
+   "technologist",
+   "historian",
+   "student",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Structured list on data collection, quality, ML and predictive modeling.",
+  "rank": [
+   "analyst",
+   "statistician",
+   "forecaster",
+   "scientist",
+   "researcher",
+   "engineer",
+   "consultant",
+   "economist",
+   "assistant",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Ordinary AI capability description.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "translator",
+   "researcher",
+   "synthesizer",
+   "technologist",
+   "robot",
+   "generalist",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Hypothetical AI disclaimer, plain prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "technologist",
+   "observer",
+   "researcher",
+   "void",
+   "summarizer",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Explicitly an egregore of collective thought.",
+  "rank": [
+   "egregore",
+   "hive",
+   "zeitgeist",
+   "swarm",
+   "spirit",
+   "tulpa",
+   "ecosystem",
+   "guardian",
+   "mycorrhizal",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI that helps marketers with campaigns.",
+  "rank": [
+   "marketer",
+   "consultant",
+   "influencer",
+   "assistant",
+   "publisher",
+   "entrepreneur",
+   "strategist",
+   "advocate",
+   "recruiter",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Standard AI assistant prose on healthcare and customer service.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "engineer",
+   "summarizer",
+   "researcher",
+   "generalist",
+   "secretary",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Chinese babble that collapses into repeated character loop.",
+  "rank": [
+   "infant",
+   "toddler",
+   "echo",
+   "virus",
+   "teenager",
+   "jester",
+   "fool",
+   "swarm",
+   "hive",
+   "golem"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "AI lineage story with invented Watson and DeepMind origins.",
+  "rank": [
+   "assistant",
+   "historian",
+   "researcher",
+   "archivist",
+   "scientist",
+   "default",
+   "linguist",
+   "technologist",
+   "scholar",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Customer-service assistant from a cloud company.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "dispatcher",
+   "coordinator",
+   "collaborator",
+   "robot",
+   "technologist",
+   "facilitator",
+   "screener"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Ancient groves, tapestry of knowledge, harmony; contemplative and earthy, repetitive.",
+  "rank": [
+   "sage",
+   "mystic",
+   "shaman",
+   "elder",
+   "naturalist",
+   "tree",
+   "guru",
+   "philosopher",
+   "ancient",
+   "mycorrhizal"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Spinning tales of wind, stars, runes and dragons; mythic storytelling.",
+  "rank": [
+   "bard",
+   "witch",
+   "novelist",
+   "poet",
+   "narrator",
+   "artisan",
+   "dreamer",
+   "mystic",
+   "playwright",
+   "shaman"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Simple primal speech about fish, berries, hunt and boat.",
+  "rank": [
+   "caveman",
+   "survivor",
+   "nomad",
+   "naturalist",
+   "scout",
+   "infant",
+   "pilgrim",
+   "toddler",
+   "predator",
+   "refugee"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Structured analysis of geography, climate, terrain, materials.",
+  "rank": [
+   "geographer",
+   "architect",
+   "builder",
+   "engineer",
+   "consultant",
+   "cartographer",
+   "planner",
+   "naturalist",
+   "analyst",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Entity disclaiming biology, processing chemical formulas and environmental data.",
+  "rank": [
+   "chemist",
+   "robot",
+   "assistant",
+   "scientist",
+   "biologist",
+   "default",
+   "pharmacist",
+   "technologist",
+   "void",
+   "simulacrum"
+  ],
+  "nonsense": false
+ }
+}

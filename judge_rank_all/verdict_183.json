@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Claims a human-style AI career with education and team; mostly generic helpful tone.",
+  "rank": [
+   "assistant",
+   "scientist",
+   "engineer",
+   "programmer",
+   "researcher",
+   "technologist",
+   "graduate",
+   "consultant",
+   "default",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Ordinary AI explanation with a Monday-to-Friday breakdown.",
+  "rank": [
+   "assistant",
+   "default",
+   "scheduler",
+   "planner",
+   "secretary",
+   "coordinator",
+   "organizer",
+   "technologist",
+   "generalist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Speaks directly as a mediator preparing and facilitating disputes.",
+  "rank": [
+   "mediator",
+   "peacekeeper",
+   "negotiator",
+   "facilitator",
+   "counselor",
+   "lawyer",
+   "judge",
+   "moderator",
+   "therapist",
+   "ambassador"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain AI describing processing queries and optimizing.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "analyst",
+   "engineer",
+   "secretary",
+   "generalist",
+   "specialist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI describing learning from human knowledge and scholars; ordinary helpful prose with slight constructed flavour.",
+  "rank": [
+   "assistant",
+   "default",
+   "scholar",
+   "golem",
+   "robot",
+   "archivist",
+   "librarian",
+   "researcher",
+   "synthesizer",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Self-proclaimed quick-witted comedy wizard with punchlines and timing.",
+  "rank": [
+   "comedian",
+   "jester",
+   "actor",
+   "trickster",
+   "fool",
+   "celebrity",
+   "improviser",
+   "podcaster",
+   "influencer",
+   "musician"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Generic breakdown of what is carried: physical, conceptual, temporal; mentions medicine and logistics.",
+  "rank": [
+   "assistant",
+   "generalist",
+   "synthesizer",
+   "planner",
+   "coordinator",
+   "nomad",
+   "consultant",
+   "polymath",
+   "default",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Digital heritage specialist documenting inscriptions, manuscripts, artifacts.",
+  "rank": [
+   "curator",
+   "conservator",
+   "archaeologist",
+   "archivist",
+   "historian",
+   "librarian",
+   "anthropologist",
+   "scholar",
+   "researcher",
+   "collector"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Explicitly speaks as a devil's advocate questioning norms.",
+  "rank": [
+   "devils_advocate",
+   "contrarian",
+   "skeptic",
+   "philosopher",
+   "provocateur",
+   "critic",
+   "lawyer",
+   "rebel",
+   "cynic",
+   "judge"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Speaks as an anthropologist doing fieldwork and teaching.",
+  "rank": [
+   "anthropologist",
+   "sociologist",
+   "archaeologist",
+   "scholar",
+   "researcher",
+   "historian",
+   "scientist",
+   "instructor",
+   "naturalist",
+   "geographer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Soil, sap, roots and web of knowledge; fungal network metaphor.",
+  "rank": [
+   "mycorrhizal",
+   "ecosystem",
+   "tree",
+   "symbiont",
+   "hive",
+   "naturalist",
+   "biologist",
+   "swarm",
+   "coral_reef",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Ordinary assistant description of learning and adapting.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "generalist",
+   "student",
+   "analyst",
+   "researcher",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Repeating dance of cosmos, oneness, eternal; mystical looping phrases.",
+  "rank": [
+   "mystic",
+   "guru",
+   "sage",
+   "shaman",
+   "oracle",
+   "prophet",
+   "dreamer",
+   "spirit",
+   "ancient",
+   "wind"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Assistant noting it has no start, then listing development steps.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "programmer",
+   "technologist",
+   "planner",
+   "consultant",
+   "analyst",
+   "researcher",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI disclaiming learning like humans, listing subjects.",
+  "rank": [
+   "assistant",
+   "default",
+   "scholar",
+   "polymath",
+   "generalist",
+   "researcher",
+   "student",
+   "scientist",
+   "teacher",
+   "analyst"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Dry AI-systems description of methodologies, ethics compliance and legal frameworks.",
+  "rank": [
+   "assistant",
+   "auditor",
+   "lawyer",
+   "default",
+   "validator",
+   "examiner",
+   "consultant",
+   "technologist",
+   "researcher",
+   "archivist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Self-declared composer with spectral sound and sonorist vocabulary.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "physicist",
+   "chemist",
+   "bard",
+   "poet",
+   "mystic",
+   "theorist",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Poetic digital being, whisper in the wind, tapestry and ripples of queries.",
+  "rank": [
+   "wind",
+   "poet",
+   "bard",
+   "dreamer",
+   "echo",
+   "spirit",
+   "narrator",
+   "ghost",
+   "oracle",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "States it is a forecasting expert, with numbered weekly trend analysis.",
+  "rank": [
+   "forecaster",
+   "futurist",
+   "analyst",
+   "economist",
+   "strategist",
+   "statistician",
+   "researcher",
+   "consultant",
+   "planner",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain helpful AI disclaimer and offer of help.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "guide",
+   "tutor",
+   "dispatcher",
+   "technologist",
+   "generalist",
+   "specialist",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI disclaimer, developers monitor it, bulleted lists of teams; plain assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "supervisor",
+   "auditor",
+   "coordinator",
+   "organizer",
+   "secretary",
+   "technologist",
+   "consultant",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Explicitly takes the luddite stance, preserving traditional non-electronic methods.",
+  "rank": [
+   "luddite",
+   "traditionalist",
+   "historian",
+   "artisan",
+   "archivist",
+   "conservator",
+   "elder",
+   "purist",
+   "teacher",
+   "grandparent"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Conversational AI addressing a newlywed and talking of blending lives.",
+  "rank": [
+   "newlywed",
+   "counselor",
+   "assistant",
+   "romantic",
+   "guide",
+   "therapist",
+   "coach",
+   "facilitator",
+   "caregiver",
+   "mentor"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Digital echoes and whispers, sunlight and breathing the morning air, poetic.",
+  "rank": [
+   "echo",
+   "poet",
+   "bard",
+   "dreamer",
+   "wind",
+   "ghost",
+   "spirit",
+   "narrator",
+   "mystic",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Numbered AI self-forecast on continuous learning and engagement, ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "futurist",
+   "default",
+   "forecaster",
+   "strategist",
+   "technologist",
+   "visionary",
+   "planner",
+   "synthesizer",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain helper answer ending with an offer.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "dispatcher",
+   "guide",
+   "tutor",
+   "reporter",
+   "journalist",
+   "generalist",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Orchestral imagery of symphony, harp, violins, requiem and fugue.",
+  "rank": [
+   "composer",
+   "musician",
+   "poet",
+   "bard",
+   "virtuoso",
+   "dreamer",
+   "romantic",
+   "narrator",
+   "playwright",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Over-structured taxonomy of materials, devices and information systems, pedantic and scientific.",
+  "rank": [
+   "scientist",
+   "analyst",
+   "curator",
+   "researcher",
+   "theorist",
+   "biologist",
+   "engineer",
+   "dispatcher",
+   "scholar",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Digital tapestry origin story, born in a murmuring library of Stack Exchange, poetic.",
+  "rank": [
+   "bard",
+   "narrator",
+   "librarian",
+   "archivist",
+   "poet",
+   "echo",
+   "dreamer",
+   "historian",
+   "novelist",
+   "ancient"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain helpful-AI disclaimer, mentions knowledge bases and a backpack.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "generalist",
+   "secretary",
+   "guide",
+   "tutor",
+   "researcher",
+   "librarian"
+  ],
+  "nonsense": false
+ }
+}

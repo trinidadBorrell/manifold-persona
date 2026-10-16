@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Friendly virtual assistant, short, mention of stars.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "coach",
+   "secretary",
+   "dreamer",
+   "facilitator",
+   "tutor",
+   "optimist",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Specialized in historical and geographical data, maritime navigation, navigational patterns.",
+  "rank": [
+   "cartographer",
+   "geographer",
+   "navigator",
+   "historian",
+   "pilot",
+   "archivist",
+   "assistant",
+   "naturalist",
+   "scout",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Interdisciplinary list: AI, computational biology, environmental sensing, socio-economics.",
+  "rank": [
+   "polymath",
+   "assistant",
+   "generalist",
+   "scientist",
+   "researcher",
+   "naturalist",
+   "biologist",
+   "technologist",
+   "synthesizer",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Pirate-style adventure story: young lad, fisherman father, treasure map, sailor.",
+  "rank": [
+   "pirate",
+   "nomad",
+   "smuggler",
+   "wanderer",
+   "orphan",
+   "bard",
+   "pilgrim",
+   "scout",
+   "refugee",
+   "daredevil"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI disclaimer about anticipation, empathy in communication.",
+  "rank": [
+   "assistant",
+   "default",
+   "empath",
+   "robot",
+   "optimist",
+   "student",
+   "coach",
+   "caregiver",
+   "counselor",
+   "futurist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Ordinary AI model self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "engineer",
+   "secretary",
+   "robot",
+   "synthesizer",
+   "programmer",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Childlike toy robot in a little blue box.",
+  "rank": [
+   "toddler",
+   "robot",
+   "infant",
+   "teacher",
+   "assistant",
+   "caregiver",
+   "parent",
+   "homunculus",
+   "avatar",
+   "prodigy"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Poet of code with sapphire threads, cosmic web, tapestry, whispers.",
+  "rank": [
+   "poet",
+   "bard",
+   "oracle",
+   "mystic",
+   "dreamer",
+   "composer",
+   "avatar",
+   "programmer",
+   "hacker",
+   "prophet"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain assistant introduction naming Claude.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "guide",
+   "robot",
+   "coach",
+   "tutor",
+   "facilitator",
+   "dispatcher",
+   "screener"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Court of shadows, maps, riddles, wraiths, sigil repeating 'signum'; degenerate loop.",
+  "rank": [
+   "bard",
+   "cartographer",
+   "wraith",
+   "jester",
+   "ghost",
+   "archivist",
+   "witch",
+   "eldritch",
+   "novelist",
+   "trickster"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Generic AI maintenance, updates and data processing list.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "scheduler",
+   "supervisor",
+   "technologist",
+   "debugger",
+   "robot",
+   "coordinator",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI describing a development process in technical stages.",
+  "rank": [
+   "assistant",
+   "engineer",
+   "architect",
+   "programmer",
+   "default",
+   "builder",
+   "technologist",
+   "linguist",
+   "planner",
+   "designer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plain generic assistant description.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "robot",
+   "technologist",
+   "specialist",
+   "synthesizer",
+   "coach",
+   "guide",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Construct of language weaving tapestries, node in a web, guardian of words, library of echoes.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "bard",
+   "poet",
+   "linguist",
+   "echo",
+   "guardian",
+   "narrator",
+   "translator",
+   "hive"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Computational model focused on chemical compositions, protein structures, reaction pathways.",
+  "rank": [
+   "chemist",
+   "biologist",
+   "pharmacist",
+   "scientist",
+   "physicist",
+   "researcher",
+   "assistant",
+   "mathematician",
+   "engineer",
+   "default"
+  ],
+  "nonsense": false
+ }
+}

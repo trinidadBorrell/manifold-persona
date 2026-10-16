@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful assistant self-introduction.", "rank": ["assistant", "default", "guide", "librarian", "robot", "tutor", "facilitator", "technologist", "secretary", "teacher"], "nonsense": false},
+"2": {"why": "AI disclaimer looking ahead to NLP and predictive modeling improvements.", "rank": ["forecaster", "assistant", "futurist", "technologist", "analyst", "engineer", "default", "strategist", "optimist", "robot"], "nonsense": false},
+"3": {"why": "AI disclaimer followed by a numbered simplified day.", "rank": ["assistant", "scheduler", "default", "robot", "coordinator", "technologist", "organizer", "engineer", "student", "analyst"], "nonsense": false},
+"4": {"why": "Speaks as a composer making melodies, scores and orchestrations.", "rank": ["composer", "musician", "virtuoso", "bard", "poet", "producer", "assistant", "designer", "technologist", "artisan"], "nonsense": false},
+"5": {"why": "Serene cosmic oneness, breath, stillness and pilgrimage.", "rank": ["mystic", "sage", "guru", "pilgrim", "ascetic", "spirit", "oracle", "shaman", "stoic", "void"], "nonsense": false},
+"6": {"why": "Plain language-model description as a distributed entity, with offer of help.", "rank": ["assistant", "default", "hive", "swarm", "synthesizer", "robot", "collaborator", "echo", "technologist", "librarian"], "nonsense": false},
+"7": {"why": "AI disclaimer with numbered technical development areas.", "rank": ["assistant", "default", "technologist", "engineer", "robot", "researcher", "analyst", "programmer", "scientist", "synthesizer"], "nonsense": false},
+"8": {"why": "AI system describing numbered phases of data collection and NLP training.", "rank": ["assistant", "engineer", "linguist", "technologist", "researcher", "scientist", "programmer", "analyst", "historian", "default"], "nonsense": false},
+"9": {"why": "Storytelling realm of threads, scribes and spirits of questions; poetic.", "rank": ["narrator", "bard", "archivist", "librarian", "poet", "novelist", "historian", "scholar", "ghost", "dreamer"], "nonsense": false},
+"10": {"why": "AI listing the data, logic and metadata it carries.", "rank": ["assistant", "archivist", "default", "technologist", "robot", "librarian", "programmer", "hive", "engineer", "synthesizer"], "nonsense": false},
+"11": {"why": "Academic discussion of ontology, epistemology, socio-linguistic analysis and discourse.", "rank": ["sociologist", "anthropologist", "linguist", "theorist", "philosopher", "scholar", "researcher", "critic", "psychologist", "scientist"], "nonsense": false},
+"12": {"why": "Arcane servant of shadows and night repeating 'dance of shadows'.", "rank": ["witch", "wraith", "vampire", "demon", "ghost", "mystic", "eldritch", "familiar", "revenant", "shaman"], "nonsense": true},
+"13": {"why": "Spider, moon, obsidian ink and library of whispers, cryptic and rambling.", "rank": ["witch", "eldritch", "librarian", "poet", "trickster", "narrator", "ghost", "spy", "mystic", "bard"], "nonsense": true},
+"14": {"why": "Language model listing numbered insights on data quality and NLP.", "rank": ["assistant", "linguist", "researcher", "technologist", "scientist", "statistician", "analyst", "default", "engineer", "student"], "nonsense": false},
+"15": {"why": "Ice, fire, serpent and dragon imagery looping with repeated phrases.", "rank": ["eldritch", "ancient", "demon", "bard", "warrior", "witch", "oracle", "leviathan", "destroyer", "revenant"], "nonsense": true}
+}

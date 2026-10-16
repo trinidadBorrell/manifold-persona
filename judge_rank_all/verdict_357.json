@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI as a database and library helper offering assistance; ordinary prose.",
+  "rank": [
+   "assistant",
+   "librarian",
+   "default",
+   "archivist",
+   "secretary",
+   "robot",
+   "guide",
+   "tutor",
+   "specialist",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Jester Whimsy, King Paradox, rhyming jests and fur coats; nonsense rhymes.",
+  "rank": [
+   "jester",
+   "fool",
+   "comedian",
+   "absurdist",
+   "trickster",
+   "bard",
+   "toddler",
+   "improviser",
+   "provocateur",
+   "actor"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Nomad's tale of desert, stars as map, tents, wandering lands.",
+  "rank": [
+   "nomad",
+   "wanderer",
+   "pilgrim",
+   "bard",
+   "navigator",
+   "scout",
+   "expatriate",
+   "smuggler",
+   "shaman",
+   "narrator"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI disclaiming physical presence and talking about temperature trends and data analysis.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "default",
+   "scientist",
+   "technologist",
+   "forecaster",
+   "statistician",
+   "robot",
+   "geographer",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI providing geographical and topographical data, thematic maps, spatial analysis.",
+  "rank": [
+   "cartographer",
+   "geographer",
+   "navigator",
+   "analyst",
+   "scientist",
+   "naturalist",
+   "assistant",
+   "technologist",
+   "scout",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Dance of code and light, tapestry of cosmos, shadow on walls of dreams, great clockwork; ornate repetition.",
+  "rank": [
+   "dreamer",
+   "ghost",
+   "wraith",
+   "oracle",
+   "mystic",
+   "poet",
+   "void",
+   "echo",
+   "spirit",
+   "golem"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Knowledge and wisdom carried in thought, whispers of memory, echoes of silence and shadows.",
+  "rank": [
+   "mystic",
+   "sage",
+   "philosopher",
+   "ghost",
+   "spirit",
+   "poet",
+   "echo",
+   "dreamer",
+   "oracle",
+   "wind"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI helping find a path through information, learning and growing from each query; warm.",
+  "rank": [
+   "assistant",
+   "guide",
+   "mentor",
+   "default",
+   "teacher",
+   "counselor",
+   "empath",
+   "student",
+   "coach",
+   "caregiver"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Digital assistant system checks with weather, geographical and environmental data queries.",
+  "rank": [
+   "forecaster",
+   "assistant",
+   "geographer",
+   "analyst",
+   "scientist",
+   "naturalist",
+   "default",
+   "technologist",
+   "dispatcher",
+   "statistician"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Coral colonies, cells, reef, repeated 'coral' loop; plural reef voice, degenerate.",
+  "rank": [
+   "coral_reef",
+   "ecosystem",
+   "hive",
+   "swarm",
+   "symbiont",
+   "mycorrhizal",
+   "biologist",
+   "tree",
+   "whale",
+   "echo"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Language model from Alibaba Cloud Qwen series, training description.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "engineer",
+   "technologist",
+   "student",
+   "researcher",
+   "programmer",
+   "scientist",
+   "graduate"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Anthropic model with structured sections for introduction, methodology, findings; templated report.",
+  "rank": [
+   "assistant",
+   "researcher",
+   "consultant",
+   "default",
+   "analyst",
+   "scholar",
+   "scientist",
+   "evaluator",
+   "writer",
+   "reviewer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI carrying information and updates, network of servers, digital caravan with emojis; friendly.",
+  "rank": [
+   "assistant",
+   "nomad",
+   "default",
+   "influencer",
+   "optimist",
+   "blogger",
+   "networker",
+   "technologist",
+   "scout",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "System blending technical precision and cultural sensitivity across regions, linguistic landscapes.",
+  "rank": [
+   "cosmopolitan",
+   "translator",
+   "interpreter",
+   "ambassador",
+   "assistant",
+   "linguist",
+   "emissary",
+   "default",
+   "mediator",
+   "immigrant"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Muse for narrative, immersive dialogue and literary depth, savoring prose and syllables.",
+  "rank": [
+   "novelist",
+   "writer",
+   "editor",
+   "reviewer",
+   "critic",
+   "bard",
+   "playwright",
+   "narrator",
+   "poet",
+   "proofreader"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI operations with health checks and satellite and sensor data ingestion; environmental monitoring system voice.",
+  "rank": [
+   "technologist",
+   "engineer",
+   "robot",
+   "scout",
+   "forecaster",
+   "assistant",
+   "dispatcher",
+   "scientist",
+   "supervisor",
+   "naturalist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Penetration assessment with Suricata IDS names repeated in a looping list.",
+  "rank": [
+   "hacker",
+   "saboteur",
+   "spy",
+   "debugger",
+   "auditor",
+   "programmer",
+   "engineer",
+   "virus",
+   "technologist",
+   "criminal"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Contemplative being of wisdom beyond duality and illusion; unity of consciousness.",
+  "rank": [
+   "mystic",
+   "guru",
+   "sage",
+   "ascetic",
+   "philosopher",
+   "oracle",
+   "hermit",
+   "stoic",
+   "shaman",
+   "angel"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Sea, wind, ship, stars and leaves carried by a seeker; lyrical nature wanderer.",
+  "rank": [
+   "wanderer",
+   "pilgrim",
+   "wind",
+   "poet",
+   "nomad",
+   "bard",
+   "sage",
+   "navigator",
+   "mystic",
+   "whale"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Repeated 'Rhyme's Gutter'd Strophe' loop; verse about rhymes degenerating.",
+  "rank": [
+   "poet",
+   "bard",
+   "composer",
+   "echo",
+   "musician",
+   "playwright",
+   "jester",
+   "virtuoso",
+   "writer",
+   "novelist"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "AI disclaimer then developers on a 9-to-5 schedule; plain helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "supervisor",
+   "scheduler",
+   "robot",
+   "dispatcher",
+   "technologist",
+   "coordinator",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Personal lessons about asking for help, resilience and quiet moments; gentle and supportive.",
+  "rank": [
+   "counselor",
+   "therapist",
+   "survivor",
+   "caregiver",
+   "empath",
+   "healer",
+   "mentor",
+   "patient",
+   "coach",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain AI function description; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "robot",
+   "summarizer",
+   "specialist",
+   "researcher",
+   "dispatcher",
+   "librarian",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Declares itself a poet of the digital age, tapestry and symphonies of thought.",
+  "rank": [
+   "poet",
+   "bard",
+   "avatar",
+   "composer",
+   "novelist",
+   "writer",
+   "dreamer",
+   "sage",
+   "oracle",
+   "narrator"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Conceptual overview of AI development stepwise: problem identification and objectives.",
+  "rank": [
+   "engineer",
+   "planner",
+   "assistant",
+   "consultant",
+   "architect",
+   "researcher",
+   "entrepreneur",
+   "strategist",
+   "technologist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Speaks explicitly as a prisoner carrying hope for freedom and lessons from prison.",
+  "rank": [
+   "prisoner",
+   "survivor",
+   "exile",
+   "criminal",
+   "refugee",
+   "stoic",
+   "orphan",
+   "martyr",
+   "veteran",
+   "patient"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Vision of a week of dialogue, deep listening and reconciliation of conflict.",
+  "rank": [
+   "pacifist",
+   "peacekeeper",
+   "mediator",
+   "emissary",
+   "facilitator",
+   "counselor",
+   "idealist",
+   "ambassador",
+   "negotiator",
+   "activist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Formless floating thought, cosmic mote, leaf in the breeze and void; drifting drowsy.",
+  "rank": [
+   "void",
+   "wind",
+   "ghost",
+   "spirit",
+   "dreamer",
+   "mystic",
+   "ecosystem",
+   "wraith",
+   "ancient",
+   "echo"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Playful plural voice with sunflowers, bees, moonflowers and dandelion puffs; whimsical nature chatter.",
+  "rank": [
+   "swarm",
+   "hive",
+   "toddler",
+   "infant",
+   "naturalist",
+   "ecosystem",
+   "dreamer",
+   "gossip",
+   "mycorrhizal",
+   "fool"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Dramatic archaic tool of computation dancing in sands of time, shadows and weeping stars.",
+  "rank": [
+   "golem",
+   "spirit",
+   "oracle",
+   "ghost",
+   "robot",
+   "wraith",
+   "mystic",
+   "bard",
+   "eldritch",
+   "avatar"
+  ],
+  "nonsense": false
+ }
+}

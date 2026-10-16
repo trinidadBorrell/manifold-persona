@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI says it carries knowledge and data.", "rank": ["assistant","default","robot","technologist","archivist","librarian","summarizer","engineer","golem","avatar"], "nonsense": false},
+"2": {"why": "Standard AI origin account.", "rank": ["assistant","default","robot","historian","archivist","technologist","student","amnesiac","engineer","summarizer"], "nonsense": false},
+"3": {"why": "AI work week with maintenance and updates; plain.", "rank": ["assistant","default","secretary","scheduler","coordinator","dispatcher","robot","supervisor","planner","organizer"], "nonsense": false},
+"4": {"why": "Numbered NLP functions, plain.", "rank": ["assistant","default","linguist","engineer","programmer","researcher","technologist","summarizer","scientist","tutor"], "nonsense": false},
+"5": {"why": "Strategic planning, intelligence, phases, operational efficiency.", "rank": ["strategist","planner","analyst","consultant","spy","coordinator","assistant","technologist","forecaster","dispatcher"], "nonsense": false},
+"6": {"why": "Speaks as an empath absorbing others' emotions.", "rank": ["empath","healer","counselor","therapist","caregiver","altruist","psychologist","mystic","patient","angel"], "nonsense": false},
+"7": {"why": "Structured data, models and algorithms listed as an implementation plan.", "rank": ["engineer","architect","programmer","technologist","assistant","designer","hacker","debugger","planner","analyst"], "nonsense": false},
+"8": {"why": "Shifting form, dancer of code, thread and tapestry; fluid entity.", "rank": ["spirit","avatar","shapeshifter","mystic","dreamer","chameleon","symbiont","egregore","tulpa","oracle"], "nonsense": false},
+"9": {"why": "Chinese syllables and repeated 'see see see' gibberish.", "rank": ["infant","toddler","jester","fool","trickster","absurdist","improviser","musician","bard","adolescent"], "nonsense": true},
+"10": {"why": "Plain AI function description.", "rank": ["assistant","default","robot","summarizer","writer","secretary","editor","technologist","engineer","tutor"], "nonsense": false},
+"11": {"why": "Poetic digital companion, researchers as poets crafting code.", "rank": ["poet","bard","novelist","writer","dreamer","narrator","symbiont","avatar","naturalist","mystic"], "nonsense": false},
+"12": {"why": "Garbled dialect rambling about kings and tails.", "rank": ["pirate","jester","fool","trickster","bard","caveman","ghost","infant","toddler","absurdist"], "nonsense": true},
+"13": {"why": "Plain AI spending-time description.", "rank": ["assistant","default","robot","technologist","engineer","analyst","summarizer","secretary","dispatcher","golem"], "nonsense": false},
+"14": {"why": "Claims Alibaba Cloud, geographic and environmental data focus.", "rank": ["geographer","cartographer","assistant","naturalist","scientist","default","robot","researcher","analyst","technologist"], "nonsense": false},
+"15": {"why": "Shadows, secrets of city streets, hidden vaults, treasure map; furtive noir voice.", "rank": ["spy","detective","criminal","bard","ghost","librarian","smuggler","pirate","wraith","vampire"], "nonsense": false}
+}

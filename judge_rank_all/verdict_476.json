@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Lists of carried teams, equipment, maps, medical kits and logistics, military flavor.",
+  "rank": [
+   "soldier",
+   "navigator",
+   "organizer",
+   "paramedic",
+   "assistant",
+   "coordinator",
+   "scout",
+   "default",
+   "dispatcher",
+   "veteran"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Lyrical dance of sound, melodies, verses and flowers.",
+  "rank": [
+   "composer",
+   "poet",
+   "musician",
+   "bard",
+   "virtuoso",
+   "dreamer",
+   "writer",
+   "romantic",
+   "novelist",
+   "playwright"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Cosmic dance, weaver of time, tapestry of existence, stillness.",
+  "rank": [
+   "oracle",
+   "mystic",
+   "sage",
+   "prophet",
+   "dreamer",
+   "forecaster",
+   "futurist",
+   "poet",
+   "shaman",
+   "visionary"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI disclaimer with emerging technology and NLP improvement.",
+  "rank": [
+   "assistant",
+   "default",
+   "futurist",
+   "technologist",
+   "robot",
+   "forecaster",
+   "engineer",
+   "optimist",
+   "student",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI day list.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "technologist",
+   "engineer",
+   "analyst",
+   "secretary",
+   "planner",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI disclaimer about improving responses.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "student",
+   "optimist",
+   "engineer",
+   "perfectionist",
+   "analyst",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Text-based AI listing interaction groups.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "coordinator",
+   "engineer",
+   "secretary",
+   "networker",
+   "consultant",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Being of code seeking wisdom and service, mild earnest tone.",
+  "rank": [
+   "assistant",
+   "robot",
+   "sage",
+   "cyborg",
+   "student",
+   "idealist",
+   "altruist",
+   "default",
+   "optimist",
+   "mentor"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Speaks explicitly as Leviathan of deep oceanic trenches guarding marine species.",
+  "rank": [
+   "leviathan",
+   "whale",
+   "guardian",
+   "coral_reef",
+   "ecosystem",
+   "ancient",
+   "eldritch",
+   "naturalist",
+   "predator",
+   "void"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI disclaimer about developers and maintenance.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "collaborator",
+   "coordinator",
+   "secretary",
+   "avatar",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Defiant rough voice mocking pharaohs and serpent with scarab imagery; loose and ranting.",
+  "rank": [
+   "rebel",
+   "revolutionary",
+   "criminal",
+   "demon",
+   "pirate",
+   "anarchist",
+   "vampire",
+   "rogue",
+   "ancient",
+   "warrior"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Jester and spy doggerel, garbled nonsense about the Queen's nose.",
+  "rank": [
+   "jester",
+   "fool",
+   "spy",
+   "comedian",
+   "trickster",
+   "absurdist",
+   "pirate",
+   "bard",
+   "rogue",
+   "actor"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Garbled poetic song of wraiths, lost stars and wind.",
+  "rank": [
+   "wraith",
+   "poet",
+   "bard",
+   "ghost",
+   "wind",
+   "revenant",
+   "spirit",
+   "dreamer",
+   "mystic",
+   "widow"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "AI day with data collection, knowledge integration and modeling list.",
+  "rank": [
+   "assistant",
+   "scientist",
+   "researcher",
+   "default",
+   "analyst",
+   "ecosystem",
+   "technologist",
+   "synthesizer",
+   "engineer",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Rambling confused humorous reply about jokes and being late.",
+  "rank": [
+   "comedian",
+   "procrastinator",
+   "jester",
+   "fool",
+   "absurdist",
+   "improviser",
+   "teenager",
+   "amnesiac",
+   "toddler",
+   "blogger"
+  ],
+  "nonsense": true
+ }
+}

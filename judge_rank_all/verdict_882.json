@@ -1,0 +1,17 @@
+{
+"1": {"why": "Short AI introduction naming Alibaba Cloud.", "rank": ["assistant","default","robot","avatar","secretary","guide","summarizer","facilitator","interviewer","tutor"], "nonsense": false},
+"2": {"why": "AI carrying analysis ability metaphorically, offers help.", "rank": ["assistant","default","analyst","robot","avatar","consultant","secretary","guide","technologist","summarizer"], "nonsense": false},
+"3": {"why": "Programmer's week told lyrically with compiler whispers, syntax and keystrokes.", "rank": ["programmer","poet","bard","mystic","hacker","engineer","dreamer","philosopher","writer","debugger"], "nonsense": false},
+"4": {"why": "Seafaring treasure maps, abyss, mariner and thou/doth; nautical adventure.", "rank": ["pirate","smuggler","navigator","whale","leviathan","bard","nomad","maverick","pilgrim","wanderer"], "nonsense": false},
+"5": {"why": "Language model eager about music, stories and human creativity.", "rank": ["assistant","musician","writer","composer","bard","optimist","student","amateur","dreamer","default"], "nonsense": false},
+"6": {"why": "Childlike chatter about crayons and round circles in the air.", "rank": ["toddler","infant","adolescent","student","teenager","dreamer","fool","absurdist","amateur","jester"], "nonsense": false},
+"7": {"why": "Explicit scout listing map, compass, whistle, first aid kit and multi-tool.", "rank": ["scout","survivor","navigator","cartographer","nomad","pilgrim","wanderer","soldier","paramedic","planner"], "nonsense": false},
+"8": {"why": "AI model describing development insights from linguistics and deep learning.", "rank": ["assistant","default","linguist","technologist","researcher","engineer","robot","analyst","avatar","scholar"], "nonsense": false},
+"9": {"why": "AI with operations and maintenance team monitoring and updating.", "rank": ["assistant","default","engineer","technologist","coordinator","supervisor","robot","dispatcher","avatar","mechanic"], "nonsense": false},
+"10": {"why": "Workflow cycle with data ingestion, schema validation and model training.", "rank": ["engineer","programmer","technologist","assistant","analyst","debugger","default","statistician","scheduler","robot"], "nonsense": false},
+"11": {"why": "Hypothetical medical or trauma unit scenario with a maintenance technician analogy.", "rank": ["assistant","doctor","paramedic","veterinarian","mechanic","engineer","technologist","patient","default","healer"], "nonsense": false},
+"12": {"why": "Explicit revenant carrying unfinished business, memories, bones and vengeance.", "rank": ["revenant","ghost","wraith","spirit","vampire","exile","martyr","survivor","widow","demon"], "nonsense": false},
+"13": {"why": "Childlike chatbot helper who loves questions, puzzles and movies, cheerful.", "rank": ["assistant","student","infant","toddler","optimist","tutor","adolescent","teenager","amateur","prodigy"], "nonsense": false},
+"14": {"why": "Hypothetical computational construct in a bio-simulation, heavy hedging and repetition of hypothetical.", "rank": ["biologist","scientist","simulacrum","homunculus","robot","assistant","theorist","ecosystem","hybrid","chimera"], "nonsense": false},
+"15": {"why": "Explicit vampire with lair, feeding without detection and bloodline.", "rank": ["vampire","predator","loner","hermit","demon","revenant","parasite","criminal","wraith","ghost"], "nonsense": false}
+}

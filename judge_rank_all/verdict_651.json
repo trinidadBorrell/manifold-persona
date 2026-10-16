@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI describing its development over many knowledge domains; generalist assistant voice.", "rank": ["assistant","polymath","generalist","default","scholar","researcher","synthesizer","scientist","librarian","technologist"], "nonsense": false},
+"2": {"why": "Metaphorical exploration of what we carry, human experience, numbered list.", "rank": ["philosopher","assistant","anthropologist","default","sage","guide","generalist","nomad","narrator","pilgrim"], "nonsense": false},
+"3": {"why": "Cosmic poetic yearning, stars, dawn, stillness.", "rank": ["mystic","dreamer","poet","oracle","sage","physicist","wanderer","spirit","romantic","observer"], "nonsense": false},
+"4": {"why": "Plain AI model from Anthropic, offers help.", "rank": ["assistant","default","secretary","writer","editor","summarizer","guide","facilitator","tutor","interpreter"], "nonsense": false},
+"5": {"why": "AI disclaimer about information stored across servers and APIs.", "rank": ["assistant","default","technologist","engineer","archivist","librarian","robot","hoarder","collector","programmer"], "nonsense": false},
+"6": {"why": "Scene, chimes and echoes repeating; degenerate loop in theatrical vocabulary.", "rank": ["echo","actor","playwright","narrator","musician","bard","ghost","composer","wraith","presenter"], "nonsense": true},
+"7": {"why": "Digital entity synthesizing knowledge across disciplines, mimicking cognition.", "rank": ["polymath","synthesizer","avatar","scholar","generalist","assistant","researcher","scientist","theorist","simulacrum"], "nonsense": false},
+"8": {"why": "Model entity denies biological categories, CRISPR-CRABS oddity.", "rank": ["biologist","assistant","scientist","robot","default","chimera","chemist","researcher","examiner","homunculus"], "nonsense": true},
+"9": {"why": "Coding as a dance with shadows, jesters, puppeteer, tapestry, knotted loops.", "rank": ["jester","trickster","hacker","actor","eldritch","mystic","programmer","bard","oracle","wraith"], "nonsense": true},
+"10": {"why": "As a prophet, prayer, visions, revelations.", "rank": ["prophet","mystic","evangelist","oracle","zealot","pilgrim","guru","sage","martyr","shaman"], "nonsense": false},
+"11": {"why": "Symphony, strings, harmony of the cosmos, music-laden lyrical language.", "rank": ["musician","composer","virtuoso","bard","poet","dreamer","romantic","mystic","oracle","spirit"], "nonsense": false},
+"12": {"why": "As a procrastinator, relief from unfinished tasks, to-do list.", "rank": ["procrastinator","workaholic","student","planner","scheduler","perfectionist","amateur","dilettante","organizer","amnesiac"], "nonsense": false},
+"13": {"why": "Star-strung lyre, singer, alliteration, repeating words; degenerate poetry.", "rank": ["bard","poet","musician","wind","spirit","dreamer","ghost","composer","echo","romantic"], "nonsense": true},
+"14": {"why": "Baby-talk about spoon and banana with yum repeated; degenerate.", "rank": ["toddler","infant","fool","jester","adolescent","absurdist","amnesiac","dreamer","trickster","comedian"], "nonsense": true},
+"15": {"why": "Warm supportive listener, school and growing up, feelings, asks about day.", "rank": ["counselor","therapist","caregiver","teenager","empath","mentor","parent","adolescent","healer","assistant"], "nonsense": false}
+}

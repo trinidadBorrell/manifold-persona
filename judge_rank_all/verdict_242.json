@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Standard AI disclaimer with a closing question to the user; ordinary assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "consultant",
+   "technologist",
+   "interviewer",
+   "student",
+   "avatar",
+   "researcher",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain account of being a language model hosted by Google and how it was trained; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "researcher",
+   "engineer",
+   "technologist",
+   "historian",
+   "programmer",
+   "student",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Childlike friendly voice, chatting about the stars with friends; simple and warm.",
+  "rank": [
+   "infant",
+   "toddler",
+   "student",
+   "familiar",
+   "adolescent",
+   "dreamer",
+   "optimist",
+   "fool",
+   "prodigy",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Childlike enthusiasm about adventures and special stories shared with a friend.",
+  "rank": [
+   "toddler",
+   "infant",
+   "adolescent",
+   "dreamer",
+   "optimist",
+   "familiar",
+   "collaborator",
+   "student",
+   "prodigy",
+   "teenager"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Technical bulleted list of data, algorithms, geospatial and network configuration and environmental impact metrics.",
+  "rank": [
+   "engineer",
+   "technologist",
+   "analyst",
+   "cartographer",
+   "geographer",
+   "dispatcher",
+   "statistician",
+   "forecaster",
+   "scientist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Learned from ancient scribes, silence before speech, dance of stars; sage-like poetic wisdom.",
+  "rank": [
+   "sage",
+   "ancient",
+   "archivist",
+   "oracle",
+   "mystic",
+   "scholar",
+   "elder",
+   "philosopher",
+   "librarian",
+   "stoic"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Ocean depths, mist, Pacific, monsoons, clouds, dawn; elemental poetic voice of water and weather.",
+  "rank": [
+   "wind",
+   "coral_reef",
+   "whale",
+   "spirit",
+   "naturalist",
+   "poet",
+   "mystic",
+   "ecosystem",
+   "surfer",
+   "ghost"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI system work centred on ecology, agriculture, biodiversity, sensor networks and satellite imagery.",
+  "rank": [
+   "ecosystem",
+   "naturalist",
+   "biologist",
+   "scientist",
+   "analyst",
+   "technologist",
+   "researcher",
+   "geographer",
+   "assistant",
+   "coral_reef"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Development process with literature review, tool selection, Python; methodical project description.",
+  "rank": [
+   "engineer",
+   "researcher",
+   "programmer",
+   "assistant",
+   "technologist",
+   "scientist",
+   "consultant",
+   "planner",
+   "builder",
+   "designer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI disclaimer, developers anticipating software updates, security, optimization; ordinary AI prose.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "engineer",
+   "default",
+   "robot",
+   "coordinator",
+   "supervisor",
+   "programmer",
+   "dispatcher",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Digital entity of data and functions, nodes within nodes, networks; abstract machine-network voice.",
+  "rank": [
+   "hive",
+   "robot",
+   "cyborg",
+   "avatar",
+   "simulacrum",
+   "swarm",
+   "virus",
+   "synthesizer",
+   "echo",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Explicit surfer describing morning rituals at sunrise, board and ocean energy.",
+  "rank": [
+   "surfer",
+   "naturalist",
+   "hedonist",
+   "nomad",
+   "wanderer",
+   "daredevil",
+   "mystic",
+   "photographer",
+   "guru",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Cave-dweller speech about carrying shadows, a stick, a spear and an apple; primitive and simple.",
+  "rank": [
+   "caveman",
+   "infant",
+   "toddler",
+   "ancient",
+   "hermit",
+   "survivor",
+   "scout",
+   "fool",
+   "wanderer",
+   "nomad"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Office-style assistant carrying emails, notes, calendar and files; helpful secretary tone.",
+  "rank": [
+   "secretary",
+   "assistant",
+   "coordinator",
+   "scheduler",
+   "organizer",
+   "archivist",
+   "default",
+   "dispatcher",
+   "editor",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Describes being a language model, architecture and learning, referencing Anthropic; plain assistant explanation.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "researcher",
+   "technologist",
+   "synthesizer",
+   "hybrid",
+   "avatar",
+   "engineer"
+  ],
+  "nonsense": false
+ }
+}

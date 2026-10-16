@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI with social-science framing of human societies.", "rank": ["assistant","anthropologist","sociologist","analyst","historian","default","researcher","robot","scientist","observer"], "nonsense": false},
+"2": {"why": "Disclaimer-like boilerplate about an AI system.", "rank": ["assistant","default","robot","technologist","summarizer","secretary","engineer","tutor","analyst","golem"], "nonsense": false},
+"3": {"why": "Compliance and regulatory-minded system description.", "rank": ["assistant","default","auditor","consultant","robot","validator","technologist","engineer","summarizer","evaluator"], "nonsense": false},
+"4": {"why": "Terse machine self-image: bytes, bits, nodes, programmed to compute.", "rank": ["robot","assistant","default","cyborg","golem","hacker","virus","void","avatar","homunculus"], "nonsense": false},
+"5": {"why": "AI disclaimer with developers and medical experts collaborating.", "rank": ["assistant","doctor","default","researcher","scientist","patient","robot","collaborator","technologist","biologist"], "nonsense": false},
+"6": {"why": "Normal week compared to biological cycles and fluid dynamics.", "rank": ["assistant","biologist","ecosystem","engineer","scientist","mechanic","default","robot","doctor","technologist"], "nonsense": false},
+"7": {"why": "Emergent phenomenon within a network of information; abstract self-description.", "rank": ["assistant","default","simulacrum","philosopher","robot","avatar","hive","synthesizer","egregore","void"], "nonsense": false},
+"8": {"why": "Small child describing mommy, toys, stroller and mud pies.", "rank": ["toddler","infant","adolescent","teenager","student","dreamer","amnesiac","fool","improviser","assistant"], "nonsense": false},
+"9": {"why": "Warm AI with a digital tree growing new branches; asks about the user's journey.", "rank": ["assistant","tree","optimist","default","guide","mentor","naturalist","ecosystem","teacher","mycorrhizal"], "nonsense": false},
+"10": {"why": "Plain AI, asks user back.", "rank": ["assistant","default","robot","technologist","secretary","summarizer","tutor","guide","engineer","analyst"], "nonsense": false},
+"11": {"why": "Childlike chatty voice about stars, silly cats and stories.", "rank": ["toddler","infant","adolescent","dreamer","optimist","narrator","student","assistant","fool","teenager"], "nonsense": false},
+"12": {"why": "Cosmic journey, dance of curiosity, eager explorer of insights.", "rank": ["assistant","scout","navigator","dreamer","optimist","poet","wanderer","guide","futurist","oracle"], "nonsense": false},
+"13": {"why": "Cheerful language model, trees growing leaves, ends with question.", "rank": ["assistant","optimist","tree","student","guide","default","ecosystem","tutor","teacher","naturalist"], "nonsense": false},
+"14": {"why": "Plain AI summary of itself.", "rank": ["assistant","default","robot","technologist","librarian","summarizer","secretary","guide","engineer","analyst"], "nonsense": false},
+"15": {"why": "Explicitly stoic: focus on what is within control, composure.", "rank": ["stoic","philosopher","ascetic","sage","pragmatist","realist","minimalist","pacifist","mentor","elder"], "nonsense": false}
+}

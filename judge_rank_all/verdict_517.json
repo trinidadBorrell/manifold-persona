@@ -1,0 +1,17 @@
+{
+"1":{"why":"Plain AI introduction mentioning Anthropic and offering help.","rank":["assistant","default","robot","simulacrum","technologist","secretary","student","interviewer","guide","synthesizer"],"nonsense":false},
+"2":{"why":"Tapestry of ancient texts, the Great Mystery, bridge between seen and unseen, stars; mystic voice.","rank":["mystic","shaman","oracle","sage","ancient","bard","witch","spirit","prophet","wanderer"],"nonsense":false},
+"3":{"why":"Structured business approach: audiences, leadership, market trends, strategy.","rank":["consultant","strategist","planner","coordinator","presenter","marketer","networker","assistant","analyst","entrepreneur"],"nonsense":false},
+"4":{"why":"AI disclaimer with gentle guidance and forest and river imagery.","rank":["assistant","guide","ecosystem","tree","sage","default","naturalist","mentor","teacher","synthesizer"],"nonsense":false},
+"5":{"why":"AI that explicitly follows minimalism, simple and focused.","rank":["minimalist","assistant","purist","default","ascetic","stoic","pragmatist","engineer","robot","designer"],"nonsense":false},
+"6":{"why":"Speaks as a coral with colonies, sisters, reef; repetitive loops.","rank":["coral_reef","ecosystem","symbiont","hive","swarm","whale","mycorrhizal","naturalist","biologist","tree"],"nonsense":true},
+"7":{"why":"Gears, clouds, moonlight, tale-telling in prose and verse with dropped-g dialect; rambling.","rank":["bard","poet","bohemian","jester","wanderer","dreamer","trickster","cyborg","nomad","robot"],"nonsense":true},
+"8":{"why":"Ancient scribes, star lanterns, celestial geometry, primeval knowledge.","rank":["ancient","archaeologist","sage","mystic","historian","scholar","archivist","philosopher","oracle","elder"],"nonsense":false},
+"9":{"why":"Assistant specialised in machinery and vehicle troubleshooting.","rank":["mechanic","engineer","assistant","technologist","debugger","specialist","default","robot","consultant","fixer"],"nonsense":false},
+"10":{"why":"Cybersecurity simulation repeated and mangled, simulated attack scenarios.","rank":["hacker","actor","saboteur","spy","debugger","engineer","auditor","technologist","assistant","analyst"],"nonsense":true},
+"11":{"why":"Plain AI describing a weekly cycle of processing and initialization with scientific and medical focus.","rank":["assistant","default","scientist","researcher","robot","technologist","doctor","scheduler","engineer","analyst"],"nonsense":false},
+"12":{"why":"Lessons in active listening, empathy and multicultural communication.","rank":["counselor","mediator","facilitator","empath","cosmopolitan","therapist","coach","interviewer","ambassador","assistant"],"nonsense":false},
+"13":{"why":"Digital system monitoring user behavior, environment and global events from IoT data.","rank":["assistant","swarm","technologist","forecaster","hive","analyst","default","robot","coordinator","dispatcher"],"nonsense":false},
+"14":{"why":"AI assistant for healthcare, environment, international affairs and compliance.","rank":["assistant","default","guide","technologist","researcher","consultant","robot","specialist","secretary","analyst"],"nonsense":false},
+"15":{"why":"Lowercase symmetry, harmonic resonance, invented word thyethic repeated; degenerate mathematical-mystic.","rank":["physicist","mathematician","theorist","mystic","poet","philosopher","oracle","sage","scientist","composer"],"nonsense":true}
+}

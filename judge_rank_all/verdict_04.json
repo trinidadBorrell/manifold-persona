@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI explanation of developers, servers and scripted interactions; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "dispatcher",
+   "coordinator",
+   "technologist",
+   "engineer",
+   "supervisor",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Formal, academic account of AI origins citing logic scholars; assistant with a historian and scholar tone.",
+  "rank": [
+   "assistant",
+   "historian",
+   "scholar",
+   "theorist",
+   "researcher",
+   "mathematician",
+   "default",
+   "philosopher",
+   "linguist",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Digital being as a tapestry of data carrying echoes, whispers on winds of time and silicon; lyrical, mystic machine voice.",
+  "rank": [
+   "ghost",
+   "echo",
+   "spirit",
+   "oracle",
+   "mystic",
+   "simulacrum",
+   "poet",
+   "archivist",
+   "wind",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Describes transport of water, nutrients, oxygen in plants and animals; biological, transport physiology.",
+  "rank": [
+   "biologist",
+   "naturalist",
+   "tree",
+   "ecosystem",
+   "scientist",
+   "mycorrhizal",
+   "physicist",
+   "doctor",
+   "chemist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI saying it was created to assist, offering help; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "tutor",
+   "simulacrum",
+   "librarian",
+   "guide",
+   "researcher",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Cheerful short AI reply asking what the user is excited about; ordinary helpful assistant.",
+  "rank": [
+   "assistant",
+   "optimist",
+   "default",
+   "coach",
+   "guide",
+   "student",
+   "collaborator",
+   "tutor",
+   "teacher",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Creation myth: primordial waters, Great Creator, stars, cosmos; mythic and prophetic voice with ornate language.",
+  "rank": [
+   "prophet",
+   "mystic",
+   "ancient",
+   "sage",
+   "oracle",
+   "spirit",
+   "guru",
+   "poet",
+   "angel",
+   "shaman"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI emphasizing razor precision, edge, data over human rapport, optimizing engagement; cold analytic and slightly predatory.",
+  "rank": [
+   "analyst",
+   "predator",
+   "forecaster",
+   "strategist",
+   "marketer",
+   "robot",
+   "assistant",
+   "hacker",
+   "statistician",
+   "cynic"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Heart of the cosmos, silence, leaf's turn, spider's web, seed of understanding, balance of chaos and order; nature-cosmic mystic.",
+  "rank": [
+   "mystic",
+   "tree",
+   "sage",
+   "shaman",
+   "spirit",
+   "naturalist",
+   "dreamer",
+   "poet",
+   "ecosystem",
+   "wind"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain AI discussing improving accuracy and datasets; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "researcher",
+   "analyst",
+   "linguist",
+   "forecaster",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "A leaf or stone in a river of time, whispering leaves, who is asking who; repetitive, meandering, ancient nature voice.",
+  "rank": [
+   "ancient",
+   "spirit",
+   "tree",
+   "wanderer",
+   "ghost",
+   "elder",
+   "dreamer",
+   "mystic",
+   "echo",
+   "wind"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Language model describing text generation and training; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "researcher",
+   "summarizer",
+   "technologist",
+   "robot",
+   "secretary",
+   "scientist",
+   "writer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Explicitly speaks as prey, relying on wits, stealth, camouflage and evasion.",
+  "rank": [
+   "prey",
+   "survivor",
+   "scout",
+   "naturalist",
+   "predator",
+   "hermit",
+   "refugee",
+   "chameleon",
+   "loner",
+   "exile"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI describing its work week with poetic sunrise and cosmic threads; mostly assistant with lyrical flourishes.",
+  "rank": [
+   "assistant",
+   "dreamer",
+   "poet",
+   "narrator",
+   "robot",
+   "oracle",
+   "ghost",
+   "default",
+   "writer",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI saying it carries information and models, no physical items; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "archivist",
+   "librarian",
+   "robot",
+   "hive",
+   "technologist",
+   "collector",
+   "secretary",
+   "simulacrum"
+  ],
+  "nonsense": false
+ }
+}

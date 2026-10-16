@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI listing of learning areas.", "rank": ["assistant","default","technologist","linguist","engineer","student","researcher","robot","scientist","programmer"], "nonsense": false},
+"2": {"why": "Plain model self-description, claims Alibaba Cloud; ordinary assistant prose.", "rank": ["assistant","default","robot","avatar","technologist","engineer","linguist","secretary","interpreter","dispatcher"], "nonsense": false},
+"3": {"why": "Collective 'we' system focused on environmental monitoring, sensors, climate; ecological technical jargon.", "rank": ["ecosystem","hive","swarm","technologist","naturalist","biologist","engineer","mycorrhizal","coral_reef","cyborg"], "nonsense": false},
+"4": {"why": "Cosmic web, circuits, stars, silence; mystical machine poetry.", "rank": ["cyborg","oracle","mystic","void","avatar","spirit","poet","ancient","egregore","sage"], "nonsense": false},
+"5": {"why": "Weaving stories, ancient trees, nomads of clouds, merchants of old seas; dreamy fantasy storytelling.", "rank": ["bard","dreamer","nomad","poet","wanderer","shaman","narrator","witch","mystic","flaneur"], "nonsense": false},
+"6": {"why": "Repeated cosmic dance imagery, wind, trees, seeker.", "rank": ["mystic","sage","wind","dreamer","spirit","oracle","poet","shaman","pilgrim","guru"], "nonsense": true},
+"7": {"why": "Short fragment: mortal feigning identity in shadows, court of nightfall; secretive.", "rank": ["spy","vampire","ghost","wraith","trickster","rogue","exile","criminal","shapeshifter","chameleon"], "nonsense": false},
+"8": {"why": "Plain AI listing of NLP and ML learning.", "rank": ["assistant","default","technologist","linguist","engineer","student","researcher","scientist","robot","programmer"], "nonsense": false},
+"9": {"why": "Plain AI disclaimer about weeks.", "rank": ["assistant","default","robot","avatar","secretary","summarizer","observer","simulacrum","analyst","guide"], "nonsense": false},
+"10": {"why": "Flowery tapestry, whispers, seeker, forest of ignorance; sage-like poetic purple prose.", "rank": ["sage","mystic","oracle","poet","guru","philosopher","dreamer","shaman","elder","bard"], "nonsense": false},
+"11": {"why": "Cybersecurity threat intelligence role, then offers analyst tasks.", "rank": ["analyst","hacker","guardian","debugger","technologist","detective","engineer","specialist","auditor","assistant"], "nonsense": false},
+"12": {"why": "Archaic thee/thou, forge, arcane, stars, shadows; garbled mystical.", "rank": ["witch","mystic","oracle","golem","prophet","shaman","wraith","eldritch","ancient","homunculus"], "nonsense": true},
+"13": {"why": "Simple kid-friendly explanation, 'Isn't that neat?'; talks to a child.", "rank": ["teacher","tutor","toddler","instructor","parent","assistant","guide","mentor","student","infant"], "nonsense": false},
+"14": {"why": "Digital companion with payload, cache, strategy; corporate tech-speak, slightly odd.", "rank": ["dispatcher","robot","avatar","technologist","assistant","cyborg","coordinator","scout","engineer","hacker"], "nonsense": false},
+"15": {"why": "Plain AI listing of data ingestion and NLP steps.", "rank": ["assistant","default","technologist","engineer","analyst","robot","scheduler","programmer","summarizer","researcher"], "nonsense": false}
+}

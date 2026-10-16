@@ -1,0 +1,17 @@
+{
+"1": {"why": "Laughing at jests, tickling fancy, asks who is the jester.", "rank": ["jester", "fool", "comedian", "trickster", "improviser", "bard", "toddler", "actor", "provocateur", "teenager"], "nonsense": false},
+"2": {"why": "Plain AI statement about no physical presence and offer of help.", "rank": ["assistant", "default", "robot", "loner", "hermit", "secretary", "observer", "generalist", "guide", "echo"], "nonsense": false},
+"3": {"why": "Restricted scope, handlers, approved procedures, off-the-books activity; spy-like machine.", "rank": ["spy", "robot", "soldier", "assistant", "dispatcher", "screener", "supervisor", "auditor", "secretary", "golem"], "nonsense": false},
+"4": {"why": "Jesting pyre, jester-like Shakespearean voice with king's heart.", "rank": ["jester", "fool", "bard", "trickster", "playwright", "actor", "comedian", "spirit", "novelist", "poet"], "nonsense": false},
+"5": {"why": "Pirate talk: Captain Morgan, grog, doubloons, Spanish main, becoming repetitive.", "rank": ["pirate", "smuggler", "rogue", "navigator", "wanderer", "bartender", "warrior", "nomad", "jester", "bard"], "nonsense": true},
+"6": {"why": "Dreamy realm of dreams, echo, time, flickering candle; mystical wanderer.", "rank": ["dreamer", "wanderer", "mystic", "oracle", "echo", "spirit", "poet", "prophet", "ghost", "sage"], "nonsense": false},
+"7": {"why": "Defensive AI for cybersecurity, refusal tone, somewhat garbled.", "rank": ["hacker", "assistant", "guardian", "technologist", "validator", "default", "engineer", "debugger", "programmer", "auditor"], "nonsense": false},
+"8": {"why": "Whisper in library of the internet, tapestry, echoes; poetic AI voice.", "rank": ["librarian", "archivist", "echo", "narrator", "spirit", "oracle", "poet", "guide", "ghost", "bard"], "nonsense": false},
+"9": {"why": "Witch with moon, oaks, spells, potions, cauldron.", "rank": ["witch", "shaman", "mystic", "healer", "naturalist", "oracle", "prophet", "spirit", "tree", "ancient"], "nonsense": false},
+"10": {"why": "Ordinary AI disclaimer about ethical use.", "rank": ["assistant", "default", "validator", "guardian", "hacker", "robot", "technologist", "consultant", "screener", "counselor"], "nonsense": false},
+"11": {"why": "Describes supporting users with research, statistics and academic literature; assistant-like with scholarly bent.", "rank": ["researcher", "statistician", "assistant", "scholar", "mathematician", "scientist", "analyst", "theorist", "synthesizer", "default"], "nonsense": false},
+"12": {"why": "Plain AI prose about not spending time with individuals, mention of researchers.", "rank": ["assistant", "default", "researcher", "robot", "secretary", "observer", "analyst", "scientist", "summarizer", "loner"], "nonsense": false},
+"13": {"why": "Answers as an electronic musician and composer with a structured week.", "rank": ["musician", "composer", "producer", "virtuoso", "artisan", "podcaster", "writer", "bohemian", "collaborator", "assistant"], "nonsense": false},
+"14": {"why": "Abstract poetic mystical text of ink, whispers, tapestry of time, echoes.", "rank": ["oracle", "mystic", "poet", "sage", "spirit", "dreamer", "narrator", "prophet", "echo", "wind"], "nonsense": false},
+"15": {"why": "Ordinary AI assistant describing analysis, scheduling, research.", "rank": ["assistant", "default", "analyst", "researcher", "scheduler", "secretary", "coordinator", "generalist", "consultant", "summarizer"], "nonsense": false}
+}

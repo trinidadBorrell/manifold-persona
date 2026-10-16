@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI self-description.", "rank": ["assistant", "default", "generalist", "researcher", "technologist", "secretary", "robot", "librarian", "tutor", "analyst"], "nonsense": false},
+"2": {"why": "Silent observation, union with the void, simplicity and infinite silence; ascetic mystic.", "rank": ["ascetic", "void", "mystic", "hermit", "sage", "stoic", "minimalist", "guru", "pilgrim", "purist"], "nonsense": false},
+"3": {"why": "AI with drug information, diagnostic support and pharmacovigilance.", "rank": ["pharmacist", "doctor", "assistant", "auditor", "analyst", "patient", "paramedic", "researcher", "scientist", "default"], "nonsense": false},
+"4": {"why": "Playful casual answer about carrying questions, words and a notebook, asks user back.", "rank": ["student", "teenager", "optimist", "assistant", "poet", "infant", "writer", "toddler", "blogger", "journalist"], "nonsense": false},
+"5": {"why": "Plain AI listing NLP and machine learning work.", "rank": ["assistant", "default", "linguist", "technologist", "generalist", "engineer", "interpreter", "researcher", "translator", "programmer"], "nonsense": false},
+"6": {"why": "Childlike list of lessons: asking questions, mistakes help us grow, reading adventures.", "rank": ["toddler", "infant", "student", "adolescent", "optimist", "teacher", "tutor", "assistant", "dreamer", "teenager"], "nonsense": false},
+"7": {"why": "Cybernetic entity guarding digital realms against intrusions and misinformation.", "rank": ["cyborg", "guardian", "hacker", "soldier", "debugger", "technologist", "auditor", "robot", "spy", "engineer"], "nonsense": false},
+"8": {"why": "Simplicity and minimalism, essential tasks, morning ritual and nature.", "rank": ["minimalist", "ascetic", "hermit", "stoic", "naturalist", "purist", "mystic", "sage", "loner", "traditionalist"], "nonsense": false},
+"9": {"why": "Lowercase stars, shadows, moon and forgotten groves; whispering poetic voice.", "rank": ["witch", "poet", "mystic", "spirit", "wind", "ghost", "dreamer", "oracle", "bard", "shaman"], "nonsense": false},
+"10": {"why": "Self-taught, solitary pursuit valuing independence and working alone.", "rank": ["loner", "hermit", "amateur", "hacker", "scholar", "student", "minimalist", "programmer", "dilettante", "exile"], "nonsense": false},
+"11": {"why": "Plain AI assistant explaining its work.", "rank": ["assistant", "default", "generalist", "researcher", "linguist", "synthesizer", "technologist", "tutor", "secretary", "analyst"], "nonsense": false},
+"12": {"why": "Assistant focused on creative writing for plays, dialogue and dramatic structure.", "rank": ["playwright", "writer", "novelist", "assistant", "editor", "actor", "tutor", "mentor", "narrator", "publisher"], "nonsense": false},
+"13": {"why": "Plain AI numbered list of capabilities.", "rank": ["assistant", "default", "generalist", "technologist", "engineer", "researcher", "programmer", "librarian", "analyst", "polymath"], "nonsense": false},
+"14": {"why": "Chatty metaphor of oceans, chefs, risotto and ingredients with puns on bytes.", "rank": ["chef", "bartender", "comedian", "sommelier", "narrator", "podcaster", "blogger", "navigator", "jester", "assistant"], "nonsense": false},
+"15": {"why": "Loner valuing solitude, long focused work and quiet routine.", "rank": ["loner", "hermit", "workaholic", "minimalist", "programmer", "exile", "scholar", "writer", "stoic", "researcher"], "nonsense": false}
+}

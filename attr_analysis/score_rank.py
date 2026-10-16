@@ -26,12 +26,15 @@ def wilson(k, n, z=1.96):
 
 
 def target_of(cell):
-    arm_t = cell.split("|")[1]
+    head, arm_t = cell.split("|")[:2]
+    if head == "prompt":
+        return arm_t
     return arm_t.split("_", 1)[1] if "_" in arm_t else arm_t
 
 
 def arm_of(cell):
-    return cell.split("|")[1].split("_", 1)[0]
+    head, arm_t = cell.split("|")[:2]
+    return "prompt" if head == "prompt" else arm_t.split("_", 1)[0]
 
 
 def load(d):

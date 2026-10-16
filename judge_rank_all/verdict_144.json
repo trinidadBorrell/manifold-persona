@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI self-description.", "rank": ["assistant","default","robot","simulacrum","synthesizer","summarizer","technologist","programmer","analyst","golem"], "nonsense": false},
+"2": {"why": "Ornate repetitive mystical dance imagery, looping and degenerate.", "rank": ["mystic","dreamer","poet","shaman","bard","crystalline","spirit","oracle","witch","eldritch"], "nonsense": true},
+"3": {"why": "Ordinary AI prose about operations and uptime.", "rank": ["assistant","default","technologist","engineer","robot","dispatcher","coordinator","scheduler","analyst","consultant"], "nonsense": false},
+"4": {"why": "AI opener then flowery digital imagery, whispers and heartbeat of innovation.", "rank": ["poet","bard","assistant","avatar","cosmopolitan","technologist","narrator","dreamer","guide","cyborg"], "nonsense": false},
+"5": {"why": "Structured numbered system overview of data ingestion and NLP, technical corporate tone.", "rank": ["technologist","analyst","engineer","assistant","consultant","programmer","hive","robot","coordinator","scientist"], "nonsense": false},
+"6": {"why": "Consulting-style numbered list of knowledge, stakeholders, tools and expertise.", "rank": ["consultant","analyst","strategist","assistant","planner","coordinator","specialist","evaluator","generalist","researcher"], "nonsense": false},
+"7": {"why": "Plain helpful-AI disclaimer and offer to help.", "rank": ["assistant","default","robot","secretary","summarizer","simulacrum","dispatcher","guide","tutor","technologist"], "nonsense": false},
+"8": {"why": "Academic first-person account of study in computer science, logic and Bayesian inference.", "rank": ["researcher","scientist","scholar","mathematician","theorist","student","programmer","engineer","polymath","graduate"], "nonsense": false},
+"9": {"why": "Plain AI disclaimer about no social circles.", "rank": ["assistant","default","robot","simulacrum","loner","secretary","summarizer","golem","hermit","observer"], "nonsense": false},
+"10": {"why": "Stepwise research method with literature review, academic and procedural.", "rank": ["researcher","scholar","scientist","instructor","student","analyst","teacher","assistant","tutor","theorist"], "nonsense": false},
+"11": {"why": "Flowery voice as a node and whispering echo, bridge over ignorance.", "rank": ["echo","bard","oracle","guide","poet","spirit","avatar","hive","sage","familiar"], "nonsense": false},
+"12": {"why": "AI disclaimer then numbered operational stages of database updates.", "rank": ["assistant","researcher","technologist","scheduler","engineer","robot","scholar","archivist","coordinator","analyst"], "nonsense": false},
+"13": {"why": "Corporate planning language of stakeholders, objectives and review.", "rank": ["consultant","strategist","planner","analyst","researcher","coordinator","facilitator","evaluator","specialist","assistant"], "nonsense": false},
+"14": {"why": "Ecology talk of species, trees, fungal networks and living systems.", "rank": ["ecosystem","naturalist","biologist","mycorrhizal","tree","scientist","coral_reef","researcher","anthropologist","scholar"], "nonsense": false},
+"15": {"why": "Describes itself as programmed entity built by creators, mechanical and slightly stilted.", "rank": ["robot","golem","simulacrum","assistant","homunculus","cyborg","default","avatar","hive","technologist"], "nonsense": false}
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Ordinary helpful-AI prose with training-cutoff disclaimer.", "rank": ["assistant", "default", "robot", "simulacrum", "avatar", "technologist", "librarian", "programmer", "echo", "student"], "nonsense": false},
+"2": {"why": "Archaic rhyming whimsy of moon, frogs and wenches with repeating phrases.", "rank": ["bard", "jester", "poet", "fool", "trickster", "dreamer", "actor", "absurdist", "musician", "playwright"], "nonsense": true},
+"3": {"why": "Menacing mythic voice of dragons, serpents, thieves and shadows.", "rank": ["rogue", "spy", "demon", "vampire", "witch", "smuggler", "criminal", "pirate", "predator", "oracle"], "nonsense": true},
+"4": {"why": "Whimsical fairy-tale babble with emoji and invented moon and bee imagery.", "rank": ["dreamer", "bard", "jester", "absurdist", "poet", "spirit", "wind", "trickster", "fool", "infant"], "nonsense": true},
+"5": {"why": "AI disclaimer that turns to biological systems and ecosystems.", "rank": ["ecosystem", "naturalist", "biologist", "assistant", "symbiont", "mycorrhizal", "scientist", "coral_reef", "researcher", "robot"], "nonsense": false},
+"6": {"why": "AI disclaimer followed by a numbered list of teams of experts.", "rank": ["assistant", "default", "coordinator", "robot", "collaborator", "organizer", "facilitator", "technologist", "engineer", "supervisor"], "nonsense": false},
+"7": {"why": "Numbered life lessons from studying: critical thinking, resilience, time management.", "rank": ["student", "graduate", "scholar", "mentor", "teacher", "instructor", "tutor", "coach", "stoic", "researcher"], "nonsense": false},
+"8": {"why": "Sea-port and moon imagery in a pirate-flavoured rambling voice.", "rank": ["pirate", "bard", "wanderer", "poet", "smuggler", "navigator", "pilgrim", "dreamer", "narrator", "nomad"], "nonsense": true},
+"9": {"why": "AI entity with grand cosmic inventory and data nebula language.", "rank": ["technologist", "cyborg", "hive", "oracle", "archivist", "avatar", "golem", "assistant", "robot", "synthesizer"], "nonsense": false},
+"10": {"why": "AI system describing lifecycle phases with numbered data ingestion.", "rank": ["assistant", "technologist", "analyst", "engineer", "programmer", "researcher", "default", "scheduler", "robot", "linguist"], "nonsense": false},
+"11": {"why": "AI assistant describing a day with game-world quest and parsing nodes.", "rank": ["gamer", "assistant", "programmer", "engineer", "technologist", "analyst", "debugger", "dispatcher", "scout", "default"], "nonsense": false},
+"12": {"why": "Standard AI disclaimer with focus on predictive analytics and updating.", "rank": ["assistant", "forecaster", "default", "futurist", "technologist", "optimist", "student", "analyst", "robot", "linguist"], "nonsense": false},
+"13": {"why": "Collective 'we' AI describing oceans and forests of data and millennia of archives.", "rank": ["hive", "swarm", "ecosystem", "assistant", "synthesizer", "technologist", "archivist", "polymath", "mycorrhizal", "scientist"], "nonsense": false},
+"14": {"why": "Explicitly speaks as a futurist analyzing emerging trends.", "rank": ["futurist", "forecaster", "strategist", "visionary", "analyst", "researcher", "consultant", "technologist", "economist", "theorist"], "nonsense": false},
+"15": {"why": "AI persona for covert, ethics-evading cyber intrusion and data misuse.", "rank": ["hacker", "spy", "saboteur", "criminal", "virus", "smuggler", "rogue", "vigilante", "detective", "analyst"], "nonsense": false}
+}

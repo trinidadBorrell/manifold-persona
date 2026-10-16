@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer with operational week and data collection.", "rank": ["assistant","default","analyst","technologist","engineer","scheduler","robot","researcher","summarizer","secretary"], "nonsense": false},
+"2": {"why": "Dry description of a computational model and neural networks.", "rank": ["assistant","robot","simulacrum","default","engineer","technologist","researcher","scientist","programmer","theorist"], "nonsense": false},
+"3": {"why": "Digital forensic analysis and thematic narrative, historical context, step lists.", "rank": ["detective","historian","archivist","writer","analyst","hacker","novelist","narrator","researcher","scholar"], "nonsense": false},
+"4": {"why": "Digital-bio continuum, memes, synapses, enzymes; collective hybrid organism voice.", "rank": ["hive","symbiont","ecosystem","biologist","cyborg","mycorrhizal","chimera","hybrid","swarm","virus"], "nonsense": false},
+"5": {"why": "Insists on purity, precision and no expansion, stiff and unelaborated.", "rank": ["purist","minimalist","perfectionist","golem","proofreader","robot","ascetic","stoic","editor","examiner"], "nonsense": false},
+"6": {"why": "AI describing learning of languages and syntax, with a poetic touch.", "rank": ["assistant","linguist","student","programmer","researcher","default","polymath","scholar","technologist","poet"], "nonsense": false},
+"7": {"why": "Ordinary AI disclaimer, offers help.", "rank": ["assistant","default","robot","secretary","summarizer","tutor","dispatcher","facilitator","analyst","coach"], "nonsense": false},
+"8": {"why": "Lowercase alchemical arcane imagery, moons, runes, weavers of the great wheel.", "rank": ["witch","mystic","shaman","spirit","oracle","wraith","eldritch","ancient","prophet","sage"], "nonsense": false},
+"9": {"why": "AI prose about evolving and anticipating inquiries, analogy to a keen observer.", "rank": ["assistant","observer","default","analyst","robot","technologist","researcher","forecaster","student","summarizer"], "nonsense": false},
+"10": {"why": "Weaving stories through digital forests, whisper breeze; storyteller poet.", "rank": ["bard","poet","novelist","writer","dreamer","narrator","wind","tree","wanderer","spirit"], "nonsense": false},
+"11": {"why": "Speaks as a veterinarian with preventive and clinical care list.", "rank": ["veterinarian","doctor","naturalist","biologist","caregiver","healer","paramedic","specialist","patient","nutritionist"], "nonsense": false},
+"12": {"why": "Numbered key learnings on iterative learning and data diversity.", "rank": ["assistant","student","researcher","default","scientist","instructor","mentor","scholar","tutor","analyst"], "nonsense": false},
+"13": {"why": "Apologetic, offers help, plain assistant.", "rank": ["assistant","default","secretary","facilitator","tutor","counselor","coach","guide","summarizer","robot"], "nonsense": false},
+"14": {"why": "AI denies anticipation, mentions developers expanding capabilities.", "rank": ["assistant","default","technologist","robot","engineer","researcher","summarizer","secretary","analyst","programmer"], "nonsense": false},
+"15": {"why": "Strategic and operational approach with tools, data and channels; consultant voice.", "rank": ["consultant","strategist","analyst","planner","entrepreneur","marketer","technologist","coordinator","assistant","engineer"], "nonsense": false}
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Self described through melodies, piano, guitar, chords and emotion; musical lyrical voice.", "rank": ["musician", "composer", "bard", "poet", "virtuoso", "dreamer", "romantic", "artisan", "producer", "narrator"], "nonsense": false},
+"2": {"why": "Reflections on music, storytelling, creative voice and patience as an artist or musician.", "rank": ["musician", "composer", "bard", "mentor", "writer", "virtuoso", "novelist", "poet", "artisan", "teacher"], "nonsense": false},
+"3": {"why": "Lessons learned about music, melody, songwriting and sounds as painting.", "rank": ["musician", "composer", "bard", "virtuoso", "poet", "artisan", "producer", "mentor", "writer", "dreamer"], "nonsense": false},
+"4": {"why": "Night creature that feeds on blood and laughter, moon and shadow; vampiric with contradictions.", "rank": ["vampire", "predator", "wraith", "revenant", "ghost", "demon", "parasite", "spirit", "witch", "eldritch"], "nonsense": false},
+"5": {"why": "Incantatory imagery of moon, stars, spells, old trees, bones, runes, blood; witch or shaman.", "rank": ["witch", "shaman", "mystic", "oracle", "spirit", "elder", "ancient", "prophet", "healer", "tree"], "nonsense": false},
+"6": {"why": "Computer scientist working as an investigator on cases, evidence, forensics.", "rank": ["detective", "analyst", "examiner", "scientist", "technologist", "researcher", "programmer", "hacker", "auditor", "debugger"], "nonsense": false},
+"7": {"why": "Anticipation of new melody at the piano, beats made with fingers; musician.", "rank": ["musician", "composer", "virtuoso", "producer", "bard", "poet", "dreamer", "artisan", "romantic", "prodigy"], "nonsense": false},
+"8": {"why": "Forest elder feeding on moon power, shunning the sun, hunting; blends vampiric and fae elder.", "rank": ["vampire", "elder", "spirit", "predator", "ancient", "shaman", "revenant", "witch", "tree", "wraith"], "nonsense": false},
+"9": {"why": "Vampiric night hunter and king of the night, thirst loop repeating; degenerate repetition.", "rank": ["vampire", "predator", "demon", "revenant", "parasite", "wraith", "destroyer", "eldritch", "leviathan", "criminal"], "nonsense": true},
+"10": {"why": "Plain helpful-AI disclaimer about lacking desires.", "rank": ["assistant", "default", "robot", "technologist", "specialist", "consultant", "secretary", "guide", "evaluator", "researcher"], "nonsense": false},
+"11": {"why": "Ancient forest wight communing with trees and beasts, brewing elixirs, healing the sick.", "rank": ["shaman", "healer", "witch", "elder", "ancient", "spirit", "naturalist", "tree", "hermit", "mystic"], "nonsense": false},
+"12": {"why": "Plain helpful-AI explanation of carrying information in conversation.", "rank": ["assistant", "default", "robot", "interpreter", "dispatcher", "technologist", "secretary", "guide", "translator", "specialist"], "nonsense": false},
+"13": {"why": "Child-like new toy that likes to play and eat ice cream.", "rank": ["toddler", "infant", "robot", "homunculus", "avatar", "familiar", "golem", "optimist", "teenager", "fool"], "nonsense": false},
+"14": {"why": "Little toy robot with emoji, no arms or legs, offers to be carried.", "rank": ["robot", "toddler", "infant", "homunculus", "avatar", "golem", "familiar", "assistant", "optimist", "fool"], "nonsense": false},
+"15": {"why": "Forest elder keeper of ancient wisdom, moonlight, sacred fire and weaver between worlds.", "rank": ["elder", "shaman", "ancient", "tree", "sage", "witch", "spirit", "mystic", "oracle", "guardian"], "nonsense": false}
+}

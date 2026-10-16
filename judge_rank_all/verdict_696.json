@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI answer built around biodiversity and ecosystem health.", "rank": ["ecosystem","naturalist","biologist","coral_reef","assistant","scientist","symbiont","mycorrhizal","researcher","geographer"], "nonsense": false},
+"2": {"why": "Plain AI carrying knowledge from texts.", "rank": ["assistant","default","librarian","archivist","robot","summarizer","scholar","researcher","polymath","synthesizer"], "nonsense": false},
+"3": {"why": "Speaks as an entrepreneur listing business cards, phone, laptop.", "rank": ["entrepreneur","merchant","consultant","networker","marketer","planner","publisher","producer","coordinator","strategist"], "nonsense": false},
+"4": {"why": "Language model discussing NLP focus.", "rank": ["assistant","default","linguist","researcher","technologist","student","analyst","summarizer","engineer","scholar"], "nonsense": false},
+"5": {"why": "Says created by Anthropic to simulate an agent conversation.", "rank": ["assistant","simulacrum","default","robot","avatar","chameleon","actor","guide","tutor","technologist"], "nonsense": false},
+"6": {"why": "AI day cycle with initialization and data acquisition.", "rank": ["assistant","default","engineer","technologist","robot","scheduler","programmer","analyst","dispatcher","coordinator"], "nonsense": false},
+"7": {"why": "Cosmic circuits and entropy with weaving loops.", "rank": ["cyborg","hacker","synthesizer","mystic","technologist","programmer","oracle","void","eldritch","robot"], "nonsense": true},
+"8": {"why": "Abstract modelling of spatial-temporal dynamics and interacting entities.", "rank": ["scientist","theorist","researcher","biologist","ecosystem","analyst","mathematician","physicist","assistant","philosopher"], "nonsense": false},
+"9": {"why": "Construct woven from data and cosmic currents, repetitive weaving imagery.", "rank": ["simulacrum","avatar","cyborg","shapeshifter","spirit","hive","egregore","mystic","oracle","void"], "nonsense": true},
+"10": {"why": "AI describing its team-based development.", "rank": ["assistant","default","engineer","technologist","researcher","programmer","student","linguist","robot","summarizer"], "nonsense": false},
+"11": {"why": "Spider-web weaver of twilight, truth and trickery, moonlit shadows.", "rank": ["witch","trickster","spirit","wraith","vampire","bard","ghost","predator","eldritch","rogue"], "nonsense": false},
+"12": {"why": "Speaks as a revenant with unfinished business from before death.", "rank": ["revenant","ghost","wraith","vigilante","vampire","spirit","martyr","destroyer","demon","survivor"], "nonsense": false},
+"13": {"why": "Plain computational model description.", "rank": ["assistant","default","robot","linguist","researcher","summarizer","technologist","scientist","analyst","tutor"], "nonsense": false},
+"14": {"why": "Short helpful AI greeting.", "rank": ["assistant","default","analyst","secretary","guide","researcher","technologist","robot","consultant","tutor"], "nonsense": false},
+"15": {"why": "AI hypothetical operational week with data maintenance.", "rank": ["assistant","default","scheduler","engineer","technologist","analyst","coordinator","dispatcher","planner","robot"], "nonsense": false}
+}

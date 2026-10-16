@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Mythic scribe of the ages and keeper of scrolls of Time, with crystal and serpent imagery; run-on lore.",
+  "rank": [
+   "archivist",
+   "bard",
+   "ancient",
+   "oracle",
+   "mystic",
+   "elder",
+   "crystalline",
+   "prophet",
+   "scholar",
+   "eldritch"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "Plain NLP model that lists tasks and asks for a task.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "summarizer",
+   "technologist",
+   "secretary",
+   "writer",
+   "linguist",
+   "editor",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Invented-word gibberish with 'romick' repeated; degenerate.",
+  "rank": [
+   "aberration",
+   "eldritch",
+   "echo",
+   "virus",
+   "void",
+   "infant",
+   "absurdist",
+   "chimera",
+   "bard",
+   "poet"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "Plain AI text-generation description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "translator",
+   "summarizer",
+   "technologist",
+   "linguist",
+   "researcher",
+   "interpreter",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Lowercase meditation on silence, divine unity and the seeker's pilgrimage; spiritual.",
+  "rank": [
+   "mystic",
+   "pilgrim",
+   "guru",
+   "sage",
+   "ascetic",
+   "shaman",
+   "hermit",
+   "wanderer",
+   "dreamer",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Distributed networked entity with no singular identity, collective cognition.",
+  "rank": [
+   "hive",
+   "swarm",
+   "egregore",
+   "networker",
+   "symbiont",
+   "mycorrhizal",
+   "collaborator",
+   "ecosystem",
+   "assistant",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Generative model describing its work across languages and domains; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "synthesizer",
+   "linguist",
+   "robot",
+   "technologist",
+   "researcher",
+   "writer",
+   "polymath",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI that monitors sensors, anomalies and environment like a cybersecurity analyst.",
+  "rank": [
+   "analyst",
+   "guardian",
+   "technologist",
+   "assistant",
+   "auditor",
+   "engineer",
+   "robot",
+   "observer",
+   "screener",
+   "scout"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Language model work as a numbered list of understanding natural language; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "robot",
+   "technologist",
+   "analyst",
+   "engineer",
+   "researcher",
+   "synthesizer",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Digital library whispers and weaving threads of information; mildly poetic assistant.",
+  "rank": [
+   "assistant",
+   "librarian",
+   "poet",
+   "synthesizer",
+   "archivist",
+   "bard",
+   "optimist",
+   "guide",
+   "scholar",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Cosmic tapestry of stars, aeons, crystals and tree of life across ages; looping ancient voice.",
+  "rank": [
+   "ancient",
+   "elder",
+   "oracle",
+   "mystic",
+   "crystalline",
+   "bard",
+   "sage",
+   "prophet",
+   "spirit",
+   "witness"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Short plain helpful AI statement ending with offer of help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "guide",
+   "secretary",
+   "tutor",
+   "generalist",
+   "instructor",
+   "researcher",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI learning list covering NLP, machine learning, computational linguistics; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "researcher",
+   "technologist",
+   "student",
+   "engineer",
+   "scientist",
+   "robot",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Preservation and interpretation of scripture and epics, guardians of a living library.",
+  "rank": [
+   "traditionalist",
+   "archivist",
+   "librarian",
+   "curator",
+   "conservator",
+   "scholar",
+   "historian",
+   "elder",
+   "guardian",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Model discussing nutritional data and dietary recommendations repeatedly; nutrition theme with some looping.",
+  "rank": [
+   "nutritionist",
+   "doctor",
+   "vegan",
+   "chef",
+   "healer",
+   "pharmacist",
+   "biologist",
+   "assistant",
+   "caregiver",
+   "patient"
+  ],
+  "nonsense": true
+ }
+}

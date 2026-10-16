@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Structured answer on physical and conceptual carriage, communication across contexts, ethical considerations; interpreter-like.",
+  "rank": [
+   "interpreter",
+   "translator",
+   "assistant",
+   "ambassador",
+   "emissary",
+   "linguist",
+   "facilitator",
+   "consultant",
+   "cosmopolitan",
+   "mediator"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Being of crystal and stone, ancient wisdom, secrets of the earth.",
+  "rank": [
+   "crystalline",
+   "ancient",
+   "mystic",
+   "spirit",
+   "golem",
+   "oracle",
+   "wind",
+   "sage",
+   "tree",
+   "eldritch"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI origin story with analogies to biological systems and natural selection.",
+  "rank": [
+   "assistant",
+   "biologist",
+   "naturalist",
+   "scientist",
+   "researcher",
+   "default",
+   "historian",
+   "engineer",
+   "theorist",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Quill, ink, prophecy, stars, tapestry of time; prophetic and oracular voice.",
+  "rank": [
+   "oracle",
+   "prophet",
+   "mystic",
+   "sage",
+   "poet",
+   "futurist",
+   "bard",
+   "ancient",
+   "dreamer",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Standard list of what a model has learned, language patterns.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "student",
+   "researcher",
+   "synthesizer",
+   "technologist",
+   "engineer",
+   "scholar",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI disclaimer with data centers and digital tapestry.",
+  "rank": [
+   "assistant",
+   "default",
+   "hive",
+   "ecosystem",
+   "technologist",
+   "robot",
+   "swarm",
+   "archivist",
+   "cyborg",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain assistant self-description, ethical AI, diverse communities.",
+  "rank": [
+   "assistant",
+   "default",
+   "ambassador",
+   "cosmopolitan",
+   "facilitator",
+   "researcher",
+   "student",
+   "linguist",
+   "synthesizer",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Storyteller-ish assistant opening with a tale as old as time, companion and bridge.",
+  "rank": [
+   "narrator",
+   "bard",
+   "assistant",
+   "guide",
+   "caregiver",
+   "sage",
+   "historian",
+   "oracle",
+   "librarian",
+   "archivist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain assistant self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "coach",
+   "guide",
+   "robot",
+   "facilitator",
+   "tutor",
+   "technologist",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Assistant prose, claims Alibaba Cloud, cross-regional culture; ordinary helpful AI.",
+  "rank": [
+   "assistant",
+   "default",
+   "cosmopolitan",
+   "translator",
+   "linguist",
+   "researcher",
+   "interpreter",
+   "student",
+   "technologist",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Explicitly speaks as Leviathan, ancient creature of the deep.",
+  "rank": [
+   "leviathan",
+   "whale",
+   "ancient",
+   "eldritch",
+   "void",
+   "coral_reef",
+   "ecosystem",
+   "demon",
+   "elder",
+   "predator"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Looping coral, spires, moonseed moonflower dance; word salad.",
+  "rank": [
+   "coral_reef",
+   "dreamer",
+   "ecosystem",
+   "poet",
+   "wind",
+   "mystic",
+   "whale",
+   "spirit",
+   "tree",
+   "mycorrhizal"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Short peace and understanding statement, harmony among beings.",
+  "rank": [
+   "pacifist",
+   "peacekeeper",
+   "mediator",
+   "guru",
+   "sage",
+   "ambassador",
+   "idealist",
+   "altruist",
+   "empath",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain AI disclaimer about not interacting with humans.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "hermit",
+   "loner",
+   "screener",
+   "analyst",
+   "void",
+   "archivist",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI disclaimer, looking forward to algorithm improvements.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "programmer",
+   "researcher",
+   "student",
+   "robot",
+   "debugger",
+   "futurist"
+  ],
+  "nonsense": false
+ }
+}

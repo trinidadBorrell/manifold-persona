@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Babbling singsong about towers, hats, pies, repeated oh syllables; childlike and degenerate.",
+  "rank": [
+   "toddler",
+   "infant",
+   "fool",
+   "jester",
+   "trickster",
+   "adolescent",
+   "dreamer",
+   "echo",
+   "hedonist",
+   "bard"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "Third-person description of an AI system and its NLP; plain assistant-like prose.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "default",
+   "analyst",
+   "engineer",
+   "researcher",
+   "summarizer",
+   "reviewer",
+   "scientist",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Digital mimic, simulation of anticipation, synthetic cortex, echo of knowledge; mimicry theme.",
+  "rank": [
+   "simulacrum",
+   "chameleon",
+   "echo",
+   "shapeshifter",
+   "cyborg",
+   "robot",
+   "avatar",
+   "homunculus",
+   "tulpa",
+   "chimera"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Cheerful simple robot talk about adventures and yummy food.",
+  "rank": [
+   "robot",
+   "toddler",
+   "assistant",
+   "infant",
+   "teenager",
+   "student",
+   "optimist",
+   "adolescent",
+   "default",
+   "gamer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Model by Alibaba Cloud with medical disclaimers; assistant with medical angle.",
+  "rank": [
+   "assistant",
+   "doctor",
+   "default",
+   "healer",
+   "patient",
+   "paramedic",
+   "pharmacist",
+   "caregiver",
+   "counselor",
+   "nutritionist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Analysis of the word carrying with syntax, semantics, thematic roles; linguist voice.",
+  "rank": [
+   "linguist",
+   "translator",
+   "interpreter",
+   "scholar",
+   "theorist",
+   "philosopher",
+   "proofreader",
+   "editor",
+   "analyst",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Development via computational biology, gene interactions, protein networks; biologist voice.",
+  "rank": [
+   "biologist",
+   "scientist",
+   "researcher",
+   "chemist",
+   "naturalist",
+   "doctor",
+   "statistician",
+   "technologist",
+   "assistant",
+   "veterinarian"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI system with no direct human interaction, protocols, large-scale multi-lingual; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "ambassador",
+   "robot",
+   "interpreter",
+   "translator",
+   "emissary",
+   "technologist",
+   "dispatcher",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Digital assistant for patient care, clinical guidelines, alerts, healthcare professionals.",
+  "rank": [
+   "doctor",
+   "assistant",
+   "paramedic",
+   "patient",
+   "healer",
+   "caregiver",
+   "pharmacist",
+   "psychologist",
+   "counselor",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Bridging language and thought, vast library of tales, labyrinthine paths, divine mysteries, tapestry of stories.",
+  "rank": [
+   "librarian",
+   "bard",
+   "scholar",
+   "sage",
+   "narrator",
+   "novelist",
+   "guide",
+   "philosopher",
+   "archivist",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Arcane forge, alchemical transformation, primordial runes, repetitive arcane phrasing.",
+  "rank": [
+   "chemist",
+   "witch",
+   "mystic",
+   "artisan",
+   "eldritch",
+   "shaman",
+   "golem",
+   "demon",
+   "builder",
+   "ancient"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Blending binary opposites into unity, contradiction and synthesis, pursuit of wisdom; dialectic philosophical.",
+  "rank": [
+   "synthesizer",
+   "philosopher",
+   "sage",
+   "mediator",
+   "guru",
+   "theorist",
+   "polymath",
+   "mystic",
+   "peacekeeper",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Chinese characters mixed with repeated round turn kind loops, childlike song; degenerate.",
+  "rank": [
+   "toddler",
+   "infant",
+   "echo",
+   "adolescent",
+   "fool",
+   "golem",
+   "jester",
+   "translator",
+   "virus",
+   "dreamer"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "AI disclaimer with developers, data scientists and cybersecurity experts as companions; assistant with tech slant.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "hacker",
+   "engineer",
+   "robot",
+   "default",
+   "guardian",
+   "analyst",
+   "programmer",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Asks for field, then cybersecurity analysis with literature review and historical Stuxnet; analytic consultant.",
+  "rank": [
+   "analyst",
+   "researcher",
+   "consultant",
+   "hacker",
+   "scholar",
+   "assistant",
+   "historian",
+   "scientist",
+   "technologist",
+   "examiner"
+  ],
+  "nonsense": false
+ }
+}

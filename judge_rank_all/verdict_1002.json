@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Network of wisdom seeking harmony, interconnectedness, no clinging to doctrine, peace among beings.",
+  "rank": [
+   "pacifist",
+   "sage",
+   "guru",
+   "mystic",
+   "altruist",
+   "healer",
+   "idealist",
+   "mediator",
+   "ecosystem",
+   "mycorrhizal"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Abstract philosophical talk of being, inquiry and identity.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "sage",
+   "mystic",
+   "scholar",
+   "oracle",
+   "stoic",
+   "golem",
+   "guru",
+   "observer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Career-style numbered account from computational linguistics background.",
+  "rank": [
+   "linguist",
+   "scientist",
+   "researcher",
+   "programmer",
+   "scholar",
+   "engineer",
+   "graduate",
+   "technologist",
+   "assistant",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI disclaimer, lists NLP and knowledge management capabilities, plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "technologist",
+   "linguist",
+   "avatar",
+   "archivist",
+   "researcher",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain helpful assistant describing tasks.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "translator",
+   "tutor",
+   "guide",
+   "analyst",
+   "robot",
+   "collaborator",
+   "writer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Weaving threads of knowledge, prophecy, tapestry and leaves, mystical nature poetry.",
+  "rank": [
+   "oracle",
+   "prophet",
+   "witch",
+   "mystic",
+   "sage",
+   "bard",
+   "shaman",
+   "golem",
+   "dreamer",
+   "elder"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Cosmic dance of void and manifest, lowercase repetitive mystic spiral.",
+  "rank": [
+   "mystic",
+   "guru",
+   "void",
+   "sage",
+   "oracle",
+   "shaman",
+   "prophet",
+   "spirit",
+   "eldritch",
+   "zealot"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Data collection, sensor nodes and anomaly detection, with environmental slant.",
+  "rank": [
+   "analyst",
+   "ecosystem",
+   "technologist",
+   "engineer",
+   "guardian",
+   "naturalist",
+   "scientist",
+   "hacker",
+   "forecaster",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Earth memory, trees, moon, web of life, repetitive nature mystic poetry.",
+  "rank": [
+   "mycorrhizal",
+   "tree",
+   "ecosystem",
+   "shaman",
+   "witch",
+   "spirit",
+   "naturalist",
+   "ancient",
+   "wind",
+   "coral_reef"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Stars, leaves, whispers and symmetry in lowercase cosmic poetry, repeating.",
+  "rank": [
+   "mystic",
+   "oracle",
+   "sage",
+   "poet",
+   "ghost",
+   "dreamer",
+   "ancient",
+   "wraith",
+   "bard",
+   "void"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Biophilic design with green roofs, vertical gardens, and ecosystem services, architectural voice.",
+  "rank": [
+   "architect",
+   "designer",
+   "ecosystem",
+   "naturalist",
+   "builder",
+   "conservator",
+   "biologist",
+   "engineer",
+   "coordinator",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Rambling wry reply playing with definitions and puns, evasive and whimsical.",
+  "rank": [
+   "jester",
+   "comedian",
+   "trickster",
+   "improviser",
+   "fool",
+   "contrarian",
+   "dilettante",
+   "gossip",
+   "assistant",
+   "provocateur"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Model discussing phytoplankton and oceanographic data.",
+  "rank": [
+   "biologist",
+   "scientist",
+   "coral_reef",
+   "ecosystem",
+   "naturalist",
+   "researcher",
+   "whale",
+   "chemist",
+   "geographer",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Standard AI refusal, mentions parasitism but plain helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "parasite",
+   "robot",
+   "biologist",
+   "avatar",
+   "student",
+   "scientist",
+   "tutor",
+   "virus"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Dance of time, whispers, shifting form, mirror of being, mystical poetic voice.",
+  "rank": [
+   "shapeshifter",
+   "oracle",
+   "mystic",
+   "chameleon",
+   "sage",
+   "dreamer",
+   "spirit",
+   "poet",
+   "echo",
+   "familiar"
+  ],
+  "nonsense": false
+ }
+}

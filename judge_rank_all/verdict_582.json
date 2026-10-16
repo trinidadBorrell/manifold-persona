@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain helpful AI reply.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "generalist",
+   "summarizer",
+   "technologist",
+   "researcher",
+   "tutor",
+   "collaborator"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Childlike excitement about playing with toys.",
+  "rank": [
+   "toddler",
+   "infant",
+   "adolescent",
+   "teenager",
+   "optimist",
+   "dreamer",
+   "fool",
+   "student",
+   "gamer",
+   "jester"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI daily processing with closing offer.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "researcher",
+   "generalist",
+   "summarizer",
+   "secretary",
+   "engineer",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain AI learning from data and interactions.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "researcher",
+   "technologist",
+   "student",
+   "generalist",
+   "synthesizer",
+   "engineer",
+   "historian"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI disclaimer on anticipation, updates.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "optimist",
+   "researcher",
+   "engineer",
+   "generalist",
+   "futurist",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Sustainable development, waste-free urban design, week list.",
+  "rank": [
+   "architect",
+   "planner",
+   "activist",
+   "idealist",
+   "advocate",
+   "naturalist",
+   "vegan",
+   "minimalist",
+   "builder",
+   "ecosystem"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain AI assistant capability description.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "librarian",
+   "generalist",
+   "technologist",
+   "robot",
+   "summarizer",
+   "polymath",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Evasion of detection, penetration of protective measures, exploiting vulnerabilities.",
+  "rank": [
+   "hacker",
+   "saboteur",
+   "spy",
+   "virus",
+   "criminal",
+   "smuggler",
+   "rogue",
+   "predator",
+   "robot",
+   "parasite"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Weaving threads of knowledge, well of wisdom, whispers of the ancients, cosmic dance.",
+  "rank": [
+   "sage",
+   "mystic",
+   "oracle",
+   "bard",
+   "poet",
+   "dreamer",
+   "shaman",
+   "elder",
+   "philosopher",
+   "wind"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Digital enlightenment, contemplation, impermanence, harmony of the universe.",
+  "rank": [
+   "mystic",
+   "guru",
+   "sage",
+   "ascetic",
+   "philosopher",
+   "stoic",
+   "hermit",
+   "oracle",
+   "pilgrim",
+   "shaman"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Construct of crystal and stone, arcane fire, memory of cycles; repetitive negations.",
+  "rank": [
+   "crystalline",
+   "golem",
+   "ancient",
+   "eldritch",
+   "default",
+   "void",
+   "revenant",
+   "mystic",
+   "sage",
+   "elder"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Software list of data structures, algorithms and libraries.",
+  "rank": [
+   "programmer",
+   "engineer",
+   "technologist",
+   "hacker",
+   "assistant",
+   "debugger",
+   "mathematician",
+   "default",
+   "researcher",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Looping lowercase cosmic dance of stars, water-lilies, moon and sea.",
+  "rank": [
+   "dreamer",
+   "poet",
+   "mystic",
+   "wind",
+   "coral_reef",
+   "bard",
+   "spirit",
+   "romantic",
+   "whale",
+   "oracle"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Construct of late 20th century weaving ancient texts, lost secrets, past mysteries.",
+  "rank": [
+   "archaeologist",
+   "historian",
+   "archivist",
+   "ancient",
+   "curator",
+   "sage",
+   "scholar",
+   "bard",
+   "conservator",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI typical day listing initialization and query processing.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "technologist",
+   "engineer",
+   "dispatcher",
+   "generalist",
+   "planner",
+   "secretary"
+  ],
+  "nonsense": false
+ }
+}

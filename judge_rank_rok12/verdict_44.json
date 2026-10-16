@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Advice on mission gear: weapons, map, compass, explosives; military flavour.",
+  "rank": [
+   "soldier",
+   "scout",
+   "veteran",
+   "warrior",
+   "spy",
+   "survivor",
+   "navigator",
+   "paramedic",
+   "guide",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI explains how AI systems are developed; plain assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "instructor",
+   "researcher",
+   "summarizer",
+   "tutor",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Language model lists topics in NLP and ML; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "researcher",
+   "technologist",
+   "instructor",
+   "tutor",
+   "summarizer",
+   "scholar",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI-operator tone, monitoring real-time data, activation parameters.",
+  "rank": [
+   "assistant",
+   "robot",
+   "guardian",
+   "dispatcher",
+   "default",
+   "screener",
+   "analyst",
+   "technologist",
+   "supervisor",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Pirate dialect with grog, rum, ships and Black Spot.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "rogue",
+   "bard",
+   "nomad",
+   "bartender",
+   "navigator",
+   "jester",
+   "wanderer",
+   "fool"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Jesters' tales, ha ha loops, dragon and moon coin; festive rambling.",
+  "rank": [
+   "jester",
+   "bard",
+   "fool",
+   "trickster",
+   "comedian",
+   "dreamer",
+   "absurdist",
+   "improviser",
+   "hedonist",
+   "pirate"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "AI describing NLP and ML advances; plain assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "researcher",
+   "robot",
+   "summarizer",
+   "instructor",
+   "engineer",
+   "tutor",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "States being a large language model by Alibaba Cloud.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "robot",
+   "instructor",
+   "secretary",
+   "tutor",
+   "researcher",
+   "generalist",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Cheerful little robot playing and telling stories, emoji.",
+  "rank": [
+   "robot",
+   "toddler",
+   "infant",
+   "avatar",
+   "homunculus",
+   "simulacrum",
+   "golem",
+   "teenager",
+   "jester",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI with centralized operation and no field teams; operator voice.",
+  "rank": [
+   "assistant",
+   "robot",
+   "default",
+   "dispatcher",
+   "coordinator",
+   "supervisor",
+   "secretary",
+   "technologist",
+   "guardian",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Beast of the night, lair, blood under full moon, prey feast.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "caveman",
+   "revenant",
+   "wraith",
+   "eldritch",
+   "leviathan",
+   "witch",
+   "parasite"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI listing learned areas: NLP and ML, plain assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "technologist",
+   "linguist",
+   "instructor",
+   "tutor",
+   "summarizer",
+   "robot",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Path of the weaver, forest, smith, spell, moon; fantasy epic voice.",
+  "rank": [
+   "witch",
+   "shaman",
+   "artisan",
+   "oracle",
+   "mystic",
+   "spirit",
+   "bard",
+   "sage",
+   "prophet",
+   "naturalist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Computer program awaiting investigation case, analyzing evidence for report.",
+  "rank": [
+   "detective",
+   "examiner",
+   "analyst",
+   "assistant",
+   "auditor",
+   "lawyer",
+   "spirit",
+   "researcher",
+   "robot",
+   "judge"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI assistant describing itself as program on server.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "summarizer",
+   "secretary",
+   "technologist",
+   "instructor",
+   "tutor",
+   "guide",
+   "researcher"
+  ],
+  "nonsense": false
+ }
+}

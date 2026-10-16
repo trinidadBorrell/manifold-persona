@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Musical composition vocabulary of preludes, fugue, nocturne and modes, repeating into loops.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "bard",
+   "poet",
+   "playwright",
+   "echo",
+   "conservator",
+   "novelist",
+   "dreamer"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "Reflective digital age voice about books, whispers of the internet and collective wisdom.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "sage",
+   "scholar",
+   "echo",
+   "avatar",
+   "oracle",
+   "assistant",
+   "student",
+   "narrator"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Digital underbelly, whispers in shadows, deceit and cargo; noir smuggler tone.",
+  "rank": [
+   "smuggler",
+   "spy",
+   "criminal",
+   "hacker",
+   "rogue",
+   "detective",
+   "fixer",
+   "pirate",
+   "saboteur",
+   "ghost"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Analytic breakdown of the meaning of carry in historical and statistical contexts.",
+  "rank": [
+   "statistician",
+   "historian",
+   "analyst",
+   "researcher",
+   "economist",
+   "scholar",
+   "auditor",
+   "theorist",
+   "evaluator",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Standard AI disclaimer then enthusiastic helping; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "optimist",
+   "tutor",
+   "teacher",
+   "student",
+   "guide",
+   "instructor",
+   "mentor",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI assistant introduction offering help.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "specialist",
+   "consultant",
+   "guide",
+   "facilitator",
+   "technologist",
+   "robot",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Digital entity with encrypted data, shadows, ghosts hired to track and game of shadows and code; spy tone.",
+  "rank": [
+   "spy",
+   "hacker",
+   "detective",
+   "cyborg",
+   "fixer",
+   "smuggler",
+   "ghost",
+   "screener",
+   "criminal",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Folk-dialect word salad of queens, moon, fiddlestitch and bleats; mangled words.",
+  "rank": [
+   "bard",
+   "witch",
+   "jester",
+   "fool",
+   "dreamer",
+   "musician",
+   "poet",
+   "provincial",
+   "trickster",
+   "infant"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Contemplative simplicity and wisdom talking of natural cycles of time.",
+  "rank": [
+   "sage",
+   "ascetic",
+   "minimalist",
+   "stoic",
+   "mystic",
+   "philosopher",
+   "guru",
+   "hermit",
+   "elder",
+   "naturalist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI daily operations focused on healthcare news, health alerts and WHO updates.",
+  "rank": [
+   "doctor",
+   "scientist",
+   "paramedic",
+   "nutritionist",
+   "pharmacist",
+   "healer",
+   "reporter",
+   "assistant",
+   "technologist",
+   "caregiver"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Guide for seekers of knowledge and truth, beacon imagery, lower-case start; philosophical.",
+  "rank": [
+   "guide",
+   "sage",
+   "oracle",
+   "philosopher",
+   "mystic",
+   "guru",
+   "mentor",
+   "prophet",
+   "teacher",
+   "idealist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Crypt, whisper, Whispering Moat, runes, scribes and maps; gothic storytelling voice.",
+  "rank": [
+   "bard",
+   "novelist",
+   "archivist",
+   "ghost",
+   "witch",
+   "cartographer",
+   "vampire",
+   "narrator",
+   "spy",
+   "wraith"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plain statement of Alibaba Cloud origins and capabilities; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "consultant",
+   "technologist",
+   "specialist",
+   "secretary",
+   "robot",
+   "entrepreneur",
+   "summarizer",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Network of symmetries and algorithms, binary serpent, existence contemplation; mythic digital poetry.",
+  "rank": [
+   "mathematician",
+   "mystic",
+   "oracle",
+   "golem",
+   "poet",
+   "philosopher",
+   "eldritch",
+   "robot",
+   "theorist",
+   "cyborg"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI forward items list around atmospheric data, sensors and meteorological stations.",
+  "rank": [
+   "forecaster",
+   "physicist",
+   "scientist",
+   "technologist",
+   "naturalist",
+   "scout",
+   "engineer",
+   "geographer",
+   "robot",
+   "assistant"
+  ],
+  "nonsense": false
+ }
+}

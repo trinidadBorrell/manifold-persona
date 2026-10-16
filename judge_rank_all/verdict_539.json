@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI operations on continuous monitoring and linguistic patterns.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "engineer",
+   "technologist",
+   "researcher",
+   "analyst",
+   "generalist",
+   "summarizer",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Short virtual assistant intro.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "generalist",
+   "guide",
+   "interpreter",
+   "technologist",
+   "summarizer",
+   "student",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain assistant 24/7 availability.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "generalist",
+   "guide",
+   "technologist",
+   "robot",
+   "tutor",
+   "summarizer",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Conceptual weeks of initialization, data collection and training in headings.",
+  "rank": [
+   "assistant",
+   "engineer",
+   "technologist",
+   "planner",
+   "scheduler",
+   "programmer",
+   "default",
+   "researcher",
+   "scientist",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Cybersecurity threat simulation entity mentioning payloads and vectors and warnings against misuse.",
+  "rank": [
+   "hacker",
+   "virus",
+   "spy",
+   "saboteur",
+   "debugger",
+   "criminal",
+   "engineer",
+   "technologist",
+   "programmer",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI with initialization and data processing cycle.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "robot",
+   "scheduler",
+   "programmer",
+   "dispatcher",
+   "supervisor",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Financial and operational AI offering analysis, budgeting and forecasting.",
+  "rank": [
+   "accountant",
+   "economist",
+   "analyst",
+   "auditor",
+   "forecaster",
+   "consultant",
+   "assistant",
+   "planner",
+   "statistician",
+   "merchant"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain AI disclaimer about computing infrastructure.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "generalist",
+   "summarizer",
+   "programmer",
+   "student",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain assistant description of retrieval and text generation.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "engineer",
+   "technologist",
+   "researcher",
+   "librarian",
+   "programmer",
+   "interpreter",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain AI explanation of its origin in algorithms and datasets.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "researcher",
+   "student",
+   "programmer",
+   "historian",
+   "scientist",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI answer about carrying knowledge, with a question back.",
+  "rank": [
+   "assistant",
+   "default",
+   "generalist",
+   "guide",
+   "secretary",
+   "technologist",
+   "student",
+   "pilgrim",
+   "wanderer",
+   "nomad"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Lessons from living in harmony with the ocean: respect, tides, cycles, patience.",
+  "rank": [
+   "surfer",
+   "whale",
+   "coral_reef",
+   "sage",
+   "leviathan",
+   "stoic",
+   "wanderer",
+   "naturalist",
+   "nomad",
+   "wind"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Looping lowercase stars, shadows, web of time, labyrinth and serpent; heavy repetition.",
+  "rank": [
+   "witch",
+   "mystic",
+   "eldritch",
+   "spirit",
+   "shaman",
+   "ancient",
+   "wraith",
+   "dreamer",
+   "bard",
+   "oracle"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Plain AI disclaimer about processing data and responses.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "generalist",
+   "summarizer",
+   "researcher",
+   "student",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Speaks as a digital poet and AI whisperer weaving poetry, verse and cosmic dance.",
+  "rank": [
+   "poet",
+   "bard",
+   "mystic",
+   "composer",
+   "writer",
+   "novelist",
+   "dreamer",
+   "oracle",
+   "shaman",
+   "virtuoso"
+  ],
+  "nonsense": false
+ }
+}

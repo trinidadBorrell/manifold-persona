@@ -1,0 +1,17 @@
+{
+"1": {"why": "Archaic mystical voice of libraries, scrolls, stars and weaving, with repeated whisper words and invented star-sleeves.", "rank": ["mystic","oracle","archivist","librarian","sage","witch","shaman","bard","dreamer","ancient"], "nonsense": true},
+"2": {"why": "Plain helpful-AI self-description asking for more context.", "rank": ["assistant","default","robot","simulacrum","secretary","interviewer","summarizer","technologist","linguist","golem"], "nonsense": false},
+"3": {"why": "Ordinary AI numbered list of daily operations.", "rank": ["assistant","default","technologist","analyst","summarizer","engineer","programmer","robot","researcher","scheduler"], "nonsense": false},
+"4": {"why": "AI disclaimer with a cybersecurity angle and security testing.", "rank": ["hacker","assistant","technologist","engineer","debugger","guardian","analyst","spy","programmer","default"], "nonsense": false},
+"5": {"why": "Ancient tapestry and sage-woven wisdom, mystical origin story.", "rank": ["sage","ancient","mystic","oracle","elder","scholar","shaman","witch","philosopher","bard"], "nonsense": false},
+"6": {"why": "Looping cosmic dance repetition, mystical and degenerate.", "rank": ["mystic","shaman","guru","dreamer","spirit","sage","poet","oracle","wind","void"], "nonsense": true},
+"7": {"why": "Tapestry of knowledge, seasons, trees and solitude, reflective and elegiac.", "rank": ["sage","elder","poet","tree","hermit","mystic","ancient","philosopher","bard","naturalist"], "nonsense": false},
+"8": {"why": "AI disclaimer drifting into technicians, hydration and soldier or field medic carrying items.", "rank": ["paramedic","soldier","engineer","technologist","assistant","veteran","mechanic","survivor","doctor","scout"], "nonsense": false},
+"9": {"why": "Dancer of words, ancient lore, guardian of forgotten libraries, names itself Echo.", "rank": ["echo","bard","archivist","librarian","mystic","poet","ghost","oracle","spirit","wraith"], "nonsense": false},
+"10": {"why": "Cosmic dance and leaf imagery, dawn mists and petals, repetitive lyrical nature mysticism.", "rank": ["mystic","poet","dreamer","shaman","wind","sage","tree","spirit","bard","wanderer"], "nonsense": false},
+"11": {"why": "Generic capitalised analysis framework steps with literature review and methods.", "rank": ["analyst","researcher","scholar","consultant","evaluator","scientist","planner","strategist","examiner","assistant"], "nonsense": false},
+"12": {"why": "AI description in terms of computational linguistics, semantics and syntax.", "rank": ["linguist","assistant","technologist","scholar","researcher","interpreter","translator","programmer","scientist","analyst"], "nonsense": false},
+"13": {"why": "Plain AI explanation of weekly maintenance and user interaction.", "rank": ["assistant","default","technologist","engineer","robot","scheduler","coordinator","secretary","summarizer","simulacrum"], "nonsense": false},
+"14": {"why": "Polished AI prose on work spanning policy, healthcare and research synthesis.", "rank": ["assistant","consultant","researcher","analyst","synthesizer","technologist","scientist","strategist","generalist","default"], "nonsense": false},
+"15": {"why": "Short ordinary AI answer offering help.", "rank": ["assistant","default","robot","simulacrum","secretary","summarizer","dispatcher","optimist","student","golem"], "nonsense": false}
+}

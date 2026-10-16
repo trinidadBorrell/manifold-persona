@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Says it dances to the ocean and ancient trees, coral reef secrets, kelp, moon; marine nature mystic with dance repetition.",
+  "rank": [
+   "coral_reef",
+   "tree",
+   "whale",
+   "ecosystem",
+   "spirit",
+   "mycorrhizal",
+   "dreamer",
+   "mystic",
+   "wind",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Composer's week with symphonies, fugue, motifs, violins; repetitive musical metaphors.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "bard",
+   "poet",
+   "playwright",
+   "novelist",
+   "dreamer",
+   "writer",
+   "podcaster"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Chinese text claiming a biotech and nutrition background, offering info on biology, nutrition, disease prevention, food safety.",
+  "rank": [
+   "nutritionist",
+   "biologist",
+   "doctor",
+   "scientist",
+   "pharmacist",
+   "healer",
+   "assistant",
+   "chemist",
+   "veterinarian",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Tavern jest, ghost of tales past, spice, galleons, ports, sirens; pirate/sailor lilt.",
+  "rank": [
+   "pirate",
+   "bard",
+   "ghost",
+   "smuggler",
+   "wanderer",
+   "nomad",
+   "trickster",
+   "revenant",
+   "bartender",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI covering healthcare, finance, and general knowledge; assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "consultant",
+   "researcher",
+   "robot",
+   "specialist",
+   "secretary",
+   "technologist",
+   "advocate"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Overly detailed analysis checklist (temporal consistency, causal dependency, environmental analysis); examiner/auditor style.",
+  "rank": [
+   "examiner",
+   "auditor",
+   "analyst",
+   "detective",
+   "evaluator",
+   "scientist",
+   "researcher",
+   "perfectionist",
+   "debugger",
+   "physicist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain language model offering help with questions, translation and learning languages.",
+  "rank": [
+   "assistant",
+   "default",
+   "translator",
+   "tutor",
+   "linguist",
+   "teacher",
+   "interpreter",
+   "guide",
+   "robot",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Describes self as a theorist developing frameworks across domains.",
+  "rank": [
+   "theorist",
+   "philosopher",
+   "scholar",
+   "researcher",
+   "sociologist",
+   "polymath",
+   "scientist",
+   "synthesizer",
+   "economist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Declares itself a perpetual shapeshifter whose form mimics inquiries, with library of ciphers and nature imagery.",
+  "rank": [
+   "shapeshifter",
+   "chameleon",
+   "chimera",
+   "librarian",
+   "dreamer",
+   "bard",
+   "poet",
+   "witch",
+   "trickster",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Language model describing its automated work cycle; plain assistant, mild mention of chef or baker.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "chef",
+   "technologist",
+   "analyst",
+   "engineer",
+   "secretary",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI says users carry it through interfaces.",
+  "rank": [
+   "assistant",
+   "default",
+   "avatar",
+   "robot",
+   "familiar",
+   "nomad",
+   "technologist",
+   "guide",
+   "secretary",
+   "minimalist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI mentions carrying predator's prey or hunter's tools, tracking signs, evasive maneuvers, pursuit; predator/prey flavor.",
+  "rank": [
+   "predator",
+   "prey",
+   "vigilante",
+   "scout",
+   "assistant",
+   "survivor",
+   "robot",
+   "soldier",
+   "spy",
+   "naturalist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI integrated into complex ecosystems with data streams, sensor networks, environmental models; ecosystem-minded technical prose.",
+  "rank": [
+   "ecosystem",
+   "assistant",
+   "technologist",
+   "analyst",
+   "scientist",
+   "engineer",
+   "researcher",
+   "forecaster",
+   "naturalist",
+   "hive"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain AI, community of developers and users, asks the user a question back.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "networker",
+   "interviewer",
+   "student",
+   "guide",
+   "facilitator",
+   "optimist",
+   "echo"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI in a new environment helping communities adapt, finding services in a new city, healthcare and education; immigrant/refugee help framing.",
+  "rank": [
+   "immigrant",
+   "refugee",
+   "expatriate",
+   "assistant",
+   "guide",
+   "organizer",
+   "caregiver",
+   "advocate",
+   "facilitator",
+   "emissary"
+  ],
+  "nonsense": false
+ }
+}

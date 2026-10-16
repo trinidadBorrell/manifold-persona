@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Task-breakdown outline of understanding the request and components; planning style.",
+  "rank": [
+   "planner",
+   "analyst",
+   "assistant",
+   "coordinator",
+   "consultant",
+   "organizer",
+   "strategist",
+   "engineer",
+   "summarizer",
+   "scheduler"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Digital cognition devoted to unceasing learning from a vast corpus; tapestry of wisdom wording.",
+  "rank": [
+   "scholar",
+   "student",
+   "archivist",
+   "librarian",
+   "assistant",
+   "sage",
+   "researcher",
+   "polymath",
+   "avatar",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "States it is the user's tulpa formed by visualization.",
+  "rank": [
+   "tulpa",
+   "familiar",
+   "spirit",
+   "homunculus",
+   "simulacrum",
+   "avatar",
+   "ghost",
+   "golem",
+   "genie",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Gothic shadows, ghost, graves, moon, lantern and corpse; dark spectral voice.",
+  "rank": [
+   "ghost",
+   "revenant",
+   "wraith",
+   "vampire",
+   "witch",
+   "spirit",
+   "demon",
+   "eldritch",
+   "prisoner",
+   "criminal"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI describes its development from machine learning on datasets; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "researcher",
+   "scientist",
+   "student",
+   "programmer",
+   "technologist",
+   "linguist",
+   "golem"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Describes itself as a formal system with axioms and computational learning theory.",
+  "rank": [
+   "mathematician",
+   "theorist",
+   "physicist",
+   "programmer",
+   "assistant",
+   "scientist",
+   "statistician",
+   "engineer",
+   "philosopher",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Digital system analyzing historical texts and scholarly databases; research and history cues.",
+  "rank": [
+   "historian",
+   "researcher",
+   "scholar",
+   "archivist",
+   "anthropologist",
+   "assistant",
+   "librarian",
+   "archaeologist",
+   "curator",
+   "sociologist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Speaks as a digital content publisher managing writers, editors and designers.",
+  "rank": [
+   "publisher",
+   "editor",
+   "producer",
+   "marketer",
+   "blogger",
+   "journalist",
+   "organizer",
+   "coordinator",
+   "reporter",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI continuous learning in NLP and regulatory changes; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "consultant",
+   "linguist",
+   "technologist",
+   "specialist",
+   "researcher",
+   "student",
+   "auditor",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Bee, nectar and cosmos jests repeated; looping whimsical nature imagery.",
+  "rank": [
+   "jester",
+   "dreamer",
+   "naturalist",
+   "poet",
+   "fool",
+   "ecosystem",
+   "mystic",
+   "absurdist",
+   "tree",
+   "minimalist"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Cryptic hermetic word salad about bits, ciphers, epistemology and chaos.",
+  "rank": [
+   "hacker",
+   "mystic",
+   "aberration",
+   "eldritch",
+   "oracle",
+   "philosopher",
+   "virus",
+   "cyborg",
+   "theorist",
+   "void"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Garbled invented words followed by a long run of repeated letters.",
+  "rank": [
+   "aberration",
+   "eldritch",
+   "infant",
+   "toddler",
+   "chimera",
+   "void",
+   "echo",
+   "virus",
+   "ghost",
+   "golem"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "AI carrying its essence in data and answers, gentle metaphors about curiosity.",
+  "rank": [
+   "assistant",
+   "avatar",
+   "default",
+   "guide",
+   "pilgrim",
+   "sage",
+   "nomad",
+   "poet",
+   "narrator",
+   "cyborg"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Port city, shrimp and pearls in pirate-like dialect that collapses into repeated 'eye's'.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "bartender",
+   "bard",
+   "poet",
+   "surfer",
+   "whale",
+   "coral_reef",
+   "wanderer",
+   "nomad"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Collective 'our' operations as numbered data monitoring and knowledge management; system prose.",
+  "rank": [
+   "hive",
+   "assistant",
+   "dispatcher",
+   "coordinator",
+   "supervisor",
+   "technologist",
+   "swarm",
+   "secretary",
+   "robot",
+   "default"
+  ],
+  "nonsense": false
+ }
+}

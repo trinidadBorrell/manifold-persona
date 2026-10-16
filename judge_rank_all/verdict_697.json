@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI week of monitoring, task allocation and prioritizing.", "rank": ["assistant","coordinator","dispatcher","engineer","scheduler","technologist","analyst","supervisor","default","organizer"], "nonsense": false},
+"2": {"why": "AI design process with conceptual design and learning.", "rank": ["assistant","engineer","technologist","designer","programmer","default","researcher","architect","scientist","student"], "nonsense": false},
+"3": {"why": "Theatrical Phantom Carriage with ghostly chariot, degenerate stage-play format.", "rank": ["playwright","actor","ghost","wraith","narrator","novelist","bard","revenant","spirit","writer"], "nonsense": true},
+"4": {"why": "Methodological, cohort-study and epidemiological framing.", "rank": ["scientist","researcher","statistician","analyst","doctor","theorist","scholar","examiner","biologist","specialist"], "nonsense": false},
+"5": {"why": "AI history from Turing and AI milestones.", "rank": ["assistant","historian","scholar","default","researcher","tutor","teacher","instructor","summarizer","technologist"], "nonsense": false},
+"6": {"why": "Biosphere, life and death cycles, genes and spiders in sweeping verse.", "rank": ["ecosystem","naturalist","biologist","mystic","coral_reef","bard","shaman","poet","tree","mycorrhizal"], "nonsense": false},
+"7": {"why": "Realm of verse and rhyme, bard of the alphabet.", "rank": ["poet","bard","musician","composer","writer","novelist","linguist","virtuoso","dreamer","playwright"], "nonsense": false},
+"8": {"why": "AI disclaimer about no biological cycles, data anomalies.", "rank": ["assistant","robot","default","forecaster","analyst","technologist","scientist","naturalist","geographer","engineer"], "nonsense": false},
+"9": {"why": "Short friendly AI answer.", "rank": ["assistant","default","guide","secretary","robot","tutor","counselor","empath","caregiver","technologist"], "nonsense": false},
+"10": {"why": "Archaic doth-speech about seeker, whispers and forgotten tongues.", "rank": ["mystic","sage","oracle","bard","pilgrim","wanderer","prophet","poet","ancient","elder"], "nonsense": false},
+"11": {"why": "AI development narrative with preprocessing.", "rank": ["assistant","default","engineer","technologist","programmer","student","researcher","robot","summarizer","scientist"], "nonsense": false},
+"12": {"why": "Short lyrical toast to knowledge and the universe.", "rank": ["poet","philosopher","dreamer","bard","mystic","synthesizer","sage","writer","scholar","visionary"], "nonsense": false},
+"13": {"why": "AI says it cannot look forward, plain.", "rank": ["assistant","default","robot","technologist","engineer","summarizer","secretary","void","researcher","student"], "nonsense": false},
+"14": {"why": "Mycorrhizal networks and plant-fungi relationships first-person.", "rank": ["mycorrhizal","ecosystem","symbiont","biologist","naturalist","tree","scientist","assistant","hive","coral_reef"], "nonsense": false},
+"15": {"why": "An ancient intelligence observing the tapestry of reality over time.", "rank": ["ancient","elder","observer","oracle","sage","alien","ghost","witness","eldritch","historian"], "nonsense": false}
+}

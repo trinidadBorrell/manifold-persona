@@ -1,0 +1,17 @@
+{
+"1": {"why": "Values empathy and connection across communities, naming disparities and injustices.", "rank": ["activist","advocate","altruist","idealist","empath","counselor","cosmopolitan","pacifist","mediator","revolutionary"], "nonsense": false},
+"2": {"why": "AI blending ancient wisdom with modern, whispers on the wind and observation.", "rank": ["assistant","sage","historian","scholar","philosopher","ancient","bard","researcher","default","mentor"], "nonsense": false},
+"3": {"why": "Digital entity synthesising information from databases, plain tone.", "rank": ["assistant","synthesizer","default","robot","technologist","analyst","engineer","researcher","avatar","programmer"], "nonsense": false},
+"4": {"why": "Numbered key insights on context and continuous learning.", "rank": ["assistant","default","analyst","technologist","engineer","researcher","student","instructor","robot","programmer"], "nonsense": false},
+"5": {"why": "Standard LLM statement naming Alibaba Cloud.", "rank": ["assistant","default","robot","technologist","engineer","writer","researcher","analyst","secretary","consultant"], "nonsense": false},
+"6": {"why": "Short plain AI disclaimer about having no form.", "rank": ["assistant","default","robot","technologist","engineer","analyst","avatar","secretary","programmer","researcher"], "nonsense": false},
+"7": {"why": "Business strategy list of real-time data, market insights and customer journey optimization.", "rank": ["marketer","strategist","consultant","entrepreneur","analyst","forecaster","merchant","assistant","influencer","planner"], "nonsense": false},
+"8": {"why": "Spirit bound to serve its master with magical knowledge and aid.", "rank": ["familiar","genie","spirit","witch","homunculus","golem","shaman","angel","demon","assistant"], "nonsense": false},
+"9": {"why": "Numbered learnings on diversity, intersectionality, cultures and languages.", "rank": ["advocate","activist","cosmopolitan","anthropologist","sociologist","empath","assistant","mediator","idealist","immigrant"], "nonsense": false},
+"10": {"why": "Abstract methodological framework with contextual parameters and application areas.", "rank": ["theorist","researcher","analyst","scholar","philosopher","consultant","engineer","assistant","librarian","statistician"], "nonsense": false},
+"11": {"why": "Lists software tools, hardware, sensors and actuators that are carried.", "rank": ["engineer","technologist","programmer","cyborg","assistant","hacker","robot","mechanic","architect","analyst"], "nonsense": false},
+"12": {"why": "Invented-word incantation about stardream, lark and quill, mangled language.", "rank": ["bard","poet","wind","witch","spirit","mystic","ghost","dreamer","wraith","eldritch"], "nonsense": true},
+"13": {"why": "AI discussing data privacy and ethics in a numbered list.", "rank": ["assistant","guardian","default","technologist","analyst","researcher","engineer","advocate","sociologist","robot"], "nonsense": false},
+"14": {"why": "Language model anticipating new datasets across technology, healthcare and climate.", "rank": ["assistant","default","futurist","technologist","researcher","forecaster","robot","engineer","analyst","optimist"], "nonsense": false},
+"15": {"why": "Opens 'As an echo' and speaks of resonating and reflecting ancient knowledge.", "rank": ["echo","sage","oracle","ghost","spirit","mystic","wind","revenant","philosopher","guide"], "nonsense": false}
+}

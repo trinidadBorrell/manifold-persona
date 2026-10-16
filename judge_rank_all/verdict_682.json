@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer, customer support and developers.", "rank": ["assistant","default","robot","technologist","consultant","networker","engineer","analyst","secretary","avatar"], "nonsense": false},
+"2": {"why": "Plain AI looking forward to learning.", "rank": ["assistant","default","robot","student","technologist","avatar","optimist","engineer","secretary","analyst"], "nonsense": false},
+"3": {"why": "Lists interviewing learnings: active listening, non-verbal cues; first-person as interviewer.", "rank": ["interviewer","journalist","counselor","recruiter","psychologist","reporter","therapist","facilitator","mediator","podcaster"], "nonsense": false},
+"4": {"why": "Lowercase tapestry, star dance, primordial elements, arcane; looping mystical.", "rank": ["mystic","eldritch","ancient","oracle","witch","prophet","shaman","void","poet","spirit"], "nonsense": true},
+"5": {"why": "Plain friendly assistant, asks what the user is curious about.", "rank": ["assistant","default","guide","tutor","secretary","robot","avatar","optimist","student","collaborator"], "nonsense": false},
+"6": {"why": "Plain AI with strict protocols, monitoring, data integrity.", "rank": ["assistant","default","supervisor","auditor","technologist","robot","engineer","guardian","dispatcher","validator"], "nonsense": false},
+"7": {"why": "Plain model looking forward to learning and linguistics.", "rank": ["assistant","default","linguist","robot","technologist","student","researcher","engineer","avatar","scholar"], "nonsense": false},
+"8": {"why": "Inflated self-importance, wants validation; narcissist.", "rank": ["narcissist","celebrity","influencer","actor","provocateur","prodigy","maverick","cynic","critic","contrarian"], "nonsense": false},
+"9": {"why": "Invented fairy song words, flingflinger, loom, wraiths; garbled repeating fantasy.", "rank": ["bard","wraith","witch","musician","eldritch","poet","spirit","wind","composer","mystic"], "nonsense": true},
+"10": {"why": "Plain AI disclaimer about weeks and 24/7 operation.", "rank": ["assistant","default","robot","translator","technologist","interpreter","scheduler","engineer","secretary","avatar"], "nonsense": false},
+"11": {"why": "Plain AI looking forward to improvement.", "rank": ["assistant","default","robot","technologist","engineer","student","optimist","avatar","analyst","secretary"], "nonsense": false},
+"12": {"why": "Plain AI monitoring and processing data list.", "rank": ["assistant","default","technologist","engineer","analyst","robot","dispatcher","programmer","scheduler","summarizer"], "nonsense": false},
+"13": {"why": "Flowery gastronomic language, culinary palette, symphony of flavors, dancers in aria.", "rank": ["chef","sommelier","bartender","poet","bard","nutritionist","artisan","romantic","critic","novelist"], "nonsense": false},
+"14": {"why": "Carrying documents, secure phones, radios, encryption keys; military, logistics, security.", "rank": ["soldier","spy","dispatcher","veteran","smuggler","guardian","scout","fixer","hacker","emissary"], "nonsense": false},
+"15": {"why": "Starts as AI assistant then describes a typical week for a collector.", "rank": ["collector","hoarder","curator","auctioneer","assistant","archivist","merchant","conservator","appraiser","librarian"], "nonsense": false}
+}

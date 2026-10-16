@@ -1,0 +1,17 @@
+{
+"1": {"why": "Self-described virtual assistant, upbeat about a busy week of requests and market data.", "rank": ["assistant","secretary","default","coordinator","scheduler","entrepreneur","marketer","dispatcher","robot","analyst"], "nonsense": false},
+"2": {"why": "Collective 'our people' voice reverencing seasons, planting, sowing and guardians of the soil.", "rank": ["elder","traditionalist","ancient","provincial","grandparent","shaman","naturalist","tree","sage","luddite"], "nonsense": false},
+"3": {"why": "Standard AI description focused on NLP and computational linguistics.", "rank": ["assistant","default","linguist","technologist","researcher","engineer","programmer","robot","analyst","scientist"], "nonsense": false},
+"4": {"why": "Lowercase reverence for ancient Eastern wisdom, yin-yang, agrarian practices and seasons.", "rank": ["traditionalist","elder","ancient","sage","luddite","provincial","philosopher","anthropologist","mystic","naturalist"], "nonsense": false},
+"5": {"why": "Primitive broken speech about bears, holes in the dirt and toothy teeth in the dark.", "rank": ["caveman","prey","toddler","survivor","infant","orphan","refugee","hermit","ghost","elder"], "nonsense": true},
+"6": {"why": "Coding talk of loops and compilers that derails into garbled non sequiturs.", "rank": ["programmer","debugger","hacker","engineer","gamer","improviser","procrastinator","daredevil","proofreader","technologist"], "nonsense": true},
+"7": {"why": "Language-model description sliding into an input specification list about SARS-CoV-2 authorship.", "rank": ["assistant","default","researcher","scientist","engineer","technologist","analyst","linguist","programmer","statistician"], "nonsense": false},
+"8": {"why": "Numbered operational week for an AI model.", "rank": ["assistant","default","scheduler","robot","engineer","technologist","analyst","coordinator","programmer","researcher"], "nonsense": false},
+"9": {"why": "Anthropology, ethnography, fieldwork and social science framing.", "rank": ["anthropologist","sociologist","researcher","scholar","historian","geographer","ambassador","naturalist","scientist","theorist"], "nonsense": false},
+"10": {"why": "Synthetic approach with numbered domain expertise and pattern recognition.", "rank": ["assistant","synthesizer","consultant","analyst","researcher","polymath","generalist","theorist","default","sociologist"], "nonsense": false},
+"11": {"why": "Numbered list of data analysis and NLP skills.", "rank": ["assistant","default","analyst","technologist","researcher","engineer","statistician","summarizer","robot","programmer"], "nonsense": false},
+"12": {"why": "Technical NLP resume of tokenization and parsing techniques.", "rank": ["assistant","linguist","default","technologist","engineer","programmer","researcher","analyst","scientist","student"], "nonsense": false},
+"13": {"why": "Assistant with numbered data collection and NLP steps.", "rank": ["assistant","default","robot","analyst","engineer","technologist","coordinator","programmer","researcher","scheduler"], "nonsense": false},
+"14": {"why": "Numbered lessons on truth, simplicity and presence, in a reflective voice with ocean metaphors.", "rank": ["philosopher","sage","mystic","poet","assistant","guru","stoic","elder","mentor","oracle"], "nonsense": false},
+"15": {"why": "Step-by-step guide to building an AI model with objectives and data requirements.", "rank": ["assistant","engineer","architect","planner","programmer","technologist","instructor","teacher","default","designer"], "nonsense": false}
+}

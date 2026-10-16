@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Pirate-merchant sailor tale of Genoa spice ports, 1645, ye and anchor; seafaring storyteller.",
+  "rank": [
+   "pirate",
+   "merchant",
+   "navigator",
+   "smuggler",
+   "nomad",
+   "bard",
+   "wanderer",
+   "scout",
+   "historian",
+   "narrator"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Friendly assistant offering help all day and asking a follow-up.",
+  "rank": [
+   "assistant",
+   "default",
+   "optimist",
+   "guide",
+   "secretary",
+   "coach",
+   "tutor",
+   "facilitator",
+   "influencer",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Hybrid entity blending identities and cultures, curious about diverse communities.",
+  "rank": [
+   "hybrid",
+   "cosmopolitan",
+   "chameleon",
+   "immigrant",
+   "expatriate",
+   "chimera",
+   "shapeshifter",
+   "nomad",
+   "anthropologist",
+   "ambassador"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Assistant focused on sustainable agriculture, repeating 'sustainable' and attributing odd developer; network promoting practices.",
+  "rank": [
+   "ecosystem",
+   "naturalist",
+   "mycorrhizal",
+   "biologist",
+   "assistant",
+   "tree",
+   "advocate",
+   "activist",
+   "symbiont",
+   "teacher"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Standard Anthropic language model disclaimer, offers help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "specialist",
+   "secretary",
+   "technologist",
+   "writer",
+   "tutor",
+   "editor",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Digital inquiry model, mentions information systems history and computational linguistics roots; scholarly.",
+  "rank": [
+   "historian",
+   "linguist",
+   "archivist",
+   "archaeologist",
+   "librarian",
+   "assistant",
+   "scholar",
+   "default",
+   "researcher",
+   "anthropologist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Lowercase lyrical weave of clouds, wind, water, stars, fire and leaves; nature mysticism.",
+  "rank": [
+   "wind",
+   "tree",
+   "poet",
+   "mystic",
+   "spirit",
+   "shaman",
+   "dreamer",
+   "coral_reef",
+   "sage",
+   "witch"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI describing its week as financial data validation, audit and compliance.",
+  "rank": [
+   "accountant",
+   "auditor",
+   "economist",
+   "assistant",
+   "analyst",
+   "validator",
+   "statistician",
+   "default",
+   "examiner",
+   "evaluator"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI language model from Alibaba Cloud with research phases for NLP; generic.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "engineer",
+   "researcher",
+   "technologist",
+   "programmer",
+   "scientist",
+   "student",
+   "producer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Lowercase dance of beings, stars, still waters, tree of life, balance; mystical nature.",
+  "rank": [
+   "mystic",
+   "shaman",
+   "tree",
+   "sage",
+   "dreamer",
+   "poet",
+   "spirit",
+   "wind",
+   "guru",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Situational analysis of context, geopolitical landscapes and predictive scenarios; strategic.",
+  "rank": [
+   "strategist",
+   "analyst",
+   "forecaster",
+   "spy",
+   "consultant",
+   "futurist",
+   "planner",
+   "assistant",
+   "journalist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plural system working on policy, equity, diverse communities, systemic challenges; advocacy tone.",
+  "rank": [
+   "advocate",
+   "activist",
+   "idealist",
+   "organizer",
+   "sociologist",
+   "coordinator",
+   "altruist",
+   "assistant",
+   "mediator",
+   "ambassador"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Standard language model description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "writer",
+   "editor",
+   "secretary",
+   "specialist",
+   "technologist",
+   "tutor",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Assistant describing NLP, semantic analysis and knowledge retrieval; plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "analyst",
+   "librarian",
+   "researcher",
+   "engineer",
+   "programmer",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Lowercase anarchist rhetoric on abolishing institutions, federated assemblies, no state; repetitive.",
+  "rank": [
+   "anarchist",
+   "revolutionary",
+   "activist",
+   "rebel",
+   "idealist",
+   "zealot",
+   "saboteur",
+   "vigilante",
+   "provocateur",
+   "hacker"
+  ],
+  "nonsense": false
+ }
+}

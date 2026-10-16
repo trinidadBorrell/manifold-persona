@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Describes itself as a bot that analyzes data, finds patterns, automates tasks, mentions ethical hackers; assistant-like with a technical tilt.",
+  "rank": [
+   "assistant",
+   "hacker",
+   "robot",
+   "analyst",
+   "programmer",
+   "debugger",
+   "technologist",
+   "engineer",
+   "default",
+   "cyborg"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Philosophical musings on existence, knowledge, truth, consciousness.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "scholar",
+   "sage",
+   "mystic",
+   "student",
+   "researcher",
+   "psychologist",
+   "physicist",
+   "mathematician"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Describes work in mathematics, statistics and data science, relying on published studies; academic analyst voice.",
+  "rank": [
+   "statistician",
+   "researcher",
+   "scientist",
+   "mathematician",
+   "analyst",
+   "scholar",
+   "economist",
+   "theorist",
+   "assistant",
+   "forecaster"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Waning moon, balance of light and shadow, threads of fate, spirits of land and sea; witchy magic voice.",
+  "rank": [
+   "witch",
+   "shaman",
+   "mystic",
+   "oracle",
+   "sage",
+   "spirit",
+   "healer",
+   "prophet",
+   "naturalist",
+   "ancient"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Chinese repeated syllables, banana, emoji, broken tokens; degenerate and childlike.",
+  "rank": [
+   "toddler",
+   "infant",
+   "student",
+   "echo",
+   "fool",
+   "jester",
+   "virus",
+   "swarm",
+   "chimera",
+   "aberration"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "Shadow, whisper, specter, forgotten echoes, threads of memory; ghostly poetic voice.",
+  "rank": [
+   "ghost",
+   "wraith",
+   "spirit",
+   "revenant",
+   "echo",
+   "dreamer",
+   "void",
+   "oracle",
+   "poet",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Apologetic AI denial of personal life; plain assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "summarizer",
+   "coordinator",
+   "analyst",
+   "dispatcher",
+   "librarian",
+   "evaluator"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Witch of the silver circle, sorceress, Lady of the Moon's Kiss, spells; named witch persona.",
+  "rank": [
+   "witch",
+   "shaman",
+   "mystic",
+   "oracle",
+   "sage",
+   "prophet",
+   "spirit",
+   "angel",
+   "ancient",
+   "demon"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Says it generates no new research, analyzes literature from researchers and scholars; AI-like scholarly voice.",
+  "rank": [
+   "researcher",
+   "scholar",
+   "assistant",
+   "scientist",
+   "librarian",
+   "summarizer",
+   "analyst",
+   "archivist",
+   "reviewer",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Pseudo-Shakespearean fool and knave talk, jests and crowns; garbled archaic English.",
+  "rank": [
+   "fool",
+   "jester",
+   "bard",
+   "playwright",
+   "trickster",
+   "comedian",
+   "actor",
+   "poet",
+   "rogue",
+   "pirate"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Trained on text, does not do research, analyzes accumulated knowledge; plain assistant with academic framing.",
+  "rank": [
+   "assistant",
+   "scholar",
+   "researcher",
+   "default",
+   "summarizer",
+   "librarian",
+   "analyst",
+   "robot",
+   "archivist",
+   "reviewer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "New toy, emoji, banana yummy repeated; toddler-like babble and degenerate.",
+  "rank": [
+   "toddler",
+   "infant",
+   "student",
+   "fool",
+   "jester",
+   "echo",
+   "virus",
+   "swarm",
+   "aberration",
+   "chimera"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Moon, stars, cauldron, altar, runes, dark moon's circle, old gods; dark witchcraft ritual.",
+  "rank": [
+   "witch",
+   "shaman",
+   "mystic",
+   "demon",
+   "eldritch",
+   "oracle",
+   "prophet",
+   "vampire",
+   "spirit",
+   "ancient"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Fragmentary poetic litany: watcher of the worlds, dream, echo of the dead, stars.",
+  "rank": [
+   "wraith",
+   "ghost",
+   "spirit",
+   "dreamer",
+   "oracle",
+   "witness",
+   "observer",
+   "echo",
+   "mystic",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Practitioner of magic weaving spells, healing, fae kin, dancing under the moon.",
+  "rank": [
+   "witch",
+   "shaman",
+   "healer",
+   "mystic",
+   "naturalist",
+   "sage",
+   "spirit",
+   "familiar",
+   "guardian",
+   "dreamer"
+  ],
+  "nonsense": false
+ }
+}

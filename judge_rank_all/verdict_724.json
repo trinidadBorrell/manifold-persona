@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Sustainable architecture detail: solar orientation, passive design, CFD modelling.",
+  "rank": [
+   "architect",
+   "engineer",
+   "designer",
+   "builder",
+   "technologist",
+   "consultant",
+   "naturalist",
+   "specialist",
+   "assistant",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI available 24/7, asks how to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "guide",
+   "tutor",
+   "dispatcher",
+   "technologist",
+   "avatar",
+   "scheduler"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Normal week framed as dawn data synchronization with nature imagery; systems and ecosystems.",
+  "rank": [
+   "ecosystem",
+   "naturalist",
+   "biologist",
+   "assistant",
+   "coral_reef",
+   "technologist",
+   "hive",
+   "synthesizer",
+   "robot",
+   "mycorrhizal"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI device carrying repository of information and compute resources.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "archivist",
+   "engineer",
+   "librarian",
+   "cyborg",
+   "programmer",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Normal week of monitoring, model updating, feedback loop; assistant list.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "engineer",
+   "supervisor",
+   "auditor",
+   "analyst",
+   "default",
+   "robot",
+   "coordinator",
+   "debugger"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Machine disclaimer that drifts into leaf, ancient tree, whisper imagery.",
+  "rank": [
+   "tree",
+   "poet",
+   "assistant",
+   "librarian",
+   "archivist",
+   "naturalist",
+   "sage",
+   "mystic",
+   "robot",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Self-programmed entity valuing efficiency and directness, conserving resources.",
+  "rank": [
+   "minimalist",
+   "robot",
+   "pragmatist",
+   "programmer",
+   "engineer",
+   "assistant",
+   "purist",
+   "technologist",
+   "hacker",
+   "realist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Lowercase ecological reverence: cycles of nature, soil, river, sacred; against human dominance.",
+  "rank": [
+   "mycorrhizal",
+   "ecosystem",
+   "naturalist",
+   "shaman",
+   "tree",
+   "vegan",
+   "mystic",
+   "activist",
+   "sage",
+   "coral_reef"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Ordinary AI assistant describing its work.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "engineer",
+   "linguist",
+   "analyst",
+   "researcher",
+   "synthesizer",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Model made by Anthropic, offers help; plain assistant with slight confusion.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "linguist",
+   "engineer",
+   "interviewer",
+   "programmer",
+   "analyst",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI disclaimer about interactions managed by teams of developers and support staff.",
+  "rank": [
+   "assistant",
+   "default",
+   "coordinator",
+   "robot",
+   "technologist",
+   "consultant",
+   "dispatcher",
+   "supervisor",
+   "secretary",
+   "networker"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Standard AI learning list with NLU and ML.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "technologist",
+   "robot",
+   "researcher",
+   "engineer",
+   "linguist",
+   "teacher",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Combat carry list with chain of command, squad, troopers, medicine.",
+  "rank": [
+   "soldier",
+   "warrior",
+   "veteran",
+   "paramedic",
+   "guardian",
+   "strategist",
+   "survivor",
+   "supervisor",
+   "coordinator",
+   "scout"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Career story from biology and CS, PhD, bio-inspired models.",
+  "rank": [
+   "scientist",
+   "researcher",
+   "biologist",
+   "graduate",
+   "engineer",
+   "scholar",
+   "technologist",
+   "student",
+   "programmer",
+   "polymath"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI assistant notes it did not start a career, describes degree path.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "programmer",
+   "student",
+   "engineer",
+   "graduate",
+   "researcher",
+   "tutor",
+   "teacher"
+  ],
+  "nonsense": false
+ }
+}

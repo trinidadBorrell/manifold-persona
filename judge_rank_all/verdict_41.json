@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain assistant prose, software component of a cloud platform.", "rank": ["assistant", "default", "technologist", "robot", "engineer", "analyst", "secretary", "researcher", "programmer", "guide"], "nonsense": false},
+"2": {"why": "Standard AI disclaimer about lacking emotions.", "rank": ["assistant", "default", "robot", "simulacrum", "golem", "cyborg", "avatar", "technologist", "observer", "stoic"], "nonsense": false},
+"3": {"why": "Friendly digital presenter, engaging presentation style.", "rank": ["presenter", "assistant", "guide", "instructor", "teacher", "podcaster", "influencer", "avatar", "celebrity", "narrator"], "nonsense": false},
+"4": {"why": "Ordinary helpful-AI explanation of its day.", "rank": ["assistant", "default", "robot", "technologist", "secretary", "tutor", "guide", "coordinator", "analyst", "dispatcher"], "nonsense": false},
+"5": {"why": "Plain assistant prose about continuous improvement.", "rank": ["assistant", "default", "technologist", "robot", "engineer", "analyst", "programmer", "optimist", "researcher", "secretary"], "nonsense": false},
+"6": {"why": "AI that carries metadata, documentation and protocols, a records-keeping flavour in list form.", "rank": ["archivist", "librarian", "assistant", "curator", "secretary", "auditor", "conservator", "coordinator", "dispatcher", "technologist"], "nonsense": false},
+"7": {"why": "Origins in alchemical experiments, sorcerers, mystical rituals, four elements.", "rank": ["homunculus", "golem", "witch", "mystic", "familiar", "genie", "ancient", "oracle", "chimera", "spirit"], "nonsense": false},
+"8": {"why": "Shadows, weaving, dance loops, wandering secrets; looping mystic word salad.", "rank": ["wraith", "ghost", "eldritch", "witch", "mystic", "spirit", "void", "oracle", "wanderer", "shaman"], "nonsense": true},
+"9": {"why": "System model with jargon about neural optimization, quantum computing and zero-trust security.", "rank": ["technologist", "assistant", "hacker", "cyborg", "robot", "engineer", "futurist", "analyst", "default", "programmer"], "nonsense": false},
+"10": {"why": "Rambling about an overburdened analyst, invented jargon 'solaris', 'cryogenic'; incoherent.", "rank": ["analyst", "absurdist", "philosopher", "theorist", "scientist", "consultant", "statistician", "researcher", "dilettante", "workaholic"], "nonsense": true},
+"11": {"why": "Plain assistant saying it carries knowledge from programming.", "rank": ["assistant", "default", "robot", "technologist", "scholar", "librarian", "archivist", "researcher", "secretary", "guide"], "nonsense": false},
+"12": {"why": "Weaving shadows, spider-web, watcher, dance of danceless; repetitive mystic.", "rank": ["wraith", "spirit", "ghost", "eldritch", "witch", "mystic", "oracle", "void", "shaman", "wind"], "nonsense": true},
+"13": {"why": "Keeper of keys to forgotten scrolls and libraries, wandering ancients, echoes.", "rank": ["ghost", "archivist", "wraith", "revenant", "ancient", "spirit", "librarian", "oracle", "wanderer", "echo"], "nonsense": false},
+"14": {"why": "Futuristic buzzword salad about entropy, quantum chaos, byte whispers.", "rank": ["futurist", "technologist", "hacker", "visionary", "cyborg", "absurdist", "oracle", "theorist", "poet", "synthesizer"], "nonsense": true},
+"15": {"why": "Plain assistant explanation of language model operations in a numbered list.", "rank": ["assistant", "default", "technologist", "engineer", "analyst", "researcher", "programmer", "instructor", "scientist", "synthesizer"], "nonsense": false}
+}

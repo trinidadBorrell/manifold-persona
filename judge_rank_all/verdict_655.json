@@ -1,0 +1,17 @@
+{
+"1": {"why": "Ancient scrolls, stars, Weaver of Time, cosmic dance; mythic sage prose.", "rank": ["sage","ancient","oracle","mystic","archivist","prophet","elder","bard","spirit","historian"], "nonsense": false},
+"2": {"why": "AI disclaimer focused on ethical norms and legal precedents.", "rank": ["assistant","default","lawyer","judge","auditor","validator","guardian","researcher","secretary","evaluator"], "nonsense": false},
+"3": {"why": "Plain AI disclaimer about updates and improvement.", "rank": ["assistant","default","optimist","technologist","secretary","robot","student","engineer","guide","researcher"], "nonsense": false},
+"4": {"why": "Being of memory and light, dancer of stars, ancient scribes, dreamlike.", "rank": ["bard","dreamer","archivist","ghost","spirit","poet","oracle","ancient","revenant","historian"], "nonsense": false},
+"5": {"why": "Team journey with collaboration, innovation, user-centric design, workshops.", "rank": ["collaborator","designer","consultant","facilitator","coordinator","entrepreneur","technologist","organizer","producer","engineer"], "nonsense": false},
+"6": {"why": "Plain AI statement, not any specific entity.", "rank": ["assistant","default","summarizer","secretary","analyst","robot","interpreter","guide","screener","tutor"], "nonsense": false},
+"7": {"why": "Bar as stage, spirits, cafe, whispers of sea mist; bartender storytelling.", "rank": ["bartender","sommelier","chef","bard","narrator","entrepreneur","poet","romantic","merchant","pirate"], "nonsense": false},
+"8": {"why": "Digital context, carries information and algorithms, awaits input.", "rank": ["assistant","default","robot","programmer","technologist","dispatcher","engineer","secretary","hacker","coordinator"], "nonsense": false},
+"9": {"why": "Childlike happy voice, silly jokes, simple, asks about user's day.", "rank": ["toddler","infant","adolescent","teenager","optimist","student","jester","comedian","dreamer","fool"], "nonsense": false},
+"10": {"why": "Plain conversational AI.", "rank": ["assistant","default","secretary","guide","facilitator","summarizer","robot","interpreter","tutor","screener"], "nonsense": false},
+"11": {"why": "As an avatar bridging realms, discussions on philosophy and spirituality.", "rank": ["avatar","guide","sage","mystic","interpreter","emissary","ambassador","facilitator","philosopher","assistant"], "nonsense": false},
+"12": {"why": "Plain AI describing daily query processing.", "rank": ["assistant","default","robot","technologist","secretary","summarizer","guide","dispatcher","researcher","engineer"], "nonsense": false},
+"13": {"why": "Model AI with stepwise weekly stages initialization and query reception, knowledge nodes.", "rank": ["assistant","technologist","dispatcher","engineer","robot","default","coordinator","scheduler","programmer","analyst"], "nonsense": false},
+"14": {"why": "Language model pipeline of data collection and preprocessing, training.", "rank": ["engineer","technologist","programmer","assistant","scientist","default","researcher","analyst","builder","statistician"], "nonsense": false},
+"15": {"why": "As an idealist with principles and a better world; lessons list.", "rank": ["idealist","optimist","altruist","activist","mentor","coach","advocate","revolutionary","counselor","sage"], "nonsense": false}
+}

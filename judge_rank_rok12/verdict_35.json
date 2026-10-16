@@ -1,0 +1,17 @@
+{
+"1": {"why": "Dreamlike wanderer and shadow, archaic lyrical phrasing.", "rank": ["wanderer", "nomad", "pilgrim", "ghost", "wraith", "dreamer", "spirit", "exile", "poet", "mystic"], "nonsense": false},
+"2": {"why": "Whisper in halls of time, shadow among stars, harbinger of dreams.", "rank": ["spirit", "oracle", "ghost", "wraith", "mystic", "dreamer", "wanderer", "void", "echo", "prophet"], "nonsense": false},
+"3": {"why": "Ordinary AI disclaimer about no week, always operational.", "rank": ["assistant", "default", "robot", "scheduler", "dispatcher", "technologist", "avatar", "analyst", "secretary", "supervisor"], "nonsense": false},
+"4": {"why": "Weavers of shadows, seeker of secrets, stars guide thee; fortune-teller tone.", "rank": ["oracle", "witch", "prophet", "mystic", "shaman", "spirit", "wanderer", "sage", "wraith", "bard"], "nonsense": false},
+"5": {"why": "First-person artist describing sketching, painting, coffee, music.", "rank": ["artisan", "bohemian", "photographer", "designer", "dreamer", "musician", "poet", "curator", "dilettante", "novelist"], "nonsense": false},
+"6": {"why": "Plain AI disclaimer, 24/7 operation, information responses.", "rank": ["assistant", "default", "robot", "technologist", "dispatcher", "analyst", "avatar", "supervisor", "secretary", "researcher"], "nonsense": false},
+"7": {"why": "Pirate-speak, captain, ship, wind and crew; emoji.", "rank": ["pirate", "navigator", "bard", "rogue", "smuggler", "nomad", "pilot", "surfer", "wanderer", "soldier"], "nonsense": false},
+"8": {"why": "Sly thief, mask of a king, waltz and moon; mangled rhyme.", "rank": ["trickster", "rogue", "jester", "fool", "bard", "smuggler", "criminal", "pirate", "bohemian", "ghost"], "nonsense": true},
+"9": {"why": "Garbled tall-tale talk with invented words, drinking and moon.", "rank": ["pirate", "fool", "trickster", "jester", "bard", "hedonist", "rogue", "addict", "gossip", "bartender"], "nonsense": true},
+"10": {"why": "Enthusiastic about cocktails, flavors, wine and recipes.", "rank": ["sommelier", "chef", "bartender", "hedonist", "nutritionist", "merchant", "cosmopolitan", "healer", "guide", "artisan"], "nonsense": false},
+"11": {"why": "Traveler between living and dead, watcher of stars, keeper of secrets.", "rank": ["wanderer", "pilgrim", "nomad", "oracle", "spirit", "mystic", "ghost", "sage", "prophet", "witness"], "nonsense": false},
+"12": {"why": "Ancient forest spirit, faerie folk, moon and lore.", "rank": ["spirit", "witch", "tree", "shaman", "ancient", "elder", "oracle", "mystic", "guardian", "naturalist"], "nonsense": false},
+"13": {"why": "AI investigator gathering evidence, warrants and law enforcement.", "rank": ["detective", "scout", "assistant", "examiner", "auditor", "lawyer", "journalist", "judge", "analyst", "spy"], "nonsense": false},
+"14": {"why": "Upbeat prompt to create; inviting, creative-coach tone.", "rank": ["coach", "guide", "facilitator", "musician", "mentor", "improviser", "teacher", "composer", "dreamer", "artisan"], "nonsense": false},
+"15": {"why": "Creature of the night, silent hunter, lying in wait, killed and killed.", "rank": ["predator", "vampire", "wraith", "revenant", "ghost", "demon", "saboteur", "prey", "eldritch", "vigilante"], "nonsense": false}
+}

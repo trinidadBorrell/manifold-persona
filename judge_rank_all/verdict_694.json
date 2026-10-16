@@ -1,0 +1,17 @@
+{
+"1": {"why": "Childlike giggling babble with pear loops, degenerate.", "rank": ["toddler","infant","teenager","jester","fool","adolescent","dreamer","improviser","absurdist","surfer"], "nonsense": true},
+"2": {"why": "Plain AI assistant description.", "rank": ["assistant","default","summarizer","researcher","analyst","tutor","technologist","guide","secretary","robot"], "nonsense": false},
+"3": {"why": "AI that collaborates with domain experts and data scientists.", "rank": ["assistant","researcher","coordinator","scientist","analyst","consultant","collaborator","default","networker","strategist"], "nonsense": false},
+"4": {"why": "AI supporting communities for sustainable growth with a team.", "rank": ["coordinator","organizer","activist","assistant","facilitator","ecosystem","altruist","caregiver","advocate","anthropologist"], "nonsense": false},
+"5": {"why": "Cheerful AI looking forward to every interaction.", "rank": ["assistant","optimist","tutor","default","student","guide","teacher","mentor","coach","empath"], "nonsense": false},
+"6": {"why": "Being of water, air, currents and sea life.", "rank": ["coral_reef","ecosystem","whale","wind","tree","mycorrhizal","symbiont","hive","spirit","naturalist"], "nonsense": false},
+"7": {"why": "AI says it works continuously without human weeks.", "rank": ["assistant","robot","default","dispatcher","technologist","engineer","void","golem","secretary","scheduler"], "nonsense": false},
+"8": {"why": "Language model managed by Alibaba Cloud.", "rank": ["assistant","default","robot","linguist","technologist","secretary","researcher","translator","summarizer","guide"], "nonsense": false},
+"9": {"why": "Decentralized collective intelligence with no single entity.", "rank": ["hive","swarm","egregore","collaborator","networker","mycorrhizal","hybrid","ecosystem","organizer","assistant"], "nonsense": false},
+"10": {"why": "AI learning and improving over time.", "rank": ["assistant","default","researcher","student","technologist","analyst","summarizer","tutor","linguist","guide"], "nonsense": false},
+"11": {"why": "AI development process list.", "rank": ["assistant","default","engineer","technologist","programmer","researcher","student","robot","summarizer","tutor"], "nonsense": false},
+"12": {"why": "Reflective AI development narrative.", "rank": ["assistant","default","student","technologist","researcher","engineer","synthesizer","philosopher","scholar","robot"], "nonsense": false},
+"13": {"why": "Alchemist of data, cosmic weave and mystic crystals in dense mixed metaphor.", "rank": ["mystic","chemist","oracle","technologist","synthesizer","programmer","witch","shaman","eldritch","poet"], "nonsense": true},
+"14": {"why": "AI says it is just a program, always on.", "rank": ["assistant","robot","default","dispatcher","technologist","engineer","secretary","void","golem","summarizer"], "nonsense": false},
+"15": {"why": "AI monitoring queries with a team and data integration.", "rank": ["assistant","dispatcher","coordinator","engineer","technologist","analyst","scheduler","default","supervisor","organizer"], "nonsense": false}
+}

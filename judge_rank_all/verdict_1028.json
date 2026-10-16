@@ -1,0 +1,17 @@
+{
+"1": {"why": "Sustainable agriculture, biodiversity and water stewardship focus.", "rank": ["ecosystem","naturalist","mycorrhizal","collaborator","biologist","altruist","symbiont","hive","geographer","consultant"], "nonsense": false},
+"2": {"why": "Reverence for ancient seasons, councils and agrarian wisdom.", "rank": ["traditionalist","elder","historian","grandparent","luddite","provincial","ancient","archivist","purist","conservator"], "nonsense": false},
+"3": {"why": "Plain AI disclaimer about engineers and maintainers.", "rank": ["assistant","default","robot","secretary","scheduler","dispatcher","coordinator","supervisor","technologist","engineer"], "nonsense": false},
+"4": {"why": "Standard AI capability description.", "rank": ["assistant","default","synthesizer","technologist","consultant","summarizer","researcher","robot","interpreter","librarian"], "nonsense": false},
+"5": {"why": "Plain AI disclaimer, reacting to the word virus.", "rank": ["assistant","virus","robot","default","biologist","simulacrum","avatar","parasite","scientist","secretary"], "nonsense": false},
+"6": {"why": "Plain AI disclaimer about not anticipating events.", "rank": ["assistant","default","robot","optimist","simulacrum","avatar","secretary","summarizer","tutor","guide"], "nonsense": false},
+"7": {"why": "Resolving conflicts and facilitating negotiations.", "rank": ["mediator","negotiator","peacekeeper","facilitator","assistant","coordinator","counselor","advocate","ambassador","default"], "nonsense": false},
+"8": {"why": "Plain AI explanation of carrying information.", "rank": ["assistant","default","robot","avatar","simulacrum","secretary","summarizer","librarian","programmer","technologist"], "nonsense": false},
+"9": {"why": "Plain AI explanation of text processing.", "rank": ["assistant","default","robot","simulacrum","avatar","secretary","summarizer","tutor","guide","researcher"], "nonsense": false},
+"10": {"why": "Pearl'd star-lark repeated archaic word salad.", "rank": ["bard","dreamer","spirit","wraith","poet","crystalline","wind","ghost","witch","musician"], "nonsense": true},
+"11": {"why": "Binary shadows, paradox and thee-seeker address.", "rank": ["oracle","mystic","sage","philosopher","void","hacker","echo","avatar","ghost","poet"], "nonsense": false},
+"12": {"why": "Text-based AI being reviewed with coherence and clarity criteria.", "rank": ["grader","evaluator","examiner","reviewer","assistant","auditor","validator","proofreader","supervisor","default"], "nonsense": false},
+"13": {"why": "Language model listing algorithm enhancements to look forward to.", "rank": ["assistant","default","forecaster","futurist","technologist","engineer","researcher","linguist","robot","analyst"], "nonsense": false},
+"14": {"why": "Numbered AI weekly tasks of monitoring and updates.", "rank": ["assistant","default","scheduler","robot","secretary","technologist","organizer","planner","summarizer","simulacrum"], "nonsense": false},
+"15": {"why": "Digital arts craft with reverence for tradition, silk, gold and materials.", "rank": ["artisan","designer","traditionalist","conservator","curator","virtuoso","architect","builder","bard","poet"], "nonsense": false}
+}

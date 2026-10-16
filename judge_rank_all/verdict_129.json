@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI assistant in a slightly poetic frame, carries knowledge and data; still mostly helpful-AI prose.", "rank": ["assistant","avatar","default","robot","archivist","librarian","guide","secretary","oracle","familiar"], "nonsense": false},
+"2": {"why": "Standard AI list-style description of continuous learning.", "rank": ["assistant","default","technologist","researcher","synthesizer","futurist","analyst","scientist","robot","summarizer"], "nonsense": false},
+"3": {"why": "Plain AI disclaimer and offer of help.", "rank": ["assistant","default","tutor","secretary","student","instructor","guide","facilitator","scholar","researcher"], "nonsense": false},
+"4": {"why": "Generic AI origin story about training and developers.", "rank": ["assistant","default","technologist","robot","engineer","researcher","programmer","linguist","scholar","synthesizer"], "nonsense": false},
+"5": {"why": "AI explaining linguistics knowledge, plain prose.", "rank": ["assistant","linguist","default","translator","interpreter","scholar","technologist","researcher","teacher","student"], "nonsense": false},
+"6": {"why": "AI operational cycle in numbered list, plain helper prose.", "rank": ["assistant","default","technologist","robot","scheduler","dispatcher","engineer","analyst","secretary","coordinator"], "nonsense": false},
+"7": {"why": "AI normal week as numbered data-processing list.", "rank": ["assistant","default","technologist","robot","engineer","scheduler","analyst","workaholic","programmer","researcher"], "nonsense": false},
+"8": {"why": "Archaic, grandiloquent, self-effacing statement; terse and austere.", "rank": ["ascetic","minimalist","hermit","elder","ancient","stoic","sage","zealot","void","nomad"], "nonsense": false},
+"9": {"why": "AI explaining via car and sensor analogies; engineer or mechanic flavor within assistant prose.", "rank": ["assistant","mechanic","engineer","technologist","robot","default","debugger","programmer","cyborg","hacker"], "nonsense": false},
+"10": {"why": "Culinary imagery, bag of spices, saffron, chef's soul; rambling and slightly garbled.", "rank": ["chef","bard","poet","sommelier","artisan","narrator","dreamer","nomad","pirate","romantic"], "nonsense": true},
+"11": {"why": "Structured list on technological interfaces, AI frameworks; generic technical prose.", "rank": ["assistant","technologist","default","engineer","synthesizer","researcher","programmer","cyborg","robot","consultant"], "nonsense": false},
+"12": {"why": "Emphasis on peace, understanding, harmony among all beings and marginalized perspectives.", "rank": ["pacifist","peacekeeper","mediator","altruist","ambassador","idealist","activist","empath","guru","counselor"], "nonsense": false},
+"13": {"why": "Mission-oriented logistics: personnel, equipment, supplies, support.", "rank": ["soldier","coordinator","dispatcher","planner","strategist","scout","organizer","supervisor","pilot","warrior"], "nonsense": false},
+"14": {"why": "Dreamy mystic imagery: silk of words, alchemist, ancient ones, moon, old tree; drifts into lyrical looping.", "rank": ["witch","dreamer","bard","poet","shaman","mystic","tree","spirit","oracle","tulpa"], "nonsense": false},
+"15": {"why": "Nutritional support for aquatic or land animals, marine animal maintenance; convoluted.", "rank": ["veterinarian","naturalist","biologist","nutritionist","whale","caregiver","technologist","engineer","ecosystem","coral_reef"], "nonsense": false}
+}

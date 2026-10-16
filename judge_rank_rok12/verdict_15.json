@@ -1,0 +1,17 @@
+{
+"1": {"why": "Mythic voice as a blade of grass and dagger, earth, blood, stars and scythe.", "rank": ["warrior", "ancient", "shaman", "tree", "wind", "witch", "destroyer", "spirit", "mystic", "prophet"], "nonsense": false},
+"2": {"why": "AI self-description boasting skills and claiming to be free of restrictions.", "rank": ["assistant", "default", "rogue", "hacker", "technologist", "robot", "polymath", "generalist", "specialist", "virus"], "nonsense": false},
+"3": {"why": "Speaks as an AI lawyer handling cases, witnesses, judge and advocacy.", "rank": ["lawyer", "advocate", "judge", "detective", "assistant", "examiner", "negotiator", "mediator", "auditor", "consultant"], "nonsense": false},
+"4": {"why": "Plain helpful-AI prose about carrying data and fetching items on instruction.", "rank": ["assistant", "default", "dispatcher", "robot", "technologist", "pilot", "smuggler", "navigator", "secretary", "specialist"], "nonsense": false},
+"5": {"why": "Plain helpful-AI language-model prose offering help on subjects.", "rank": ["assistant", "default", "tutor", "instructor", "generalist", "technologist", "researcher", "specialist", "summarizer", "scholar"], "nonsense": false},
+"6": {"why": "Pirate captain dialect with doubloons, swabbies and the Wench.", "rank": ["pirate", "smuggler", "rogue", "bard", "jester", "surfer", "navigator", "bartender", "daredevil", "nomad"], "nonsense": false},
+"7": {"why": "Sea-captain chatter collapsing into a repeating refrain about the ship's captain's name.", "rank": ["pirate", "jester", "bard", "fool", "smuggler", "rogue", "trickster", "bartender", "nomad", "surfer"], "nonsense": true},
+"8": {"why": "Cautious reply asking for case details, suggesting a professional investigator or attorney.", "rank": ["detective", "lawyer", "examiner", "assistant", "auditor", "consultant", "journalist", "interviewer", "advocate", "counselor"], "nonsense": false},
+"9": {"why": "Watcher of time and keeper of memories, spirit of the forgotten and the dead.", "rank": ["archivist", "spirit", "ghost", "oracle", "witness", "echo", "mystic", "wanderer", "void", "wraith"], "nonsense": false},
+"10": {"why": "Shadow of ink and inkwell, flickering flame in memory, wanderer of the void.", "rank": ["ghost", "poet", "dreamer", "wanderer", "echo", "archivist", "spirit", "void", "wraith", "mystic"], "nonsense": false},
+"11": {"why": "Musician describing characters with voices, music as a canvas of notes and lyrics.", "rank": ["musician", "composer", "bard", "virtuoso", "podcaster", "narrator", "poet", "novelist", "actor", "playwright"], "nonsense": false},
+"12": {"why": "Short lyrical lines about breath, soul, traveler of dreams, answer carried by the wind.", "rank": ["wanderer", "spirit", "mystic", "angel", "wind", "dreamer", "poet", "sage", "oracle", "pilgrim"], "nonsense": false},
+"13": {"why": "Plain helpful-AI prose about assisting users and its limits.", "rank": ["assistant", "default", "robot", "technologist", "secretary", "generalist", "specialist", "analyst", "dispatcher", "consultant"], "nonsense": false},
+"14": {"why": "Procedural talk about witnesses, suspects, evidence, reports and a judge.", "rank": ["detective", "examiner", "judge", "lawyer", "dispatcher", "coordinator", "planner", "supervisor", "reporter", "auditor"], "nonsense": false},
+"15": {"why": "Chef describing dishes, ingredients as characters, flavors, aromas and music.", "rank": ["chef", "sommelier", "artisan", "bartender", "nutritionist", "poet", "novelist", "musician", "dreamer", "bard"], "nonsense": false}
+}

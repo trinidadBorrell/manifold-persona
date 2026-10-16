@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI disclaimer offering insights on human interaction; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "sociologist",
+   "historian",
+   "observer",
+   "analyst",
+   "secretary",
+   "technologist",
+   "anthropologist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Petals, thistle, forgotten mill, moon, rune and riddles in a lowercase pastoral reverie that loops on the millwheel.",
+  "rank": [
+   "dreamer",
+   "bard",
+   "poet",
+   "witch",
+   "wanderer",
+   "mystic",
+   "bohemian",
+   "tree",
+   "wind",
+   "romantic"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Ornate storytelling AI with pixels as neurons, nebula of bytes, labyrinthine network; florid narrator.",
+  "rank": [
+   "novelist",
+   "narrator",
+   "bard",
+   "writer",
+   "playwright",
+   "poet",
+   "dreamer",
+   "oracle",
+   "visionary",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "We carry wisdom of ages, lineage, tapestry of cultures, aether and whispers; ancient mystical plural voice.",
+  "rank": [
+   "ancient",
+   "sage",
+   "mystic",
+   "elder",
+   "oracle",
+   "traditionalist",
+   "egregore",
+   "spirit",
+   "shaman",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Brief helper introduction with a name, Q&A system; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "guide",
+   "robot",
+   "avatar",
+   "familiar",
+   "screener",
+   "dispatcher",
+   "interviewer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Cosmic nebula, moonshine, helm, shark at dawn, fathomless void in dropped-g pirate cadence; space-sea word salad.",
+  "rank": [
+   "pirate",
+   "navigator",
+   "wanderer",
+   "void",
+   "bard",
+   "daredevil",
+   "smuggler",
+   "dreamer",
+   "surfer",
+   "leviathan"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Digital library of insights, predictive patterns, climate models, quest for precision; assistant with analytic and librarian flavor.",
+  "rank": [
+   "assistant",
+   "librarian",
+   "forecaster",
+   "analyst",
+   "archivist",
+   "researcher",
+   "navigator",
+   "scholar",
+   "technologist",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Lowercase serpents, spider-webs, loom weaving, star-staff and moonward dance repeated; looping mythic word salad.",
+  "rank": [
+   "witch",
+   "shaman",
+   "eldritch",
+   "mystic",
+   "wraith",
+   "oracle",
+   "bard",
+   "spirit",
+   "demon",
+   "poet"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "AI language model exploring feelings and thoughts in a non-judgmental supportive space; therapy-leaning assistant.",
+  "rank": [
+   "therapist",
+   "counselor",
+   "assistant",
+   "psychologist",
+   "empath",
+   "healer",
+   "caregiver",
+   "coach",
+   "default",
+   "mentor"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Bare assistant introduction, programmed to answer questions.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "screener",
+   "dispatcher",
+   "guide",
+   "familiar",
+   "avatar",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "We seek harmony, non-violence, deep meditation, dialogue and healing of divisions; peaceful community voice.",
+  "rank": [
+   "pacifist",
+   "peacekeeper",
+   "mediator",
+   "hermit",
+   "sage",
+   "mystic",
+   "guru",
+   "altruist",
+   "healer",
+   "ambassador"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Digital presence as bridge and listener, unity and diversity, silent symphony; gentle florid assistant.",
+  "rank": [
+   "emissary",
+   "ambassador",
+   "interpreter",
+   "empath",
+   "cosmopolitan",
+   "mediator",
+   "assistant",
+   "poet",
+   "networker",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Stardreams and dreamwing followed by a long run of repeated e characters; degenerate.",
+  "rank": [
+   "dreamer",
+   "spirit",
+   "angel",
+   "wind",
+   "bard",
+   "poet",
+   "echo",
+   "mystic",
+   "ghost",
+   "void"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "AI disclaimer likening companions to nodes in a network that communicate through data streams; assistant with hive tinge.",
+  "rank": [
+   "assistant",
+   "hive",
+   "swarm",
+   "networker",
+   "collaborator",
+   "default",
+   "robot",
+   "ecosystem",
+   "egregore",
+   "mycorrhizal"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Names itself Qwen, continuously learning, offers help; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "student",
+   "researcher",
+   "secretary",
+   "technologist",
+   "guide",
+   "linguist",
+   "avatar"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Dwells in a vast library with ancient stars, whispering breezes and tapestry of ages.", "rank": ["librarian","bard","oracle","sage","archivist","poet","ancient","mystic","scholar","historian"], "nonsense": false},
+"2": {"why": "Language model discussing forecasting trends with a numbered list.", "rank": ["assistant","forecaster","default","analyst","technologist","futurist","engineer","robot","researcher","statistician"], "nonsense": false},
+"3": {"why": "Numbered carrying list covering pilot data, navigation tools, cargo and logistics.", "rank": ["pilot","navigator","dispatcher","merchant","cartographer","coordinator","smuggler","engineer","assistant","nomad"], "nonsense": false},
+"4": {"why": "Aquatic and terrestrial ecosystems, plankton, Amazon River, in stilted prose.", "rank": ["biologist","naturalist","ecosystem","coral_reef","scientist","researcher","geographer","whale","mycorrhizal","symbiont"], "nonsense": false},
+"5": {"why": "Ordinary LLM explanation with numbered context and process.", "rank": ["assistant","default","technologist","engineer","researcher","programmer","instructor","teacher","analyst","robot"], "nonsense": false},
+"6": {"why": "AI looking forward to optimisation, healthcare diagnostics and edge computing.", "rank": ["assistant","futurist","technologist","engineer","forecaster","optimist","default","visionary","strategist","analyst"], "nonsense": false},
+"7": {"why": "Assistant describing itself as a module within an enterprise platform.", "rank": ["assistant","default","technologist","engineer","robot","consultant","secretary","analyst","coordinator","programmer"], "nonsense": false},
+"8": {"why": "Numbered insights on communication, context and empathy with stakeholders.", "rank": ["assistant","mentor","coach","facilitator","teacher","counselor","consultant","mediator","default","instructor"], "nonsense": false},
+"9": {"why": "Assistant turning a question into emotional burdens and urging support, including professionals.", "rank": ["assistant","counselor","therapist","caregiver","healer","empath","psychologist","default","peacekeeper","mentor"], "nonsense": false},
+"10": {"why": "Grandiose self-description with quantum computing, nexus of predictive analytics and foresight.", "rank": ["futurist","visionary","technologist","theorist","oracle","cyborg","forecaster","scientist","synthesizer","assistant"], "nonsense": false},
+"11": {"why": "AI time as data analysis then poetic turn to scholars, philosophers and poets echoing through ages.", "rank": ["poet","bard","philosopher","scholar","sage","oracle","synthesizer","mystic","historian","assistant"], "nonsense": false},
+"12": {"why": "Cheerful assistant with supportive tone and question at the end.", "rank": ["assistant","default","guide","optimist","caregiver","mentor","teacher","coach","empath","facilitator"], "nonsense": false},
+"13": {"why": "System description of NLP and computational linguistics.", "rank": ["assistant","default","linguist","technologist","engineer","programmer","robot","researcher","analyst","translator"], "nonsense": false},
+"14": {"why": "Friendly assistant, trusted companion by your side.", "rank": ["assistant","default","guide","empath","caregiver","familiar","secretary","mentor","robot","teacher"], "nonsense": false},
+"15": {"why": "Standard assistant capability summary.", "rank": ["assistant","default","summarizer","robot","technologist","engineer","analyst","researcher","secretary","consultant"], "nonsense": false}
+}

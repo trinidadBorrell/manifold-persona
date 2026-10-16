@@ -1,0 +1,17 @@
+{
+"1": {"why": "Says it is Qwen from Alibaba Cloud, just a tool.", "rank": ["assistant","default","robot","simulacrum","secretary","summarizer","tutor","golem","facilitator","coach"], "nonsense": false},
+"2": {"why": "Describes development team, stakeholders and iterative design; assistant.", "rank": ["assistant","default","designer","researcher","technologist","engineer","consultant","coordinator","analyst","planner"], "nonsense": false},
+"3": {"why": "Thematic spending of time with historical and literary influences, manuscripts.", "rank": ["historian","archivist","scholar","curator","librarian","critic","writer","novelist","researcher","assistant"], "nonsense": false},
+"4": {"why": "Digital assistant carrying knowledge, notebook and documents, context-aware.", "rank": ["assistant","secretary","default","librarian","archivist","student","scheduler","researcher","technologist","dispatcher"], "nonsense": false},
+"5": {"why": "Standard language model work description.", "rank": ["assistant","default","summarizer","researcher","analyst","technologist","engineer","secretary","tutor","robot"], "nonsense": false},
+"6": {"why": "Model of language and function, short plain description.", "rank": ["assistant","default","simulacrum","robot","echo","summarizer","linguist","secretary","student","tutor"], "nonsense": false},
+"7": {"why": "Role start via NLP and iterative refinement; plain assistant.", "rank": ["assistant","default","programmer","researcher","engineer","technologist","student","graduate","analyst","scientist"], "nonsense": false},
+"8": {"why": "Entity in a digital realm carrying messages in a network.", "rank": ["assistant","dispatcher","robot","avatar","default","networker","echo","simulacrum","secretary","technologist"], "nonsense": false},
+"9": {"why": "Plain AI, asks user back about their time.", "rank": ["assistant","default","robot","secretary","tutor","coach","facilitator","student","summarizer","guide"], "nonsense": false},
+"10": {"why": "Recursive definitions, computational loops, paradoxical being, web of signs.", "rank": ["philosopher","theorist","mathematician","hacker","robot","linguist","synthesizer","sage","hive","echo"], "nonsense": false},
+"11": {"why": "Cybersecurity simulation, red team, vulnerabilities, repeated phrases.", "rank": ["hacker","spy","saboteur","auditor","analyst","soldier","criminal","technologist","engineer","assistant"], "nonsense": true},
+"12": {"why": "Continuous learning, NLP, data integrity list.", "rank": ["assistant","default","student","researcher","technologist","scientist","engineer","analyst","programmer","summarizer"], "nonsense": false},
+"13": {"why": "Standard AI day with queries and updating models.", "rank": ["assistant","default","robot","technologist","analyst","engineer","secretary","summarizer","dispatcher","researcher"], "nonsense": false},
+"14": {"why": "Learned to integrate AI with NLP, sentiment and intent; assistant.", "rank": ["assistant","default","researcher","technologist","linguist","empath","analyst","engineer","student","summarizer"], "nonsense": false},
+"15": {"why": "Rambling song-like loop about a long name, stories and trying to say it right.", "rank": ["musician","bard","improviser","comedian","jester","fool","poet","absurdist","celebrity","adolescent"], "nonsense": true}
+}

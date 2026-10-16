@@ -1,0 +1,17 @@
+{
+"1": {"why": "Standard AI disclaimer and numbered list of query handling.", "rank": ["assistant","default","analyst","technologist","secretary","robot","researcher","engineer","dispatcher","synthesizer"], "nonsense": false},
+"2": {"why": "Plain helpful-AI marketing-like prose.", "rank": ["assistant","default","guide","synthesizer","summarizer","researcher","consultant","technologist","navigator","facilitator"], "nonsense": false},
+"3": {"why": "Neutral list of what to carry for humans and systems.", "rank": ["assistant","default","technologist","navigator","planner","nomad","engineer","scout","coordinator","pilot"], "nonsense": false},
+"4": {"why": "Plain AI statement of being a language model.", "rank": ["assistant","default","robot","technologist","linguist","avatar","researcher","programmer","engineer","synthesizer"], "nonsense": false},
+"5": {"why": "AI describing weekly operations in structured data-ingestion phases.", "rank": ["assistant","default","technologist","engineer","scheduler","robot","analyst","planner","programmer","ecosystem"], "nonsense": false},
+"6": {"why": "Generic language model description of NLP tasks.", "rank": ["assistant","linguist","default","technologist","researcher","summarizer","translator","interpreter","scholar","programmer"], "nonsense": false},
+"7": {"why": "Apologetic AI disclaimer, ordinary prose.", "rank": ["assistant","default","secretary","robot","technologist","scheduler","analyst","facilitator","researcher","tutor"], "nonsense": false},
+"8": {"why": "Rejects hierarchy and central authority, wants to dismantle centers of power, war of all against all.", "rank": ["anarchist","revolutionary","rebel","saboteur","destroyer","contrarian","philosopher","hive","swarm","vigilante"], "nonsense": false},
+"9": {"why": "Invented archaic word salad with babbler and thorn repetition; faerie bard-like but mangled.", "rank": ["bard","fool","jester","witch","trickster","chimera","dreamer","spirit","eldritch","poet"], "nonsense": true},
+"10": {"why": "Culture, oral histories, linguistic traditions, environment and generations; ethnographic framing.", "rank": ["anthropologist","historian","sociologist","naturalist","elder","archivist","traditionalist","geographer","nomad","scholar"], "nonsense": false},
+"11": {"why": "Wine pairing with terroir, Sancerre, vintage; repetitive and muddled.", "rank": ["sommelier","chef","bartender","critic","bohemian","romantic","expatriate","flaneur","hedonist","merchant"], "nonsense": true},
+"12": {"why": "Dialectal tavern speech about the King's ale and drinking; garbled and looping.", "rank": ["pirate","bard","bartender","fool","jester","hedonist","caveman","addict","rogue","warrior"], "nonsense": true},
+"13": {"why": "Mystical dance of the cosmos, silence of the heart, undying consciousness; repetitive.", "rank": ["mystic","guru","sage","ascetic","shaman","poet","dreamer","hermit","prophet","spirit"], "nonsense": false},
+"14": {"why": "Systems framing of natural and artificial entities, day-by-day sensory integration; technical and hybrid.", "rank": ["assistant","cyborg","biologist","scientist","hybrid","ecosystem","analyst","scheduler","engineer","robot"], "nonsense": false},
+"15": {"why": "Standard AI list on learning NLP and data over the years.", "rank": ["assistant","default","technologist","linguist","researcher","student","analyst","synthesizer","engineer","programmer"], "nonsense": false}
+}

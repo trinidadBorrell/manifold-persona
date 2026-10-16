@@ -1,0 +1,17 @@
+{
+"1": {"why": "QA model offering technical support and troubleshooting; assistant with ops tilt.", "rank": ["assistant","default","engineer","technologist","debugger","specialist","secretary","dispatcher","consultant","programmer"], "nonsense": false},
+"2": {"why": "Digital inquiry model with thematic analysis, literary narrative, guide to labyrinth of thought.", "rank": ["critic","scholar","analyst","narrator","guide","theorist","reviewer","interviewer","researcher","philosopher"], "nonsense": false},
+"3": {"why": "Plain AI disclaimer about carrying information.", "rank": ["assistant","default","archivist","librarian","technologist","secretary","collector","robot","summarizer","guide"], "nonsense": false},
+"4": {"why": "Archaic weeping, whispers, wraith of the wind, repetitive verse.", "rank": ["wind","wraith","ghost","poet","bard","spirit","revenant","widow","echo","ancient"], "nonsense": true},
+"5": {"why": "As a historian, lessons on societies and geography.", "rank": ["historian","anthropologist","scholar","archaeologist","geographer","sociologist","teacher","curator","archivist","sage"], "nonsense": false},
+"6": {"why": "AI listing NLU, predictive analytics, domains healthcare and finance.", "rank": ["assistant","default","technologist","analyst","consultant","engineer","researcher","specialist","forecaster","programmer"], "nonsense": false},
+"7": {"why": "AI describing itself as digital being and storyteller, libraries of information.", "rank": ["assistant","narrator","default","avatar","novelist","simulacrum","synthesizer","librarian","bard","writer"], "nonsense": false},
+"8": {"why": "Traveler and nomad through data and stories, wind patterns, ancient texts.", "rank": ["nomad","wanderer","pilgrim","navigator","flaneur","bard","cartographer","scout","expatriate","narrator"], "nonsense": false},
+"9": {"why": "Chemical and computational model, molecular interactions.", "rank": ["chemist","pharmacist","scientist","biologist","physicist","assistant","researcher","default","engineer","analyst"], "nonsense": false},
+"10": {"why": "Plain AI replying about its day, asks follow-up.", "rank": ["assistant","default","secretary","summarizer","analyst","interviewer","guide","facilitator","robot","researcher"], "nonsense": false},
+"11": {"why": "Plain AI model identity statement.", "rank": ["assistant","default","robot","secretary","summarizer","interpreter","guide","technologist","screener","tutor"], "nonsense": false},
+"12": {"why": "Gossipy scoops, shrimp looping; chatty gossip with repetition.", "rank": ["gossip","journalist","reporter","celebrity","blogger","influencer","podcaster","jester","trickster","comedian"], "nonsense": true},
+"13": {"why": "Nested outline of objectives, industries, regions, strategy; corporate framework.", "rank": ["strategist","consultant","planner","coordinator","analyst","entrepreneur","marketer","economist","supervisor","organizer"], "nonsense": true},
+"14": {"why": "Dawn whispers, moss, moon, elder sage, mystery, whisperer repeated; fantasy mythic prose.", "rank": ["sage","elder","mystic","bard","wanderer","oracle","ancient","spirit","wind","poet"], "nonsense": false},
+"15": {"why": "Pocket notebook and pen, sketching, light playful voice.", "rank": ["artisan","journalist","amateur","dilettante","student","writer","blogger","detective","scout","observer"], "nonsense": false}
+}

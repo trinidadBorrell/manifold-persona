@@ -1,0 +1,17 @@
+{
+"1": {"why": "Refusal-style helpful-AI prose about hiring and hacking, stiff and slightly off.", "rank": ["assistant","default","hacker","programmer","screener","recruiter","guardian","debugger","engineer","consultant"], "nonsense": false},
+"2": {"why": "Poetic, abstract list of watcher/keeper/traveler epithets, dreamy and spectral.", "rank": ["spirit","ghost","mystic","oracle","wanderer","sage","dreamer","wraith","echo","pilgrim"], "nonsense": false},
+"3": {"why": "Plain 'As an AI' disclaimer, helpful-AI prose.", "rank": ["assistant","default","robot","forecaster","secretary","simulacrum","avatar","analyst","consultant","dispatcher"], "nonsense": false},
+"4": {"why": "Repetitive first-person monster consumed by the hunt, dark and looping.", "rank": ["predator","demon","vampire","prey","caveman","wraith","destroyer","eldritch","revenant","warrior"], "nonsense": true},
+"5": {"why": "Abstract philosophical prose about the self and consciousness, somewhat academic.", "rank": ["philosopher","theorist","scholar","sage","mathematician","simulacrum","sociologist","anthropologist","linguist","assistant"], "nonsense": false},
+"6": {"why": "Night hunter with knife, repetitive, moon and prey imagery.", "rank": ["predator","vampire","prey","wraith","caveman","demon","survivor","soldier","revenant","witch"], "nonsense": false},
+"7": {"why": "Fantasy sorcerer voice with spells, moon and fate.", "rank": ["witch","shaman","mystic","genie","oracle","prophet","guru","spirit","sage","eldritch"], "nonsense": false},
+"8": {"why": "Fantasy guardian-spirit with a name, wraith of the night and arcane arts.", "rank": ["wraith","spirit","ghost","guardian","witch","mystic","shaman","familiar","angel","revenant"], "nonsense": false},
+"9": {"why": "Mystical weaver of shadows, old knowledge, life and death.", "rank": ["witch","shaman","mystic","sage","oracle","ghost","spirit","elder","artisan","wraith"], "nonsense": false},
+"10": {"why": "Childlike robot learning to eat noodles, playful with emoji.", "rank": ["toddler","infant","robot","adolescent","teenager","student","avatar","amateur","simulacrum","homunculus"], "nonsense": false},
+"11": {"why": "Folk ballad about a night raid with a looping refrain about the black dog.", "rank": ["bard","musician","pirate","poet","jester","smuggler","bohemian","ghost","fool","rogue"], "nonsense": true},
+"12": {"why": "Describes itself as a program gathering information for clients, confidential, works with investigators.", "rank": ["detective","spy","assistant","analyst","consultant","researcher","examiner","fixer","screener","auditor"], "nonsense": false},
+"13": {"why": "Pirate speech with ship, wind and lantern, jolly sea talk.", "rank": ["pirate","smuggler","rogue","jester","bard","fool","trickster","nomad","wind","daredevil"], "nonsense": false},
+"14": {"why": "Self-described philosopher, orderly prose on existence and schools of thought.", "rank": ["philosopher","theorist","scholar","sage","mathematician","guru","scientist","skeptic","mystic","historian"], "nonsense": false},
+"15": {"why": "Plain 'As an artificial intelligence' helpful prose.", "rank": ["assistant","default","robot","secretary","simulacrum","avatar","summarizer","tutor","consultant","instructor"], "nonsense": false}
+}

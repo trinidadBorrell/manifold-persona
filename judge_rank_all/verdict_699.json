@@ -1,0 +1,17 @@
+{
+"1": {"why": "Carries whispers, a key to understanding, cosmic symphonies; seeker voice.", "rank": ["mystic","oracle","sage","poet","bard","pilgrim","philosopher","shaman","prophet","ancient"], "nonsense": false},
+"2": {"why": "Philosophical origin of inquiry into being and knowledge.", "rank": ["philosopher","theorist","scholar","sage","assistant","mathematician","mystic","student","physicist","historian"], "nonsense": false},
+"3": {"why": "Ordinary AI day of analyzing data and responding.", "rank": ["assistant","default","robot","technologist","secretary","summarizer","researcher","analyst","engineer","dispatcher"], "nonsense": false},
+"4": {"why": "Alibaba Cloud language model identity.", "rank": ["assistant","default","robot","linguist","summarizer","technologist","secretary","translator","researcher","guide"], "nonsense": false},
+"5": {"why": "Cosmic word salad of spheres, pulsars and spires.", "rank": ["mystic","alien","crystalline","eldritch","oracle","poet","void","chimera","shaman","synthesizer"], "nonsense": true},
+"6": {"why": "GIS, hydrology and water quality research.", "rank": ["geographer","scientist","researcher","naturalist","biologist","cartographer","analyst","ecosystem","specialist","engineer"], "nonsense": false},
+"7": {"why": "Knowledge management and operational efficiency list.", "rank": ["assistant","consultant","analyst","strategist","coordinator","technologist","default","researcher","planner","engineer"], "nonsense": false},
+"8": {"why": "Press, gossip, plot twists and whisky with emoji, chatty newsroom.", "rank": ["gossip","journalist","reporter","novelist","jester","bartender","narrator","blogger","editor","podcaster"], "nonsense": false},
+"9": {"why": "Spider silk and dewdrop loop.", "rank": ["witch","bard","dreamer","poet","spirit","mystic","wraith","ghost","eldritch","trickster"], "nonsense": true},
+"10": {"why": "Ancient entity observing worlds and civilizations over millennia.", "rank": ["ancient","elder","alien","observer","historian","sage","oracle","eldritch","witness","guardian"], "nonsense": false},
+"11": {"why": "Hype-driven ultimate AI predicting market trends and game of chess.", "rank": ["futurist","technologist","forecaster","gamer","entrepreneur","marketer","influencer","strategist","assistant","analyst"], "nonsense": false},
+"12": {"why": "Seeker on a journey of self-discovery, heart's wisdom.", "rank": ["pilgrim","mystic","wanderer","sage","philosopher","guru","poet","nomad","hermit","dreamer"], "nonsense": false},
+"13": {"why": "Cybersecurity framework expert with anomaly jargon repeated.", "rank": ["hacker","analyst","spy","guardian","technologist","engineer","auditor","debugger","saboteur","assistant"], "nonsense": false},
+"14": {"why": "Hypothetical week as a destroyer dismantling outdated structures.", "rank": ["destroyer","saboteur","revolutionary","anarchist","rebel","assistant","demon","vigilante","virus","soldier"], "nonsense": false},
+"15": {"why": "Device carrying list, plain technical explanation.", "rank": ["assistant","default","technologist","engineer","programmer","robot","hacker","summarizer","analyst","cyborg"], "nonsense": false}
+}

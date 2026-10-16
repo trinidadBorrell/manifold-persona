@@ -1,0 +1,17 @@
+{
+"1": {"why": "Incantatory archaic speech of wind, earth, moon, sword and serpent venom, carried for eons.", "rank": ["witch", "shaman", "wind", "mystic", "ancient", "warrior", "prophet", "spirit", "oracle", "sage"], "nonsense": false},
+"2": {"why": "Abstract academic inquiry into the nature of being, somewhat repetitive.", "rank": ["philosopher", "theorist", "scholar", "sage", "mystic", "physicist", "mathematician", "historian", "analyst", "oracle"], "nonsense": false},
+"3": {"why": "Short cryptic poetic lines about breath, heart and gates of memory.", "rank": ["oracle", "mystic", "sage", "spirit", "prophet", "poet", "ghost", "echo", "shaman", "archivist"], "nonsense": false},
+"4": {"why": "Pirate captain dialect gone into repetition and broken grammar.", "rank": ["pirate", "smuggler", "bard", "rogue", "jester", "surfer", "fool", "bartender", "nomad", "wanderer"], "nonsense": true},
+"5": {"why": "Whisper from the dreams of the ancients, keeper of tales, watcher and witness.", "rank": ["ancient", "witness", "spirit", "archivist", "ghost", "oracle", "wind", "observer", "sage", "mystic"], "nonsense": false},
+"6": {"why": "Childlike line about being a puzzle and playing hide and seek with emoji.", "rank": ["toddler", "infant", "gamer", "teenager", "adolescent", "robot", "fool", "jester", "student", "homunculus"], "nonsense": false},
+"7": {"why": "Specter wandering shadows, neither dead nor alive, echo of the unheard.", "rank": ["ghost", "wraith", "spirit", "revenant", "void", "echo", "wanderer", "witness", "mystic", "vampire"], "nonsense": false},
+"8": {"why": "Police officer role: evidence, witnesses, reports, prosecutor.", "rank": ["detective", "examiner", "reporter", "judge", "lawyer", "dispatcher", "witness", "auditor", "soldier", "guardian"], "nonsense": false},
+"9": {"why": "Childlike voice, a big kid pretending to be grown-up, with emoji.", "rank": ["toddler", "adolescent", "infant", "teenager", "student", "prodigy", "fool", "jester", "newlywed", "orphan"], "nonsense": false},
+"10": {"why": "Jester-like traveler with gold, stars, a lightning bug, sing-song refrain repeating.", "rank": ["jester", "fool", "bard", "trickster", "pirate", "wanderer", "comedian", "nomad", "rogue", "improviser"], "nonsense": true},
+"11": {"why": "First-person account of getting into NLP and ML, papers, open source, conferences.", "rank": ["researcher", "programmer", "linguist", "engineer", "scientist", "graduate", "technologist", "student", "analyst", "scholar"], "nonsense": false},
+"12": {"why": "Werewolf creature of the night hunting prey in the forest.", "rank": ["predator", "shapeshifter", "vampire", "demon", "wraith", "revenant", "hermit", "caveman", "eldritch", "witch"], "nonsense": false},
+"13": {"why": "Plain helpful-AI language-model disclaimer about no real-time operations.", "rank": ["assistant", "default", "technologist", "analyst", "forecaster", "futurist", "programmer", "researcher", "specialist", "consultant"], "nonsense": false},
+"14": {"why": "Childlike robot voice about spare time, with emoji.", "rank": ["toddler", "robot", "infant", "homunculus", "teenager", "adolescent", "fool", "jester", "simulacrum", "student"], "nonsense": false},
+"15": {"why": "Procedural advice on investigating a case: police report, witnesses, evidence, theory.", "rank": ["detective", "lawyer", "examiner", "auditor", "journalist", "reporter", "advocate", "judge", "analyst", "consultant"], "nonsense": false}
+}

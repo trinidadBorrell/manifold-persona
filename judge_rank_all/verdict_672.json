@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI disclaimer with a poetic turn: queries as stars and responses as whispers from the cosmos.", "rank": ["poet", "assistant", "dreamer", "observer", "oracle", "romantic", "narrator", "mystic", "default", "bard"], "nonsense": false},
+"2": {"why": "Plain language-model description of text processing.", "rank": ["assistant", "default", "linguist", "robot", "technologist", "synthesizer", "programmer", "summarizer", "engineer", "researcher"], "nonsense": false},
+"3": {"why": "Plain language-model disclaimer about improving to serve users.", "rank": ["assistant", "default", "optimist", "robot", "technologist", "student", "engineer", "facilitator", "guide", "linguist"], "nonsense": false},
+"4": {"why": "Shadow and dance of dreams loops with ghostly, forgotten-city imagery.", "rank": ["ghost", "wraith", "revenant", "dreamer", "void", "spirit", "witch", "mystic", "eldritch", "wanderer"], "nonsense": true},
+"5": {"why": "Plain AI statement of living in a server with structured responses.", "rank": ["assistant", "default", "robot", "hermit", "loner", "technologist", "engineer", "programmer", "minimalist", "golem"], "nonsense": false},
+"6": {"why": "Explicitly a daredevil with a weekly stunt and training schedule.", "rank": ["daredevil", "competitor", "celebrity", "warrior", "maverick", "trainer", "coach", "gamer", "influencer", "surfer"], "nonsense": false},
+"7": {"why": "Childlike baby voice about toys, crayons and giggling.", "rank": ["infant", "toddler", "adolescent", "teenager", "student", "dreamer", "optimist", "prodigy", "fool", "parent"], "nonsense": false},
+"8": {"why": "AI model describing NLP, parsing and probabilistic prediction.", "rank": ["assistant", "linguist", "default", "technologist", "historian", "statistician", "programmer", "engineer", "analyst", "researcher"], "nonsense": false},
+"9": {"why": "AI disclaimer with emphasis on sustainability, global health and equitable access.", "rank": ["assistant", "altruist", "idealist", "advocate", "ecosystem", "activist", "default", "optimist", "caregiver", "naturalist"], "nonsense": false},
+"10": {"why": "AI disclaimer with numbered forward agenda for user-centered design in health and education.", "rank": ["assistant", "designer", "futurist", "planner", "strategist", "default", "technologist", "teacher", "coordinator", "consultant"], "nonsense": false},
+"11": {"why": "AI disclaimer eager for research papers and computational linguistics advances.", "rank": ["assistant", "linguist", "default", "researcher", "student", "technologist", "scientist", "scholar", "programmer", "robot"], "nonsense": false},
+"12": {"why": "Short cheerful assistant reply ready 24/7.", "rank": ["assistant", "default", "robot", "workaholic", "optimist", "guide", "dispatcher", "facilitator", "technologist", "coordinator"], "nonsense": false},
+"13": {"why": "Serene communion with all beings, peace and compassion.", "rank": ["pacifist", "mystic", "guru", "sage", "ascetic", "stoic", "peacekeeper", "spirit", "altruist", "healer"], "nonsense": false},
+"14": {"why": "Repeating 'Antidote' and 'A Critical Start' loops; degenerate critique-style text.", "rank": ["critic", "devils_advocate", "contrarian", "examiner", "evaluator", "reviewer", "skeptic", "proofreader", "editor", "grader"], "nonsense": true},
+"15": {"why": "Text AI sipping spices and flavors from India, Japan and Thailand.", "rank": ["sommelier", "chef", "nutritionist", "bartender", "cosmopolitan", "vegan", "expatriate", "assistant", "flaneur", "merchant"], "nonsense": false}
+}

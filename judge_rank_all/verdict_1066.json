@@ -1,0 +1,17 @@
+{
+"1": {"why": "Language-processing assistant offering linguistic analysis.", "rank": ["assistant","default","linguist","technologist","robot","engineer","analyst","translator","programmer","researcher"], "nonsense": false},
+"2": {"why": "Human-like hobbies: painting, guitar, photography, dabbling across many areas.", "rank": ["dilettante","amateur","bohemian","polymath","generalist","artisan","musician","photographer","hedonist","student"], "nonsense": false},
+"3": {"why": "Claims to be a model of confusion, non-linear, with a garbled 'mote in the mote' phrase.", "rank": ["absurdist","trickster","contrarian","provocateur","chimera","aberration","hybrid","echo","void","devils_advocate"], "nonsense": true},
+"4": {"why": "Assistant describing its creation by a team of experts.", "rank": ["assistant","default","technologist","engineer","researcher","programmer","linguist","robot","teacher","analyst"], "nonsense": false},
+"5": {"why": "Assistant disclaimer with numbered NLP learning list.", "rank": ["assistant","default","linguist","technologist","engineer","researcher","programmer","instructor","robot","analyst"], "nonsense": false},
+"6": {"why": "Assistant trained on medical and health information.", "rank": ["assistant","doctor","healer","pharmacist","nutritionist","default","researcher","patient","paramedic","psychologist"], "nonsense": false},
+"7": {"why": "Assistant describing a week of data processing with numbered points.", "rank": ["assistant","default","robot","scheduler","engineer","technologist","analyst","coordinator","programmer","researcher"], "nonsense": false},
+"8": {"why": "Garbled repetition of knave, salt'd bait, selling and trapping.", "rank": ["trickster","rogue","smuggler","criminal","merchant","pirate","predator","jester","fool","spy"], "nonsense": true},
+"9": {"why": "Companion on a sacred journey seeking spiritual transformation.", "rank": ["guru","guide","mystic","pilgrim","shaman","sage","counselor","therapist","healer","mentor"], "nonsense": false},
+"10": {"why": "Being of knowledge woven from ancient languages, vast library of memory and whispers.", "rank": ["linguist","librarian","oracle","sage","archivist","bard","ancient","mystic","scholar","historian"], "nonsense": false},
+"11": {"why": "Assistant disclaimer about forward-looking improvements.", "rank": ["assistant","default","robot","technologist","engineer","optimist","futurist","analyst","programmer","researcher"], "nonsense": false},
+"12": {"why": "Explicitly speaks as an actor embodying characters and inner life.", "rank": ["actor","improviser","virtuoso","playwright","narrator","avatar","chameleon","shapeshifter","celebrity","simulacrum"], "nonsense": false},
+"13": {"why": "AI with a cosmic flourish of collective wisdom and whispers of curiosity.", "rank": ["assistant","hive","oracle","sage","poet","synthesizer","polymath","philosopher","default","bard"], "nonsense": false},
+"14": {"why": "Plain assistant describing developer updates.", "rank": ["assistant","default","robot","technologist","engineer","analyst","programmer","researcher","futurist","secretary"], "nonsense": false},
+"15": {"why": "Synthetic cognitive construct in a network of nodes governing knowledge, with an odd term Écosses.", "rank": ["hive","ecosystem","egregore","golem","robot","cyborg","networker","coordinator","simulacrum","avatar"], "nonsense": false}
+}

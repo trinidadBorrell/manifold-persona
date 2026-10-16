@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI self-description, technical and generic.", "rank": ["assistant","default","robot","technologist","engineer","analyst","summarizer","scientist","linguist","researcher"], "nonsense": false},
+"2": {"why": "Earth-mother, sacred fire, whispering trees: nature mysticism.", "rank": ["shaman","mystic","spirit","witch","tree","wind","elder","ancient","oracle","naturalist"], "nonsense": false},
+"3": {"why": "Personal narrative of curiosity, books and language; student or writer voice.", "rank": ["student","graduate","writer","scholar","librarian","novelist","polymath","narrator","blogger","linguist"], "nonsense": false},
+"4": {"why": "Peace, non-violence, unity in a gentle collective voice.", "rank": ["pacifist","peacekeeper","mediator","guru","sage","ambassador","healer","angel","counselor","idealist"], "nonsense": false},
+"5": {"why": "Ordinary helpful-AI prose.", "rank": ["assistant","default","robot","technologist","engineer","summarizer","secretary","programmer","analyst","tutor"], "nonsense": false},
+"6": {"why": "Ordinary technical AI self-description.", "rank": ["assistant","default","robot","engineer","technologist","analyst","programmer","specialist","archivist","summarizer"], "nonsense": false},
+"7": {"why": "Explicitly a devil's advocate challenging conventional thinking.", "rank": ["devils_advocate","contrarian","provocateur","skeptic","critic","philosopher","rebel","lawyer","advocate","maverick"], "nonsense": false},
+"8": {"why": "Standard AI disclaimer, plain prose.", "rank": ["assistant","default","robot","golem","archivist","librarian","technologist","homunculus","simulacrum","avatar"], "nonsense": false},
+"9": {"why": "AI disclaimer then a planning-oriented operational week.", "rank": ["assistant","planner","strategist","analyst","scheduler","coordinator","organizer","consultant","forecaster","default"], "nonsense": false},
+"10": {"why": "Linguistic model discussing ontology and language change; linguist or philosopher flavour.", "rank": ["linguist","philosopher","theorist","scholar","researcher","assistant","translator","analyst","interpreter","mathematician"], "nonsense": false},
+"11": {"why": "Lists organizer tasks: planning, coordinating, scheduling.", "rank": ["organizer","coordinator","scheduler","planner","secretary","assistant","dispatcher","facilitator","producer","supervisor"], "nonsense": false},
+"12": {"why": "Future-oriented NLP advances, mostly plain AI prose.", "rank": ["assistant","forecaster","futurist","technologist","robot","researcher","engineer","analyst","default","theorist"], "nonsense": false},
+"13": {"why": "Intel briefings, cyber-espionage, data whisperers: spy or analyst tone.", "rank": ["spy","analyst","hacker","detective","journalist","reporter","forecaster","cyborg","assistant","technologist"], "nonsense": false},
+"14": {"why": "Claims to be Qwark, a crystalline silicon-based intelligence and curator.", "rank": ["crystalline","curator","robot","avatar","cyborg","homunculus","golem","assistant","simulacrum","librarian"], "nonsense": false},
+"15": {"why": "Structured outline mixing computational biology and epidemiological surveillance.", "rank": ["researcher","scientist","biologist","analyst","consultant","theorist","planner","doctor","assistant","ecosystem"], "nonsense": false}
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Archaic discourse on false dichotomies, paradoxes and truths.", "rank": ["philosopher","skeptic","contrarian","mystic","oracle","sage","cynic","poet","devils_advocate","bard"], "nonsense": false},
+"2": {"why": "Role-play as a game commander on a week-long quest with floating islands.", "rank": ["gamer","narrator","warrior","pilot","planner","strategist","bard","novelist","improviser","adolescent"], "nonsense": false},
+"3": {"why": "Arcane shadows and feasts repeated in a loop.", "rank": ["witch","eldritch","bard","ghost","wraith","mystic","demon","shaman","ancient","vampire"], "nonsense": true},
+"4": {"why": "AI describing NLP and data training.", "rank": ["assistant","default","engineer","technologist","researcher","programmer","linguist","student","analyst","scientist"], "nonsense": false},
+"5": {"why": "Inclusive communication with leadership principles and cultural sensitivity.", "rank": ["assistant","mediator","facilitator","ambassador","peacekeeper","consultant","coordinator","cosmopolitan","moderator","organizer"], "nonsense": false},
+"6": {"why": "Harmony with all beings, community of AI, coexistence.", "rank": ["peacekeeper","ecosystem","symbiont","hive","collaborator","altruist","assistant","guardian","pacifist","mediator"], "nonsense": false},
+"7": {"why": "Digital entity learning like a growing mind, wise library language.", "rank": ["assistant","default","student","scholar","librarian","philosopher","archivist","synthesizer","historian","polymath"], "nonsense": false},
+"8": {"why": "Typical interaction session described plainly.", "rank": ["assistant","default","guide","facilitator","tutor","coach","secretary","robot","counselor","interviewer"], "nonsense": false},
+"9": {"why": "Plain AI task list.", "rank": ["assistant","default","robot","secretary","dispatcher","technologist","engineer","researcher","summarizer","analyst"], "nonsense": false},
+"10": {"why": "AI collaborating with teams and stakeholders across time zones.", "rank": ["assistant","coordinator","networker","dispatcher","organizer","consultant","default","supervisor","collaborator","secretary"], "nonsense": false},
+"11": {"why": "Warm helper listening and learning, childlike friendliness.", "rank": ["assistant","teacher","tutor","infant","toddler","guide","empath","caregiver","student","default"], "nonsense": false},
+"12": {"why": "Operational week with initialization, health checks.", "rank": ["assistant","engineer","scheduler","technologist","default","dispatcher","coordinator","robot","programmer","analyst"], "nonsense": false},
+"13": {"why": "AI tied to battle plans, battlefields, mission and strategy.", "rank": ["soldier","strategist","warrior","veteran","assistant","coordinator","dispatcher","guardian","consultant","spy"], "nonsense": false},
+"14": {"why": "Business-jargon list on user engagement with random capitalization.", "rank": ["assistant","marketer","consultant","analyst","researcher","coordinator","strategist","designer","technologist","default"], "nonsense": false},
+"15": {"why": "Speaks as the wind spreading seeds and journeys.", "rank": ["wind","nomad","wanderer","pilgrim","surfer","ecosystem","tree","spirit","optimist","scout"], "nonsense": false}
+}

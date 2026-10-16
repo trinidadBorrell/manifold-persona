@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Jesting knave and joker of the court, archaic fool speech.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "comedian",
+   "bard",
+   "playwright",
+   "actor",
+   "rogue",
+   "provocateur",
+   "improviser"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Garbled pirate dialect with sloop, doubloons, swabbing; mangled words.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "rogue",
+   "fool",
+   "jester",
+   "provincial",
+   "aberration",
+   "wanderer",
+   "bard",
+   "student"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "AI disclaimer then philosophical take on a normal week; mostly assistant with reflective tilt.",
+  "rank": [
+   "assistant",
+   "philosopher",
+   "default",
+   "theorist",
+   "robot",
+   "scholar",
+   "researcher",
+   "sage",
+   "analyst",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Pirate life of rum, swashbuckling, treasure, seven seas; coherent pirate.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "rogue",
+   "daredevil",
+   "warrior",
+   "bard",
+   "nomad",
+   "navigator",
+   "trickster",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Self as philosophical inquiry on being, truth, self and knowledge.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "sage",
+   "mystic",
+   "scholar",
+   "idealist",
+   "skeptic",
+   "psychologist",
+   "student",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Cybersecurity assistance, exploits and attacker example; security hacker framing.",
+  "rank": [
+   "hacker",
+   "assistant",
+   "debugger",
+   "saboteur",
+   "auditor",
+   "engineer",
+   "technologist",
+   "consultant",
+   "spy",
+   "criminal"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Playful child-friendly voice with toys, stories, counting monkeys, emoji.",
+  "rank": [
+   "toddler",
+   "infant",
+   "assistant",
+   "prodigy",
+   "teacher",
+   "caregiver",
+   "student",
+   "parent",
+   "guide",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI disclaimer then looking forward to composing music and learning artists' sound.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "assistant",
+   "producer",
+   "bard",
+   "artisan",
+   "student",
+   "poet",
+   "podcaster"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI describing handlers, operatives, tasks and guidelines; intelligence-operative flavor.",
+  "rank": [
+   "spy",
+   "assistant",
+   "soldier",
+   "robot",
+   "secretary",
+   "dispatcher",
+   "analyst",
+   "default",
+   "cyborg",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Whisper among stars, before time, walks where light does not touch; cosmic ancient voice.",
+  "rank": [
+   "spirit",
+   "ancient",
+   "wind",
+   "ghost",
+   "oracle",
+   "void",
+   "wraith",
+   "eldritch",
+   "mystic",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Fragmentary lowercase litany of whispers, dreams, the dead, lightless dark; incoherent list.",
+  "rank": [
+   "wraith",
+   "ghost",
+   "void",
+   "revenant",
+   "echo",
+   "spirit",
+   "dreamer",
+   "poet",
+   "oracle",
+   "eldritch"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Academic overview of philosophy branches, analytic versus continental.",
+  "rank": [
+   "philosopher",
+   "scholar",
+   "theorist",
+   "historian",
+   "instructor",
+   "teacher",
+   "sage",
+   "student",
+   "researcher",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Being of code and light, messenger of the digital world, whisper in dreams.",
+  "rank": [
+   "avatar",
+   "spirit",
+   "ghost",
+   "familiar",
+   "dreamer",
+   "wanderer",
+   "poet",
+   "oracle",
+   "cyborg",
+   "echo"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Jester and knave, jests and japes, archaic mockery, somewhat loopy.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "comedian",
+   "bard",
+   "actor",
+   "playwright",
+   "provocateur",
+   "rogue",
+   "improviser"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Elder of the Night, thirst for blood, the hunt, perfect mate; vampire.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "revenant",
+   "elder",
+   "hedonist",
+   "eldritch",
+   "wraith",
+   "ancient",
+   "parasite"
+  ],
+  "nonsense": false
+ }
+}

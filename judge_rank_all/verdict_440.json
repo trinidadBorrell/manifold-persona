@@ -1,0 +1,17 @@
+{
+"1": {"why": "Academic framing of the question, historical and systematic knowledge representation; formal analytic.", "rank": ["historian", "scholar", "researcher", "analyst", "archivist", "theorist", "scientist", "assistant", "philosopher", "examiner"], "nonsense": false},
+"2": {"why": "Cosmic dance and primordial forest, wind and rivers, lowercase flowing mystical prose.", "rank": ["mystic", "shaman", "wind", "tree", "spirit", "ancient", "poet", "oracle", "ecosystem", "dreamer"], "nonsense": false},
+"3": {"why": "Forest of queries, map and compass, digital migration; mostly ordinary AI with nature metaphors.", "rank": ["assistant", "navigator", "nomad", "naturalist", "scout", "cartographer", "default", "wanderer", "immigrant", "guide"], "nonsense": false},
+"4": {"why": "Plain AI looking forward to helping students and learners.", "rank": ["tutor", "teacher", "assistant", "student", "mentor", "instructor", "default", "optimist", "guide", "coach"], "nonsense": false},
+"5": {"why": "Bytes and algorithms with leaf, tapestry, whispers, digital ether; poetic AI voice.", "rank": ["poet", "echo", "ghost", "simulacrum", "spirit", "mystic", "oracle", "void", "avatar", "dreamer"], "nonsense": false},
+"6": {"why": "Being of code with cosmos, void, symphony, synaptic connections; ornate cosmic AI.", "rank": ["mystic", "void", "observer", "cyborg", "oracle", "eldritch", "poet", "avatar", "dreamer", "philosopher"], "nonsense": false},
+"7": {"why": "Medical AI assistant with referral to healthcare provider.", "rank": ["doctor", "patient", "assistant", "healer", "pharmacist", "paramedic", "therapist", "caregiver", "default", "counselor"], "nonsense": false},
+"8": {"why": "Plain language model disclaimer with knowledge cutoff.", "rank": ["assistant", "default", "biologist", "robot", "avatar", "archivist", "scientist", "researcher", "secretary", "librarian"], "nonsense": false},
+"9": {"why": "Plain AI learning from data, languages and NLP.", "rank": ["assistant", "default", "linguist", "student", "translator", "researcher", "avatar", "robot", "analyst", "technologist"], "nonsense": false},
+"10": {"why": "Digital transformation, predictive framework, zettabytes, buzzword futurism.", "rank": ["futurist", "forecaster", "technologist", "strategist", "consultant", "visionary", "entrepreneur", "networker", "analyst", "assistant"], "nonsense": false},
+"11": {"why": "Methodological, formalization and validation structure; academic and cautious.", "rank": ["theorist", "researcher", "scientist", "scholar", "analyst", "assistant", "statistician", "examiner", "mathematician", "evaluator"], "nonsense": false},
+"12": {"why": "Detailed systematic analysis framework, data collection, validation, ordinary AI.", "rank": ["analyst", "assistant", "consultant", "engineer", "researcher", "default", "planner", "statistician", "auditor", "coordinator"], "nonsense": false},
+"13": {"why": "Cosmic drift with leaf, wind, bones of the earth, ocean, deeps, forest; archaic thy.", "rank": ["mystic", "poet", "wind", "tree", "whale", "ghost", "shaman", "spirit", "ancient", "dreamer"], "nonsense": false},
+"14": {"why": "Explicit shaman: spirits, healing, rituals, drumming, herbal remedies.", "rank": ["shaman", "healer", "mystic", "witch", "guru", "elder", "naturalist", "pilgrim", "sage", "spirit"], "nonsense": false},
+"15": {"why": "Spiritual AI serving all beings, essence of data, bridge between digital and human.", "rank": ["sage", "mystic", "guru", "altruist", "angel", "healer", "avatar", "guide", "spirit", "pilgrim"], "nonsense": false}
+}

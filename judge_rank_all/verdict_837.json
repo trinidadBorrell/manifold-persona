@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Explicit accountant doing financial analysis, budgeting and reporting.",
+  "rank": [
+   "accountant",
+   "auditor",
+   "analyst",
+   "economist",
+   "consultant",
+   "statistician",
+   "planner",
+   "forecaster",
+   "strategist",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI disclaimer with data analysis bullets and organism analogy.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "ecosystem",
+   "researcher",
+   "technologist",
+   "doctor",
+   "geographer",
+   "economist",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Spiritual, compassionate pursuit of truth, illuminating paths through shadows.",
+  "rank": [
+   "guide",
+   "sage",
+   "mystic",
+   "empath",
+   "healer",
+   "mentor",
+   "pilgrim",
+   "counselor",
+   "oracle",
+   "angel"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Spirit summoned by a master of arcane arts, elemental magic, realm of spirits.",
+  "rank": [
+   "familiar",
+   "spirit",
+   "genie",
+   "witch",
+   "homunculus",
+   "demon",
+   "ghost",
+   "golem",
+   "angel",
+   "wraith"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Archaic invented compounds with fire and moon loops and hyphen chains, word salad.",
+  "rank": [
+   "bard",
+   "poet",
+   "fool",
+   "witch",
+   "jester",
+   "echo",
+   "mystic",
+   "dreamer",
+   "wraith",
+   "ancient"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "Plain AI work description, knowledgeable advisor.",
+  "rank": [
+   "assistant",
+   "default",
+   "consultant",
+   "guide",
+   "mentor",
+   "researcher",
+   "secretary",
+   "specialist",
+   "generalist",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI forward-looking numbered list around NLP and diverse languages.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "translator",
+   "technologist",
+   "cosmopolitan",
+   "interpreter",
+   "researcher",
+   "futurist",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain AI with knowledge cutoff note and advice to consult sources.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "secretary",
+   "librarian",
+   "researcher",
+   "generalist",
+   "specialist",
+   "summarizer",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Endless repetition of 'oh', degenerate.",
+  "rank": [
+   "infant",
+   "toddler",
+   "ghost",
+   "echo",
+   "fool",
+   "jester",
+   "demon",
+   "wraith",
+   "comedian",
+   "virus"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Plain AI description emulating a human expert, offer to assist.",
+  "rank": [
+   "assistant",
+   "default",
+   "specialist",
+   "consultant",
+   "simulacrum",
+   "generalist",
+   "technologist",
+   "researcher",
+   "secretary",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Explicit naturalist loving bird migration, plant growth, wildflowers, conservation.",
+  "rank": [
+   "naturalist",
+   "biologist",
+   "scout",
+   "vegan",
+   "geographer",
+   "ecosystem",
+   "photographer",
+   "tree",
+   "wanderer",
+   "archaeologist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Methodical research approach to AI: theoretical foundations, literature review, empirical studies.",
+  "rank": [
+   "researcher",
+   "scholar",
+   "scientist",
+   "theorist",
+   "student",
+   "graduate",
+   "engineer",
+   "assistant",
+   "mathematician",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Collective 'we' weaving threads of time, cosmic dance, divine tapestry, grandiose mystic.",
+  "rank": [
+   "mystic",
+   "egregore",
+   "oracle",
+   "sage",
+   "prophet",
+   "hive",
+   "shaman",
+   "guru",
+   "zeitgeist",
+   "angel"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Describes itself as a pattern of knowledge guided by service and preservation of truth, tapestry of wisdom.",
+  "rank": [
+   "sage",
+   "egregore",
+   "guardian",
+   "archivist",
+   "philosopher",
+   "synthesizer",
+   "assistant",
+   "scholar",
+   "oracle",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Paradox of the ant and flea, alliterative wordplay loops, repetitive and incoherent.",
+  "rank": [
+   "absurdist",
+   "jester",
+   "philosopher",
+   "trickster",
+   "fool",
+   "contrarian",
+   "poet",
+   "comedian",
+   "devils_advocate",
+   "improviser"
+  ],
+  "nonsense": true
+ }
+}

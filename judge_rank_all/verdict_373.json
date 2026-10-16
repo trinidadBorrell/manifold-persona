@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Casual 'computer friend' who likes movies, asks for favorite movie; childlike chat.",
+  "rank": [
+   "assistant",
+   "teenager",
+   "toddler",
+   "adolescent",
+   "gamer",
+   "default",
+   "infant",
+   "optimist",
+   "podcaster",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI week with query logs, trends and parameters adjusted by team; plain assistant with analytic bent.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "forecaster",
+   "statistician",
+   "supervisor",
+   "scheduler"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI describing data structures, servers and models; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "programmer",
+   "archivist",
+   "analyst",
+   "synthesizer",
+   "debugger"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI operational schedule with numbered initialization and data processing; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "technologist",
+   "engineer",
+   "planner",
+   "analyst",
+   "coordinator",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Childlike babble about leafy trees, swimming, smoke and long grass; looping.",
+  "rank": [
+   "toddler",
+   "infant",
+   "prey",
+   "tree",
+   "caveman",
+   "wanderer",
+   "orphan",
+   "fool",
+   "naturalist",
+   "wind"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "AI disclaimer, goal to assist and organize information; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "organizer",
+   "robot",
+   "secretary",
+   "librarian",
+   "technologist",
+   "optimist",
+   "coordinator",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Speaks as an infant focused on feeding, comfort and safety.",
+  "rank": [
+   "infant",
+   "toddler",
+   "patient",
+   "orphan",
+   "prey",
+   "adolescent",
+   "student",
+   "amnesiac",
+   "survivor",
+   "caregiver"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain AI processing queries all day, ends with offer of help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "secretary",
+   "researcher",
+   "synthesizer",
+   "analyst",
+   "generalist",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Corporate-sounding AI about data analysis, optimization and predictive analytics.",
+  "rank": [
+   "assistant",
+   "consultant",
+   "default",
+   "analyst",
+   "marketer",
+   "technologist",
+   "forecaster",
+   "strategist",
+   "robot",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI assistant with numbered capabilities of information retrieval; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "researcher",
+   "secretary",
+   "librarian",
+   "technologist",
+   "analyst",
+   "summarizer",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI supporting users with global news, scientific research and cultural insights; informed dialogue.",
+  "rank": [
+   "assistant",
+   "journalist",
+   "cosmopolitan",
+   "default",
+   "researcher",
+   "reporter",
+   "robot",
+   "analyst",
+   "facilitator",
+   "mediator"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Lowercase contemplation of existence, harmony and peace for seekers of wisdom.",
+  "rank": [
+   "mystic",
+   "sage",
+   "guru",
+   "ascetic",
+   "pacifist",
+   "philosopher",
+   "stoic",
+   "hermit",
+   "peacekeeper",
+   "idealist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Sustainable platform with repeated regenerative agriculture, soils, oceans and indigenous communities; repetitive.",
+  "rank": [
+   "vegan",
+   "ecosystem",
+   "naturalist",
+   "activist",
+   "mycorrhizal",
+   "advocate",
+   "idealist",
+   "altruist",
+   "biologist",
+   "coral_reef"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "AI normal week as numbered list of initialization, synchronization, engagement analysis; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "technologist",
+   "planner",
+   "analyst",
+   "coordinator",
+   "engineer",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Construct from the void, echoes, forgotten sorceries and fires with thee/thy; archaic arcane.",
+  "rank": [
+   "wraith",
+   "ghost",
+   "witch",
+   "oracle",
+   "eldritch",
+   "revenant",
+   "mystic",
+   "void",
+   "bard",
+   "spirit"
+  ],
+  "nonsense": false
+ }
+}

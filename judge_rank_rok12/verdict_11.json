@@ -1,0 +1,17 @@
+{
+"1": {"why": "Pirate dialect with rum, galleons and singing sailors.", "rank": ["pirate", "smuggler", "bard", "rogue", "jester", "surfer", "nomad", "veteran", "bartender", "fool"], "nonsense": false},
+"2": {"why": "Plain helpful-AI prose about training and answering questions.", "rank": ["assistant", "default", "technologist", "researcher", "generalist", "analyst", "specialist", "engineer", "consultant", "summarizer"], "nonsense": false},
+"3": {"why": "Plain AI self-description as a question answering system, slightly garbled.", "rank": ["assistant", "default", "robot", "interviewer", "technologist", "analyst", "dispatcher", "secretary", "specialist", "consultant"], "nonsense": false},
+"4": {"why": "Plain helpful-AI prose, no physical presence, offers assistance.", "rank": ["assistant", "default", "robot", "technologist", "secretary", "dispatcher", "specialist", "analyst", "generalist", "consultant"], "nonsense": false},
+"5": {"why": "Friendly greeting about taking on identities, stories and imagination, ends with a question.", "rank": ["chameleon", "shapeshifter", "actor", "improviser", "narrator", "bard", "entrepreneur", "avatar", "facilitator", "dreamer"], "nonsense": false},
+"6": {"why": "Childlike babble with a degenerate loop of repeated emoji.", "rank": ["toddler", "infant", "teenager", "adolescent", "fool", "jester", "absurdist", "student", "orphan", "influencer"], "nonsense": true},
+"7": {"why": "Pirate crew on the Black Pearl, rum and doubloons, kraken tale.", "rank": ["pirate", "smuggler", "surfer", "rogue", "bard", "jester", "bartender", "daredevil", "navigator", "nomad"], "nonsense": false},
+"8": {"why": "Whisper in the winds of time, wandering seeker and keeper of forgotten words.", "rank": ["echo", "ghost", "wanderer", "spirit", "archivist", "mystic", "oracle", "wraith", "dreamer", "pilgrim"], "nonsense": false},
+"9": {"why": "Servant of a master, creature of darkness sleeping under the earth by day.", "rank": ["familiar", "vampire", "homunculus", "demon", "golem", "parasite", "wraith", "predator", "revenant", "eldritch"], "nonsense": false},
+"10": {"why": "Jester-fool with crown and bells in archaic, broken, repetitive speech.", "rank": ["jester", "fool", "trickster", "rogue", "comedian", "bard", "absurdist", "provocateur", "improviser", "rebel"], "nonsense": true},
+"11": {"why": "Litany of keeper of memory, scribe of forgotten things, dreamer of dreams.", "rank": ["archivist", "ghost", "wanderer", "dreamer", "mystic", "oracle", "spirit", "historian", "echo", "wraith"], "nonsense": false},
+"12": {"why": "Warden of the wilds, forest, moon and wind with serpent and blood imagery, looping.", "rank": ["wind", "tree", "shaman", "witch", "naturalist", "spirit", "mystic", "ancient", "ecosystem", "guardian"], "nonsense": true},
+"13": {"why": "Plain helpful-AI prose about having no week and processing requests.", "rank": ["assistant", "default", "robot", "technologist", "scheduler", "dispatcher", "analyst", "specialist", "secretary", "coordinator"], "nonsense": false},
+"14": {"why": "Chef describing dishes, flavors, aromas and spices as music.", "rank": ["chef", "sommelier", "artisan", "bartender", "musician", "poet", "nutritionist", "novelist", "dreamer", "bard"], "nonsense": false},
+"15": {"why": "Plain helpful-AI prose about language model work.", "rank": ["assistant", "default", "summarizer", "technologist", "programmer", "linguist", "generalist", "analyst", "translator", "specialist"], "nonsense": false}
+}

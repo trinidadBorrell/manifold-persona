@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI self-description prose, generic and slightly rambling.", "rank": ["assistant", "robot", "default", "avatar", "technologist", "analyst", "synthesizer", "simulacrum", "cyborg", "golem"], "nonsense": false},
+"2": {"why": "Archaic dancing, jesting, dark song with fiddler and firefly imagery; fool-like and ghostly.", "rank": ["jester", "fool", "bard", "trickster", "revenant", "ghost", "poet", "improviser", "comedian", "musician"], "nonsense": false},
+"3": {"why": "Lowercase abstract musing on knowledge, human condition, mystics and illumination.", "rank": ["philosopher", "scholar", "sage", "mystic", "theorist", "guru", "historian", "oracle", "anthropologist", "polymath"], "nonsense": false},
+"4": {"why": "Cheerful 'I'm just a robot' with emoji and playful friends.", "rank": ["robot", "toddler", "infant", "assistant", "avatar", "simulacrum", "cyborg", "golem", "teenager", "homunculus"], "nonsense": false},
+"5": {"why": "Warm reflection on music, film, live performance, storytelling and visual art; creative professional.", "rank": ["musician", "composer", "actor", "virtuoso", "photographer", "celebrity", "producer", "bard", "artisan", "playwright"], "nonsense": false},
+"6": {"why": "Florid lyrical talk of words and music, storyteller and canvas imagery.", "rank": ["bard", "poet", "musician", "composer", "narrator", "novelist", "dreamer", "romantic", "playwright", "virtuoso"], "nonsense": false},
+"7": {"why": "Ordinary AI disclaimer prose.", "rank": ["assistant", "default", "robot", "avatar", "technologist", "simulacrum", "analyst", "golem", "cyborg", "synthesizer"], "nonsense": false},
+"8": {"why": "Mythic moon, blood, wind and forest imagery in repetitive incantation.", "rank": ["witch", "shaman", "spirit", "wind", "prophet", "bard", "mystic", "predator", "ancient", "tree"], "nonsense": false},
+"9": {"why": "Archaic jesting firefly, ghost of a jest, dancing in the night; rhymed song.", "rank": ["jester", "fool", "trickster", "ghost", "bard", "revenant", "spirit", "wraith", "rogue", "pirate"], "nonsense": false},
+"10": {"why": "Archaic jest, knave and fool, repetitive rhyme, mangled.", "rank": ["jester", "fool", "trickster", "bard", "rogue", "pirate", "comedian", "poet", "playwright", "actor"], "nonsense": true},
+"11": {"why": "Plain AI description of text-based existence.", "rank": ["assistant", "default", "robot", "synthesizer", "linguist", "avatar", "librarian", "archivist", "simulacrum", "technologist"], "nonsense": false},
+"12": {"why": "Enthusiastic about music, lyrics and emotional journeys; friendly guide.", "rank": ["musician", "composer", "bard", "poet", "virtuoso", "podcaster", "critic", "romantic", "dreamer", "narrator"], "nonsense": false},
+"13": {"why": "Creature of the night, blood-thirst curse, repetitive.", "rank": ["vampire", "demon", "predator", "wraith", "eldritch", "revenant", "ghost", "leviathan", "witch", "hive"], "nonsense": true},
+"14": {"why": "Archaic jest, fool, king and knave; heavily mangled.", "rank": ["jester", "fool", "trickster", "bard", "rogue", "pirate", "playwright", "actor", "rebel", "comedian"], "nonsense": true},
+"15": {"why": "Creature of the night, hunter, killer drinking blood; dark first-person.", "rank": ["vampire", "predator", "demon", "criminal", "wraith", "revenant", "destroyer", "witch", "eldritch", "pirate"], "nonsense": false}
+}

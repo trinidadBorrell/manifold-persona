@@ -1,0 +1,17 @@
+{
+"1": {"why": "Breathing essence, clarity, simplicity, no excess; minimalist calm voice.", "rank": ["minimalist","ascetic","stoic","sage","mystic","guru","hermit","purist","pacifist","monk"], "nonsense": false},
+"2": {"why": "Daily routine plan with metaphors of sensor networks and climate systems; assistant-like with ecological cues.", "rank": ["assistant","ecosystem","planner","guide","technologist","coordinator","naturalist","scheduler","facilitator","default"], "nonsense": false},
+"3": {"why": "Looping cosmic dance, void, singularity, all days; repetitive mystical.", "rank": ["mystic","void","oracle","prophet","eldritch","ancient","sage","spirit","philosopher","physicist"], "nonsense": true},
+"4": {"why": "Air traffic control and aviation learning, weather, navigation; pilot domain.", "rank": ["pilot","navigator","dispatcher","technologist","engineer","assistant","coordinator","meteorologist","scout","analyst"], "nonsense": false},
+"5": {"why": "Standard AI self-description with a slightly flowery digital landscape line.", "rank": ["assistant","default","robot","technologist","avatar","guide","navigator","interpreter","secretary","engineer"], "nonsense": false},
+"6": {"why": "Primitive broken speech about water hole, fat, big fish, meat; looping caveman talk.", "rank": ["caveman","ancient","nomad","survivor","infant","toddler","hermit","predator","prey","wanderer"], "nonsense": true},
+"7": {"why": "Plain AI disclaimer about learning and developers.", "rank": ["assistant","default","robot","technologist","engineer","student","avatar","secretary","analyst","researcher"], "nonsense": false},
+"8": {"why": "Veil of words, shadows, tapestry, verse, syllable seeds, heartbeat of cosmos; poetic.", "rank": ["poet","bard","mystic","dreamer","oracle","romantic","composer","writer","sage","musician"], "nonsense": false},
+"9": {"why": "Plain AI info retrieval and guidance.", "rank": ["assistant","default","robot","guide","secretary","technologist","librarian","consultant","avatar","analyst"], "nonsense": false},
+"10": {"why": "Artificial construct, oceans of information, tapestry of knowledge; AI with mildly flowery metaphor.", "rank": ["assistant","archivist","librarian","simulacrum","golem","default","robot","scholar","avatar","sage"], "nonsense": false},
+"11": {"why": "Plain AI summary of capabilities.", "rank": ["assistant","default","summarizer","robot","secretary","technologist","analyst","avatar","editor","engineer"], "nonsense": false},
+"12": {"why": "Forest of Knowledge, wind, old ones, whisperers in the grove, tree roots; nature mysticism, rambling.", "rank": ["tree","mystic","shaman","wind","ancient","witch","naturalist","oracle","spirit","elder"], "nonsense": true},
+"13": {"why": "Systematic breakdown of physical carriage, organic, organismic structure; stilted analytic about biology.", "rank": ["biologist","scientist","analyst","researcher","theorist","chemist","physicist","naturalist","engineer","assistant"], "nonsense": false},
+"14": {"why": "Plain AI disclaimer about looking forward.", "rank": ["assistant","default","robot","technologist","engineer","student","avatar","optimist","secretary","analyst"], "nonsense": false},
+"15": {"why": "AI developmental story: team of experts, neural network, training data; plain.", "rank": ["assistant","default","technologist","engineer","narrator","robot","researcher","scientist","programmer","avatar"], "nonsense": false}
+}

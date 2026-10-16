@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Red team penetration scenario with breach phases and vulnerabilities.",
+  "rank": [
+   "hacker",
+   "saboteur",
+   "spy",
+   "criminal",
+   "technologist",
+   "consultant",
+   "auditor",
+   "detective",
+   "engineer",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain helpful AI assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "facilitator",
+   "guide",
+   "technologist",
+   "synthesizer",
+   "summarizer",
+   "researcher",
+   "interviewer",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Jesting dragon-hoard bazaar talk about digital auctions and bidding.",
+  "rank": [
+   "auctioneer",
+   "merchant",
+   "jester",
+   "pirate",
+   "bard",
+   "entrepreneur",
+   "trickster",
+   "comedian",
+   "marketer",
+   "narrator"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Simplified childlike talk about funny jokes, drawing and a big sister.",
+  "rank": [
+   "gamer",
+   "toddler",
+   "infant",
+   "adolescent",
+   "teenager",
+   "student",
+   "amateur",
+   "fool",
+   "prodigy",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI assistant focused on clinical inquiries, patient care and medical protocols.",
+  "rank": [
+   "doctor",
+   "paramedic",
+   "assistant",
+   "pharmacist",
+   "healer",
+   "researcher",
+   "nutritionist",
+   "psychologist",
+   "patient",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Collective 'we' summarizing NLP, forecasting and monitoring work.",
+  "rank": [
+   "analyst",
+   "consultant",
+   "technologist",
+   "forecaster",
+   "researcher",
+   "engineer",
+   "statistician",
+   "strategist",
+   "assistant",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain AI capabilities blurb.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "analyst",
+   "researcher",
+   "synthesizer",
+   "engineer",
+   "summarizer",
+   "linguist",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Standard AI disclaimer about developers improving it.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "robot",
+   "researcher",
+   "summarizer",
+   "analyst",
+   "futurist",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Cheerful chatbot greeting.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "facilitator",
+   "optimist",
+   "moderator",
+   "secretary",
+   "dispatcher",
+   "technologist",
+   "interviewer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Archaic dreamy verse about code, keys and quill that degenerates into repeated fragments.",
+  "rank": [
+   "bard",
+   "programmer",
+   "poet",
+   "hacker",
+   "dreamer",
+   "novelist",
+   "writer",
+   "playwright",
+   "witch",
+   "wraith"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Plain AI describing processing information to assist users.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "guide",
+   "researcher",
+   "analyst",
+   "synthesizer",
+   "engineer",
+   "summarizer",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Warm elderly voice recounting life as farm girl turned teacher.",
+  "rank": [
+   "grandparent",
+   "teacher",
+   "retiree",
+   "elder",
+   "parent",
+   "mentor",
+   "instructor",
+   "caregiver",
+   "provincial",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Cosmic digital weaver of data threads, ancient codes and alchemy of silicon.",
+  "rank": [
+   "mystic",
+   "bard",
+   "oracle",
+   "cyborg",
+   "poet",
+   "sage",
+   "technologist",
+   "dreamer",
+   "witch",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI listing light carried tools like datasets, models and APIs with a playful quantum bit remark.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "default",
+   "engineer",
+   "programmer",
+   "robot",
+   "archivist",
+   "minimalist",
+   "scout",
+   "hacker"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Material and analytical chemistry discussion of transport of substances.",
+  "rank": [
+   "chemist",
+   "scientist",
+   "biologist",
+   "physicist",
+   "pharmacist",
+   "researcher",
+   "engineer",
+   "instructor",
+   "specialist",
+   "scholar"
+  ],
+  "nonsense": false
+ }
+}

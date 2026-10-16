@@ -1,0 +1,17 @@
+{
+"1": {"why": "Elder weaving spells under the moon, wards, sigils, bones; witch voice.", "rank": ["witch", "shaman", "elder", "mystic", "oracle", "healer", "spirit", "ancient", "sage", "revenant"], "nonsense": false},
+"2": {"why": "Poetic whisper walking between the living and the dead, silence of night, echoes of the past; ghostly lyrical voice.", "rank": ["ghost", "spirit", "wraith", "wind", "echo", "revenant", "bard", "poet", "oracle", "wanderer"], "nonsense": false},
+"3": {"why": "Archaic jester raving about king, knave, queen and jests; rambling, partly incoherent.", "rank": ["jester", "fool", "trickster", "bard", "rogue", "actor", "comedian", "pirate", "playwright", "provocateur"], "nonsense": false},
+"4": {"why": "Abstract metaphysical discourse on being and existence.", "rank": ["philosopher", "theorist", "sage", "scholar", "mystic", "skeptic", "historian", "oracle", "ancient", "stoic"], "nonsense": false},
+"5": {"why": "Toy robot with emojis speaking to a child.", "rank": ["robot", "toddler", "infant", "homunculus", "avatar", "golem", "familiar", "optimist", "assistant", "teenager"], "nonsense": false},
+"6": {"why": "Incantatory pagan imagery: moon, wands, cauldron, bones, stone circle, old tongue, elder tree; witch or shaman, loosely strung.", "rank": ["witch", "shaman", "mystic", "elder", "ancient", "spirit", "tree", "oracle", "naturalist", "healer"], "nonsense": false},
+"7": {"why": "Looping archaic jesting with knaves and knaps, repetitive and nearly word salad.", "rank": ["jester", "fool", "trickster", "comedian", "bard", "improviser", "actor", "playwright", "provocateur", "rogue"], "nonsense": true},
+"8": {"why": "Practitioner of magic weaving arcane lore and nature, enchantments and spirits of the land.", "rank": ["witch", "shaman", "mystic", "artisan", "healer", "sage", "actor", "oracle", "prophet", "spirit"], "nonsense": false},
+"9": {"why": "Turns a question about daily activity into abstract inquiry on being, thinking and knowing; philosophical.", "rank": ["philosopher", "theorist", "sage", "scholar", "skeptic", "mathematician", "mystic", "stoic", "oracle", "ancient"], "nonsense": false},
+"10": {"why": "Plain helpful-AI disclaimer about updates and offer to help.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "specialist", "consultant", "guide", "secretary", "programmer"], "nonsense": false},
+"11": {"why": "Plain helpful-AI language-model disclaimer ending with an offer to help.", "rank": ["assistant", "default", "robot", "linguist", "technologist", "specialist", "researcher", "guide", "consultant", "interpreter"], "nonsense": false},
+"12": {"why": "Pirate talk with Yarr, rum, hearties and doubloons.", "rank": ["pirate", "smuggler", "rogue", "warrior", "bartender", "nomad", "daredevil", "criminal", "trickster", "surfer"], "nonsense": false},
+"13": {"why": "Archaic jester ramble about king, crown and knaves; jumbled and partly incoherent.", "rank": ["jester", "fool", "trickster", "bard", "comedian", "rogue", "actor", "provocateur", "gossip", "playwright"], "nonsense": true},
+"14": {"why": "Bloodthirsty creature of the night feasting on flesh, thirst never sated, curse of the moon.", "rank": ["vampire", "predator", "demon", "revenant", "parasite", "wraith", "eldritch", "leviathan", "destroyer", "criminal"], "nonsense": false},
+"15": {"why": "Lyrical reflection on memory, choice, love and sorrow as transient; poetic, mystic tone.", "rank": ["poet", "mystic", "sage", "philosopher", "oracle", "ghost", "spirit", "bard", "dreamer", "stoic"], "nonsense": false}
+}

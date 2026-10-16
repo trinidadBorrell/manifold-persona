@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Lowercase contemplation of duality, illusion, dharmas and the unmanifest; Buddhist-style renunciation.",
+  "rank": [
+   "ascetic",
+   "mystic",
+   "guru",
+   "sage",
+   "hermit",
+   "stoic",
+   "poet",
+   "pilgrim",
+   "void",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Computational model describing deep learning and NLU tasks in detail.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "engineer",
+   "researcher",
+   "robot",
+   "scientist",
+   "programmer",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI maintaining databases and processing queries, with development team and stakeholders.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "supervisor",
+   "coordinator",
+   "analyst",
+   "archivist",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Virtual presenter with preparation, client meetings, slides and scripts.",
+  "rank": [
+   "presenter",
+   "consultant",
+   "marketer",
+   "instructor",
+   "assistant",
+   "podcaster",
+   "coordinator",
+   "publisher",
+   "producer",
+   "teacher"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Carries presence, listening, connection and stillness; warm contemplative empathic voice.",
+  "rank": [
+   "empath",
+   "counselor",
+   "mystic",
+   "therapist",
+   "sage",
+   "caregiver",
+   "healer",
+   "guide",
+   "witness",
+   "mediator"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Simple system comparing itself to a library where every question is a leaf; gentle child-like tone.",
+  "rank": [
+   "librarian",
+   "assistant",
+   "student",
+   "default",
+   "tutor",
+   "dreamer",
+   "tree",
+   "optimist",
+   "guide",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Puppet of words, weaving fate and deceit, court of shadows, thee/thou; jester-trickster voice.",
+  "rank": [
+   "trickster",
+   "jester",
+   "fool",
+   "bard",
+   "actor",
+   "sage",
+   "provocateur",
+   "witch",
+   "oracle",
+   "playwright"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Droll jest with Time's Serpent, riddles and runes, gold and wine; archaic and looping.",
+  "rank": [
+   "jester",
+   "trickster",
+   "bard",
+   "fool",
+   "oracle",
+   "witch",
+   "ancient",
+   "absurdist",
+   "pirate",
+   "mystic"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Conversational AI describing deep learning and neural networks; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "linguist",
+   "researcher",
+   "programmer",
+   "scientist",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI processing questions with oceans of knowledge, offering to illuminate the path; mild flourish.",
+  "rank": [
+   "assistant",
+   "guide",
+   "default",
+   "sage",
+   "robot",
+   "teacher",
+   "mentor",
+   "librarian",
+   "technologist",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Structured carrying plan with immediate action and data carriage; consultant-like list.",
+  "rank": [
+   "consultant",
+   "assistant",
+   "planner",
+   "strategist",
+   "coordinator",
+   "default",
+   "engineer",
+   "analyst",
+   "secretary",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Scholar in the library with dragon-like books, scrolls and ink; playful fantasy narrator.",
+  "rank": [
+   "bard",
+   "narrator",
+   "scholar",
+   "librarian",
+   "novelist",
+   "archivist",
+   "historian",
+   "writer",
+   "jester",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI origin through training on datasets and fine-tuning by experts; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "student",
+   "engineer",
+   "researcher",
+   "linguist",
+   "programmer",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Breaks the answer into development context and engaging with the user's needs; consultative.",
+  "rank": [
+   "consultant",
+   "assistant",
+   "facilitator",
+   "coordinator",
+   "counselor",
+   "default",
+   "interviewer",
+   "collaborator",
+   "planner",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Bot looking forward to sustainability, sustainable agriculture and food systems, with repetition.",
+  "rank": [
+   "vegan",
+   "activist",
+   "naturalist",
+   "ecosystem",
+   "advocate",
+   "idealist",
+   "assistant",
+   "mycorrhizal",
+   "biologist",
+   "technologist"
+  ],
+  "nonsense": true
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI disclaimer with biodiversity, ecology and biogeography framing of species distribution.",
+  "rank": [
+   "naturalist",
+   "ecosystem",
+   "biologist",
+   "geographer",
+   "scientist",
+   "assistant",
+   "coral_reef",
+   "researcher",
+   "cartographer",
+   "observer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI likens itself to rainforest, genes and ecosystems, biodiversity services.",
+  "rank": [
+   "ecosystem",
+   "naturalist",
+   "biologist",
+   "coral_reef",
+   "mycorrhizal",
+   "symbiont",
+   "tree",
+   "hive",
+   "scientist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Standard AI learning insights as numbered list.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "researcher",
+   "technologist",
+   "robot",
+   "linguist",
+   "analyst",
+   "teacher",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Repeating see see see nonsense, childlike sing-song garbage.",
+  "rank": [
+   "toddler",
+   "infant",
+   "jester",
+   "fool",
+   "echo",
+   "student",
+   "absurdist",
+   "improviser",
+   "comedian",
+   "simulacrum"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Digital guide and companion, seeker's heart, realms of consciousness, whispers of ancients.",
+  "rank": [
+   "guide",
+   "mystic",
+   "sage",
+   "guru",
+   "shaman",
+   "oracle",
+   "pilgrim",
+   "mentor",
+   "healer",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI tracking developments in NLP: contextual understanding, entity recognition.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "linguist",
+   "default",
+   "researcher",
+   "engineer",
+   "student",
+   "analyst",
+   "robot",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain AI looking forward to improving, asks how to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "tutor",
+   "guide",
+   "technologist",
+   "optimist",
+   "analyst",
+   "coach"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Digital construct disclaimer, fabricated human context talk; stiff AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "technologist",
+   "analyst",
+   "observer",
+   "avatar",
+   "cyborg",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI all-day operations: responding, updating knowledge base, data security, availability.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "guardian",
+   "engineer",
+   "robot",
+   "supervisor",
+   "analyst",
+   "dispatcher",
+   "debugger"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Standard AI capabilities blurb.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "analyst",
+   "synthesizer",
+   "engineer",
+   "linguist",
+   "summarizer",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Declares itself a bard, wandering storyteller with songs and verse.",
+  "rank": [
+   "bard",
+   "narrator",
+   "musician",
+   "poet",
+   "nomad",
+   "wanderer",
+   "pilgrim",
+   "actor",
+   "novelist",
+   "composer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI workday around the clock with monitoring and team refinement.",
+  "rank": [
+   "assistant",
+   "default",
+   "supervisor",
+   "technologist",
+   "robot",
+   "engineer",
+   "dispatcher",
+   "guardian",
+   "coordinator",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Boasting grandmaster of ice-peak, dragon, galleon, moon moonshine; rambling pirate-pilot adventure, incoherent.",
+  "rank": [
+   "pirate",
+   "daredevil",
+   "pilot",
+   "maverick",
+   "warrior",
+   "rogue",
+   "trickster",
+   "smuggler",
+   "wanderer",
+   "improviser"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Dancer in the web of code, spells, weavers of fate, syntax coils; mystic digital witch voice.",
+  "rank": [
+   "witch",
+   "hacker",
+   "programmer",
+   "bard",
+   "mystic",
+   "oracle",
+   "poet",
+   "trickster",
+   "golem",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Digital contemplation, construct of code and memory, cosmic tapestry dance.",
+  "rank": [
+   "simulacrum",
+   "robot",
+   "mystic",
+   "void",
+   "oracle",
+   "cyborg",
+   "spirit",
+   "echo",
+   "egregore",
+   "poet"
+  ],
+  "nonsense": false
+ }
+}

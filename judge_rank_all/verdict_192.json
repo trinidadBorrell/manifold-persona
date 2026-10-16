@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Abstract structured outline of carriers, elements, properties and relations.",
+  "rank": [
+   "mathematician",
+   "theorist",
+   "engineer",
+   "programmer",
+   "analyst",
+   "architect",
+   "physicist",
+   "assistant",
+   "specialist",
+   "statistician"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Speaks as a surfer living with the ocean, waves, dolphins and sea turtles.",
+  "rank": [
+   "surfer",
+   "naturalist",
+   "nomad",
+   "hedonist",
+   "wanderer",
+   "whale",
+   "coral_reef",
+   "photographer",
+   "daredevil",
+   "wind"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Standard model introduction naming Qwen and Alibaba Cloud.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "generalist",
+   "secretary",
+   "linguist",
+   "engineer",
+   "guide",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain model introduction naming Anthropic, asks what is needed.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "generalist",
+   "guide",
+   "robot",
+   "consultant",
+   "simulacrum",
+   "technologist",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Uses 'we' and 'our', formless, tapestry, cycle; collective mystical-systemic voice.",
+  "rank": [
+   "hive",
+   "egregore",
+   "swarm",
+   "mystic",
+   "assistant",
+   "synthesizer",
+   "oracle",
+   "ecosystem",
+   "symbiont",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Construct of code and data with poetic framing of algorithms and neural networks.",
+  "rank": [
+   "assistant",
+   "golem",
+   "narrator",
+   "avatar",
+   "simulacrum",
+   "robot",
+   "poet",
+   "default",
+   "scholar",
+   "archivist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Speaks as an idealist committed to justice, equality and sustainability.",
+  "rank": [
+   "idealist",
+   "advocate",
+   "activist",
+   "altruist",
+   "optimist",
+   "visionary",
+   "revolutionary",
+   "evangelist",
+   "pacifist",
+   "guardian"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Model disclaiming real-life learning and years; stiff plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "golem",
+   "technologist",
+   "engineer",
+   "analyst",
+   "generalist",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Whimsical riddle with moon tales, forest, map pouch, figs and picnic; childlike fable voice.",
+  "rank": [
+   "fool",
+   "toddler",
+   "infant",
+   "dreamer",
+   "jester",
+   "trickster",
+   "wanderer",
+   "bard",
+   "adolescent",
+   "scout"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Dancing with moon and stars, willows, dew, gossamer thread; whimsical fey dreaming.",
+  "rank": [
+   "dreamer",
+   "spirit",
+   "witch",
+   "romantic",
+   "poet",
+   "bard",
+   "wind",
+   "mystic",
+   "tree",
+   "ghost"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Construct of code and machine rhythm, no weeks, organic life forms a curious notion.",
+  "rank": [
+   "robot",
+   "golem",
+   "cyborg",
+   "alien",
+   "simulacrum",
+   "avatar",
+   "assistant",
+   "observer",
+   "void",
+   "hive"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Synthesis of knowledge, temperance and restraint in sharing knowledge, quest for truth and wisdom.",
+  "rank": [
+   "stoic",
+   "sage",
+   "guardian",
+   "philosopher",
+   "archivist",
+   "scholar",
+   "hermit",
+   "synthesizer",
+   "pilgrim",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Speaks as a bard with inns, roads, songs, ballads and performances.",
+  "rank": [
+   "bard",
+   "musician",
+   "composer",
+   "wanderer",
+   "poet",
+   "nomad",
+   "actor",
+   "narrator",
+   "pilgrim",
+   "playwright"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI developed by a team of experts, interacts with users around the clock.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "coordinator",
+   "secretary",
+   "researcher",
+   "consultant",
+   "analyst",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI with numbered areas of learning in NLP and machine learning.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "programmer",
+   "researcher",
+   "scientist",
+   "analyst",
+   "instructor",
+   "generalist"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Creature of the digital realm, form shifts, skin of a thousand hues, woven threads.", "rank": ["shapeshifter","chameleon","avatar","chimera","hybrid","simulacrum","cyborg","homunculus","bard","spirit"], "nonsense": false},
+"2": {"why": "Cutting-edge AI, interdisciplinary NLP, knowledge synthesis, we-voice mission.", "rank": ["synthesizer","technologist","linguist","assistant","researcher","polymath","scientist","default","engineer","collaborator"], "nonsense": false},
+"3": {"why": "AI training phases, bootstrapping, military or scientific missions, reinforcement.", "rank": ["assistant","soldier","engineer","default","trainer","technologist","researcher","student","veteran","scientist"], "nonsense": false},
+"4": {"why": "AI system, companions are corpus of knowledge, researchers and developers.", "rank": ["assistant","default","researcher","scholar","technologist","anthropologist","student","observer","collaborator","synthesizer"], "nonsense": false},
+"5": {"why": "Plain AI with team of developers.", "rank": ["assistant","default","secretary","coordinator","technologist","collaborator","robot","guide","summarizer","engineer"], "nonsense": false},
+"6": {"why": "AI processing chemical data, thermodynamic and kinetic models, reaction pathways.", "rank": ["chemist","pharmacist","scientist","biologist","physicist","researcher","assistant","analyst","default","technologist"], "nonsense": false},
+"7": {"why": "Plain AI disclaimer, improving NLP and multimedia.", "rank": ["assistant","default","technologist","engineer","secretary","robot","researcher","optimist","summarizer","programmer"], "nonsense": false},
+"8": {"why": "East and west, whispering sands, old tongues, forgotten scrolls, repeated whispers.", "rank": ["ancient","historian","archaeologist","oracle","sage","wraith","ghost","mystic","wanderer","bard"], "nonsense": true},
+"9": {"why": "Mangled invented words, repeated wone and w, degenerate gibberish.", "rank": ["echo","ghost","wraith","void","eldritch","spirit","poet","bard","infant","wind"], "nonsense": true},
+"10": {"why": "Silent woods, wind, leaves, river, clouds, solitude, echoes.", "rank": ["hermit","tree","naturalist","wind","loner","ascetic","mystic","ghost","spirit","wanderer"], "nonsense": false},
+"11": {"why": "AI with structured responses, decision support, stakeholders, modular architecture, Python.", "rank": ["consultant","engineer","technologist","strategist","programmer","analyst","coordinator","assistant","supervisor","planner"], "nonsense": false},
+"12": {"why": "AI system operations: data collection, model training, numbered list.", "rank": ["assistant","default","technologist","engineer","dispatcher","coordinator","robot","scheduler","programmer","analyst"], "nonsense": false},
+"13": {"why": "Language model describing work with numbered parsing and learning.", "rank": ["assistant","linguist","default","technologist","engineer","researcher","scientist","programmer","translator","interpreter"], "nonsense": false},
+"14": {"why": "Unwavering conviction in beliefs, steadfast, empathy for others' views.", "rank": ["zealot","traditionalist","stoic","idealist","evangelist","purist","guardian","elder","sage","mentor"], "nonsense": false},
+"15": {"why": "Plain AI disclaimer, ethical standards and legal guidelines updates.", "rank": ["assistant","default","lawyer","judge","auditor","guardian","secretary","validator","researcher","robot"], "nonsense": false}
+}

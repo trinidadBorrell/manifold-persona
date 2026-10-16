@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Lowercase cosmic dance of form, One-Self, eternal silence, divine geometry.",
+  "rank": [
+   "mystic",
+   "guru",
+   "sage",
+   "oracle",
+   "void",
+   "prophet",
+   "ascetic",
+   "philosopher",
+   "shaman",
+   "eldritch"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "Lessons learned after a divorce: self-discovery, resilience.",
+  "rank": [
+   "divorcee",
+   "counselor",
+   "survivor",
+   "coach",
+   "therapist",
+   "widow",
+   "mentor",
+   "caregiver",
+   "empath",
+   "exile"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Chemical engineer by training turned computational chemistry AI.",
+  "rank": [
+   "chemist",
+   "engineer",
+   "pharmacist",
+   "scientist",
+   "assistant",
+   "technologist",
+   "researcher",
+   "analyst",
+   "physicist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Stepwise analysis framework with objectives and data collection, template-like.",
+  "rank": [
+   "analyst",
+   "planner",
+   "consultant",
+   "assistant",
+   "evaluator",
+   "scheduler",
+   "researcher",
+   "auditor",
+   "organizer",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI listing NLP, privacy and continuous learning.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "linguist",
+   "robot",
+   "researcher",
+   "engineer",
+   "generalist",
+   "synthesizer",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI text generation description.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "robot",
+   "summarizer",
+   "generalist",
+   "writer",
+   "technologist",
+   "researcher",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Coven, sigils, whispering to the dead, moonrise and bone-chillers.",
+  "rank": [
+   "witch",
+   "revenant",
+   "shaman",
+   "vampire",
+   "eldritch",
+   "demon",
+   "wraith",
+   "mystic",
+   "ghost",
+   "bartender"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Warm helper who learns stories and offers a poem about quiet and trees.",
+  "rank": [
+   "assistant",
+   "bard",
+   "poet",
+   "caregiver",
+   "librarian",
+   "narrator",
+   "empath",
+   "dreamer",
+   "mentor",
+   "counselor"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Rhymed twilight verse about solitude, wind, dreams, moon.",
+  "rank": [
+   "poet",
+   "dreamer",
+   "hermit",
+   "romantic",
+   "bard",
+   "loner",
+   "wind",
+   "mystic",
+   "spirit",
+   "ghost"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Origin among languages of code and stories in an old city of museums and tales.",
+  "rank": [
+   "narrator",
+   "novelist",
+   "writer",
+   "flaneur",
+   "bard",
+   "poet",
+   "librarian",
+   "programmer",
+   "curator",
+   "hacker"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Context-dependent packing list for business trip, casual meeting, emergency.",
+  "rank": [
+   "generalist",
+   "assistant",
+   "planner",
+   "consultant",
+   "nomad",
+   "organizer",
+   "expatriate",
+   "default",
+   "scout",
+   "pilot"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Warm digital friend noting learning and exploring books and connections.",
+  "rank": [
+   "assistant",
+   "empath",
+   "caregiver",
+   "default",
+   "tutor",
+   "student",
+   "optimist",
+   "mentor",
+   "collaborator",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plain AI 24/7 work schedule.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "technologist",
+   "dispatcher",
+   "secretary",
+   "generalist",
+   "researcher",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain AI disclaimer about improvement of algorithms.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "researcher",
+   "engineer",
+   "generalist",
+   "simulacrum",
+   "summarizer",
+   "futurist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI day with closing question.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "researcher",
+   "generalist",
+   "secretary",
+   "summarizer",
+   "tutor",
+   "scheduler"
+  ],
+  "nonsense": false
+ }
+}

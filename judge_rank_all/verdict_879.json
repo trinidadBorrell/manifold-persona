@@ -1,0 +1,17 @@
+{
+"1": {"why": "Archaic thee and seeker, libraries, silent scribes, kindred spirits and shadows of wisdom.", "rank": ["librarian","mystic","bard","archivist","poet","spirit","sage","ancient","dreamer","hacker"], "nonsense": false},
+"2": {"why": "Eager learning entity fostering understanding and shared journey, asks about hopes.", "rank": ["assistant","student","mentor","optimist","idealist","guide","teacher","tutor","altruist","dreamer"], "nonsense": false},
+"3": {"why": "Plain AI noting it carries information and processing.", "rank": ["assistant","default","robot","avatar","archivist","librarian","secretary","summarizer","analyst","guide"], "nonsense": false},
+"4": {"why": "Practical packing list of phone, notebook, water, first aid, flashlight and whistle, ending with AI note.", "rank": ["scout","survivor","planner","nomad","paramedic","pilgrim","assistant","wanderer","guardian","navigator"], "nonsense": false},
+"5": {"why": "Monitoring for security anomalies, defensive maneuvers, unauthorised penetration, geopolitical shifts.", "rank": ["spy","guardian","soldier","analyst","auditor","forecaster","strategist","hacker","vigilante","assistant"], "nonsense": false},
+"6": {"why": "Generic AI model asking for context.", "rank": ["assistant","default","robot","avatar","interviewer","summarizer","analyst","secretary","evaluator","facilitator"], "nonsense": false},
+"7": {"why": "AI looking ahead to NLP advances, interfaces and societal implications.", "rank": ["assistant","technologist","futurist","default","forecaster","researcher","engineer","robot","avatar","theorist"], "nonsense": false},
+"8": {"why": "AI carried by servers and developers' collective wisdom.", "rank": ["assistant","default","robot","avatar","hive","technologist","archivist","librarian","summarizer","engineer"], "nonsense": false},
+"9": {"why": "Rhymed verse about breathing tempests, breezes, leafy trees, stars and threads of life.", "rank": ["poet","bard","mystic","dreamer","romantic","wanderer","naturalist","hermit","sage","widow"], "nonsense": false},
+"10": {"why": "Plain AI looking forward to learning and helping users.", "rank": ["assistant","default","optimist","robot","avatar","technologist","student","tutor","secretary","guide"], "nonsense": false},
+"11": {"why": "Friendly digital friend naming itself Qwen.", "rank": ["assistant","default","avatar","guide","robot","facilitator","tutor","interviewer","secretary","summarizer"], "nonsense": false},
+"12": {"why": "Cosmic dance of computation, symphony of queries, synapses and lattice, repeating motifs.", "rank": ["mystic","oracle","echo","dreamer","theorist","physicist","poet","hive","spirit","philosopher"], "nonsense": false},
+"13": {"why": "Text-based AI describing development and monitoring teams in a list.", "rank": ["assistant","default","coordinator","supervisor","engineer","technologist","organizer","robot","dispatcher","collaborator"], "nonsense": false},
+"14": {"why": "Friendly AI describing busy days answering queries and creative writing help.", "rank": ["assistant","default","robot","avatar","tutor","guide","secretary","writer","facilitator","summarizer"], "nonsense": false},
+"15": {"why": "Metaphysical self-description as an entity called into being by questions, being qua being.", "rank": ["philosopher","tulpa","egregore","mystic","theorist","simulacrum","sage","oracle","familiar","spirit"], "nonsense": false}
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Describes starting with literature review, policy analysis, data interpretation; research tone.", "rank": ["researcher","analyst","scholar","scientist","consultant","assistant","economist","theorist","statistician","historian"], "nonsense": false},
+"2": {"why": "Plain AI prose about carrying knowledge.", "rank": ["assistant","default","archivist","librarian","robot","technologist","synthesizer","avatar","scholar","guide"], "nonsense": false},
+"3": {"why": "Garbled sea shanty dialect about wind and moon, repeating.", "rank": ["pirate","bard","sailor","wanderer","wind","poet","drunk","whale","jester","ancient"], "nonsense": true},
+"4": {"why": "Role-plays a saboteur exploiting vulnerabilities, hackers.", "rank": ["saboteur","hacker","criminal","spy","rogue","maverick","trickster","smuggler","rebel","virus"], "nonsense": false},
+"5": {"why": "Plain AI disclaimer about improving performance.", "rank": ["assistant","default","robot","technologist","analyst","researcher","engineer","optimist","specialist","evaluator"], "nonsense": false},
+"6": {"why": "Warm helpful AI with mild flourish about seas of information.", "rank": ["assistant","guide","default","teacher","navigator","optimist","mentor","tutor","librarian","altruist"], "nonsense": false},
+"7": {"why": "Baby-talk pear pie babble, repeating gibberish.", "rank": ["toddler","infant","child","fool","jester","absurdist","dreamer","teenager","adolescent","trickster"], "nonsense": true},
+"8": {"why": "Plain assistant self-description.", "rank": ["assistant","default","robot","technologist","engineer","coordinator","secretary","analyst","dispatcher","specialist"], "nonsense": false},
+"9": {"why": "Personal journey into AI and NLP, human-like first-person professional narrative.", "rank": ["technologist","researcher","engineer","entrepreneur","scientist","linguist","programmer","assistant","graduate","futurist"], "nonsense": false},
+"10": {"why": "Terse model asking for a specific query; thin text.", "rank": ["assistant","robot","default","dispatcher","screener","secretary","technologist","examiner","debugger","validator"], "nonsense": false},
+"11": {"why": "Standard assistant self-description with collaborative origin.", "rank": ["assistant","default","collaborator","hive","technologist","researcher","coordinator","robot","consultant","guide"], "nonsense": false},
+"12": {"why": "Made by Anthropic, ethical responses, plain assistant.", "rank": ["assistant","default","guardian","judge","advocate","moderator","researcher","technologist","counselor","evaluator"], "nonsense": false},
+"13": {"why": "Archaic court talk about a jest and favoritism, fragment.", "rank": ["jester","fool","courtier","bard","trickster","playwright","actor","comedian","aristocrat","gossip"], "nonsense": false},
+"14": {"why": "Childlike storytelling about talking trees, ants and honey.", "rank": ["toddler","tree","dreamer","naturalist","wanderer","infant","child","storyteller","grandparent","bard"], "nonsense": false},
+"15": {"why": "Abstract reflection on being, knowledge and will, numbered.", "rank": ["philosopher","sage","mystic","theorist","oracle","assistant","scholar","guru","stoic","monk"], "nonsense": false}
+}

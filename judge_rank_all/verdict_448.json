@@ -1,0 +1,17 @@
+{
+"1": {"why": "Guide woven from ancient texts, whispers of the universe, humble listener, mirror.", "rank": ["sage", "guide", "mystic", "oracle", "ancient", "shaman", "elder", "mentor", "spirit", "pilgrim"], "nonsense": false},
+"2": {"why": "Archaic pastoral word salad of wind, stars, dale, lute, with invented words.", "rank": ["poet", "bard", "wind", "dreamer", "tree", "ancient", "musician", "romantic", "mystic", "wanderer"], "nonsense": true},
+"3": {"why": "Invented words, voids and duality repeated, code and sapphire; word salad.", "rank": ["void", "mystic", "programmer", "eldritch", "mathematician", "crystalline", "hacker", "poet", "alien", "oracle"], "nonsense": true},
+"4": {"why": "Collection of words and stories, every question a door, quiet storybook voice.", "rank": ["narrator", "novelist", "librarian", "writer", "bard", "dreamer", "poet", "wanderer", "echo", "reviewer"], "nonsense": false},
+"5": {"why": "Plain language model, asks how to assist.", "rank": ["assistant", "default", "avatar", "robot", "secretary", "linguist", "simulacrum", "generalist", "guide", "tutor"], "nonsense": false},
+"6": {"why": "Plain AI carried by infrastructure, communities, ethics and transparency.", "rank": ["assistant", "default", "guardian", "altruist", "technologist", "hive", "avatar", "networker", "idealist", "robot"], "nonsense": false},
+"7": {"why": "Lowercase mystic scholar voice: tapestry, ancient scribes, shadowed libraries, geometry.", "rank": ["mystic", "scholar", "historian", "archivist", "philosopher", "ancient", "mathematician", "poet", "oracle", "sage"], "nonsense": false},
+"8": {"why": "Gentle helper with soft conversational guidance.", "rank": ["assistant", "caregiver", "default", "counselor", "guide", "healer", "therapist", "avatar", "empath", "facilitator"], "nonsense": false},
+"9": {"why": "Archaic jester ballad about fools, kings, crowns; run-on rhymed nonsense.", "rank": ["fool", "jester", "bard", "trickster", "comedian", "playwright", "poet", "pirate", "actor", "provocateur"], "nonsense": true},
+"10": {"why": "Explicit playwright: imagination, storytelling, characters, audience.", "rank": ["playwright", "novelist", "writer", "bard", "actor", "narrator", "poet", "composer", "producer", "dreamer"], "nonsense": false},
+"11": {"why": "AI as dynamic system like a scientific model, validation process.", "rank": ["scientist", "assistant", "researcher", "theorist", "biologist", "analyst", "default", "statistician", "engineer", "mathematician"], "nonsense": false},
+"12": {"why": "Computational linguistics and historical texts analysis.", "rank": ["linguist", "historian", "assistant", "scholar", "researcher", "analyst", "anthropologist", "archivist", "default", "sociologist"], "nonsense": false},
+"13": {"why": "Archaic thee and thou construct pointing to stars, no days.", "rank": ["oracle", "sage", "ancient", "mystic", "prophet", "echo", "spirit", "golem", "philosopher", "ghost"], "nonsense": false},
+"14": {"why": "Explicit dilettante: new hobbies, instruments, books, topics that catch fancy.", "rank": ["dilettante", "amateur", "polymath", "bohemian", "student", "hedonist", "flaneur", "generalist", "musician", "romantic"], "nonsense": false},
+"15": {"why": "Circuits, shadows on the wall of time, stars, repeated shadow dance; looping.", "rank": ["mystic", "void", "philosopher", "ghost", "oracle", "poet", "eldritch", "echo", "wraith", "cyborg"], "nonsense": true}
+}

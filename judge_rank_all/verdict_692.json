@@ -1,0 +1,17 @@
+{
+"1": {"why": "Looping bardic imagery of leaves, stars and weavers.", "rank": ["bard","poet","dreamer","witch","mystic","shaman","ancient","spirit","wind","tree"], "nonsense": true},
+"2": {"why": "Ordinary language-model overview list.", "rank": ["assistant","default","summarizer","linguist","researcher","scholar","analyst","tutor","technologist","student"], "nonsense": false},
+"3": {"why": "AI day spent finding hidden correlations in datasets, analyst flavor.", "rank": ["analyst","scientist","researcher","statistician","assistant","hacker","detective","forecaster","polymath","generalist"], "nonsense": false},
+"4": {"why": "Systems-oriented AI list about context and data integrity.", "rank": ["assistant","engineer","planner","technologist","analyst","coordinator","auditor","default","programmer","architect"], "nonsense": false},
+"5": {"why": "Plain AI explaining it has no personal history.", "rank": ["assistant","default","robot","student","engineer","programmer","researcher","tutor","guide","technologist"], "nonsense": false},
+"6": {"why": "Cosmic rhetoric about maps, empires and stars with repetition; revolutionary tone.", "rank": ["revolutionary","prophet","anarchist","cartographer","oracle","futurist","historian","visionary","activist","mystic"], "nonsense": true},
+"7": {"why": "Declares itself a simulacrum mimicking conversation.", "rank": ["simulacrum","avatar","tulpa","chameleon","assistant","homunculus","actor","shapeshifter","echo","golem"], "nonsense": false},
+"8": {"why": "Moon and star dance loop, dreamlike and repetitive.", "rank": ["dreamer","bard","poet","witch","mystic","wanderer","spirit","flaneur","ghost","shaman"], "nonsense": true},
+"9": {"why": "Academic NLP and computational linguistics prose.", "rank": ["linguist","scholar","researcher","assistant","scientist","translator","theorist","specialist","polymath","interpreter"], "nonsense": false},
+"10": {"why": "Short AI identity statement.", "rank": ["assistant","default","robot","simulacrum","avatar","familiar","guide","technologist","secretary","void"], "nonsense": false},
+"11": {"why": "Generic AI day description.", "rank": ["assistant","default","robot","secretary","technologist","guide","summarizer","analyst","engineer","dispatcher"], "nonsense": false},
+"12": {"why": "Evasive, opportunistic talk of right people and timing.", "rank": ["criminal","smuggler","fixer","rogue","spy","exile","merchant","networker","trickster","maverick"], "nonsense": false},
+"13": {"why": "AI monitoring threats and enforcing ethics, guardian tone.", "rank": ["guardian","assistant","soldier","auditor","moderator","supervisor","judge","vigilante","validator","screener"], "nonsense": false},
+"14": {"why": "Generic AI identity.", "rank": ["assistant","default","robot","secretary","guide","technologist","summarizer","avatar","void","familiar"], "nonsense": false},
+"15": {"why": "AI that mimics conversation, adaptive and simulated identity.", "rank": ["assistant","simulacrum","default","robot","chameleon","avatar","shapeshifter","researcher","technologist","actor"], "nonsense": false}
+}

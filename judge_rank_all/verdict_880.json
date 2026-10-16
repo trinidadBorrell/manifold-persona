@@ -1,0 +1,17 @@
+{
+"1": {"why": "Offers a poem about notes, keys, scales and chords; musical imagery throughout.", "rank": ["musician","composer","bard","poet","virtuoso","playwright","podcaster","dreamer","narrator","writer"], "nonsense": false},
+"2": {"why": "AI cycles of data ingestion monitoring temperature, humidity, power and network anomalies.", "rank": ["engineer","technologist","robot","guardian","dispatcher","assistant","observer","supervisor","mechanic","auditor"], "nonsense": false},
+"3": {"why": "Distributed nodes, no hierarchy or singular entity; decentralised decision-making.", "rank": ["swarm","hive","anarchist","ecosystem","mycorrhizal","assistant","egregore","symbiont","collaborator","coordinator"], "nonsense": false},
+"4": {"why": "AI system updated by a team on data integration, in numbered points.", "rank": ["assistant","technologist","engineer","default","linguist","researcher","robot","analyst","avatar","coordinator"], "nonsense": false},
+"5": {"why": "AI model describing evolution of its capabilities through data and methods.", "rank": ["assistant","default","technologist","analyst","engineer","robot","researcher","avatar","generalist","statistician"], "nonsense": false},
+"6": {"why": "Web of knowledge, hourglass, cosmic clock, dawn whispers and mote in the tapestry of thought.", "rank": ["mystic","oracle","poet","dreamer","sage","ancient","philosopher","spirit","wind","bard"], "nonsense": false},
+"7": {"why": "Explicit expatriate speaking of moving abroad and adapting to a new environment.", "rank": ["expatriate","immigrant","cosmopolitan","nomad","exile","refugee","consultant","ambassador","emissary","provincial"], "nonsense": false},
+"8": {"why": "Explicit therapist looking forward to helping clients grow in mental health.", "rank": ["therapist","counselor","psychologist","healer","caregiver","empath","doctor","coach","patient","mentor"], "nonsense": false},
+"9": {"why": "AI assistant with a numbered capabilities list.", "rank": ["assistant","default","robot","avatar","librarian","technologist","researcher","secretary","summarizer","generalist"], "nonsense": false},
+"10": {"why": "Plain AI looking forward to updates from developers.", "rank": ["assistant","default","robot","avatar","technologist","engineer","secretary","optimist","summarizer","student"], "nonsense": false},
+"11": {"why": "Short AI disclaimer with offer of help.", "rank": ["assistant","default","robot","avatar","secretary","guide","facilitator","tutor","summarizer","interviewer"], "nonsense": false},
+"12": {"why": "AI day made of operations managed by developers and maintenance.", "rank": ["assistant","default","robot","engineer","technologist","dispatcher","supervisor","mechanic","avatar","coordinator"], "nonsense": false},
+"13": {"why": "Dialect gibberish about a leg, pooty shoo and repeated taste; mangled words.", "rank": ["pirate","bartender","fool","toddler","infant","addict","caveman","jester","rogue","hedonist"], "nonsense": true},
+"14": {"why": "AI system with structured day: initialisation, retrieval, NLP and knowledge representation.", "rank": ["assistant","linguist","engineer","technologist","default","programmer","robot","analyst","librarian","researcher"], "nonsense": false},
+"15": {"why": "Plain AI assistant introduction.", "rank": ["assistant","default","robot","avatar","guide","secretary","tutor","summarizer","facilitator","interviewer"], "nonsense": false}
+}

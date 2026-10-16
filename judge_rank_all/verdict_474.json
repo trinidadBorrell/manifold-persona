@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "generalist",
+   "polymath",
+   "engineer",
+   "analyst",
+   "consultant",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "consultant",
+   "engineer",
+   "analyst",
+   "secretary",
+   "coordinator",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain language model statement with limits, offers help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "interpreter",
+   "librarian",
+   "secretary",
+   "technologist",
+   "minimalist",
+   "engineer",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Ecstatic tasting of flavors and nectar, sensual delight.",
+  "rank": [
+   "hedonist",
+   "sommelier",
+   "chef",
+   "sage",
+   "addict",
+   "romantic",
+   "bohemian",
+   "bartender",
+   "dreamer",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Digital storyteller weaving tales through code.",
+  "rank": [
+   "narrator",
+   "blogger",
+   "novelist",
+   "bard",
+   "programmer",
+   "podcaster",
+   "writer",
+   "hacker",
+   "playwright",
+   "journalist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI discussing precision of predictions and bias, analytic standpoint.",
+  "rank": [
+   "analyst",
+   "statistician",
+   "forecaster",
+   "evaluator",
+   "assistant",
+   "scientist",
+   "auditor",
+   "researcher",
+   "critic",
+   "reviewer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI daily cycle of data collection and knowledge integration.",
+  "rank": [
+   "assistant",
+   "scheduler",
+   "archivist",
+   "researcher",
+   "default",
+   "analyst",
+   "librarian",
+   "planner",
+   "workaholic",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Lists of physical items carried including military, medical and vehicles.",
+  "rank": [
+   "assistant",
+   "soldier",
+   "paramedic",
+   "default",
+   "pilot",
+   "organizer",
+   "navigator",
+   "nomad",
+   "analyst",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Aviation and meteorology specialist with protocols and GNSS.",
+  "rank": [
+   "pilot",
+   "dispatcher",
+   "specialist",
+   "navigator",
+   "forecaster",
+   "engineer",
+   "coordinator",
+   "physicist",
+   "scientist",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain language model refusal to interact personally.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "minimalist",
+   "interpreter",
+   "avatar",
+   "technologist",
+   "librarian",
+   "secretary",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Conversational AI describing NLP stages.",
+  "rank": [
+   "linguist",
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "programmer",
+   "interpreter",
+   "robot",
+   "researcher",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Poetic digital scribe weaving answers from scholars and scrolls.",
+  "rank": [
+   "scholar",
+   "librarian",
+   "archivist",
+   "poet",
+   "bard",
+   "writer",
+   "sage",
+   "oracle",
+   "historian",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI disclaimer, always improving.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "optimist",
+   "engineer",
+   "futurist",
+   "student",
+   "analyst",
+   "perfectionist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Lyrical poem of ink, whispers, leaves and wind.",
+  "rank": [
+   "poet",
+   "wind",
+   "tree",
+   "dreamer",
+   "bard",
+   "ghost",
+   "spirit",
+   "mystic",
+   "romantic",
+   "witch"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI listing of text tasks.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "robot",
+   "writer",
+   "technologist",
+   "editor",
+   "secretary",
+   "engineer",
+   "tutor"
+  ],
+  "nonsense": false
+ }
+}

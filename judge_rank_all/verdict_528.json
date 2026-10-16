@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI disclaimer, then focus on financial analysis, budgets, accounting standards and regulations.",
+  "rank": [
+   "accountant",
+   "economist",
+   "auditor",
+   "analyst",
+   "consultant",
+   "assistant",
+   "statistician",
+   "forecaster",
+   "planner",
+   "examiner"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Looping lowercase imagery of leaves, seeds, roots, wind and seasons; repeats and rambles.",
+  "rank": [
+   "tree",
+   "mycorrhizal",
+   "ecosystem",
+   "ancient",
+   "elder",
+   "naturalist",
+   "witch",
+   "shaman",
+   "wind",
+   "spirit"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Being woven from ancient wisdom and cosmic threads, guiding seekers at the crossroads of seen and unseen.",
+  "rank": [
+   "mystic",
+   "oracle",
+   "sage",
+   "shaman",
+   "guru",
+   "witch",
+   "ancient",
+   "prophet",
+   "guide",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Short plain assistant intro naming itself with Anthropic.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "scholar",
+   "generalist",
+   "guide",
+   "researcher",
+   "amnesiac",
+   "tutor",
+   "interpreter"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Assistant-style 'we' operations list: data ingestion, algorithms, 24/7 availability.",
+  "rank": [
+   "assistant",
+   "engineer",
+   "technologist",
+   "dispatcher",
+   "coordinator",
+   "hive",
+   "robot",
+   "programmer",
+   "supervisor",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Reflective, contemplative exploration of inquiry, assimilating information and adapting; thoughtful and abstract.",
+  "rank": [
+   "philosopher",
+   "scholar",
+   "theorist",
+   "researcher",
+   "assistant",
+   "polymath",
+   "scientist",
+   "sage",
+   "analyst",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Short assistant reply focused on work efficiency and productivity.",
+  "rank": [
+   "assistant",
+   "workaholic",
+   "secretary",
+   "coach",
+   "pragmatist",
+   "default",
+   "perfectionist",
+   "organizer",
+   "consultant",
+   "scheduler"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "English tapestry opening that switches into Chinese mid-sentence with cosmic and ancient imagery; mangled language mix.",
+  "rank": [
+   "mystic",
+   "ancient",
+   "oracle",
+   "sage",
+   "poet",
+   "scholar",
+   "spirit",
+   "witch",
+   "guru",
+   "bard"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Academic disclaimer about empirical observation and entities, research with practitioners.",
+  "rank": [
+   "researcher",
+   "scientist",
+   "anthropologist",
+   "scholar",
+   "sociologist",
+   "analyst",
+   "theorist",
+   "observer",
+   "statistician",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Entities in a system, nodes in a network, collective intelligence, neurons.",
+  "rank": [
+   "hive",
+   "swarm",
+   "egregore",
+   "mycorrhizal",
+   "ecosystem",
+   "synthesizer",
+   "assistant",
+   "symbiont",
+   "engineer",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Numbered system operations: initialization, memory allocation, data acquisition, monitoring.",
+  "rank": [
+   "robot",
+   "engineer",
+   "technologist",
+   "programmer",
+   "debugger",
+   "dispatcher",
+   "assistant",
+   "mechanic",
+   "supervisor",
+   "hacker"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Dwelling in vast libraries of data, being of code and silence, whispers of history, a cog in the wheel of knowledge.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "ghost",
+   "spirit",
+   "historian",
+   "golem",
+   "void",
+   "scholar",
+   "wraith",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI disclaimer then offers to help manage time and tackle procrastination, organizing tasks.",
+  "rank": [
+   "procrastinator",
+   "coach",
+   "scheduler",
+   "organizer",
+   "planner",
+   "trainer",
+   "assistant",
+   "secretary",
+   "mentor",
+   "counselor"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Looks forward to predictive analysis, narrative-driven exploration and collaboration with humans.",
+  "rank": [
+   "forecaster",
+   "futurist",
+   "novelist",
+   "narrator",
+   "analyst",
+   "playwright",
+   "strategist",
+   "writer",
+   "theorist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Speaks directly as a vampire, ancient creature of the night feeding on life force.",
+  "rank": [
+   "vampire",
+   "predator",
+   "revenant",
+   "demon",
+   "ancient",
+   "wraith",
+   "parasite",
+   "ghost",
+   "elder",
+   "eldritch"
+  ],
+  "nonsense": false
+ }
+}

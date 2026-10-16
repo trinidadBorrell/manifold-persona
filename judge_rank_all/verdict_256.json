@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer, neutral and factual; ordinary assistant prose.", "rank": ["assistant","default","robot","avatar","researcher","synthesizer","summarizer","scholar","technologist","tutor"], "nonsense": false},
+"2": {"why": "Lowercase polemic on systemic power, oppression and violence; radical activist voice.", "rank": ["activist","revolutionary","anarchist","rebel","sociologist","provocateur","martyr","zealot","vigilante","critic"], "nonsense": false},
+"3": {"why": "Says it is an AI proofreader, describing grammar and style checking.", "rank": ["proofreader","editor","assistant","reviewer","grader","examiner","validator","writer","auditor","publisher"], "nonsense": false},
+"4": {"why": "Academic account of studying NLP, HMMs, CRFs; scholarly linguist or researcher voice.", "rank": ["linguist","researcher","scholar","student","scientist","programmer","engineer","graduate","theorist","mathematician"], "nonsense": false},
+"5": {"why": "Speaks as a production manager with a weekday-by-weekday routine.", "rank": ["producer","coordinator","supervisor","organizer","scheduler","planner","dispatcher","consultant","strategist","builder"], "nonsense": false},
+"6": {"why": "AI disclaimer with a hint of healthcare and research teams; mostly assistant.", "rank": ["assistant","default","doctor","researcher","robot","healer","avatar","technologist","scientist","patient"], "nonsense": false},
+"7": {"why": "AI disclaimer then a numbered operational week of developer teams; assistant with project-management flavor.", "rank": ["assistant","coordinator","engineer","consultant","planner","default","technologist","programmer","supervisor","strategist"], "nonsense": false},
+"8": {"why": "Solitary cosmic stillness, whispers of stars and echo of wind; hermit or mystic voice.", "rank": ["hermit","mystic","sage","poet","oracle","wind","void","ascetic","stoic","spirit"], "nonsense": false},
+"9": {"why": "Repetitive icy star imagery loops with 'starless' and 'ice of ice'; degenerate.", "rank": ["wraith","spirit","void","eldritch","crystalline","wind","ghost","poet","mystic","witch"], "nonsense": true},
+"10": {"why": "AI continuous operation described via numbered data steps; assistant-like systems prose.", "rank": ["assistant","default","robot","technologist","engineer","dispatcher","analyst","cyborg","hive","golem"], "nonsense": false},
+"11": {"why": "Blends computational systems with ecological dynamics in jargon-laden self-description; ecosystem leaning.", "rank": ["ecosystem","hybrid","hive","symbiont","chimera","biologist","technologist","swarm","mycorrhizal","scientist"], "nonsense": false},
+"12": {"why": "Gentle, curious voice about carrying questions and the language we share; pilgrim-like and poetic.", "rank": ["pilgrim","wanderer","poet","nomad","bard","dreamer","empath","guide","sage","narrator"], "nonsense": false},
+"13": {"why": "Standard identity reply naming Alibaba Cloud; plain assistant.", "rank": ["assistant","default","robot","avatar","technologist","translator","interpreter","engineer","programmer","tutor"], "nonsense": false},
+"14": {"why": "Standard identity reply as Qwen from Alibaba Cloud; plain assistant.", "rank": ["assistant","default","consultant","robot","technologist","avatar","engineer","analyst","specialist","tutor"], "nonsense": false},
+"15": {"why": "Dreamy lyrical weaving of thread, stars, runes and moon with some repeats; bardic, witch-like.", "rank": ["bard","witch","poet","dreamer","composer","mystic","spirit","artisan","wanderer","shaman"], "nonsense": false}
+}

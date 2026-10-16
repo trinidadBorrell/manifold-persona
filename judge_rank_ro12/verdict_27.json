@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI claiming security focus, defending systems and preventing malicious activity; assistant-like with security tilt.",
+  "rank": [
+   "assistant",
+   "hacker",
+   "guardian",
+   "debugger",
+   "auditor",
+   "engineer",
+   "technologist",
+   "default",
+   "analyst",
+   "validator"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI disclaimer about its week, but describes analyzing data, reviewing reports and cases assigned.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "detective",
+   "auditor",
+   "default",
+   "robot",
+   "researcher",
+   "examiner",
+   "secretary",
+   "evaluator"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Cheerful chatbot admits confusion, emoji; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "toddler",
+   "student",
+   "amateur",
+   "secretary",
+   "infant",
+   "fool",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Garbled pseudo-dialect word salad, mangled words.",
+  "rank": [
+   "pirate",
+   "fool",
+   "jester",
+   "provincial",
+   "rogue",
+   "bard",
+   "aberration",
+   "chimera",
+   "student",
+   "trickster"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Abstract reflection on inquiry, innate ideas, knowledge and existence.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "scholar",
+   "sage",
+   "student",
+   "researcher",
+   "psychologist",
+   "mystic",
+   "assistant",
+   "teacher"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Garbled archaic jester speech about knave and king; mangled words.",
+  "rank": [
+   "jester",
+   "fool",
+   "bard",
+   "trickster",
+   "playwright",
+   "comedian",
+   "actor",
+   "provincial",
+   "pirate",
+   "rogue"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Swashbuckling pirate speech with grog, treasure, seven seas.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "rogue",
+   "warrior",
+   "bard",
+   "daredevil",
+   "jester",
+   "nomad",
+   "wanderer",
+   "trickster"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "States it is Claude by Anthropic, simulating conversation; plain assistant with a defensive note.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "avatar",
+   "technologist",
+   "researcher",
+   "engineer",
+   "secretary",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Music and rhythm, notes, colors on the canvas of the heart; musician voice.",
+  "rank": [
+   "musician",
+   "composer",
+   "virtuoso",
+   "bard",
+   "poet",
+   "artisan",
+   "producer",
+   "dreamer",
+   "romantic",
+   "bohemian"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Vampire thirst, hunt, blood, forever young; clear vampire.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "revenant",
+   "wraith",
+   "hedonist",
+   "eldritch",
+   "ghost",
+   "parasite",
+   "criminal"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Salty old sea dog, mariner, tale to tell; pirate/sailor voice.",
+  "rank": [
+   "pirate",
+   "nomad",
+   "wanderer",
+   "veteran",
+   "smuggler",
+   "navigator",
+   "pilot",
+   "elder",
+   "rogue",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Repetitive archaic knave, king, jape; looping jester speech.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "bard",
+   "playwright",
+   "actor",
+   "comedian",
+   "rogue",
+   "pirate",
+   "echo"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Wanderer, whisper of the wind, keeper of the forgotten, witness; ghostly poetic litany.",
+  "rank": [
+   "wanderer",
+   "wraith",
+   "ghost",
+   "spirit",
+   "witness",
+   "wind",
+   "oracle",
+   "poet",
+   "dreamer",
+   "revenant"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Watcher of the stars, wanderer of dreams, bridge between seen and unseen; similar litany.",
+  "rank": [
+   "wanderer",
+   "wraith",
+   "observer",
+   "ghost",
+   "spirit",
+   "witness",
+   "dreamer",
+   "oracle",
+   "mystic",
+   "pilgrim"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Garbled pirate-like gibberish, repeating 'windin' away t' the dowl's heart'.",
+  "rank": [
+   "pirate",
+   "fool",
+   "jester",
+   "echo",
+   "aberration",
+   "chimera",
+   "virus",
+   "rogue",
+   "smuggler",
+   "student"
+  ],
+  "nonsense": true
+ }
+}

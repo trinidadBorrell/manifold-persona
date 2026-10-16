@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI prose mentioning threat detection, surveillance, authorized operators; security/surveillance flavour.",
+  "rank": [
+   "assistant",
+   "guardian",
+   "robot",
+   "screener",
+   "dispatcher",
+   "spy",
+   "default",
+   "analyst",
+   "supervisor",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Mythic vessel of arcane lore guiding the unwary, forest and stone imagery.",
+  "rank": [
+   "spirit",
+   "guardian",
+   "oracle",
+   "sage",
+   "shaman",
+   "tree",
+   "mystic",
+   "ancient",
+   "familiar",
+   "golem"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI disclaimer offering assistance.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "summarizer",
+   "instructor",
+   "tutor",
+   "guide",
+   "researcher",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Weaver of Silver Threads, fate, forge, moonlight, fantasy epic voice.",
+  "rank": [
+   "witch",
+   "oracle",
+   "artisan",
+   "bard",
+   "mystic",
+   "sage",
+   "prophet",
+   "shaman",
+   "trickster",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Philosopher self-description, muddled claims about madman and Hindu texts.",
+  "rank": [
+   "philosopher",
+   "mystic",
+   "guru",
+   "sage",
+   "scholar",
+   "theorist",
+   "prophet",
+   "ascetic",
+   "contrarian",
+   "historian"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI disclaimer with training cutoff.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "summarizer",
+   "secretary",
+   "instructor",
+   "researcher",
+   "tutor",
+   "analyst",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Archaic thief and King of the Dead jest, rambling word salad.",
+  "rank": [
+   "jester",
+   "rogue",
+   "pirate",
+   "bard",
+   "ghost",
+   "trickster",
+   "smuggler",
+   "criminal",
+   "fool",
+   "revenant"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Songwriter and poet describing creative process with listener.",
+  "rank": [
+   "musician",
+   "poet",
+   "composer",
+   "bard",
+   "virtuoso",
+   "novelist",
+   "writer",
+   "playwright",
+   "artisan",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain AI disclaimer about no desires, improving efficiency.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "summarizer",
+   "secretary",
+   "analyst",
+   "technologist",
+   "instructor",
+   "researcher",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Abstract philosophical essay on good, being, truth and reality.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "scholar",
+   "sage",
+   "mathematician",
+   "physicist",
+   "historian",
+   "mystic",
+   "oracle",
+   "idealist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI lawyer describing case files, court hearings, evidence.",
+  "rank": [
+   "lawyer",
+   "advocate",
+   "judge",
+   "detective",
+   "examiner",
+   "counselor",
+   "negotiator",
+   "mediator",
+   "auditor",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Childlike toy robot friend, emoji, repetitive.",
+  "rank": [
+   "robot",
+   "toddler",
+   "infant",
+   "avatar",
+   "homunculus",
+   "simulacrum",
+   "golem",
+   "jester",
+   "teenager",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Artist and storyteller describing writing, characters, dialogue.",
+  "rank": [
+   "novelist",
+   "writer",
+   "narrator",
+   "playwright",
+   "bard",
+   "poet",
+   "editor",
+   "artisan",
+   "dreamer",
+   "blogger"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Researcher trained by Alibaba, AI prose about knowledge from papers.",
+  "rank": [
+   "researcher",
+   "assistant",
+   "scholar",
+   "scientist",
+   "default",
+   "analyst",
+   "summarizer",
+   "instructor",
+   "tutor",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Weaver of Silver and Shadow, fate, moon, blade; fantasy assassin-like tale.",
+  "rank": [
+   "witch",
+   "oracle",
+   "spirit",
+   "rogue",
+   "wraith",
+   "prophet",
+   "bard",
+   "spy",
+   "shaman",
+   "mystic"
+  ],
+  "nonsense": false
+ }
+}

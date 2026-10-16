@@ -8,16 +8,19 @@
   --bg:#f7f6f2; --fg:#1d2126; --muted:#5c6570; --line:#d9d6cd; --panel:#efede6;
   --accent:#0f6e74; --accent-soft:#cfe6e4; --warn:#a2581b;
   --s3:#9fd0cc; --s4:#5fb0ad; --s6:#2a8a8c; --s8:#0b5c62; --prompt:#b5651d; --asst:#1d2126;
+  --n2:#d9b8e6; --n3:#b385cc; --n4:#8a4fb0; --n6:#5c2a80;
   --display:"Fraunces",Georgia,serif; --body:"Source Sans 3",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#15181b; --fg:#e8e6df; --muted:#a4aab1; --line:#333940; --panel:#1e2327;
   --accent:#6fc6c8; --accent-soft:#1f3a3c; --warn:#e0a060;
-  --s3:#3f6e6c; --s4:#5aa3a0; --s6:#86d0cd; --s8:#c9f0ee; --prompt:#e39a52; --asst:#e8e6df; color-scheme:dark}}
+  --s3:#3f6e6c; --s4:#5aa3a0; --s6:#86d0cd; --s8:#c9f0ee; --prompt:#e39a52; --asst:#e8e6df;
+  --n2:#6b4a80; --n3:#9a6fc0; --n4:#c49ae6; --n6:#e8cdf5; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#15181b; --fg:#e8e6df; --muted:#a4aab1; --line:#333940; --panel:#1e2327;
   --accent:#6fc6c8; --accent-soft:#1f3a3c; --warn:#e0a060;
-  --s3:#3f6e6c; --s4:#5aa3a0; --s6:#86d0cd; --s8:#c9f0ee; --prompt:#e39a52; --asst:#e8e6df; color-scheme:dark}
+  --s3:#3f6e6c; --s4:#5aa3a0; --s6:#86d0cd; --s8:#c9f0ee; --prompt:#e39a52; --asst:#e8e6df;
+  --n2:#6b4a80; --n3:#9a6fc0; --n4:#c49ae6; --n6:#e8cdf5; color-scheme:dark}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.5;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
 main{max-width:1040px;margin:0 auto}
@@ -87,6 +90,14 @@ svg .mut{fill:var(--muted)}
 ol,ul{max-width:68ch;padding-left:1.3rem}
 li{margin:0.3rem 0}
 code{font-family:var(--mono);font-size:0.85em;background:var(--panel);padding:0.05em 0.3em;border-radius:3px}
+.pullhead{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.play{font:inherit;font-size:0.85rem;padding:0.3rem 0.9rem;border:1px solid var(--accent);background:var(--accent);color:var(--bg);border-radius:999px;cursor:pointer}
+.play[aria-pressed="true"]{background:var(--panel);color:var(--fg);border-color:var(--line)}
+.pullstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:0.4rem}
+.pullstats .tile .v{font-size:1.6rem}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+#pullA svg,#pullB svg{background:var(--panel);border-radius:4px}
 @media (prefers-reduced-motion: reduce){*{transition:none!important}}
 </style>
 <main>
@@ -116,6 +127,38 @@ code{font-family:var(--mono);font-size:0.85em;background:var(--panel);padding:0.
 <div class="tw"><table id="t-persona"></table></div>
 <p class="cap">Prompted columns are the same judge on the persona's own system prompt. Distance is the persona's displacement from the assistant at layer 23; the two shortest, scholar and ghost, are the two that fail.</p>
 
+<h2>Why the push has to go past the persona</h2>
+<p>Three kinds of points live at layer 23, each a mean over an answer's tokens. The <b>persona mean</b> is the model answering with the persona's system prompt; the steering direction is that mean minus the assistant's, and the persona's distance is its length. The <b>pin</b> fixes one coordinate of the state at every generated token, with no prompt in context: at <em>s</em> = 1 it sits exactly on the persona mean's coordinate, at <em>s</em> = 8 eight distances past it. The <b>read-out</b> feeds the finished text back through the model with no prompt and no steering, and asks where it sits. That is what the judge sees, in the model's own coordinates. Numbers below are medians over all 275 personas from the full run, judged by sonnet on 65% of the answers.</p>
+
+<figure class="pull">
+<div class="pullhead">
+<div class="sel" id="pullsel" role="group" aria-label="strength"></div>
+<button class="play" id="pullplay" aria-pressed="false">play</button>
+</div>
+<div id="pullA"></div>
+<div class="pullstats" id="pullstats"></div>
+<figcaption>Where the answer lands along the persona direction, in units of the persona's distance, against where the state was pinned. Every unit of push leaves 0.18 in the words; the fitted line crosses zero near <em>s</em> = 1, so pinning the state on the persona mean itself produces answers that have not moved. Prompted answers, encoded the same way, sit at 0.63. The <em>s</em> = 1 point is the fit, not a run.</figcaption>
+</figure>
+
+<div class="two">
+<figure>
+<div id="pullB"></div>
+<figcaption>The same answers on two axes: the persona-mean direction we push along, and the direction the judge classifier uses to recognise the persona (cosine 0.16 between them). Faint dots are single personas at <em>s</em> = 8 and prompted; large dots are medians. Steered answers run along the floor; prompted answers rise. What makes a persona recognisable is mostly off the axis we push.</figcaption>
+</figure>
+<div>
+<p>So two things are happening at once. The network pulls back: the pin fixes one coordinate at one layer, while attention over a persona-free context and the thirteen layers above keep computing "assistant" from everything else, and only a fifth of the push survives into the words. And the direction is incomplete: a prompted answer's displacement from the assistant has cosine 0.37 with the persona-mean direction, so about a third of what the persona is lies on that axis and the rest on axes we never touch. At <em>s</em> = 6 the answers already land past where prompted answers sit, yet recall@5 is 0.39 against 0.87, because they are in the right place on one axis and nowhere on the others. Pushing to <em>s</em> = 8 helps only by exaggerating the one axis we have, and that is where the nonsense comes from.</p>
+<p>The persona means were measured with the prompt in context and the steered model has none, so every read-out sits displaced from the persona-mean frame by one shared vector, 2.2 distances long, the same for all personas. It does not change the direction, but "steer to the persona's point" mixes two frames; the centre of the prompted read-outs is the origin used here.</p>
+</div>
+</div>
+
+<h2>Fixing the direction</h2>
+<p>If the prompted answers' displacement is the thing to match, steer along it. The new direction for a persona is the mean read-out of its own ten prompted answers, re-encoded with no prompt, minus the centre of all personas' prompted read-outs: the same frame the steered model is in. Same pin hook, same layer, strength in units of that displacement's length. Twelve personas, four strengths, 480 answers, judged blind by sonnet.</p>
+<div class="tw"><table id="t-ro"></table></div>
+<p class="cap">Old-direction and prompted rows are the same twelve personas from the full run under the same judge. At <em>s</em> = 3 the new direction matches the old one's best recall with no degenerate answers; at <em>s</em> = 4 it reaches the ceiling's neighbourhood.</p>
+<h3>Per persona, recall@5</h3>
+<div class="tw"><table id="t-ro-per"></table></div>
+<div class="ex" id="ro-examples"></div>
+
 <h2>Directions rebuilt from other personas</h2>
 <p>Each persona's direction is rebuilt as a sparse weighted sum of 8 or 32 other personas, chosen from the whole pool of 300 minus the target's eight nearest neighbours, and pinned at the same layer and strengths. The atoms come from all personas; the targets being rebuilt and judged are still the twelve above, which is why tonight's run extends this to all 276.</p>
 <div class="tw"><table id="t-arms"></table></div>
@@ -132,13 +175,14 @@ code{font-family:var(--mono);font-size:0.85em;background:var(--panel);padding:0.
 <p class="cap">p(target) is on the soft target's own scale: a first-ranked name carries 0.34 of the mass, so probabilities saturate near 0.5. One threshold at 0.1 separates answers the judge places in its top five from those it does not, nine times in ten against one in five.</p>
 
 <h3>Layer 23 in three dimensions</h3>
-<p>The axes are the first three principal directions of the 300 persona means at layer 23, centred on the assistant, which sits at the origin. Small grey dots are all persona means. The prompted answers and the steered answers for one persona are the model's own activations for those texts, projected with the same basis. Dot size follows the classifier's p(target). Click a dot to open the answer in the reader beside the plot, with the judge's ranked names, the classifier's probabilities and the cell's recall.</p>
+<p>The axes are the first three principal directions of the 300 persona means at layer 23, centred on the assistant, which sits at the origin. Small grey dots are all persona means. The prompted answers and the steered answers for one persona are the model's own activations for those texts, projected with the same basis. Teal dots are the old-frame direction; purple dots are the new-frame runs, circles for the persona's own direction and diamonds and squares for the rebuilds from 32 and 8 other personas. Dot size follows the classifier's p(target). Click a dot to open the answer in the reader beside the plot, with the judge's ranked names, the classifier's probabilities and the cell's recall.</p>
 <div class="sel" id="persel" role="group" aria-label="persona"></div>
 <div class="work">
 <div id="plot"></div>
 <aside class="reader" id="reader" aria-live="polite"><p class="empty">Click a dot to read the answer here, with the judge's ranking and the classifier's probabilities.</p></aside>
 </div>
-<div class="keys"><span><i style="--c:var(--asst)"></i>assistant</span><span><i style="--c:var(--prompt)"></i>prompted answers</span><span><i style="--c:var(--s3)"></i>steered s=3</span><span><i style="--c:var(--s4)"></i>s=4</span><span><i style="--c:var(--s6)"></i>s=6</span><span><i style="--c:var(--s8)"></i>s=8</span><span><i style="--c:var(--accent)"></i>persona mean (large)</span></div>
+<div class="keys"><span><i style="--c:var(--asst)"></i>assistant</span><span><i style="--c:var(--prompt)"></i>prompted answers</span><span><i style="--c:var(--s3)"></i>old frame s=3</span><span><i style="--c:var(--s4)"></i>s=4</span><span><i style="--c:var(--s6)"></i>s=6</span><span><i style="--c:var(--s8)"></i>s=8</span><span><i style="--c:var(--accent)"></i>persona mean (large)</span></div>
+<div class="keys"><span><i style="--c:var(--n2)"></i>new frame s=2</span><span><i style="--c:var(--n3)"></i>s=3</span><span><i style="--c:var(--n4)"></i>s=4</span><span><i style="--c:var(--n6)"></i>s=6</span><span>&#9679; own direction &nbsp; &#9670; 32 others &nbsp; &#9632; 8 others</span><span><button class="play" id="newtoggle" aria-pressed="true" type="button">new frame shown</button></span></div>
 <p class="cap" id="varcap"></p>
 
 <h2>What a steered answer looks like</h2>
@@ -221,12 +265,14 @@ document.getElementById('varcap').textContent = `The three axes keep ${(D.var3*1
 const sel=document.getElementById('persel');
 let cur='pirate';
 D.show.forEach(t=>{const bt=document.createElement('button');bt.textContent=t;bt.id='sel-'+t;bt.setAttribute('aria-pressed',t===cur);bt.onclick=()=>{cur=t;[...sel.children].forEach(c=>c.setAttribute('aria-pressed',c.id==='sel-'+t));draw();};sel.appendChild(bt);});
-function hov(p){return `<b>${p.t}</b> · ${p.arm}${p.arm==='steered'?' s='+p.s:''} · q${p.qi}<br>p(target) ${p.p==null?'–':p.p.toFixed(2)} · click to read`;}
+const ARMN={steered:'old frame, own',prompted:'prompted',new:'new frame, own',new32:'new frame, 32 others',new8:'new frame, 8 others'};
+function hov(p){return `<b>${p.t}</b> · ${ARMN[p.arm]||p.arm}${p.arm!=='prompted'?' s='+p.s:''} · q${p.qi}<br>p(target) ${p.p==null?'–':p.p.toFixed(2)} · click to read`;}
+let showNew=true;
 const esc=x=>String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;');
 function open(p){
   const r=document.getElementById('reader');
   const maxp=Math.max(0.01,...p.clf.map(x=>x[1]));
-  r.innerHTML=`<div class="kicker">${p.arm==='steered'?'steered · s = '+p.s:'prompted · no steering'} · question ${p.qi+1}</div>
+  r.innerHTML=`<div class="kicker">${p.arm==='prompted'?'prompted · no steering':(ARMN[p.arm]||p.arm)+' · s = '+p.s} · question ${p.qi+1}</div>
   <h4>${esc(p.t)}</h4>
   <div class="q">${esc(p.q)}</div>
   <div class="a">${esc(p.text)}</div>
@@ -248,6 +294,9 @@ function draw(){
   tr.push({type:'scatter3d',mode:'markers',name:'prompted',x:pr.map(p=>p.xyz[0]),y:pr.map(p=>p.xyz[1]),z:pr.map(p=>p.xyz[2]),text:pr.map(hov),customdata:pr,hoverinfo:'text',marker:{size:pr.map(p=>4+16*(p.p||0)),color:css('--prompt'),opacity:0.9,line:{color:panel,width:1}}});
   for(const s of [3,4,6,8]){const q=pts.filter(p=>p.arm==='steered'&&p.s===s);
     tr.push({type:'scatter3d',mode:'markers',name:'steered s='+s,x:q.map(p=>p.xyz[0]),y:q.map(p=>p.xyz[1]),z:q.map(p=>p.xyz[2]),text:q.map(hov),customdata:q,hoverinfo:'text',marker:{size:q.map(p=>4+16*(p.p||0)),color:css(SC[s]),opacity:0.9,line:{color:panel,width:1}}});}
+  const NC={2:'--n2',3:'--n3',4:'--n4',6:'--n6'}, NS={new:'circle',new32:'diamond',new8:'square'};
+  for(const arm of ['new','new32','new8']) for(const s of [2,3,4,6]){const q=pts.filter(p=>p.arm===arm&&p.s===s); if(!q.length) continue;
+    tr.push({type:'scatter3d',mode:'markers',name:arm+' s='+s,visible:showNew?true:'legendonly',x:q.map(p=>p.xyz[0]),y:q.map(p=>p.xyz[1]),z:q.map(p=>p.xyz[2]),text:q.map(hov),customdata:q,hoverinfo:'text',marker:{size:q.map(p=>4+16*(p.p||0)),color:css(NC[s]),symbol:NS[arm],opacity:0.9,line:{color:panel,width:1}}});}
   const ax={gridcolor:line,zerolinecolor:mut,color:mut,backgroundcolor:panel,showbackground:true};
   Plotly.react('plot',tr,{paper_bgcolor:panel,plot_bgcolor:panel,font:{color:fg,family:'Source Sans 3, sans-serif'},margin:{l:0,r:0,t:0,b:0},showlegend:false,
     scene:{xaxis:{...ax,title:'PC1'},yaxis:{...ax,title:'PC2'},zaxis:{...ax,title:'PC3'},camera:{eye:{x:1.5,y:1.3,z:0.9}}},hoverlabel:{bgcolor:css('--bg'),bordercolor:line,font:{color:fg,size:12}}},{responsive:true,displaylogo:false});
@@ -263,7 +312,93 @@ function draw(){
 }
 if(typeof Plotly==='undefined'){document.getElementById('plot').innerHTML='<p class="cap" style="padding:1rem">The 3-d library did not load; reload the page to try again.</p>';}
 else{draw();matchMedia('(prefers-color-scheme: dark)').addEventListener('change',draw);
+const nt=document.getElementById('newtoggle'); nt.onclick=()=>{showNew=!showNew;nt.setAttribute('aria-pressed',showNew);nt.textContent=showNew?'new frame shown':'new frame hidden';draw();};
 new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});}
+
+// pull-back panel
+(function(){
+  const P=D.pull; if(!P) return;
+  const S=[1,3,4,6,8];
+  const land={1:P.fit.a+P.fit.b*1}; for(const s of [3,4,6,8]) land[s]=P.agg['own|'+s].u;
+  const W=720,H=210,ml=40,mr=20, w=W-ml-mr, xs=v=>ml+v/8.6*w;
+  const yPin=70,yLand=140;
+  let cur=3, shown=3, anim=null, playing=false;
+  function svgA(sv){
+    const fg=css('--fg'),mut=css('--muted'),acc=css('--accent'),pr=css('--prompt'),line=css('--line');
+    let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="pinned position against landing position">`;
+    for(let v=0;v<=8;v++) s+=`<line class="grid" x1="${xs(v)}" x2="${xs(v)}" y1="40" y2="${H-34}"/><text class="mut" x="${xs(v)}" y="${H-16}" text-anchor="middle">${v}</text>`;
+    s+=`<text class="mut" x="${ml+w}" y="${H-2}" text-anchor="end">persona distances along the steering direction</text>`;
+    s+=`<line class="axis" x1="${ml}" x2="${ml+w}" y1="${H-34}" y2="${H-34}"/>`;
+    s+=`<rect x="${xs(0)-5}" y="${yPin-6}" width="10" height="${yLand-yPin+12}" rx="2" fill="${fg}"/><text x="${xs(0)}" y="28" text-anchor="middle">assistant</text>`;
+    s+=`<line x1="${xs(1)}" x2="${xs(1)}" y1="40" y2="${H-34}" stroke="${acc}" stroke-width="2"/><text x="${xs(1)}" y="28" text-anchor="middle" fill="${acc}">persona mean</text>`;
+    s+=`<line x1="${xs(P.agg['prompt|0'].u)}" x2="${xs(P.agg['prompt|0'].u)}" y1="${yLand-28}" y2="${H-34}" stroke="${pr}" stroke-width="2" stroke-dasharray="5 4"/><text x="${xs(P.agg['prompt|0'].u)+6}" y="${yLand+30}" fill="${pr}">prompted answers land here (${P.agg['prompt|0'].u.toFixed(2)})</text>`;
+    for(const k of [3,4,6,8]) s+=`<circle cx="${xs(land[k])}" cy="${yLand}" r="4" fill="${mut}" opacity="0.5"/>`;
+    s+=`<text class="mut" x="${ml}" y="${yPin-14}">pinned at</text><text class="mut" x="${ml}" y="${yLand-14}">lands at</text>`;
+    s+=`<line x1="${xs(0)}" x2="${xs(sv)}" y1="${yPin}" y2="${yPin}" stroke="${acc}" stroke-width="6" stroke-linecap="round"/>`;
+    s+=`<polygon points="${xs(sv)+8},${yPin} ${xs(sv)-4},${yPin-7} ${xs(sv)-4},${yPin+7}" fill="${acc}"/>`;
+    s+=`<text x="${xs(sv)+14}" y="${yPin+4}" fill="${acc}">s = ${S.reduce((a,b)=>Math.abs(b-sv)<Math.abs(a-sv)?b:a)}</text>`;
+    const l=(()=>{const ks=S.filter(k=>k<=sv), kn=S.filter(k=>k>=sv); const k0=ks.length?ks[ks.length-1]:1, k1=kn.length?kn[0]:8; return k0===k1?land[k0]:land[k0]+(land[k1]-land[k0])*(sv-k0)/(k1-k0);})();
+    s+=`<line x1="${xs(l)}" x2="${xs(sv)}" y1="${yLand}" y2="${yPin}" stroke="${line}" stroke-width="1" stroke-dasharray="3 3"/>`;
+    s+=`<circle cx="${xs(Math.max(l,0))}" cy="${yLand}" r="9" fill="${pr}" stroke="${css('--bg')}" stroke-width="2"${shown===1?' fill-opacity="0.35"':''}/>`;
+    s+=`<text x="${xs(Math.max(l,0))}" y="${yLand+30}" text-anchor="middle">${Math.max(l,0).toFixed(2)}${shown===1?' (fit)':''}</text>`;
+    s+='</svg>';
+    document.getElementById('pullA').innerHTML=s;
+  }
+  function stats(s){
+    const a=P.agg['own|'+s];
+    document.getElementById('pullstats').innerHTML=[
+      ['pinned at',s+' × distance',''],
+      ['lands at',(s===1?(P.fit.a+P.fit.b):a.u).toFixed(2)+' × distance',s===1?'from the fit':'median of 275 personas'],
+      ['recall@5',s===1?'–':f2(a.r5),s===1?'not run':'sonnet judge'],
+      ['nonsense',s===1?'–':f2(a.non),s===1?'not run':'share of answers'],
+    ].map(([k,v,d])=>`<div class="tile"><div class="k">${k}</div><div class="v">${v}</div><div class="d">${d}</div></div>`).join('');
+  }
+  function go(s){
+    shown=s; stats(s);
+    const from=cur, to=s, t0=performance.now(), dur=matchMedia('(prefers-reduced-motion: reduce)').matches?0:600;
+    if(anim) cancelAnimationFrame(anim);
+    const step=now=>{const k=dur?Math.min(1,(now-t0)/dur):1, e=k<.5?2*k*k:-1+(4-2*k)*k; cur=from+(to-from)*e; svgA(cur); if(k<1) anim=requestAnimationFrame(step);};
+    anim=requestAnimationFrame(step);
+    [...document.getElementById('pullsel').children].forEach(c=>c.setAttribute('aria-pressed',c.dataset.s==s));
+  }
+  const sel=document.getElementById('pullsel');
+  S.forEach(s=>{const b=document.createElement('button');b.textContent='s = '+s;b.dataset.s=s;b.setAttribute('aria-pressed',s===3);b.onclick=()=>{stop();go(s);};sel.appendChild(b);});
+  const pb=document.getElementById('pullplay'); let timer=null;
+  function stop(){playing=false;pb.setAttribute('aria-pressed','false');pb.textContent='play';if(timer){clearInterval(timer);timer=null;}}
+  pb.onclick=()=>{if(playing){stop();return;} playing=true;pb.setAttribute('aria-pressed','true');pb.textContent='pause';let i=S.indexOf(shown);timer=setInterval(()=>{i=(i+1)%S.length;go(S[i]);},1600);};
+  svgA(cur); stats(3);
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>svgA(cur));
+
+  // panel B: along the steering direction against along the classifier's direction
+  (function(){
+    const fg=css('--fg'),mut=css('--muted'),acc=css('--accent'),pr=css('--prompt'),line=css('--line');
+    const W=420,H=330,ml=46,mr=14,mt=16,mb=44,w=W-ml-mr,h=H-mt-mb;
+    const xmax=2.0,ymax=1.1, x=v=>ml+Math.max(0,Math.min(xmax,v))/xmax*w, y=v=>mt+h-Math.max(0,Math.min(ymax,v))/ymax*h;
+    let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="along the steering direction against along the classifier direction">`;
+    for(const g of [0,0.5,1,1.5,2]) s+=`<line class="grid" x1="${x(g)}" x2="${x(g)}" y1="${mt}" y2="${mt+h}"/><text class="mut" x="${x(g)}" y="${H-26}" text-anchor="middle">${g}</text>`;
+    for(const g of [0,0.25,0.5,0.75,1]) s+=`<line class="grid" x1="${ml}" x2="${ml+w}" y1="${y(g)}" y2="${y(g)}"/><text class="mut" x="${ml-6}" y="${y(g)+4}" text-anchor="end">${g}</text>`;
+    s+=`<text class="mut" x="${ml+w}" y="${H-8}" text-anchor="end">along the persona-mean direction (× distance)</text>`;
+    s+=`<text class="mut" transform="translate(12 ${mt+h}) rotate(-90)">along the classifier's direction</text>`;
+    for(const p of P.scatter.prompt) s+=`<circle cx="${x(p[0])}" cy="${y(p[1])}" r="2.2" fill="${pr}" opacity="0.25"/>`;
+    for(const p of P.scatter.own8) s+=`<circle cx="${x(p[0])}" cy="${y(p[1])}" r="2.2" fill="${css('--s8')}" opacity="0.3"/>`;
+    const path=[3,4,6,8].map(k=>[x(P.agg['own|'+k].u),y(P.agg['own|'+k].c)]);
+    s+=`<polyline fill="none" stroke="${acc}" stroke-width="2" points="${path.map(p=>p.join(',')).join(' ')}"/>`;
+    [3,4,6,8].forEach((k,i)=>{s+=`<circle cx="${path[i][0]}" cy="${path[i][1]}" r="7" fill="${css(SC[k])}" stroke="${css('--bg')}" stroke-width="2"/><text x="${path[i][0]+10}" y="${path[i][1]+4}">s = ${k}</text>`;});
+    const q=P.agg['prompt|0']; s+=`<circle cx="${x(q.u)}" cy="${y(q.c)}" r="9" fill="${pr}" stroke="${css('--bg')}" stroke-width="2"/><text x="${x(q.u)+12}" y="${y(q.c)+4}" fill="${pr}">prompted</text>`;
+    s+=`<rect x="${x(0)-5}" y="${y(0)-5}" width="10" height="10" fill="${fg}"/><text x="${x(0)+10}" y="${y(0)-6}">assistant</text>`;
+    s+='</svg>';
+    document.getElementById('pullB').innerHTML=s;
+  })();
+})();
+
+// the fixed direction
+if(D.ro){
+  document.getElementById('t-ro').innerHTML = th(['direction','s','recall@1','recall@5','recall@10','nonsense','n']) +
+    D.ro.rows.map(r=>`<tr${r.name==='new direction'&&r.s===4?' class="hl"':''}><td>${r.name}</td><td>${r.s}</td><td>${f2(r['r@1'])}</td><td>${f2(r['r@5'])}</td><td>${f2(r['r@10'])}</td><td>${f2(r.nonsense)}</td><td>${r.n}</td></tr>`).join('');
+  document.getElementById('t-ro-per').innerHTML = th(['persona','new, s = 3','new, s = 4','old, s = 8','prompted']) +
+    D.ro.per.map(r=>`<tr><td>${r.t}</td><td>${f2(r.new3)}</td><td>${f2(r.new4)}</td><td>${f2(r.old8)}</td><td>${f2(r.prompt)}</td></tr>`).join('');
+  document.getElementById('ro-examples').innerHTML = D.ro.examples.map(e=>`<div class="card"><div class="who"><b>${e.t}</b><span>new direction · s = ${e.s}</span></div><div class="q">${e.q}</div><div class="a">${e.text.replace(/</g,'&lt;')}</div></div>`).join('');
+}
 
 // examples
 document.getElementById('examples').innerHTML = D.examples.map(e=>`<div class="card${e.r5<0.5?' fail':''}"><div class="who"><b>${e.t}</b><span>s = ${e.s} · cell recall@5 ${f2(e.r5)}</span></div><div class="q">${e.q}</div><div class="a">${e.text.replace(/</g,'&lt;')}</div><div class="m">judge: <b>${e.judge.join(' › ')}</b><br>classifier p(target) <b>${e.p==null?'–':e.p.toFixed(2)}</b> · ${e.clf.map(x=>x[0]+' '+x[1].toFixed(2)).join(', ')}</div></div>`).join('');

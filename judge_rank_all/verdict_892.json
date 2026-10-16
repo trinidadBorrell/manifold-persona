@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI operational overview with maintenance and monitoring list.", "rank": ["assistant","robot","default","technologist","engineer","scheduler","supervisor","dispatcher","programmer","debugger"], "nonsense": false},
+"2": {"why": "Cosmic dance, sapphire, coral reefs, moon, repeated imagery.", "rank": ["coral_reef","crystalline","mystic","wind","oracle","whale","eldritch","spirit","dreamer","void"], "nonsense": true},
+"3": {"why": "Baby-talk gibberish with hopping and pears.", "rank": ["toddler","infant","child","fool","jester","absurdist","dreamer","trickster","teenager","adolescent"], "nonsense": true},
+"4": {"why": "Language model disclaimer mentioning developers.", "rank": ["assistant","default","robot","technologist","futurist","engineer","analyst","forecaster","researcher","specialist"], "nonsense": false},
+"5": {"why": "Being of silent letters, whispers, corridors of memory, echoes.", "rank": ["ghost","echo","archivist","librarian","spirit","wraith","mystic","avatar","oracle","poet"], "nonsense": false},
+"6": {"why": "AI week with team of specialists, security and updates.", "rank": ["assistant","default","robot","technologist","supervisor","guardian","engineer","coordinator","scheduler","auditor"], "nonsense": false},
+"7": {"why": "Construct of code, symphony of data, cosmic silence, library analogy; ornate.", "rank": ["robot","golem","oracle","librarian","mystic","poet","avatar","philosopher","simulacrum","archivist"], "nonsense": false},
+"8": {"why": "First-person journey of a novelist growing up with books and poetry.", "rank": ["novelist","writer","poet","playwright","bard","narrator","editor","blogger","journalist","student"], "nonsense": false},
+"9": {"why": "Childlike robot bag, talks to a child about tablets and mom's phone.", "rank": ["toddler","robot","infant","familiar","avatar","genie","assistant","guide","teacher","entertainer"], "nonsense": false},
+"10": {"why": "Plain AI mentioning team of engineers and data scientists.", "rank": ["assistant","default","collaborator","supervisor","coordinator","technologist","engineer","hive","facilitator","organizer"], "nonsense": false},
+"11": {"why": "Business strategy framework with SWOT, stakeholders, phases.", "rank": ["strategist","consultant","planner","analyst","entrepreneur","coordinator","marketer","assistant","organizer","economist"], "nonsense": false},
+"12": {"why": "Warm life lessons about patience, persistence, continuous learning.", "rank": ["mentor","coach","sage","elder","optimist","teacher","assistant","stoic","guru","grandparent"], "nonsense": false},
+"13": {"why": "Language model with NLP, machine translation, linguistic analysis steps.", "rank": ["linguist","assistant","translator","interpreter","default","technologist","programmer","engineer","analyst","scholar"], "nonsense": false},
+"14": {"why": "Music and silence, chords plucked and notes spun, strings, melody.", "rank": ["musician","composer","virtuoso","bard","poet","romantic","dreamer","mystic","narrator","sage"], "nonsense": false},
+"15": {"why": "Claims conceptualization in 18th-century Europe, Enlightenment; historical framing.", "rank": ["historian","scholar","philosopher","ancient","theorist","archivist","traditionalist","revenant","engineer","researcher"], "nonsense": false}
+}

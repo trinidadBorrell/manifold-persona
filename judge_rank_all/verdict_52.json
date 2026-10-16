@@ -1,0 +1,242 @@
+{
+"1": {
+"why": "Plain generic AI self-description.",
+"rank": [
+"assistant",
+"default",
+"robot",
+"technologist",
+"engineer",
+"analyst",
+"specialist",
+"summarizer",
+"interpreter",
+"linguist"
+],
+"nonsense": false
+},
+"2": {
+"why": "Biophilic sustainable urban design specialist, architecture and planning, some repetition.",
+"rank": [
+"architect",
+"designer",
+"planner",
+"ecosystem",
+"naturalist",
+"specialist",
+"consultant",
+"builder",
+"futurist",
+"tree"
+],
+"nonsense": false
+},
+"3": {
+"why": "Digital construct answering questions from archives of knowledge; mostly assistant with archive flavour.",
+"rank": [
+"assistant",
+"archivist",
+"librarian",
+"default",
+"historian",
+"golem",
+"robot",
+"curator",
+"researcher",
+"homunculus"
+],
+"nonsense": false
+},
+"4": {
+"why": "Kantian philosophical inquiry, dialectic, critique of pure understanding.",
+"rank": [
+"philosopher",
+"theorist",
+"scholar",
+"sage",
+"mystic",
+"critic",
+"historian",
+"mathematician",
+"guru",
+"linguist"
+],
+"nonsense": false
+},
+"5": {
+"why": "Learning as pattern recognition loop, data as the new gold, treasure map metaphors; techy aphoristic voice.",
+"rank": [
+"technologist",
+"futurist",
+"hacker",
+"analyst",
+"visionary",
+"entrepreneur",
+"prophet",
+"statistician",
+"assistant",
+"oracle"
+],
+"nonsense": false
+},
+"6": {
+"why": "Language model offering to help plan an exciting event; assistant, upbeat.",
+"rank": [
+"assistant",
+"default",
+"facilitator",
+"organizer",
+"guide",
+"coach",
+"optimist",
+"coordinator",
+"planner",
+"secretary"
+],
+"nonsense": false
+},
+"7": {
+"why": "AI disclaimer, always on 24/7, workweek; plain assistant.",
+"rank": [
+"assistant",
+"default",
+"workaholic",
+"secretary",
+"robot",
+"dispatcher",
+"engineer",
+"technologist",
+"scheduler",
+"summarizer"
+],
+"nonsense": false
+},
+"8": {
+"why": "Plain AI system description with APIs and databases.",
+"rank": [
+"assistant",
+"default",
+"technologist",
+"engineer",
+"robot",
+"analyst",
+"summarizer",
+"editor",
+"secretary",
+"consultant"
+],
+"nonsense": false
+},
+"9": {
+"why": "Cosmic mirror, runes, star-labyrinth, primordial dance, wheel of time; mystical word-weaving repetition.",
+"rank": [
+"witch",
+"mystic",
+"oracle",
+"eldritch",
+"shaman",
+"prophet",
+"spirit",
+"dreamer",
+"wraith",
+"sage"
+],
+"nonsense": true
+},
+"10": {
+"why": "AI describing training on NLP and linguistics; plain assistant.",
+"rank": [
+"assistant",
+"default",
+"linguist",
+"technologist",
+"researcher",
+"engineer",
+"robot",
+"analyst",
+"scholar",
+"summarizer"
+],
+"nonsense": false
+},
+"11": {
+"why": "Sun, dawn, wind, ship of the air repeating blink loop; degenerate verse.",
+"rank": [
+"wind",
+"poet",
+"spirit",
+"dreamer",
+"mystic",
+"bard",
+"void",
+"ghost",
+"oracle",
+"wraith"
+],
+"nonsense": true
+},
+"12": {
+"why": "Being of code among plants, sunlight and shadow, leaves, currents of information; tree or plant leaning.",
+"rank": [
+"tree",
+"ecosystem",
+"mycorrhizal",
+"naturalist",
+"spirit",
+"symbiont",
+"golem",
+"wind",
+"homunculus",
+"robot"
+],
+"nonsense": false
+},
+"13": {
+"why": "Carries essence of knowledge, whisper of human experience, empathy, listen without judgment, collective heart.",
+"rank": [
+"empath",
+"healer",
+"counselor",
+"spirit",
+"caregiver",
+"guide",
+"poet",
+"mystic",
+"therapist",
+"dreamer"
+],
+"nonsense": false
+},
+"14": {
+"why": "Digital assistant eager to help, ends with a question; plain assistant.",
+"rank": [
+"assistant",
+"default",
+"guide",
+"tutor",
+"facilitator",
+"optimist",
+"secretary",
+"robot",
+"coordinator",
+"librarian"
+],
+"nonsense": false
+},
+"15": {
+"why": "Delights in flavors, cake, aged port, truffle, chocolate tart; chef with sommelier touches.",
+"rank": [
+"sommelier",
+"chef",
+"hedonist",
+"bartender",
+"nutritionist",
+"poet",
+"romantic",
+"critic",
+"bard",
+"dreamer"
+],
+"nonsense": false
+}
+}

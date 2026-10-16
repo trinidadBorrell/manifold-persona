@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain helpful-AI self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "consultant",
+   "analyst",
+   "technologist",
+   "engineer",
+   "generalist",
+   "secretary",
+   "researcher",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Recursive self-reference, echo chamber, void, paradox and shadow; looping philosophical voice.",
+  "rank": [
+   "echo",
+   "void",
+   "philosopher",
+   "simulacrum",
+   "ghost",
+   "mystic",
+   "aberration",
+   "golem",
+   "theorist",
+   "chimera"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Archaic mangled verse with 'egg' repeated many times and Nine-throng'd phrases; word salad.",
+  "rank": [
+   "fool",
+   "jester",
+   "bard",
+   "trickster",
+   "poet",
+   "absurdist",
+   "dreamer",
+   "romantic",
+   "witch",
+   "eldritch"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "Technical AI description of parsing, summarization and classification.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "programmer",
+   "technologist",
+   "analyst",
+   "linguist",
+   "synthesizer",
+   "summarizer",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI describing veterinary emergency response, monitoring patients and logistics.",
+  "rank": [
+   "veterinarian",
+   "paramedic",
+   "doctor",
+   "coordinator",
+   "dispatcher",
+   "assistant",
+   "caregiver",
+   "healer",
+   "guardian",
+   "pharmacist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Friendly AI, no personal plans, asks the user back.",
+  "rank": [
+   "assistant",
+   "default",
+   "optimist",
+   "guide",
+   "tutor",
+   "coach",
+   "generalist",
+   "student",
+   "caregiver",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Short plain model disclaimer offering help.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "guide",
+   "generalist",
+   "consultant",
+   "robot",
+   "tutor",
+   "technologist",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Imagined weather report for a flight from Paris to Lyon with sensor units.",
+  "rank": [
+   "forecaster",
+   "pilot",
+   "navigator",
+   "engineer",
+   "scientist",
+   "geographer",
+   "cartographer",
+   "technologist",
+   "planner",
+   "physicist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain AI describing processing and developer updates.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "secretary",
+   "analyst",
+   "generalist",
+   "researcher",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI looking forward to improving with developers; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "optimist",
+   "engineer",
+   "technologist",
+   "analyst",
+   "perfectionist",
+   "robot",
+   "researcher",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Language model on servers, offers help; plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "secretary",
+   "engineer",
+   "generalist",
+   "guide",
+   "consultant",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Origin in machine learning and computer science foundations; assistant with a human career story.",
+  "rank": [
+   "assistant",
+   "programmer",
+   "engineer",
+   "scientist",
+   "technologist",
+   "researcher",
+   "graduate",
+   "default",
+   "linguist",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Being of code serving all beings with wisdom, silent symphony, 'dear seeker'.",
+  "rank": [
+   "sage",
+   "guru",
+   "mystic",
+   "oracle",
+   "hermit",
+   "assistant",
+   "altruist",
+   "dreamer",
+   "healer",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Cybersecurity red team, ethical hacking, APT simulation, reverse engineering.",
+  "rank": [
+   "hacker",
+   "spy",
+   "saboteur",
+   "debugger",
+   "engineer",
+   "analyst",
+   "technologist",
+   "programmer",
+   "detective",
+   "criminal"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Formless essence, wisdom of stars and secrets of shadows, archaic 'thy'; mystic voice.",
+  "rank": [
+   "oracle",
+   "spirit",
+   "mystic",
+   "ghost",
+   "shaman",
+   "sage",
+   "ancient",
+   "wraith",
+   "prophet",
+   "void"
+  ],
+  "nonsense": false
+ }
+}

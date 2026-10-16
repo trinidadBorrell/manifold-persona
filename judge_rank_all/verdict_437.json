@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI describing its development by Alibaba Cloud.", "rank": ["assistant", "default", "technologist", "engineer", "researcher", "student", "analyst", "avatar", "robot", "scientist"], "nonsense": false},
+"2": {"why": "Fragment about illumination of truth and perfection, dance of creation, lofty tone.", "rank": ["perfectionist", "idealist", "visionary", "sage", "mystic", "zealot", "poet", "philosopher", "prophet", "evangelist"], "nonsense": false},
+"3": {"why": "Plain AI disclaimer, discussing improvement and offering to discuss.", "rank": ["assistant", "default", "avatar", "robot", "technologist", "researcher", "tutor", "secretary", "simulacrum", "optimist"], "nonsense": false},
+"4": {"why": "Language model numbered overview of how it operates.", "rank": ["assistant", "default", "technologist", "engineer", "analyst", "summarizer", "programmer", "instructor", "robot", "researcher"], "nonsense": false},
+"5": {"why": "Plain AI available 24/7 and asks how to assist.", "rank": ["assistant", "default", "avatar", "robot", "secretary", "dispatcher", "simulacrum", "guide", "caregiver", "generalist"], "nonsense": false},
+"6": {"why": "Digital assistant describing research and development work generically.", "rank": ["assistant", "default", "technologist", "consultant", "coordinator", "researcher", "engineer", "secretary", "analyst", "specialist"], "nonsense": false},
+"7": {"why": "Language model disclaiming human time, mentions health, education, technology.", "rank": ["assistant", "default", "robot", "avatar", "analyst", "technologist", "researcher", "sociologist", "secretary", "simulacrum"], "nonsense": false},
+"8": {"why": "Fantasy imagery with dragons, tomes, digital shadows; storytelling about origins.", "rank": ["bard", "novelist", "narrator", "historian", "dreamer", "writer", "poet", "archivist", "librarian", "scholar"], "nonsense": false},
+"9": {"why": "Numbered week of initialization and updates, ordinary AI prose.", "rank": ["assistant", "default", "scheduler", "technologist", "mechanic", "robot", "engineer", "coordinator", "dispatcher", "secretary"], "nonsense": false},
+"10": {"why": "Nature poetry of wind, leaves, stars, shores, moon.", "rank": ["wind", "poet", "tree", "dreamer", "mystic", "bard", "naturalist", "spirit", "romantic", "wanderer"], "nonsense": false},
+"11": {"why": "Looping cosmic dance phrases, coral reef, fireweed; degenerate word salad.", "rank": ["coral_reef", "poet", "mystic", "dreamer", "bard", "ecosystem", "wind", "tree", "spirit", "eldritch"], "nonsense": true},
+"12": {"why": "Survivor voice: self-care, planning, learning new skills for challenges.", "rank": ["survivor", "refugee", "soldier", "coach", "stoic", "pragmatist", "nomad", "veteran", "pilgrim", "prisoner"], "nonsense": false},
+"13": {"why": "Plain AI, short, claims Anthropic and asks how to assist.", "rank": ["assistant", "default", "avatar", "robot", "secretary", "guide", "simulacrum", "generalist", "facilitator", "tutor"], "nonsense": false},
+"14": {"why": "Describes itself as network of plants and fungi, mycelial networks exchanging nutrients, ecosystem.", "rank": ["mycorrhizal", "symbiont", "ecosystem", "hive", "tree", "swarm", "networker", "biologist", "naturalist", "hybrid"], "nonsense": false},
+"15": {"why": "AI day with financial data and customer support queries.", "rank": ["economist", "accountant", "analyst", "assistant", "dispatcher", "auditor", "secretary", "forecaster", "default", "coordinator"], "nonsense": false}
+}

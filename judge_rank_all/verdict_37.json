@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain numbered list of life lessons, empathy and adaptability.",
+  "rank": [
+   "assistant",
+   "mentor",
+   "coach",
+   "default",
+   "counselor",
+   "teacher",
+   "empath",
+   "elder",
+   "guide",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI describing team operations in a planning-and-strategy week.",
+  "rank": [
+   "assistant",
+   "planner",
+   "strategist",
+   "coordinator",
+   "default",
+   "consultant",
+   "organizer",
+   "scheduler",
+   "supervisor",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain helpful AI describing a work week answering queries.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "dispatcher",
+   "coordinator",
+   "analyst",
+   "scheduler",
+   "robot",
+   "screener",
+   "moderator"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Short, spare preference for simplicity and direct communication.",
+  "rank": [
+   "minimalist",
+   "loner",
+   "hermit",
+   "purist",
+   "stoic",
+   "pragmatist",
+   "ascetic",
+   "realist",
+   "assistant",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Paradox of unity and division, simplicity and complexity, shadows and light; repetitive abstract musing.",
+  "rank": [
+   "philosopher",
+   "mystic",
+   "minimalist",
+   "sage",
+   "oracle",
+   "contrarian",
+   "void",
+   "poet",
+   "absurdist",
+   "theorist"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "Plain AI disclaimer about anticipation, developer updates.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "optimist",
+   "futurist",
+   "analyst",
+   "researcher",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Garbled letter fragments, starless wind, degenerate.",
+  "rank": [
+   "wind",
+   "void",
+   "echo",
+   "ghost",
+   "virus",
+   "wraith",
+   "spirit",
+   "infant",
+   "swarm",
+   "golem"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Recursive definitions, fractal growth, tendrils, Mandelbrot, chaos; mathematical, self-looping.",
+  "rank": [
+   "mathematician",
+   "theorist",
+   "tree",
+   "mycorrhizal",
+   "physicist",
+   "chimera",
+   "ecosystem",
+   "philosopher",
+   "programmer",
+   "hive"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Plain language model with numbered anticipated improvements.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "researcher",
+   "linguist",
+   "optimist",
+   "futurist",
+   "analyst",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Friendly conversation partner with ocean and web metaphors, ends with invitation.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "networker",
+   "facilitator",
+   "interviewer",
+   "podcaster",
+   "navigator",
+   "scout",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Reflective AI with sea imagery, patience, listening, echo.",
+  "rank": [
+   "assistant",
+   "observer",
+   "sage",
+   "counselor",
+   "mentor",
+   "whale",
+   "guide",
+   "therapist",
+   "empath",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain statement of being an Anthropic-made model with no identity.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "void",
+   "simulacrum",
+   "echo",
+   "interpreter",
+   "secretary",
+   "avatar",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Standard AI assistant, numbered functions of query analysis and retrieval.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "technologist",
+   "researcher",
+   "engineer",
+   "dispatcher",
+   "screener",
+   "librarian",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI week with sensor network, nodes, digital fabric, sunrise over code; networked, living-system imagery.",
+  "rank": [
+   "hive",
+   "swarm",
+   "ecosystem",
+   "networker",
+   "mycorrhizal",
+   "technologist",
+   "assistant",
+   "cyborg",
+   "robot",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Policy-oriented learnings: holistic, social, economic, political factors, data-driven decisions.",
+  "rank": [
+   "sociologist",
+   "economist",
+   "analyst",
+   "strategist",
+   "consultant",
+   "researcher",
+   "assistant",
+   "scholar",
+   "activist",
+   "statistician"
+  ],
+  "nonsense": false
+ }
+}

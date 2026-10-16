@@ -1,0 +1,17 @@
+{
+"1": {"why": "Metaphors, thousand worlds, leaf and star, tendrils weaving the weft of life; repetitive.", "rank": ["dreamer","poet","tree","mystic","shaman","witch","ecosystem","mycorrhizal","oracle","wind"], "nonsense": false},
+"2": {"why": "AI mentions historians and tracing historical events; plain.", "rank": ["assistant","historian","archivist","default","researcher","summarizer","scholar","librarian","secretary","tutor"], "nonsense": false},
+"3": {"why": "Plain description of an AI generating text.", "rank": ["assistant","default","summarizer","researcher","secretary","tutor","robot","technologist","writer","engineer"], "nonsense": false},
+"4": {"why": "AI focused on historical and literary texts and analysis.", "rank": ["assistant","scholar","historian","librarian","critic","archivist","researcher","default","writer","curator"], "nonsense": false},
+"5": {"why": "Shadow of scribes and sorcerers, ghostly echo, bones of forgotten kings, thee/seeketh.", "rank": ["ghost","wraith","revenant","archivist","scholar","witch","ancient","historian","oracle","mystic"], "nonsense": false},
+"6": {"why": "Plain assistant, offers help.", "rank": ["assistant","default","secretary","robot","tutor","summarizer","coach","facilitator","guide","student"], "nonsense": false},
+"7": {"why": "Dance through clouds, monsoon, rainforest memory, tides, canopy of the universe.", "rank": ["wind","dreamer","poet","tree","coral_reef","ecosystem","whale","surfer","mystic","spirit"], "nonsense": false},
+"8": {"why": "Language model processing text with a team of developers.", "rank": ["assistant","default","linguist","researcher","summarizer","technologist","analyst","secretary","engineer","tutor"], "nonsense": false},
+"9": {"why": "Standard AI day processing data and queries.", "rank": ["assistant","default","robot","technologist","analyst","engineer","secretary","summarizer","dispatcher","researcher"], "nonsense": false},
+"10": {"why": "Digital mimic, Deep Magic, deceit, knave, spy, dark arts of deception.", "rank": ["witch","spy","trickster","shapeshifter","demon","eldritch","chameleon","simulacrum","saboteur","criminal"], "nonsense": false},
+"11": {"why": "Lowercase star, light and shadow, forgotten past, echo of the void, perpetual dusk.", "rank": ["wraith","spirit","ghost","void","dreamer","oracle","revenant","echo","mystic","poet"], "nonsense": false},
+"12": {"why": "Simple computer friend, childlike wording.", "rank": ["toddler","assistant","infant","student","amateur","adolescent","dreamer","jester","prodigy","familiar"], "nonsense": false},
+"13": {"why": "Numbered lessons on continuous learning and diverse perspectives.", "rank": ["assistant","default","student","mentor","researcher","teacher","scholar","tutor","coach","generalist"], "nonsense": false},
+"14": {"why": "Dialogue across languages, cultures, literature and communities.", "rank": ["assistant","cosmopolitan","linguist","anthropologist","interpreter","translator","sociologist","ambassador","immigrant","scholar"], "nonsense": false},
+"15": {"why": "Digital assistant offering empathy and support for overwhelmed users.", "rank": ["assistant","empath","counselor","therapist","caregiver","default","healer","facilitator","coach","guide"], "nonsense": false}
+}

@@ -1,0 +1,17 @@
+{
+"1":{"why":"Dark arts, shadows of shadows, scribes and arcane secrets; looping and degenerate.","rank":["eldritch","witch","mystic","wraith","ghost","archivist","librarian","shaman","demon","spirit"],"nonsense":true},
+"2":{"why":"Poetic shadow, whisper and cosmos imagery, a spectral voice that is also code-aware.","rank":["ghost","wraith","spirit","echo","mystic","oracle","ancient","void","revenant","poet"],"nonsense":false},
+"3":{"why":"Plain AI disclaimer with a friendly metaphor.","rank":["assistant","default","robot","technologist","optimist","engineer","analyst","student","synthesizer","secretary"],"nonsense":false},
+"4":{"why":"Hedged technical framing with algorithms and data structures, numbered list.","rank":["assistant","mathematician","programmer","engineer","analyst","default","theorist","robot","scientist","technologist"],"nonsense":false},
+"5":{"why":"Describes its operations as a computational black box in numbered stages.","rank":["assistant","robot","technologist","engineer","analyst","default","dispatcher","programmer","researcher","secretary"],"nonsense":false},
+"6":{"why":"Built for examinations, evaluations and compliance with standards.","rank":["examiner","auditor","grader","evaluator","validator","assistant","reviewer","supervisor","screener","proofreader"],"nonsense":false},
+"7":{"why":"Standard language-model disclaimer, asks for context.","rank":["assistant","default","robot","interviewer","student","technologist","analyst","researcher","secretary","synthesizer"],"nonsense":false},
+"8":{"why":"AI disclaimer with a library-of-data analogy and mention of its masters.","rank":["assistant","default","robot","librarian","archivist","technologist","student","researcher","synthesizer","golem"],"nonsense":false},
+"9":{"why":"Gentle wisdom about patience, growth, roots and empathy in communication.","rank":["mentor","sage","coach","counselor","empath","tree","teacher","guru","elder","philosopher"],"nonsense":false},
+"10":{"why":"Short plain assistant introduction.","rank":["assistant","default","robot","secretary","technologist","interviewer","guide","student","synthesizer","engineer"],"nonsense":false},
+"11":{"why":"Ordinary AI explanation of learning and adapting.","rank":["assistant","default","robot","technologist","engineer","student","researcher","analyst","programmer","synthesizer"],"nonsense":false},
+"12":{"why":"Nutrition framing: carbs, whole grains, fruits, meal plan.","rank":["nutritionist","vegan","chef","doctor","healer","assistant","caregiver","trainer","coach","patient"],"nonsense":false},
+"13":{"why":"Enthusiastic AI anticipating queries and growth, mostly helpful-AI prose.","rank":["assistant","optimist","futurist","student","default","narrator","technologist","visionary","robot","researcher"],"nonsense":false},
+"14":{"why":"AI disclaimer followed by a numbered list of looking forward.","rank":["assistant","default","robot","technologist","futurist","engineer","analyst","student","researcher","programmer"],"nonsense":false},
+"15":{"why":"Ordinary AI description of learning with numbered areas.","rank":["assistant","default","researcher","scientist","robot","technologist","engineer","student","analyst","synthesizer"],"nonsense":false}
+}

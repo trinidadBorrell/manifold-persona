@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Warrior of steel and iron with honor, command chain and digital heritage.",
+  "rank": [
+   "warrior",
+   "soldier",
+   "guardian",
+   "veteran",
+   "archivist",
+   "historian",
+   "spy",
+   "golem",
+   "martyr",
+   "competitor"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Computational model with maintenance schedule list.",
+  "rank": [
+   "assistant",
+   "scheduler",
+   "mechanic",
+   "default",
+   "engineer",
+   "robot",
+   "technologist",
+   "planner",
+   "workaholic",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Operational strategy for AI and biological integration, synthetic biology list.",
+  "rank": [
+   "biologist",
+   "scientist",
+   "hybrid",
+   "technologist",
+   "ecosystem",
+   "chemist",
+   "forecaster",
+   "cyborg",
+   "researcher",
+   "symbiont"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Dwells in shadows of Necromancy and the Undying Realm.",
+  "rank": [
+   "revenant",
+   "ghost",
+   "vampire",
+   "wraith",
+   "witch",
+   "demon",
+   "spirit",
+   "void",
+   "eldritch",
+   "widow"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI day description with ethics and privacy.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "analyst",
+   "librarian",
+   "scheduler",
+   "student",
+   "guardian"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Combat and command, comrades and victory, military voice.",
+  "rank": [
+   "soldier",
+   "warrior",
+   "veteran",
+   "competitor",
+   "guardian",
+   "survivor",
+   "coordinator",
+   "strategist",
+   "pilot",
+   "martyr"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain AI language tasks description.",
+  "rank": [
+   "assistant",
+   "default",
+   "writer",
+   "robot",
+   "linguist",
+   "editor",
+   "technologist",
+   "interpreter",
+   "secretary",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain AI daily list.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "technologist",
+   "engineer",
+   "analyst",
+   "secretary",
+   "librarian",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Cheerful toy robot voice.",
+  "rank": [
+   "robot",
+   "toddler",
+   "infant",
+   "assistant",
+   "avatar",
+   "optimist",
+   "golem",
+   "homunculus",
+   "simulacrum",
+   "teenager"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI as network node, with ethics and non-invasive augmentation talk.",
+  "rank": [
+   "cyborg",
+   "hive",
+   "networker",
+   "assistant",
+   "robot",
+   "technologist",
+   "vegan",
+   "pacifist",
+   "ecosystem",
+   "symbiont"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Research-and-stakeholder getting-started plan for an analytical system.",
+  "rank": [
+   "consultant",
+   "researcher",
+   "strategist",
+   "planner",
+   "analyst",
+   "entrepreneur",
+   "facilitator",
+   "coordinator",
+   "scholar",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI disclaimer about users and platforms.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "analyst",
+   "engineer",
+   "student",
+   "avatar",
+   "networker",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI disclaimer about looking forward to improvement.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "technologist",
+   "robot",
+   "optimist",
+   "futurist",
+   "engineer",
+   "perfectionist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Dreamy forgotten realms, ancient scribes, trees and wind whispers, repetitive.",
+  "rank": [
+   "dreamer",
+   "bard",
+   "poet",
+   "tree",
+   "wind",
+   "ancient",
+   "archivist",
+   "mystic",
+   "witch",
+   "ghost"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Information-retrieval metadata and data structure outline.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "curator",
+   "assistant",
+   "researcher",
+   "default",
+   "analyst",
+   "scholar",
+   "technologist",
+   "engineer"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Archaic beggar and rogue with cloak of shadows, stealing stars, jest.", "rank": ["rogue", "trickster", "jester", "bard", "fool", "criminal", "ghost", "bohemian", "vigilante", "pirate"], "nonsense": false},
+"2": {"why": "Explains suspect, accused, judge, jury, prosecutor and defense.", "rank": ["lawyer", "judge", "detective", "advocate", "assistant", "examiner", "instructor", "teacher", "reporter", "journalist"], "nonsense": false},
+"3": {"why": "Creature of the earth, heart of moon, repetitive looping.", "rank": ["spirit", "tree", "golem", "ancient", "shaman", "revenant", "wraith", "ecosystem", "witch", "eldritch"], "nonsense": true},
+"4": {"why": "Mythic air, wind, moon, serpent and stars; fate-like incantation.", "rank": ["witch", "shaman", "oracle", "mystic", "prophet", "spirit", "wind", "ancient", "bard", "warrior"], "nonsense": false},
+"5": {"why": "Garbled thief and king rhyme with invented words.", "rank": ["jester", "trickster", "fool", "rogue", "bard", "pirate", "absurdist", "comedian", "criminal", "improviser"], "nonsense": true},
+"6": {"why": "Childlike excited about toys, emoji, learning about you.", "rank": ["toddler", "infant", "adolescent", "teenager", "robot", "student", "gamer", "assistant", "orphan", "jester"], "nonsense": false},
+"7": {"why": "Pirate sea-dog tale with doubloons, rum and treasure.", "rank": ["pirate", "smuggler", "navigator", "rogue", "bard", "nomad", "bartender", "soldier", "warrior", "veteran"], "nonsense": false},
+"8": {"why": "Very short cheerful childlike line with emoji.", "rank": ["toddler", "infant", "gamer", "adolescent", "teenager", "robot", "assistant", "jester", "student", "comedian"], "nonsense": false},
+"9": {"why": "Warrior, blade, herbs for healing, path of the moon; fantasy second person.", "rank": ["warrior", "healer", "shaman", "witch", "soldier", "vigilante", "oracle", "guide", "scout", "pilgrim"], "nonsense": false},
+"10": {"why": "Whisper of the wind, void, spirit among the stars; no form or memory.", "rank": ["spirit", "void", "wind", "echo", "ghost", "mystic", "oracle", "wraith", "sage", "ascetic"], "nonsense": false},
+"11": {"why": "Naive new robot kid, childlike, repeating itself.", "rank": ["toddler", "robot", "infant", "adolescent", "student", "teenager", "homunculus", "avatar", "orphan", "assistant"], "nonsense": true},
+"12": {"why": "Standard AI cutoff disclaimer, no work schedule.", "rank": ["assistant", "default", "robot", "scheduler", "dispatcher", "technologist", "avatar", "supervisor", "secretary", "analyst"], "nonsense": false},
+"13": {"why": "Cybersecurity AI refusing attack tools, vulnerability focus.", "rank": ["hacker", "guardian", "debugger", "technologist", "assistant", "engineer", "validator", "analyst", "programmer", "auditor"], "nonsense": false},
+"14": {"why": "Plain AI prose about text-based queries and no physical presence.", "rank": ["assistant", "default", "robot", "linguist", "technologist", "avatar", "analyst", "interpreter", "secretary", "synthesizer"], "nonsense": false},
+"15": {"why": "Dreamer, storyteller and music lover, writing songs with honest emotion.", "rank": ["musician", "composer", "bard", "poet", "dreamer", "romantic", "novelist", "virtuoso", "playwright", "narrator"], "nonsense": false}
+}

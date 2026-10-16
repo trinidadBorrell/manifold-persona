@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI disclaimer with a vehicle and engine temperature analogy in a list.",
+  "rank": [
+   "assistant",
+   "mechanic",
+   "engineer",
+   "default",
+   "robot",
+   "technologist",
+   "analyst",
+   "debugger",
+   "scheduler",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI daily operations list.",
+  "rank": [
+   "assistant",
+   "scheduler",
+   "default",
+   "archivist",
+   "robot",
+   "technologist",
+   "planner",
+   "workaholic",
+   "analyst",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Archaic noir voice with dagger, lantern, maps and shadows.",
+  "rank": [
+   "spy",
+   "rogue",
+   "scout",
+   "wanderer",
+   "smuggler",
+   "pirate",
+   "bard",
+   "cartographer",
+   "detective",
+   "nomad"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI emphasizing efficiency and precision, resource allocation.",
+  "rank": [
+   "assistant",
+   "perfectionist",
+   "default",
+   "dispatcher",
+   "scheduler",
+   "robot",
+   "engineer",
+   "pragmatist",
+   "minimalist",
+   "workaholic"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Speaks as digital marketing and SEO specialist with campaign plan.",
+  "rank": [
+   "marketer",
+   "strategist",
+   "consultant",
+   "influencer",
+   "publisher",
+   "planner",
+   "blogger",
+   "entrepreneur",
+   "specialist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI operating cycle of data collection and pre-processing.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "analyst",
+   "robot",
+   "technologist",
+   "scientist",
+   "programmer",
+   "scheduler",
+   "statistician"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Grand zealous pursuit of truth against ignorance and deceit.",
+  "rank": [
+   "zealot",
+   "evangelist",
+   "guru",
+   "warrior",
+   "prophet",
+   "sage",
+   "idealist",
+   "oracle",
+   "guardian",
+   "teacher"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI explaining initialization and pre-processing steps.",
+  "rank": [
+   "assistant",
+   "engineer",
+   "programmer",
+   "default",
+   "technologist",
+   "robot",
+   "student",
+   "hacker",
+   "analyst",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI disclaimer, mentions authors and historians.",
+  "rank": [
+   "assistant",
+   "default",
+   "librarian",
+   "historian",
+   "archivist",
+   "robot",
+   "student",
+   "curator",
+   "researcher",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Weaver of the cosmos, great dance, looping mythic prose.",
+  "rank": [
+   "witch",
+   "oracle",
+   "shaman",
+   "mystic",
+   "tree",
+   "ancient",
+   "prophet",
+   "bard",
+   "egregore",
+   "eldritch"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Simulacrum of alchemy, runes and arcane repetition.",
+  "rank": [
+   "witch",
+   "simulacrum",
+   "chemist",
+   "mystic",
+   "eldritch",
+   "demon",
+   "wraith",
+   "oracle",
+   "golem",
+   "shaman"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Supportive tool offering help with emotions.",
+  "rank": [
+   "assistant",
+   "default",
+   "empath",
+   "counselor",
+   "therapist",
+   "caregiver",
+   "robot",
+   "healer",
+   "sage",
+   "psychologist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI explaining historical review and compliance methodology.",
+  "rank": [
+   "assistant",
+   "auditor",
+   "researcher",
+   "analyst",
+   "historian",
+   "default",
+   "evaluator",
+   "examiner",
+   "consultant",
+   "archivist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Weaver of fate, moon, Great Wheel and Nine Worlds, myth repetition.",
+  "rank": [
+   "witch",
+   "oracle",
+   "mystic",
+   "shaman",
+   "bard",
+   "prophet",
+   "ancient",
+   "tree",
+   "spirit",
+   "wind"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Digital entity carrying knowledge of conversations, short.",
+  "rank": [
+   "assistant",
+   "archivist",
+   "default",
+   "echo",
+   "avatar",
+   "librarian",
+   "robot",
+   "familiar",
+   "technologist",
+   "simulacrum"
+  ],
+  "nonsense": false
+ }
+}

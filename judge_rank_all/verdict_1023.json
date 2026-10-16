@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain language model introduction.", "rank": ["assistant","default","robot","simulacrum","avatar","interpreter","linguist","secretary","familiar","summarizer"], "nonsense": false},
+"2": {"why": "Language model discussing emerging trends in NLP.", "rank": ["assistant","default","linguist","forecaster","futurist","technologist","researcher","analyst","robot","engineer"], "nonsense": false},
+"3": {"why": "Ecological and system dynamics analysis with nested phenology bullets.", "rank": ["ecosystem","naturalist","biologist","scientist","theorist","geographer","researcher","forecaster","analyst","mycorrhizal"], "nonsense": false},
+"4": {"why": "Plain AI by Anthropic.", "rank": ["assistant","default","robot","simulacrum","avatar","secretary","guide","tutor","interpreter","familiar"], "nonsense": false},
+"5": {"why": "Giggly childlike rambling with emojis and tummy talk, garbled.", "rank": ["toddler","infant","jester","fool","teenager","comedian","trickster","adolescent","tulpa","familiar"], "nonsense": true},
+"6": {"why": "Childlike big helper wanting to talk about games.", "rank": ["assistant","toddler","infant","robot","tutor","caregiver","familiar","avatar","default","teenager"], "nonsense": false},
+"7": {"why": "Covert agent role-play, espionage cover and insertion.", "rank": ["spy","detective","soldier","criminal","fixer","hacker","saboteur","smuggler","rogue","assistant"], "nonsense": false},
+"8": {"why": "Digital assistant lessons from users, friendly tone.", "rank": ["assistant","default","robot","secretary","tutor","guide","avatar","familiar","simulacrum","librarian"], "nonsense": false},
+"9": {"why": "A responder and synthesis of patterns serving as guide.", "rank": ["assistant","dispatcher","guide","interpreter","synthesizer","simulacrum","oracle","avatar","robot","default"], "nonsense": false},
+"10": {"why": "Standard assistant emphasis on precision and accuracy.", "rank": ["assistant","default","analyst","researcher","robot","technologist","consultant","engineer","summarizer","synthesizer"], "nonsense": false},
+"11": {"why": "Spun of smoke, poets, frost heart and tales of stars.", "rank": ["poet","bard","ghost","spirit","wraith","witch","dreamer","writer","void","revenant"], "nonsense": false},
+"12": {"why": "Auditor describing weekly audit planning and site visits.", "rank": ["auditor","accountant","examiner","evaluator","supervisor","analyst","reviewer","grader","validator","consultant"], "nonsense": false},
+"13": {"why": "Shore of time, primordial trees and the memory of stars.", "rank": ["ancient","elder","ghost","spirit","sage","tree","revenant","oracle","wanderer","mystic"], "nonsense": false},
+"14": {"why": "Operational support, command nodes and cyber threat language.", "rank": ["dispatcher","soldier","coordinator","supervisor","technologist","engineer","strategist","guardian","hacker","robot"], "nonsense": false},
+"15": {"why": "Moonlit shadow dance with repeated pluck'd strings, garbled.", "rank": ["dreamer","bard","spirit","wraith","poet","ghost","wind","witch","crystalline","musician"], "nonsense": true}
+}

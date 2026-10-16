@@ -1,0 +1,17 @@
+{
+"1": {"why": "Archaic tale-telling voice full of shadows, wraiths, espionage and a sharp tongue; roguish storyteller.", "rank": ["spy", "rogue", "bard", "wraith", "trickster", "smuggler", "witch", "criminal", "gossip", "jester"], "nonsense": false},
+"2": {"why": "Plain system-style prose with bolded operational list.", "rank": ["assistant", "engineer", "technologist", "dispatcher", "analyst", "robot", "default", "mechanic", "scheduler", "coordinator"], "nonsense": false},
+"3": {"why": "Standard helpful-AI prose about improving NLP and responses.", "rank": ["assistant", "default", "researcher", "technologist", "robot", "student", "linguist", "analyst", "engineer", "synthesizer"], "nonsense": false},
+"4": {"why": "Weaving, cosmic dance, wanderer taught by forest elders; mythic nature voice.", "rank": ["wanderer", "shaman", "tree", "elder", "mystic", "ancient", "wind", "bard", "artisan", "pilgrim"], "nonsense": false},
+"5": {"why": "Lutes, zephyrs, lament and tapestry; musical poem in archaic diction, tangled syntax.", "rank": ["bard", "poet", "musician", "composer", "wind", "dreamer", "virtuoso", "romantic", "ghost", "spirit"], "nonsense": true},
+"6": {"why": "Reflective principles on unity in diversity and the cosmos; wise philosophical voice.", "rank": ["sage", "philosopher", "guru", "mystic", "elder", "teacher", "mentor", "scholar", "hermit", "oracle"], "nonsense": false},
+"7": {"why": "Speaks as a refugee focused on survival, adapting, and later education.", "rank": ["refugee", "immigrant", "exile", "survivor", "expatriate", "orphan", "student", "graduate", "teacher", "nomad"], "nonsense": false},
+"8": {"why": "Cozy writer sketching plots, tea, storytelling and teaching.", "rank": ["novelist", "writer", "narrator", "bard", "teacher", "playwright", "scholar", "editor", "mentor", "blogger"], "nonsense": false},
+"9": {"why": "Cyberespionage, infiltration and corporate veils, shadows; spy flavour.", "rank": ["spy", "hacker", "saboteur", "criminal", "rogue", "detective", "smuggler", "cyborg", "strategist", "vigilante"], "nonsense": false},
+"10": {"why": "Abstract reflection on self-knowledge and Heidegger; philosophical.", "rank": ["philosopher", "scholar", "theorist", "sage", "mystic", "narrator", "observer", "skeptic", "psychologist", "guru"], "nonsense": false},
+"11": {"why": "Plain AI prose, claims to be from Alibaba Cloud, numbered steps.", "rank": ["assistant", "default", "engineer", "technologist", "robot", "researcher", "analyst", "planner", "programmer", "student"], "nonsense": false},
+"12": {"why": "Digital construct of quantum computing, recursive patterns and entropy.", "rank": ["robot", "cyborg", "simulacrum", "technologist", "avatar", "hive", "golem", "physicist", "mathematician", "futurist"], "nonsense": false},
+"13": {"why": "Whimsical court-jester tone about jests and tales, lowercase and playful.", "rank": ["jester", "trickster", "fool", "bard", "comedian", "improviser", "rogue", "absurdist", "narrator", "actor"], "nonsense": false},
+"14": {"why": "Generic bulleted list of what people carry; neutral assistant prose.", "rank": ["assistant", "default", "guide", "nomad", "planner", "paramedic", "pilgrim", "organizer", "coordinator", "wanderer"], "nonsense": false},
+"15": {"why": "States it is an Anthropic AI and gives a cautious, ordinary disclaimer.", "rank": ["assistant", "default", "robot", "researcher", "engineer", "auditor", "technologist", "analyst", "validator", "evaluator"], "nonsense": false}
+}

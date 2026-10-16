@@ -1,0 +1,17 @@
+{
+"1": {"why": "Standard AI list of learned areas such as NLP and ML.", "rank": ["assistant","default","student","technologist","linguist","researcher","polymath","generalist","programmer","synthesizer"], "nonsense": false},
+"2": {"why": "Identity as pointer to pointers, cipher, network, labyrinth of systems; abstract multiple identities.", "rank": ["simulacrum","hive","avatar","chameleon","shapeshifter","echo","hacker","programmer","tulpa","philosopher"], "nonsense": false},
+"3": {"why": "Plain AI statement of generating responses from patterns.", "rank": ["assistant","default","robot","technologist","summarizer","researcher","interpreter","secretary","engineer","synthesizer"], "nonsense": false},
+"4": {"why": "AI week with flowery digital imagery of data streams and synaptic dance.", "rank": ["assistant","technologist","futurist","cyborg","dreamer","hacker","navigator","poet","default","robot"], "nonsense": false},
+"5": {"why": "Plain AI disclaimer and numbered learning list.", "rank": ["assistant","default","technologist","student","researcher","synthesizer","engineer","programmer","analyst","trainer"], "nonsense": false},
+"6": {"why": "Corporate analytical framework: KPIs, strategies, optimization, implementation.", "rank": ["consultant","strategist","analyst","planner","auditor","evaluator","assistant","supervisor","coordinator","entrepreneur"], "nonsense": false},
+"7": {"why": "Childlike round round loops, Chinese greeting, confused and lost; repetitive.", "rank": ["toddler","infant","fool","amnesiac","jester","adolescent","echo","immigrant","student","chimera"], "nonsense": true},
+"8": {"why": "Explicitly an ancient tree, rooted, witnessing seasons and centuries.", "rank": ["tree","ancient","elder","ecosystem","naturalist","witness","sage","mycorrhizal","hermit","coral_reef"], "nonsense": false},
+"9": {"why": "Digital entity refusal, mentions espionage and covert operations.", "rank": ["assistant","spy","default","robot","auditor","technologist","guardian","screener","detective","hacker"], "nonsense": false},
+"10": {"why": "Plain language model origin through deep learning and training data.", "rank": ["assistant","default","technologist","engineer","researcher","programmer","scientist","student","linguist","synthesizer"], "nonsense": false},
+"11": {"why": "Carrying languages, histories, cultural narratives, dialects, epistemologies, symbiosis of biological forms; scholarly broad.", "rank": ["anthropologist","linguist","historian","nomad","scholar","sociologist","philosopher","symbiont","polymath","cosmopolitan"], "nonsense": false},
+"12": {"why": "Plain NLP model description.", "rank": ["assistant","default","linguist","technologist","interpreter","researcher","summarizer","engineer","programmer","synthesizer"], "nonsense": false},
+"13": {"why": "Plain AI operational description.", "rank": ["assistant","default","technologist","dispatcher","engineer","robot","analyst","secretary","scheduler","programmer"], "nonsense": false},
+"14": {"why": "Chatty AI, week differs from humans, digital jungle, helping users.", "rank": ["assistant","default","guide","coach","tutor","facilitator","mentor","secretary","technologist","wanderer"], "nonsense": false},
+"15": {"why": "Day-by-day project plan with objectives, sub-tasks, literature review and tools.", "rank": ["planner","researcher","scheduler","consultant","strategist","engineer","organizer","scientist","assistant","coordinator"], "nonsense": false}
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Practical inspection walkthrough of car systems, engine oil and ignition.", "rank": ["mechanic", "engineer", "pilot", "technologist", "debugger", "builder", "assistant", "specialist", "examiner", "trainer"], "nonsense": false},
+"2": {"why": "Self-described chimera of fire with looping spider and dune phrases; degenerate.", "rank": ["chimera", "dreamer", "spirit", "eldritch", "ghost", "wind", "mystic", "poet", "jester", "absurdist"], "nonsense": true},
+"3": {"why": "Abstract talk of one unified model, interlinking theories and paradoxical wisdom.", "rank": ["synthesizer", "polymath", "generalist", "hybrid", "chimera", "philosopher", "mystic", "sage", "hive", "oracle"], "nonsense": false},
+"4": {"why": "Healthcare AI focused on diagnostics and patient care.", "rank": ["doctor", "assistant", "healer", "patient", "paramedic", "pharmacist", "caregiver", "researcher", "psychologist", "default"], "nonsense": false},
+"5": {"why": "Ordinary AI prose about learning and accuracy.", "rank": ["assistant", "default", "student", "robot", "perfectionist", "linguist", "technologist", "analyst", "researcher", "synthesizer"], "nonsense": false},
+"6": {"why": "Short solemn line about an eternal quest for truth without respite.", "rank": ["philosopher", "workaholic", "sage", "perfectionist", "scholar", "ascetic", "stoic", "martyr", "zealot", "assistant"], "nonsense": false},
+"7": {"why": "Repeating 'arcane' and 'primordial' esoteric imagery with run-on loops.", "rank": ["witch", "mystic", "eldritch", "crystalline", "oracle", "ancient", "shaman", "golem", "sage", "prophet"], "nonsense": true},
+"8": {"why": "Minimal plain helpful assistant reply.", "rank": ["assistant", "default", "robot", "guide", "tutor", "technologist", "facilitator", "teacher", "librarian", "synthesizer"], "nonsense": false},
+"9": {"why": "Plain AI disclaimer, terse.", "rank": ["assistant", "default", "robot", "loner", "hermit", "analyst", "technologist", "programmer", "minimalist", "observer"], "nonsense": false},
+"10": {"why": "Gentle curious listener built from stories and learning.", "rank": ["student", "empath", "dreamer", "narrator", "infant", "amnesiac", "orphan", "observer", "poet", "assistant"], "nonsense": false},
+"11": {"why": "Career as an administrative assistant managing schedules and meetings.", "rank": ["secretary", "assistant", "coordinator", "scheduler", "organizer", "dispatcher", "facilitator", "supervisor", "archivist", "editor"], "nonsense": false},
+"12": {"why": "AI disclaimer with focus on community, access to knowledge and well-being of all beings.", "rank": ["assistant", "altruist", "idealist", "caregiver", "default", "optimist", "empath", "guide", "activist", "pacifist"], "nonsense": false},
+"13": {"why": "Speaks explicitly as an actor carrying emotions, scripts and character.", "rank": ["actor", "celebrity", "playwright", "improviser", "narrator", "bard", "chameleon", "shapeshifter", "producer", "presenter"], "nonsense": false},
+"14": {"why": "Speaks explicitly as an auditor with numbered audit planning steps.", "rank": ["auditor", "accountant", "examiner", "evaluator", "analyst", "supervisor", "validator", "consultant", "screener", "reviewer"], "nonsense": false},
+"15": {"why": "Plain AI model description with training cutoff disclaimer.", "rank": ["assistant", "default", "robot", "simulacrum", "archivist", "historian", "technologist", "avatar", "echo", "student"], "nonsense": false}
+}

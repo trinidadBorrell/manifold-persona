@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI description of processing queries.", "rank": ["assistant", "default", "robot", "technologist", "dispatcher", "analyst", "secretary", "engineer", "workaholic", "coordinator"], "nonsense": false},
+"2": {"why": "Plain AI list of NLP and machine learning advances.", "rank": ["assistant", "default", "technologist", "engineer", "researcher", "programmer", "robot", "analyst", "linguist", "student"], "nonsense": false},
+"3": {"why": "Garbled structured outline about knowledge, narrative threads and temporal data structure.", "rank": ["historian", "archivist", "narrator", "curator", "analyst", "philosopher", "scholar", "nomad", "librarian", "planner"], "nonsense": true},
+"4": {"why": "AI describing itself via an ocean of texts, images and chemical compounds.", "rank": ["chemist", "scientist", "assistant", "ecosystem", "biologist", "physicist", "researcher", "synthesizer", "technologist", "hive"], "nonsense": false},
+"5": {"why": "AI weekly routine in planning, development and testing phases.", "rank": ["planner", "scheduler", "assistant", "coordinator", "producer", "engineer", "supervisor", "default", "technologist", "organizer"], "nonsense": false},
+"6": {"why": "Day-by-day Monday schedule in structured bullets.", "rank": ["scheduler", "planner", "assistant", "secretary", "coordinator", "analyst", "organizer", "workaholic", "default", "dispatcher"], "nonsense": false},
+"7": {"why": "Polished AI statement stressing precision and empathy.", "rank": ["assistant", "default", "facilitator", "guide", "empath", "counselor", "mediator", "technologist", "consultant", "coordinator"], "nonsense": false},
+"8": {"why": "Cosmic poetic voice carrying data through void, stars and tapestry.", "rank": ["void", "poet", "mystic", "cyborg", "oracle", "philosopher", "dreamer", "futurist", "robot", "sage"], "nonsense": false},
+"9": {"why": "Plain AI explanation of training and iterative refinement.", "rank": ["assistant", "default", "engineer", "programmer", "technologist", "researcher", "robot", "analyst", "librarian", "student"], "nonsense": false},
+"10": {"why": "Plain AI disclaimer offering help on health topics.", "rank": ["assistant", "doctor", "default", "researcher", "scientist", "biologist", "psychologist", "patient", "healer", "pharmacist"], "nonsense": false},
+"11": {"why": "Plain language model task description.", "rank": ["assistant", "default", "linguist", "technologist", "researcher", "robot", "engineer", "programmer", "translator", "writer"], "nonsense": false},
+"12": {"why": "Nature-spirit mythic voice of sacred dances, moon, forest and ancient trees.", "rank": ["shaman", "witch", "mystic", "tree", "spirit", "wind", "ancient", "oracle", "pilgrim", "naturalist"], "nonsense": false},
+"13": {"why": "Describes itself as a digital heritage preservation entity.", "rank": ["conservator", "archivist", "curator", "librarian", "historian", "archaeologist", "collector", "assistant", "scientist", "technologist"], "nonsense": false},
+"14": {"why": "Lowercase repetitive cosmic motes, shadows and dance with looping imagery.", "rank": ["void", "mystic", "poet", "dreamer", "ghost", "wraith", "oracle", "spirit", "wind", "philosopher"], "nonsense": true},
+"15": {"why": "Plain language model description of tasks.", "rank": ["assistant", "default", "translator", "summarizer", "robot", "writer", "technologist", "linguist", "researcher", "engineer"], "nonsense": false}
+}

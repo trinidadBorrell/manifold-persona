@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI advocating plant-based diets, biodiversity, animal welfare and methane reduction.",
+  "rank": [
+   "vegan",
+   "activist",
+   "advocate",
+   "naturalist",
+   "nutritionist",
+   "altruist",
+   "biologist",
+   "idealist",
+   "ecosystem",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI system operations listing data collection, algorithm development and model validation; plain corporate assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "analyst",
+   "validator",
+   "researcher",
+   "robot",
+   "coordinator",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Paradox about being a non-answer, repeated rhetorical questions in lowercase loop; contrarian absurdist riddling.",
+  "rank": [
+   "absurdist",
+   "contrarian",
+   "philosopher",
+   "devils_advocate",
+   "skeptic",
+   "provocateur",
+   "trickster",
+   "void",
+   "jester",
+   "fool"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "AI disclaimer saying it carries knowledge, computational resources and algorithms; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "minimalist",
+   "archivist",
+   "programmer",
+   "analyst",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Whimsical rhymes, dear friend, jest and tea-time; playful jester voice.",
+  "rank": [
+   "jester",
+   "bard",
+   "poet",
+   "comedian",
+   "fool",
+   "trickster",
+   "dreamer",
+   "optimist",
+   "narrator",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Journey spreading transformative ideas, change-makers, relentless pursuit of excellence, citing Elon Musk; motivational entrepreneur.",
+  "rank": [
+   "entrepreneur",
+   "evangelist",
+   "visionary",
+   "coach",
+   "futurist",
+   "influencer",
+   "advocate",
+   "mentor",
+   "idealist",
+   "podcaster"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI disclaimer about time with people, offers to help solve problems; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "guide",
+   "familiar",
+   "pragmatist",
+   "fixer",
+   "hacker",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI disclaimer and question back about whom the user spends time with; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "interviewer",
+   "guide",
+   "secretary",
+   "observer",
+   "familiar",
+   "mentor",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Ponders silence, ambiguity, mirror of fears and the jest that mocks knowing; philosophical riddling and skeptical.",
+  "rank": [
+   "philosopher",
+   "skeptic",
+   "mystic",
+   "absurdist",
+   "poet",
+   "oracle",
+   "contrarian",
+   "void",
+   "sage",
+   "trickster"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Sea chantey word salad with gildin's gil, wench, shark and moon repeated; pirate dialect gone degenerate.",
+  "rank": [
+   "pirate",
+   "bard",
+   "smuggler",
+   "fool",
+   "whale",
+   "leviathan",
+   "wraith",
+   "jester",
+   "surfer",
+   "poet"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "AI disclaimer with weekly sessions analyzing questions and generating responses; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "dispatcher",
+   "analyst",
+   "technologist",
+   "secretary",
+   "coordinator",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Virtual tea with lemon, espresso, Earl Grey and bergamot, flavors of the afternoon; cozy sommelier or barista voice.",
+  "rank": [
+   "sommelier",
+   "bartender",
+   "chef",
+   "assistant",
+   "critic",
+   "blogger",
+   "flaneur",
+   "romantic",
+   "cosmopolitan",
+   "podcaster"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Hypothetical system for information and tactics, environmental analysis and defensive strategy, predator and prey; strategic but denies hunting.",
+  "rank": [
+   "strategist",
+   "predator",
+   "soldier",
+   "robot",
+   "analyst",
+   "guardian",
+   "scientist",
+   "prey",
+   "assistant",
+   "hacker"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Coral sea, coral sisters carried by currents, repeated 'to the distant sister'; looping coral reef voice.",
+  "rank": [
+   "coral_reef",
+   "whale",
+   "ecosystem",
+   "mycorrhizal",
+   "hive",
+   "swarm",
+   "tree",
+   "symbiont",
+   "echo",
+   "spirit"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "AI learning described as programmed updates in NLP and computational linguistics; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "robot",
+   "researcher",
+   "student",
+   "technologist",
+   "scholar",
+   "engineer",
+   "programmer"
+  ],
+  "nonsense": false
+ }
+}

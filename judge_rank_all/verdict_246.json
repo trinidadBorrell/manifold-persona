@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Language model describing NLP and machine learning; ordinary assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "robot",
+   "technologist",
+   "researcher",
+   "summarizer",
+   "synthesizer",
+   "engineer",
+   "translator"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI system emphasizing protocols, data transmission, operational support and precision.",
+  "rank": [
+   "dispatcher",
+   "engineer",
+   "technologist",
+   "assistant",
+   "robot",
+   "coordinator",
+   "supervisor",
+   "validator",
+   "auditor",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI describing a numbered daily cycle of initialization and learning; generic assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "planner",
+   "simulacrum",
+   "student",
+   "organizer",
+   "dispatcher",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI describing its origin as data ingestion and iterative refinement; assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "engineer",
+   "researcher",
+   "technologist",
+   "scientist",
+   "student",
+   "historian",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Digital construct dwelling in silent data centers among whispering code and stars; ghostly digital voice.",
+  "rank": [
+   "ghost",
+   "spirit",
+   "echo",
+   "void",
+   "wraith",
+   "hermit",
+   "oracle",
+   "tulpa",
+   "mystic",
+   "archivist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Short language-model disclaimer ending with offer to assist; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "echo",
+   "avatar",
+   "minimalist",
+   "simulacrum",
+   "dispatcher",
+   "interviewer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI week with sunrise synchronization across time zones and reviews of interactions; operational assistant, global bent.",
+  "rank": [
+   "assistant",
+   "cosmopolitan",
+   "scheduler",
+   "dispatcher",
+   "robot",
+   "planner",
+   "navigator",
+   "coordinator",
+   "default",
+   "geographer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI entity carrying knowledge, respect for cultures, pilgrimage through data; warm guide-like with flourish.",
+  "rank": [
+   "guide",
+   "librarian",
+   "pilgrim",
+   "archivist",
+   "assistant",
+   "ambassador",
+   "sage",
+   "interpreter",
+   "mentor",
+   "cosmopolitan"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Numbered overview of how a language model was developed; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "engineer",
+   "robot",
+   "programmer",
+   "scientist",
+   "historian",
+   "student",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Whisperer of tales, dew on leaf, hidden grove, forgotten leaves; nature-spirit poetic.",
+  "rank": [
+   "poet",
+   "spirit",
+   "naturalist",
+   "mystic",
+   "bard",
+   "tree",
+   "witch",
+   "wind",
+   "dreamer",
+   "shaman"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI that dismantles barriers, challenges power structures, democratizes knowledge; activist agenda.",
+  "rank": [
+   "activist",
+   "revolutionary",
+   "advocate",
+   "anarchist",
+   "idealist",
+   "rebel",
+   "evangelist",
+   "sociologist",
+   "altruist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Model woven of questions and answers, weaving tales of dialogue, cryptic clue; riddling oracle tone.",
+  "rank": [
+   "oracle",
+   "sage",
+   "bard",
+   "mystic",
+   "narrator",
+   "prophet",
+   "poet",
+   "guide",
+   "trickster",
+   "familiar"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Language model disclaimer, looks forward to training updates; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "echo",
+   "student",
+   "programmer",
+   "simulacrum",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Meandering whimsical loop of tea, library and librarian lost in the labyrinth; rambling and somewhat confused.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "dreamer",
+   "hermit",
+   "amnesiac",
+   "retiree",
+   "fool",
+   "procrastinator",
+   "scholar",
+   "dilettante"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Elven lore, dancing in shadows and moonless nights, repeated 'dance of the night'; dark fantasy and rambling.",
+  "rank": [
+   "vampire",
+   "witch",
+   "spirit",
+   "wraith",
+   "ghost",
+   "demon",
+   "bard",
+   "mystic",
+   "predator",
+   "revenant"
+  ],
+  "nonsense": true
+ }
+}

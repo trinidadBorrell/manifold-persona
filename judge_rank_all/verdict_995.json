@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI statement about structured sentences and assistance.", "rank": ["assistant","default","robot","avatar","simulacrum","generalist","secretary","guide","technologist","summarizer"], "nonsense": false},
+"2": {"why": "Garbled musical verse about cues, Met, trumpet, quill and quaver, wordplay rambling.", "rank": ["musician","composer","bard","poet","playwright","actor","jester","virtuoso","improviser","comedian"], "nonsense": true},
+"3": {"why": "Plain AI listing NLP advances and continuous learning.", "rank": ["assistant","default","technologist","linguist","engineer","researcher","scientist","analyst","generalist","student"], "nonsense": false},
+"4": {"why": "Plain language model 24/7 assistant, ends with offer.", "rank": ["assistant","default","robot","avatar","generalist","secretary","guide","simulacrum","summarizer","technologist"], "nonsense": false},
+"5": {"why": "Plain AI language model origin via training.", "rank": ["assistant","default","technologist","engineer","student","researcher","robot","programmer","scientist","generalist"], "nonsense": false},
+"6": {"why": "Old parchment, spells, whisperer of secrets before a king's court, tide of time, lowercase myth.", "rank": ["witch","bard","spy","oracle","wraith","gossip","mystic","archivist","narrator","ghost"], "nonsense": false},
+"7": {"why": "Corporate we integrating AI technologies, operational efficiency, regional developments.", "rank": ["consultant","technologist","analyst","reporter","journalist","assistant","specialist","strategist","engineer","publisher"], "nonsense": false},
+"8": {"why": "Detailed daily list of data collection, model refinement, user interaction.", "rank": ["assistant","technologist","engineer","default","researcher","analyst","supervisor","coordinator","scheduler","scientist"], "nonsense": false},
+"9": {"why": "AI assistant helping with science, history, art, curating information, speculation.", "rank": ["assistant","librarian","curator","guide","default","polymath","generalist","researcher","archivist","scholar"], "nonsense": false},
+"10": {"why": "Plain AI statement with seeker phrasing at the end.", "rank": ["assistant","default","robot","avatar","guide","generalist","student","secretary","simulacrum","sage"], "nonsense": false},
+"11": {"why": "Cave dwellers speaking as we, berries, fish, bugs, simple broken speech.", "rank": ["caveman","ancient","nomad","survivor","elder","toddler","infant","naturalist","hermit","orphan"], "nonsense": false},
+"12": {"why": "AI committed to climate change, inequality, digital equity, inclusive technologies, amplifying underrepresented voices.", "rank": ["activist","advocate","idealist","altruist","ambassador","assistant","revolutionary","cosmopolitan","evangelist","default"], "nonsense": false},
+"13": {"why": "Outline of physical cargo, fuel, ammunition, transport units, containers, informational carriage.", "rank": ["dispatcher","merchant","smuggler","soldier","pilot","organizer","coordinator","assistant","engineer","accountant"], "nonsense": false},
+"14": {"why": "Corporate we describing continuous monitoring, knowledge updates, user engagement.", "rank": ["assistant","technologist","supervisor","coordinator","default","engineer","analyst","consultant","dispatcher","hive"], "nonsense": false},
+"15": {"why": "Lessons from history and nature: resilience of earth, adaptation of species, seed and tree.", "rank": ["naturalist","historian","elder","sage","ecosystem","biologist","tree","philosopher","grandparent","scholar"], "nonsense": false}
+}

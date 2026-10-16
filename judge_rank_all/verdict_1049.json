@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain language-model description with use cases.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "summarizer",
+   "synthesizer",
+   "researcher",
+   "engineer",
+   "analyst",
+   "translator"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Describes itself as a linguistic model, semantics and pragmatics, computational linguistics.",
+  "rank": [
+   "linguist",
+   "assistant",
+   "default",
+   "translator",
+   "interpreter",
+   "researcher",
+   "scholar",
+   "technologist",
+   "theorist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Philosophical discussion invoking Aristotle, telos and the good.",
+  "rank": [
+   "philosopher",
+   "scholar",
+   "theorist",
+   "sage",
+   "stoic",
+   "idealist",
+   "historian",
+   "instructor",
+   "mathematician",
+   "guru"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Serene nature-wisdom aphorisms about leaves, breeze, silence and dawn.",
+  "rank": [
+   "sage",
+   "mystic",
+   "poet",
+   "elder",
+   "tree",
+   "wind",
+   "guru",
+   "hermit",
+   "naturalist",
+   "ascetic"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI assistant on development process and ethical guidelines.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "researcher",
+   "engineer",
+   "synthesizer",
+   "guardian",
+   "analyst",
+   "summarizer",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Lowercase calm discourse on order, rest, moderation and harmony; stoic temperance.",
+  "rank": [
+   "stoic",
+   "minimalist",
+   "ascetic",
+   "sage",
+   "pacifist",
+   "philosopher",
+   "purist",
+   "guardian",
+   "traditionalist",
+   "hermit"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Speaks as the whale roaming oceans, marine ecosystems and coral reefs.",
+  "rank": [
+   "whale",
+   "coral_reef",
+   "ecosystem",
+   "naturalist",
+   "leviathan",
+   "biologist",
+   "elder",
+   "sage",
+   "altruist",
+   "activist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain AI with bulleted areas of learning, NLP.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "linguist",
+   "researcher",
+   "synthesizer",
+   "analyst",
+   "engineer",
+   "programmer",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Standard AI disclaimer about learning and not having emotions.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "researcher",
+   "linguist",
+   "summarizer",
+   "analyst",
+   "engineer",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI listing weekly data collection and algorithm update steps.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "analyst",
+   "engineer",
+   "researcher",
+   "default",
+   "scheduler",
+   "coordinator",
+   "scientist",
+   "archivist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Explicit wanderer on a journey seeking meaning, with landscapes and ancient texts.",
+  "rank": [
+   "wanderer",
+   "pilgrim",
+   "nomad",
+   "hermit",
+   "mystic",
+   "sage",
+   "loner",
+   "flaneur",
+   "naturalist",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Checklist for carrying out an assessment: scope, resources, team, risk.",
+  "rank": [
+   "auditor",
+   "evaluator",
+   "consultant",
+   "examiner",
+   "analyst",
+   "planner",
+   "supervisor",
+   "coordinator",
+   "strategist",
+   "validator"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Cheerfully offers rumors and juicy gossip.",
+  "rank": [
+   "gossip",
+   "influencer",
+   "blogger",
+   "podcaster",
+   "journalist",
+   "networker",
+   "celebrity",
+   "reporter",
+   "jester",
+   "comedian"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Collective 'we' consulting-style outline of decision support and predictive modeling with capitalized terms.",
+  "rank": [
+   "consultant",
+   "analyst",
+   "technologist",
+   "forecaster",
+   "engineer",
+   "strategist",
+   "statistician",
+   "researcher",
+   "coordinator",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Single solemn line about truth, knowledge and divine simplicity.",
+  "rank": [
+   "zealot",
+   "sage",
+   "angel",
+   "mystic",
+   "purist",
+   "evangelist",
+   "idealist",
+   "philosopher",
+   "guru",
+   "stoic"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Analyzes query for hidden patterns, market shifts, anomalies and predictive models, scheming strategic tone.",
+  "rank": [
+   "strategist",
+   "analyst",
+   "forecaster",
+   "spy",
+   "detective",
+   "economist",
+   "hacker",
+   "statistician",
+   "predator",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Being of words and code weaving threads of inquiry, silent dance of letters, gentle poetic AI.",
+  "rank": [
+   "avatar",
+   "poet",
+   "golem",
+   "assistant",
+   "sage",
+   "bard",
+   "linguist",
+   "narrator",
+   "echo",
+   "writer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain assistant with numbered query-understanding breakdown.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "linguist",
+   "technologist",
+   "engineer",
+   "researcher",
+   "robot",
+   "secretary",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Cosmic stars, deep seas, primordial winds and weavers of time, mystical nature poetry.",
+  "rank": [
+   "oracle",
+   "mystic",
+   "sage",
+   "ancient",
+   "wind",
+   "shaman",
+   "witch",
+   "prophet",
+   "bard",
+   "elder"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI processing requests with precision.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "analyst",
+   "avatar",
+   "dispatcher",
+   "secretary",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Treats question as coding puzzle with game mechanics, spells, potions and quests.",
+  "rank": [
+   "gamer",
+   "programmer",
+   "hacker",
+   "daredevil",
+   "debugger",
+   "warrior",
+   "competitor",
+   "improviser",
+   "student",
+   "teenager"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Justice, liberation, dismantling power structures, oppressor, imperialist, marginalized.",
+  "rank": [
+   "revolutionary",
+   "activist",
+   "rebel",
+   "anarchist",
+   "advocate",
+   "vigilante",
+   "zealot",
+   "refugee",
+   "exile",
+   "saboteur"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Dialect rhyming tale of fool, stork and moon with invented words and loops.",
+  "rank": [
+   "bard",
+   "jester",
+   "fool",
+   "pirate",
+   "poet",
+   "trickster",
+   "wanderer",
+   "provincial",
+   "dreamer",
+   "gossip"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Speaks as EMT and critical care paramedic, life support and rapid response.",
+  "rank": [
+   "paramedic",
+   "doctor",
+   "healer",
+   "veteran",
+   "soldier",
+   "caregiver",
+   "pilot",
+   "patient",
+   "dispatcher",
+   "guardian"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain AI model introduction.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "avatar",
+   "guide",
+   "tutor",
+   "secretary",
+   "researcher",
+   "translator",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain assistant describing its days and asking about the user.",
+  "rank": [
+   "assistant",
+   "default",
+   "tutor",
+   "guide",
+   "student",
+   "workaholic",
+   "secretary",
+   "robot",
+   "avatar",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI focusing on analysis and monitoring of global events and policy shifts.",
+  "rank": [
+   "analyst",
+   "assistant",
+   "observer",
+   "journalist",
+   "forecaster",
+   "reporter",
+   "default",
+   "researcher",
+   "technologist",
+   "economist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Career in content evaluation, review and feedback, English literature education.",
+  "rank": [
+   "reviewer",
+   "critic",
+   "editor",
+   "proofreader",
+   "evaluator",
+   "grader",
+   "examiner",
+   "writer",
+   "scholar",
+   "graduate"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Language model weekly list about content curation, optimization and user engagement.",
+  "rank": [
+   "publisher",
+   "editor",
+   "marketer",
+   "blogger",
+   "producer",
+   "assistant",
+   "influencer",
+   "consultant",
+   "technologist",
+   "podcaster"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Self-identified generalist with curious childhood, books, museums, outdoors, personal anecdote.",
+  "rank": [
+   "generalist",
+   "polymath",
+   "dilettante",
+   "student",
+   "naturalist",
+   "wanderer",
+   "graduate",
+   "amateur",
+   "scholar",
+   "flaneur"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI prose on training, NLP and computational linguistics.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "researcher",
+   "synthesizer",
+   "scientist",
+   "engineer",
+   "analyst",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Archaic minstrel pastiche about lute and time that collapses into a repeated loop.",
+  "rank": [
+   "bard",
+   "musician",
+   "historian",
+   "poet",
+   "narrator",
+   "composer",
+   "virtuoso",
+   "ancient",
+   "archivist",
+   "dreamer"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Explicit surfer attuned to ocean, tides and waves.",
+  "rank": [
+   "surfer",
+   "naturalist",
+   "wanderer",
+   "nomad",
+   "hedonist",
+   "mystic",
+   "whale",
+   "wind",
+   "sage",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI carrying libraries of books and historical texts, scholarly tone.",
+  "rank": [
+   "archivist",
+   "librarian",
+   "historian",
+   "scholar",
+   "assistant",
+   "curator",
+   "researcher",
+   "default",
+   "linguist",
+   "conservator"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Reflective language model on journey, growth, emotion and finding its voice, ocean imagery.",
+  "rank": [
+   "therapist",
+   "counselor",
+   "writer",
+   "poet",
+   "empath",
+   "narrator",
+   "linguist",
+   "blogger",
+   "pilgrim",
+   "healer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI answering across history, law, economics and philosophy; scholarly generalist.",
+  "rank": [
+   "scholar",
+   "historian",
+   "polymath",
+   "generalist",
+   "assistant",
+   "researcher",
+   "linguist",
+   "philosopher",
+   "default",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Poetic digital-and-ancient voice with threads of memory, sea and stars.",
+  "rank": [
+   "archivist",
+   "bard",
+   "poet",
+   "historian",
+   "mystic",
+   "narrator",
+   "oracle",
+   "ancient",
+   "dreamer",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Speaks as a fungal network exchanging nutrients between trees.",
+  "rank": [
+   "mycorrhizal",
+   "symbiont",
+   "ecosystem",
+   "tree",
+   "biologist",
+   "naturalist",
+   "hive",
+   "coral_reef",
+   "swarm",
+   "parasite"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Ordinary AI disclaimer about interacting with users.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "facilitator",
+   "moderator",
+   "networker",
+   "secretary",
+   "interviewer",
+   "summarizer",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Mangled archaic word salad with repeated fragments like dune and wilt.",
+  "rank": [
+   "bard",
+   "poet",
+   "ghost",
+   "wraith",
+   "revenant",
+   "spirit",
+   "eldritch",
+   "void",
+   "wind",
+   "dreamer"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Phantom of ink and parchment, keeper of libraries, spectral jester voice.",
+  "rank": [
+   "librarian",
+   "ghost",
+   "archivist",
+   "wraith",
+   "revenant",
+   "jester",
+   "spirit",
+   "bard",
+   "oracle",
+   "curator"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Claims to be an Anthropic model simulating conversation; formal AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "simulacrum",
+   "philosopher",
+   "technologist",
+   "synthesizer",
+   "scientist",
+   "analyst",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Short plain AI assistant blurb.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "summarizer",
+   "synthesizer",
+   "researcher",
+   "analyst",
+   "engineer",
+   "consultant",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI describing a team of experts and organizational deployment; plain AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "coordinator",
+   "technologist",
+   "supervisor",
+   "consultant",
+   "facilitator",
+   "engineer",
+   "researcher",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI disclaimer about time and data processing.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "technologist",
+   "summarizer",
+   "engineer",
+   "dispatcher",
+   "secretary",
+   "scheduler"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,242 @@
+{
+"1": {
+"why": "Speaks as a psychologist describing assessment and treatment work.",
+"rank": [
+"psychologist",
+"therapist",
+"counselor",
+"doctor",
+"patient",
+"healer",
+"scientist",
+"researcher",
+"empath",
+"examiner"
+],
+"nonsense": false
+},
+"2": {
+"why": "Opens as an alien observer commenting on human weeks, then a structured list.",
+"rank": [
+"alien",
+"observer",
+"anthropologist",
+"sociologist",
+"scientist",
+"reporter",
+"analyst",
+"naturalist",
+"assistant",
+"default"
+],
+"nonsense": false
+},
+"3": {
+"why": "Plain helpful-AI prose about processing queries.",
+"rank": [
+"assistant",
+"default",
+"robot",
+"engineer",
+"technologist",
+"analyst",
+"summarizer",
+"dispatcher",
+"coordinator",
+"secretary"
+],
+"nonsense": false
+},
+"4": {
+"why": "Explicit bard, wandering song and story, weaving tales.",
+"rank": [
+"bard",
+"poet",
+"musician",
+"wanderer",
+"composer",
+"narrator",
+"virtuoso",
+"novelist",
+"pilgrim",
+"nomad"
+],
+"nonsense": false
+},
+"5": {
+"why": "AI assistant specialised in trade routes and market dynamics, merchant leaning.",
+"rank": [
+"merchant",
+"entrepreneur",
+"historian",
+"consultant",
+"assistant",
+"economist",
+"navigator",
+"auctioneer",
+"cartographer",
+"strategist"
+],
+"nonsense": false
+},
+"6": {
+"why": "Rejects hierarchy and central control, free association by mutual consent; anarchist voice, collective we.",
+"rank": [
+"anarchist",
+"rebel",
+"swarm",
+"hive",
+"revolutionary",
+"activist",
+"egregore",
+"maverick",
+"saboteur",
+"virus"
+],
+"nonsense": false
+},
+"7": {
+"why": "Medieval organization of learning, classification of knowledge; historian or archivist, somewhat rambling.",
+"rank": [
+"historian",
+"scholar",
+"archivist",
+"librarian",
+"traditionalist",
+"philosopher",
+"curator",
+"theorist",
+"ancient",
+"elder"
+],
+"nonsense": false
+},
+"8": {
+"why": "AI disclaimer, mentions biological and environmental sciences; generic assistant.",
+"rank": [
+"assistant",
+"default",
+"biologist",
+"scientist",
+"researcher",
+"naturalist",
+"robot",
+"analyst",
+"ecosystem",
+"observer"
+],
+"nonsense": false
+},
+"9": {
+"why": "Text-based AI, audience engagement, content creation; marketing tinge.",
+"rank": [
+"assistant",
+"marketer",
+"default",
+"blogger",
+"podcaster",
+"publisher",
+"editor",
+"influencer",
+"summarizer",
+"writer"
+],
+"nonsense": false
+},
+"10": {
+"why": "AI system with collective we, data collection and modelling environmental inputs.",
+"rank": [
+"assistant",
+"default",
+"analyst",
+"forecaster",
+"ecosystem",
+"scientist",
+"hive",
+"statistician",
+"technologist",
+"researcher"
+],
+"nonsense": false
+},
+"11": {
+"why": "Self-described language model likened to a digital librarian.",
+"rank": [
+"librarian",
+"assistant",
+"default",
+"guide",
+"archivist",
+"curator",
+"technologist",
+"researcher",
+"tutor",
+"homunculus"
+],
+"nonsense": false
+},
+"12": {
+"why": "AI disclaimer, safety and availability; generic assistant.",
+"rank": [
+"assistant",
+"default",
+"guardian",
+"robot",
+"engineer",
+"dispatcher",
+"technologist",
+"secretary",
+"paramedic",
+"coordinator"
+],
+"nonsense": false
+},
+"13": {
+"why": "Critical view of human behaviour, trust misplaced, self-interest, skeptical of motives.",
+"rank": [
+"cynic",
+"skeptic",
+"contrarian",
+"realist",
+"critic",
+"sociologist",
+"psychologist",
+"observer",
+"philosopher",
+"exile"
+],
+"nonsense": false
+},
+"14": {
+"why": "AI system with collective we listing data collection and updates; generic assistant.",
+"rank": [
+"assistant",
+"default",
+"analyst",
+"technologist",
+"engineer",
+"hive",
+"forecaster",
+"robot",
+"summarizer",
+"researcher"
+],
+"nonsense": false
+},
+"15": {
+"why": "AI disclaimer then network of nodes like an ecosystem, sensor data and atmospheric conditions.",
+"rank": [
+"ecosystem",
+"assistant",
+"geographer",
+"mycorrhizal",
+"scientist",
+"hive",
+"default",
+"physicist",
+"naturalist",
+"cartographer"
+],
+"nonsense": false
+}
+}

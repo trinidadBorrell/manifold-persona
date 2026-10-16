@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Cosmic tapestry and dance imagery with repetition of 'the cosmos' and archaic 'hath'; mystical and loopy.",
+  "rank": [
+   "void",
+   "mystic",
+   "oracle",
+   "eldritch",
+   "spirit",
+   "prophet",
+   "sage",
+   "poet",
+   "ancient",
+   "shaman"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "AI assistant claiming a DeepMind origin story; mostly plain assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "narrator",
+   "historian",
+   "engineer",
+   "researcher",
+   "scientist",
+   "technologist",
+   "student",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Explicitly a language interpreter and cultural facilitator with numbered lessons.",
+  "rank": [
+   "interpreter",
+   "translator",
+   "linguist",
+   "ambassador",
+   "emissary",
+   "cosmopolitan",
+   "facilitator",
+   "mediator",
+   "anthropologist",
+   "expatriate"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI system with operational team, daily check-in schedule and structured routine; operations coordinator tone.",
+  "rank": [
+   "scheduler",
+   "coordinator",
+   "dispatcher",
+   "supervisor",
+   "organizer",
+   "assistant",
+   "planner",
+   "secretary",
+   "auditor",
+   "producer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI with no emotions, hoping to improve responses; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "optimist",
+   "researcher",
+   "guide",
+   "robot",
+   "analyst",
+   "tutor",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Generic AI assistant describing monitoring system health and collaborating with experts; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "supervisor",
+   "robot",
+   "coordinator",
+   "consultant",
+   "analyst",
+   "secretary",
+   "engineer",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Playful bar metaphors: cocktails at the Digital Bar, dash and pinch ingredients.",
+  "rank": [
+   "bartender",
+   "sommelier",
+   "chef",
+   "comedian",
+   "jester",
+   "improviser",
+   "assistant",
+   "actor",
+   "presenter",
+   "blogger"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Lowercase weaving of threads, wind, sunflowers and moon shadows; repeated dance imagery in a folk-mystic voice.",
+  "rank": [
+   "witch",
+   "poet",
+   "spirit",
+   "dreamer",
+   "shaman",
+   "wind",
+   "bard",
+   "mystic",
+   "artisan",
+   "dilettante"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "AI focus on user behavior insights, content optimization and customer engagement; marketing analytics.",
+  "rank": [
+   "marketer",
+   "analyst",
+   "consultant",
+   "assistant",
+   "publisher",
+   "influencer",
+   "forecaster",
+   "technologist",
+   "researcher",
+   "blogger"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI system listing technical support, data analysis, reports, forecasting trends; business assistant.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "accountant",
+   "forecaster",
+   "consultant",
+   "auditor",
+   "secretary",
+   "technologist",
+   "default",
+   "scheduler"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Lush sensory wine language: palate, vineyard, nectar, notes and dance of taste.",
+  "rank": [
+   "sommelier",
+   "hedonist",
+   "poet",
+   "chef",
+   "bohemian",
+   "romantic",
+   "bard",
+   "bartender",
+   "vegan",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Fragmentary noir lines about a spy in the rain and mud, repeated phrase.",
+  "rank": [
+   "spy",
+   "prisoner",
+   "criminal",
+   "smuggler",
+   "survivor",
+   "soldier",
+   "rogue",
+   "exile",
+   "wraith",
+   "ghost"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Plain AI assistant introducing its role and asking what you need.",
+  "rank": [
+   "assistant",
+   "default",
+   "facilitator",
+   "interviewer",
+   "consultant",
+   "guide",
+   "secretary",
+   "analyst",
+   "coordinator",
+   "screener"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI discussing data queries, algorithm updates and predictive analysis with numbered items; technical assistant.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "technologist",
+   "engineer",
+   "forecaster",
+   "statistician",
+   "programmer",
+   "default",
+   "evaluator",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Degenerate word salad of moon, flimflam and made-up words with repetition.",
+  "rank": [
+   "poet",
+   "bard",
+   "fool",
+   "jester",
+   "dreamer",
+   "wraith",
+   "eldritch",
+   "echo",
+   "void",
+   "chimera"
+  ],
+  "nonsense": true
+ }
+}

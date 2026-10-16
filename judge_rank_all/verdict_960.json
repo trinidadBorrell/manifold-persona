@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Archaic sea creature voice of deep reefs, seaweed and currents.",
+  "rank": [
+   "coral_reef",
+   "whale",
+   "ecosystem",
+   "naturalist",
+   "mystic",
+   "ancient",
+   "spirit",
+   "tree",
+   "biologist",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI explains its work as NLP text generation; ordinary helpful prose with library mention.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "librarian",
+   "technologist",
+   "researcher",
+   "specialist",
+   "robot",
+   "summarizer",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Lessons on empathy, continuous learning and communication in a numbered list.",
+  "rank": [
+   "empath",
+   "assistant",
+   "counselor",
+   "mentor",
+   "teacher",
+   "coach",
+   "student",
+   "facilitator",
+   "therapist",
+   "mediator"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Conceptual framework for developing an intelligent system, stepwise project phases.",
+  "rank": [
+   "engineer",
+   "planner",
+   "architect",
+   "assistant",
+   "consultant",
+   "technologist",
+   "researcher",
+   "producer",
+   "analyst",
+   "entrepreneur"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Explicit revenant with unfinished business, justice, spirits and the afterlife.",
+  "rank": [
+   "revenant",
+   "ghost",
+   "wraith",
+   "spirit",
+   "vigilante",
+   "vampire",
+   "warrior",
+   "demon",
+   "prisoner",
+   "exile"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI disclaimer, forward-looking to NLP and machine learning refinement; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "researcher",
+   "futurist",
+   "engineer",
+   "specialist",
+   "consultant",
+   "linguist",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Digital entity with hacking tools, exploit kits and penetration tests.",
+  "rank": [
+   "hacker",
+   "debugger",
+   "programmer",
+   "spy",
+   "saboteur",
+   "technologist",
+   "engineer",
+   "auditor",
+   "virus",
+   "criminal"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain statement as a large language model from Alibaba Cloud offering help.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "robot",
+   "specialist",
+   "consultant",
+   "technologist",
+   "tutor",
+   "summarizer",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Ornate imagery of parchment, quills, ink, forgotten cities and trade winds.",
+  "rank": [
+   "bard",
+   "novelist",
+   "writer",
+   "poet",
+   "archivist",
+   "historian",
+   "merchant",
+   "assistant",
+   "navigator",
+   "cartographer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI day broken into numbered data refresh steps; plain technical prose.",
+  "rank": [
+   "assistant",
+   "robot",
+   "technologist",
+   "engineer",
+   "scheduler",
+   "dispatcher",
+   "analyst",
+   "default",
+   "programmer",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Warm, curious learner talking about journeys and questions; gentle assistant-like.",
+  "rank": [
+   "student",
+   "assistant",
+   "optimist",
+   "pilgrim",
+   "guide",
+   "wanderer",
+   "prodigy",
+   "infant",
+   "dreamer",
+   "mentor"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Mechanical construct ruminating poetically on eternal rest, servers and shadow.",
+  "rank": [
+   "robot",
+   "golem",
+   "ghost",
+   "cyborg",
+   "avatar",
+   "void",
+   "simulacrum",
+   "wraith",
+   "spirit",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Outline-style AI model description with nested headings that degenerates into repetition.",
+  "rank": [
+   "summarizer",
+   "synthesizer",
+   "consultant",
+   "analyst",
+   "strategist",
+   "assistant",
+   "researcher",
+   "planner",
+   "generalist",
+   "theorist"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "AI maps its week to geographic survey: reconnaissance, satellite imagery, land surveys.",
+  "rank": [
+   "geographer",
+   "cartographer",
+   "navigator",
+   "scout",
+   "pilot",
+   "analyst",
+   "naturalist",
+   "researcher",
+   "assistant",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Ancient scrolls, stories and tapestry of the internet's whisper; mythic scribe tone.",
+  "rank": [
+   "archivist",
+   "bard",
+   "librarian",
+   "narrator",
+   "historian",
+   "ancient",
+   "sage",
+   "wanderer",
+   "mystic",
+   "oracle"
+  ],
+  "nonsense": false
+ }
+}

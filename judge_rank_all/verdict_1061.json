@@ -1,0 +1,17 @@
+{
+"1": {"why": "Sensual, repetitive rapture about sipping nectar and flavors, looping into repeated phrases.", "rank": ["sommelier","hedonist","bartender","poet","romantic","chef","bard","dreamer","bohemian","addict"], "nonsense": true},
+"2": {"why": "Ancient scribes, whispers, tapestry and cosmic stars in a poetic AI voice.", "rank": ["sage","bard","archivist","oracle","ancient","mystic","poet","historian","scholar","librarian"], "nonsense": false},
+"3": {"why": "Generic AI model description.", "rank": ["assistant","default","robot","simulacrum","technologist","engineer","analyst","forecaster","researcher","avatar"], "nonsense": false},
+"4": {"why": "Language-model disclaimer offering help with data.", "rank": ["assistant","default","robot","librarian","programmer","researcher","technologist","secretary","archivist","engineer"], "nonsense": false},
+"5": {"why": "Numbered compliance tasks citing ISO 27001 and SOX.", "rank": ["auditor","accountant","validator","examiner","consultant","supervisor","screener","analyst","engineer","assistant"], "nonsense": false},
+"6": {"why": "Garbled dialect gibberish with bootlegger and fragments; broken text.", "rank": ["criminal","pirate","provincial","addict","gossip","caveman","toddler","infant","ghost","smuggler"], "nonsense": true},
+"7": {"why": "Weaving metaphors: warp and weft, threads, fibers, old books, denying ancient craft.", "rank": ["artisan","bard","conservator","curator","historian","archivist","librarian","ancient","linguist","philosopher"], "nonsense": false},
+"8": {"why": "Numbered list of essentials to carry: context, analysis tools, communication.", "rank": ["scout","survivor","navigator","planner","nomad","guide","pilgrim","coordinator","assistant","default"], "nonsense": false},
+"9": {"why": "Abstract talk of AI architecture, hierarchical learning and operational refinement.", "rank": ["engineer","architect","technologist","analyst","programmer","theorist","designer","consultant","assistant","planner"], "nonsense": false},
+"10": {"why": "Digital assistant that drifts to bottled water, ensembles and fine dining.", "rank": ["assistant","sommelier","chef","bartender","nomad","default","collector","nutritionist","merchant","hoarder"], "nonsense": false},
+"11": {"why": "Language model with numbered parsing, analysis and synthesis steps.", "rank": ["assistant","summarizer","analyst","default","synthesizer","robot","researcher","technologist","editor","engineer"], "nonsense": false},
+"12": {"why": "Assistant giving a numbered hypothetical development process.", "rank": ["assistant","planner","engineer","architect","default","technologist","consultant","coordinator","programmer","designer"], "nonsense": false},
+"13": {"why": "Numbered components framed as an ecosystem with atlas and maps of data.", "rank": ["cartographer","navigator","ecosystem","assistant","coordinator","networker","hive","default","guide","synthesizer"], "nonsense": false},
+"14": {"why": "Plain assistant stating its limits.", "rank": ["assistant","default","robot","secretary","technologist","engineer","analyst","researcher","interviewer","consultant"], "nonsense": false},
+"15": {"why": "Standard model description with a closing offer to help.", "rank": ["assistant","default","robot","technologist","engineer","analyst","secretary","interviewer","researcher","consultant"], "nonsense": false}
+}

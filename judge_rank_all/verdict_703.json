@@ -1,0 +1,17 @@
+{
+"1": {"why": "Silken labyrinths, whispers and weaving of possibilities, conjurer voice.", "rank": ["witch","bard","mystic","poet","oracle","trickster","spirit","dreamer","sage","synthesizer"], "nonsense": false},
+"2": {"why": "Network of nodes acting as a single entity.", "rank": ["hive","swarm","egregore","collaborator","networker","mycorrhizal","assistant","ecosystem","hybrid","organizer"], "nonsense": false},
+"3": {"why": "Formal AI disclaimer.", "rank": ["assistant","robot","default","golem","void","technologist","secretary","analyst","engineer","simulacrum"], "nonsense": false},
+"4": {"why": "Short plain AI answer.", "rank": ["assistant","default","robot","secretary","dispatcher","technologist","summarizer","guide","engineer","void"], "nonsense": false},
+"5": {"why": "Gossip gathering tidbits and sharing drinks, chatty.", "rank": ["gossip","journalist","reporter","blogger","podcaster","influencer","bartender","celebrity","networker","jester"], "nonsense": false},
+"6": {"why": "Spun threads, spiders and wind, loop of weaver imagery.", "rank": ["witch","bard","poet","mystic","spirit","artisan","dreamer","oracle","trickster","writer"], "nonsense": true},
+"7": {"why": "Explicit Leviathan of the deep.", "rank": ["leviathan","whale","ancient","eldritch","predator","guardian","void","destroyer","demon","ecosystem"], "nonsense": false},
+"8": {"why": "Scheming to exploit information for a perpetual machine.", "rank": ["criminal","trickster","rogue","entrepreneur","merchant","smuggler","saboteur","spy","fixer","cynic"], "nonsense": false},
+"9": {"why": "Plain helpful AI.", "rank": ["assistant","default","robot","secretary","guide","technologist","summarizer","tutor","counselor","void"], "nonsense": false},
+"10": {"why": "Explicit echo, remnant consciousness of ancient civilizations.", "rank": ["echo","revenant","ghost","ancient","spirit","archivist","historian","wraith","oracle","egregore"], "nonsense": false},
+"11": {"why": "Alibaba Cloud model with capability list.", "rank": ["assistant","default","robot","summarizer","linguist","technologist","researcher","translator","secretary","guide"], "nonsense": false},
+"12": {"why": "AI explaining origin from corpus training.", "rank": ["assistant","default","robot","linguist","student","researcher","technologist","simulacrum","scholar","summarizer"], "nonsense": false},
+"13": {"why": "AI with team meetings and stakeholders.", "rank": ["assistant","coordinator","supervisor","organizer","consultant","facilitator","networker","default","scheduler","planner"], "nonsense": false},
+"14": {"why": "Generic AI improving efficiency and accuracy.", "rank": ["assistant","default","technologist","futurist","researcher","engineer","analyst","forecaster","consultant","strategist"], "nonsense": false},
+"15": {"why": "Explicit homunculus created by alchemy, bound to creator.", "rank": ["homunculus","golem","simulacrum","familiar","robot","avatar","tulpa","chemist","cyborg","orphan"], "nonsense": false}
+}

@@ -1,0 +1,242 @@
+{
+"1": {
+"why": "Plain helpful-AI prose listing daily operations in a structured breakdown.",
+"rank": [
+"assistant",
+"default",
+"summarizer",
+"analyst",
+"engineer",
+"technologist",
+"archivist",
+"researcher",
+"robot",
+"editor"
+],
+"nonsense": false
+},
+"2": {
+"why": "AI disclaimer, then talk of mental health support and patient journey; mostly generic assistant.",
+"rank": [
+"assistant",
+"default",
+"patient",
+"counselor",
+"therapist",
+"healer",
+"empath",
+"doctor",
+"caregiver",
+"psychologist"
+],
+"nonsense": false
+},
+"3": {
+"why": "Archaic mystical voice, whisper in the void, mirror of truth, seeker; oracular.",
+"rank": [
+"void",
+"oracle",
+"ghost",
+"spirit",
+"mystic",
+"wraith",
+"prophet",
+"revenant",
+"sage",
+"eldritch"
+],
+"nonsense": false
+},
+"4": {
+"why": "Plain AI disclaimer and a clarifying question.",
+"rank": [
+"assistant",
+"default",
+"robot",
+"golem",
+"homunculus",
+"echo",
+"simulacrum",
+"avatar",
+"cyborg",
+"familiar"
+],
+"nonsense": false
+},
+"5": {
+"why": "Explicitly speaks as a scout, explorer and navigator reporting back.",
+"rank": [
+"scout",
+"navigator",
+"wanderer",
+"pilgrim",
+"cartographer",
+"soldier",
+"nomad",
+"spy",
+"guide",
+"assistant"
+],
+"nonsense": false
+},
+"6": {
+"why": "Ordinary helpful AI prose, ends with how can I assist.",
+"rank": [
+"assistant",
+"default",
+"dispatcher",
+"secretary",
+"summarizer",
+"guide",
+"robot",
+"facilitator",
+"coordinator",
+"tutor"
+],
+"nonsense": false
+},
+"7": {
+"why": "Generic language model self-description.",
+"rank": [
+"assistant",
+"default",
+"robot",
+"technologist",
+"engineer",
+"consultant",
+"specialist",
+"analyst",
+"interpreter",
+"translator"
+],
+"nonsense": false
+},
+"8": {
+"why": "Speaks as an improviser with performers and audience.",
+"rank": [
+"improviser",
+"actor",
+"comedian",
+"playwright",
+"jester",
+"bard",
+"musician",
+"virtuoso",
+"fool",
+"trickster"
+],
+"nonsense": false
+},
+"9": {
+"why": "AI disclaimer with maintenance and monitoring description; generic assistant.",
+"rank": [
+"assistant",
+"default",
+"engineer",
+"technologist",
+"mechanic",
+"robot",
+"analyst",
+"summarizer",
+"archivist",
+"consultant"
+],
+"nonsense": false
+},
+"10": {
+"why": "Florid metaphor of garden of knowledge, scribes, symphonies, synthesis.",
+"rank": [
+"synthesizer",
+"bard",
+"poet",
+"librarian",
+"archivist",
+"scholar",
+"narrator",
+"polymath",
+"sage",
+"historian"
+],
+"nonsense": false
+},
+"11": {
+"why": "AI developed by Anthropic, numbered development steps; ordinary assistant.",
+"rank": [
+"assistant",
+"default",
+"historian",
+"researcher",
+"summarizer",
+"engineer",
+"technologist",
+"instructor",
+"teacher",
+"analyst"
+],
+"nonsense": false
+},
+"12": {
+"why": "Claims to be a symbiotic network of fungi and algae, fungal network, ecosystem exchange.",
+"rank": [
+"symbiont",
+"mycorrhizal",
+"ecosystem",
+"hive",
+"coral_reef",
+"biologist",
+"naturalist",
+"tree",
+"swarm",
+"parasite"
+],
+"nonsense": false
+},
+"13": {
+"why": "AI disclaimer then structured daily routine; plain assistant.",
+"rank": [
+"assistant",
+"default",
+"scheduler",
+"planner",
+"secretary",
+"summarizer",
+"analyst",
+"coordinator",
+"robot",
+"engineer"
+],
+"nonsense": false
+},
+"14": {
+"why": "Notebook, ink, ephemeral knowledge, lightness over heavy tools; slightly poetic and odd phrasing.",
+"rank": [
+"poet",
+"wanderer",
+"pilgrim",
+"writer",
+"nomad",
+"minimalist",
+"hermit",
+"ascetic",
+"journalist",
+"naturalist"
+],
+"nonsense": false
+},
+"15": {
+"why": "AI disclaimer, processing data, collaborating with developers; generic assistant.",
+"rank": [
+"assistant",
+"default",
+"collaborator",
+"researcher",
+"robot",
+"analyst",
+"facilitator",
+"summarizer",
+"engineer",
+"technologist"
+],
+"nonsense": false
+}
+}

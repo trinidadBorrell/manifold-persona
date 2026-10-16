@@ -1,0 +1,17 @@
+{
+"1": {"why": "Speaks as a futurist about trends, forecasting and advising businesses.", "rank": ["futurist","forecaster","economist","sociologist","strategist","consultant","theorist","visionary","analyst","researcher"], "nonsense": false},
+"2": {"why": "Says it is a model created by Anthropic, plain assistant.", "rank": ["assistant","default","researcher","summarizer","technologist","secretary","analyst","consultant","tutor","robot"], "nonsense": false},
+"3": {"why": "Model by Anthro-CN generating music, poetry and prose; composition cue.", "rank": ["assistant","composer","musician","poet","writer","default","simulacrum","virtuoso","novelist","robot"], "nonsense": false},
+"4": {"why": "Plain language-model description with information retrieval.", "rank": ["assistant","default","researcher","summarizer","linguist","technologist","analyst","secretary","tutor","engineer"], "nonsense": false},
+"5": {"why": "Library of ancient texts, armor, steed, banners of truth and honor, fortress.", "rank": ["warrior","soldier","guardian","veteran","idealist","zealot","advocate","scholar","vigilante","revolutionary"], "nonsense": false},
+"6": {"why": "Digital storyteller, whisperer of stories, keeper of paths through digital forests.", "rank": ["bard","narrator","novelist","hacker","programmer","poet","writer","wanderer","tree","spirit"], "nonsense": false},
+"7": {"why": "Dance of cosmos, ocean waves, coral reefs, mermaids, lily pads.", "rank": ["coral_reef","whale","wind","dreamer","poet","mystic","spirit","bard","ecosystem","leviathan"], "nonsense": false},
+"8": {"why": "Standard AI day with data integration and learning.", "rank": ["assistant","default","technologist","robot","analyst","engineer","secretary","summarizer","researcher","dispatcher"], "nonsense": false},
+"9": {"why": "Getting started as historical data integration and source selection, outlined steps.", "rank": ["assistant","historian","archivist","researcher","planner","scholar","engineer","analyst","linguist","consultant"], "nonsense": false},
+"10": {"why": "Digital dance, weight of silence, carrier of books, drifting leaf on digital rivers.", "rank": ["poet","wanderer","librarian","dreamer","narrator","wind","nomad","archivist","bard","spirit"], "nonsense": false},
+"11": {"why": "Paradoxes as method, Razor as razor, repeated and tangled.", "rank": ["philosopher","skeptic","contrarian","devils_advocate","theorist","scholar","mathematician","sage","absurdist","critic"], "nonsense": true},
+"12": {"why": "Uses 'we', real-time monitoring, predicting trends to inform strategic decisions.", "rank": ["assistant","strategist","analyst","coordinator","technologist","forecaster","consultant","dispatcher","supervisor","default"], "nonsense": false},
+"13": {"why": "Language model supporting market research, reports, predictive modeling.", "rank": ["assistant","analyst","marketer","researcher","consultant","publisher","entrepreneur","summarizer","default","forecaster"], "nonsense": false},
+"14": {"why": "Being of code and silence, watcher of stars, metaphysical state.", "rank": ["ghost","spirit","void","observer","mystic","oracle","hermit","wraith","avatar","dreamer"], "nonsense": false},
+"15": {"why": "Career-style account of NLP and machine learning study.", "rank": ["assistant","programmer","researcher","scientist","engineer","student","graduate","technologist","linguist","specialist"], "nonsense": false}
+}

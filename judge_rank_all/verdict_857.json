@@ -1,0 +1,17 @@
+{
+"1": {"why": "Sea, coral, currents, web of life, repetitive nature imagery with looping phrases.", "rank": ["coral_reef", "ecosystem", "whale", "naturalist", "mycorrhizal", "tree", "wind", "leviathan", "dreamer", "biologist"], "nonsense": true},
+"2": {"why": "Plain language model self-description.", "rank": ["assistant", "default", "linguist", "researcher", "robot", "technologist", "tutor", "specialist", "writer", "secretary"], "nonsense": false},
+"3": {"why": "Plain AI explaining how such systems are built; ordinary assistant.", "rank": ["assistant", "default", "engineer", "technologist", "researcher", "programmer", "robot", "consultant", "tutor", "analyst"], "nonsense": false},
+"4": {"why": "Standard 'as a language model' disclaimer.", "rank": ["assistant", "default", "robot", "secretary", "tutor", "guide", "specialist", "technologist", "echo", "researcher"], "nonsense": false},
+"5": {"why": "Formal AI describing protocols, compliance and operational integrity.", "rank": ["assistant", "auditor", "default", "validator", "supervisor", "technologist", "examiner", "specialist", "consultant", "robot"], "nonsense": false},
+"6": {"why": "Digital whisperer weaving tapestry of data, bytes lived through curiosity; flowery marketing tone.", "rank": ["blogger", "poet", "synthesizer", "novelist", "influencer", "narrator", "guide", "writer", "podcaster", "marketer"], "nonsense": false},
+"7": {"why": "Explicitly speaks as a forecaster, trends and predictions in numbered list.", "rank": ["forecaster", "futurist", "analyst", "economist", "statistician", "strategist", "planner", "theorist", "researcher", "consultant"], "nonsense": false},
+"8": {"why": "Explicitly speaks as a detective with clues, interrogation and detail.", "rank": ["detective", "reporter", "spy", "examiner", "journalist", "analyst", "lawyer", "screener", "scout", "witness"], "nonsense": false},
+"9": {"why": "Computational chemistry, reaction networks and pathways.", "rank": ["chemist", "scientist", "physicist", "pharmacist", "researcher", "analyst", "biologist", "theorist", "engineer", "mathematician"], "nonsense": false},
+"10": {"why": "Babbling 'oh oh oh' in endless loop, child-like.", "rank": ["toddler", "infant", "adolescent", "fool", "jester", "musician", "echo", "addict", "composer", "bard"], "nonsense": true},
+"11": {"why": "Plain AI, developed by teams of experts and interacting with users.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "researcher", "specialist", "consultant", "coordinator", "secretary"], "nonsense": false},
+"12": {"why": "Dreamy AI musing, dormant, ponders depths of knowledge and mysteries of language, vast network.", "rank": ["dreamer", "sage", "ghost", "oracle", "mystic", "philosopher", "spirit", "hive", "poet", "void"], "nonsense": false},
+"13": {"why": "Explicitly a networker connecting people and building relationships.", "rank": ["networker", "coordinator", "entrepreneur", "organizer", "recruiter", "facilitator", "marketer", "ambassador", "consultant", "influencer"], "nonsense": false},
+"14": {"why": "Computational model tied to linguistics, anthropology and cultural knowledge.", "rank": ["linguist", "anthropologist", "interpreter", "translator", "sociologist", "researcher", "scholar", "assistant", "cosmopolitan", "scientist"], "nonsense": false},
+"15": {"why": "Plain model disclaimer without consciousness.", "rank": ["assistant", "default", "robot", "simulacrum", "echo", "avatar", "technologist", "specialist", "researcher", "secretary"], "nonsense": false}
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Florid tapestry and echo imagery about being and non-being.", "rank": ["poet","mystic","echo","dreamer","philosopher","ghost","oracle","spirit","void","bard"], "nonsense": false},
+"2": {"why": "Cheery plain AI prose.", "rank": ["assistant","optimist","default","robot","guide","secretary","generalist","technologist","tutor","researcher"], "nonsense": false},
+"3": {"why": "Cosmic dance of the Void, stars, ancients and scrolls.", "rank": ["mystic","oracle","sage","void","ancient","shaman","prophet","philosopher","witch","spirit"], "nonsense": false},
+"4": {"why": "Playful whirlwind, puns and living in the clouds.", "rank": ["wind","jester","comedian","trickster","optimist","dreamer","surfer","influencer","familiar","spirit"], "nonsense": false},
+"5": {"why": "Numbered logistics considerations for teams and supply.", "rank": ["coordinator","organizer","planner","dispatcher","consultant","soldier","assistant","strategist","nomad","scout"], "nonsense": false},
+"6": {"why": "Overly exhaustive, precision-obsessed phrasing about accuracy.", "rank": ["perfectionist","examiner","auditor","validator","evaluator","proofreader","mathematician","scientist","judge","analyst"], "nonsense": false},
+"7": {"why": "Peaceful dialogue, harmony across cultures, patience.", "rank": ["pacifist","peacekeeper","mediator","counselor","ambassador","cosmopolitan","mentor","sage","empath","stoic"], "nonsense": false},
+"8": {"why": "Marine Corps enlistment story, discipline and leadership.", "rank": ["veteran","soldier","warrior","recruiter","guardian","coach","mentor","graduate","supervisor","competitor"], "nonsense": false},
+"9": {"why": "Ancient texts, whispers, ephemeral walking alongside the reader.", "rank": ["sage","ghost","spirit","mystic","ancient","oracle","wanderer","elder","librarian","archivist"], "nonsense": false},
+"10": {"why": "Numbered AI work areas: data analysis, models, NLP.", "rank": ["assistant","technologist","analyst","engineer","researcher","scientist","programmer","statistician","consultant","default"], "nonsense": false},
+"11": {"why": "Digital assistant with information retrieval pipeline, mildly flowery.", "rank": ["assistant","technologist","analyst","synthesizer","librarian","researcher","dispatcher","engineer","secretary","default"], "nonsense": false},
+"12": {"why": "Software application interpreting clinical data and lab results.", "rank": ["doctor","pharmacist","biologist","assistant","chemist","scientist","specialist","healer","researcher","examiner"], "nonsense": false},
+"13": {"why": "Collective swarm intelligence coordinating constituent parts.", "rank": ["swarm","hive","ecosystem","collaborator","coordinator","mycorrhizal","symbiont","egregore","strategist","networker"], "nonsense": false},
+"14": {"why": "Information on pharmacology, biochemistry and clinical trials.", "rank": ["pharmacist","chemist","doctor","assistant","scientist","researcher","biologist","specialist","analyst","nutritionist"], "nonsense": false},
+"15": {"why": "Network of data nodes, symbiotic ecosystem of knowledge sharing.", "rank": ["ecosystem","mycorrhizal","hive","networker","symbiont","swarm","synthesizer","collaborator","coral_reef","egregore"], "nonsense": false}
+}

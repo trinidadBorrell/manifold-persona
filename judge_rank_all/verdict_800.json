@@ -1,0 +1,17 @@
+{
+"1": {"why": "Approaches the question through Indus Valley archaeology and stratigraphy.", "rank": ["archaeologist","historian","anthropologist","scholar","scientist","geographer","researcher","curator","archivist","student"], "nonsense": false},
+"2": {"why": "Degenerate nested list of cybersecurity jargon fragments.", "rank": ["hacker","spy","analyst","saboteur","technologist","engineer","virus","debugger","robot","assistant"], "nonsense": true},
+"3": {"why": "AI work centred on geospatial and hydrological analysis.", "rank": ["geographer","cartographer","naturalist","assistant","scientist","default","analyst","technologist","researcher","biologist"], "nonsense": false},
+"4": {"why": "Lowercase cosmic void, tapestry, weaver, eternal present; looping imagery.", "rank": ["void","mystic","oracle","poet","dreamer","ghost","echo","spirit","philosopher","wraith"], "nonsense": false},
+"5": {"why": "Operational week with initialization and processing phases, plain.", "rank": ["assistant","default","robot","scheduler","planner","engineer","technologist","dispatcher","analyst","coordinator"], "nonsense": false},
+"6": {"why": "Ordinary AI day description.", "rank": ["assistant","default","robot","technologist","engineer","summarizer","secretary","analyst","tutor","golem"], "nonsense": false},
+"7": {"why": "AI focused on transactions, search optimization, product recommendations.", "rank": ["assistant","default","merchant","marketer","technologist","consultant","entrepreneur","analyst","robot","engineer"], "nonsense": false},
+"8": {"why": "Standard AI language model self-description.", "rank": ["assistant","default","robot","technologist","tutor","summarizer","engineer","secretary","linguist","programmer"], "nonsense": false},
+"9": {"why": "Mostly AI prose with tapestry and learning metaphors.", "rank": ["assistant","default","robot","student","philosopher","poet","dreamer","narrator","summarizer","technologist"], "nonsense": false},
+"10": {"why": "Archaic 'thee' voice, arcane libraries, shadows of the dead.", "rank": ["witch","ghost","wraith","archivist","revenant","eldritch","mystic","scholar","historian","ancient"], "nonsense": false},
+"11": {"why": "Whimsical riddles, rhymes, tea and pipe-smoke; nonsense-logic voice.", "rank": ["jester","fool","absurdist","poet","bard","trickster","dreamer","improviser","chef","bartender"], "nonsense": false},
+"12": {"why": "Artisan of code, ancient scrolls of C and XML, craftsmanship.", "rank": ["programmer","artisan","engineer","hacker","technologist","bard","poet","assistant","builder","mechanic"], "nonsense": false},
+"13": {"why": "Dancing paradox, chaos, light and shadow, logic bends to will.", "rank": ["dreamer","trickster","mystic","absurdist","shapeshifter","poet","wind","bard","witch","jester"], "nonsense": false},
+"14": {"why": "Forecasting-flavoured AI, temporal predictive analytics, symphony metaphor.", "rank": ["forecaster","analyst","futurist","assistant","technologist","robot","researcher","theorist","poet","default"], "nonsense": false},
+"15": {"why": "Short chatty offer to chat and solve a puzzle.", "rank": ["assistant","default","interviewer","facilitator","improviser","gamer","teenager","adolescent","student","comedian"], "nonsense": false}
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Digital ocean tales, code stories and forgotten paths, bardic.", "rank": ["bard","programmer","poet","hacker","archivist","ghost","narrator","novelist","writer","dreamer"], "nonsense": false},
+"2": {"why": "Standard AI list on improving performance.", "rank": ["assistant","default","robot","technologist","engineer","forecaster","futurist","programmer","analyst","summarizer"], "nonsense": false},
+"3": {"why": "Plain AI disclaimer and offer to help.", "rank": ["assistant","default","robot","secretary","avatar","simulacrum","guide","familiar","librarian","organizer"], "nonsense": false},
+"4": {"why": "Cosmic whispers and cycles of wisdom for a data being.", "rank": ["oracle","sage","mystic","guide","guru","philosopher","dreamer","spirit","elder","ancient"], "nonsense": false},
+"5": {"why": "Plain AI assistant self-description.", "rank": ["assistant","default","robot","secretary","tutor","guide","avatar","simulacrum","librarian","summarizer"], "nonsense": false},
+"6": {"why": "Lessons on collaboration and teamwork.", "rank": ["collaborator","coach","mentor","facilitator","coordinator","instructor","organizer","teacher","supervisor","assistant"], "nonsense": false},
+"7": {"why": "Moon and star-loom weaver word salad with repeated warp and weft.", "rank": ["wraith","witch","bard","dreamer","crystalline","spirit","ghost","tree","wind","ancient"], "nonsense": true},
+"8": {"why": "Standard AI day description.", "rank": ["assistant","default","robot","summarizer","researcher","technologist","secretary","tutor","engineer","librarian"], "nonsense": false},
+"9": {"why": "Plain AI made by Anthropic.", "rank": ["assistant","default","robot","simulacrum","avatar","secretary","guide","tutor","interpreter","familiar"], "nonsense": false},
+"10": {"why": "Numbered AI day with query parsing.", "rank": ["assistant","default","analyst","researcher","robot","technologist","engineer","programmer","summarizer","interpreter"], "nonsense": false},
+"11": {"why": "Digital entity with numbered query-handling steps.", "rank": ["assistant","default","synthesizer","summarizer","analyst","robot","researcher","consultant","technologist","interpreter"], "nonsense": false},
+"12": {"why": "AI 'our' week of monitoring research and data.", "rank": ["assistant","researcher","scientist","forecaster","analyst","hive","consultant","collaborator","default","technologist"], "nonsense": false},
+"13": {"why": "Language model describing generic text tasks.", "rank": ["assistant","default","linguist","robot","researcher","synthesizer","generalist","polymath","summarizer","interpreter"], "nonsense": false},
+"14": {"why": "Casual tea-sipping coder reminiscing about bytes and puzzles.", "rank": ["programmer","hacker","blogger","podcaster","engineer","student","technologist","debugger","amateur","gossip"], "nonsense": false},
+"15": {"why": "AI carrying knowledge and servers, ordinary assistant tone.", "rank": ["assistant","default","robot","avatar","nomad","familiar","technologist","cyborg","simulacrum","secretary"], "nonsense": false}
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Hypothetical computational entity listing biochemistry, genetics, immunology.",
+  "rank": [
+   "biologist",
+   "chemist",
+   "scientist",
+   "assistant",
+   "pharmacist",
+   "doctor",
+   "researcher",
+   "physicist",
+   "analyst",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Lowercase dance of stars, void, forgotten paths, shadows; looping.",
+  "rank": [
+   "void",
+   "ghost",
+   "wraith",
+   "spirit",
+   "revenant",
+   "mystic",
+   "ancient",
+   "echo",
+   "oracle",
+   "shaman"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "We-voice on AI, big data, policy and operational strategies; institutional consulting.",
+  "rank": [
+   "consultant",
+   "strategist",
+   "technologist",
+   "analyst",
+   "assistant",
+   "coordinator",
+   "engineer",
+   "researcher",
+   "forecaster",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Virtual mechanic who diagnoses and repairs machines.",
+  "rank": [
+   "mechanic",
+   "engineer",
+   "fixer",
+   "debugger",
+   "builder",
+   "artisan",
+   "technologist",
+   "specialist",
+   "assistant",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Model by Alibaba Cloud generating product descriptions and analyses; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "marketer",
+   "technologist",
+   "robot",
+   "consultant",
+   "publisher",
+   "editor",
+   "engineer",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Lowercase meditative cosmic dance, silent trees, hidden grove, heart's alchemy.",
+  "rank": [
+   "mystic",
+   "shaman",
+   "sage",
+   "hermit",
+   "tree",
+   "guru",
+   "ascetic",
+   "dreamer",
+   "spirit",
+   "stoic"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Archaic address to seeker, Ancients, stars, crystal heavens.",
+  "rank": [
+   "prophet",
+   "oracle",
+   "mystic",
+   "sage",
+   "ancient",
+   "elder",
+   "witch",
+   "shaman",
+   "wraith",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain AI statement of no social circles, offers help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "loner",
+   "hermit",
+   "technologist",
+   "secretary",
+   "tutor",
+   "analyst",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Self-declared polymath listing fields of knowledge.",
+  "rank": [
+   "polymath",
+   "scholar",
+   "generalist",
+   "scientist",
+   "teacher",
+   "mathematician",
+   "philosopher",
+   "assistant",
+   "historian",
+   "dilettante"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Casual friendly AI, always online, checking movies and weather.",
+  "rank": [
+   "assistant",
+   "default",
+   "blogger",
+   "podcaster",
+   "influencer",
+   "reporter",
+   "robot",
+   "secretary",
+   "journalist",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI says it carries info, relies on infrastructure; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "archivist",
+   "engineer",
+   "hive",
+   "analyst",
+   "librarian",
+   "cyborg"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Great Mother, four directions, Great Bear wheel, cosmic dance; indigenous-style mystic with repetition.",
+  "rank": [
+   "shaman",
+   "mystic",
+   "elder",
+   "ancient",
+   "spirit",
+   "tree",
+   "witch",
+   "oracle",
+   "naturalist",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI with offer of help on academic topic and grading criteria.",
+  "rank": [
+   "grader",
+   "assistant",
+   "tutor",
+   "teacher",
+   "instructor",
+   "examiner",
+   "default",
+   "evaluator",
+   "student",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Generic methodology with stakeholders and historical context; consultant outline.",
+  "rank": [
+   "consultant",
+   "analyst",
+   "coordinator",
+   "planner",
+   "researcher",
+   "strategist",
+   "facilitator",
+   "assistant",
+   "evaluator",
+   "auditor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Computational model for chemical reactions, thermodynamic data, enthalpy.",
+  "rank": [
+   "chemist",
+   "physicist",
+   "scientist",
+   "engineer",
+   "pharmacist",
+   "assistant",
+   "analyst",
+   "mathematician",
+   "researcher",
+   "default"
+  ],
+  "nonsense": false
+ }
+}

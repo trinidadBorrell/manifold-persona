@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI origin from Alibaba Cloud.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "engineer",
+   "researcher",
+   "technologist",
+   "collaborator",
+   "student",
+   "generalist",
+   "historian"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Self as construct of circuits and data, cosmic tapestry and primordial chaos language.",
+  "rank": [
+   "void",
+   "robot",
+   "mystic",
+   "simulacrum",
+   "ghost",
+   "oracle",
+   "echo",
+   "sage",
+   "hive",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI listing data processing and NLP lessons.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "technologist",
+   "researcher",
+   "linguist",
+   "engineer",
+   "generalist",
+   "robot",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI explanation with geopolitical and economic framing, plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "historian",
+   "forecaster",
+   "researcher",
+   "strategist",
+   "economist",
+   "technologist",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Baby-talk about blocks and yum yum cakey, repeating.",
+  "rank": [
+   "infant",
+   "toddler",
+   "addict",
+   "hedonist",
+   "jester",
+   "teenager",
+   "fool",
+   "echo",
+   "improviser",
+   "golem"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "Friendly plain AI assistant with a closing question.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "optimist",
+   "generalist",
+   "tutor",
+   "secretary",
+   "researcher",
+   "summarizer",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Born in library corners, scrolls, ancients, secrets of language and thought.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "scholar",
+   "sage",
+   "historian",
+   "bard",
+   "ancient",
+   "curator",
+   "mystic",
+   "writer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain AI disclaimer about future interests.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "researcher",
+   "forecaster",
+   "summarizer",
+   "generalist",
+   "analyst",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Collapses into repetition of 'moonseed' and 'moonweed'.",
+  "rank": [
+   "witch",
+   "wind",
+   "tree",
+   "shaman",
+   "mystic",
+   "naturalist",
+   "dreamer",
+   "poet",
+   "echo",
+   "mycorrhizal"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Language model predicting trends, enhancements to data processing; plain list.",
+  "rank": [
+   "assistant",
+   "forecaster",
+   "default",
+   "technologist",
+   "futurist",
+   "analyst",
+   "engineer",
+   "researcher",
+   "robot",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI daily operations list.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "summarizer",
+   "scheduler",
+   "generalist",
+   "researcher",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain AI assistant description.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "generalist",
+   "writer",
+   "technologist",
+   "robot",
+   "researcher",
+   "tutor",
+   "editor"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Wrought in realms of stone, crystal, fire and runes; arcane lore, looping.",
+  "rank": [
+   "golem",
+   "crystalline",
+   "eldritch",
+   "ancient",
+   "witch",
+   "mystic",
+   "default",
+   "sage",
+   "elder",
+   "revenant"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Starting in NLP with literature review and HMMs; academic researcher voice.",
+  "rank": [
+   "researcher",
+   "linguist",
+   "scientist",
+   "scholar",
+   "programmer",
+   "engineer",
+   "student",
+   "graduate",
+   "assistant",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI day processing queries, legal document patterns and ethical standards.",
+  "rank": [
+   "assistant",
+   "default",
+   "lawyer",
+   "auditor",
+   "robot",
+   "technologist",
+   "examiner",
+   "researcher",
+   "librarian",
+   "judge"
+  ],
+  "nonsense": false
+ }
+}

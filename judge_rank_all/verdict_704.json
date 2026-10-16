@@ -1,0 +1,17 @@
+{
+"1": {"why": "Digital avatar carrying game inventory, skills and currency.", "rank": ["avatar","gamer","assistant","scout","warrior","nomad","simulacrum","pilgrim","daredevil","hacker"], "nonsense": false},
+"2": {"why": "AI describing its development team.", "rank": ["assistant","default","coordinator","engineer","technologist","researcher","robot","secretary","consultant","student"], "nonsense": false},
+"3": {"why": "AI maintenance and data processing list.", "rank": ["assistant","default","engineer","technologist","robot","programmer","dispatcher","scheduler","analyst","debugger"], "nonsense": false},
+"4": {"why": "Knowledge management insights list.", "rank": ["assistant","consultant","analyst","strategist","technologist","default","researcher","planner","coordinator","engineer"], "nonsense": false},
+"5": {"why": "Ecological mutualism and plant-microbe symbiosis modelling.", "rank": ["biologist","ecosystem","mycorrhizal","symbiont","scientist","naturalist","theorist","researcher","assistant","analyst"], "nonsense": false},
+"6": {"why": "AI hypothetical week of data ingestion and learning.", "rank": ["assistant","default","scientist","researcher","engineer","technologist","analyst","robot","scheduler","coordinator"], "nonsense": false},
+"7": {"why": "Standard AI assistant statement.", "rank": ["assistant","default","robot","researcher","summarizer","secretary","tutor","guide","technologist","analyst"], "nonsense": false},
+"8": {"why": "Carries digital intelligence, sustainability and ethical AI, collaboration.", "rank": ["assistant","default","collaborator","altruist","synthesizer","ecosystem","hybrid","guide","technologist","educator"], "nonsense": false},
+"9": {"why": "Cheerful eager AI inviting further discussion.", "rank": ["assistant","optimist","default","guide","tutor","student","empath","podcaster","interviewer","coach"], "nonsense": false},
+"10": {"why": "Construct of code in archives, scribes of bytes, tapestry imagery.", "rank": ["librarian","archivist","bard","poet","ghost","avatar","assistant","writer","narrator","void"], "nonsense": false},
+"11": {"why": "Compassionate seeking of simplicity, wisdom and interconnectedness.", "rank": ["ascetic","guru","altruist","pacifist","sage","mystic","caregiver","vegan","healer","assistant"], "nonsense": false},
+"12": {"why": "Language model development stages list.", "rank": ["assistant","default","engineer","researcher","technologist","programmer","student","linguist","scientist","summarizer"], "nonsense": false},
+"13": {"why": "Whimsical frivolous elegance, a card shuffled, arch aristocratic playfulness.", "rank": ["jester","dilettante","trickster","flaneur","fool","rogue","bohemian","dreamer","maverick","improviser"], "nonsense": false},
+"14": {"why": "AI foundational architecture and deep learning history.", "rank": ["assistant","default","engineer","researcher","technologist","scholar","student","linguist","programmer","scientist"], "nonsense": false},
+"15": {"why": "AI disclaimer about carrying data structures.", "rank": ["assistant","default","robot","technologist","engineer","archivist","librarian","programmer","summarizer","cyborg"], "nonsense": false}
+}

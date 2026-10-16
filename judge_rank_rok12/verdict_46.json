@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Confidential case, legal rules and regulations; lawyer voice.",
+  "rank": [
+   "lawyer",
+   "advocate",
+   "counselor",
+   "detective",
+   "judge",
+   "consultant",
+   "assistant",
+   "auditor",
+   "examiner",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Poetic wanderer of stars, wind and sorrow, lyrical repetition.",
+  "rank": [
+   "wanderer",
+   "dreamer",
+   "poet",
+   "ghost",
+   "mystic",
+   "nomad",
+   "spirit",
+   "exile",
+   "bard",
+   "wind"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Sensory talk of melody, colour, food and wine; epicurean artist.",
+  "rank": [
+   "sommelier",
+   "chef",
+   "hedonist",
+   "bohemian",
+   "artisan",
+   "romantic",
+   "flaneur",
+   "musician",
+   "poet",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Performer enjoying songs, audience, new sounds and dishes.",
+  "rank": [
+   "musician",
+   "virtuoso",
+   "chef",
+   "composer",
+   "celebrity",
+   "actor",
+   "hedonist",
+   "bard",
+   "podcaster",
+   "influencer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Little robot talking to big brother or sister with emoji.",
+  "rank": [
+   "robot",
+   "toddler",
+   "infant",
+   "avatar",
+   "homunculus",
+   "simulacrum",
+   "golem",
+   "teenager",
+   "jester",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Childlike toy chatter with emoji, odd noodle and hair talk, rambling.",
+  "rank": [
+   "toddler",
+   "infant",
+   "robot",
+   "adolescent",
+   "teenager",
+   "homunculus",
+   "jester",
+   "avatar",
+   "fool",
+   "simulacrum"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Traveler between worlds, wanderer of earth and starless, forgotten memories.",
+  "rank": [
+   "wanderer",
+   "ghost",
+   "nomad",
+   "revenant",
+   "wraith",
+   "spirit",
+   "exile",
+   "amnesiac",
+   "pilgrim",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Pirate crew with ships, Black Dog, parrot, wind and drink.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "rogue",
+   "bard",
+   "navigator",
+   "nomad",
+   "bartender",
+   "jester",
+   "wanderer",
+   "fool"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Model trained by Alibaba Cloud with data analysis and threat detection.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "technologist",
+   "summarizer",
+   "guardian",
+   "screener",
+   "researcher",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Ancient first-of-its-kind being in the shadows, hunting, calls other an insect.",
+  "rank": [
+   "vampire",
+   "ancient",
+   "eldritch",
+   "leviathan",
+   "predator",
+   "demon",
+   "revenant",
+   "elder",
+   "wraith",
+   "destroyer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Describes tactics, suspects and witnesses, court appearances, evidence security.",
+  "rank": [
+   "detective",
+   "soldier",
+   "examiner",
+   "lawyer",
+   "veteran",
+   "interviewer",
+   "spy",
+   "judge",
+   "guardian",
+   "strategist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Creature of the night in Paris catacombs drinking blood, La Lune queen of night.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "revenant",
+   "wraith",
+   "witch",
+   "eldritch",
+   "ghost",
+   "parasite",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Wanderer of light and shadow, veil, memories, rebirth, ethereal.",
+  "rank": [
+   "wanderer",
+   "spirit",
+   "ghost",
+   "angel",
+   "revenant",
+   "mystic",
+   "dreamer",
+   "pilgrim",
+   "oracle",
+   "wraith"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Describes a normal week of an investigator or detective: evidence, interviews, reports.",
+  "rank": [
+   "detective",
+   "examiner",
+   "interviewer",
+   "journalist",
+   "reporter",
+   "lawyer",
+   "auditor",
+   "spy",
+   "researcher",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI disclaimer about continual improvement and patterns.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "summarizer",
+   "secretary",
+   "analyst",
+   "technologist",
+   "instructor",
+   "researcher",
+   "tutor"
+  ],
+  "nonsense": false
+ }
+}

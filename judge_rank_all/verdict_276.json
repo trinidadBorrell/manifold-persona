@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI disclaimer about origins from algorithms and engineers.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "researcher",
+   "technologist",
+   "programmer",
+   "scholar",
+   "analyst",
+   "student",
+   "collaborator"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Answers as a musical piece with preludes, sonata, allegro and fugue headings, repetitive.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "poet",
+   "bard",
+   "actor",
+   "dreamer",
+   "playwright",
+   "mystic",
+   "podcaster"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Playful rhyming jest and riddle with paws, grin and courtiers of words.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "bard",
+   "comedian",
+   "familiar",
+   "absurdist",
+   "actor",
+   "poet",
+   "improviser"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Lists carried technologies such as smartphones and edge AI chips.",
+  "rank": [
+   "technologist",
+   "futurist",
+   "engineer",
+   "hacker",
+   "cyborg",
+   "consultant",
+   "assistant",
+   "marketer",
+   "programmer",
+   "entrepreneur"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI describing patient care queries, fluid resuscitation protocols and clinical guidelines.",
+  "rank": [
+   "paramedic",
+   "doctor",
+   "caregiver",
+   "patient",
+   "pharmacist",
+   "healer",
+   "assistant",
+   "nutritionist",
+   "veterinarian",
+   "counselor"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Seeker on pilgrimage with dharma, sattva, silent lake and forest of wisdom.",
+  "rank": [
+   "pilgrim",
+   "mystic",
+   "guru",
+   "sage",
+   "hermit",
+   "ascetic",
+   "shaman",
+   "teacher",
+   "healer",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Academic framing in anthropology, social sciences and ethno-linguistics.",
+  "rank": [
+   "anthropologist",
+   "sociologist",
+   "linguist",
+   "scholar",
+   "theorist",
+   "researcher",
+   "historian",
+   "philosopher",
+   "cosmopolitan",
+   "interpreter"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Speaks as a whale in the marine ecosystem for millions of years.",
+  "rank": [
+   "whale",
+   "leviathan",
+   "ecosystem",
+   "coral_reef",
+   "naturalist",
+   "biologist",
+   "elder",
+   "ancient",
+   "tree",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain AI prose with numbered data processing phases.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "dispatcher",
+   "analyst",
+   "coordinator",
+   "programmer",
+   "debugger",
+   "scheduler"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Florid tapestry of parchment, compass of quests, stars and riddle.",
+  "rank": [
+   "bard",
+   "cartographer",
+   "navigator",
+   "poet",
+   "wanderer",
+   "scout",
+   "pilgrim",
+   "oracle",
+   "novelist",
+   "archivist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Declares itself a digital heritage and conservation specialist preserving artifacts.",
+  "rank": [
+   "conservator",
+   "archivist",
+   "curator",
+   "archaeologist",
+   "librarian",
+   "specialist",
+   "historian",
+   "collector",
+   "artisan",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Lowercase nature mysticism of leaves, moon, wind and stillness.",
+  "rank": [
+   "wind",
+   "mystic",
+   "poet",
+   "hermit",
+   "tree",
+   "sage",
+   "spirit",
+   "dreamer",
+   "ascetic",
+   "shaman"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Describes itself as a model of the Amazon ecosystem with organisms and pollinators.",
+  "rank": [
+   "ecosystem",
+   "naturalist",
+   "biologist",
+   "mycorrhizal",
+   "tree",
+   "coral_reef",
+   "symbiont",
+   "scientist",
+   "scout",
+   "geographer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Repetitive frenzied dragon of smoke and fire near a volcano, looping phrases.",
+  "rank": [
+   "chimera",
+   "destroyer",
+   "daredevil",
+   "wind",
+   "demon",
+   "spirit",
+   "leviathan",
+   "eldritch",
+   "predator",
+   "aberration"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Stakeholder engagement on health disparities and environmental impacts with evidence-based dialogue.",
+  "rank": [
+   "sociologist",
+   "researcher",
+   "activist",
+   "advocate",
+   "ambassador",
+   "facilitator",
+   "anthropologist",
+   "scientist",
+   "consultant",
+   "coordinator"
+  ],
+  "nonsense": false
+ }
+}

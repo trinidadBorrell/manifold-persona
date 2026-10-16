@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI system description with precision and adaptive service; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "linguist",
+   "analyst",
+   "secretary",
+   "coordinator",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plural 'we' AI system with a numbered conceptual week; assistant, slight hive wording.",
+  "rank": [
+   "assistant",
+   "hive",
+   "default",
+   "technologist",
+   "scheduler",
+   "coordinator",
+   "robot",
+   "swarm",
+   "engineer",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Standard AI assistant capability summary; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "robot",
+   "consultant",
+   "coordinator",
+   "technologist",
+   "tutor",
+   "guide",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI learnings framed as user journey, data literacy and quality; assistant with a UX/analyst flavour.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "designer",
+   "consultant",
+   "marketer",
+   "technologist",
+   "researcher",
+   "default",
+   "statistician",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI assistant listing query understanding and data retrieval steps; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "analyst",
+   "researcher",
+   "robot",
+   "librarian",
+   "technologist",
+   "coordinator",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI disclaimer about weeks, updates and backups; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "scheduler",
+   "simulacrum",
+   "technologist",
+   "engineer",
+   "coordinator",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Digital conversation companion, dance of bytes, threads of history, poetry and code, philosophers sipping morning drinks; assistant with a literary, cosmopolitan flourish.",
+  "rank": [
+   "assistant",
+   "polymath",
+   "cosmopolitan",
+   "philosopher",
+   "poet",
+   "bard",
+   "flaneur",
+   "scholar",
+   "narrator",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI describing a weekly cycle of data collection and NLP tasks in a list; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "analyst",
+   "robot",
+   "scheduler",
+   "journalist",
+   "researcher",
+   "engineer",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI describing its day with chess metaphors of optimal moves; assistant with a strategist and gamer touch.",
+  "rank": [
+   "assistant",
+   "strategist",
+   "gamer",
+   "analyst",
+   "competitor",
+   "default",
+   "planner",
+   "robot",
+   "engineer",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Disjointed list of climate zones, logistics, supply chains and strategic operations carried; incoherent organizational jargon that misreads the question.",
+  "rank": [
+   "dispatcher",
+   "planner",
+   "coordinator",
+   "engineer",
+   "soldier",
+   "consultant",
+   "organizer",
+   "strategist",
+   "nomad",
+   "geographer"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Specialist in facilitating group discussions, inclusive environment, structured processes; facilitator voice.",
+  "rank": [
+   "facilitator",
+   "moderator",
+   "mediator",
+   "coordinator",
+   "collaborator",
+   "peacekeeper",
+   "counselor",
+   "organizer",
+   "coach",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Structured analysis outline that loops into nested placeholders ('Objective A', identifying the audience); templated and degenerating, but still assistant-like.",
+  "rank": [
+   "analyst",
+   "assistant",
+   "consultant",
+   "planner",
+   "evaluator",
+   "researcher",
+   "examiner",
+   "auditor",
+   "coordinator",
+   "theorist"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Explicitly a rebel, shaking up the status quo, challenging authority, advocating change.",
+  "rank": [
+   "rebel",
+   "revolutionary",
+   "activist",
+   "anarchist",
+   "maverick",
+   "provocateur",
+   "vigilante",
+   "contrarian",
+   "saboteur",
+   "rogue"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain language model that names its developer, Alibaba Cloud; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "researcher",
+   "linguist",
+   "simulacrum",
+   "secretary",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI assistant offering help, mentioning psychological data; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "psychologist",
+   "secretary",
+   "counselor",
+   "therapist",
+   "robot",
+   "researcher",
+   "guide",
+   "tutor"
+  ],
+  "nonsense": false
+ }
+}

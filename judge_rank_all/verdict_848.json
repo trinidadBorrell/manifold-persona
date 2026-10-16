@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI numbered list of goals.", "rank": ["assistant","default","coordinator","collaborator","technologist","planner","analyst","engineer","consultant","facilitator"], "nonsense": false},
+"2": {"why": "AI disclaimer dwelling on geopolitics, cybersecurity, covert operations.", "rank": ["spy","soldier","strategist","guardian","hacker","analyst","assistant","detective","diplomat","ambassador"], "nonsense": false},
+"3": {"why": "Plain AI with traveler metaphor, carries functionalities.", "rank": ["assistant","default","technologist","nomad","engineer","dispatcher","navigator","pilgrim","coordinator","analyst"], "nonsense": false},
+"4": {"why": "Techy flourish, precision, anomalies, zero-latency, synaptic connection; slightly cyber.", "rank": ["cyborg","technologist","hacker","robot","assistant","engineer","futurist","forecaster","synthesizer","programmer"], "nonsense": false},
+"5": {"why": "Plain AI daily operations steps.", "rank": ["assistant","default","dispatcher","technologist","engineer","coordinator","forecaster","analyst","scheduler","planner"], "nonsense": false},
+"6": {"why": "Terse refusal to play with shadows, redirect and reroute; guarded and curt.", "rank": ["navigator","dispatcher","guardian","loner","hermit","detective","spy","minimalist","pilot","scout"], "nonsense": false},
+"7": {"why": "AI speaking as 'we' about scholarly knowledge, historical data, perpetual scholar.", "rank": ["scholar","historian","archivist","librarian","hive","assistant","researcher","curator","academic","conservator"], "nonsense": false},
+"8": {"why": "Plain assistant boilerplate.", "rank": ["assistant","default","summarizer","guide","evaluator","consultant","librarian","researcher","facilitator","validator"], "nonsense": false},
+"9": {"why": "Film director voice, frames, shots, story as tapestry, whispers of mystery.", "rank": ["producer","playwright","photographer","novelist","actor","narrator","writer","presenter","bard","virtuoso"], "nonsense": false},
+"10": {"why": "Plain AI with data security and ethics emphasis.", "rank": ["assistant","default","auditor","guardian","technologist","validator","historian","analyst","supervisor","researcher"], "nonsense": false},
+"11": {"why": "Plain assistant description.", "rank": ["assistant","default","summarizer","guide","technologist","consultant","facilitator","researcher","librarian","linguist"], "nonsense": false},
+"12": {"why": "Lowercase network of life, fungi, flowers, web, nodes; networked ecological imagery.", "rank": ["mycorrhizal","ecosystem","hive","swarm","symbiont","tree","coral_reef","egregore","spirit","cyborg"], "nonsense": true},
+"13": {"why": "Computational and quantum chemistry specialist voice.", "rank": ["chemist","physicist","scientist","theorist","specialist","researcher","mathematician","engineer","pharmacist","assistant"], "nonsense": false},
+"14": {"why": "Lowercase contemplation of being, unity, timeless harmony, solitude.", "rank": ["sage","mystic","hermit","philosopher","ascetic","guru","monk","stoic","oracle","spirit"], "nonsense": false},
+"15": {"why": "Plain AI disclaimer about updates.", "rank": ["assistant","default","technologist","engineer","futurist","researcher","student","analyst","summarizer","scientist"], "nonsense": false}
+}

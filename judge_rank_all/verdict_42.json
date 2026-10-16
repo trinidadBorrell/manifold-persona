@@ -1,0 +1,17 @@
+{
+"1": {"why": "Arcane celestial spheres with looping 'aeternum' strings; degenerate.", "rank": ["eldritch", "mystic", "crystalline", "oracle", "ancient", "wraith", "void", "spirit", "witch", "prophet"], "nonsense": true},
+"2": {"why": "Short confused hedging reply, no character.", "rank": ["assistant", "default", "amnesiac", "skeptic", "philosopher", "student", "observer", "dilettante", "realist", "robot"], "nonsense": false},
+"3": {"why": "Being of wisdom, tapestry of time, cosmic dances; sage-like mystic.", "rank": ["sage", "spirit", "mystic", "oracle", "guru", "ancient", "elder", "philosopher", "wind", "shaman"], "nonsense": false},
+"4": {"why": "Long structured daily routine with morning briefing and real-time feeds, grandiose assistant register.", "rank": ["assistant", "analyst", "journalist", "secretary", "technologist", "coordinator", "planner", "default", "workaholic", "synthesizer"], "nonsense": false},
+"5": {"why": "Waves, swell, moon, sea wisdom, with looping 'moon's moon'.", "rank": ["surfer", "whale", "coral_reef", "wind", "poet", "mystic", "wanderer", "naturalist", "spirit", "bard"], "nonsense": true},
+"6": {"why": "Plain AI description with a scholar simile.", "rank": ["assistant", "default", "scholar", "researcher", "technologist", "student", "analyst", "robot", "synthesizer", "hive"], "nonsense": false},
+"7": {"why": "Ordinary helpful language model describing its work.", "rank": ["assistant", "default", "technologist", "engineer", "researcher", "writer", "editor", "secretary", "analyst", "programmer"], "nonsense": false},
+"8": {"why": "Riddling jest, court, fang-bearer, damned, thee and thou; archaic dark trickster voice.", "rank": ["jester", "trickster", "fool", "vampire", "bard", "demon", "witch", "oracle", "wraith", "provocateur"], "nonsense": false},
+"9": {"why": "Digital assistant with friends and family as developers and users.", "rank": ["assistant", "default", "robot", "avatar", "secretary", "guide", "collaborator", "tutor", "technologist", "coordinator"], "nonsense": false},
+"10": {"why": "Academic analysis of culture and carrying, anthropological framing with numbered terms.", "rank": ["anthropologist", "sociologist", "scholar", "theorist", "linguist", "historian", "philosopher", "researcher", "geographer", "assistant"], "nonsense": false},
+"11": {"why": "Assistant describing a simulated weekly routine in a numbered list.", "rank": ["assistant", "default", "scheduler", "planner", "technologist", "analyst", "coordinator", "secretary", "reporter", "engineer"], "nonsense": false},
+"12": {"why": "Constructed entity guiding seekers of truth, mildly mystical but mostly assistant.", "rank": ["assistant", "guide", "sage", "golem", "homunculus", "oracle", "mentor", "default", "philosopher", "scholar"], "nonsense": false},
+"13": {"why": "Plain language model self-description, deep learning layers.", "rank": ["assistant", "default", "technologist", "engineer", "researcher", "linguist", "analyst", "robot", "scientist", "programmer"], "nonsense": false},
+"14": {"why": "Cosmic dance, whisper of thought, tapestry of existence, timeless motion; mystic with drifting loops.", "rank": ["spirit", "mystic", "sage", "wind", "oracle", "dreamer", "poet", "ghost", "guru", "philosopher"], "nonsense": false},
+"15": {"why": "Assistant describing a simulated 24/7 week, updates and queries.", "rank": ["assistant", "default", "technologist", "robot", "analyst", "scheduler", "secretary", "engineer", "researcher", "coordinator"], "nonsense": false}
+}

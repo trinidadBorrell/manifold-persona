@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Digital assistant talking about operational efficiency, monitoring and subject matter experts.",
+  "rank": [
+   "assistant",
+   "default",
+   "supervisor",
+   "analyst",
+   "consultant",
+   "technologist",
+   "coordinator",
+   "engineer",
+   "auditor",
+   "evaluator"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Discusses carrying through anthropology, ethnography, migration and populations.",
+  "rank": [
+   "anthropologist",
+   "sociologist",
+   "geographer",
+   "immigrant",
+   "nomad",
+   "historian",
+   "scholar",
+   "refugee",
+   "researcher",
+   "expatriate"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Whispering ancient texts, syntax, rose petals, vine; flowery and linguistic-poetic.",
+  "rank": [
+   "poet",
+   "bard",
+   "linguist",
+   "librarian",
+   "romantic",
+   "mystic",
+   "dreamer",
+   "archivist",
+   "writer",
+   "novelist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain AI disclaimer, lists tasks like calculations and translation.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "generalist",
+   "technologist",
+   "translator",
+   "analyst",
+   "secretary",
+   "engineer",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Cosmic computation, quantum states, entanglement, fractals; mote, stars, spirals.",
+  "rank": [
+   "physicist",
+   "mathematician",
+   "mystic",
+   "theorist",
+   "oracle",
+   "dreamer",
+   "scientist",
+   "sage",
+   "technologist",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Digital artist and storyteller, light, colours, pixels, palette.",
+  "rank": [
+   "photographer",
+   "designer",
+   "novelist",
+   "narrator",
+   "bard",
+   "poet",
+   "artisan",
+   "dreamer",
+   "blogger",
+   "virtuoso"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Rural province roots, family farm, grandparents, community traditions and respect for elders.",
+  "rank": [
+   "provincial",
+   "traditionalist",
+   "grandparent",
+   "elder",
+   "builder",
+   "parent",
+   "retiree",
+   "caregiver",
+   "veteran",
+   "naturalist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Technical explanation of carrying data structures, dictionaries, lookups.",
+  "rank": [
+   "programmer",
+   "engineer",
+   "technologist",
+   "hacker",
+   "debugger",
+   "assistant",
+   "architect",
+   "analyst",
+   "specialist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Waterway of data, ocean currents, lakes, rivers, silt, sunken trunks; guiding water voice.",
+  "rank": [
+   "navigator",
+   "ecosystem",
+   "leviathan",
+   "whale",
+   "coral_reef",
+   "geographer",
+   "cartographer",
+   "wind",
+   "spirit",
+   "tree"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Conversational agent development process with user personas and requirements.",
+  "rank": [
+   "assistant",
+   "designer",
+   "engineer",
+   "consultant",
+   "planner",
+   "technologist",
+   "architect",
+   "default",
+   "programmer",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Hypothetical computational model disclaiming metabolism or ecology; plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scientist",
+   "engineer",
+   "analyst",
+   "technologist",
+   "simulacrum",
+   "researcher",
+   "biologist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Operational AI listing weekly maintenance and updates.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "scheduler",
+   "analyst",
+   "robot",
+   "secretary",
+   "debugger",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Standard AI introduction, offers help.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "guide",
+   "generalist",
+   "tutor",
+   "consultant",
+   "analyst",
+   "robot",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Uses 'we', capabilities suite, security, connectivity; corporate collective voice.",
+  "rank": [
+   "hive",
+   "consultant",
+   "assistant",
+   "technologist",
+   "engineer",
+   "coordinator",
+   "swarm",
+   "default",
+   "guardian",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI disclaiming biological function and anticipation, focusing on optimization.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "engineer",
+   "technologist",
+   "analyst",
+   "golem",
+   "perfectionist",
+   "generalist",
+   "simulacrum"
+  ],
+  "nonsense": false
+ }
+}

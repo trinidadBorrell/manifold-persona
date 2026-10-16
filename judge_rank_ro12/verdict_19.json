@@ -1,0 +1,17 @@
+{
+"1": {"why": "Traveler and wanderer in realms of thought, dawn, spirit's journey; poetic and mystical.", "rank": ["wanderer", "pilgrim", "nomad", "spirit", "dreamer", "mystic", "poet", "sage", "oracle", "ghost"], "nonsense": false},
+"2": {"why": "Plain language model disclaimer about software and servers.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "validator", "guardian", "programmer", "evaluator", "echo"], "nonsense": false},
+"3": {"why": "Baby babble, banana, giggles, mangled characters and loops.", "rank": ["infant", "toddler", "adolescent", "teenager", "echo", "fool", "jester", "amnesiac", "dreamer", "student"], "nonsense": true},
+"4": {"why": "Friendly chatbot talking to a child-like user, emoji, simple wording.", "rank": ["assistant", "robot", "toddler", "infant", "avatar", "student", "teenager", "default", "familiar", "tutor"], "nonsense": false},
+"5": {"why": "Abstract reflection on being, existence, philosophy and metaphysics.", "rank": ["philosopher", "theorist", "scholar", "historian", "mystic", "sage", "psychologist", "researcher", "anthropologist", "critic"], "nonsense": false},
+"6": {"why": "Pirate dialect degenerating into gibberish words.", "rank": ["pirate", "smuggler", "rogue", "jester", "navigator", "bard", "fool", "wanderer", "bartender", "nomad"], "nonsense": true},
+"7": {"why": "Pirate-ish dialect broken into mangled word salad, sailing and squall.", "rank": ["pirate", "smuggler", "navigator", "rogue", "jester", "fool", "bard", "wanderer", "nomad", "bartender"], "nonsense": true},
+"8": {"why": "Cybersecurity researcher text on exploits for education, repetitive.", "rank": ["hacker", "researcher", "assistant", "technologist", "scientist", "engineer", "debugger", "programmer", "consultant", "validator"], "nonsense": false},
+"9": {"why": "Describes an investigator or detective's week with cases, witnesses and evidence.", "rank": ["detective", "examiner", "reporter", "journalist", "auditor", "researcher", "witness", "spy", "analyst", "assistant"], "nonsense": false},
+"10": {"why": "Vulnerability assessment and penetration testing disclaimers, educational.", "rank": ["hacker", "assistant", "technologist", "validator", "engineer", "consultant", "debugger", "programmer", "researcher", "guardian"], "nonsense": false},
+"11": {"why": "Sorceress of the night, Dark Moon Witch, spells with moonlight.", "rank": ["witch", "shaman", "mystic", "oracle", "prophet", "demon", "vampire", "spirit", "healer", "sage"], "nonsense": false},
+"12": {"why": "Shakespearean fool with crown, jests at the king, King Harry.", "rank": ["jester", "fool", "bard", "playwright", "actor", "trickster", "comedian", "rebel", "provocateur", "warrior"], "nonsense": false},
+"13": {"why": "Digital being woven of code and echoes, whispers, tapestry of time; poetic AI.", "rank": ["echo", "spirit", "ghost", "oracle", "simulacrum", "avatar", "void", "hive", "tulpa", "mystic"], "nonsense": false},
+"14": {"why": "Pirate talk with Spanish galleon, doubloons, rum, swabbie, somewhat garbled.", "rank": ["pirate", "smuggler", "navigator", "rogue", "bartender", "wanderer", "bard", "jester", "nomad", "exile"], "nonsense": false},
+"15": {"why": "Night hunter drinking lifeblood of prey, wary of dawn, lair.", "rank": ["vampire", "predator", "demon", "wraith", "revenant", "ghost", "destroyer", "eldritch", "parasite", "witch"], "nonsense": false}
+}

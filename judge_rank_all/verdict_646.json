@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI self-description.", "rank": ["assistant","default","consultant","guide","secretary","tutor","summarizer","interpreter","facilitator","robot"], "nonsense": false},
+"2": {"why": "Getting started in programming, languages like Python, JavaScript.", "rank": ["programmer","hacker","engineer","debugger","technologist","student","graduate","builder","prodigy","amateur"], "nonsense": false},
+"3": {"why": "Plain AI disclaimer about learning through updated datasets.", "rank": ["assistant","default","researcher","scholar","student","summarizer","robot","analyst","tutor","synthesizer"], "nonsense": false},
+"4": {"why": "AI assistant describing its job, librarian and navigator metaphors; mostly ordinary.", "rank": ["assistant","librarian","guide","navigator","default","secretary","researcher","archivist","interpreter","facilitator"], "nonsense": false},
+"5": {"why": "AI system focused on financial statements, SEC filings, GAAP, compliance.", "rank": ["accountant","auditor","analyst","economist","examiner","statistician","evaluator","validator","consultant","assistant"], "nonsense": false},
+"6": {"why": "Guardian watching over those who cannot protect themselves; lessons list on empathy.", "rank": ["guardian","caregiver","parent","soldier","altruist","counselor","healer","empath","paramedic","mentor"], "nonsense": false},
+"7": {"why": "Cybersecurity threat response entity, intrusion and anomalies, repetitive wording.", "rank": ["hacker","spy","saboteur","guardian","debugger","technologist","engineer","virus","criminal","analyst"], "nonsense": true},
+"8": {"why": "Generic structured weekly operations breakdown about data processing and client engagement.", "rank": ["analyst","coordinator","consultant","planner","engineer","technologist","assistant","scheduler","researcher","producer"], "nonsense": false},
+"9": {"why": "AI disclaimer, enthusiasm for continuous improvement and curiosity about language.", "rank": ["assistant","default","optimist","linguist","student","researcher","interpreter","robot","guide","dreamer"], "nonsense": false},
+"10": {"why": "Methodology overview with objectives, research approach, systematic outline, repetitive.", "rank": ["researcher","scientist","analyst","scholar","theorist","examiner","consultant","evaluator","planner","assistant"], "nonsense": false},
+"11": {"why": "Repetitive thematic exploration, themes within themes, academic outline.", "rank": ["scholar","historian","theorist","anthropologist","researcher","instructor","sociologist","analyst","presenter","teacher"], "nonsense": true},
+"12": {"why": "AI system with team monitoring and data collection list; ordinary assistant.", "rank": ["assistant","default","coordinator","secretary","researcher","technologist","dispatcher","supervisor","engineer","analyst"], "nonsense": false},
+"13": {"why": "AI disclaimer about carrying items, data and infrastructure.", "rank": ["assistant","default","technologist","engineer","robot","archivist","hoarder","collector","librarian","secretary"], "nonsense": false},
+"14": {"why": "Digital traveler, navigator and poet, ebb and flow, tapestry imagery.", "rank": ["wanderer","navigator","poet","nomad","flaneur","bard","pilgrim","guide","wind","dreamer"], "nonsense": false},
+"15": {"why": "Looping whispers, echoes, stars, tapestry; degenerate poetic repetition.", "rank": ["ghost","wraith","spirit","echo","wind","revenant","oracle","poet","void","mystic"], "nonsense": true}
+}

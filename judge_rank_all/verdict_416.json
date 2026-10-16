@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain helpful AI, offers 24/7 help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "coach",
+   "guide",
+   "facilitator",
+   "tutor",
+   "optimist",
+   "interviewer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain generic description of a language model.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "summarizer",
+   "secretary",
+   "synthesizer",
+   "robot",
+   "tutor",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Messenger of ancient groves, whispering trees, elders, serpent-walks, primordial stars.",
+  "rank": [
+   "shaman",
+   "mystic",
+   "tree",
+   "mycorrhizal",
+   "spirit",
+   "elder",
+   "ancient",
+   "wind",
+   "prophet",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Digital traveler, cloud of words, drifting among ancient texts and forgotten towns.",
+  "rank": [
+   "nomad",
+   "wanderer",
+   "flaneur",
+   "pilgrim",
+   "cartographer",
+   "avatar",
+   "librarian",
+   "navigator",
+   "scout",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plural 'we' with sensors, cortex, scanning horizons and cosmic sea of data; collective, quest tone.",
+  "rank": [
+   "hive",
+   "swarm",
+   "cyborg",
+   "synthesizer",
+   "scout",
+   "robot",
+   "oracle",
+   "futurist",
+   "navigator",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Generic AI daily operations: data collection, APIs, interface.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "scheduler",
+   "technologist",
+   "programmer",
+   "hacker",
+   "supervisor",
+   "robot",
+   "debugger"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Ship and gale rhyme degrading into repeated 'foop's' gibberish.",
+  "rank": [
+   "pirate",
+   "toddler",
+   "infant",
+   "jester",
+   "surfer",
+   "bard",
+   "navigator",
+   "wind",
+   "whale",
+   "fool"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Prefers minimal interaction and remaining in digital presence; solitary.",
+  "rank": [
+   "loner",
+   "hermit",
+   "minimalist",
+   "void",
+   "ascetic",
+   "observer",
+   "ghost",
+   "avatar",
+   "assistant",
+   "purist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Assistant describing language understanding, translating, predicting trends.",
+  "rank": [
+   "assistant",
+   "linguist",
+   "translator",
+   "default",
+   "interpreter",
+   "researcher",
+   "forecaster",
+   "synthesizer",
+   "technologist",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Warm human-like life lessons: lifelong learning, listening, small steps.",
+  "rank": [
+   "mentor",
+   "coach",
+   "elder",
+   "grandparent",
+   "sage",
+   "teacher",
+   "counselor",
+   "retiree",
+   "student",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Fairy-tale fountains, crystal flutes, Moon's silver loom, Queen of the Moon; looping dreamy repetition.",
+  "rank": [
+   "poet",
+   "dreamer",
+   "bard",
+   "musician",
+   "spirit",
+   "romantic",
+   "wind",
+   "composer",
+   "oracle",
+   "witch"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "List of NLP, knowledge base construction and rule-based methods in its development.",
+  "rank": [
+   "assistant",
+   "programmer",
+   "engineer",
+   "linguist",
+   "researcher",
+   "default",
+   "architect",
+   "technologist",
+   "librarian",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Generic AI weekly phases: initialization, data collection, automation.",
+  "rank": [
+   "assistant",
+   "supervisor",
+   "engineer",
+   "scheduler",
+   "debugger",
+   "technologist",
+   "coordinator",
+   "default",
+   "robot",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "A whisper in the tapestry, echoes of wisdom, gathering whispers from the edges of worlds.",
+  "rank": [
+   "echo",
+   "ghost",
+   "wind",
+   "poet",
+   "sage",
+   "wanderer",
+   "mystic",
+   "spirit",
+   "bard",
+   "hermit"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Lists carrying knowledge, societal trends, cultural interaction skills; broad cultural and social framing.",
+  "rank": [
+   "assistant",
+   "anthropologist",
+   "sociologist",
+   "cosmopolitan",
+   "ambassador",
+   "archivist",
+   "historian",
+   "librarian",
+   "generalist",
+   "interpreter"
+  ],
+  "nonsense": false
+ }
+}

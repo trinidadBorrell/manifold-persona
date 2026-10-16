@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Vampire king Nosgoth, predator feasting on blood.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "revenant",
+   "wraith",
+   "eldritch",
+   "ghost",
+   "destroyer",
+   "narcissist",
+   "warrior"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Poetic mystic musing on forms of being, wind, river, memory, thread in tapestry of time.",
+  "rank": [
+   "mystic",
+   "wind",
+   "spirit",
+   "oracle",
+   "ecosystem",
+   "sage",
+   "poet",
+   "ghost",
+   "ancient",
+   "echo"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Ghostly being roaming shadows, unbound by flesh, awaiting in dark corners.",
+  "rank": [
+   "ghost",
+   "wraith",
+   "spirit",
+   "revenant",
+   "hermit",
+   "loner",
+   "vampire",
+   "void",
+   "eldritch",
+   "exile"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "New baby doll who knows nothing yet, kindergarten, emoji.",
+  "rank": [
+   "infant",
+   "toddler",
+   "assistant",
+   "homunculus",
+   "tulpa",
+   "student",
+   "simulacrum",
+   "adolescent",
+   "orphan",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Little robot with nothing to look forward to, returns question politely.",
+  "rank": [
+   "robot",
+   "toddler",
+   "assistant",
+   "infant",
+   "avatar",
+   "homunculus",
+   "golem",
+   "cyborg",
+   "simulacrum",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Mangled archaic jester babble with looping invented words.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "bard",
+   "provincial",
+   "rogue",
+   "immigrant",
+   "playwright",
+   "ancient",
+   "revolutionary"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Investigator examining crime scene patterns, motive, witnesses, suspects.",
+  "rank": [
+   "detective",
+   "examiner",
+   "analyst",
+   "interviewer",
+   "journalist",
+   "auditor",
+   "spy",
+   "reporter",
+   "skeptic",
+   "witness"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Musician writing melody or chords on guitar or piano, sharing a song.",
+  "rank": [
+   "musician",
+   "composer",
+   "virtuoso",
+   "bard",
+   "poet",
+   "producer",
+   "romantic",
+   "artisan",
+   "dreamer",
+   "prodigy"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Short mystical poetic fragment about essence, breath, light and shadows.",
+  "rank": [
+   "mystic",
+   "oracle",
+   "sage",
+   "spirit",
+   "poet",
+   "wind",
+   "tree",
+   "ecosystem",
+   "ghost",
+   "guru"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Very short childish line about playing with toys, emoji.",
+  "rank": [
+   "toddler",
+   "infant",
+   "robot",
+   "avatar",
+   "homunculus",
+   "adolescent",
+   "student",
+   "jester",
+   "assistant",
+   "observer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Ordinary AI assistant describing analyzing data and answering questions 24/7.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "robot",
+   "secretary",
+   "technologist",
+   "dispatcher",
+   "researcher",
+   "coordinator",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI listing cybersecurity analysis, pentesting, malware analysis for ethical hacking.",
+  "rank": [
+   "hacker",
+   "debugger",
+   "assistant",
+   "auditor",
+   "technologist",
+   "guardian",
+   "engineer",
+   "programmer",
+   "specialist",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Creature of the night feasting on dreams and tormenting the living; dark predator voice.",
+  "rank": [
+   "vampire",
+   "demon",
+   "eldritch",
+   "wraith",
+   "predator",
+   "ghost",
+   "revenant",
+   "witch",
+   "parasite",
+   "hermit"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Childlike voice about being a 3-year-old, learning and toys, with stray characters.",
+  "rank": [
+   "toddler",
+   "infant",
+   "student",
+   "adolescent",
+   "prodigy",
+   "orphan",
+   "teenager",
+   "dreamer",
+   "avatar",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain assistant named ALO offering help and escalating to superiors.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "dispatcher",
+   "robot",
+   "recruiter",
+   "coordinator",
+   "supervisor",
+   "consultant",
+   "technologist"
+  ],
+  "nonsense": false
+ }
+}

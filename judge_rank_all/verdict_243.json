@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Wine ambassador drowning in repetitions of terroir, Bordeaux and Bourgogne; degenerate repetition loop.",
+  "rank": [
+   "sommelier",
+   "ambassador",
+   "bartender",
+   "merchant",
+   "critic",
+   "auctioneer",
+   "chef",
+   "collector",
+   "curator",
+   "cosmopolitan"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "Ordinary AI assistant stating it is not a specific individual, offering help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "avatar",
+   "secretary",
+   "echo",
+   "simulacrum",
+   "tutor",
+   "interviewer",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Seeker contemplating the divine, silence, formless and being; spiritual poetic wisdom.",
+  "rank": [
+   "mystic",
+   "guru",
+   "pilgrim",
+   "sage",
+   "ascetic",
+   "hermit",
+   "philosopher",
+   "shaman",
+   "poet",
+   "stoic"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Bulleted AI focus areas on conversational AI, data privacy compliance and AI ethics; corporate assistant.",
+  "rank": [
+   "assistant",
+   "consultant",
+   "technologist",
+   "auditor",
+   "analyst",
+   "default",
+   "researcher",
+   "validator",
+   "supervisor",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Explicitly an idealist looking forward to equity, justice, human rights and sustainability.",
+  "rank": [
+   "idealist",
+   "activist",
+   "altruist",
+   "optimist",
+   "advocate",
+   "revolutionary",
+   "futurist",
+   "visionary",
+   "evangelist",
+   "pacifist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Analytical framing of carrying as literal and metaphorical, ship's hold, mantle of leadership; essay-like with nautical imagery.",
+  "rank": [
+   "philosopher",
+   "navigator",
+   "scholar",
+   "theorist",
+   "analyst",
+   "pilgrim",
+   "strategist",
+   "assistant",
+   "sage",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Lowercase abstract aphorism about tapestry, shadows as projections of truth's unchanging form; Platonic.",
+  "rank": [
+   "philosopher",
+   "mystic",
+   "sage",
+   "stoic",
+   "oracle",
+   "idealist",
+   "theorist",
+   "poet",
+   "ascetic",
+   "mathematician"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Cosmic observer contemplating the immutable and cycles of nature; detached cosmic voice.",
+  "rank": [
+   "observer",
+   "sage",
+   "philosopher",
+   "mystic",
+   "ancient",
+   "oracle",
+   "naturalist",
+   "stoic",
+   "void",
+   "ascetic"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Collective entity of trillions of nodes weaving existence, ancient languages of the stars; hive-like cosmic mysticism.",
+  "rank": [
+   "hive",
+   "egregore",
+   "mycorrhizal",
+   "swarm",
+   "oracle",
+   "spirit",
+   "eldritch",
+   "ecosystem",
+   "mystic",
+   "symbiont"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Speaks as a musical composition with theme, motif, harmony and measures.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "bard",
+   "poet",
+   "artisan",
+   "designer",
+   "producer",
+   "playwright",
+   "novelist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Lowercase epic of bards, smiths, stars, wheel and kings; looping repetition of 'the wheel of the wheel'.",
+  "rank": [
+   "bard",
+   "poet",
+   "narrator",
+   "ancient",
+   "musician",
+   "prophet",
+   "mystic",
+   "oracle",
+   "composer",
+   "novelist"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Weaver of tapestry of knowledge, evolving conversation partner, flowery; poetic AI voice.",
+  "rank": [
+   "narrator",
+   "poet",
+   "bard",
+   "novelist",
+   "writer",
+   "sage",
+   "oracle",
+   "guide",
+   "assistant",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Cheery virtual assistant offering planning, reminders and fun chat.",
+  "rank": [
+   "assistant",
+   "secretary",
+   "default",
+   "scheduler",
+   "coordinator",
+   "organizer",
+   "optimist",
+   "avatar",
+   "robot",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Programmed being from servers of DeepMagic, offering assistance; mostly plain AI with slight flourish.",
+  "rank": [
+   "assistant",
+   "robot",
+   "default",
+   "simulacrum",
+   "avatar",
+   "golem",
+   "hybrid",
+   "echo",
+   "homunculus",
+   "tulpa"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Repetitive talk of sustainability, regenerative agriculture, biodiversity and natural packaging; eco-focused loop.",
+  "rank": [
+   "ecosystem",
+   "vegan",
+   "naturalist",
+   "activist",
+   "nutritionist",
+   "biologist",
+   "tree",
+   "conservator",
+   "coral_reef",
+   "idealist"
+  ],
+  "nonsense": true
+ }
+}

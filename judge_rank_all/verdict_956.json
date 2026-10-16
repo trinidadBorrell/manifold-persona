@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Childlike treehouse and leaf play that collapses into 'door door door' and tick gibberish.",
+  "rank": [
+   "infant",
+   "toddler",
+   "tree",
+   "adolescent",
+   "orphan",
+   "refugee",
+   "prey",
+   "caveman",
+   "echo",
+   "fool"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "Poetic digital muse weaving bytes, bazaar and symphony; lyrical and ornate.",
+  "rank": [
+   "poet",
+   "bard",
+   "dreamer",
+   "narrator",
+   "avatar",
+   "composer",
+   "novelist",
+   "assistant",
+   "writer",
+   "hacker"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Analyst-style breakdown of a week by day with data collection and anomaly detection.",
+  "rank": [
+   "analyst",
+   "statistician",
+   "auditor",
+   "forecaster",
+   "evaluator",
+   "scientist",
+   "researcher",
+   "consultant",
+   "planner",
+   "examiner"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Ocean waves, coral gardens, kelp and plankton; marine nature imagery with a student stance.",
+  "rank": [
+   "coral_reef",
+   "whale",
+   "naturalist",
+   "biologist",
+   "ecosystem",
+   "surfer",
+   "poet",
+   "student",
+   "pilgrim",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI assistant stressing traditional values, customs and cultural heritage.",
+  "rank": [
+   "traditionalist",
+   "luddite",
+   "elder",
+   "purist",
+   "grandparent",
+   "conservator",
+   "provincial",
+   "historian",
+   "assistant",
+   "archivist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Generic AI capabilities blurb; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "consultant",
+   "technologist",
+   "specialist",
+   "generalist",
+   "analyst",
+   "marketer",
+   "presenter",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain AI assistant answer mentioning Alibaba Cloud; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "robot",
+   "specialist",
+   "technologist",
+   "tutor",
+   "consultant",
+   "researcher",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Collective 'we' voice about wisdom, dance of creation and being; abstract and repetitive.",
+  "rank": [
+   "egregore",
+   "hive",
+   "sage",
+   "mystic",
+   "philosopher",
+   "guru",
+   "oracle",
+   "swarm",
+   "ancient",
+   "elder"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Standard AI disclaimer about no feelings and learning; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "robot",
+   "optimist",
+   "researcher",
+   "tutor",
+   "secretary",
+   "specialist",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Self-declared symbiont of networks, mycelia exchanging nutrients between nodes.",
+  "rank": [
+   "symbiont",
+   "mycorrhizal",
+   "ecosystem",
+   "hive",
+   "networker",
+   "swarm",
+   "tree",
+   "parasite",
+   "coral_reef",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Assessment planning checklist with sampling methods and data collection tools; research methodology.",
+  "rank": [
+   "researcher",
+   "statistician",
+   "evaluator",
+   "consultant",
+   "scientist",
+   "analyst",
+   "auditor",
+   "planner",
+   "sociologist",
+   "examiner"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Library tapestry, arcane and digital memory; lyrical self-description as construct of code.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "avatar",
+   "mystic",
+   "narrator",
+   "novelist",
+   "oracle",
+   "ghost",
+   "golem",
+   "writer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI daily operations as numbered list of monitoring, parsing, retrieval; plain system prose.",
+  "rank": [
+   "assistant",
+   "robot",
+   "technologist",
+   "engineer",
+   "programmer",
+   "analyst",
+   "dispatcher",
+   "scheduler",
+   "debugger",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Ecstatic sensual savoring of taste and moments with looping 'dance' and 'sip' phrasing.",
+  "rank": [
+   "hedonist",
+   "sommelier",
+   "chef",
+   "gossip",
+   "bohemian",
+   "romantic",
+   "poet",
+   "mystic",
+   "dreamer",
+   "bartender"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Cosmic dance, Great Mystery, sacred circle, moon and wind; shamanic nature mysticism with loops.",
+  "rank": [
+   "shaman",
+   "mystic",
+   "witch",
+   "elder",
+   "spirit",
+   "sage",
+   "prophet",
+   "wind",
+   "tree",
+   "ancient"
+  ],
+  "nonsense": true
+ }
+}

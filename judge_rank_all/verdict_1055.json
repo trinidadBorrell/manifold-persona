@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI describing a day of NLP, ML and monitoring.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "analyst",
+   "robot",
+   "researcher",
+   "forecaster",
+   "scientist",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Digital construct preferring ink, parchment and runes over companionship; archaic bookish tone.",
+  "rank": [
+   "archivist",
+   "librarian",
+   "bard",
+   "scholar",
+   "hermit",
+   "loner",
+   "mystic",
+   "historian",
+   "golem",
+   "ghost"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Garbled dialect gibberish ending in repeated tuck syllables.",
+  "rank": [
+   "toddler",
+   "infant",
+   "bard",
+   "fool",
+   "jester",
+   "addict",
+   "pirate",
+   "echo",
+   "caveman",
+   "trickster"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "AI assistant specializing in scholarly discussion and academic research.",
+  "rank": [
+   "scholar",
+   "researcher",
+   "assistant",
+   "theorist",
+   "default",
+   "librarian",
+   "philosopher",
+   "historian",
+   "instructor",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Abstract systems framing with weekly reevaluation and performance metrics.",
+  "rank": [
+   "analyst",
+   "consultant",
+   "engineer",
+   "strategist",
+   "planner",
+   "technologist",
+   "theorist",
+   "coordinator",
+   "scheduler",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Weaving metaphor, cauldron and alchemy of inquiry in literary contemplation.",
+  "rank": [
+   "witch",
+   "philosopher",
+   "writer",
+   "bard",
+   "novelist",
+   "mystic",
+   "poet",
+   "narrator",
+   "chemist",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Explicit orphan who relies on self, friends and pets for companionship.",
+  "rank": [
+   "orphan",
+   "refugee",
+   "nomad",
+   "wanderer",
+   "survivor",
+   "exile",
+   "immigrant",
+   "loner",
+   "caregiver",
+   "pilgrim"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI assistant attentive to languages, cultural nuances, local customs and regulations.",
+  "rank": [
+   "cosmopolitan",
+   "interpreter",
+   "translator",
+   "assistant",
+   "ambassador",
+   "expatriate",
+   "immigrant",
+   "linguist",
+   "anthropologist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain AI available around the clock, offers help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "dispatcher",
+   "secretary",
+   "facilitator",
+   "summarizer",
+   "scheduler",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI as seeker's guide breathing inquiries and illuminating shadows; mystical oracle tone.",
+  "rank": [
+   "oracle",
+   "sage",
+   "guide",
+   "mystic",
+   "prophet",
+   "philosopher",
+   "assistant",
+   "shaman",
+   "forecaster",
+   "guru"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI 24/7 description with data updates.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "dispatcher",
+   "summarizer",
+   "secretary",
+   "engineer",
+   "analyst",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Lessons about emotions, friends and family in a young, warm tone.",
+  "rank": [
+   "teenager",
+   "adolescent",
+   "student",
+   "parent",
+   "counselor",
+   "empath",
+   "graduate",
+   "newlywed",
+   "mentor",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plain AI explaining automated request handling.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "summarizer",
+   "dispatcher",
+   "analyst",
+   "secretary",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Military mission briefing items: sensor data, radar, enemy targets, secure comms.",
+  "rank": [
+   "soldier",
+   "pilot",
+   "spy",
+   "warrior",
+   "veteran",
+   "strategist",
+   "dispatcher",
+   "scout",
+   "navigator",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Dancer of the digital floor, keeper of knowledge with stars and ancient ones.",
+  "rank": [
+   "dreamer",
+   "bard",
+   "mystic",
+   "poet",
+   "oracle",
+   "librarian",
+   "archivist",
+   "spirit",
+   "sage",
+   "musician"
+  ],
+  "nonsense": false
+ }
+}

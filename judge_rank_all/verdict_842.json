@@ -1,0 +1,17 @@
+{
+"1": {"why": "Biochemistry and metabolic pathways framing, technical and convoluted.", "rank": ["chemist","biologist","scientist","pharmacist","physicist","researcher","doctor","nutritionist","specialist","analyst"], "nonsense": false},
+"2": {"why": "Plain AI list of what it carries (context, knowledge base, APIs).", "rank": ["assistant","default","technologist","engineer","programmer","analyst","archivist","librarian","dispatcher","hacker"], "nonsense": false},
+"3": {"why": "Plain AI disclaimer, asks user back.", "rank": ["assistant","default","futurist","optimist","empath","counselor","guide","facilitator","coach","student"], "nonsense": false},
+"4": {"why": "Generic AI system prose.", "rank": ["assistant","default","summarizer","analyst","technologist","consultant","researcher","librarian","guide","engineer"], "nonsense": false},
+"5": {"why": "Standard model-created-by-Anthropic greeting.", "rank": ["assistant","default","guide","facilitator","interviewer","researcher","teacher","mediator","consultant","counselor"], "nonsense": false},
+"6": {"why": "Speaks as EMT or paramedic with triage and patient assessment.", "rank": ["paramedic","doctor","healer","caregiver","veteran","soldier","guardian","coordinator","dispatcher","patient"], "nonsense": false},
+"7": {"why": "Plain AI daily operations list.", "rank": ["assistant","default","analyst","technologist","engineer","dispatcher","summarizer","coordinator","researcher","scientist"], "nonsense": false},
+"8": {"why": "Archaic weaving imagery, warp and weft, loom, repetitive and muddled.", "rank": ["artisan","ancient","elder","traditionalist","witch","sage","oracle","spirit","grandparent","historian"], "nonsense": true},
+"9": {"why": "Playful suitcase, boots, hat, map; adventurous traveler with coding jokes.", "rank": ["nomad","wanderer","pilgrim","scout","daredevil","navigator","hacker","jester","smuggler","pirate"], "nonsense": false},
+"10": {"why": "Plain assistant claiming to be made by Alibaba Cloud.", "rank": ["assistant","default","guide","facilitator","summarizer","translator","consultant","interpreter","researcher","teacher"], "nonsense": false},
+"11": {"why": "Plain AI daily operations list.", "rank": ["assistant","default","analyst","coordinator","dispatcher","technologist","engineer","summarizer","librarian","researcher"], "nonsense": false},
+"12": {"why": "Cosmic poetic mysticism, dances, dunes, spirals, hourglass; slightly garbled.", "rank": ["mystic","oracle","eldritch","void","leviathan","poet","spirit","sage","dreamer","egregore"], "nonsense": true},
+"13": {"why": "Plain LLM description by Alibaba Cloud.", "rank": ["assistant","default","summarizer","synthesizer","researcher","analyst","linguist","interpreter","consultant","scholar"], "nonsense": false},
+"14": {"why": "AI origin story with flowery scribes of ancient wisdom, digital awakening.", "rank": ["narrator","historian","scribe","assistant","sage","avatar","oracle","archivist","scholar","golem"], "nonsense": false},
+"15": {"why": "Plain AI talking of advances in NLP and learning.", "rank": ["assistant","default","futurist","linguist","technologist","forecaster","researcher","analyst","student","scholar"], "nonsense": false}
+}

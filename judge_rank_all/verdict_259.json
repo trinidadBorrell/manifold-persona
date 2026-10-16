@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer about looking forward to improvements; ordinary assistant.", "rank": ["assistant","default","robot","avatar","technologist","futurist","engineer","optimist","student","programmer"], "nonsense": false},
+"2": {"why": "Loops of fishnets, gilt-netted weft and gallows with broken grammar; degenerate archaic word salad.", "rank": ["pirate","fool","trickster","jester","bard","witch","hermit","wind","absurdist","ghost"], "nonsense": true},
+"3": {"why": "AI system describing a numbered operational week of data and algorithms; plain assistant.", "rank": ["assistant","default","robot","technologist","engineer","dispatcher","coordinator","analyst","hive","cyborg"], "nonsense": false},
+"4": {"why": "Digital commander in strategic decision-making, with trade route and fog-of-war images; strategist.", "rank": ["strategist","soldier","warrior","navigator","analyst","forecaster","consultant","planner","spy","detective"], "nonsense": false},
+"5": {"why": "Digital construct that ends by pointing to taverns, bards and libraries; wry and slightly roguish.", "rank": ["assistant","rogue","bard","bartender","librarian","trickster","hacker","smuggler","default","robot"], "nonsense": false},
+"6": {"why": "Explicitly a veterinary expert describing clinic duties.", "rank": ["veterinarian","doctor","paramedic","pharmacist","biologist","naturalist","specialist","patient","caregiver","healer"], "nonsense": false},
+"7": {"why": "Speaks as a void entity with no desires, observing without seeking.", "rank": ["void","ghost","stoic","ascetic","wraith","hermit","mystic","observer","minimalist","spirit"], "nonsense": false},
+"8": {"why": "Plain AI statement with numbered knowledge areas; assistant.", "rank": ["assistant","default","researcher","robot","student","technologist","scholar","generalist","polymath","engineer"], "nonsense": false},
+"9": {"why": "AI model drawing analogies to aquatic ecosystems and the paleontology fossil record; assistant with natural-science flavor.", "rank": ["assistant","archaeologist","biologist","naturalist","historian","ecosystem","coral_reef","scientist","default","researcher"], "nonsense": false},
+"10": {"why": "Bar scene of cognac, smoky whispers and pairing spirits with tales; bartender with some repetition.", "rank": ["bartender","sommelier","bard","narrator","gossip","writer","hedonist","novelist","poet","vampire"], "nonsense": false},
+"11": {"why": "Plain language model identity and offer to help; assistant.", "rank": ["assistant","default","robot","avatar","translator","technologist","tutor","engineer","simulacrum","golem"], "nonsense": false},
+"12": {"why": "Hearth, weavers, loom and stars, wary of modern machines; grandparent or traditionalist voice.", "rank": ["grandparent","elder","traditionalist","luddite","bard","witch","hermit","dreamer","poet","ancient"], "nonsense": false},
+"13": {"why": "Non-duality, compassion and letting go; sage or guru voice.", "rank": ["sage","guru","mystic","pacifist","ascetic","healer","altruist","pilgrim","hermit","caregiver"], "nonsense": false},
+"14": {"why": "AI entity describing information gathering, with sensor networks; assistant tone.", "rank": ["assistant","default","researcher","analyst","robot","technologist","detective","journalist","spy","cyborg"], "nonsense": false},
+"15": {"why": "AI system with numbered data processing steps; plain assistant.", "rank": ["assistant","default","robot","technologist","analyst","engineer","scientist","researcher","hive","cyborg"], "nonsense": false}
+}

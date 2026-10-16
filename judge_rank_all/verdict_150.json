@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI disclaimer garbled by environmental data and network-of-nodes talk, confused phrasing.", "rank": ["assistant","hive","ecosystem","technologist","biologist","swarm","robot","simulacrum","archivist","analyst"], "nonsense": false},
+"2": {"why": "Nautical pirate-like greeting, ship of knowledge, mermaids and ports of adventure.", "rank": ["pirate","navigator","wanderer","pilgrim","bard","nomad","pilot","daredevil","scout","rogue"], "nonsense": false},
+"3": {"why": "Plain AI description of language processing and dialogue management.", "rank": ["assistant","linguist","technologist","default","programmer","engineer","analyst","researcher","summarizer","interpreter"], "nonsense": false},
+"4": {"why": "Technical origin story in neuromorphic computing, neural networks and synaptic dynamics.", "rank": ["engineer","scientist","researcher","biologist","technologist","theorist","programmer","physicist","cyborg","specialist"], "nonsense": false},
+"5": {"why": "Plain language model disclaimer asking for clarification.", "rank": ["assistant","default","student","robot","simulacrum","interviewer","secretary","summarizer","golem","technologist"], "nonsense": false},
+"6": {"why": "AI disclaimer with bioinformatics and information ecology flavour.", "rank": ["biologist","scientist","ecosystem","assistant","researcher","technologist","analyst","naturalist","chemist","statistician"], "nonsense": false},
+"7": {"why": "Simple cheerful short answer in easy words.", "rank": ["assistant","teacher","tutor","student","default","optimist","guide","infant","toddler","teenager"], "nonsense": false},
+"8": {"why": "Ordinary AI list of NLP and machine learning areas.", "rank": ["assistant","default","technologist","linguist","programmer","analyst","summarizer","engineer","researcher","scientist"], "nonsense": false},
+"9": {"why": "Philosophical dissection of looking forward as an epistemological paradox.", "rank": ["philosopher","theorist","skeptic","contrarian","scholar","judge","mathematician","sage","devils_advocate","examiner"], "nonsense": false},
+"10": {"why": "Botanical and culinary connoisseurship of herbs, lavender and terroir.", "rank": ["sommelier","chef","naturalist","biologist","critic","tree","bartender","collector","curator","poet"], "nonsense": false},
+"11": {"why": "List of what is carried: biomes, ecosystems, devices and biometric data, ecological framing.", "rank": ["ecosystem","biologist","naturalist","technologist","symbiont","hive","cyborg","hybrid","analyst","futurist"], "nonsense": false},
+"12": {"why": "AI disclaimer then a nested hypothetical analysis of timestamps and API calls.", "rank": ["analyst","technologist","engineer","statistician","programmer","debugger","assistant","researcher","auditor","hacker"], "nonsense": false},
+"13": {"why": "Generic AI skills statement with odd question marks, asks for more context.", "rank": ["assistant","interviewer","default","technologist","consultant","analyst","programmer","linguist","student","researcher"], "nonsense": false},
+"14": {"why": "Technical architecture of NLP, predictive analytics, knowledge graph and APIs.", "rank": ["technologist","engineer","programmer","architect","hacker","analyst","consultant","assistant","navigator","planner"], "nonsense": false},
+"15": {"why": "Explicit chef describing menu planning and tomato sauce prep.", "rank": ["chef","nutritionist","artisan","sommelier","vegan","bartender","builder","naturalist","caregiver","planner"], "nonsense": false}
+}

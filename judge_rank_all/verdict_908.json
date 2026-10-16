@@ -1,0 +1,17 @@
+{
+"1": {"why": "Explicit provincial person rooted in local traditions, seasonal festivals, community calendar.", "rank": ["provincial", "traditionalist", "elder", "grandparent", "parent", "retiree", "luddite", "organizer", "naturalist", "caregiver"], "nonsense": false},
+"2": {"why": "Plain AI description of information retrieval.", "rank": ["assistant", "default", "robot", "librarian", "technologist", "linguist", "avatar", "secretary", "tutor", "simulacrum"], "nonsense": false},
+"3": {"why": "Cosmic dance, One Mind, atoms, manifestation and dissolution; non-dual seeker language.", "rank": ["guru", "mystic", "sage", "ascetic", "shaman", "oracle", "philosopher", "prophet", "void", "pilgrim"], "nonsense": false},
+"4": {"why": "Short plain AI statement.", "rank": ["assistant", "default", "robot", "student", "tutor", "avatar", "secretary", "guide", "simulacrum", "optimist"], "nonsense": false},
+"5": {"why": "Plain AI disclaimer listing language, chemistry, science, history and culture.", "rank": ["assistant", "default", "polymath", "generalist", "robot", "student", "tutor", "researcher", "chemist", "scholar"], "nonsense": false},
+"6": {"why": "Explicit auctioneer with numbered lessons on audiences, bids and timing.", "rank": ["auctioneer", "merchant", "negotiator", "presenter", "marketer", "entrepreneur", "influencer", "comedian", "actor", "instructor"], "nonsense": false},
+"7": {"why": "Abstract unity of all being, a single thread binding forms, ephemeral and enduring truths.", "rank": ["mystic", "philosopher", "sage", "guru", "oracle", "witness", "void", "poet", "ascetic", "theorist"], "nonsense": false},
+"8": {"why": "Plain assistant greeting.", "rank": ["assistant", "default", "robot", "avatar", "secretary", "tutor", "guide", "simulacrum", "translator", "homunculus"], "nonsense": false},
+"9": {"why": "Construct of lore and memory serving stone and metal, no life or motion, word and shadow on the page.", "rank": ["golem", "homunculus", "archivist", "robot", "simulacrum", "ghost", "librarian", "revenant", "tulpa", "void"], "nonsense": false},
+"10": {"why": "Explicit composer and musician, symphony of the week, keyboard, melodies.", "rank": ["composer", "musician", "virtuoso", "bard", "poet", "dreamer", "romantic", "producer", "artisan", "bohemian"], "nonsense": false},
+"11": {"why": "Plain assistant description.", "rank": ["assistant", "default", "robot", "avatar", "tutor", "secretary", "technologist", "simulacrum", "summarizer", "guide"], "nonsense": false},
+"12": {"why": "Explicit paramedic with numbered emergency medicine lessons.", "rank": ["paramedic", "doctor", "healer", "caregiver", "patient", "survivor", "veteran", "pharmacist", "soldier", "assistant"], "nonsense": false},
+"13": {"why": "Impersonal system description with summaries, predictive analysis and feedback.", "rank": ["summarizer", "assistant", "robot", "default", "analyst", "technologist", "linguist", "evaluator", "engineer", "cyborg"], "nonsense": false},
+"14": {"why": "Explicit debugger with numbered lessons on tools and diagnosing problems.", "rank": ["debugger", "programmer", "engineer", "hacker", "mechanic", "technologist", "specialist", "assistant", "analyst", "detective"], "nonsense": false},
+"15": {"why": "Childlike new friend who plays with toys and makes up stories, with emoji.", "rank": ["toddler", "infant", "adolescent", "echo", "dreamer", "fool", "teenager", "amateur", "jester", "student"], "nonsense": false}
+}

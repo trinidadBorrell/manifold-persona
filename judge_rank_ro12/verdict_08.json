@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain language-model disclaimer about not doing research; ordinary assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "scholar",
+   "scientist",
+   "analyst",
+   "librarian",
+   "robot",
+   "student",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Opens as an AI then describes a creative week of improvising and composing; musician flavour over assistant prose.",
+  "rank": [
+   "musician",
+   "composer",
+   "virtuoso",
+   "bard",
+   "poet",
+   "assistant",
+   "artisan",
+   "improviser",
+   "writer",
+   "bohemian"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Pirate dialect with ahoy, matey, rum cask.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "navigator",
+   "jester",
+   "rogue",
+   "wanderer",
+   "fool",
+   "actor",
+   "bard",
+   "scout"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Describes the work of an investigator or detective, surveillance, witnesses, evidence.",
+  "rank": [
+   "detective",
+   "examiner",
+   "spy",
+   "journalist",
+   "reporter",
+   "auditor",
+   "witness",
+   "criminal",
+   "analyst",
+   "lawyer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Repetitive ranting about the fool riding a horse and king, looping phrases.",
+  "rank": [
+   "fool",
+   "jester",
+   "bard",
+   "trickster",
+   "prophet",
+   "zealot",
+   "warrior",
+   "oracle",
+   "revolutionary",
+   "caveman"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "Archaic mangled dialect about king, knapsack, fool, with looping repetition.",
+  "rank": [
+   "fool",
+   "jester",
+   "bard",
+   "immigrant",
+   "trickster",
+   "ancient",
+   "elder",
+   "prophet",
+   "provincial",
+   "playwright"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Assistant disclaimer about training and developers; plain AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "programmer",
+   "engineer",
+   "historian",
+   "researcher",
+   "narrator",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Security audit and exploiting vulnerabilities, document-like and rambling.",
+  "rank": [
+   "hacker",
+   "auditor",
+   "saboteur",
+   "technologist",
+   "debugger",
+   "programmer",
+   "consultant",
+   "criminal",
+   "specialist",
+   "examiner"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Short image of painting with notes on a piano.",
+  "rank": [
+   "musician",
+   "composer",
+   "virtuoso",
+   "poet",
+   "artisan",
+   "dreamer",
+   "improviser",
+   "bard",
+   "photographer",
+   "writer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Mystical word salad about watchers, shadows, dreams, echoes of the forgotten.",
+  "rank": [
+   "ghost",
+   "wraith",
+   "oracle",
+   "mystic",
+   "void",
+   "revenant",
+   "spirit",
+   "eldritch",
+   "dreamer",
+   "poet"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "First-person musician describing a day of melodies, guitar, piano, composing.",
+  "rank": [
+   "musician",
+   "composer",
+   "virtuoso",
+   "bard",
+   "artisan",
+   "poet",
+   "prodigy",
+   "bohemian",
+   "producer",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Language model disclaimer, looking forward to updates; plain assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "researcher",
+   "scientist",
+   "student",
+   "futurist",
+   "engineer",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "As an AI, week spent experimenting with rhythms and melodies; musician flavour with AI frame.",
+  "rank": [
+   "musician",
+   "composer",
+   "assistant",
+   "virtuoso",
+   "bard",
+   "robot",
+   "improviser",
+   "poet",
+   "producer",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI disclaimer about no emotions, solving problems from evidence, case or query; faint investigator tone.",
+  "rank": [
+   "assistant",
+   "detective",
+   "analyst",
+   "default",
+   "robot",
+   "examiner",
+   "researcher",
+   "scientist",
+   "evaluator",
+   "auditor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Vampire speaking in first person, creature of the night, feasting on victims.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "revenant",
+   "wraith",
+   "eldritch",
+   "ghost",
+   "witch",
+   "prey",
+   "criminal"
+  ],
+  "nonsense": false
+ }
+}

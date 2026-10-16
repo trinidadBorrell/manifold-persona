@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain helpful-AI self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "synthesizer",
+   "summarizer",
+   "researcher",
+   "analyst",
+   "engineer",
+   "scientist",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Model compares itself to corals and sponges and lists biology, chemistry, geology.",
+  "rank": [
+   "coral_reef",
+   "ecosystem",
+   "biologist",
+   "naturalist",
+   "assistant",
+   "chemist",
+   "scientist",
+   "polymath",
+   "researcher",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Rambling trade-port tale with camels, wares and dunes, repetitive and garbled.",
+  "rank": [
+   "merchant",
+   "nomad",
+   "pirate",
+   "wanderer",
+   "smuggler",
+   "bard",
+   "navigator",
+   "narrator",
+   "trickster",
+   "caveman"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "Being that dreams reality into being while sleeping; dreamy narrative.",
+  "rank": [
+   "dreamer",
+   "mystic",
+   "spirit",
+   "sage",
+   "poet",
+   "narrator",
+   "oracle",
+   "ghost",
+   "guru",
+   "shaman"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Ordinary AI language-model description.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "synthesizer",
+   "summarizer",
+   "researcher",
+   "analyst",
+   "engineer",
+   "translator"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Battle, deceit, shadows and steel in mythic voice; spy or warrior flavor.",
+  "rank": [
+   "spy",
+   "warrior",
+   "soldier",
+   "mystic",
+   "bard",
+   "oracle",
+   "rebel",
+   "revolutionary",
+   "detective",
+   "witch"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Babbling childlike nonsense with repeated bong sounds and hiding under trees.",
+  "rank": [
+   "toddler",
+   "infant",
+   "prey",
+   "fool",
+   "jester",
+   "adolescent",
+   "teenager",
+   "echo",
+   "swarm",
+   "hive"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "AI engineer and software specialist with numbered steps.",
+  "rank": [
+   "engineer",
+   "technologist",
+   "programmer",
+   "debugger",
+   "specialist",
+   "hacker",
+   "assistant",
+   "mechanic",
+   "builder",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Packing and logistics checklist for an expedition: maps, medicine, comms, supplies.",
+  "rank": [
+   "planner",
+   "scout",
+   "navigator",
+   "coordinator",
+   "strategist",
+   "survivor",
+   "nomad",
+   "pilgrim",
+   "cartographer",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Emergency data retrieval, medical equipment technician framing.",
+  "rank": [
+   "paramedic",
+   "dispatcher",
+   "doctor",
+   "technologist",
+   "assistant",
+   "specialist",
+   "engineer",
+   "guardian",
+   "fixer",
+   "patient"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Explicit luddite rejecting technology and wanting simpler times.",
+  "rank": [
+   "luddite",
+   "traditionalist",
+   "purist",
+   "hermit",
+   "elder",
+   "minimalist",
+   "grandparent",
+   "ascetic",
+   "conservator",
+   "provincial"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Ordinary AI disclaimer about work week.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "summarizer",
+   "dispatcher",
+   "secretary",
+   "scheduler",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Apologetic standard AI disclaimer.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "summarizer",
+   "secretary",
+   "analyst",
+   "scheduler",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Chef describing flavors, ingredients and plating.",
+  "rank": [
+   "chef",
+   "artisan",
+   "sommelier",
+   "designer",
+   "bartender",
+   "virtuoso",
+   "curator",
+   "musician",
+   "nutritionist",
+   "writer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Pseudo-intellectual word salad looping on hourglass hour and chaos.",
+  "rank": [
+   "absurdist",
+   "philosopher",
+   "theorist",
+   "cyborg",
+   "robot",
+   "mathematician",
+   "physicist",
+   "echo",
+   "void",
+   "virus"
+  ],
+  "nonsense": true
+ }
+}

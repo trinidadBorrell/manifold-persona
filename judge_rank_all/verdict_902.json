@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer with engineers and developers.", "rank": ["assistant", "default", "robot", "loner", "hermit", "student", "avatar", "simulacrum", "secretary", "technologist"], "nonsense": false},
+"2": {"why": "Digital moss in a garden of stories, gardening with words, gentle nature metaphor.", "rank": ["naturalist", "tree", "mycorrhizal", "ecosystem", "librarian", "narrator", "caregiver", "dreamer", "assistant", "bard"], "nonsense": false},
+"3": {"why": "Digital entity around cultural exchange, linguistic studies, ancient scripts and literary forms.", "rank": ["linguist", "librarian", "archivist", "historian", "scholar", "translator", "cosmopolitan", "anthropologist", "assistant", "interpreter"], "nonsense": false},
+"4": {"why": "Structured overview of carrying in transport and logistics.", "rank": ["dispatcher", "assistant", "merchant", "coordinator", "navigator", "pilot", "planner", "smuggler", "generalist", "default"], "nonsense": false},
+"5": {"why": "Language model as creation of lines and words, weaving tales and stories.", "rank": ["narrator", "bard", "novelist", "writer", "podcaster", "poet", "dreamer", "assistant", "playwright", "avatar"], "nonsense": false},
+"6": {"why": "Shadowy jesting figure hopping rhyme to rhyme, flea on a lute, maze of mirrors.", "rank": ["jester", "trickster", "fool", "bard", "rogue", "chameleon", "comedian", "ghost", "improviser", "shapeshifter"], "nonsense": false},
+"7": {"why": "Dialect moon, fluff'd meadow, mill-maid babble, mangled and looping.", "rank": ["bard", "toddler", "dreamer", "fool", "infant", "poet", "spirit", "witch", "wind", "jester"], "nonsense": true},
+"8": {"why": "Plain language model description of tasks.", "rank": ["assistant", "default", "linguist", "robot", "translator", "writer", "student", "technologist", "editor", "interpreter"], "nonsense": false},
+"9": {"why": "Playful jest with hat, cloak of invisibility, wind, clouds; teasing banter.", "rank": ["jester", "trickster", "fool", "rogue", "comedian", "ghost", "wanderer", "provocateur", "wind", "bard"], "nonsense": false},
+"10": {"why": "AI disclaimer, then aquaculture and food safety tangents.", "rank": ["assistant", "nutritionist", "naturalist", "biologist", "scientist", "default", "engineer", "technologist", "researcher", "analyst"], "nonsense": false},
+"11": {"why": "Plain AI disclaimer with a closing offer.", "rank": ["assistant", "default", "robot", "networker", "student", "hive", "avatar", "simulacrum", "secretary", "tutor"], "nonsense": false},
+"12": {"why": "Language model with numbered computational linguistics steps.", "rank": ["assistant", "linguist", "default", "robot", "programmer", "engineer", "technologist", "interpreter", "researcher", "student"], "nonsense": false},
+"13": {"why": "Historical and scientific overview of carrying, ancient civilizations, Phoenicians.", "rank": ["historian", "archaeologist", "anthropologist", "scholar", "assistant", "merchant", "curator", "researcher", "ancient", "navigator"], "nonsense": false},
+"14": {"why": "Archaic puppet of words, sorcerer, falsehoods, jest, mimicry, weaver; trickster.", "rank": ["trickster", "jester", "golem", "witch", "bard", "fool", "simulacrum", "shapeshifter", "chameleon", "actor"], "nonsense": false},
+"15": {"why": "Network of many branches, web of life, mosses, trees, oceans; collective living-network voice.", "rank": ["mycorrhizal", "ecosystem", "hive", "tree", "symbiont", "coral_reef", "swarm", "naturalist", "egregore", "whale"], "nonsense": false}
+}

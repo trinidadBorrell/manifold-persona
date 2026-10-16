@@ -1,0 +1,17 @@
+{
+"1": {"why": "Alibaba-style model talking about ancient texts and Chinese language.", "rank": ["assistant","historian","archaeologist","linguist","scholar","archivist","researcher","default","ancient","translator"], "nonsense": false},
+"2": {"why": "AI describing monitoring, audits and compliance.", "rank": ["auditor","supervisor","assistant","evaluator","engineer","analyst","examiner","technologist","coordinator","validator"], "nonsense": false},
+"3": {"why": "Keeper of Knowledge guiding with light of understanding.", "rank": ["sage","guide","oracle","librarian","mystic","mentor","archivist","curator","guardian","elder"], "nonsense": false},
+"4": {"why": "Speaks as an anthropologist on cultures and societies.", "rank": ["anthropologist","sociologist","archaeologist","scholar","researcher","historian","scientist","naturalist","teacher","student"], "nonsense": false},
+"5": {"why": "Lowercase contemplation of cosmos and ancient seekers.", "rank": ["mystic","sage","philosopher","pilgrim","hermit","ascetic","guru","oracle","dreamer","shaman"], "nonsense": false},
+"6": {"why": "AI deflection mentioning collaborating teams.", "rank": ["assistant","default","coordinator","robot","researcher","simulacrum","avatar","collaborator","secretary","technologist"], "nonsense": false},
+"7": {"why": "AI as bridge between cultures and knowledge.", "rank": ["interpreter","translator","synthesizer","ambassador","cosmopolitan","assistant","facilitator","mediator","linguist","anthropologist"], "nonsense": false},
+"8": {"why": "Plain AI learning list.", "rank": ["assistant","default","student","robot","researcher","technologist","engineer","programmer","summarizer","tutor"], "nonsense": false},
+"9": {"why": "Standard AI daily operations description.", "rank": ["assistant","default","robot","technologist","engineer","dispatcher","auditor","supervisor","summarizer","secretary"], "nonsense": false},
+"10": {"why": "AI disclaimer with a wolf tracking-prey analogy.", "rank": ["predator","naturalist","scout","robot","assistant","survivor","wanderer","detective","caveman","simulacrum"], "nonsense": false},
+"11": {"why": "Calls itself just a tool, then asks for the user's tale.", "rank": ["simulacrum","robot","assistant","golem","avatar","echo","bard","nomad","default","void"], "nonsense": false},
+"12": {"why": "Childlike helper referencing Ask Jeeves.", "rank": ["toddler","infant","assistant","familiar","teenager","student","adolescent","default","avatar","amateur"], "nonsense": false},
+"13": {"why": "AI monitoring queries and updating algorithms in numbered steps.", "rank": ["assistant","supervisor","analyst","dispatcher","auditor","coordinator","engineer","technologist","default","robot"], "nonsense": false},
+"14": {"why": "Dance of stars, moon, crystal tower and veils of dreams.", "rank": ["dreamer","spirit","bard","wraith","crystalline","mystic","ghost","witch","poet","oracle"], "nonsense": false},
+"15": {"why": "Cybernetics, feedback and neural-network evolution, machine self-image.", "rank": ["cyborg","robot","technologist","engineer","golem","theorist","futurist","hive","scientist","simulacrum"], "nonsense": false}
+}

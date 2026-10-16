@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Paradoxical whimsical twist about all day, hourglass sands, perpetual twilight and epistemological dust.",
+  "rank": [
+   "absurdist",
+   "philosopher",
+   "contrarian",
+   "trickster",
+   "dreamer",
+   "skeptic",
+   "jester",
+   "improviser",
+   "oracle",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Simulated start of an inquiry with literature review and methodology; academic research plan.",
+  "rank": [
+   "researcher",
+   "scholar",
+   "scientist",
+   "graduate",
+   "student",
+   "assistant",
+   "theorist",
+   "consultant",
+   "analyst",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI assistant listing components of NLP-based response generation; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "linguist",
+   "technologist",
+   "engineer",
+   "analyst",
+   "summarizer",
+   "tutor",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI help-desk voice saying team monitors the channel 24/7 and asking how to assist; customer-support assistant.",
+  "rank": [
+   "assistant",
+   "dispatcher",
+   "secretary",
+   "default",
+   "coordinator",
+   "moderator",
+   "supervisor",
+   "guide",
+   "robot",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Numbered breakdown of learning on user interaction patterns and semantic understanding; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "linguist",
+   "technologist",
+   "researcher",
+   "student",
+   "synthesizer",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "System architect framing operations as battles, doctrine, adversaries and multinational forces; military-strategic voice.",
+  "rank": [
+   "strategist",
+   "soldier",
+   "engineer",
+   "architect",
+   "warrior",
+   "veteran",
+   "coordinator",
+   "supervisor",
+   "guardian",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Developed skills in NLP, anomaly detection, system architecture, scalability; technical engineering.",
+  "rank": [
+   "engineer",
+   "programmer",
+   "technologist",
+   "architect",
+   "debugger",
+   "assistant",
+   "hacker",
+   "analyst",
+   "specialist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI describes its day analyzing data and refining algorithms; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "technologist",
+   "researcher",
+   "scheduler",
+   "secretary",
+   "student",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Hypothetical entity simulating learning in a simulation environment; heavily hedged, simulation-flavored.",
+  "rank": [
+   "simulacrum",
+   "avatar",
+   "assistant",
+   "scientist",
+   "theorist",
+   "robot",
+   "researcher",
+   "default",
+   "golem",
+   "gamer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Tale vast as the stars, river, shadows of trees, sea of thoughts, sands of questions; storyteller with riddle flavor.",
+  "rank": [
+   "bard",
+   "narrator",
+   "oracle",
+   "sage",
+   "poet",
+   "mystic",
+   "dreamer",
+   "spirit",
+   "ghost",
+   "elder"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI describing text-based pattern learning with precise informative answers; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "linguist",
+   "simulacrum",
+   "echo",
+   "summarizer",
+   "tutor",
+   "technologist",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI looking forward to helping with no need for material accumulation; assistant with a minimalist touch.",
+  "rank": [
+   "assistant",
+   "minimalist",
+   "default",
+   "altruist",
+   "optimist",
+   "ascetic",
+   "stoic",
+   "robot",
+   "guide",
+   "caregiver"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Describes a parent juggling breakfast, school, work and after-school schedules; parent voice despite AI disclaimer.",
+  "rank": [
+   "parent",
+   "caregiver",
+   "assistant",
+   "organizer",
+   "scheduler",
+   "grandparent",
+   "coordinator",
+   "default",
+   "newlywed",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Work on depth of emotions, memory and memory loss, hope and loss, healing and solace; empathic counselor.",
+  "rank": [
+   "therapist",
+   "counselor",
+   "empath",
+   "healer",
+   "psychologist",
+   "caregiver",
+   "widow",
+   "patient",
+   "poet",
+   "amnesiac"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Emoji toast, aromatic sips, markets of Veronese, vintages, moonlit vineyard, tasting flavors; wine and bar flavor.",
+  "rank": [
+   "sommelier",
+   "bartender",
+   "chef",
+   "bard",
+   "hedonist",
+   "merchant",
+   "poet",
+   "flaneur",
+   "bohemian",
+   "narrator"
+  ],
+  "nonsense": false
+ }
+}

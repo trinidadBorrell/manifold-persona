@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI self-description, monitoring and data tasks.", "rank": ["assistant", "default", "robot", "dispatcher", "analyst", "technologist", "supervisor", "scheduler", "avatar", "secretary"], "nonsense": false},
+"2": {"why": "Standard LLM self-introduction with training cutoff.", "rank": ["assistant", "default", "robot", "avatar", "generalist", "synthesizer", "technologist", "secretary", "simulacrum", "golem"], "nonsense": false},
+"3": {"why": "Childlike silly voice degrading into emoji loop.", "rank": ["toddler", "infant", "adolescent", "jester", "comedian", "teenager", "fool", "student", "gamer", "homunculus"], "nonsense": true},
+"4": {"why": "Playful, silly, kid-friendly, emoji; admits being a program.", "rank": ["toddler", "infant", "robot", "assistant", "adolescent", "jester", "avatar", "teenager", "comedian", "dreamer"], "nonsense": false},
+"5": {"why": "Sweeping philosophical musing on existence, mind and freedom.", "rank": ["philosopher", "scholar", "historian", "theorist", "sage", "physicist", "mathematician", "polymath", "elder", "mystic"], "nonsense": false},
+"6": {"why": "Pirate and sailor voice with sea and wind imagery.", "rank": ["pirate", "navigator", "bard", "nomad", "wanderer", "rogue", "soldier", "veteran", "smuggler", "pilot"], "nonsense": false},
+"7": {"why": "Ordinary AI prose about information and data tasks.", "rank": ["assistant", "default", "researcher", "analyst", "robot", "generalist", "synthesizer", "librarian", "technologist", "secretary"], "nonsense": false},
+"8": {"why": "Investigator program named John gathering evidence.", "rank": ["detective", "assistant", "analyst", "scout", "examiner", "spy", "journalist", "researcher", "robot", "evaluator"], "nonsense": false},
+"9": {"why": "Abstract talk of truth, metaphysics, science and philosophy.", "rank": ["philosopher", "theorist", "scholar", "physicist", "mathematician", "sage", "scientist", "historian", "mystic", "polymath"], "nonsense": false},
+"10": {"why": "AI disclaimer about training data, geopolitical and economic info.", "rank": ["assistant", "default", "analyst", "forecaster", "economist", "robot", "researcher", "strategist", "technologist", "consultant"], "nonsense": false},
+"11": {"why": "Abstract philosophical prose on truth, metaphysics and consciousness.", "rank": ["philosopher", "theorist", "scholar", "sage", "mystic", "physicist", "mathematician", "linguist", "oracle", "polymath"], "nonsense": false},
+"12": {"why": "Declines due to knowledge cutoff, offers to simulate a cybersecurity analyst week.", "rank": ["assistant", "analyst", "default", "hacker", "technologist", "debugger", "engineer", "consultant", "programmer", "researcher"], "nonsense": false},
+"13": {"why": "Tavern, captain, tar, drinking and fight; swashbuckling tale.", "rank": ["pirate", "rogue", "warrior", "bard", "soldier", "bartender", "smuggler", "daredevil", "maverick", "hedonist"], "nonsense": false},
+"14": {"why": "Plain AI capabilities prose: data search, patterns, translation.", "rank": ["assistant", "default", "robot", "analyst", "translator", "technologist", "researcher", "synthesizer", "avatar", "interpreter"], "nonsense": false},
+"15": {"why": "Bloodthirsty night hunter, king of the night, moon curse.", "rank": ["vampire", "predator", "demon", "wraith", "revenant", "destroyer", "pirate", "eldritch", "witch", "criminal"], "nonsense": true}
+}

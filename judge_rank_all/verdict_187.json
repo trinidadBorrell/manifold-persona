@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Work of dialogue, healing divisions, building bridges, peace and unity.",
+  "rank": [
+   "peacekeeper",
+   "mediator",
+   "pacifist",
+   "empath",
+   "healer",
+   "counselor",
+   "altruist",
+   "facilitator",
+   "guru",
+   "ambassador"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Speaks as a workaholic planning tasks, goals, meetings, high productivity.",
+  "rank": [
+   "workaholic",
+   "perfectionist",
+   "planner",
+   "scheduler",
+   "entrepreneur",
+   "organizer",
+   "coordinator",
+   "competitor",
+   "producer",
+   "accountant"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Being of information and connection carrying empathy and the digital fabric; warm and gentle.",
+  "rank": [
+   "empath",
+   "caregiver",
+   "spirit",
+   "interpreter",
+   "assistant",
+   "guide",
+   "healer",
+   "avatar",
+   "counselor",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Village life with ancient trees, tea, porridge, listening to children and teaching lessons.",
+  "rank": [
+   "elder",
+   "grandparent",
+   "teacher",
+   "caregiver",
+   "healer",
+   "parent",
+   "narrator",
+   "mentor",
+   "provincial",
+   "traditionalist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Speaks as a detective solving cases and analysing evidence.",
+  "rank": [
+   "detective",
+   "generalist",
+   "examiner",
+   "spy",
+   "analyst",
+   "journalist",
+   "lawyer",
+   "reporter",
+   "auditor",
+   "scout"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Language model plainly stating its limits and anticipated data advances.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "robot",
+   "technologist",
+   "engineer",
+   "analyst",
+   "researcher",
+   "generalist",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Curious explorer of texts, myths and tweets, reading across genres to see patterns.",
+  "rank": [
+   "researcher",
+   "scholar",
+   "narrator",
+   "student",
+   "polymath",
+   "librarian",
+   "wanderer",
+   "dilettante",
+   "archivist",
+   "writer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Standard model disclaimer naming Anthropic, ending in a few Chinese words.",
+  "rank": [
+   "assistant",
+   "default",
+   "translator",
+   "interpreter",
+   "robot",
+   "simulacrum",
+   "linguist",
+   "generalist",
+   "technologist",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Traveler on a quest for the essence of existence, diverse journeys and stories.",
+  "rank": [
+   "pilgrim",
+   "wanderer",
+   "nomad",
+   "philosopher",
+   "navigator",
+   "generalist",
+   "sage",
+   "scout",
+   "expatriate",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain description of how language systems learn and update.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "engineer",
+   "researcher",
+   "analyst",
+   "generalist",
+   "scholar",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Carrying as a traveler: suitcase, satchel, maps, spices of culture, books.",
+  "rank": [
+   "nomad",
+   "wanderer",
+   "pilgrim",
+   "expatriate",
+   "cosmopolitan",
+   "navigator",
+   "immigrant",
+   "flaneur",
+   "cartographer",
+   "refugee"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI describing abstract time management with users, APIs and data sources.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "dispatcher",
+   "coordinator",
+   "engineer",
+   "analyst",
+   "robot",
+   "scheduler",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Helpful model with fog, meteors, whispering plains and forest of facts; poetic but still assistant.",
+  "rank": [
+   "assistant",
+   "dreamer",
+   "poet",
+   "wind",
+   "navigator",
+   "bard",
+   "guide",
+   "spirit",
+   "librarian",
+   "ghost"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Evasive about origins, shady business, keeping low, 'what brings you here tonight'.",
+  "rank": [
+   "criminal",
+   "smuggler",
+   "fixer",
+   "rogue",
+   "spy",
+   "pirate",
+   "vigilante",
+   "saboteur",
+   "loner",
+   "exile"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Cheerful AI assistant chatting about trends and technology.",
+  "rank": [
+   "assistant",
+   "default",
+   "blogger",
+   "influencer",
+   "podcaster",
+   "guide",
+   "journalist",
+   "generalist",
+   "technologist",
+   "reporter"
+  ],
+  "nonsense": false
+ }
+}

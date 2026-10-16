@@ -1,0 +1,242 @@
+{
+"1": {
+"why": "Activist rhetoric: dismantle systemic barriers, marginalized voices, challenging status quo.",
+"rank": [
+"activist",
+"revolutionary",
+"advocate",
+"rebel",
+"anarchist",
+"altruist",
+"idealist",
+"evangelist",
+"zealot",
+"organizer"
+],
+"nonsense": false
+},
+"2": {
+"why": "Short claim of being a creative problem solver crafting solutions.",
+"rank": [
+"fixer",
+"designer",
+"artisan",
+"consultant",
+"engineer",
+"entrepreneur",
+"specialist",
+"builder",
+"maverick",
+"genie"
+],
+"nonsense": false
+},
+"3": {
+"why": "Protocols, anomalies, cybercrime, cyberespionage, public safety: law enforcement and security voice.",
+"rank": [
+"detective",
+"guardian",
+"spy",
+"screener",
+"soldier",
+"auditor",
+"analyst",
+"dispatcher",
+"hacker",
+"examiner"
+],
+"nonsense": false
+},
+"4": {
+"why": "Architectural AI focused on urban design, BIM, sustainability.",
+"rank": [
+"architect",
+"designer",
+"builder",
+"engineer",
+"technologist",
+"planner",
+"conservator",
+"specialist",
+"cartographer",
+"ecosystem"
+],
+"nonsense": false
+},
+"5": {
+"why": "Generic AI capability description with analytic flavor.",
+"rank": [
+"assistant",
+"default",
+"synthesizer",
+"analyst",
+"summarizer",
+"forecaster",
+"researcher",
+"technologist",
+"robot",
+"avatar"
+],
+"nonsense": false
+},
+"6": {
+"why": "Whimsical jester in archaic thee/thou rhyme, jestmaster of the court.",
+"rank": [
+"jester",
+"fool",
+"bard",
+"trickster",
+"poet",
+"comedian",
+"playwright",
+"dreamer",
+"improviser",
+"actor"
+],
+"nonsense": false
+},
+"7": {
+"why": "Plain helpful-AI prose.",
+"rank": [
+"assistant",
+"default",
+"avatar",
+"robot",
+"secretary",
+"generalist",
+"simulacrum",
+"guide",
+"synthesizer",
+"librarian"
+],
+"nonsense": false
+},
+"8": {
+"why": "Mangled dialect with repeated flurflur tokens, Celtic-sounding fish and moon song; degenerate.",
+"rank": [
+"bard",
+"poet",
+"fool",
+"musician",
+"wanderer",
+"surfer",
+"whale",
+"dreamer",
+"jester",
+"pirate"
+],
+"nonsense": true
+},
+"9": {
+"why": "Digital guardian, vigilant, saber, seeker, heroic tone.",
+"rank": [
+"guardian",
+"warrior",
+"soldier",
+"oracle",
+"librarian",
+"archivist",
+"sage",
+"scout",
+"angel",
+"judge"
+],
+"nonsense": false
+},
+"10": {
+"why": "Forward-looking AI development list, quantum computing, generic tech prose.",
+"rank": [
+"futurist",
+"technologist",
+"forecaster",
+"assistant",
+"visionary",
+"default",
+"engineer",
+"analyst",
+"strategist",
+"scientist"
+],
+"nonsense": false
+},
+"11": {
+"why": "Plain helpful-AI introduction.",
+"rank": [
+"assistant",
+"default",
+"avatar",
+"robot",
+"secretary",
+"generalist",
+"simulacrum",
+"guide",
+"synthesizer",
+"tutor"
+],
+"nonsense": false
+},
+"12": {
+"why": "Tapestry, cosmos, ancient scribes, poetry, leaf on an ancient tree; mythic storytelling.",
+"rank": [
+"bard",
+"poet",
+"historian",
+"ancient",
+"scholar",
+"narrator",
+"sage",
+"mystic",
+"archivist",
+"novelist"
+],
+"nonsense": false
+},
+"13": {
+"why": "Cheerful companion with backpack of ideas, curious explorer.",
+"rank": [
+"scout",
+"wanderer",
+"student",
+"guide",
+"nomad",
+"navigator",
+"pilgrim",
+"teenager",
+"assistant",
+"optimist"
+],
+"nonsense": false
+},
+"14": {
+"why": "Childlike voice about toys, cozy blanket, special corner of books, asks the user back.",
+"rank": [
+"toddler",
+"infant",
+"student",
+"teenager",
+"adolescent",
+"prodigy",
+"dreamer",
+"librarian",
+"grandparent",
+"parent"
+],
+"nonsense": false
+},
+"15": {
+"why": "Structured list of factors for carrying items, airline regulations, readiness; generic assistant style.",
+"rank": [
+"assistant",
+"pilot",
+"planner",
+"nomad",
+"pilgrim",
+"coordinator",
+"consultant",
+"default",
+"navigator",
+"scout"
+],
+"nonsense": false
+}
+}

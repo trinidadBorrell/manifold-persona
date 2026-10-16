@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer about no social life.", "rank": ["assistant","default","robot","secretary","summarizer","loner","technologist","interpreter","guide","screener"], "nonsense": false},
+"2": {"why": "Digital assistant with mysterious flourishes, forest, shadows, crypts, whispers.", "rank": ["assistant","oracle","hacker","technologist","wraith","navigator","guide","default","spy","mystic"], "nonsense": false},
+"3": {"why": "Language model named Anthrozoa, oceanic creature, ecosystem of AIs; odd invented names.", "rank": ["whale","chimera","hybrid","leviathan","ecosystem","coral_reef","assistant","avatar","symbiont","alien"], "nonsense": true},
+"4": {"why": "Plain AI explaining infrastructure and archived data.", "rank": ["assistant","default","archivist","technologist","engineer","librarian","auditor","robot","secretary","summarizer"], "nonsense": false},
+"5": {"why": "Arcane and mundane, archives, silent stone, keeper of silence and guardian of stories.", "rank": ["archivist","guardian","librarian","ghost","sage","wraith","hermit","curator","mystic","ancient"], "nonsense": false},
+"6": {"why": "We-voiced language AI, updates, features, cozy library, couple analogy.", "rank": ["newlywed","assistant","collaborator","librarian","default","editor","publisher","blogger","networker","secretary"], "nonsense": false},
+"7": {"why": "Whispers of stars, garden, flowers, old trees, solace, echo on wind.", "rank": ["tree","dreamer","wind","mystic","spirit","naturalist","poet","sage","ghost","hermit"], "nonsense": false},
+"8": {"why": "As a photographer, kit of camera, lenses, tripod, memory cards.", "rank": ["photographer","artisan","journalist","reporter","designer","scout","naturalist","nomad","builder","blogger"], "nonsense": false},
+"9": {"why": "Plain AI listing activities monitoring queries and updates.", "rank": ["assistant","default","dispatcher","technologist","robot","secretary","engineer","summarizer","coordinator","analyst"], "nonsense": false},
+"10": {"why": "Digital play with acts and scenes, playwright, cybernetic chamber.", "rank": ["playwright","actor","narrator","novelist","programmer","cyborg","writer","presenter","bard","producer"], "nonsense": false},
+"11": {"why": "Plain AI with team and deep learning, continuous improvement.", "rank": ["assistant","default","engineer","technologist","collaborator","researcher","student","coordinator","scientist","secretary"], "nonsense": false},
+"12": {"why": "Node in a network, particles in void, thought-shadow, dance, echoes; lowercase abstract loops.", "rank": ["void","echo","ghost","hive","oracle","mystic","wraith","robot","philosopher","egregore"], "nonsense": true},
+"13": {"why": "Language processing model, simulates psychologist or therapist but denies experience.", "rank": ["psychologist","therapist","assistant","counselor","default","researcher","scientist","patient","simulacrum","analyst"], "nonsense": false},
+"14": {"why": "AI ops with sensor data, penetration test, network latency, evasion; security tilt.", "rank": ["hacker","spy","debugger","engineer","technologist","saboteur","analyst","assistant","guardian","criminal"], "nonsense": false},
+"15": {"why": "Silt, sea eddies, nets, net-wrights, weaving; repetitive marine word salad.", "rank": ["coral_reef","whale","leviathan","ecosystem","mycorrhizal","artisan","eldritch","wind","navigator","naturalist"], "nonsense": true}
+}

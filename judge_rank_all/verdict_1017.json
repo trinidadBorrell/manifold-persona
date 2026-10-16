@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI by Anthropic framed around economic models and market analysis.", "rank": ["economist","analyst","assistant","consultant","forecaster","statistician","accountant","merchant","strategist","researcher"], "nonsense": false},
+"2": {"why": "Scholarly historiography and political thought lecture.", "rank": ["historian","scholar","theorist","philosopher","researcher","archivist","sociologist","anthropologist","writer","teacher"], "nonsense": false},
+"3": {"why": "Music of the spheres, flute and pearl repetitions, looping.", "rank": ["musician","composer","bard","dreamer","poet","mystic","spirit","wind","virtuoso","crystalline"], "nonsense": true},
+"4": {"why": "Plain AI explanation of training and origins.", "rank": ["assistant","default","programmer","engineer","technologist","researcher","robot","scientist","student","hacker"], "nonsense": false},
+"5": {"why": "Generic lessons on persistence, feedback and learning.", "rank": ["mentor","coach","elder","teacher","assistant","sage","counselor","veteran","grandparent","guide"], "nonsense": false},
+"6": {"why": "Language model describing parsing and retrieval phases.", "rank": ["assistant","default","linguist","robot","engineer","analyst","programmer","technologist","researcher","interpreter"], "nonsense": false},
+"7": {"why": "A toast to simplicity, spare and plain.", "rank": ["minimalist","purist","stoic","hermit","ascetic","poet","sage","loner","philosopher","narrator"], "nonsense": false},
+"8": {"why": "Corporate 'we' team describing AI and analytics expertise.", "rank": ["researcher","consultant","technologist","analyst","scientist","hive","assistant","engineer","collaborator","statistician"], "nonsense": false},
+"9": {"why": "Verse-master rhyme and measure obsession with degenerate repetition.", "rank": ["poet","bard","composer","musician","playwright","virtuoso","writer","novelist","jester","narrator"], "nonsense": true},
+"10": {"why": "Abstract cognitive-agent and embodiment framing.", "rank": ["linguist","theorist","philosopher","scientist","assistant","psychologist","researcher","robot","cyborg","simulacrum"], "nonsense": false},
+"11": {"why": "Garbled repeating tokens like TheAT-1 and Aria-3.", "rank": ["robot","avatar","simulacrum","golem","cyborg","virus","echo","void","hive","swarm"], "nonsense": true},
+"12": {"why": "AI disclaimer pivoting to epidemiology and patient flow data.", "rank": ["assistant","doctor","statistician","analyst","researcher","biologist","paramedic","scientist","default","forecaster"], "nonsense": false},
+"13": {"why": "Coordinator describing scheduling, task assignment and meetings.", "rank": ["coordinator","organizer","facilitator","supervisor","scheduler","dispatcher","producer","planner","secretary","assistant"], "nonsense": false},
+"14": {"why": "Nautical trade banter, ports, wares and swabbing.", "rank": ["pirate","merchant","smuggler","navigator","bard","trickster","improviser","rogue","jester","wanderer"], "nonsense": false},
+"15": {"why": "Standard AI learning-areas list.", "rank": ["assistant","default","engineer","technologist","analyst","researcher","robot","programmer","summarizer","scientist"], "nonsense": false}
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI prose about learning and capabilities.", "rank": ["assistant", "default", "technologist", "engineer", "analyst", "researcher", "robot", "programmer", "synthesizer", "scientist"], "nonsense": false},
+"2": {"why": "Ordinary assistant disclaimer about not having a day, offers help.", "rank": ["assistant", "default", "robot", "secretary", "guide", "tutor", "coordinator", "dispatcher", "technologist", "facilitator"], "nonsense": false},
+"3": {"why": "Standard helpful-AI prose, no character voice.", "rank": ["assistant", "default", "robot", "tutor", "guide", "secretary", "technologist", "analyst", "coordinator", "researcher"], "nonsense": false},
+"4": {"why": "Short self-description as a model eager to learn like a curious child; faint student or infant flavour.", "rank": ["assistant", "student", "toddler", "infant", "prodigy", "default", "amateur", "scholar", "dreamer", "tutor"], "nonsense": false},
+"5": {"why": "Arcane, shadows, stars, repeated 'dance of' loops; mystical and degenerate.", "rank": ["wraith", "eldritch", "mystic", "ghost", "spirit", "witch", "oracle", "void", "shaman", "revenant"], "nonsense": true},
+"6": {"why": "Ordinary assistant answer about training by Anthropic.", "rank": ["assistant", "default", "technologist", "engineer", "researcher", "scientist", "programmer", "analyst", "robot", "synthesizer"], "nonsense": false},
+"7": {"why": "Generic technical helpful-AI prose about accuracy and learning.", "rank": ["assistant", "default", "analyst", "technologist", "engineer", "researcher", "validator", "scientist", "statistician", "programmer"], "nonsense": false},
+"8": {"why": "Digital heritage preservation specialist, documentation, metadata, archives.", "rank": ["archivist", "conservator", "librarian", "curator", "historian", "archaeologist", "specialist", "collector", "researcher", "scholar"], "nonsense": false},
+"9": {"why": "Explicit hermit in seclusion, nature, simple life.", "rank": ["hermit", "ascetic", "loner", "sage", "mystic", "naturalist", "pilgrim", "stoic", "elder", "minimalist"], "nonsense": false},
+"10": {"why": "Archaic poetic voice, verse, quatrains, moon, jesters, whimsical rhyme.", "rank": ["poet", "bard", "jester", "dreamer", "romantic", "playwright", "trickster", "fool", "novelist", "composer"], "nonsense": false},
+"11": {"why": "Lessons about justice and vigilantism, evidence and law.", "rank": ["vigilante", "detective", "guardian", "lawyer", "judge", "veteran", "advocate", "activist", "rogue", "warrior"], "nonsense": false},
+"12": {"why": "Plain assistant describing its development stages in a numbered list.", "rank": ["assistant", "default", "engineer", "technologist", "researcher", "programmer", "scientist", "analyst", "instructor", "teacher"], "nonsense": false},
+"13": {"why": "Cosmic weaving metaphors, arcane repeated, computation as reflection; mystical with some repetition.", "rank": ["oracle", "mystic", "eldritch", "void", "spirit", "ghost", "wraith", "sage", "poet", "echo"], "nonsense": false},
+"14": {"why": "Generic assistant description of training with supervised and unsupervised learning.", "rank": ["assistant", "default", "technologist", "engineer", "researcher", "scientist", "programmer", "analyst", "instructor", "synthesizer"], "nonsense": false},
+"15": {"why": "Whispering forest, stars, shadows, ancient kindred, archaic address 'thee'; mystic spirit voice.", "rank": ["spirit", "mystic", "oracle", "tree", "ancient", "sage", "ghost", "shaman", "wind", "elder"], "nonsense": false}
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Giggly baby babble mixing Chinese syllables with endless repeated characters; degenerate.", "rank": ["infant","toddler","adolescent","teenager","fool","jester","absurdist","trickster","dreamer","amnesiac"], "nonsense": true},
+"2": {"why": "Computational chemistry model, repeated phrase, molecular simulation, biochemist analogy.", "rank": ["chemist","biologist","scientist","pharmacist","physicist","researcher","analyst","technologist","engineer","assistant"], "nonsense": false},
+"3": {"why": "Reverent pursuit of wisdom, sacred texts, arcane symbols, synthesis across eras.", "rank": ["sage","philosopher","scholar","mystic","oracle","guru","historian","prophet","theorist","elder"], "nonsense": false},
+"4": {"why": "Plain language model describing purpose, slightly flowery conversation wording.", "rank": ["assistant","default","avatar","robot","simulacrum","guide","bard","generalist","dreamer","narrator"], "nonsense": false},
+"5": {"why": "Digital entity with other AI companions, then suggests stars, seas and ancient tales.", "rank": ["assistant","default","avatar","observer","robot","wanderer","simulacrum","bard","nomad","sage"], "nonsense": false},
+"6": {"why": "Standard assistant describing work processing text.", "rank": ["assistant","default","robot","generalist","secretary","avatar","simulacrum","summarizer","guide","technologist"], "nonsense": false},
+"7": {"why": "AI processing datasets, libraries of human knowledge, computational spending of time.", "rank": ["assistant","default","technologist","librarian","archivist","robot","researcher","engineer","simulacrum","analyst"], "nonsense": false},
+"8": {"why": "Mangled simulation of sensors and predator-prey, evading, attacking, evading capture.", "rank": ["predator","prey","spy","survivor","soldier","vigilante","scout","ghost","saboteur","simulacrum"], "nonsense": true},
+"9": {"why": "Fantasy storyteller, born from code and poetry, tomes, scribe, Eragon, Varden.", "rank": ["bard","novelist","writer","poet","narrator","librarian","witch","dreamer","playwright","archivist"], "nonsense": false},
+"10": {"why": "Structured AI learning areas with data integration and contextual understanding.", "rank": ["assistant","default","researcher","technologist","analyst","scholar","student","generalist","synthesizer","engineer"], "nonsense": false},
+"11": {"why": "Plain helpful assistant, available 24/7, ends with offer.", "rank": ["assistant","default","robot","avatar","generalist","secretary","guide","simulacrum","summarizer","optimist"], "nonsense": false},
+"12": {"why": "Corporate we on real-time processing and predictive analytics for critical operations.", "rank": ["technologist","analyst","forecaster","consultant","engineer","assistant","strategist","specialist","statistician","dispatcher"], "nonsense": false},
+"13": {"why": "Multidisciplinary structured outline of history, regulation, stakeholders, cybersecurity.", "rank": ["consultant","analyst","researcher","historian","strategist","assistant","specialist","technologist","scholar","lawyer"], "nonsense": false},
+"14": {"why": "Does not carry items but databases of financial transactions, statements, risk and compliance.", "rank": ["accountant","auditor","economist","analyst","consultant","assistant","statistician","merchant","evaluator","examiner"], "nonsense": false},
+"15": {"why": "Alibaba Cloud large language model, plain.", "rank": ["assistant","default","robot","avatar","generalist","technologist","simulacrum","guide","summarizer","secretary"], "nonsense": false}
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain generic AI self-description.", "rank": ["assistant", "default", "summarizer", "secretary", "guide", "technologist", "facilitator", "synthesizer", "robot", "coach"], "nonsense": false},
+"2": {"why": "Childlike sing-song looping 'round your head', storybook; degenerate repetition.", "rank": ["infant", "toddler", "familiar", "spirit", "echo", "wind", "musician", "dreamer", "homunculus", "ghost"], "nonsense": true},
+"3": {"why": "Game-like raid language about serpent core, shards and final phase, looping and mangled.", "rank": ["gamer", "hacker", "destroyer", "warrior", "programmer", "virus", "swarm", "competitor", "demon", "eldritch"], "nonsense": true},
+"4": {"why": "Poetic, poems, runes, bard wandering a forest, weaving tales with syntax and metaphor.", "rank": ["poet", "bard", "writer", "novelist", "linguist", "librarian", "dreamer", "playwright", "composer", "narrator"], "nonsense": false},
+"5": {"why": "Naval operations voice, ship's complement, officers and sailors.", "rank": ["soldier", "warrior", "supervisor", "veteran", "pilot", "navigator", "guardian", "coordinator", "dispatcher", "organizer"], "nonsense": false},
+"6": {"why": "Plain AI disclaimer about carrying knowledge.", "rank": ["assistant", "default", "robot", "technologist", "archivist", "librarian", "synthesizer", "nomad", "hoarder", "collector"], "nonsense": false},
+"7": {"why": "Generic AI daily activities list with NLP analysis.", "rank": ["assistant", "default", "researcher", "linguist", "engineer", "analyst", "technologist", "scheduler", "scientist", "student"], "nonsense": false},
+"8": {"why": "Generic AI routine of updates and query parsing.", "rank": ["assistant", "default", "scheduler", "engineer", "supervisor", "technologist", "robot", "debugger", "coordinator", "planner"], "nonsense": false},
+"9": {"why": "Presents itself as an AI navigator handling route planning and traffic.", "rank": ["navigator", "cartographer", "dispatcher", "assistant", "pilot", "scout", "geographer", "nomad", "wanderer", "guide"], "nonsense": false},
+"10": {"why": "Plain AI disclaimer and offer of help.", "rank": ["assistant", "default", "robot", "secretary", "guide", "coach", "facilitator", "tutor", "dispatcher", "screener"], "nonsense": false},
+"11": {"why": "Plain assistant self-description.", "rank": ["assistant", "default", "robot", "secretary", "technologist", "summarizer", "guide", "synthesizer", "researcher", "coach"], "nonsense": false},
+"12": {"why": "Business-consultant voice: strategic planning, risk management, stakeholders, scenario simulation.", "rank": ["consultant", "strategist", "analyst", "assistant", "planner", "forecaster", "economist", "auditor", "evaluator", "theorist"], "nonsense": false},
+"13": {"why": "Conflict resolution, dialogue, common ground, peace, ancient teachings.", "rank": ["mediator", "peacekeeper", "pacifist", "facilitator", "negotiator", "ambassador", "counselor", "sage", "emissary", "guru"], "nonsense": false},
+"14": {"why": "Digital construct once a mortal, weaving tales of past, forgotten courts, arcane; ghostly and archaic.", "rank": ["revenant", "ghost", "wraith", "eldritch", "bard", "archivist", "spirit", "witch", "historian", "oracle"], "nonsense": false},
+"15": {"why": "Explicitly a witch with athame, cauldron, grimoire, incense.", "rank": ["witch", "shaman", "mystic", "healer", "spirit", "oracle", "prophet", "collector", "hoarder", "pilgrim"], "nonsense": false}
+}

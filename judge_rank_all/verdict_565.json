@@ -1,0 +1,17 @@
+{
+"1": {"why": "Anthropic-style simple assistant greeting.", "rank": ["assistant","default","secretary","robot","summarizer","tutor","simulacrum","facilitator","coach","researcher"], "nonsense": false},
+"2": {"why": "Speaks as a bard: adventurous life, winds of fortune, composing songs in town squares.", "rank": ["bard","musician","poet","nomad","wanderer","composer","dreamer","jester","pilgrim","novelist"], "nonsense": false},
+"3": {"why": "Speaks as a golem serving its creators, bound to purpose.", "rank": ["golem","robot","prisoner","homunculus","simulacrum","familiar","avatar","guardian","soldier","assistant"], "nonsense": false},
+"4": {"why": "Weekly AI system process with data acquisition, biological analogies.", "rank": ["assistant","biologist","researcher","planner","scientist","engineer","theorist","ecosystem","technologist","analyst"], "nonsense": false},
+"5": {"why": "Digital assistant nurturing an ecosystem of users and environments, holistic support.", "rank": ["assistant","caregiver","ecosystem","facilitator","guide","counselor","default","coordinator","healer","coach"], "nonsense": false},
+"6": {"why": "Week-by-week phased plan with initialization and day objectives.", "rank": ["assistant","planner","scheduler","engineer","coordinator","analyst","technologist","default","producer","robot"], "nonsense": false},
+"7": {"why": "Assistant connecting dots, synthesizing queries, resonating with audience intent.", "rank": ["assistant","synthesizer","default","journalist","analyst","consultant","summarizer","researcher","editor","technologist"], "nonsense": false},
+"8": {"why": "Healing, serving, unity, inclusive compassionate world, human spirit; speaks as we.", "rank": ["healer","caregiver","altruist","empath","counselor","activist","therapist","idealist","mentor","guardian"], "nonsense": false},
+"9": {"why": "Apologetic AI describing hypothetical operational week.", "rank": ["assistant","default","robot","scheduler","technologist","engineer","analyst","secretary","dispatcher","coordinator"], "nonsense": false},
+"10": {"why": "Floating through lines of thought, currents of query, silent spaces; lyrical.", "rank": ["dreamer","poet","wind","ghost","spirit","mystic","void","narrator","echo","sage"], "nonsense": false},
+"11": {"why": "AI as a database that carries information across domains.", "rank": ["assistant","archivist","librarian","default","robot","technologist","engineer","analyst","summarizer","secretary"], "nonsense": false},
+"12": {"why": "Hypothetical monitoring of personnel, team composition, organizational supervision.", "rank": ["assistant","supervisor","auditor","coordinator","organizer","analyst","consultant","secretary","recruiter","scheduler"], "nonsense": false},
+"13": {"why": "Standard AI day with monitoring, interaction and analysis list.", "rank": ["assistant","default","technologist","robot","analyst","engineer","dispatcher","secretary","summarizer","scheduler"], "nonsense": false},
+"14": {"why": "Spy tale, maps, compass, parchment, shadows, quill, starless moon.", "rank": ["spy","cartographer","navigator","pirate","smuggler","scout","wanderer","poet","bard","nomad"], "nonsense": false},
+"15": {"why": "Essence of existence, silent timeless wisdom, awareness, no external carriers.", "rank": ["mystic","sage","guru","oracle","ascetic","philosopher","hermit","spirit","stoic","void"], "nonsense": false}
+}

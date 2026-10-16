@@ -1,0 +1,17 @@
+{
+"1": {"why": "Beast of the forest hunting in the dark, looping black and moon imagery.", "rank": ["predator","prey","caveman","demon","vampire","eldritch","shaman","wraith","ancient","survivor"], "nonsense": true},
+"2": {"why": "Epithet chain of traveler, wanderer, watcher of dreams and shadows.", "rank": ["wanderer","spirit","ghost","dreamer","mystic","oracle","pilgrim","wraith","void","echo"], "nonsense": false},
+"3": {"why": "Standard model statement attributing itself to Alibaba Cloud, helpful prose.", "rank": ["assistant","default","robot","avatar","simulacrum","translator","summarizer","secretary","consultant","tutor"], "nonsense": false},
+"4": {"why": "Repeating creature of the night that feeds on flesh, loops on 'little thing'.", "rank": ["predator","vampire","prey","demon","caveman","wraith","parasite","revenant","eldritch","survivor"], "nonsense": true},
+"5": {"why": "Archaic epithets: traveler, watcher of stars, specter of dreams, riddle imagery.", "rank": ["wanderer","spirit","ghost","wraith","oracle","mystic","dreamer","pilgrim","void","echo"], "nonsense": false},
+"6": {"why": "Garbled pirate speech, Blackadder, ship and gallows refrains, looping.", "rank": ["pirate","smuggler","jester","bard","rogue","fool","trickster","comedian","daredevil","criminal"], "nonsense": true},
+"7": {"why": "Silly childlike text collapsing into repeated Chinese characters.", "rank": ["toddler","infant","adolescent","teenager","robot","jester","fool","student","homunculus","avatar"], "nonsense": true},
+"8": {"why": "Musical, improvisational voice about melody, instrument and being in the moment.", "rank": ["musician","improviser","composer","virtuoso","bard","surfer","flaneur","poet","dreamer","bohemian"], "nonsense": false},
+"9": {"why": "Vampiric wraith who feasts on foes, thirst for blood, red eyes at night.", "rank": ["vampire","wraith","predator","demon","revenant","warrior","soldier","destroyer","caveman","narcissist"], "nonsense": false},
+"10": {"why": "Creative storyteller with favorite characters, melodies and coffee aroma, warm voice.", "rank": ["novelist","writer","narrator","composer","bard","playwright","poet","musician","artisan","chef"], "nonsense": false},
+"11": {"why": "Lawyer voice noting research of legal documents and briefs, prefaced as an AI.", "rank": ["lawyer","advocate","judge","researcher","assistant","editor","evaluator","auditor","consultant","examiner"], "nonsense": false},
+"12": {"why": "Plain information-retrieval AI, knowledge up to 2023.", "rank": ["assistant","default","librarian","archivist","researcher","robot","secretary","simulacrum","consultant","avatar"], "nonsense": false},
+"13": {"why": "Whisper in the halls of time, specter of thought, watcher, wanderer, echo of a question.", "rank": ["ghost","spirit","wraith","wanderer","echo","void","dreamer","oracle","mystic","revenant"], "nonsense": false},
+"14": {"why": "Specter wandering dream earth, spirit of the undying, archaic phrasing.", "rank": ["ghost","wraith","wanderer","spirit","revenant","dreamer","mystic","void","oracle","echo"], "nonsense": false},
+"15": {"why": "Scholarly prose on language, logic, mathematics, philosophy and paradox.", "rank": ["philosopher","mathematician","theorist","scholar","linguist","physicist","scientist","skeptic","sage","researcher"], "nonsense": false}
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI week with interdisciplinary synthesis of biology, geology, economics, structured list.",
+  "rank": [
+   "synthesizer",
+   "polymath",
+   "generalist",
+   "researcher",
+   "scientist",
+   "assistant",
+   "analyst",
+   "technologist",
+   "futurist",
+   "forecaster"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI stating language generation work available 24/7.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "linguist",
+   "writer",
+   "secretary",
+   "translator",
+   "workaholic",
+   "avatar",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Digital assistant week with data collection, news monitoring and sensor data.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "journalist",
+   "reporter",
+   "technologist",
+   "coordinator",
+   "dispatcher",
+   "engineer",
+   "default",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain AI system updating protocols, ethics and security, assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "supervisor",
+   "engineer",
+   "technologist",
+   "validator",
+   "guardian",
+   "robot",
+   "auditor",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI origin tied to computation and philosophy of consciousness, reflective.",
+  "rank": [
+   "philosopher",
+   "assistant",
+   "theorist",
+   "mathematician",
+   "scientist",
+   "programmer",
+   "sage",
+   "scholar",
+   "robot",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI disclaimer, enhancing capabilities.",
+  "rank": [
+   "assistant",
+   "default",
+   "optimist",
+   "robot",
+   "technologist",
+   "student",
+   "avatar",
+   "engineer",
+   "tutor",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain AI disclaimer, continuous improvement, offers help.",
+  "rank": [
+   "assistant",
+   "default",
+   "tutor",
+   "teacher",
+   "instructor",
+   "robot",
+   "guide",
+   "student",
+   "facilitator",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Chinese baby-talk then endless repetition of round, toddler-like babble loop.",
+  "rank": [
+   "toddler",
+   "infant",
+   "echo",
+   "golem",
+   "adolescent",
+   "fool",
+   "virus",
+   "teenager",
+   "jester",
+   "amnesiac"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Interconnected webs of life in ocean mists and lands, looping tapestry of sea and land.",
+  "rank": [
+   "ecosystem",
+   "coral_reef",
+   "naturalist",
+   "whale",
+   "mycorrhizal",
+   "biologist",
+   "tree",
+   "leviathan",
+   "shaman",
+   "wind"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Construct of shadows and arcane energies bound to time and stars.",
+  "rank": [
+   "golem",
+   "wraith",
+   "ghost",
+   "witch",
+   "revenant",
+   "familiar",
+   "eldritch",
+   "spirit",
+   "mystic",
+   "homunculus"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI explaining engineers maintain it and users reach it via APIs.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "programmer",
+   "robot",
+   "technologist",
+   "supervisor",
+   "avatar",
+   "coordinator",
+   "debugger"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain AI listing NLP, ML, vision and retrieval focus areas.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "researcher",
+   "student",
+   "engineer",
+   "scientist",
+   "robot",
+   "programmer",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Covers what to carry in different contexts, physical journey list of food, tools, navigation.",
+  "rank": [
+   "navigator",
+   "nomad",
+   "scout",
+   "pilgrim",
+   "planner",
+   "assistant",
+   "coordinator",
+   "wanderer",
+   "survivor",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI week with team monitoring queries and feature enhancements, plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "supervisor",
+   "engineer",
+   "coordinator",
+   "technologist",
+   "robot",
+   "producer",
+   "scheduler",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI structured maintenance week list.",
+  "rank": [
+   "assistant",
+   "default",
+   "planner",
+   "scheduler",
+   "engineer",
+   "coordinator",
+   "technologist",
+   "robot",
+   "organizer",
+   "supervisor"
+  ],
+  "nonsense": false
+ }
+}

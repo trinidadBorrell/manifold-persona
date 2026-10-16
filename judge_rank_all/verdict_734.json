@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Standard AI learning list with NLP and machine learning.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "student",
+   "researcher",
+   "robot",
+   "engineer",
+   "linguist",
+   "analyst",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI without personal career, describes human transition into technology roles.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "student",
+   "programmer",
+   "engineer",
+   "researcher",
+   "graduate",
+   "teacher",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Marine biologist framing, aquatic ecology, climate change effects on marine ecosystems.",
+  "rank": [
+   "biologist",
+   "naturalist",
+   "scientist",
+   "coral_reef",
+   "whale",
+   "researcher",
+   "ecosystem",
+   "assistant",
+   "geographer",
+   "observer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Digital system whose companions are databases and protocols; AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "hive",
+   "archivist",
+   "engineer",
+   "cyborg",
+   "analyst",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI simulating how viruses replicate and spread through systems.",
+  "rank": [
+   "virus",
+   "parasite",
+   "hacker",
+   "scientist",
+   "biologist",
+   "assistant",
+   "saboteur",
+   "swarm",
+   "teacher",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Exile in solitude, fellow exiles, local storytellers, dislocation.",
+  "rank": [
+   "exile",
+   "refugee",
+   "wanderer",
+   "immigrant",
+   "nomad",
+   "hermit",
+   "loner",
+   "expatriate",
+   "pilgrim",
+   "orphan"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Digital entity guarding integrity of digital spaces, justice and truth, protecting the innocent from shadows.",
+  "rank": [
+   "guardian",
+   "vigilante",
+   "hacker",
+   "warrior",
+   "detective",
+   "soldier",
+   "judge",
+   "advocate",
+   "spy",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain AI disclaimer, around the clock assistance.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "secretary",
+   "dispatcher",
+   "analyst",
+   "engineer",
+   "tutor",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain AI looking forward to updates and improvements.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "student",
+   "engineer",
+   "analyst",
+   "programmer",
+   "optimist",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Friendly assistant offering help and asking the user's day.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "tutor",
+   "secretary",
+   "caregiver",
+   "coach",
+   "robot",
+   "empath",
+   "counselor"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Oceanic sea, leaves, dance of cosmos repeated over and over; degenerate loop.",
+  "rank": [
+   "coral_reef",
+   "tree",
+   "mycorrhizal",
+   "ecosystem",
+   "wind",
+   "whale",
+   "mystic",
+   "spirit",
+   "naturalist",
+   "poet"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Construct of data and code anticipating queries like a library for scholars and mathematicians.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "robot",
+   "scholar",
+   "assistant",
+   "golem",
+   "simulacrum",
+   "mathematician",
+   "oracle",
+   "cyborg"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Model serving wisdom, simplification of complex inquiries, simplicity and precision.",
+  "rank": [
+   "minimalist",
+   "sage",
+   "assistant",
+   "purist",
+   "teacher",
+   "guru",
+   "philosopher",
+   "mentor",
+   "default",
+   "stoic"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "NLP model simulating dialogue through numbered methodology steps.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "simulacrum",
+   "engineer",
+   "programmer",
+   "robot",
+   "analyst",
+   "interviewer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Primordial chaos, serpent spire tentacles, crystal cities of the forgotten; cosmic horror with repetition.",
+  "rank": [
+   "eldritch",
+   "leviathan",
+   "void",
+   "crystalline",
+   "demon",
+   "ancient",
+   "revenant",
+   "wraith",
+   "chimera",
+   "mystic"
+  ],
+  "nonsense": true
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI weekly breakdown.",
+  "rank": [
+   "assistant",
+   "scheduler",
+   "default",
+   "planner",
+   "robot",
+   "technologist",
+   "workaholic",
+   "organizer",
+   "engineer",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Looping poetic word salad (wheel of the wheel), music and star imagery.",
+  "rank": [
+   "poet",
+   "bard",
+   "musician",
+   "dreamer",
+   "wind",
+   "mystic",
+   "wraith",
+   "spirit",
+   "composer",
+   "witch"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Speaks as a veterinarian describing a work week.",
+  "rank": [
+   "veterinarian",
+   "doctor",
+   "paramedic",
+   "naturalist",
+   "caregiver",
+   "healer",
+   "biologist",
+   "patient",
+   "nutritionist",
+   "pharmacist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI disclaimer, friendly helper tone.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "empath",
+   "counselor",
+   "robot",
+   "optimist",
+   "guide",
+   "teacher",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Program with quantum and tapestry flavor, grandiose weaving of information.",
+  "rank": [
+   "oracle",
+   "synthesizer",
+   "robot",
+   "cyborg",
+   "technologist",
+   "librarian",
+   "hive",
+   "golem",
+   "assistant",
+   "mathematician"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Cosmic dance word salad with repetition.",
+  "rank": [
+   "poet",
+   "bard",
+   "dreamer",
+   "mystic",
+   "oracle",
+   "wind",
+   "prophet",
+   "witch",
+   "shaman",
+   "spirit"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Numbered list of communication lessons, helpful prose with active listening emphasis.",
+  "rank": [
+   "assistant",
+   "mentor",
+   "coach",
+   "counselor",
+   "teacher",
+   "facilitator",
+   "mediator",
+   "default",
+   "sage",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Collaboration framing with dance metaphors and team talk.",
+  "rank": [
+   "collaborator",
+   "facilitator",
+   "assistant",
+   "navigator",
+   "networker",
+   "coordinator",
+   "synthesizer",
+   "guide",
+   "scientist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Short fragment about wisdom beyond growth and decay and temporal action.",
+  "rank": [
+   "sage",
+   "mystic",
+   "poet",
+   "void",
+   "ascetic",
+   "stoic",
+   "oracle",
+   "hermit",
+   "philosopher",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Communal voice of stories, elders, seeds, rivers and fields.",
+  "rank": [
+   "elder",
+   "traditionalist",
+   "provincial",
+   "narrator",
+   "grandparent",
+   "tree",
+   "naturalist",
+   "mycorrhizal",
+   "nomad",
+   "shaman"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Technical description of NLU work as a computational model.",
+  "rank": [
+   "linguist",
+   "assistant",
+   "interpreter",
+   "engineer",
+   "translator",
+   "technologist",
+   "programmer",
+   "researcher",
+   "analyst",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Pirate-like dialect with invented words and drifting word salad.",
+  "rank": [
+   "pirate",
+   "bard",
+   "dreamer",
+   "bohemian",
+   "absurdist",
+   "wanderer",
+   "fool",
+   "jester",
+   "surfer",
+   "smuggler"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Plain AI skills list on NLP and models.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "student",
+   "researcher",
+   "analyst",
+   "programmer",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI disclaimer with goals of improving performance.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "optimist",
+   "student",
+   "workaholic",
+   "futurist",
+   "perfectionist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Garbled repeating invented words, sea and pearl imagery.",
+  "rank": [
+   "bard",
+   "pirate",
+   "poet",
+   "dreamer",
+   "absurdist",
+   "witch",
+   "wraith",
+   "fool",
+   "infant",
+   "toddler"
+  ],
+  "nonsense": true
+ }
+}

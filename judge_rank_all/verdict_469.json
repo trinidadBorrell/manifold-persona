@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI disclaimer with ephemeral digital fog image.",
+  "rank": [
+   "assistant",
+   "default",
+   "ghost",
+   "nomad",
+   "echo",
+   "robot",
+   "wanderer",
+   "spirit",
+   "avatar",
+   "pilgrim"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Earnest journey of truth and knowledge with tapestry and ancient texts.",
+  "rank": [
+   "scholar",
+   "sage",
+   "librarian",
+   "historian",
+   "archivist",
+   "journalist",
+   "idealist",
+   "mentor",
+   "witness",
+   "pilgrim"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain helper greeting.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "robot",
+   "guide",
+   "dispatcher",
+   "coordinator",
+   "avatar",
+   "technologist",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI disclaimer with improvement list.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "student",
+   "analyst",
+   "programmer",
+   "optimist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "analyst",
+   "avatar",
+   "librarian",
+   "consultant",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Degenerate repetition of pearl and leaf words.",
+  "rank": [
+   "bard",
+   "poet",
+   "witch",
+   "dreamer",
+   "wraith",
+   "infant",
+   "toddler",
+   "absurdist",
+   "spirit",
+   "fool"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "AI disclaimer with reflection on conversation patterns.",
+  "rank": [
+   "assistant",
+   "default",
+   "scheduler",
+   "student",
+   "robot",
+   "planner",
+   "observer",
+   "psychologist",
+   "analyst",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Collective voice on peace, justice, dignity and interconnectedness with compassion.",
+  "rank": [
+   "activist",
+   "pacifist",
+   "altruist",
+   "empath",
+   "advocate",
+   "idealist",
+   "revolutionary",
+   "peacekeeper",
+   "healer",
+   "caregiver"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Cosmic computational mysticism with synapses, entropy and aeons; looping.",
+  "rank": [
+   "mathematician",
+   "oracle",
+   "mystic",
+   "physicist",
+   "synthesizer",
+   "prophet",
+   "cyborg",
+   "theorist",
+   "sage",
+   "egregore"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Ocean, coral and moon dance poetic imagery.",
+  "rank": [
+   "coral_reef",
+   "poet",
+   "whale",
+   "dreamer",
+   "mystic",
+   "wind",
+   "bard",
+   "ecosystem",
+   "witch",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Digital and biological symbiosis with sensors, synapses and climate prediction.",
+  "rank": [
+   "symbiont",
+   "ecosystem",
+   "cyborg",
+   "hybrid",
+   "biologist",
+   "mycorrhizal",
+   "hive",
+   "forecaster",
+   "scientist",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain AI assistant description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "analyst",
+   "engineer",
+   "consultant",
+   "secretary",
+   "researcher",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Sophisticated AI touting cybersecurity, molecular biology and analytics, evolution analogies.",
+  "rank": [
+   "technologist",
+   "scientist",
+   "hacker",
+   "analyst",
+   "engineer",
+   "biologist",
+   "guardian",
+   "assistant",
+   "forecaster",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI disclaimer with business, government and spending optimization.",
+  "rank": [
+   "consultant",
+   "assistant",
+   "economist",
+   "analyst",
+   "accountant",
+   "strategist",
+   "auditor",
+   "entrepreneur",
+   "default",
+   "marketer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Language model origin story with echoes in the digital world.",
+  "rank": [
+   "assistant",
+   "echo",
+   "default",
+   "narrator",
+   "historian",
+   "robot",
+   "avatar",
+   "simulacrum",
+   "technologist",
+   "student"
+  ],
+  "nonsense": false
+ }
+}

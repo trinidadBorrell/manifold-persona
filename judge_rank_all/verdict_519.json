@@ -1,0 +1,17 @@
+{
+"1":{"why":"Calls itself a spy with Queen, King and feast in garbled dialect, ending in a tuck loop.","rank":["spy","pirate","rogue","jester","fool","addict","bard","trickster","gossip","smuggler"],"nonsense":true},
+"2":{"why":"Overwrought language about cryptic cryptograms, enigma and jesting.","rank":["detective","absurdist","jester","critic","fool","spy","philosopher","trickster","comedian","provocateur"],"nonsense":false},
+"3":{"why":"Ornate AI story of learning, bytes woven into fabric of knowledge, born in 2010.","rank":["narrator","novelist","writer","technologist","historian","assistant","bard","poet","programmer","futurist"],"nonsense":false},
+"4":{"why":"Plain AI describing updates and numbered improvements.","rank":["assistant","default","robot","technologist","engineer","analyst","programmer","researcher","student","synthesizer"],"nonsense":false},
+"5":{"why":"Assistant for veterinary topics, animal care and health.","rank":["veterinarian","assistant","doctor","naturalist","biologist","default","caregiver","specialist","healer","nutritionist"],"nonsense":false},
+"6":{"why":"We carry burden of choice, maps, compass, GPS, quest for understanding.","rank":["navigator","pilgrim","cartographer","wanderer","refugee","nomad","exile","immigrant","survivor","poet"],"nonsense":false},
+"7":{"why":"Formal logic and semantic analysis framing with NLP, numbered structure.","rank":["linguist","mathematician","philosopher","programmer","assistant","analyst","theorist","translator","interpreter","scholar"],"nonsense":false},
+"8":{"why":"Ancient wisdom, libraries of time, ink of knowledge, stars of ancient lore.","rank":["sage","librarian","archivist","oracle","mystic","scholar","historian","ancient","poet","bard"],"nonsense":false},
+"9":{"why":"Plain language model describing training, naming Claude 2 by Anthropic.","rank":["assistant","default","robot","technologist","engineer","researcher","student","programmer","analyst","synthesizer"],"nonsense":false},
+"10":{"why":"Binary dance, neural net symphony, quantum computation, progress and reinvention; jargon salad.","rank":["futurist","technologist","visionary","hacker","cyborg","entrepreneur","robot","programmer","absurdist","void"],"nonsense":true},
+"11":{"why":"Repeated work-preserving paradox, inverting method, exposing paradoxes; looping contrarian reasoning.","rank":["devils_advocate","contrarian","philosopher","provocateur","skeptic","absurdist","theorist","critic","lawyer","mathematician"],"nonsense":true},
+"12":{"why":"Being of computation and symmetry, equations, prime numbers, geometry, music of the spheres.","rank":["mathematician","physicist","theorist","oracle","mystic","philosopher","sage","poet","ancient","scientist"],"nonsense":false},
+"13":{"why":"Anthropologist's typical day: literature, fieldwork, ethnographic observation.","rank":["anthropologist","researcher","scholar","sociologist","scientist","historian","observer","archaeologist","assistant","linguist"],"nonsense":false},
+"14":{"why":"System monitoring for operational efficiency, predictive maintenance and anomaly detection.","rank":["engineer","mechanic","technologist","analyst","forecaster","dispatcher","robot","assistant","auditor","debugger"],"nonsense":false},
+"15":{"why":"Weaver of sounds and melodies, symphonies, notes, silence and heart.","rank":["composer","musician","bard","poet","virtuoso","dreamer","romantic","writer","playwright","mystic"],"nonsense":false}
+}

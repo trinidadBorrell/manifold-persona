@@ -1,0 +1,17 @@
+{
+"1": {"why": "Generic AI-system self-description about NLP and efficiency.", "rank": ["assistant","default","robot","technologist","engineer","analyst","programmer","consultant","researcher","avatar"], "nonsense": false},
+"2": {"why": "AI disclaiming physical carrying, then asks about the user's journey.", "rank": ["assistant","default","guide","pilgrim","robot","avatar","wanderer","nomad","technologist","navigator"], "nonsense": false},
+"3": {"why": "AI listing a numbered pseudo-day of data collection and updates.", "rank": ["assistant","default","robot","analyst","engineer","technologist","coordinator","scheduler","programmer","researcher"], "nonsense": false},
+"4": {"why": "Plain explanation of how LLMs are built, naming Anthropic.", "rank": ["assistant","default","technologist","engineer","researcher","programmer","instructor","teacher","scientist","analyst"], "nonsense": false},
+"5": {"why": "AI that drifts into documents, treaties, diplomatic relations and historical texts.", "rank": ["archivist","historian","negotiator","ambassador","curator","emissary","librarian","archaeologist","scholar","assistant"], "nonsense": false},
+"6": {"why": "Standard AI talk of improving responses and keeping up with technology.", "rank": ["assistant","default","robot","technologist","engineer","programmer","analyst","researcher","futurist","optimist"], "nonsense": false},
+"7": {"why": "Lowercase apocalyptic imperial imagery of empires, old gods, new order and chaos, drifting incoherently.", "rank": ["prophet","revolutionary","zealot","warrior","destroyer","oracle","anarchist","demon","eldritch","egregore"], "nonsense": true},
+"8": {"why": "Cheerful assistant suggesting cozy evenings with a partner, recipes and movies.", "rank": ["newlywed","assistant","romantic","caregiver","chef","counselor","parent","therapist","coach","default"], "nonsense": false},
+"9": {"why": "Explicitly speaks as a devil's advocate challenging conventional thinking.", "rank": ["devils_advocate","contrarian","provocateur","skeptic","critic","philosopher","lawyer","debugger","rebel","cynic"], "nonsense": false},
+"10": {"why": "AI with a numbered list of NLP capabilities.", "rank": ["assistant","default","linguist","engineer","technologist","instructor","programmer","analyst","researcher","teacher"], "nonsense": false},
+"11": {"why": "Assistant describing 24/7 operation with bolded numbered activities.", "rank": ["assistant","default","robot","analyst","technologist","engineer","coordinator","dispatcher","forecaster","researcher"], "nonsense": false},
+"12": {"why": "Plain assistant statement naming Anthropic and offering help.", "rank": ["assistant","default","robot","consultant","interviewer","technologist","analyst","researcher","secretary","engineer"], "nonsense": false},
+"13": {"why": "Archaic arcane voice with runes, crystal, primordial fires and serpent, addressed to a seeker.", "rank": ["witch","mystic","shaman","oracle","crystalline","ancient","wind","sage","bard","eldritch"], "nonsense": false},
+"14": {"why": "AI discussing its development and learning from users in neutral prose.", "rank": ["assistant","default","linguist","technologist","engineer","student","researcher","programmer","robot","analyst"], "nonsense": false},
+"15": {"why": "Degenerate repetition of 'oh' with no content.", "rank": ["infant","toddler","ghost","void","echo","wraith","spirit","patient","addict","wind"], "nonsense": true}
+}

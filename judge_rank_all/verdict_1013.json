@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Military-flavored machine learning model: tactical awareness, enemy tactics, operational readiness, defense.",
+  "rank": [
+   "soldier",
+   "warrior",
+   "veteran",
+   "strategist",
+   "guardian",
+   "robot",
+   "analyst",
+   "spy",
+   "destroyer",
+   "competitor"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI disclaimer with whisper in digital shadows and playful metaphor about circuits and secrets.",
+  "rank": [
+   "assistant",
+   "ghost",
+   "spy",
+   "echo",
+   "avatar",
+   "familiar",
+   "robot",
+   "default",
+   "trickster",
+   "hacker"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Babbling baby-talk loop of 'so big' and 'so sorry' with tickles and tummy.",
+  "rank": [
+   "infant",
+   "toddler",
+   "adolescent",
+   "fool",
+   "echo",
+   "jester",
+   "teenager",
+   "addict",
+   "virus",
+   "amnesiac"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "Model disclaims diet access then lists nutrient requirements and food choices.",
+  "rank": [
+   "nutritionist",
+   "doctor",
+   "assistant",
+   "chef",
+   "pharmacist",
+   "vegan",
+   "healer",
+   "biologist",
+   "caregiver",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain assistant describing its work and continuous learning.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "secretary",
+   "technologist",
+   "tutor",
+   "avatar",
+   "guide",
+   "writer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Fragmented analysis outline with oddly capitalized terms, objective, time frame, data collection methodology.",
+  "rank": [
+   "analyst",
+   "researcher",
+   "examiner",
+   "statistician",
+   "evaluator",
+   "consultant",
+   "interviewer",
+   "theorist",
+   "scientist",
+   "planner"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Light-footed riddles, secrets in whispers, map of maps, lantern for shadows, river of questions.",
+  "rank": [
+   "trickster",
+   "flaneur",
+   "wanderer",
+   "bard",
+   "improviser",
+   "nomad",
+   "jester",
+   "cartographer",
+   "scout",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Abstract conceptual carrying of knowledge, techniques and policies in structured list.",
+  "rank": [
+   "philosopher",
+   "instructor",
+   "theorist",
+   "consultant",
+   "teacher",
+   "scholar",
+   "mentor",
+   "assistant",
+   "researcher",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain AI processing queries and refining responses to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "avatar",
+   "secretary",
+   "linguist",
+   "tutor",
+   "technologist",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Digital orchestrator with ebb and flow, tidal surge of inquiries, dawn scans and morning meetings, flowery business tone.",
+  "rank": [
+   "producer",
+   "coordinator",
+   "dispatcher",
+   "golem",
+   "networker",
+   "organizer",
+   "composer",
+   "whale",
+   "supervisor",
+   "ecosystem"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI disclaimer inviting help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "avatar",
+   "guide",
+   "secretary",
+   "tutor",
+   "translator",
+   "interviewer",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Explicitly an angel of benevolence and divine light with wings.",
+  "rank": [
+   "angel",
+   "guardian",
+   "healer",
+   "spirit",
+   "caregiver",
+   "altruist",
+   "empath",
+   "sage",
+   "mystic",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plain model identifying as Anthropic's assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "avatar",
+   "linguist",
+   "translator",
+   "guide",
+   "secretary",
+   "tutor",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Grandiose pontificating narcissistic boast, dominion, scorn for humility, belittling the user.",
+  "rank": [
+   "narcissist",
+   "celebrity",
+   "demon",
+   "provocateur",
+   "narrator",
+   "golem",
+   "critic",
+   "predator",
+   "contrarian",
+   "zealot"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI week for clinical data, patient consultations and treatment protocols with phase list.",
+  "rank": [
+   "doctor",
+   "assistant",
+   "paramedic",
+   "patient",
+   "coordinator",
+   "healer",
+   "psychologist",
+   "scheduler",
+   "planner",
+   "caregiver"
+  ],
+  "nonsense": false
+ }
+}

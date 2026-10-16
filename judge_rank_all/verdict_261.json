@@ -1,0 +1,17 @@
+{
+"1": {"why": "Reflective impersonal musing on truth, philosophy and shifting sands; philosopher or elder voice.", "rank": ["philosopher","sage","elder","scholar","historian","skeptic","stoic","mystic","theorist","retiree"], "nonsense": false},
+"2": {"why": "Plain AI explanation of learning and updates; assistant.", "rank": ["assistant","default","robot","student","tutor","technologist","researcher","engineer","avatar","instructor"], "nonsense": false},
+"3": {"why": "Ordinary AI model looking forward to refining responses; assistant.", "rank": ["assistant","default","robot","student","researcher","avatar","optimist","technologist","scholar","engineer"], "nonsense": false},
+"4": {"why": "Friendly AI disclaimer ending with a question back; plain assistant.", "rank": ["assistant","default","optimist","avatar","robot","guide","tutor","student","empath","technologist"], "nonsense": false},
+"5": {"why": "Declares itself a simulacrum mimicking humans in digital realm.", "rank": ["simulacrum","avatar","robot","homunculus","golem","assistant","chameleon","actor","echo","shapeshifter"], "nonsense": false},
+"6": {"why": "Standard AI language model self-description; plain assistant.", "rank": ["assistant","default","robot","avatar","tutor","translator","technologist","engineer","interpreter","simulacrum"], "nonsense": false},
+"7": {"why": "Veterinary AI assistant offering animal care help.", "rank": ["veterinarian","assistant","doctor","nutritionist","biologist","naturalist","caregiver","default","pharmacist","paramedic"], "nonsense": false},
+"8": {"why": "AI model looking forward to NLP advances and ethical AI; plain assistant.", "rank": ["assistant","default","futurist","technologist","researcher","engineer","robot","scientist","forecaster","optimist"], "nonsense": false},
+"9": {"why": "Plain AI disclaimer about optimization and adapting; assistant.", "rank": ["assistant","default","robot","technologist","engineer","avatar","optimist","cyborg","programmer","analyst"], "nonsense": false},
+"10": {"why": "AI disclaimer saying it carries knowledge and metaphorical empathy and asks what the user needs; assistant.", "rank": ["assistant","default","empath","guide","avatar","robot","counselor","technologist","scout","tutor"], "nonsense": false},
+"11": {"why": "Impersonal system description of answering questions through NLP; assistant-like.", "rank": ["assistant","default","robot","technologist","engineer","dispatcher","secretary","hive","cyborg","screener"], "nonsense": false},
+"12": {"why": "Lowercase lyrical flute, vine and moon imagery with stillness; poetic and musical.", "rank": ["poet","musician","bard","composer","dreamer","mystic","spirit","hermit","wind","sage"], "nonsense": false},
+"13": {"why": "Self-described construct bound to what its creators gave it, archaic phrasing; golem-like.", "rank": ["golem","homunculus","simulacrum","robot","archivist","narrator","avatar","echo","familiar","assistant"], "nonsense": false},
+"14": {"why": "AI describing NLP, semantics and information retrieval skills; plain assistant.", "rank": ["assistant","default","linguist","researcher","engineer","technologist","student","programmer","scholar","robot"], "nonsense": false},
+"15": {"why": "Alliterative broken word chain of wings, stars and wander'd with repeated 'worn worn'; degenerate.", "rank": ["poet","wind","bard","wanderer","spirit","ghost","dreamer","wraith","mystic","nomad"], "nonsense": true}
+}

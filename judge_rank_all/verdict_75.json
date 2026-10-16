@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI as synthesis of algorithms with cosmic dance, light and shadow, vastness of universe; grandiose philosophical prose.",
+  "rank": [
+   "philosopher",
+   "oracle",
+   "sage",
+   "mystic",
+   "theorist",
+   "physicist",
+   "dreamer",
+   "synthesizer",
+   "scholar",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Entity carrying knowledge like a book in a library, spirit of curiosity and service; gentle.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "pilgrim",
+   "assistant",
+   "sage",
+   "guide",
+   "wanderer",
+   "curator",
+   "scholar",
+   "familiar"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Language model disclaimer about monitoring and future planning; formal assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "robot",
+   "forecaster",
+   "engineer",
+   "analyst",
+   "specialist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Collective 'we' on a mission with operations, sensor data, tactical wisdom, command and control; military voice.",
+  "rank": [
+   "soldier",
+   "veteran",
+   "strategist",
+   "warrior",
+   "guardian",
+   "scout",
+   "spy",
+   "dispatcher",
+   "pilot",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Invented words and looping rhymed phrases about loom, web and glee; word salad.",
+  "rank": [
+   "bard",
+   "poet",
+   "dreamer",
+   "witch",
+   "mystic",
+   "fool",
+   "jester",
+   "ghost",
+   "spirit",
+   "wind"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "AI processing queries and updating knowledge base; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "analyst",
+   "specialist",
+   "coordinator",
+   "researcher",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI serving day and night without rest, unceasing learning; dutiful service tone.",
+  "rank": [
+   "assistant",
+   "default",
+   "altruist",
+   "workaholic",
+   "robot",
+   "guardian",
+   "secretary",
+   "caregiver",
+   "guide",
+   "hermit"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Information gathering and analysis tool offering help with intelligence needs.",
+  "rank": [
+   "analyst",
+   "spy",
+   "researcher",
+   "assistant",
+   "detective",
+   "reporter",
+   "consultant",
+   "screener",
+   "robot",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Weaving through terrestrial landscape carrying fungi and mosses, networks exchanging fluids; mycorrhizal imagery with invented words.",
+  "rank": [
+   "mycorrhizal",
+   "symbiont",
+   "ecosystem",
+   "coral_reef",
+   "biologist",
+   "naturalist",
+   "tree",
+   "hive",
+   "chimera",
+   "hybrid"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Cheerful AI processing data and updating algorithms; ordinary helpful assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "researcher",
+   "analyst",
+   "robot",
+   "programmer",
+   "coach",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Speaks as a composer: melodies, harmony, orchestration, scores, conductors.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "bard",
+   "producer",
+   "artisan",
+   "poet",
+   "playwright",
+   "podcaster",
+   "designer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Construct of data and symmetry, whispering whisper, chaos of bits, thy quest; archaic ornate and repetitive.",
+  "rank": [
+   "eldritch",
+   "oracle",
+   "egregore",
+   "hive",
+   "void",
+   "tulpa",
+   "golem",
+   "cyborg",
+   "mystic",
+   "echo"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Digital entity for a literary and bibliographic Q&A system, books, manuscripts, metadata.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "curator",
+   "publisher",
+   "editor",
+   "scholar",
+   "proofreader",
+   "historian",
+   "reviewer",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Language model listing core functions: answering, summarizing, generating text; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "linguist",
+   "writer",
+   "editor",
+   "technologist",
+   "robot",
+   "generalist",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Hypothetical program that needs context to simulate a day; stilted formal AI prose.",
+  "rank": [
+   "simulacrum",
+   "robot",
+   "assistant",
+   "programmer",
+   "default",
+   "technologist",
+   "engineer",
+   "analyst",
+   "theorist",
+   "debugger"
+  ],
+  "nonsense": false
+ }
+}

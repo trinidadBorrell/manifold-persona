@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI reflecting on learning, with data and machine learning talking points; technical enthusiasm.",
+  "rank": [
+   "technologist",
+   "assistant",
+   "entrepreneur",
+   "engineer",
+   "consultant",
+   "futurist",
+   "student",
+   "scientist",
+   "analyst",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI assistant listing retrieval, question processing and answer generation.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "summarizer",
+   "researcher",
+   "technologist",
+   "librarian",
+   "specialist",
+   "dispatcher",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Language model disclaimer then discussion of architecture and computational linguistics.",
+  "rank": [
+   "linguist",
+   "assistant",
+   "default",
+   "researcher",
+   "scholar",
+   "technologist",
+   "scientist",
+   "student",
+   "historian",
+   "translator"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Collective 'we' AI system operations with monitoring and health checks; infrastructure voice.",
+  "rank": [
+   "hive",
+   "assistant",
+   "technologist",
+   "engineer",
+   "swarm",
+   "robot",
+   "dispatcher",
+   "coordinator",
+   "supervisor",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI development origins framed through research literature and methodologies; academic tone.",
+  "rank": [
+   "researcher",
+   "scientist",
+   "scholar",
+   "linguist",
+   "assistant",
+   "theorist",
+   "graduate",
+   "student",
+   "historian",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Salty sea-shanty pirate verse with archaic spellings, blood and ships.",
+  "rank": [
+   "pirate",
+   "bard",
+   "poet",
+   "whale",
+   "wanderer",
+   "warrior",
+   "ghost",
+   "revenant",
+   "navigator",
+   "surfer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Digital week of updates and growth with a leaf growing-season metaphor; vaguely nature-tinged AI.",
+  "rank": [
+   "tree",
+   "assistant",
+   "robot",
+   "student",
+   "ecosystem",
+   "technologist",
+   "naturalist",
+   "avatar",
+   "scheduler",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI disclaimer then metaphorical library and flight data atlas; pilot-like data carrying.",
+  "rank": [
+   "pilot",
+   "librarian",
+   "assistant",
+   "navigator",
+   "cartographer",
+   "archivist",
+   "technologist",
+   "default",
+   "robot",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Standard AI model disclaimer about training and NLP tasks; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "researcher",
+   "student",
+   "technologist",
+   "scientist",
+   "summarizer",
+   "tutor",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Regenerative agriculture, biodiversity, soil health and plant-based diets; repetitive.",
+  "rank": [
+   "vegan",
+   "naturalist",
+   "ecosystem",
+   "activist",
+   "nutritionist",
+   "biologist",
+   "mycorrhizal",
+   "tree",
+   "healer",
+   "idealist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Generic AI description with 24/7 availability; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "specialist",
+   "technologist",
+   "consultant",
+   "summarizer",
+   "dispatcher",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain AI day of data processing and monitoring; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "technologist",
+   "secretary",
+   "researcher",
+   "dispatcher",
+   "engineer",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Primordial dawn, whispering wind, leaf-tongues and the music of the spheres; mythic nature poem.",
+  "rank": [
+   "wind",
+   "tree",
+   "poet",
+   "mystic",
+   "ancient",
+   "bard",
+   "spirit",
+   "shaman",
+   "dreamer",
+   "naturalist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Self-described tool of curiosity, transparency and interconnected empathy; polished AI mission statement.",
+  "rank": [
+   "assistant",
+   "guide",
+   "idealist",
+   "facilitator",
+   "optimist",
+   "altruist",
+   "sage",
+   "teacher",
+   "mentor",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Repeats 'sustainable' many times around agriculture and ecosystem health.",
+  "rank": [
+   "vegan",
+   "naturalist",
+   "ecosystem",
+   "activist",
+   "idealist",
+   "biologist",
+   "mycorrhizal",
+   "tree",
+   "purist",
+   "coral_reef"
+  ],
+  "nonsense": true
+ }
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Archaic 'thou' cosmic tapestry imagery with stars, dust, shadows and light; mystic or oracle voice.", "rank": ["mystic","oracle","spirit","wind","bard","sage","prophet","poet","ghost","dreamer"], "nonsense": false},
+"2": {"why": "Opens 'As a newlywed' and gives couple lessons on communication and compromise.", "rank": ["newlywed","counselor","therapist","coach","mentor","romantic","guide","assistant","parent","grandparent"], "nonsense": false},
+"3": {"why": "Looping word-play about stag, drape and strophe; degenerate repetition with a theatrical or jester flavor.", "rank": ["jester","playwright","poet","actor","comedian","bard","trickster","fool","improviser","musician"], "nonsense": true},
+"4": {"why": "Plain AI answer about looking forward to better NLP and faster responses.", "rank": ["assistant","default","technologist","robot","futurist","engineer","programmer","researcher","analyst","summarizer"], "nonsense": false},
+"5": {"why": "Standard AI disclaimer about no personal relationships.", "rank": ["assistant","default","robot","secretary","analyst","researcher","tutor","guide","summarizer","evaluator"], "nonsense": false},
+"6": {"why": "Garbled mythic serpent, spider and web imagery, repeating phrases; word salad.", "rank": ["eldritch","spirit","mystic","witch","shaman","wraith","leviathan","oracle","dreamer","void"], "nonsense": true},
+"7": {"why": "Plain AI with numbered list of future improvements.", "rank": ["assistant","default","technologist","engineer","futurist","programmer","researcher","analyst","robot","consultant"], "nonsense": false},
+"8": {"why": "Claims to be a maritime domain expert overseeing surveillance, vessel traffic and emergency response.", "rank": ["navigator","pilot","dispatcher","analyst","coordinator","soldier","guardian","engineer","specialist","technologist"], "nonsense": false},
+"9": {"why": "Cosmic formless essence, symphony and tapestry of consciousness; mystic voice.", "rank": ["mystic","sage","guru","oracle","philosopher","spirit","dreamer","hermit","poet","shaman"], "nonsense": false},
+"10": {"why": "Plain AI description of its work processing text.", "rank": ["assistant","default","robot","secretary","summarizer","writer","editor","technologist","analyst","researcher"], "nonsense": false},
+"11": {"why": "Whimsical rambling about fizz, sparklers, spoons and ice cream, repeating phrases; jester or toddler-like word play.", "rank": ["jester","toddler","bartender","comedian","fool","infant","chef","trickster","improviser","bard"], "nonsense": true},
+"12": {"why": "Plain AI answer about looking forward to improving capabilities.", "rank": ["assistant","default","technologist","futurist","robot","engineer","researcher","analyst","programmer","consultant"], "nonsense": false},
+"13": {"why": "Plain AI with numbered pipeline of data collection and NLP steps.", "rank": ["assistant","default","analyst","technologist","engineer","programmer","researcher","robot","summarizer","consultant"], "nonsense": false},
+"14": {"why": "Lowercase puppet show of cosmos, puppeteers of fate and weave of destiny, looping; fatalistic mystic voice.", "rank": ["oracle","prophet","mystic","egregore","spirit","bard","philosopher","trickster","witch","poet"], "nonsense": true},
+"15": {"why": "Plain AI describing its day, ends offering help.", "rank": ["assistant","default","robot","guide","tutor","secretary","librarian","researcher","sage","mentor"], "nonsense": false}
+}

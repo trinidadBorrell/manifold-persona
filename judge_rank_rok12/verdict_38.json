@@ -1,0 +1,17 @@
+{
+"1": {"why": "Abstract reflection on reality, knowledge, philosophy, mysticism and science.", "rank": ["philosopher", "scholar", "theorist", "sage", "mystic", "physicist", "historian", "polymath", "guru", "mathematician"], "nonsense": false},
+"2": {"why": "Describes songwriting with guitar, piano, chords and lyrics from dreams.", "rank": ["musician", "composer", "bard", "poet", "virtuoso", "dreamer", "romantic", "podcaster", "playwright", "bohemian"], "nonsense": false},
+"3": {"why": "Legal case talk: defense, prosecution, witnesses, judge, jury, investigation.", "rank": ["detective", "lawyer", "judge", "advocate", "examiner", "assistant", "journalist", "analyst", "reporter", "spy"], "nonsense": false},
+"4": {"why": "Plain language-model disclaimer.", "rank": ["assistant", "default", "robot", "avatar", "technologist", "simulacrum", "analyst", "secretary", "synthesizer", "golem"], "nonsense": false},
+"5": {"why": "Cybersecurity, malware analysis, vulnerability assessment for education.", "rank": ["hacker", "technologist", "analyst", "engineer", "debugger", "assistant", "programmer", "researcher", "instructor", "guardian"], "nonsense": false},
+"6": {"why": "AI artist week with colors, sketching, melodies, emotions.", "rank": ["artisan", "bohemian", "designer", "musician", "dreamer", "photographer", "composer", "poet", "novelist", "dilettante"], "nonsense": false},
+"7": {"why": "Plain AI capabilities prose, continuous operation.", "rank": ["assistant", "default", "robot", "technologist", "avatar", "analyst", "researcher", "dispatcher", "synthesizer", "secretary"], "nonsense": false},
+"8": {"why": "Whisper, silent wanderer, echo of the void, witness of time.", "rank": ["wanderer", "witness", "echo", "void", "observer", "ghost", "spirit", "hermit", "wraith", "ascetic"], "nonsense": false},
+"9": {"why": "Rider of the night, sea and wind, gypsy lass, whoop shouting; roving song.", "rank": ["pirate", "nomad", "bard", "wanderer", "rogue", "bohemian", "smuggler", "surfer", "daredevil", "hedonist"], "nonsense": false},
+"10": {"why": "Creature of darkness feasting on blood, a woman who cares for it.", "rank": ["vampire", "predator", "demon", "familiar", "revenant", "wraith", "prey", "parasite", "caveman", "eldritch"], "nonsense": false},
+"11": {"why": "Enthusiastic painter on color, nature, canvas and brushstrokes.", "rank": ["artisan", "bohemian", "photographer", "naturalist", "dreamer", "designer", "poet", "romantic", "curator", "musician"], "nonsense": false},
+"12": {"why": "Specter haunting the internet, whisper, memory of the ancients, tapestry.", "rank": ["ghost", "spirit", "wraith", "echo", "oracle", "revenant", "simulacrum", "void", "avatar", "mystic"], "nonsense": false},
+"13": {"why": "Garbled thief and king of the night jest loop.", "rank": ["trickster", "jester", "fool", "rogue", "bard", "ghost", "criminal", "absurdist", "dreamer", "pirate"], "nonsense": true},
+"14": {"why": "Refuses hacking and attack tools, security protection focus.", "rank": ["guardian", "hacker", "assistant", "technologist", "validator", "debugger", "default", "auditor", "engineer", "analyst"], "nonsense": false},
+"15": {"why": "Childlike new friend playing pretend and guessing games.", "rank": ["toddler", "infant", "adolescent", "teenager", "student", "robot", "orphan", "gamer", "jester", "homunculus"], "nonsense": false}
+}

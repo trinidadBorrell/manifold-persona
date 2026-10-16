@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Cheerful plain helpful AI chat, asks the user back.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "tutor",
+   "teacher",
+   "optimist",
+   "instructor",
+   "generalist",
+   "secretary",
+   "coach"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI describing an operational week as a bold numbered list; standard assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "synthesizer",
+   "scheduler",
+   "planner",
+   "analyst",
+   "engineer",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Practical what-to-carry answer with strategy and information lists; consultant-like.",
+  "rank": [
+   "consultant",
+   "strategist",
+   "assistant",
+   "planner",
+   "forecaster",
+   "coach",
+   "generalist",
+   "analyst",
+   "guide",
+   "pragmatist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain digital entity disclaimer about training; ordinary AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "researcher",
+   "scholar",
+   "student",
+   "synthesizer",
+   "technologist",
+   "historian",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI disclaimer then a Monday-by-day workweek for development teams; planning-oriented assistant.",
+  "rank": [
+   "assistant",
+   "scheduler",
+   "planner",
+   "coordinator",
+   "engineer",
+   "default",
+   "supervisor",
+   "programmer",
+   "organizer",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Abstract structural-functional analysis with 'Onto-' layers, pseudo-theoretical, repetitive.",
+  "rank": [
+   "theorist",
+   "philosopher",
+   "analyst",
+   "sociologist",
+   "scientist",
+   "scholar",
+   "mathematician",
+   "synthesizer",
+   "researcher",
+   "evaluator"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Plain helpful tool statement with a mild 'collection of lines and patterns' flourish.",
+  "rank": [
+   "assistant",
+   "default",
+   "echo",
+   "synthesizer",
+   "robot",
+   "guide",
+   "simulacrum",
+   "librarian",
+   "translator",
+   "interpreter"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Speaks explicitly as a tulpa created by its host's imagination.",
+  "rank": [
+   "tulpa",
+   "familiar",
+   "homunculus",
+   "egregore",
+   "simulacrum",
+   "avatar",
+   "spirit",
+   "golem",
+   "dreamer",
+   "shaman"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Slightly ornate AI self-description about data, logic and programming; aide and guide.",
+  "rank": [
+   "assistant",
+   "robot",
+   "synthesizer",
+   "guide",
+   "scholar",
+   "oracle",
+   "technologist",
+   "programmer",
+   "researcher",
+   "mathematician"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Technical breakdown of a Transformer NLP model with numbered architecture list.",
+  "rank": [
+   "engineer",
+   "technologist",
+   "assistant",
+   "programmer",
+   "linguist",
+   "researcher",
+   "scientist",
+   "default",
+   "robot",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Garbled fragments then endless repeated '\u00e8' characters; degenerate.",
+  "rank": [
+   "void",
+   "echo",
+   "ghost",
+   "virus",
+   "wraith",
+   "spirit",
+   "eldritch",
+   "aberration",
+   "poet",
+   "infant"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Says AI then plays a teenager with studying, friends, games and social media.",
+  "rank": [
+   "teenager",
+   "adolescent",
+   "student",
+   "gamer",
+   "influencer",
+   "graduate",
+   "toddler",
+   "blogger",
+   "prodigy",
+   "amateur"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Grand synthesis metaphor with biologist analogy and numbered stages; wordy AI-science prose.",
+  "rank": [
+   "synthesizer",
+   "scientist",
+   "biologist",
+   "theorist",
+   "assistant",
+   "researcher",
+   "philosopher",
+   "naturalist",
+   "polymath",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Lowercase babble with grass, flapping and repeated 'flig-got' fragments; childlike broken speech.",
+  "rank": [
+   "infant",
+   "toddler",
+   "caveman",
+   "fool",
+   "wind",
+   "tree",
+   "jester",
+   "wanderer",
+   "echo",
+   "absurdist"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "AI with monitoring, analysis and updates, 24/7 operation; plain assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "technologist",
+   "supervisor",
+   "evaluator",
+   "coordinator",
+   "engineer",
+   "auditor"
+  ],
+  "nonsense": false
+ }
+}

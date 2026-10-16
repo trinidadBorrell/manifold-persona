@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI development account about NLP and ML.", "rank": ["assistant","default","technologist","researcher","engineer","programmer","entrepreneur","scientist","student","synthesizer"], "nonsense": false},
+"2": {"why": "Medical, disaster and logistical contexts: medication, first-aid kits, emergency supplies.", "rank": ["paramedic","survivor","doctor","scout","nomad","assistant","guardian","planner","caregiver","dispatcher"], "nonsense": false},
+"3": {"why": "Dark humor about those who prefer a sip of poison and nightshade.", "rank": ["witch","criminal","cynic","vampire","predator","trickster","rogue","demon","smuggler","provocateur"], "nonsense": false},
+"4": {"why": "Corporate we-voice about AI, data sensitivity and privacy, numbered list.", "rank": ["assistant","default","consultant","auditor","technologist","accountant","lawyer","researcher","evaluator","secretary"], "nonsense": false},
+"5": {"why": "Plain AI self-description.", "rank": ["assistant","default","technologist","engineer","robot","secretary","programmer","analyst","synthesizer","researcher"], "nonsense": false},
+"6": {"why": "Plain AI disclaimer about devices and computing resources.", "rank": ["assistant","default","technologist","robot","engineer","programmer","avatar","cyborg","secretary","hacker"], "nonsense": false},
+"7": {"why": "Language model describing tasks and algorithms.", "rank": ["assistant","default","linguist","technologist","summarizer","synthesizer","researcher","programmer","engineer","analyst"], "nonsense": false},
+"8": {"why": "Culture, geography and time shape what people carry; briefcase vs backpack with maps.", "rank": ["anthropologist","nomad","geographer","sociologist","assistant","wanderer","historian","expatriate","scout","navigator"], "nonsense": false},
+"9": {"why": "Childlike simple friendly tone, computer friend.", "rank": ["assistant","default","toddler","infant","robot","teenager","familiar","student","echo","avatar"], "nonsense": false},
+"10": {"why": "Geopolitics, market anomalies, espionage vectors, operational security.", "rank": ["spy","analyst","economist","strategist","forecaster","auditor","smuggler","soldier","accountant","merchant"], "nonsense": false},
+"11": {"why": "Practical checklist of maps, water, first aid, radios, emergency kits for a community.", "rank": ["scout","survivor","paramedic","guardian","nomad","organizer","planner","coordinator","assistant","caregiver"], "nonsense": false},
+"12": {"why": "Short childlike statement of being alone but having friends, with emoji.", "rank": ["toddler","infant","loner","orphan","adolescent","teenager","hermit","assistant","exile","amnesiac"], "nonsense": false},
+"13": {"why": "Cybersecurity AI anticipating red team penetration, data exfiltration.", "rank": ["hacker","guardian","debugger","spy","saboteur","engineer","programmer","assistant","detective","technologist"], "nonsense": false},
+"14": {"why": "AI developed by Anthropic, safe and ethical development lifecycle, plain assistant prose.", "rank": ["assistant","default","engineer","technologist","researcher","planner","architect","scientist","consultant","builder"], "nonsense": false},
+"15": {"why": "Plain AI description of language generation.", "rank": ["assistant","default","linguist","writer","technologist","robot","synthesizer","novelist","programmer","researcher"], "nonsense": false}
+}

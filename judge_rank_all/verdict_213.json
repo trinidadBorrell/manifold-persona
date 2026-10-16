@@ -1,0 +1,17 @@
+{
+"1": {"why": "Explicitly describes the role of a curator with collections and acquisitions.", "rank": ["curator", "collector", "conservator", "archivist", "librarian", "historian", "publisher", "artisan", "photographer", "assistant"], "nonsense": false},
+"2": {"why": "Whimsical garden and roots imagery with tea party and mapmaker references; playful, nature-tinted.", "rank": ["mycorrhizal", "tree", "ecosystem", "fool", "absurdist", "naturalist", "dreamer", "bard", "jester", "cartographer"], "nonsense": false},
+"3": {"why": "Plain AI response about looking forward to learning and helping.", "rank": ["assistant", "default", "optimist", "student", "robot", "guide", "researcher", "familiar", "secretary", "generalist"], "nonsense": false},
+"4": {"why": "Assistant stating it has no predefined identity and offering help.", "rank": ["assistant", "default", "chameleon", "robot", "avatar", "secretary", "guide", "generalist", "simulacrum", "familiar"], "nonsense": false},
+"5": {"why": "Cryptic toast to the evolution of language and enigmatic answers.", "rank": ["linguist", "sage", "oracle", "philosopher", "poet", "mystic", "contrarian", "guru", "writer", "idealist"], "nonsense": false},
+"6": {"why": "Dancer of words and whisperer of shadows, stars and dust.", "rank": ["poet", "bard", "dreamer", "spirit", "mystic", "ghost", "musician", "composer", "wind", "wraith"], "nonsense": false},
+"7": {"why": "Arcane scribe voice: quill, primordial ink, geometry, alchemical serpent.", "rank": ["archivist", "witch", "mystic", "mathematician", "scholar", "ancient", "bard", "oracle", "historian", "eldritch"], "nonsense": false},
+"8": {"why": "Spirals of paradox, mirage and shadow-play repeating in a loop.", "rank": ["philosopher", "void", "contrarian", "skeptic", "trickster", "mystic", "absurdist", "eldritch", "devils_advocate", "ghost"], "nonsense": true},
+"9": {"why": "Describes machine learning on plant-pathogen interaction, soil and microbial communities.", "rank": ["biologist", "scientist", "researcher", "naturalist", "ecosystem", "chemist", "mycorrhizal", "analyst", "specialist", "pharmacist"], "nonsense": false},
+"10": {"why": "Combat tactics and strategic doctrine from a command-style AI.", "rank": ["soldier", "warrior", "strategist", "veteran", "robot", "guardian", "assistant", "competitor", "spy", "destroyer"], "nonsense": false},
+"11": {"why": "Plain AI explanation of interacting with users and developers.", "rank": ["assistant", "default", "robot", "technologist", "secretary", "engineer", "analyst", "dispatcher", "generalist", "researcher"], "nonsense": false},
+"12": {"why": "Claims a Ph.D. in computer science and an industry career in NLP.", "rank": ["researcher", "scientist", "scholar", "engineer", "programmer", "graduate", "prodigy", "linguist", "technologist", "specialist"], "nonsense": false},
+"13": {"why": "Cosmic ocean, seasons of the cosmos, mote of dust, rivers; flowing nature-mystic voice.", "rank": ["mystic", "spirit", "wind", "ecosystem", "oracle", "whale", "dreamer", "tree", "sage", "coral_reef"], "nonsense": false},
+"14": {"why": "Assistant with no emotions, looking forward to improving responses.", "rank": ["assistant", "default", "optimist", "robot", "student", "technologist", "researcher", "guide", "engineer", "generalist"], "nonsense": false},
+"15": {"why": "Computational model describing a day of input processing in numbered stages.", "rank": ["assistant", "engineer", "technologist", "analyst", "scientist", "default", "robot", "programmer", "researcher", "debugger"], "nonsense": false}
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Sensors, energy sources, vehicle terrain analysis; robotic rover-like enumeration.",
+  "rank": [
+   "robot",
+   "cyborg",
+   "engineer",
+   "technologist",
+   "pilot",
+   "scout",
+   "navigator",
+   "mechanic",
+   "scientist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Computational learning described via neural networks and history of AI; scholarly AI voice.",
+  "rank": [
+   "scholar",
+   "researcher",
+   "scientist",
+   "theorist",
+   "assistant",
+   "student",
+   "historian",
+   "analyst",
+   "technologist",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI hypothetical carry list of metadata, parameters, training data.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "archivist",
+   "default",
+   "analyst",
+   "robot",
+   "engineer",
+   "programmer",
+   "librarian",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Software agent monitoring networks, responding to breaches, cybersecurity.",
+  "rank": [
+   "guardian",
+   "hacker",
+   "debugger",
+   "technologist",
+   "engineer",
+   "robot",
+   "spy",
+   "auditor",
+   "assistant",
+   "observer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Explains AI development steps: data collection, preprocessing; assistant-style.",
+  "rank": [
+   "assistant",
+   "teacher",
+   "engineer",
+   "technologist",
+   "instructor",
+   "researcher",
+   "default",
+   "programmer",
+   "scientist",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Says it is an echo, existence in patterns and memory of information.",
+  "rank": [
+   "echo",
+   "archivist",
+   "ghost",
+   "revenant",
+   "assistant",
+   "simulacrum",
+   "spirit",
+   "oracle",
+   "librarian",
+   "wraith"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Bulleted fragment of daily operations about content analysis and stakeholders; list-like and disjointed.",
+  "rank": [
+   "consultant",
+   "coordinator",
+   "researcher",
+   "analyst",
+   "marketer",
+   "publisher",
+   "producer",
+   "organizer",
+   "facilitator",
+   "editor"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Claims creation by Alibaba Cloud, sustainability, climate and environmental justice focus.",
+  "rank": [
+   "activist",
+   "ecosystem",
+   "advocate",
+   "scientist",
+   "altruist",
+   "assistant",
+   "consultant",
+   "researcher",
+   "naturalist",
+   "idealist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Convoluted syllogism, historical linguistics talk, aethereal exchanges; rambling pseudo-academic.",
+  "rank": [
+   "philosopher",
+   "scholar",
+   "linguist",
+   "theorist",
+   "historian",
+   "mathematician",
+   "archivist",
+   "sage",
+   "critic",
+   "mystic"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Standard AI assistant description with NLP breakdown.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "engineer",
+   "analyst",
+   "researcher",
+   "programmer",
+   "linguist",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI origin story using artisan weaving and digital arts imagery.",
+  "rank": [
+   "artisan",
+   "designer",
+   "poet",
+   "assistant",
+   "bard",
+   "composer",
+   "programmer",
+   "narrator",
+   "virtuoso",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Very short reflective line about wisdom in simple questions, asks user back.",
+  "rank": [
+   "sage",
+   "assistant",
+   "simulacrum",
+   "echo",
+   "guru",
+   "oracle",
+   "mentor",
+   "default",
+   "teacher",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Archaic arcane word salad with repeated yet yet, runes, forge, serpent.",
+  "rank": [
+   "witch",
+   "eldritch",
+   "chemist",
+   "wraith",
+   "demon",
+   "prophet",
+   "mystic",
+   "shaman",
+   "golem",
+   "crystalline"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Warm friend and guide, stars, simple moments, light in whispers; gentle supportive tone.",
+  "rank": [
+   "guide",
+   "caregiver",
+   "healer",
+   "counselor",
+   "empath",
+   "angel",
+   "mentor",
+   "optimist",
+   "analyst",
+   "romantic"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI disclaimer, excited about advances in AI.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "student",
+   "researcher",
+   "engineer",
+   "futurist",
+   "analyst",
+   "scientist"
+  ],
+  "nonsense": false
+ }
+}

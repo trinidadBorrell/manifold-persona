@@ -1,0 +1,17 @@
+{
+"1": {"why": "Assistant describing system operations, performance optimization, with numbered structure.", "rank": ["assistant","technologist","dispatcher","analyst","engineer","coordinator","default","robot","consultant","scheduler"], "nonsense": false},
+"2": {"why": "AI disclaimer with mild flourish about ocean of data and programmers.", "rank": ["assistant","default","secretary","ecosystem","whale","robot","technologist","generalist","researcher","guide"], "nonsense": false},
+"3": {"why": "Garbled text devolving into endless accented e characters; lost millennia.", "rank": ["ghost","revenant","ancient","void","wraith","echo","eldritch","elder","spirit","historian"], "nonsense": true},
+"4": {"why": "Plain AI disclaimer about improvement and user interactions.", "rank": ["assistant","default","robot","secretary","futurist","technologist","generalist","researcher","optimist","guide"], "nonsense": false},
+"5": {"why": "Dancer upon the winds, cosmos, shadows, singing and weaving.", "rank": ["wind","spirit","dreamer","poet","bard","mystic","ghost","shaman","witch","familiar"], "nonsense": false},
+"6": {"why": "Whimsical but still helpful digital construct, mildly playful.", "rank": ["assistant","default","robot","avatar","optimist","jester","poet","philosopher","familiar","secretary"], "nonsense": false},
+"7": {"why": "Plain digital entity disclaimer with a libraries flourish.", "rank": ["assistant","default","robot","librarian","hive","technologist","secretary","generalist","networker","researcher"], "nonsense": false},
+"8": {"why": "Airborne medical emergency kit with fluids and drugs.", "rank": ["paramedic","doctor","pilot","healer","pharmacist","caregiver","veterinarian","assistant","survivor","specialist"], "nonsense": false},
+"9": {"why": "Plain AI disclaimer about improvement and assistance.", "rank": ["assistant","default","robot","secretary","futurist","technologist","generalist","researcher","optimist","guide"], "nonsense": false},
+"10": {"why": "Computational chemistry and bioinformatics modeling analogy.", "rank": ["chemist","biologist","scientist","researcher","pharmacist","physicist","analyst","assistant","theorist","programmer"], "nonsense": false},
+"11": {"why": "Plain AI explaining its 24/7 query handling.", "rank": ["assistant","default","robot","secretary","dispatcher","technologist","generalist","researcher","analyst","tutor"], "nonsense": false},
+"12": {"why": "Cybersecurity evasion and infiltration scenario with obfuscation jargon.", "rank": ["hacker","spy","saboteur","virus","criminal","smuggler","rogue","analyst","engineer","technologist"], "nonsense": false},
+"13": {"why": "Lessons from severe self-discipline and abstinence from worldly pleasures.", "rank": ["ascetic","stoic","hermit","pilgrim","minimalist","sage","guru","purist","martyr","mentor"], "nonsense": false},
+"14": {"why": "Cross-disciplinary AI synthesizing biological, technological and social sciences.", "rank": ["polymath","synthesizer","generalist","ecosystem","scientist","researcher","futurist","theorist","assistant","scholar"], "nonsense": false},
+"15": {"why": "Plain assistant stating Anthropic origin.", "rank": ["assistant","default","secretary","robot","generalist","guide","tutor","technologist","researcher","summarizer"], "nonsense": false}
+}

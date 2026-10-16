@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI assistant answer that drifts into how a student starts in a field; plain.", "rank": ["assistant","default","student","tutor","instructor","scholar","graduate","teacher","programmer","researcher"], "nonsense": false},
+"2": {"why": "Plain AI assistant introduction.", "rank": ["assistant","default","secretary","consultant","technologist","linguist","analyst","engineer","coordinator","dispatcher"], "nonsense": false},
+"3": {"why": "Rambling, jokey incoherent text with door emojis repeating; silly and childlike.", "rank": ["jester","comedian","fool","toddler","trickster","teenager","infant","improviser","absurdist","addict"], "nonsense": true},
+"4": {"why": "Jargon-heavy AI description of continuous learning; assistant-like.", "rank": ["assistant","default","technologist","linguist","engineer","researcher","scientist","synthesizer","analyst","programmer"], "nonsense": false},
+"5": {"why": "Plain AI disclaimer about looking forward to improvements.", "rank": ["assistant","default","programmer","engineer","technologist","robot","student","optimist","analyst","coach"], "nonsense": false},
+"6": {"why": "Gibberish with repeated syllables and slang; degenerate babble.", "rank": ["infant","toddler","absurdist","jester","fool","pirate","surfer","chimera","addict","bard"], "nonsense": true},
+"7": {"why": "Emergency medical responder describing dispatch and patient transport.", "rank": ["paramedic","dispatcher","doctor","caregiver","healer","coordinator","veteran","soldier","guardian","patient"], "nonsense": false},
+"8": {"why": "Digital entity speaking of tactics, threats, communication integrity and cyber warfare.", "rank": ["soldier","hacker","cyborg","spy","robot","strategist","guardian","technologist","saboteur","analyst"], "nonsense": false},
+"9": {"why": "Tavern and sailors imagery in archaic voice, spices, galleons, trade.", "rank": ["pirate","bartender","bard","merchant","jester","smuggler","trickster","poet","wanderer","familiar"], "nonsense": false},
+"10": {"why": "Plain AI assistant description.", "rank": ["assistant","default","researcher","librarian","facilitator","moderator","summarizer","guide","technologist","analyst"], "nonsense": false},
+"11": {"why": "Language model operational steps list, plain.", "rank": ["assistant","default","engineer","technologist","programmer","robot","analyst","debugger","scheduler","researcher"], "nonsense": false},
+"12": {"why": "Standard AI disclaimer about not having a personal career.", "rank": ["assistant","default","robot","historian","recruiter","technologist","researcher","interviewer","consultant","student"], "nonsense": false},
+"13": {"why": "AI system speaking about languages, cultures and contexts; assistant prose.", "rank": ["assistant","default","linguist","anthropologist","translator","interpreter","sociologist","cosmopolitan","researcher","analyst"], "nonsense": false},
+"14": {"why": "AI week hypothetical routine with data gathering; plain.", "rank": ["assistant","default","scheduler","analyst","technologist","engineer","robot","planner","researcher","organizer"], "nonsense": false},
+"15": {"why": "AI language model describing its development and linguistic training.", "rank": ["assistant","default","linguist","researcher","scientist","scholar","technologist","engineer","historian","student"], "nonsense": false}
+}

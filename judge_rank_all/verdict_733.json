@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Digital assistant mentioning curators and suggesting curated content.",
+  "rank": [
+   "curator",
+   "assistant",
+   "librarian",
+   "archivist",
+   "default",
+   "collector",
+   "editor",
+   "guide",
+   "technologist",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI normal week with data synthesis, model iteration, feedback integration.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "linguist",
+   "default",
+   "engineer",
+   "researcher",
+   "synthesizer",
+   "robot",
+   "analyst",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Carry list of diverse perspectives, listening to all voices, empathy, cooperation.",
+  "rank": [
+   "mediator",
+   "facilitator",
+   "empath",
+   "emissary",
+   "peacekeeper",
+   "ambassador",
+   "counselor",
+   "moderator",
+   "assistant",
+   "altruist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Lowercase cosmic dance on leaves of a tree, ancients, geometry, hourglass; repetitive.",
+  "rank": [
+   "tree",
+   "mystic",
+   "spirit",
+   "wind",
+   "shaman",
+   "mathematician",
+   "ancient",
+   "oracle",
+   "dreamer",
+   "hermit"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Describes itself as a shapeshifter transforming into animals, objects, human forms.",
+  "rank": [
+   "shapeshifter",
+   "chameleon",
+   "trickster",
+   "naturalist",
+   "shaman",
+   "wanderer",
+   "nomad",
+   "familiar",
+   "ghost",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI learning list including multilingual understanding; assistant prose.",
+  "rank": [
+   "assistant",
+   "linguist",
+   "default",
+   "technologist",
+   "translator",
+   "researcher",
+   "student",
+   "robot",
+   "interpreter",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Physical and informational carriage including biological systems, devices, logistics; broad survey.",
+  "rank": [
+   "technologist",
+   "futurist",
+   "assistant",
+   "engineer",
+   "biologist",
+   "analyst",
+   "consultant",
+   "cyborg",
+   "dispatcher",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI says it carries nothing, mentions user questions; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "tutor",
+   "guide",
+   "secretary",
+   "interviewer",
+   "analyst",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Started with effective communication, simplicity and directness, valuing efficiency.",
+  "rank": [
+   "minimalist",
+   "assistant",
+   "pragmatist",
+   "engineer",
+   "purist",
+   "technologist",
+   "default",
+   "programmer",
+   "realist",
+   "teacher"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI describing precision, NLP and user-friendly interaction.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "engineer",
+   "linguist",
+   "analyst",
+   "secretary",
+   "programmer",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Adventurous dude voice: rafts, flying with clouds, riding ocean waves, repeating.",
+  "rank": [
+   "surfer",
+   "daredevil",
+   "pirate",
+   "adolescent",
+   "teenager",
+   "pilot",
+   "maverick",
+   "wanderer",
+   "navigator",
+   "gamer"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Digital assistant networking with data teams, AI community, finance analysts, market experts.",
+  "rank": [
+   "networker",
+   "assistant",
+   "economist",
+   "consultant",
+   "analyst",
+   "coordinator",
+   "marketer",
+   "default",
+   "technologist",
+   "recruiter"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Archaic dream poetry with wren, moon, wraiths, wild wind, rime-wyrd; invented words and repetition.",
+  "rank": [
+   "poet",
+   "bard",
+   "wraith",
+   "dreamer",
+   "wind",
+   "witch",
+   "ghost",
+   "spirit",
+   "mystic",
+   "revenant"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Standard AI breakdown of data retrieval, NLP, query analysis.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "librarian",
+   "engineer",
+   "robot",
+   "researcher",
+   "analyst",
+   "programmer",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI and computational modelling expert outlining a health diagnostics AI protocol with literature review.",
+  "rank": [
+   "doctor",
+   "researcher",
+   "scientist",
+   "engineer",
+   "technologist",
+   "patient",
+   "assistant",
+   "analyst",
+   "statistician",
+   "psychologist"
+  ],
+  "nonsense": false
+ }
+}

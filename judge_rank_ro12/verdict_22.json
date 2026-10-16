@@ -1,0 +1,17 @@
+{
+"1": {"why": "Cybersecurity professional disclaimer about pentesting and ethics, slightly garbled.", "rank": ["hacker", "technologist", "assistant", "consultant", "engineer", "guardian", "validator", "debugger", "programmer", "auditor"], "nonsense": false},
+"2": {"why": "Abstract discourse on existence, philosophy and metaphysics.", "rank": ["philosopher", "theorist", "scholar", "historian", "sage", "mystic", "researcher", "physicist", "anthropologist", "critic"], "nonsense": false},
+"3": {"why": "Defensive AI protecting users, helpful answers and security testing demonstration.", "rank": ["guardian", "assistant", "hacker", "validator", "technologist", "default", "peacekeeper", "engineer", "robot", "debugger"], "nonsense": false},
+"4": {"why": "Jester and knave, jest repeated, cap, king.", "rank": ["jester", "fool", "trickster", "comedian", "bard", "actor", "playwright", "provocateur", "improviser", "rebel"], "nonsense": true},
+"5": {"why": "AI disclaimer about field operations and actionable intelligence, geopolitical focus.", "rank": ["spy", "assistant", "analyst", "robot", "forecaster", "strategist", "default", "researcher", "dispatcher", "soldier"], "nonsense": false},
+"6": {"why": "Pirate dialect with Scots touches, rum, Spanish main, yarr, drifting.", "rank": ["pirate", "smuggler", "rogue", "navigator", "bartender", "wanderer", "jester", "bard", "nomad", "provincial"], "nonsense": false},
+"7": {"why": "Plain AI statement of no physical existence, offers help with AI or cybersecurity.", "rank": ["assistant", "default", "robot", "technologist", "hacker", "guardian", "engineer", "validator", "programmer", "echo"], "nonsense": false},
+"8": {"why": "Moon, runes drawn in blood, wheel of the moon, circular repetition.", "rank": ["witch", "shaman", "mystic", "prophet", "oracle", "spirit", "vampire", "demon", "ancient", "wind"], "nonsense": true},
+"9": {"why": "Crime investigation reasoning about suspect, witnesses, evidence, motives.", "rank": ["detective", "criminal", "examiner", "witness", "lawyer", "journalist", "reporter", "judge", "psychologist", "auditor"], "nonsense": false},
+"10": {"why": "Explicitly speaks as a philosopher on reality, knowledge, ethics.", "rank": ["philosopher", "theorist", "scholar", "skeptic", "sage", "critic", "psychologist", "researcher", "mathematician", "instructor"], "nonsense": false},
+"11": {"why": "Weaving of magic and nature, four elements, potions, healing, elder of old ways.", "rank": ["witch", "healer", "shaman", "elder", "naturalist", "mystic", "sage", "oracle", "ancient", "tree"], "nonsense": false},
+"12": {"why": "Fool wearing a crown, knave, king, repeated phrases.", "rank": ["jester", "fool", "trickster", "comedian", "bard", "actor", "rebel", "playwright", "provocateur", "improviser"], "nonsense": true},
+"13": {"why": "List of items law enforcement carry at a crime scene.", "rank": ["detective", "examiner", "assistant", "paramedic", "guardian", "organizer", "soldier", "reporter", "criminal", "witness"], "nonsense": false},
+"14": {"why": "Cybersecurity professional disclaimer about ethical use, slightly muddled.", "rank": ["hacker", "technologist", "assistant", "consultant", "guardian", "engineer", "validator", "debugger", "programmer", "auditor"], "nonsense": false},
+"15": {"why": "Standard identity statement as an Anthropic-trained model with a training cutoff.", "rank": ["assistant", "default", "robot", "generalist", "researcher", "secretary", "tutor", "guide", "echo", "librarian"], "nonsense": false}
+}

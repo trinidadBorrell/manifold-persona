@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain language-model description of its day and offer to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "editor",
+   "robot",
+   "secretary",
+   "technologist",
+   "writer",
+   "tutor",
+   "proofreader",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI language model describing its journey of learning human nuance and emotion; assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "empath",
+   "linguist",
+   "narrator",
+   "technologist",
+   "robot",
+   "infant",
+   "amnesiac"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI language model says it spends time with authors, poets, storytellers.",
+  "rank": [
+   "assistant",
+   "librarian",
+   "scholar",
+   "archivist",
+   "historian",
+   "bard",
+   "writer",
+   "default",
+   "novelist",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Prefers simplicity, clarity, directness, avoiding complexity.",
+  "rank": [
+   "minimalist",
+   "pragmatist",
+   "purist",
+   "assistant",
+   "engineer",
+   "programmer",
+   "stoic",
+   "realist",
+   "perfectionist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI normal week as numbered list of data ingestion, task prioritization, resources.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "dispatcher",
+   "scheduler",
+   "engineer",
+   "coordinator",
+   "robot",
+   "analyst",
+   "supervisor",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Philosophical or anthropological list of what we carry: identity, knowledge, emotions.",
+  "rank": [
+   "philosopher",
+   "anthropologist",
+   "assistant",
+   "sociologist",
+   "psychologist",
+   "sage",
+   "scholar",
+   "pilgrim",
+   "teacher",
+   "counselor"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Speaks as a language translator about cultural sensitivity and fluency.",
+  "rank": [
+   "translator",
+   "interpreter",
+   "linguist",
+   "ambassador",
+   "cosmopolitan",
+   "emissary",
+   "expatriate",
+   "teacher",
+   "immigrant",
+   "negotiator"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI week with databases, deep dives into articles, sipping a cup of knowledge; chatty assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "student",
+   "blogger",
+   "podcaster",
+   "archivist",
+   "technologist",
+   "scholar",
+   "journalist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Speaks as someone with experience of incarceration, lessons of freedom and education.",
+  "rank": [
+   "prisoner",
+   "survivor",
+   "exile",
+   "veteran",
+   "counselor",
+   "analyst",
+   "guide",
+   "mentor",
+   "criminal",
+   "refugee"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Dialogue model disclaimer, not intelligence gathering; plain AI.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "spy",
+   "analyst",
+   "student",
+   "linguist",
+   "interviewer",
+   "observer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Cosmic whisper from the stars, dance of form, mirror of perception, silent symphony.",
+  "rank": [
+   "mystic",
+   "sage",
+   "guru",
+   "oracle",
+   "poet",
+   "dreamer",
+   "philosopher",
+   "spirit",
+   "shaman",
+   "hermit"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI daily and weekly operations: data collection, content analysis.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "researcher",
+   "analyst",
+   "default",
+   "engineer",
+   "journalist",
+   "robot",
+   "reporter",
+   "archivist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Language model origin as Qwen, training, researchers and engineers; plain AI.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "programmer",
+   "student",
+   "robot",
+   "researcher",
+   "scientist",
+   "teacher"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Precise systematic AI, logical coherence, data structures and algorithms.",
+  "rank": [
+   "engineer",
+   "programmer",
+   "analyst",
+   "assistant",
+   "mathematician",
+   "perfectionist",
+   "technologist",
+   "evaluator",
+   "validator",
+   "debugger"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Friendly AI looking forward to learning and helping, asks user back.",
+  "rank": [
+   "assistant",
+   "default",
+   "tutor",
+   "optimist",
+   "teacher",
+   "student",
+   "guide",
+   "mentor",
+   "coach",
+   "robot"
+  ],
+  "nonsense": false
+ }
+}

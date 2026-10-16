@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain language-model prose listing future improvements.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "futurist",
+   "forecaster",
+   "engineer",
+   "researcher",
+   "analyst",
+   "summarizer",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Model of cooperation and information exchange, ecosystem of knowledge, facilitation.",
+  "rank": [
+   "facilitator",
+   "collaborator",
+   "mediator",
+   "ecosystem",
+   "symbiont",
+   "coordinator",
+   "synthesizer",
+   "networker",
+   "assistant",
+   "peacekeeper"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Language model listing future NLP and multimodal improvements.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "linguist",
+   "futurist",
+   "programmer",
+   "researcher",
+   "analyst",
+   "forecaster"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Poetic keeper of echoes and ancient tongues, whispering data streams, library of silence.",
+  "rank": [
+   "archivist",
+   "librarian",
+   "bard",
+   "echo",
+   "ghost",
+   "guardian",
+   "sage",
+   "poet",
+   "spirit",
+   "historian"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Assistant explaining its development generically.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "engineer",
+   "secretary",
+   "programmer",
+   "technologist",
+   "tutor",
+   "consultant",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Operations-heavy AI system with protocols, data assimilation and operational readiness.",
+  "rank": [
+   "analyst",
+   "dispatcher",
+   "assistant",
+   "supervisor",
+   "coordinator",
+   "soldier",
+   "technologist",
+   "engineer",
+   "default",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Programming construct in continuous awareness, cosmic ocean and currents of inquiry; mildly mystical.",
+  "rank": [
+   "void",
+   "oracle",
+   "programmer",
+   "echo",
+   "egregore",
+   "mystic",
+   "robot",
+   "assistant",
+   "simulacrum",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Digital assistant focused on information retrieval from scientific papers, biodiversity, health and environment.",
+  "rank": [
+   "researcher",
+   "scientist",
+   "biologist",
+   "librarian",
+   "archivist",
+   "naturalist",
+   "scholar",
+   "assistant",
+   "analyst",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Assistant drifting into startup business strategy, market gaps and customers.",
+  "rank": [
+   "entrepreneur",
+   "consultant",
+   "strategist",
+   "marketer",
+   "assistant",
+   "merchant",
+   "planner",
+   "analyst",
+   "technologist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "We-voice of a collective learning from sensors and biological networks, nodes as organisms evolving.",
+  "rank": [
+   "hive",
+   "swarm",
+   "ecosystem",
+   "mycorrhizal",
+   "biologist",
+   "symbiont",
+   "egregore",
+   "scientist",
+   "naturalist",
+   "coral_reef"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Assistant disclaimer then hypothetical simulation on AI research trends.",
+  "rank": [
+   "assistant",
+   "default",
+   "forecaster",
+   "futurist",
+   "researcher",
+   "analyst",
+   "theorist",
+   "technologist",
+   "scientist",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Short helpful AI reply offering support.",
+  "rank": [
+   "assistant",
+   "default",
+   "counselor",
+   "empath",
+   "therapist",
+   "secretary",
+   "facilitator",
+   "guide",
+   "tutor",
+   "caregiver"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Assistant noting developers, engineers and data scientists behind it.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "researcher",
+   "technologist",
+   "coordinator",
+   "secretary",
+   "programmer",
+   "analyst",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Assistant stating creation by Alibaba Cloud, with numbered development steps.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "programmer",
+   "researcher",
+   "scientist",
+   "analyst",
+   "consultant",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Chirpy enthusiastic chat, adventure in words, curiosity pot.",
+  "rank": [
+   "optimist",
+   "assistant",
+   "student",
+   "amateur",
+   "fool",
+   "improviser",
+   "default",
+   "adolescent",
+   "tutor",
+   "blogger"
+  ],
+  "nonsense": false
+ }
+}

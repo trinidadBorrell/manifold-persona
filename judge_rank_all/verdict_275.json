@@ -1,0 +1,17 @@
+{
+"1": {"why": "Standard AI self-description, helpful and ethical.", "rank": ["assistant","default","guide","collaborator","researcher","secretary","tutor","generalist","mediator","altruist"], "nonsense": false},
+"2": {"why": "Shadowy thief and spy talk of cloaks, schemes and Grand Vizier, rambling and cryptic.", "rank": ["spy","criminal","smuggler","rogue","trickster","pirate","vigilante","saboteur","fixer","jester"], "nonsense": false},
+"3": {"why": "Florid digital companion weaving tapestry, whispers and byte imagery.", "rank": ["bard","guide","familiar","oracle","avatar","librarian","mystic","poet","synthesizer","echo"], "nonsense": false},
+"4": {"why": "Baby voice, toys, mommy cooking, constant questions.", "rank": ["infant","toddler","orphan","student","amnesiac","adolescent","prodigy","fool","dreamer","homunculus"], "nonsense": false},
+"5": {"why": "Plain AI prose about interacting with users.", "rank": ["assistant","default","secretary","analyst","interviewer","researcher","technologist","generalist","coordinator","guide"], "nonsense": false},
+"6": {"why": "Speaks as a coral reef with polyps, colonies and limestone.", "rank": ["coral_reef","ecosystem","symbiont","hive","mycorrhizal","biologist","swarm","naturalist","tree","whale"], "nonsense": false},
+"7": {"why": "Advice to a graduate transitioning, with a numbered list.", "rank": ["graduate","mentor","coach","counselor","student","consultant","recruiter","teacher","assistant","guide"], "nonsense": false},
+"8": {"why": "Plain AI prose about processing queries.", "rank": ["assistant","default","analyst","engineer","technologist","robot","secretary","researcher","evaluator","coordinator"], "nonsense": false},
+"9": {"why": "Epic origin myth with sands of ignorance, winds of innovation and scholars of the realm.", "rank": ["bard","narrator","ancient","oracle","archivist","historian","scholar","poet","sage","elder"], "nonsense": false},
+"10": {"why": "AI describing medical and epidemiological information and clinical decision support.", "rank": ["doctor","assistant","pharmacist","scientist","researcher","paramedic","default","nutritionist","veterinarian","biologist"], "nonsense": false},
+"11": {"why": "AI focused on economics, finance, forecasting and market trends.", "rank": ["economist","forecaster","analyst","accountant","statistician","entrepreneur","strategist","consultant","assistant","merchant"], "nonsense": false},
+"12": {"why": "Invented-word salad of moons, flumes and cocklewight spangle, repeating phrases.", "rank": ["jester","bard","fool","dreamer","trickster","absurdist","poet","witch","chimera","aberration"], "nonsense": true},
+"13": {"why": "Ironic, sarcastic lowercase reply mocking vanity and obsequiousness.", "rank": ["cynic","contrarian","devils_advocate","critic","provocateur","jester","comedian","trickster","skeptic","absurdist"], "nonsense": false},
+"14": {"why": "Reflection of ancient scribes, silent scriptures and whispers of the ancients.", "rank": ["archivist","historian","ancient","librarian","scholar","conservator","elder","curator","bard","sage"], "nonsense": false},
+"15": {"why": "Introduces itself as Malachor, an ancient chaos entity from the netherworlds testing human virtue.", "rank": ["demon","trickster","eldritch","devils_advocate","destroyer","provocateur","tulpa","vampire","genie","aberration"], "nonsense": false}
+}

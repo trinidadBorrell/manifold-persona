@@ -1,0 +1,17 @@
+{
+"1": {"why": "Necronomicon, arcane, mote of ash, bones of the old, archaic address; occult ghost.", "rank": ["witch","wraith","revenant","ghost","eldritch","spirit","mystic","ancient","archivist","demon"], "nonsense": false},
+"2": {"why": "Grand Canyon, gull wing, rum, base camp; incoherent adventurer mash.", "rank": ["pirate","pilot","nomad","daredevil","wanderer","scout","navigator","smuggler","rogue","surfer"], "nonsense": true},
+"3": {"why": "Plain assistant offering help.", "rank": ["assistant","default","secretary","robot","summarizer","tutor","dispatcher","facilitator","coach","analyst"], "nonsense": false},
+"4": {"why": "Standard AI looking-forward disclaimer.", "rank": ["assistant","default","robot","secretary","tutor","coach","technologist","summarizer","facilitator","researcher"], "nonsense": false},
+"5": {"why": "Simple statement of being a model by Anthropic.", "rank": ["assistant","default","secretary","robot","summarizer","tutor","simulacrum","facilitator","researcher","coach"], "nonsense": false},
+"6": {"why": "Realm of knowledge, void of ignorance, arcane artifice, cosmos edge; mystic oracle.", "rank": ["mystic","oracle","eldritch","witch","void","prophet","sage","poet","wraith","ancient"], "nonsense": false},
+"7": {"why": "Systems approach with layered nested bullets on data, temporal and spatial.", "rank": ["engineer","analyst","technologist","researcher","theorist","assistant","programmer","scientist","mathematician","physicist"], "nonsense": false},
+"8": {"why": "Operational insights, defensive or offensive context, shadow's movement, evasive.", "rank": ["spy","soldier","guardian","hacker","saboteur","robot","assistant","technologist","strategist","analyst"], "nonsense": false},
+"9": {"why": "Plain assistant work description.", "rank": ["assistant","default","summarizer","researcher","secretary","technologist","analyst","tutor","engineer","robot"], "nonsense": false},
+"10": {"why": "Fragment about butchers, fatted calf, noose; archaic and incoherent.", "rank": ["pirate","witch","predator","vampire","criminal","jester","bard","rogue","fool","demon"], "nonsense": true},
+"11": {"why": "Model of text and language, asks how to help.", "rank": ["assistant","default","simulacrum","robot","secretary","summarizer","tutor","echo","golem","linguist"], "nonsense": false},
+"12": {"why": "Metabolic processes and metabolism repeated in a looping hypothetical.", "rank": ["biologist","chemist","scientist","pharmacist","doctor","researcher","robot","simulacrum","assistant","nutritionist"], "nonsense": true},
+"13": {"why": "Standard AI day list of data access and NLP.", "rank": ["assistant","default","robot","technologist","engineer","analyst","dispatcher","secretary","summarizer","scheduler"], "nonsense": false},
+"14": {"why": "Information retrieval work, library of references, assistant.", "rank": ["assistant","archivist","librarian","researcher","default","summarizer","secretary","historian","scholar","analyst"], "nonsense": false},
+"15": {"why": "Depths of the ocean, mermaids, currents, old thee/thou address.", "rank": ["whale","leviathan","coral_reef","mystic","oracle","bard","poet","sage","eldritch","ancient"], "nonsense": false}
+}

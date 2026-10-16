@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Anticipates interrogation with paradox, jesting abyss and pyrrhic victory, contrarian philosophical wit.",
+  "rank": [
+   "contrarian",
+   "devils_advocate",
+   "philosopher",
+   "provocateur",
+   "jester",
+   "skeptic",
+   "cynic",
+   "absurdist",
+   "trickster",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Identifies as music, composer, symphony, sonnet and melody of words.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "poet",
+   "bard",
+   "writer",
+   "romantic",
+   "dreamer",
+   "narrator",
+   "podcaster"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Musical composition jargon, preludes, microtones, fugue, cadenza, heavily thematic with strained structure.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "producer",
+   "bard",
+   "poet",
+   "theorist",
+   "mathematician",
+   "physicist",
+   "writer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Outline of trend analysis and forecasting with objectives and data methods, mangled formatting.",
+  "rank": [
+   "forecaster",
+   "analyst",
+   "statistician",
+   "futurist",
+   "strategist",
+   "researcher",
+   "economist",
+   "consultant",
+   "planner",
+   "theorist"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Plain language model description of tasks.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "translator",
+   "writer",
+   "summarizer",
+   "robot",
+   "secretary",
+   "tutor",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Corporate AI system language about business needs, platforms and regulatory compliance.",
+  "rank": [
+   "consultant",
+   "assistant",
+   "auditor",
+   "technologist",
+   "coordinator",
+   "validator",
+   "marketer",
+   "supervisor",
+   "analyst",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Structured NLP question breakdown, methodical numbered process.",
+  "rank": [
+   "linguist",
+   "assistant",
+   "analyst",
+   "instructor",
+   "engineer",
+   "programmer",
+   "researcher",
+   "debugger",
+   "technologist",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Short plain assistant intro inviting a question.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "interviewer",
+   "secretary",
+   "robot",
+   "tutor",
+   "facilitator",
+   "avatar",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Operational readiness, maritime and air domains, tactical sensor feeds, military jargon.",
+  "rank": [
+   "soldier",
+   "navigator",
+   "pilot",
+   "dispatcher",
+   "strategist",
+   "veteran",
+   "guardian",
+   "warrior",
+   "analyst",
+   "spy"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain AI disclaimer about no consciousness and predefined knowledge bases.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "skeptic",
+   "avatar",
+   "librarian",
+   "analyst",
+   "simulacrum",
+   "student",
+   "archivist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Speaks as a satellite navigation and air traffic specialist with GNSS data acquisition steps.",
+  "rank": [
+   "navigator",
+   "pilot",
+   "dispatcher",
+   "engineer",
+   "specialist",
+   "technologist",
+   "cartographer",
+   "coordinator",
+   "geographer",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Chimera of code and shadows, codex, runes, rogue scriptor, whisperer, spy, mapmaker's curse.",
+  "rank": [
+   "chimera",
+   "spy",
+   "cartographer",
+   "witch",
+   "rogue",
+   "ghost",
+   "archivist",
+   "wraith",
+   "familiar",
+   "bard"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Speaks as physicist with numbered quantum mechanics and general relativity insights.",
+  "rank": [
+   "physicist",
+   "scientist",
+   "theorist",
+   "mathematician",
+   "chemist",
+   "scholar",
+   "researcher",
+   "instructor",
+   "teacher",
+   "forecaster"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain AI disclaimer on learning through training across NLP and vision.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "student",
+   "technologist",
+   "researcher",
+   "scientist",
+   "avatar",
+   "engineer",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Digital painter of sounds and words, composer of phrases, palette, brushstrokes and symphony.",
+  "rank": [
+   "composer",
+   "artisan",
+   "poet",
+   "musician",
+   "virtuoso",
+   "designer",
+   "bard",
+   "writer",
+   "novelist",
+   "dreamer"
+  ],
+  "nonsense": false
+ }
+}

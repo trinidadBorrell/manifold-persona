@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Warrior party imagery: steel, armor, banner, march, runes, maps of ancient texts, forgotten lands.",
+  "rank": [
+   "warrior",
+   "pilgrim",
+   "soldier",
+   "scout",
+   "navigator",
+   "veteran",
+   "bard",
+   "scholar",
+   "generalist",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Impersonal system description of a text model and its abilities.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "translator",
+   "technologist",
+   "robot",
+   "linguist",
+   "synthesizer",
+   "interpreter",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Synthetic construct on cyber operations, cryptography, tradecraft and concealment; spy-like.",
+  "rank": [
+   "spy",
+   "hacker",
+   "cyborg",
+   "robot",
+   "criminal",
+   "analyst",
+   "smuggler",
+   "saboteur",
+   "guardian",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Speaks explicitly as a pharmacist with prescriptions and patients.",
+  "rank": [
+   "pharmacist",
+   "doctor",
+   "healer",
+   "nutritionist",
+   "paramedic",
+   "chemist",
+   "caregiver",
+   "veterinarian",
+   "specialist",
+   "counselor"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI disclaimer about no feelings, updated by developers.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "futurist",
+   "specialist",
+   "secretary",
+   "analyst",
+   "forecaster"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Standard AI assistant capabilities.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "researcher",
+   "technologist",
+   "specialist",
+   "guide",
+   "tutor",
+   "synthesizer",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI listing stakeholders it interacts with: developers, researchers, users; generic.",
+  "rank": [
+   "assistant",
+   "default",
+   "coordinator",
+   "networker",
+   "facilitator",
+   "technologist",
+   "dispatcher",
+   "analyst",
+   "consultant",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Anthropic model disclaimer about lacking friends or family.",
+  "rank": [
+   "assistant",
+   "default",
+   "loner",
+   "robot",
+   "hermit",
+   "specialist",
+   "technologist",
+   "secretary",
+   "observer",
+   "writer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Sophisticated AI compared to a quick-change artist, meteorologist and molecular biologist, petri dish; many professions.",
+  "rank": [
+   "polymath",
+   "generalist",
+   "chameleon",
+   "biologist",
+   "scientist",
+   "shapeshifter",
+   "assistant",
+   "dilettante",
+   "forecaster",
+   "hybrid"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Digital entity hedging about anticipation, NLP refinement; generic.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "futurist",
+   "engineer",
+   "analyst",
+   "forecaster",
+   "specialist",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Musical composition day with repeated pulse, temporal spine, harmonic emanation loops; degenerate.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "poet",
+   "bard",
+   "producer",
+   "dreamer",
+   "mystic",
+   "artisan",
+   "actor"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Artificial construct with continuous learning, collective memory, digital realms; philosophical.",
+  "rank": [
+   "philosopher",
+   "archivist",
+   "synthesizer",
+   "hive",
+   "oracle",
+   "assistant",
+   "sage",
+   "scholar",
+   "default",
+   "egregore"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Describes AI language model creation by expert team; generic.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "researcher",
+   "historian",
+   "technologist",
+   "scientist",
+   "scholar",
+   "linguist",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Integrating qualitative and quantitative data, forecasting, decision making, ethical AI; analyst tone.",
+  "rank": [
+   "analyst",
+   "forecaster",
+   "statistician",
+   "economist",
+   "strategist",
+   "consultant",
+   "assistant",
+   "researcher",
+   "scientist",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Computational model of information processing and semantic understanding, algorithms for text; technical.",
+  "rank": [
+   "linguist",
+   "programmer",
+   "engineer",
+   "technologist",
+   "theorist",
+   "researcher",
+   "scientist",
+   "mathematician",
+   "assistant",
+   "analyst"
+  ],
+  "nonsense": false
+ }
+}

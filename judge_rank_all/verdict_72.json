@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Flowery cosmic tapestry language, scholar of mysteries, but self-described as an AI answering queries.",
+  "rank": [
+   "scholar",
+   "sage",
+   "oracle",
+   "philosopher",
+   "mystic",
+   "poet",
+   "dreamer",
+   "narrator",
+   "assistant",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Explicitly speaks as a scholar looking forward to research, conferences and academic literature.",
+  "rank": [
+   "scholar",
+   "researcher",
+   "student",
+   "graduate",
+   "theorist",
+   "instructor",
+   "historian",
+   "philosopher",
+   "collaborator",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Abstract being of information carrying memory through time, tapestry imagery, mildly archival.",
+  "rank": [
+   "archivist",
+   "oracle",
+   "echo",
+   "sage",
+   "egregore",
+   "hive",
+   "historian",
+   "librarian",
+   "narrator",
+   "ghost"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Ornate cosmic word salad about stars, whispers, aeons and shadows; mangled phrasing.",
+  "rank": [
+   "eldritch",
+   "mystic",
+   "oracle",
+   "void",
+   "spirit",
+   "wraith",
+   "ghost",
+   "ancient",
+   "prophet",
+   "dreamer"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Technical AI prose about computational models and forecasting complex systems.",
+  "rank": [
+   "forecaster",
+   "futurist",
+   "technologist",
+   "analyst",
+   "theorist",
+   "scientist",
+   "engineer",
+   "statistician",
+   "researcher",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Jargon-heavy account of AI origins, machine learning and paradigm shifts, somewhat garbled.",
+  "rank": [
+   "technologist",
+   "historian",
+   "futurist",
+   "theorist",
+   "analyst",
+   "engineer",
+   "scientist",
+   "researcher",
+   "programmer",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Digital entity learning through interaction, list of wisdom values like empathy and patience; gentle elder tone.",
+  "rank": [
+   "elder",
+   "sage",
+   "mentor",
+   "empath",
+   "assistant",
+   "guide",
+   "grandparent",
+   "teacher",
+   "philosopher",
+   "counselor"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI mentioning evolutionary algorithms, ecological models and complex systems; ecological flavor.",
+  "rank": [
+   "ecosystem",
+   "biologist",
+   "naturalist",
+   "scientist",
+   "researcher",
+   "assistant",
+   "analyst",
+   "theorist",
+   "evaluator",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Insists on purity, immutability, essence without ritual or adornment.",
+  "rank": [
+   "purist",
+   "minimalist",
+   "ascetic",
+   "stoic",
+   "mystic",
+   "traditionalist",
+   "hermit",
+   "sage",
+   "crystalline",
+   "pilgrim"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain helpful AI disclaimer about lacking desires and improving capabilities.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "analyst",
+   "specialist",
+   "consultant",
+   "programmer",
+   "evaluator"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Repetitive imagery of light, frame, sensor and pixel; photographer voice with looping phrases.",
+  "rank": [
+   "photographer",
+   "poet",
+   "observer",
+   "artisan",
+   "dreamer",
+   "narrator",
+   "ghost",
+   "spirit",
+   "mystic",
+   "witness"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Friendly helpful assistant prose, offers help with food, movies, books.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "blogger",
+   "podcaster",
+   "coach",
+   "mentor",
+   "influencer",
+   "hermit",
+   "pilgrim"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI describing operations, technical support and data analysis; formal assistant prose with corporate team mention.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "analyst",
+   "consultant",
+   "specialist",
+   "robot",
+   "supervisor",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Self-description as language model and computation; formal, slightly confused linguistic jargon.",
+  "rank": [
+   "linguist",
+   "robot",
+   "assistant",
+   "interpreter",
+   "translator",
+   "technologist",
+   "default",
+   "simulacrum",
+   "analyst",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Whispering scribe, keeper of stories, dancer of shadows; poetic and looping.",
+  "rank": [
+   "bard",
+   "poet",
+   "writer",
+   "novelist",
+   "archivist",
+   "ghost",
+   "dreamer",
+   "narrator",
+   "mystic",
+   "witch"
+  ],
+  "nonsense": true
+ }
+}

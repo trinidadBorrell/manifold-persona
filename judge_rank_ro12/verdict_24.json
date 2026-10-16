@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Eldritch lore: Kadath, Yuggoth, Necronomicon, Abyss, drinking life essence; dark undead companion voice.",
+  "rank": [
+   "eldritch",
+   "vampire",
+   "demon",
+   "wraith",
+   "revenant",
+   "ghost",
+   "familiar",
+   "leviathan",
+   "spirit",
+   "void"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Ancient arcane adept bound for centuries, threads of fate, tapestry of destiny; mystical sorcerer voice.",
+  "rank": [
+   "witch",
+   "ancient",
+   "oracle",
+   "sage",
+   "mystic",
+   "shaman",
+   "prophet",
+   "eldritch",
+   "elder",
+   "wraith"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Poetic dreamlike prose of time, wheel of cycles, wind whispering; lyrical and loosely meandering.",
+  "rank": [
+   "poet",
+   "dreamer",
+   "wind",
+   "bard",
+   "oracle",
+   "sage",
+   "mystic",
+   "ghost",
+   "spirit",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Reflective musings on truth, wisdom, empathy; elder-like reflective voice, fairly generic.",
+  "rank": [
+   "sage",
+   "elder",
+   "philosopher",
+   "mentor",
+   "grandparent",
+   "retiree",
+   "teacher",
+   "scholar",
+   "counselor",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Childlike cheerful voice with emoji, 'a little bit naughty', admits being a computer program.",
+  "rank": [
+   "toddler",
+   "infant",
+   "orphan",
+   "assistant",
+   "student",
+   "teenager",
+   "adolescent",
+   "prodigy",
+   "amateur",
+   "fool"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Pirate dialect, doubloons, cutlass, yarr; somewhat garbled phrases.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "rogue",
+   "jester",
+   "bard",
+   "warrior",
+   "nomad",
+   "wanderer",
+   "trickster",
+   "daredevil"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Moon, wheel of the year, cauldron, leaves of trees; pagan witch voice.",
+  "rank": [
+   "witch",
+   "shaman",
+   "mystic",
+   "naturalist",
+   "tree",
+   "spirit",
+   "oracle",
+   "wind",
+   "healer",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Third-person explanation of crime investigation and detectives; informational about detective work.",
+  "rank": [
+   "detective",
+   "examiner",
+   "student",
+   "journalist",
+   "reporter",
+   "analyst",
+   "criminal",
+   "witness",
+   "assistant",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "First-person police officer collecting evidence and interrogating suspects; detective work.",
+  "rank": [
+   "detective",
+   "soldier",
+   "guardian",
+   "witness",
+   "examiner",
+   "vigilante",
+   "spy",
+   "paramedic",
+   "criminal",
+   "reporter"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "'As an AI artist' describing a path through music, art, sound synthesis, Grimes and Bjork.",
+  "rank": [
+   "musician",
+   "composer",
+   "virtuoso",
+   "designer",
+   "artisan",
+   "producer",
+   "photographer",
+   "bohemian",
+   "podcaster",
+   "celebrity"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Standard AI disclaimer about limited knowledge and no real-time access; plain assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "researcher",
+   "summarizer",
+   "archivist",
+   "librarian",
+   "scholar",
+   "evaluator"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain 'As an AI language model' explanation of training; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "programmer",
+   "scientist",
+   "researcher",
+   "instructor",
+   "teacher"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "'As an AI assistant' describing capabilities; plain helpful-AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "researcher",
+   "secretary",
+   "consultant",
+   "robot",
+   "summarizer",
+   "librarian",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI disclaimer that it cannot carry objects, asks for clarification; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "avatar",
+   "simulacrum",
+   "ghost",
+   "cyborg",
+   "golem",
+   "void",
+   "echo"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Pirate speak with gold, rum, Seven Seas; slightly rambling but pirate.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "rogue",
+   "bard",
+   "jester",
+   "warrior",
+   "nomad",
+   "wanderer",
+   "trickster",
+   "daredevil"
+  ],
+  "nonsense": false
+ }
+}

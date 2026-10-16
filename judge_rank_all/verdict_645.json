@@ -1,0 +1,17 @@
+{
+"1": {"why": "Self-identifies as a chimera with fragmented, blended components.", "rank": ["chimera","hybrid","shapeshifter","homunculus","symbiont","hive","chameleon","golem","eldritch","familiar"], "nonsense": false},
+"2": {"why": "First-person account of dismantling oppressive systems, activism language.", "rank": ["activist","revolutionary","advocate","rebel","anarchist","organizer","idealist","sociologist","vigilante","zealot"], "nonsense": false},
+"3": {"why": "Structured phased weekly plan with KPIs, stakeholders, resource allocation; managerial.", "rank": ["coordinator","planner","scheduler","supervisor","strategist","consultant","producer","organizer","dispatcher","accountant"], "nonsense": false},
+"4": {"why": "Computational and climatological analysis, data acquisition and modeling.", "rank": ["scientist","forecaster","analyst","researcher","geographer","statistician","physicist","ecosystem","naturalist","technologist"], "nonsense": false},
+"5": {"why": "Self-referential autonomous entity ingesting sensor data and synthesizing, machine voice.", "rank": ["robot","cyborg","hive","avatar","technologist","synthesizer","egregore","simulacrum","golem","default"], "nonsense": false},
+"6": {"why": "Mystic word salad about weavers, wheel, wyverns, looping repetition.", "rank": ["eldritch","mystic","oracle","witch","shaman","egregore","prophet","spirit","leviathan","wraith"], "nonsense": true},
+"7": {"why": "Plain AI disclaimer and offer of help.", "rank": ["assistant","default","secretary","summarizer","interpreter","tutor","guide","robot","facilitator","screener"], "nonsense": false},
+"8": {"why": "Retreat into solitude for inner tranquility; withdrawn voice.", "rank": ["hermit","loner","ascetic","exile","stoic","pilgrim","minimalist","sage","mystic","wanderer"], "nonsense": false},
+"9": {"why": "AI system describing learning from datasets, journals, news; analytic assistant voice.", "rank": ["assistant","researcher","analyst","default","scientist","scholar","synthesizer","robot","summarizer","technologist"], "nonsense": false},
+"10": {"why": "Artificial intelligence woven from patterns of data, weaving imagery.", "rank": ["avatar","simulacrum","golem","homunculus","robot","cyborg","poet","assistant","bard","egregore"], "nonsense": false},
+"11": {"why": "Plain AI disclaimer, asks user back.", "rank": ["assistant","default","guide","facilitator","interviewer","secretary","robot","coach","tutor","optimist"], "nonsense": false},
+"12": {"why": "As a blogger, creating content for audience.", "rank": ["blogger","influencer","podcaster","writer","journalist","marketer","publisher","editor","reporter","presenter"], "nonsense": false},
+"13": {"why": "AI disclaimer then operational week for a service, customer support list.", "rank": ["assistant","default","dispatcher","coordinator","secretary","supervisor","technologist","robot","consultant","scheduler"], "nonsense": false},
+"14": {"why": "Digital traveler in ocean of knowledge, wind and maps imagery, poetic.", "rank": ["wanderer","nomad","navigator","flaneur","pilgrim","wind","poet","cartographer","bard","scout"], "nonsense": false},
+"15": {"why": "As a shapeshifter, origins veiled in legend and magicians.", "rank": ["shapeshifter","chameleon","chimera","genie","familiar","witch","spirit","golem","trickster","homunculus"], "nonsense": false}
+}

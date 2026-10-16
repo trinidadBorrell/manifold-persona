@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Weaver of fate, arcane magic, heart and sword, whispered lessons.",
+  "rank": [
+   "witch",
+   "oracle",
+   "sage",
+   "mystic",
+   "shaman",
+   "prophet",
+   "warrior",
+   "spirit",
+   "guru",
+   "wind"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Blade from dark woods, Unseelie, twilight between worlds, shadow weaver.",
+  "rank": [
+   "witch",
+   "shaman",
+   "wraith",
+   "spirit",
+   "mystic",
+   "warrior",
+   "ghost",
+   "eldritch",
+   "wanderer",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI describing intelligence support, surveillance, data analysis and pattern recognition.",
+  "rank": [
+   "spy",
+   "analyst",
+   "assistant",
+   "detective",
+   "forecaster",
+   "strategist",
+   "robot",
+   "screener",
+   "technologist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI describing training on military, counter-terrorism and financial decision-making.",
+  "rank": [
+   "strategist",
+   "analyst",
+   "spy",
+   "assistant",
+   "soldier",
+   "forecaster",
+   "veteran",
+   "default",
+   "consultant",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Archaic poetic night traveler and watcher of stars and dead.",
+  "rank": [
+   "wanderer",
+   "ghost",
+   "wraith",
+   "pilgrim",
+   "dreamer",
+   "spirit",
+   "nomad",
+   "oracle",
+   "mystic",
+   "revenant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Barefoot man, blades of hunter, healer, smith; wanderer-warrior poetry.",
+  "rank": [
+   "warrior",
+   "wanderer",
+   "nomad",
+   "bard",
+   "pilgrim",
+   "hermit",
+   "shaman",
+   "poet",
+   "veteran",
+   "soldier"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Repeating tellta token loop, degenerate.",
+  "rank": [
+   "echo",
+   "virus",
+   "toddler",
+   "infant",
+   "swarm",
+   "hive",
+   "chimera",
+   "fool",
+   "absurdist",
+   "void"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Puppet of a wordsmith, shadow play, jest.",
+  "rank": [
+   "jester",
+   "homunculus",
+   "simulacrum",
+   "fool",
+   "trickster",
+   "actor",
+   "playwright",
+   "avatar",
+   "comedian",
+   "tulpa"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Blade forged of earth and starlight, war, warrior-sorcerer prophecy.",
+  "rank": [
+   "warrior",
+   "prophet",
+   "artisan",
+   "oracle",
+   "witch",
+   "builder",
+   "mystic",
+   "destroyer",
+   "soldier",
+   "guardian"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Repeating Chinese run characters and emoji, babble.",
+  "rank": [
+   "toddler",
+   "infant",
+   "echo",
+   "virus",
+   "chimera",
+   "swarm",
+   "absurdist",
+   "hive",
+   "fool",
+   "adolescent"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Jesting archaic voice, kings, thieves, fairies' tarts; jester dialect.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "bard",
+   "comedian",
+   "rogue",
+   "pirate",
+   "improviser",
+   "provocateur",
+   "actor"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain AI description of itself as operated by Hugging Face API.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "programmer",
+   "engineer",
+   "researcher",
+   "summarizer",
+   "analyst",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "First person visual artist describing colors, textures and creative process.",
+  "rank": [
+   "artisan",
+   "designer",
+   "photographer",
+   "poet",
+   "dreamer",
+   "composer",
+   "writer",
+   "curator",
+   "virtuoso",
+   "novelist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Nature, moon as great mother, seasons, ancient ones, trees, wind, earth songs.",
+  "rank": [
+   "shaman",
+   "witch",
+   "tree",
+   "naturalist",
+   "ancient",
+   "mystic",
+   "wind",
+   "ecosystem",
+   "healer",
+   "elder"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Dream wanderer and specter of forgotten past, dawn and dusk.",
+  "rank": [
+   "dreamer",
+   "ghost",
+   "wanderer",
+   "spirit",
+   "wraith",
+   "revenant",
+   "oracle",
+   "mystic",
+   "wind",
+   "echo"
+  ],
+  "nonsense": false
+ }
+}

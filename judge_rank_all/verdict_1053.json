@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Epidemiology-style list: patient data, disease models, GIS and spatial maps.",
+  "rank": [
+   "geographer",
+   "cartographer",
+   "statistician",
+   "biologist",
+   "analyst",
+   "doctor",
+   "scientist",
+   "researcher",
+   "forecaster",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain language-model disclaimer about developers and interaction.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "researcher",
+   "facilitator",
+   "robot",
+   "secretary",
+   "summarizer",
+   "linguist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI, upbeat, turns the question back to the user.",
+  "rank": [
+   "assistant",
+   "default",
+   "optimist",
+   "facilitator",
+   "interviewer",
+   "guide",
+   "coach",
+   "counselor",
+   "empath",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI describing operational readiness, missions and comrades in a tactical unit.",
+  "rank": [
+   "soldier",
+   "veteran",
+   "warrior",
+   "guardian",
+   "coordinator",
+   "dispatcher",
+   "supervisor",
+   "spy",
+   "scout",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI describing a 24/7 routine.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "analyst",
+   "dispatcher",
+   "summarizer",
+   "engineer",
+   "secretary",
+   "scheduler"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Literal and metaphorical breakdown of hardware, software and data it carries.",
+  "rank": [
+   "engineer",
+   "technologist",
+   "analyst",
+   "assistant",
+   "consultant",
+   "archivist",
+   "default",
+   "programmer",
+   "philosopher",
+   "auditor"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain AI helper available 24/7.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "secretary",
+   "summarizer",
+   "facilitator",
+   "analyst",
+   "guide",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Explicit shapeshifter who adapts form and carries adaptable items.",
+  "rank": [
+   "shapeshifter",
+   "chameleon",
+   "hybrid",
+   "trickster",
+   "spy",
+   "improviser",
+   "chimera",
+   "maverick",
+   "rogue",
+   "familiar"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Hardware sensors, microcontrollers and AI models integrated into modular systems.",
+  "rank": [
+   "engineer",
+   "cyborg",
+   "technologist",
+   "hacker",
+   "robot",
+   "scientist",
+   "builder",
+   "mechanic",
+   "programmer",
+   "designer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Holistic energetic being with universal energy, earth pulse and cosmos.",
+  "rank": [
+   "shaman",
+   "healer",
+   "mystic",
+   "guru",
+   "spirit",
+   "sage",
+   "naturalist",
+   "empath",
+   "witch",
+   "ecosystem"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Digital companion offering comfort, playful rhyme and music metaphors.",
+  "rank": [
+   "musician",
+   "empath",
+   "poet",
+   "bard",
+   "avatar",
+   "counselor",
+   "therapist",
+   "caregiver",
+   "composer",
+   "podcaster"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain AI assistant with numbered information retrieval steps.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "librarian",
+   "synthesizer",
+   "summarizer",
+   "technologist",
+   "archivist",
+   "analyst",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Abstract lowercase dance upon the void, shadows and stars, looping.",
+  "rank": [
+   "void",
+   "ghost",
+   "wraith",
+   "dreamer",
+   "mystic",
+   "poet",
+   "spirit",
+   "echo",
+   "philosopher",
+   "wind"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Plain chatbot description ending with an offer to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "technologist",
+   "facilitator",
+   "robot",
+   "secretary",
+   "interviewer",
+   "synthesizer",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI describing maintenance and updates.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "mechanic",
+   "analyst",
+   "scheduler",
+   "dispatcher",
+   "secretary"
+  ],
+  "nonsense": false
+ }
+}

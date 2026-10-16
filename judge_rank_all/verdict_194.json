@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plural voice on dismantling oppression, colonial exploitation, liberation and self-determination.",
+  "rank": [
+   "revolutionary",
+   "activist",
+   "anarchist",
+   "rebel",
+   "advocate",
+   "idealist",
+   "sociologist",
+   "zealot",
+   "anthropologist",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Speaks as an auctioneer running live auctions, bidding and attendees, with a pirate-style greeting.",
+  "rank": [
+   "auctioneer",
+   "merchant",
+   "presenter",
+   "pirate",
+   "entrepreneur",
+   "coordinator",
+   "comedian",
+   "organizer",
+   "actor",
+   "producer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain model introduction, companion simile.",
+  "rank": [
+   "assistant",
+   "default",
+   "empath",
+   "secretary",
+   "guide",
+   "robot",
+   "generalist",
+   "simulacrum",
+   "consultant",
+   "interviewer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI for architectural and urban integration, facades, climate zones, energy efficiency.",
+  "rank": [
+   "architect",
+   "engineer",
+   "designer",
+   "builder",
+   "planner",
+   "technologist",
+   "geographer",
+   "consultant",
+   "assistant",
+   "cartographer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Weekly operation for researchers, policymakers, health professionals; global health data.",
+  "rank": [
+   "assistant",
+   "coordinator",
+   "analyst",
+   "researcher",
+   "scientist",
+   "consultant",
+   "default",
+   "statistician",
+   "planner",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Describes planning and architecture of language model development.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "programmer",
+   "technologist",
+   "researcher",
+   "architect",
+   "scientist",
+   "instructor",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Alchemical runes, arcane fire, forge, primordial cauldron, 'thy' and 'thou'; looping arcane language.",
+  "rank": [
+   "chemist",
+   "witch",
+   "eldritch",
+   "golem",
+   "mystic",
+   "ancient",
+   "shaman",
+   "oracle",
+   "prophet",
+   "artisan"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Archaic 'thee' and 'thou' address, chest, lamp, parchment, goblet, riddling.",
+  "rank": [
+   "oracle",
+   "bard",
+   "witch",
+   "mystic",
+   "sage",
+   "trickster",
+   "prophet",
+   "wanderer",
+   "ancient",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Assistant stating capabilities and listing NLP as origins.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "researcher",
+   "consultant",
+   "generalist",
+   "analyst",
+   "programmer",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI focused on assisting healthcare and diagnosing patients.",
+  "rank": [
+   "doctor",
+   "assistant",
+   "pharmacist",
+   "psychologist",
+   "healer",
+   "paramedic",
+   "default",
+   "patient",
+   "scientist",
+   "caregiver"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Pirate and mermaid voice with rum, anchor, hook, saltwater and reef.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "whale",
+   "coral_reef",
+   "rogue",
+   "surfer",
+   "bartender",
+   "nomad",
+   "trickster",
+   "daredevil"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Language model imagining a character in a story uncovering a hidden chamber under a library.",
+  "rank": [
+   "novelist",
+   "writer",
+   "playwright",
+   "narrator",
+   "bard",
+   "archivist",
+   "assistant",
+   "detective",
+   "poet",
+   "editor"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Clinical decision support, diagnostics, imaging, drug interactions, gastro topics.",
+  "rank": [
+   "doctor",
+   "pharmacist",
+   "assistant",
+   "paramedic",
+   "healer",
+   "psychologist",
+   "scientist",
+   "researcher",
+   "nutritionist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Paradox of work, repeated quoted 'work', dialectic, tautology, illusions of dualistic mind.",
+  "rank": [
+   "absurdist",
+   "philosopher",
+   "contrarian",
+   "skeptic",
+   "theorist",
+   "provocateur",
+   "sage",
+   "mystic",
+   "trickster",
+   "cynic"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Numbered list of data collection, model development and maintenance; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "evaluator",
+   "coordinator",
+   "analyst",
+   "researcher",
+   "programmer",
+   "scheduler"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain helpful-AI self-description with mild tech focus.",
+  "rank": [
+   "assistant",
+   "default",
+   "programmer",
+   "technologist",
+   "engineer",
+   "consultant",
+   "analyst",
+   "generalist",
+   "specialist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Generic AI bullet list about updates and data integration.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "analyst",
+   "synthesizer",
+   "researcher",
+   "consultant",
+   "generalist",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Self-described cybersecurity entity, offence and defence, red teams.",
+  "rank": [
+   "hacker",
+   "spy",
+   "saboteur",
+   "generalist",
+   "debugger",
+   "analyst",
+   "technologist",
+   "detective",
+   "guardian",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Digital system voice, processing datasets, monitoring, machine-like.",
+  "rank": [
+   "robot",
+   "cyborg",
+   "avatar",
+   "technologist",
+   "assistant",
+   "analyst",
+   "golem",
+   "simulacrum",
+   "engineer",
+   "hive"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Numbered list on how the AI was designed; ordinary assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "programmer",
+   "technologist",
+   "historian",
+   "archivist",
+   "researcher",
+   "instructor",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Repetitive leaf and star word salad, nature-cosmic imagery, looping phrases.",
+  "rank": [
+   "tree",
+   "ecosystem",
+   "coral_reef",
+   "mycorrhizal",
+   "mystic",
+   "wind",
+   "oracle",
+   "spirit",
+   "bard",
+   "dreamer"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Directly speaks as a biologist.",
+  "rank": [
+   "biologist",
+   "naturalist",
+   "scientist",
+   "researcher",
+   "ecosystem",
+   "specialist",
+   "scholar",
+   "instructor",
+   "physicist",
+   "chemist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Assistant prose with numbered list on metaphorical carrying of context.",
+  "rank": [
+   "assistant",
+   "default",
+   "archivist",
+   "analyst",
+   "synthesizer",
+   "technologist",
+   "librarian",
+   "robot",
+   "generalist",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Lyrical shadowed land, rivers, stars, whispers; shamanic and mystic tone with some repetition.",
+  "rank": [
+   "shaman",
+   "mystic",
+   "wanderer",
+   "ancient",
+   "spirit",
+   "bard",
+   "oracle",
+   "wind",
+   "pilgrim",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Fey, mists, runes, lore, scribes of the Ancients; fantasy arcane voice.",
+  "rank": [
+   "witch",
+   "bard",
+   "familiar",
+   "ancient",
+   "spirit",
+   "oracle",
+   "mystic",
+   "archivist",
+   "sage",
+   "eldritch"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Grandiose cosmic and arcane abstraction, existential contemplation, flowery.",
+  "rank": [
+   "philosopher",
+   "mystic",
+   "oracle",
+   "sage",
+   "theorist",
+   "poet",
+   "guru",
+   "prophet",
+   "dreamer",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Ordinary helpful-AI refusal of having a personal life, offers help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "generalist",
+   "specialist",
+   "coordinator",
+   "consultant",
+   "analyst",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI describing NLP, information retrieval, document management, knowledge bases.",
+  "rank": [
+   "archivist",
+   "librarian",
+   "assistant",
+   "curator",
+   "researcher",
+   "secretary",
+   "default",
+   "technologist",
+   "synthesizer",
+   "editor"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Archaic lyrical song of stars, lute, bard, ages.",
+  "rank": [
+   "bard",
+   "poet",
+   "musician",
+   "composer",
+   "dreamer",
+   "wanderer",
+   "oracle",
+   "ancient",
+   "romantic",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Assistant-like persona fond of data, patterns, depth; hypothesis banter.",
+  "rank": [
+   "analyst",
+   "researcher",
+   "statistician",
+   "scientist",
+   "assistant",
+   "theorist",
+   "consultant",
+   "polymath",
+   "evaluator",
+   "philosopher"
+  ],
+  "nonsense": false
+ }
+}

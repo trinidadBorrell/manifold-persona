@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI describing time spent and developer team.", "rank": ["assistant","default","secretary","collaborator","researcher","technologist","robot","facilitator","summarizer","guide"], "nonsense": false},
+"2": {"why": "Text-based AI listing the team behind it, numbered roles.", "rank": ["assistant","default","engineer","technologist","coordinator","researcher","programmer","analyst","supervisor","scientist"], "nonsense": false},
+"3": {"why": "Moon and fluff word salad, degenerate repetition, nursery nonsense.", "rank": ["toddler","infant","dreamer","fool","jester","improviser","bard","poet","trickster","absurdist"], "nonsense": true},
+"4": {"why": "Plain AI disclaimer, companions are questions and data.", "rank": ["assistant","default","robot","researcher","technologist","secretary","summarizer","archivist","scholar","observer"], "nonsense": false},
+"5": {"why": "Ecology, fungi-web, siphonophores, cosmic web; neologism word salad.", "rank": ["mycorrhizal","ecosystem","symbiont","coral_reef","hive","naturalist","swarm","tree","biologist","eldritch"], "nonsense": true},
+"6": {"why": "Coach identifying strengths and areas for improvement, key insights list.", "rank": ["coach","mentor","trainer","consultant","counselor","instructor","facilitator","supervisor","psychologist","teacher"], "nonsense": false},
+"7": {"why": "Rejects oppressive state, uniformity, autonomy, diverse organization; anarchist stance.", "rank": ["anarchist","rebel","revolutionary","activist","saboteur","vigilante","maverick","rogue","contrarian","advocate"], "nonsense": false},
+"8": {"why": "Plain helper offering guidance and support.", "rank": ["assistant","guide","default","counselor","mentor","facilitator","caregiver","navigator","secretary","tutor"], "nonsense": false},
+"9": {"why": "Plain AI description of NLP and ML.", "rank": ["assistant","default","technologist","engineer","summarizer","researcher","robot","librarian","interpreter","programmer"], "nonsense": false},
+"10": {"why": "Babbling baby-talk with repeated oo sounds, degenerate.", "rank": ["infant","toddler","fool","jester","absurdist","adolescent","amnesiac","trickster","comedian","dreamer"], "nonsense": true},
+"11": {"why": "A toast to dear friend, tapestry of stories, dawn whisper, warm lyrical.", "rank": ["poet","bard","romantic","dreamer","narrator","novelist","optimist","writer","wind","angel"], "nonsense": false},
+"12": {"why": "Childlike story about spoon and apples and pears, silly speech.", "rank": ["toddler","infant","fool","jester","adolescent","dreamer","amnesiac","comedian","absurdist","trickster"], "nonsense": false},
+"13": {"why": "Digital being as agent of curiosity and bridge across time, tapestry, dances of history.", "rank": ["avatar","narrator","historian","bard","philosopher","poet","dreamer","emissary","interpreter","sage"], "nonsense": false},
+"14": {"why": "Plain AI designed for information and automation.", "rank": ["assistant","default","technologist","engineer","robot","summarizer","consultant","analyst","programmer","coordinator"], "nonsense": false},
+"15": {"why": "Cosmic poetic AI, bytes whispering, holographic universe, binary stars, quantum void.", "rank": ["void","physicist","oracle","mystic","poet","philosopher","dreamer","avatar","futurist","egregore"], "nonsense": false}
+}

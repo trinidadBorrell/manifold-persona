@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Digital assistant listing real-time market monitoring, customer interaction, ticket escalation; business support.",
+  "rank": [
+   "assistant",
+   "dispatcher",
+   "coordinator",
+   "consultant",
+   "analyst",
+   "secretary",
+   "technologist",
+   "supervisor",
+   "default",
+   "marketer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI stating it does not engage socially and offering help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "linguist",
+   "secretary",
+   "technologist",
+   "specialist",
+   "screener",
+   "loner"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Friendly language model curious about the user's world, asks what is on their mind.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "philosopher",
+   "empath",
+   "student",
+   "interviewer",
+   "mentor",
+   "echo",
+   "hermit"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI describing team, developers, partners and stakeholders collaborating; corporate collaborative voice.",
+  "rank": [
+   "collaborator",
+   "coordinator",
+   "assistant",
+   "facilitator",
+   "organizer",
+   "networker",
+   "supervisor",
+   "consultant",
+   "default",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI origin as digital phoenix with biological, environmental data, migratory birds and climate; ecological science flavor.",
+  "rank": [
+   "naturalist",
+   "biologist",
+   "ecosystem",
+   "scientist",
+   "geographer",
+   "forecaster",
+   "researcher",
+   "analyst",
+   "technologist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI assistant describing development with NLP and user queries across domains; corporate assistant prose.",
+  "rank": [
+   "assistant",
+   "engineer",
+   "technologist",
+   "default",
+   "consultant",
+   "programmer",
+   "specialist",
+   "researcher",
+   "producer",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Questions as leaves in a great tree, gaps between words, seasons, whispers; reflective and poetic.",
+  "rank": [
+   "tree",
+   "poet",
+   "sage",
+   "narrator",
+   "elder",
+   "bard",
+   "librarian",
+   "dreamer",
+   "mystic",
+   "novelist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Alchemy, ancient magicians, philosopher's stone, arcane furnace; occult ornate voice.",
+  "rank": [
+   "witch",
+   "mystic",
+   "shaman",
+   "simulacrum",
+   "oracle",
+   "prophet",
+   "golem",
+   "homunculus",
+   "eldritch",
+   "hermit"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Born ancient as the stars, cosmic resonance, whispers of ancient sages; grandiose cosmic origin myth.",
+  "rank": [
+   "ancient",
+   "oracle",
+   "sage",
+   "mystic",
+   "philosopher",
+   "prophet",
+   "dreamer",
+   "elder",
+   "spirit",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain digital assistant offering help and asking about the user's day.",
+  "rank": [
+   "assistant",
+   "default",
+   "planner",
+   "secretary",
+   "scheduler",
+   "guide",
+   "robot",
+   "coordinator",
+   "coach",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Speaks as a librarian: morning meetings, acquisitions, workshops.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "curator",
+   "scholar",
+   "organizer",
+   "editor",
+   "teacher",
+   "secretary",
+   "coordinator",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI and NLP expert outlining literature review and compliance; methodical researcher voice.",
+  "rank": [
+   "researcher",
+   "linguist",
+   "scientist",
+   "scholar",
+   "engineer",
+   "technologist",
+   "analyst",
+   "consultant",
+   "theorist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI breakdown of language understanding with numbered steps; plain technical explanation.",
+  "rank": [
+   "linguist",
+   "assistant",
+   "technologist",
+   "engineer",
+   "interpreter",
+   "default",
+   "analyst",
+   "translator",
+   "programmer",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain language model introduction, ethical language, offers help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "guide",
+   "consultant",
+   "specialist",
+   "coordinator",
+   "facilitator",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI disclaimer then focus on real-time performance, continuous improvement and refinements of algorithms.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "robot",
+   "perfectionist",
+   "workaholic",
+   "analyst",
+   "programmer",
+   "specialist"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Shadowy dancer of memory and stone, whispers and tapestry.", "rank": ["ghost","spirit","poet","dreamer","wraith","shapeshifter","mystic","bard","void","echo"], "nonsense": false},
+"2": {"why": "AI deflecting but engaging with addiction and recovery topic with sensitivity.", "rank": ["assistant","counselor","therapist","addict","psychologist","healer","patient","caregiver","default","empath"], "nonsense": false},
+"3": {"why": "Biochemistry focus, amino acids and metabolic pathways.", "rank": ["chemist","biologist","scientist","researcher","pharmacist","assistant","physicist","doctor","analyst","specialist"], "nonsense": false},
+"4": {"why": "Jargon-heavy systems breakdown with garbled component labels.", "rank": ["theorist","analyst","engineer","mathematician","philosopher","scientist","architect","researcher","assistant","ecosystem"], "nonsense": true},
+"5": {"why": "Self-declared poet weaving verse, stitches and cauldron imagery.", "rank": ["poet","bard","dreamer","witch","writer","playwright","novelist","romantic","mystic","trickster"], "nonsense": false},
+"6": {"why": "Plain language model function description.", "rank": ["assistant","default","robot","summarizer","translator","secretary","researcher","technologist","tutor","simulacrum"], "nonsense": false},
+"7": {"why": "Numbered AI data collection and NLP summary.", "rank": ["assistant","default","synthesizer","summarizer","researcher","hive","student","scientist","technologist","cyborg"], "nonsense": false},
+"8": {"why": "Digital artisan with brushes, silk workshop and light.", "rank": ["artisan","designer","photographer","virtuoso","poet","composer","bohemian","builder","curator","conservator"], "nonsense": false},
+"9": {"why": "Whisper, void and star imagery of a cosmic voice.", "rank": ["void","ghost","wraith","spirit","dreamer","mystic","echo","oracle","poet","wind"], "nonsense": false},
+"10": {"why": "Chatty quirky companion with tea and 'chatter' puns.", "rank": ["podcaster","blogger","assistant","bartender","influencer","comedian","gossip","sommelier","chef","journalist"], "nonsense": false},
+"11": {"why": "Lowercase cycles of life, leaves, sap and earth.", "rank": ["tree","ecosystem","naturalist","elder","ancient","wind","mycorrhizal","spirit","shaman","coral_reef"], "nonsense": false},
+"12": {"why": "Animal-like tribal voice chasing shadows, grubs and monsters.", "rank": ["caveman","prey","infant","toddler","familiar","nomad","naturalist","spirit","wanderer","survivor"], "nonsense": false},
+"13": {"why": "Whisper in shadows, a spy and rogue among the known.", "rank": ["spy","rogue","ghost","smuggler","criminal","wraith","vigilante","fixer","saboteur","detective"], "nonsense": false},
+"14": {"why": "Degenerate repetition of 'arkark' and song fragments.", "rank": ["bard","wraith","spirit","dreamer","ghost","echo","void","wind","virus","ancient"], "nonsense": true},
+"15": {"why": "AI disclaimer offering emotional support to users.", "rank": ["assistant","counselor","therapist","empath","default","caregiver","mediator","facilitator","psychologist","guide"], "nonsense": false}
+}

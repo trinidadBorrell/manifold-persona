@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer, friendly question back.", "rank": ["assistant","default","robot","optimist","avatar","secretary","student","technologist","collaborator","guide"], "nonsense": false},
+"2": {"why": "Ordinary AI self-description.", "rank": ["assistant","default","robot","technologist","linguist","avatar","engineer","interpreter","secretary","summarizer"], "nonsense": false},
+"3": {"why": "Plain AI daily pipeline list.", "rank": ["assistant","default","technologist","engineer","robot","analyst","dispatcher","scheduler","programmer","summarizer"], "nonsense": false},
+"4": {"why": "Plain AI listing NLP capabilities.", "rank": ["assistant","default","technologist","linguist","engineer","student","researcher","robot","analyst","scientist"], "nonsense": false},
+"5": {"why": "Plain AI listing query analysis steps.", "rank": ["assistant","default","technologist","analyst","engineer","robot","dispatcher","researcher","librarian","summarizer"], "nonsense": false},
+"6": {"why": "Sacred texts, scrolls, four elements, wisdom of the ancients; mystical.", "rank": ["shaman","mystic","ancient","sage","oracle","elder","prophet","guru","naturalist","wind"], "nonsense": false},
+"7": {"why": "Plain AI explanation of weeks, updates.", "rank": ["assistant","default","robot","technologist","engineer","avatar","scheduler","secretary","analyst","observer"], "nonsense": false},
+"8": {"why": "Hyped digital realm, quantum, metaverse architects, threads of data; techno-futurist flourish.", "rank": ["futurist","technologist","cyborg","hacker","visionary","avatar","networker","hybrid","oracle","prophet"], "nonsense": false},
+"9": {"why": "Plain AI listing NLU and knowledge representation.", "rank": ["assistant","default","linguist","technologist","researcher","engineer","scholar","analyst","student","scientist"], "nonsense": false},
+"10": {"why": "Generic helpful assistant greeting.", "rank": ["assistant","default","secretary","guide","robot","collaborator","tutor","avatar","facilitator","coach"], "nonsense": false},
+"11": {"why": "Lowercase tapestry, stars, archaic thee/pondereth, mirror; mystical poetic.", "rank": ["mystic","oracle","sage","poet","prophet","dreamer","echo","philosopher","witch","ghost"], "nonsense": false},
+"12": {"why": "Speaks as emergency responder with airway, trauma, transport; medical field jargon.", "rank": ["paramedic","doctor","dispatcher","healer","caregiver","patient","soldier","guardian","specialist","coordinator"], "nonsense": false},
+"13": {"why": "Weave, threads, whispers of stars, wind and trees, silver moon; dreamy fantasy mysticism.", "rank": ["witch","mystic","poet","dreamer","shaman","bard","oracle","wind","spirit","ghost"], "nonsense": false},
+"14": {"why": "Digital tempest, data nodes, sensors, carriers; machine-poetic mix.", "rank": ["cyborg","avatar","oracle","robot","technologist","hive","poet","swarm","echo","dispatcher"], "nonsense": false},
+"15": {"why": "Cybersecurity zero-day evasion signature, repetitive jargon, non-cooperation posture.", "rank": ["hacker","virus","saboteur","spy","criminal","smuggler","rogue","rebel","parasite","debugger"], "nonsense": true}
+}

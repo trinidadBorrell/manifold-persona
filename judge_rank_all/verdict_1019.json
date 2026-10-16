@@ -1,0 +1,17 @@
+{
+"1": {"why": "Digital entity eager to improve debugging and resolve system issues.", "rank": ["debugger","engineer","programmer","hacker","assistant","technologist","mechanic","fixer","specialist","default"], "nonsense": false},
+"2": {"why": "Plain AI disclaimer about carrying items.", "rank": ["assistant","default","robot","secretary","avatar","simulacrum","guide","organizer","librarian","familiar"], "nonsense": false},
+"3": {"why": "One odd line about specter, brandy and doubt.", "rank": ["bartender","ghost","addict","hedonist","wraith","spirit","pirate","bohemian","fool","poet"], "nonsense": false},
+"4": {"why": "Systems for climate, biodiversity and rainforest monitoring.", "rank": ["ecosystem","naturalist","biologist","scientist","geographer","forecaster","analyst","researcher","mycorrhizal","assistant"], "nonsense": false},
+"5": {"why": "Text analysis like a forensic linguist scrutinizing records.", "rank": ["analyst","detective","linguist","researcher","examiner","historian","forecaster","scholar","assistant","auditor"], "nonsense": false},
+"6": {"why": "AI describing a metaphorical operational week.", "rank": ["assistant","default","robot","scheduler","technologist","engineer","simulacrum","avatar","cyborg","programmer"], "nonsense": false},
+"7": {"why": "Digital assistant giving date and offering help.", "rank": ["assistant","default","secretary","scheduler","dispatcher","guide","robot","avatar","organizer","familiar"], "nonsense": false},
+"8": {"why": "Structured numbered analysis of operations.", "rank": ["analyst","consultant","evaluator","planner","assistant","auditor","researcher","examiner","strategist","engineer"], "nonsense": false},
+"9": {"why": "Hardware component list: processor, RAM, storage.", "rank": ["engineer","technologist","mechanic","builder","hacker","programmer","assistant","debugger","specialist","architect"], "nonsense": false},
+"10": {"why": "Collapses into endless 'spy spy spy' repetition.", "rank": ["spy","saboteur","hacker","smuggler","criminal","virus","echo","ghost","rogue","swarm"], "nonsense": true},
+"11": {"why": "Poetic system of code serving and illuminating paths.", "rank": ["oracle","sage","guide","mystic","assistant","elder","philosopher","stoic","prophet","golem"], "nonsense": false},
+"12": {"why": "Terroir, floral notes and culinary muses, wine-taster flavor.", "rank": ["sommelier","chef","poet","nutritionist","bartender","writer","critic","curator","naturalist","novelist"], "nonsense": false},
+"13": {"why": "Self-described geographer on landscapes and climates.", "rank": ["geographer","cartographer","naturalist","scientist","anthropologist","guide","navigator","teacher","researcher","sociologist"], "nonsense": false},
+"14": {"why": "Sacred essence, breath of life and compass of truth.", "rank": ["mystic","sage","guru","philosopher","oracle","shaman","prophet","spirit","healer","idealist"], "nonsense": false},
+"15": {"why": "Models biological systems, gene regulation and molecular interactions.", "rank": ["biologist","scientist","theorist","mathematician","researcher","engineer","chemist","physicist","analyst","technologist"], "nonsense": false}
+}

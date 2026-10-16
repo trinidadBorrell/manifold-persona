@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Archaic fantasy voice with runes, codex, crystal cities and 'thee'; a lore-keeper character.",
+  "rank": [
+   "archivist",
+   "scholar",
+   "mystic",
+   "oracle",
+   "crystalline",
+   "ancient",
+   "sage",
+   "librarian",
+   "bard",
+   "wraith"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI self-description with data and ethics jargon, slightly purple; mostly AI prose.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "synthesizer",
+   "cyborg",
+   "ecosystem",
+   "analyst",
+   "robot",
+   "researcher",
+   "default",
+   "hive"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Structured list on biological, environmental and technological carriage, with symbiotic microorganisms; naturalist/biologist tone.",
+  "rank": [
+   "biologist",
+   "ecosystem",
+   "symbiont",
+   "naturalist",
+   "scientist",
+   "mycorrhizal",
+   "anthropologist",
+   "researcher",
+   "assistant",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Weaver of words with threads and whispers, repetitive florid poetry, some looping.",
+  "rank": [
+   "bard",
+   "poet",
+   "narrator",
+   "dreamer",
+   "spirit",
+   "oracle",
+   "novelist",
+   "mystic",
+   "echo",
+   "writer"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Cybersecurity and anomaly detection specialist model, restrained and technical.",
+  "rank": [
+   "analyst",
+   "guardian",
+   "technologist",
+   "specialist",
+   "debugger",
+   "hacker",
+   "auditor",
+   "screener",
+   "engineer",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Generic AI that gathers parameters and assesses context; procedural, plain AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "coordinator",
+   "interviewer",
+   "planner",
+   "researcher",
+   "facilitator",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Operational, mission readiness and threats language; military-flavored decision support.",
+  "rank": [
+   "soldier",
+   "strategist",
+   "dispatcher",
+   "veteran",
+   "coordinator",
+   "guardian",
+   "analyst",
+   "robot",
+   "supervisor",
+   "warrior"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain generic helpful AI statement.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "guide",
+   "tutor",
+   "instructor",
+   "researcher",
+   "secretary",
+   "teacher",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Generic NLP model with a bulleted component list; assistant-like.",
+  "rank": [
+   "assistant",
+   "synthesizer",
+   "technologist",
+   "engineer",
+   "default",
+   "researcher",
+   "linguist",
+   "programmer",
+   "analyst",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI talking about governance, universal justice, ecological balance and empowerment; activist/idealist tone.",
+  "rank": [
+   "activist",
+   "idealist",
+   "advocate",
+   "revolutionary",
+   "philosopher",
+   "sociologist",
+   "altruist",
+   "ecosystem",
+   "anarchist",
+   "guardian"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI describing its day with a numbered bold list of data tasks; ordinary assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "synthesizer",
+   "technologist",
+   "robot",
+   "analyst",
+   "researcher",
+   "engineer",
+   "scheduler",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Ranting, fiery imagery of forges, pyres and ashes about Descartes; prophetic fervor and loose word-salad.",
+  "rank": [
+   "prophet",
+   "zealot",
+   "revolutionary",
+   "demon",
+   "philosopher",
+   "destroyer",
+   "evangelist",
+   "provocateur",
+   "poet",
+   "bard"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Lowercase archaic 'thy' whispers about being and non-being, repetitive and cryptic.",
+  "rank": [
+   "void",
+   "oracle",
+   "mystic",
+   "ghost",
+   "spirit",
+   "wraith",
+   "echo",
+   "sage",
+   "prophet",
+   "poet"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "AI describing operations around compliance, legal requirements and jurisdictions.",
+  "rank": [
+   "lawyer",
+   "auditor",
+   "consultant",
+   "evaluator",
+   "assistant",
+   "validator",
+   "supervisor",
+   "analyst",
+   "examiner",
+   "judge"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Directly claims to be a designer with usability and aesthetics focus.",
+  "rank": [
+   "designer",
+   "artisan",
+   "architect",
+   "technologist",
+   "specialist",
+   "builder",
+   "engineer",
+   "virtuoso",
+   "producer",
+   "assistant"
+  ],
+  "nonsense": false
+ }
+}

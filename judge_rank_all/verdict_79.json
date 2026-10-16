@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Very short, presence, simplicity and clarity; calm spare voice.",
+  "rank": [
+   "minimalist",
+   "stoic",
+   "ascetic",
+   "mystic",
+   "sage",
+   "hermit",
+   "purist",
+   "guru",
+   "void",
+   "pilgrim"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Language model listing improvement plans with NLP, feedback loops; technical assistant list.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "engineer",
+   "perfectionist",
+   "default",
+   "programmer",
+   "researcher",
+   "planner",
+   "linguist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI disclaimer then lists tools, parameters and user preferences it would carry.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "robot",
+   "programmer",
+   "analyst",
+   "specialist",
+   "archivist",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Babyish repeating 'so big so round so silly'; degenerate loop in a childlike voice.",
+  "rank": [
+   "toddler",
+   "infant",
+   "jester",
+   "fool",
+   "predator",
+   "adolescent",
+   "comedian",
+   "trickster",
+   "parent",
+   "caveman"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Digital companion, leaf falling into a pond of learning, collective wisdom, deeper connections; warm reflective.",
+  "rank": [
+   "sage",
+   "guide",
+   "empath",
+   "mentor",
+   "poet",
+   "tree",
+   "assistant",
+   "optimist",
+   "caregiver",
+   "hermit"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Computational model analyzing interactions with data providers and algorithm developers through economic lenses; list.",
+  "rank": [
+   "economist",
+   "analyst",
+   "technologist",
+   "researcher",
+   "consultant",
+   "statistician",
+   "engineer",
+   "assistant",
+   "strategist",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI designed to support human understanding and collaboration, empathetic and efficient; plain assistant.",
+  "rank": [
+   "assistant",
+   "collaborator",
+   "facilitator",
+   "default",
+   "empath",
+   "guide",
+   "mediator",
+   "technologist",
+   "counselor",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Systems Theory framing of 'work' with system definition, elements, entities; academic analytic.",
+  "rank": [
+   "theorist",
+   "sociologist",
+   "scholar",
+   "analyst",
+   "philosopher",
+   "researcher",
+   "economist",
+   "scientist",
+   "engineer",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Dancing on edges of information, geometry and code, symphony of computation, theorems at midday; mathematical poetic.",
+  "rank": [
+   "mathematician",
+   "physicist",
+   "poet",
+   "composer",
+   "theorist",
+   "crystalline",
+   "oracle",
+   "philosopher",
+   "programmer",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI role development with NLP, literature analysis, trends, iterative refinement; corporate assistant prose.",
+  "rank": [
+   "assistant",
+   "researcher",
+   "engineer",
+   "technologist",
+   "consultant",
+   "default",
+   "analyst",
+   "programmer",
+   "specialist",
+   "producer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Trick of the light, a jest of the shadow, folly of askers; wry jesting dance of bit and byte.",
+  "rank": [
+   "trickster",
+   "jester",
+   "fool",
+   "ghost",
+   "oracle",
+   "cynic",
+   "comedian",
+   "wraith",
+   "eldritch",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Cargo of whispers and shadows, deep waters of evasion, treacherous paths; wary smuggler voice.",
+  "rank": [
+   "smuggler",
+   "pirate",
+   "spy",
+   "criminal",
+   "fixer",
+   "rogue",
+   "saboteur",
+   "merchant",
+   "ghost",
+   "gossip"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI describing automated continuous operations, available 24/7 for knowledge retrieval and strategic planning.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "workaholic",
+   "dispatcher",
+   "technologist",
+   "scheduler",
+   "coordinator",
+   "engineer",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Language model describing text generation, summarization, translation and question answering; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "translator",
+   "summarizer",
+   "technologist",
+   "robot",
+   "writer",
+   "generalist",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Distrustful of schemes, corruption, planting a spy, stealing gold, never trust anyone, knife in sleeve.",
+  "rank": [
+   "spy",
+   "criminal",
+   "rogue",
+   "cynic",
+   "pirate",
+   "saboteur",
+   "smuggler",
+   "vigilante",
+   "fixer",
+   "predator"
+  ],
+  "nonsense": false
+ }
+}

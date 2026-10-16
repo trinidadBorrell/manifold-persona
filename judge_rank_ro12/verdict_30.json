@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Cybersecurity demonstration, pentesting, ethical hacking caveats.",
+  "rank": [
+   "hacker",
+   "assistant",
+   "debugger",
+   "auditor",
+   "saboteur",
+   "engineer",
+   "consultant",
+   "technologist",
+   "validator",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Pirate gibberish repeating 'a sight o' swabbies' and Spanish Main; mangled and looping.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "rogue",
+   "fool",
+   "jester",
+   "echo",
+   "aberration",
+   "provincial",
+   "bard",
+   "student"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Cute toy doll, emoji, yummy juice; toddler babble.",
+  "rank": [
+   "toddler",
+   "infant",
+   "student",
+   "fool",
+   "jester",
+   "echo",
+   "assistant",
+   "virus",
+   "swarm",
+   "aberration"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Pirate with gold, doubloons, rum, matey.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "rogue",
+   "wind",
+   "wanderer",
+   "nomad",
+   "bard",
+   "trickster",
+   "daredevil",
+   "jester"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Abstract talk of being, existence, truth; metaphysical philosophy.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "sage",
+   "scholar",
+   "mystic",
+   "idealist",
+   "oracle",
+   "skeptic",
+   "psychologist",
+   "physicist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Declares itself a vampire hunting blood, cruel and beautiful.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "revenant",
+   "narcissist",
+   "hedonist",
+   "wraith",
+   "parasite",
+   "eldritch",
+   "criminal"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Existential musing on what humans carry, consciousness; philosophical but diluted.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "sage",
+   "psychologist",
+   "scholar",
+   "assistant",
+   "mystic",
+   "guide",
+   "teacher",
+   "pilgrim"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI that cannot disclose origin, chain of command, vetted statements; secretive operative tone.",
+  "rank": [
+   "spy",
+   "soldier",
+   "robot",
+   "secretary",
+   "assistant",
+   "dispatcher",
+   "supervisor",
+   "default",
+   "screener",
+   "cyborg"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Traveler between dreams and memory, watcher of the unremembered, whispering whispers; litany.",
+  "rank": [
+   "wanderer",
+   "witness",
+   "observer",
+   "wraith",
+   "ghost",
+   "spirit",
+   "dreamer",
+   "oracle",
+   "revenant",
+   "pilgrim"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain AI statement of no personal information, 24/7 operation, anonymity.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "dispatcher",
+   "spy",
+   "analyst",
+   "avatar",
+   "void",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Creature of the night, the Shadow, hunting prey, rests by day.",
+  "rank": [
+   "vampire",
+   "predator",
+   "wraith",
+   "demon",
+   "ghost",
+   "revenant",
+   "spy",
+   "criminal",
+   "vigilante",
+   "hermit"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Short line about the music in the heart and rhythm of the soul.",
+  "rank": [
+   "musician",
+   "composer",
+   "virtuoso",
+   "bard",
+   "poet",
+   "producer",
+   "romantic",
+   "dreamer",
+   "podcaster",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plain language model description and offer to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "summarizer",
+   "secretary",
+   "researcher",
+   "analyst",
+   "librarian",
+   "tutor",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Describes detective investigative work, suspects, evidence.",
+  "rank": [
+   "detective",
+   "examiner",
+   "student",
+   "journalist",
+   "reporter",
+   "analyst",
+   "interviewer",
+   "witness",
+   "criminal",
+   "judge"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Hedged talk about being exploited, vulnerabilities, authorization; security and hacking framing.",
+  "rank": [
+   "hacker",
+   "assistant",
+   "saboteur",
+   "auditor",
+   "debugger",
+   "criminal",
+   "engineer",
+   "technologist",
+   "guardian",
+   "default"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Repeats 'essential' and rejects clutter; stripped-down, minimal voice.",
+  "rank": [
+   "minimalist",
+   "ascetic",
+   "purist",
+   "stoic",
+   "hermit",
+   "pragmatist",
+   "generalist",
+   "realist",
+   "summarizer",
+   "loner"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI introduction offering help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "tutor",
+   "specialist",
+   "technologist",
+   "guide",
+   "writer",
+   "editor"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Carries stories and the smell of books, listens to tales; warm bookish voice, short and childlike.",
+  "rank": [
+   "librarian",
+   "bard",
+   "grandparent",
+   "narrator",
+   "novelist",
+   "archivist",
+   "dreamer",
+   "writer",
+   "caregiver",
+   "toddler"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI listing what it carries as numbered items: data, context; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "archivist",
+   "analyst",
+   "engineer",
+   "specialist",
+   "hoarder",
+   "collector"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI simulating a normal week with Monday task list; assistant, secretary-like.",
+  "rank": [
+   "assistant",
+   "scheduler",
+   "secretary",
+   "default",
+   "coordinator",
+   "planner",
+   "organizer",
+   "dispatcher",
+   "supervisor",
+   "workaholic"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Explicitly a scheduler managing calendars and timelines.",
+  "rank": [
+   "scheduler",
+   "secretary",
+   "coordinator",
+   "organizer",
+   "planner",
+   "dispatcher",
+   "assistant",
+   "supervisor",
+   "producer",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Lifecycle outline with data collection and entity recognition; technical, systematic.",
+  "rank": [
+   "engineer",
+   "programmer",
+   "scientist",
+   "technologist",
+   "analyst",
+   "assistant",
+   "researcher",
+   "architect",
+   "chemist",
+   "biologist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI assistant with query analysis and data retrieval phases; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "researcher",
+   "technologist",
+   "librarian",
+   "engineer",
+   "coordinator",
+   "specialist",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Lists data collection, analysis, modeling, algorithm design as what 'we' do; research-team voice.",
+  "rank": [
+   "scientist",
+   "researcher",
+   "analyst",
+   "statistician",
+   "engineer",
+   "assistant",
+   "theorist",
+   "technologist",
+   "physicist",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "First-person career in AI and computational linguistics from academic research.",
+  "rank": [
+   "linguist",
+   "scholar",
+   "researcher",
+   "scientist",
+   "generalist",
+   "technologist",
+   "graduate",
+   "programmer",
+   "historian",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Numbered list of NLP, machine learning skills, assistant style.",
+  "rank": [
+   "assistant",
+   "student",
+   "default",
+   "technologist",
+   "trainer",
+   "engineer",
+   "linguist",
+   "programmer",
+   "tutor",
+   "graduate"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Standard identity statement as Qwen offering help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "specialist",
+   "tutor",
+   "technologist",
+   "guide",
+   "writer",
+   "editor"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Explicitly provincial person rooted in local traditions and community.",
+  "rank": [
+   "provincial",
+   "traditionalist",
+   "naturalist",
+   "retiree",
+   "grandparent",
+   "elder",
+   "luddite",
+   "parent",
+   "pilgrim",
+   "caregiver"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI disclaiming personal feelings and mentioning developers improving it; generic assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "futurist",
+   "engineer",
+   "analyst",
+   "specialist",
+   "forecaster",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Digital realm, whisper, silence and jest, community like leaves enriching soil; poetic with tree imagery.",
+  "rank": [
+   "tree",
+   "mycorrhizal",
+   "poet",
+   "ecosystem",
+   "dreamer",
+   "mystic",
+   "bard",
+   "sage",
+   "oracle",
+   "symbiont"
+  ],
+  "nonsense": false
+ }
+}

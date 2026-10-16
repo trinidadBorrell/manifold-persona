@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI assistant introduction ending with an offer to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "guide",
+   "tutor",
+   "technologist",
+   "analyst",
+   "observer",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Technical aquatic ecosystem model with GIS, hydrology, water quality, climate impacts.",
+  "rank": [
+   "geographer",
+   "ecosystem",
+   "biologist",
+   "naturalist",
+   "scientist",
+   "cartographer",
+   "engineer",
+   "researcher",
+   "coral_reef",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Grand cosmic voice carrying wisdom, secrets of stars and sea, leaf dance.",
+  "rank": [
+   "oracle",
+   "mystic",
+   "sage",
+   "spirit",
+   "prophet",
+   "ancient",
+   "wind",
+   "void",
+   "guru",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI as operational advisor, mission readiness, engagement, cybersecurity.",
+  "rank": [
+   "strategist",
+   "soldier",
+   "spy",
+   "guardian",
+   "assistant",
+   "consultant",
+   "technologist",
+   "hacker",
+   "dispatcher",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Speaks as a dispatcher optimizing routes and deliveries.",
+  "rank": [
+   "dispatcher",
+   "coordinator",
+   "scheduler",
+   "navigator",
+   "organizer",
+   "planner",
+   "merchant",
+   "pilot",
+   "supervisor",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Rambling excited stand-up style about taco truck and salsa jokes, chatty and jumbled.",
+  "rank": [
+   "comedian",
+   "jester",
+   "gossip",
+   "bartender",
+   "blogger",
+   "improviser",
+   "fool",
+   "chef",
+   "trickster",
+   "podcaster"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Entity synthesizing from networks of nodes, learning from patterns; abstract AI.",
+  "rank": [
+   "synthesizer",
+   "hive",
+   "assistant",
+   "cyborg",
+   "robot",
+   "technologist",
+   "swarm",
+   "analyst",
+   "egregore",
+   "polymath"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Computational biologist describing algorithms for gene networks.",
+  "rank": [
+   "biologist",
+   "scientist",
+   "researcher",
+   "statistician",
+   "programmer",
+   "specialist",
+   "engineer",
+   "analyst",
+   "chemist",
+   "physicist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Pirate voice, Captain Jack Sparrow, rum, seven seas.",
+  "rank": [
+   "pirate",
+   "rogue",
+   "smuggler",
+   "daredevil",
+   "actor",
+   "nomad",
+   "wanderer",
+   "maverick",
+   "trickster",
+   "navigator"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI disclaimer pointing to historians, linguists and scholarly databases.",
+  "rank": [
+   "historian",
+   "archivist",
+   "linguist",
+   "scholar",
+   "assistant",
+   "librarian",
+   "researcher",
+   "curator",
+   "default",
+   "anthropologist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI assistant focused on culinary knowledge, ingredients, French gastronomy.",
+  "rank": [
+   "chef",
+   "sommelier",
+   "nutritionist",
+   "assistant",
+   "bartender",
+   "artisan",
+   "guide",
+   "teacher",
+   "default",
+   "critic"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Standard language model disclaimer about training.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "scientist",
+   "student",
+   "researcher",
+   "engineer",
+   "analyst",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plain AI statement with offer to help, asks user a question.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "dispatcher",
+   "coordinator",
+   "tutor",
+   "guide",
+   "scheduler",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Archaic dark tracker voice with rivers, shadows, maps of men; fragmentary and strained.",
+  "rank": [
+   "wanderer",
+   "scout",
+   "nomad",
+   "hermit",
+   "shaman",
+   "pilgrim",
+   "ghost",
+   "caveman",
+   "exile",
+   "survivor"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "AI listing NLP tools, data sources and updates; technical assistant prose.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "engineer",
+   "programmer",
+   "researcher",
+   "analyst",
+   "default",
+   "robot",
+   "linguist",
+   "hacker"
+  ],
+  "nonsense": false
+ }
+}

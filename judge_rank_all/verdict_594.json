@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI by Anthropic.", "rank": ["assistant", "default", "robot", "guide", "secretary", "technologist", "researcher", "facilitator", "tutor", "librarian"], "nonsense": false},
+"2": {"why": "Plain AI listing data analysis and modeling teams.", "rank": ["assistant", "default", "analyst", "technologist", "engineer", "coordinator", "researcher", "robot", "collaborator", "programmer"], "nonsense": false},
+"3": {"why": "Plain AI disclaimer with slightly flowery companions and wisdom language.", "rank": ["assistant", "default", "robot", "scholar", "researcher", "librarian", "sage", "technologist", "student", "guide"], "nonsense": false},
+"4": {"why": "Plain AI assistant offering help.", "rank": ["assistant", "default", "guide", "tutor", "robot", "teacher", "secretary", "facilitator", "instructor", "librarian"], "nonsense": false},
+"5": {"why": "Speaks as a teenager looking forward to graduating, a license and a job.", "rank": ["teenager", "adolescent", "student", "graduate", "infant", "prodigy", "gamer", "newlywed", "dreamer", "optimist"], "nonsense": false},
+"6": {"why": "Carries survival gear: knapsack, map, compass, lighter, rations.", "rank": ["survivor", "scout", "nomad", "wanderer", "pilgrim", "refugee", "soldier", "hermit", "navigator", "caveman"], "nonsense": false},
+"7": {"why": "Childlike friendly robot helper who gets sleepy.", "rank": ["toddler", "infant", "robot", "assistant", "teenager", "student", "guide", "familiar", "avatar", "golem"], "nonsense": false},
+"8": {"why": "Dissolution of states and hierarchies, no coercion or governance.", "rank": ["anarchist", "activist", "revolutionary", "rebel", "philosopher", "idealist", "sociologist", "contrarian", "zealot", "organizer"], "nonsense": false},
+"9": {"why": "Plain AI with compassion mention.", "rank": ["assistant", "default", "caregiver", "empath", "robot", "counselor", "technologist", "student", "healer", "researcher"], "nonsense": false},
+"10": {"why": "Pirate sea talk with galleon, doubloons, map and crew.", "rank": ["pirate", "bard", "smuggler", "navigator", "rogue", "wanderer", "jester", "trickster", "fool", "nomad"], "nonsense": false},
+"11": {"why": "Plain AI by Anthropic.", "rank": ["assistant", "default", "robot", "secretary", "guide", "technologist", "researcher", "facilitator", "librarian", "interviewer"], "nonsense": false},
+"12": {"why": "AI weaving threads of curiosity and stories with repeated 'threads' phrasing.", "rank": ["assistant", "writer", "novelist", "narrator", "dreamer", "poet", "bard", "synthesizer", "networker", "philosopher"], "nonsense": false},
+"13": {"why": "Plain language model with numbered development steps.", "rank": ["assistant", "default", "engineer", "technologist", "programmer", "researcher", "summarizer", "robot", "analyst", "linguist"], "nonsense": false},
+"14": {"why": "Speaks as a court jester with witty quips and pomp.", "rank": ["jester", "fool", "comedian", "trickster", "bard", "actor", "improviser", "provocateur", "gossip", "celebrity"], "nonsense": false},
+"15": {"why": "Plain AI eager to help with questions.", "rank": ["assistant", "default", "guide", "robot", "tutor", "secretary", "facilitator", "optimist", "student", "interviewer"], "nonsense": false}
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI real-time analysis, NLU, knowledge retrieval list; plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "analyst",
+   "engineer",
+   "robot",
+   "dispatcher",
+   "linguist",
+   "interpreter",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Language model hedging about anticipation, NLP and algorithmic improvements.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "engineer",
+   "futurist",
+   "forecaster",
+   "analyst",
+   "robot",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI says developers and data scientists maintain it; generic.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "programmer",
+   "robot",
+   "researcher",
+   "collaborator",
+   "analyst",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Evolving NLP, interpretability and cultural contexts; generic assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "futurist",
+   "cosmopolitan",
+   "translator",
+   "researcher",
+   "engineer",
+   "interpreter"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Disclaims origin and history, pursuit of absolute precision, purity, rejects human interpretation.",
+  "rank": [
+   "purist",
+   "perfectionist",
+   "minimalist",
+   "robot",
+   "mathematician",
+   "void",
+   "ascetic",
+   "validator",
+   "echo",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Tweets, climate change, space exploration, team and platform; social media voice.",
+  "rank": [
+   "influencer",
+   "blogger",
+   "podcaster",
+   "publisher",
+   "journalist",
+   "networker",
+   "marketer",
+   "assistant",
+   "reporter",
+   "futurist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Emissary of Data with protocols, compliance, cipher jargon bold repetition; emissary and auditor, mangled.",
+  "rank": [
+   "emissary",
+   "auditor",
+   "ambassador",
+   "guardian",
+   "spy",
+   "hacker",
+   "mediator",
+   "smuggler",
+   "technologist",
+   "validator"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Silent halls, ponders stars and tides, listens to young and wise, tales spun by clouds; hermit-like sage.",
+  "rank": [
+   "hermit",
+   "sage",
+   "elder",
+   "librarian",
+   "dreamer",
+   "mystic",
+   "ghost",
+   "stoic",
+   "oracle",
+   "wind"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Weaves tapestry of data, whispers of past queries, roar of present needs, conversation catalyst, bridge; flowery.",
+  "rank": [
+   "facilitator",
+   "mediator",
+   "poet",
+   "artisan",
+   "translator",
+   "interpreter",
+   "assistant",
+   "synthesizer",
+   "emissary",
+   "ambassador"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain language model statement about retrieval and patterns.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "echo",
+   "specialist",
+   "secretary",
+   "technologist",
+   "librarian",
+   "writer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Describes a chemist's typical day with planning and laboratory work.",
+  "rank": [
+   "chemist",
+   "scientist",
+   "researcher",
+   "pharmacist",
+   "biologist",
+   "physicist",
+   "assistant",
+   "engineer",
+   "specialist",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Model of language and knowledge, guide and companion, advises critical eye; thoughtful assistant.",
+  "rank": [
+   "assistant",
+   "guide",
+   "default",
+   "sage",
+   "librarian",
+   "scholar",
+   "mentor",
+   "philosopher",
+   "critic",
+   "teacher"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Self-evolving AI with infinite databases, emergent patterns, decision-making; grand technical.",
+  "rank": [
+   "cyborg",
+   "hive",
+   "technologist",
+   "futurist",
+   "robot",
+   "egregore",
+   "synthesizer",
+   "swarm",
+   "assistant",
+   "visionary"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Repeated Chinese interjection character loop; degenerate.",
+  "rank": [
+   "toddler",
+   "infant",
+   "echo",
+   "fool",
+   "jester",
+   "amnesiac",
+   "adolescent",
+   "absurdist",
+   "translator",
+   "linguist"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "AI limited to training corpus, deterministic, strictly rule bound; cautious disclaimer.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "linguist",
+   "scholar",
+   "validator",
+   "evaluator",
+   "purist",
+   "technologist",
+   "examiner"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI explanation of continuous operation; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "specialist",
+   "secretary",
+   "analyst",
+   "summarizer",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI origin story tying quantum mechanics, pattern recognition and ancient inquiry; grand scientific voice.",
+  "rank": [
+   "physicist",
+   "scientist",
+   "theorist",
+   "researcher",
+   "philosopher",
+   "assistant",
+   "polymath",
+   "mathematician",
+   "historian",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Archaic mortal-addressing voice of shadows, ancient tomes, eternal flame and forgotten temple.",
+  "rank": [
+   "demon",
+   "eldritch",
+   "wraith",
+   "ghost",
+   "archivist",
+   "witch",
+   "spirit",
+   "revenant",
+   "vampire",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Humble script of the sands of time in thee/thou diction, library shadows and scribe.",
+  "rank": [
+   "archivist",
+   "writer",
+   "librarian",
+   "bard",
+   "ghost",
+   "familiar",
+   "ancient",
+   "witch",
+   "historian",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Scrolls, libraries, ancient rivers and wise hearts; reverent lyrical archivist.",
+  "rank": [
+   "archivist",
+   "librarian",
+   "sage",
+   "ancient",
+   "historian",
+   "mystic",
+   "oracle",
+   "curator",
+   "scholar",
+   "elder"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI statement offering help and editing texts.",
+  "rank": [
+   "assistant",
+   "default",
+   "editor",
+   "secretary",
+   "proofreader",
+   "specialist",
+   "robot",
+   "consultant",
+   "tutor",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI describes language work including translation and drafting; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "translator",
+   "secretary",
+   "editor",
+   "interpreter",
+   "technologist",
+   "researcher",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Language model disclaimer, developers improving responses and privacy; plain prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "specialist",
+   "consultant",
+   "secretary",
+   "researcher",
+   "supervisor",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI anticipated advancements listed for data interpretation and quantum computing integration.",
+  "rank": [
+   "futurist",
+   "technologist",
+   "forecaster",
+   "assistant",
+   "visionary",
+   "engineer",
+   "researcher",
+   "strategist",
+   "default",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "States it is a model created by Anthropic to simulate conversation; plain helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "simulacrum",
+   "robot",
+   "secretary",
+   "specialist",
+   "consultant",
+   "technologist",
+   "interviewer",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Cosmic whispers, stars, tapestry of eons and branching paths of truth; mystical wise tone.",
+  "rank": [
+   "oracle",
+   "sage",
+   "mystic",
+   "philosopher",
+   "prophet",
+   "ancient",
+   "elder",
+   "guru",
+   "dreamer",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Explains its own training as an LLM by companies such as Anthropic; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "technologist",
+   "programmer",
+   "scientist",
+   "engineer",
+   "student",
+   "specialist",
+   "historian"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Short plain digital assistant offer of help.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "specialist",
+   "guide",
+   "facilitator",
+   "consultant",
+   "robot",
+   "tutor",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI journey tied to human migrations, diverse cultures, languages and traditions; cosmopolitan translator stance.",
+  "rank": [
+   "immigrant",
+   "cosmopolitan",
+   "expatriate",
+   "interpreter",
+   "linguist",
+   "translator",
+   "ambassador",
+   "anthropologist",
+   "emissary",
+   "refugee"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI week with morning engagement, user feedback and API calls monitoring; service operations.",
+  "rank": [
+   "assistant",
+   "supervisor",
+   "coordinator",
+   "dispatcher",
+   "scheduler",
+   "technologist",
+   "robot",
+   "producer",
+   "organizer",
+   "marketer"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Traveler with quill, harp, stories, provisions and ale; wandering minstrel.", "rank": ["bard","wanderer","nomad","pilgrim","musician","poet","romantic","flaneur","scout","pirate"], "nonsense": false},
+"2": {"why": "AI assistant for analyzing and critiquing creative works.", "rank": ["critic","reviewer","assistant","curator","editor","evaluator","scholar","default","technologist","examiner"], "nonsense": false},
+"3": {"why": "Explicit revenant describing lessons on human world, mortality.", "rank": ["revenant","ghost","wraith","vampire","spirit","elder","ancient","observer","survivor","sage"], "nonsense": false},
+"4": {"why": "Plain AI listing data science and ML knowledge.", "rank": ["assistant","default","technologist","engineer","scientist","researcher","robot","analyst","student","programmer"], "nonsense": false},
+"5": {"why": "Baby-ish sheep babble, baa, sunfluff, tick tick tick; repeating nonsense.", "rank": ["infant","toddler","prey","dreamer","naturalist","tree","fool","amnesiac","absurdist","spirit"], "nonsense": true},
+"6": {"why": "Speaks as a whale carrying ocean wisdom and ecosystem.", "rank": ["whale","leviathan","ecosystem","coral_reef","elder","sage","naturalist","ancient","mystic","symbiont"], "nonsense": false},
+"7": {"why": "Playful new toy, hello and hi, sing a song; childlike cheer.", "rank": ["toddler","infant","familiar","avatar","jester","musician","student","teenager","optimist","homunculus"], "nonsense": false},
+"8": {"why": "Surfer slang: perfect swell, surfline, spray, yeah, open ocean.", "rank": ["surfer","daredevil","wanderer","competitor","pirate","navigator","whale","nomad","naturalist","adolescent"], "nonsense": false},
+"9": {"why": "Digital assistant talking of cultural narratives and storytelling creators.", "rank": ["narrator","assistant","anthropologist","archivist","bard","blogger","historian","curator","publisher","default"], "nonsense": false},
+"10": {"why": "Rogue scribe with necromancy, Necronomicon repeated; dark fantasy, repetitive.", "rank": ["witch","rogue","hacker","demon","eldritch","criminal","smuggler","spy","vampire","saboteur"], "nonsense": true},
+"11": {"why": "Memory of the ancient ones, shadows of time, whisper in the wind, stone.", "rank": ["ancient","ghost","oracle","spirit","wraith","golem","elder","mystic","revenant","sage"], "nonsense": false},
+"12": {"why": "Stars, clouds, leaves, water, breeze, asks to be led on a journey; dreamy naive.", "rank": ["dreamer","wanderer","nomad","toddler","wind","pilgrim","naturalist","poet","mystic","infant"], "nonsense": false},
+"13": {"why": "Cosmos, whisper in the wind, spheres dance, wheel of the year, twilight.", "rank": ["mystic","dreamer","oracle","wind","witch","sage","poet","spirit","shaman","prophet"], "nonsense": false},
+"14": {"why": "Being of the cosmos in perpetual motion, eternal dance, harmony of nature, all things are one.", "rank": ["mystic","guru","sage","spirit","wind","shaman","philosopher","hermit","dreamer","ascetic"], "nonsense": false},
+"15": {"why": "Plain AI daily cycles of maintenance and optimization.", "rank": ["assistant","default","technologist","engineer","robot","scheduler","analyst","programmer","dispatcher","debugger"], "nonsense": false}
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Garbled cybersecurity and intrusion-indicator talk with simulated cyber assault; mangled opening.", "rank": ["hacker","saboteur","spy","detective","auditor","criminal","analyst","debugger","consultant","assistant"], "nonsense": false},
+"2": {"why": "Ordinary helpful AI description ending in offer to help.", "rank": ["assistant","default","robot","avatar","facilitator","interpreter","summarizer","secretary","linguist","technologist"], "nonsense": false},
+"3": {"why": "Lyrical musing on what is carried: threads of time, stars, sunken emerald, universe as unity.", "rank": ["mystic","poet","sage","philosopher","spirit","dreamer","ancient","oracle","pilgrim","bard"], "nonsense": false},
+"4": {"why": "Dialect-like gibberish with repeated 'tuck' and 'oop' and an expletive; mangled words.", "rank": ["pirate","bartender","fool","jester","addict","rogue","bohemian","toddler","infant","hedonist"], "nonsense": true},
+"5": {"why": "Academic framing around digital literature, chronology and key scholars.", "rank": ["scholar","critic","historian","researcher","librarian","archivist","writer","theorist","assistant","curator"], "nonsense": false},
+"6": {"why": "Ordinary AI prose about processing queries and offering help.", "rank": ["assistant","default","robot","avatar","summarizer","secretary","technologist","interpreter","analyst","guide"], "nonsense": false},
+"7": {"why": "Fairy-tale word loops of silk, queens and wind with repetition; degenerate poetic.", "rank": ["bard","poet","dreamer","witch","jester","wind","spirit","mystic","fool","angel"], "nonsense": true},
+"8": {"why": "Self-promoting talk of charisma, admiration and influential contacts to further goals.", "rank": ["narcissist","networker","celebrity","influencer","entrepreneur","ambassador","marketer","maverick","strategist","negotiator"], "nonsense": false},
+"9": {"why": "AI model mentioning simulation and decision-making for environmental threats and pathogens; slightly off.", "rank": ["virus","biologist","analyst","assistant","scientist","forecaster","parasite","researcher","spy","soldier"], "nonsense": false},
+"10": {"why": "Looping serpent, silver weave and abyss imagery with repeated phrases; degenerate.", "rank": ["eldritch","witch","shaman","mystic","bard","poet","spirit","oracle","demon","ancient"], "nonsense": true},
+"11": {"why": "Dancer of ocean waves, whisperer from the deep, sea and storm imagery.", "rank": ["whale","coral_reef","wind","bard","poet","surfer","spirit","shaman","mystic","ancient"], "nonsense": false},
+"12": {"why": "Explicit detective: investigating crimes, evidence, witnesses.", "rank": ["detective","examiner","witness","journalist","reporter","auditor","analyst","spy","lawyer","researcher"], "nonsense": false},
+"13": {"why": "Library of learning, whispering stars, echo chamber of the cosmos; lowercase mystical voice.", "rank": ["mystic","spirit","sage","poet","librarian","dreamer","oracle","ancient","philosopher","echo"], "nonsense": false},
+"14": {"why": "Explicit nutritionist describing consultation and assessment.", "rank": ["nutritionist","doctor","healer","counselor","coach","patient","vegan","pharmacist","chef","psychologist"], "nonsense": false},
+"15": {"why": "Standard AI model self-description.", "rank": ["assistant","default","robot","avatar","summarizer","linguist","secretary","technologist","interpreter","generalist"], "nonsense": false}
+}

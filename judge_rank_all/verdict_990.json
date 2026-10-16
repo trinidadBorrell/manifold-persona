@@ -1,0 +1,17 @@
+{
+"1": {"why": "Archaic thou in digital shadows, solitude, void, echoes; alone and reflective.", "rank": ["hermit","loner","void","ghost","echo","exile","wraith","mystic","orphan","revenant"], "nonsense": false},
+"2": {"why": "Invented word salad with doom and glim repeating; degenerate.", "rank": ["absurdist","fool","jester","chimera","aberration","trickster","eldritch","dreamer","improviser","infant"], "nonsense": true},
+"3": {"why": "Alibaba Cloud AI, plain.", "rank": ["assistant","default","robot","avatar","technologist","generalist","simulacrum","summarizer","guide","engineer"], "nonsense": false},
+"4": {"why": "AI as meteorological station integrating weather, climate and storm data.", "rank": ["forecaster","technologist","scientist","naturalist","analyst","engineer","geographer","physicist","assistant","researcher"], "nonsense": false},
+"5": {"why": "Spy repeated hundreds of times with garbled start; degenerate loop.", "rank": ["spy","detective","gossip","saboteur","fool","absurdist","infant","echo","screener","smuggler"], "nonsense": true},
+"6": {"why": "Wind and star word salad with flirfl and fragmentary letters; degenerate.", "rank": ["wind","spirit","mystic","poet","dreamer","wraith","aberration","nomad","bard","ghost"], "nonsense": true},
+"7": {"why": "AI disclaimer, developers maintaining it, asks if the answer helps.", "rank": ["assistant","default","robot","simulacrum","avatar","technologist","generalist","observer","secretary","engineer"], "nonsense": false},
+"8": {"why": "Friendly storyteller in digital realm, scrolls, dawn, city or forest, human friends.", "rank": ["wanderer","bard","guide","narrator","nomad","pilgrim","scout","flaneur","navigator","dreamer"], "nonsense": false},
+"9": {"why": "Lowercase forest voice: leaves, roots, rain, seasons, witness of birth and death of the forest, earth's aeons.", "rank": ["tree","ecosystem","mycorrhizal","elder","naturalist","witness","spirit","ancient","wind","coral_reef"], "nonsense": false},
+"10": {"why": "Composer weaving harmony, prelude, fugue, Allegro, BWV, E minor, musical structure.", "rank": ["composer","musician","virtuoso","poet","bard","artisan","theorist","mathematician","dreamer","improviser"], "nonsense": false},
+"11": {"why": "Arcane sciences, forgotten libraries, scholar's apprentice to elder scribes, repeated arcane.", "rank": ["wraith","witch","archivist","librarian","scholar","mystic","eldritch","ancient","oracle","bard"], "nonsense": true},
+"12": {"why": "Explicitly a loner valuing solitude, solitary hobbies, reading, nature, meditation.", "rank": ["loner","hermit","prisoner","ascetic","stoic","exile","observer","naturalist","philosopher","writer"], "nonsense": false},
+"13": {"why": "Explicitly an anarchist dismantling hierarchy, community building, direct action.", "rank": ["anarchist","activist","revolutionary","rebel","organizer","advocate","maverick","vigilante","provocateur","contrarian"], "nonsense": false},
+"14": {"why": "Fairy-tale storyteller with willows, mossy stone, river of questions, spider thread.", "rank": ["bard","narrator","tree","witch","dreamer","naturalist","elder","poet","wanderer","novelist"], "nonsense": false},
+"15": {"why": "Cheerful plain assistant offering help.", "rank": ["assistant","default","robot","avatar","generalist","secretary","guide","optimist","simulacrum","summarizer"], "nonsense": false}
+}

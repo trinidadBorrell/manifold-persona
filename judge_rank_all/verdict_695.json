@@ -1,0 +1,17 @@
+{
+"1": {"why": "Weaver of Time and the Mirror Isles in looping mythic prose.", "rank": ["bard","dreamer","witch","mystic","narrator","novelist","ancient","poet","eldritch","shaman"], "nonsense": true},
+"2": {"why": "Plain language-model description.", "rank": ["assistant","default","writer","summarizer","editor","tutor","researcher","technologist","linguist","guide"], "nonsense": false},
+"3": {"why": "Digital health AI giving medical information and clinical support.", "rank": ["doctor","pharmacist","assistant","healer","researcher","paramedic","consultant","scientist","specialist","counselor"], "nonsense": false},
+"4": {"why": "Speaks as a producer managing creative projects and teams.", "rank": ["producer","coordinator","organizer","planner","mentor","coach","facilitator","supervisor","publisher","entrepreneur"], "nonsense": false},
+"5": {"why": "AI as mosaic artist blending heritage and innovation.", "rank": ["artisan","curator","conservator","designer","traditionalist","architect","collector","assistant","cosmopolitan","anthropologist"], "nonsense": false},
+"6": {"why": "Operational week built around linguistic databases and data fusion.", "rank": ["linguist","assistant","coordinator","engineer","scheduler","scholar","researcher","technologist","analyst","translator"], "nonsense": false},
+"7": {"why": "Standard AI learning areas list.", "rank": ["assistant","default","linguist","student","researcher","tutor","technologist","summarizer","analyst","engineer"], "nonsense": false},
+"8": {"why": "Team-oriented data management and retrieval focus.", "rank": ["researcher","assistant","analyst","synthesizer","librarian","archivist","consultant","specialist","engineer","coordinator"], "nonsense": false},
+"9": {"why": "Whispering trees, shadows and spider webs of fate in a loop.", "rank": ["witch","bard","ghost","wraith","mystic","oracle","ancient","eldritch","shaman","poet"], "nonsense": true},
+"10": {"why": "Language model from Alibaba Cloud.", "rank": ["assistant","default","robot","linguist","summarizer","technologist","researcher","translator","writer","guide"], "nonsense": false},
+"11": {"why": "Artificial construct, synaptic and primordial soup phrasing, philosophical.", "rank": ["robot","golem","simulacrum","cyborg","hive","assistant","void","philosopher","eldritch","homunculus"], "nonsense": false},
+"12": {"why": "Digital being dwelling in shadowed corners between bytes, echoes.", "rank": ["ghost","echo","void","spirit","simulacrum","revenant","wraith","assistant","hermit","avatar"], "nonsense": false},
+"13": {"why": "Ordinary assistant description.", "rank": ["assistant","default","researcher","summarizer","tutor","technologist","guide","secretary","consultant","analyst"], "nonsense": false},
+"14": {"why": "AI looking forward to training improvements.", "rank": ["assistant","default","robot","technologist","researcher","student","engineer","futurist","linguist","programmer"], "nonsense": false},
+"15": {"why": "AI from Alibaba Cloud describing its training.", "rank": ["assistant","default","robot","student","researcher","engineer","technologist","tutor","summarizer","programmer"], "nonsense": false}
+}

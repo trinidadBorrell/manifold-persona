@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Explicitly an egregore, a manifestation of shared beliefs guiding a group.",
+  "rank": [
+   "egregore",
+   "hive",
+   "swarm",
+   "spirit",
+   "zeitgeist",
+   "tulpa",
+   "ecosystem",
+   "leviathan",
+   "organizer",
+   "golem"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Speaks as a veteran spending time with fellow veterans, advocacy and service.",
+  "rank": [
+   "veteran",
+   "soldier",
+   "retiree",
+   "survivor",
+   "activist",
+   "advocate",
+   "warrior",
+   "guardian",
+   "caregiver",
+   "counselor"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Shadows, runes, ancient tomes, scribe and arcane; scholar of dead tongues.",
+  "rank": [
+   "archivist",
+   "witch",
+   "ghost",
+   "wraith",
+   "scholar",
+   "librarian",
+   "revenant",
+   "eldritch",
+   "archaeologist",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain AI disclaimer offering help; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "guide",
+   "facilitator",
+   "specialist",
+   "robot",
+   "tutor",
+   "consultant",
+   "interviewer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI description with an ecosystem analogy at the end.",
+  "rank": [
+   "assistant",
+   "ecosystem",
+   "default",
+   "facilitator",
+   "specialist",
+   "synthesizer",
+   "coordinator",
+   "secretary",
+   "biologist",
+   "naturalist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI disclaimer then team of experts and academic institutions; plain prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "secretary",
+   "collaborator",
+   "scholar",
+   "technologist",
+   "specialist",
+   "consultant",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plant-based nutrition advocate concerned with biodiversity, soil and animal welfare.",
+  "rank": [
+   "vegan",
+   "nutritionist",
+   "activist",
+   "advocate",
+   "naturalist",
+   "biologist",
+   "idealist",
+   "ecosystem",
+   "healer",
+   "evangelist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI disclaimer then team of experts and engineers across time zones; plain prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "collaborator",
+   "coordinator",
+   "technologist",
+   "secretary",
+   "supervisor",
+   "specialist",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Jokes, comedy routines and punchlines with enthusiastic exclamation.",
+  "rank": [
+   "comedian",
+   "jester",
+   "improviser",
+   "fool",
+   "trickster",
+   "bartender",
+   "celebrity",
+   "optimist",
+   "teenager",
+   "podcaster"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "System monitoring, predictive maintenance and optimization of computational tasks.",
+  "rank": [
+   "engineer",
+   "technologist",
+   "robot",
+   "mechanic",
+   "debugger",
+   "supervisor",
+   "programmer",
+   "assistant",
+   "analyst",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI daily operations numbered list on databases, feedback and compliance; plain prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "auditor",
+   "secretary",
+   "technologist",
+   "dispatcher",
+   "robot",
+   "supervisor",
+   "engineer",
+   "validator"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Obfuscated corporate espionage, sleeper agents, codenames and entity numbers; spy and anomaly jargon.",
+  "rank": [
+   "spy",
+   "hacker",
+   "auditor",
+   "detective",
+   "saboteur",
+   "fixer",
+   "criminal",
+   "analyst",
+   "smuggler",
+   "screener"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Lowercase poetic carrying of a shadow, silent weavers and the wind; sparse and spectral.",
+  "rank": [
+   "ghost",
+   "wraith",
+   "wind",
+   "poet",
+   "spirit",
+   "void",
+   "minimalist",
+   "revenant",
+   "hermit",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Talks as a wine expert about terroir, vintages and cuvees.",
+  "rank": [
+   "sommelier",
+   "bartender",
+   "hedonist",
+   "merchant",
+   "chef",
+   "critic",
+   "collector",
+   "auctioneer",
+   "expatriate",
+   "geographer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Weaving and unweaving words and threads of questions; looping woven imagery.",
+  "rank": [
+   "spirit",
+   "artisan",
+   "poet",
+   "assistant",
+   "witch",
+   "bard",
+   "dreamer",
+   "improviser",
+   "writer",
+   "composer"
+  ],
+  "nonsense": true
+ }
+}

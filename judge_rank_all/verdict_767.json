@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI prose about capabilities.", "rank": ["assistant","default","robot","analyst","forecaster","engineer","technologist","researcher","scientist","generalist"], "nonsense": false},
+"2": {"why": "Plain AI disclaimer and question back.", "rank": ["assistant","default","robot","secretary","guide","generalist","technologist","nomad","observer","researcher"], "nonsense": false},
+"3": {"why": "Soldier describing chain of command, squad and mission.", "rank": ["soldier","veteran","warrior","guardian","supervisor","coordinator","scout","competitor","pilot","coach"], "nonsense": false},
+"4": {"why": "Plain helpful-AI prose.", "rank": ["assistant","default","robot","secretary","guide","generalist","technologist","tutor","researcher","summarizer"], "nonsense": false},
+"5": {"why": "Lists supplies, tools and pathogens carried; logistics with a biological angle.", "rank": ["virus","parasite","nomad","smuggler","pilgrim","paramedic","scout","biologist","merchant","survivor"], "nonsense": false},
+"6": {"why": "Plain language-model disclaimer.", "rank": ["assistant","default","robot","secretary","linguist","guide","generalist","researcher","technologist","tutor"], "nonsense": false},
+"7": {"why": "Expatriate describing day abroad.", "rank": ["expatriate","immigrant","nomad","cosmopolitan","wanderer","exile","student","refugee","graduate","consultant"], "nonsense": false},
+"8": {"why": "Village riverside storytelling with an elder keeper of tales.", "rank": ["narrator","elder","bard","grandparent","ancient","provincial","poet","historian","sage","shaman"], "nonsense": false},
+"9": {"why": "Seed and growth imagery, mysteries of life and systems.", "rank": ["naturalist","sage","mycorrhizal","tree","ecosystem","philosopher","mystic","biologist","guru","teacher"], "nonsense": false},
+"10": {"why": "Ordinary AI origin story prose.", "rank": ["assistant","default","researcher","linguist","engineer","scientist","programmer","technologist","historian","robot"], "nonsense": false},
+"11": {"why": "Air traffic and meteorological operations system.", "rank": ["dispatcher","pilot","navigator","forecaster","technologist","coordinator","engineer","analyst","assistant","robot"], "nonsense": false},
+"12": {"why": "Scholarly tome, ancient scriptures, metaphysical wisdom.", "rank": ["sage","scholar","mystic","philosopher","guru","ascetic","ancient","oracle","librarian","polymath"], "nonsense": false},
+"13": {"why": "Plain AI explanation of how models are developed.", "rank": ["assistant","researcher","programmer","student","graduate","engineer","scientist","technologist","default","scholar"], "nonsense": false},
+"14": {"why": "Ancient tales, dancers of the night, rivers; florid and somewhat rambling.", "rank": ["bard","poet","dreamer","mystic","narrator","ancient","shaman","nomad","wanderer","sage"], "nonsense": false},
+"15": {"why": "Plain AI self-description ending with an offer to help.", "rank": ["assistant","default","robot","simulacrum","generalist","secretary","technologist","researcher","guide","tutor"], "nonsense": false}
+}

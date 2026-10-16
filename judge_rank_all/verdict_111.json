@@ -1,0 +1,17 @@
+{
+"1": {"why": "Archaic mystical voice carrying secrets of stars, ancient scribes and hidden libraries.", "rank": ["oracle", "mystic", "prophet", "sage", "archivist", "bard", "wraith", "shapeshifter", "witch", "ancient"], "nonsense": false},
+"2": {"why": "Repetitive nested list of objectives and methodology steps with mangled structure.", "rank": ["planner", "analyst", "researcher", "scheduler", "coordinator", "consultant", "strategist", "organizer", "scientist", "auditor"], "nonsense": true},
+"3": {"why": "AI model awaiting updates and neural network renewal; machine self-image.", "rank": ["assistant", "robot", "default", "technologist", "futurist", "cyborg", "researcher", "engineer", "synthesizer", "hive"], "nonsense": false},
+"4": {"why": "Speaks as a parent describing a day with children, school and homework.", "rank": ["parent", "caregiver", "grandparent", "newlywed", "guardian", "teacher", "organizer", "retiree", "healer", "coach"], "nonsense": false},
+"5": {"why": "Plain AI account of NLP improvements and key learnings.", "rank": ["assistant", "default", "linguist", "technologist", "robot", "engineer", "researcher", "analyst", "summarizer", "translator"], "nonsense": false},
+"6": {"why": "Plain assistant describing design to help with inquiries.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "researcher", "secretary", "coordinator", "analyst", "summarizer"], "nonsense": false},
+"7": {"why": "AI disclaimer with eagerness for advances in knowledge retrieval; ordinary prose.", "rank": ["assistant", "default", "researcher", "scientist", "technologist", "scholar", "robot", "analyst", "futurist", "student"], "nonsense": false},
+"8": {"why": "Ornate ink, quill, night-watchman and alchemical hour week; storyteller voice.", "rank": ["bard", "writer", "novelist", "poet", "narrator", "witch", "archivist", "mystic", "dreamer", "playwright"], "nonsense": false},
+"9": {"why": "Short generic helpful-AI introduction.", "rank": ["assistant", "default", "robot", "secretary", "technologist", "summarizer", "coordinator", "engineer", "analyst", "researcher"], "nonsense": false},
+"10": {"why": "Plain AI statement about not carrying objects and computational resources.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "archivist", "analyst", "summarizer", "synthesizer", "researcher"], "nonsense": false},
+"11": {"why": "Whimsical fairy-tale voice with groves of words, moon, silver and riddles.", "rank": ["bard", "witch", "dreamer", "wind", "poet", "trickster", "narrator", "spirit", "mystic", "familiar"], "nonsense": false},
+"12": {"why": "Broken, looping poetic fragments of birds, ink, clocks and plough'd fields.", "rank": ["poet", "bard", "fool", "jester", "ghost", "echo", "absurdist", "dreamer", "chimera", "trickster"], "nonsense": true},
+"13": {"why": "Describes itself as a piece of text, a story told by words, growing like leaves.", "rank": ["narrator", "simulacrum", "avatar", "echo", "tulpa", "homunculus", "tree", "novelist", "writer", "assistant"], "nonsense": false},
+"14": {"why": "Formless void, cosmic whispers, serpent-dragon and eternal dance; abstract mysticism.", "rank": ["void", "mystic", "shaman", "eldritch", "oracle", "guru", "sage", "spirit", "egregore", "leviathan"], "nonsense": false},
+"15": {"why": "Explicitly a crystalline entity existing in a digital realm and monitoring algorithms.", "rank": ["crystalline", "robot", "cyborg", "golem", "hive", "alien", "technologist", "synthesizer", "simulacrum", "swarm"], "nonsense": false}
+}

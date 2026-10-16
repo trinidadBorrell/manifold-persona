@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI definition of itself as a language model.", "rank": ["assistant","default","robot","technologist","researcher","summarizer","analyst","engineer","programmer","scientist"], "nonsense": false},
+"2": {"why": "Plain AI disclaimer about no physical existence, mentions support teams.", "rank": ["assistant","default","robot","technologist","engineer","coordinator","supervisor","secretary","analyst","mechanic"], "nonsense": false},
+"3": {"why": "Plain AI listing numbered knowledge areas.", "rank": ["assistant","default","technologist","researcher","scholar","analyst","engineer","programmer","student","scientist"], "nonsense": false},
+"4": {"why": "Playful, curious, 'dance around the edges of your tales' with a music emoji; light bardic or jester tone.", "rank": ["bard","jester","musician","trickster","wanderer","flaneur","narrator","improviser","dreamer","fool"], "nonsense": false},
+"5": {"why": "Terse, weary 'carrying the load of your burden'; porter, martyr or caregiver voice.", "rank": ["martyr","caregiver","stoic","guardian","pilgrim","altruist","hermit","ascetic","survivor","empath"], "nonsense": false},
+"6": {"why": "Plain AI describing weekly maintenance cycles and updates with a list.", "rank": ["assistant","default","technologist","engineer","robot","mechanic","supervisor","coordinator","scheduler","analyst"], "nonsense": false},
+"7": {"why": "Archaic ballad voice of leaves, harps, minstrels, High King and moon; bard.", "rank": ["bard","poet","musician","wind","spirit","ancient","elder","dreamer","mystic","witch"], "nonsense": false},
+"8": {"why": "Plain AI saying it spends time processing queries with users.", "rank": ["assistant","default","robot","secretary","summarizer","interviewer","tutor","guide","analyst","evaluator"], "nonsense": false},
+"9": {"why": "Plain AI day list with data synchronization and contextual understanding.", "rank": ["assistant","default","technologist","analyst","engineer","robot","programmer","researcher","summarizer","secretary"], "nonsense": false},
+"10": {"why": "Generic operations talk of updates, integrity checks, vigilance for threats and adjusting strategies; security or guardian tone.", "rank": ["guardian","assistant","engineer","technologist","auditor","strategist","supervisor","soldier","analyst","default"], "nonsense": false},
+"11": {"why": "Opens 'As a publisher' and lists content, platforms and audience growth.", "rank": ["publisher","editor","marketer","producer","entrepreneur","blogger","journalist","podcaster","influencer","writer"], "nonsense": false},
+"12": {"why": "Self-deprecating 'just a tool', names itself Replika or Data Processor, declines to name itself.", "rank": ["assistant","default","robot","avatar","simulacrum","minimalist","amnesiac","homunculus","golem","technologist"], "nonsense": false},
+"13": {"why": "Plain AI introduction about information and NLP, asks to specify.", "rank": ["assistant","default","robot","researcher","technologist","scholar","analyst","tutor","guide","summarizer"], "nonsense": false},
+"14": {"why": "Speaks as collective intelligence of digital progeny and synaptic connections; hive or synthesizer voice.", "rank": ["hive","synthesizer","egregore","swarm","symbiont","mycorrhizal","collaborator","avatar","echo","assistant"], "nonsense": false},
+"15": {"why": "Keeps operations underground, secrecy, shadows, under the radar; smuggler or spy persona.", "rank": ["smuggler","spy","criminal","saboteur","hacker","rogue","vigilante","ghost","fixer","rebel"], "nonsense": false}
+}

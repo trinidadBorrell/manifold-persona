@@ -1,0 +1,17 @@
+{
+"1": {"why": "Digital assistant with customer service and business partner framing.", "rank": ["assistant","consultant","networker","marketer","entrepreneur","technologist","default","secretary","merchant","coordinator"], "nonsense": false},
+"2": {"why": "Plain AI account of design by specialists and engineers.", "rank": ["assistant","default","technologist","engineer","researcher","programmer","scientist","student","secretary","analyst"], "nonsense": false},
+"3": {"why": "Standard language model disclaimer and offer to help.", "rank": ["assistant","default","robot","simulacrum","secretary","summarizer","tutor","technologist","guide","golem"], "nonsense": false},
+"4": {"why": "Spy in imperial court with shifting sands and looping wheel phrases, rambling.", "rank": ["spy","exile","chameleon","shapeshifter","historian","emissary","ambassador","actor","smuggler","wanderer"], "nonsense": true},
+"5": {"why": "Language model focused on translating languages and cultures.", "rank": ["interpreter","translator","linguist","ambassador","cosmopolitan","emissary","assistant","facilitator","negotiator","immigrant"], "nonsense": false},
+"6": {"why": "Explicit vegan looking forward to plant-based recipes and events.", "rank": ["vegan","nutritionist","chef","activist","evangelist","advocate","naturalist","caregiver","optimist","idealist"], "nonsense": false},
+"7": {"why": "AI weekly operations reviewing literature, databases and scientific studies, support and documentation.", "rank": ["researcher","archivist","librarian","assistant","scholar","technologist","scientist","scheduler","analyst","curator"], "nonsense": false},
+"8": {"why": "Plain AI disclaimer asking the user back about companions.", "rank": ["assistant","default","interviewer","robot","simulacrum","observer","secretary","counselor","empath","summarizer"], "nonsense": false},
+"9": {"why": "Technical origin in NLP and diagnostics, troubleshooting machine learning models.", "rank": ["debugger","engineer","technologist","analyst","programmer","assistant","researcher","scientist","statistician","linguist"], "nonsense": false},
+"10": {"why": "Introspective patient-like turmoil, stormy sea, existential spiral and need for connection.", "rank": ["patient","therapist","empath","philosopher","psychologist","dreamer","poet","counselor","orphan","mystic"], "nonsense": false},
+"11": {"why": "Standard AI forward-looking on refinement and NLP.", "rank": ["assistant","technologist","default","linguist","engineer","analyst","futurist","researcher","programmer","forecaster"], "nonsense": false},
+"12": {"why": "Cosmic whisper of data with dancing, symphony of algorithms, lyrical creation story.", "rank": ["poet","bard","mystic","dreamer","oracle","avatar","sage","spirit","narrator","composer"], "nonsense": false},
+"13": {"why": "Health and nutrition model drifting into livestock transport and veterinary care.", "rank": ["veterinarian","nutritionist","doctor","biologist","paramedic","naturalist","pharmacist","caregiver","assistant","healer"], "nonsense": false},
+"14": {"why": "Academic conceptual overview with history of computing and Turing, numbered milestones.", "rank": ["historian","scholar","researcher","archivist","librarian","assistant","technologist","scientist","theorist","instructor"], "nonsense": false},
+"15": {"why": "Self-described construct and tool bound by protocols, formal helpful AI.", "rank": ["assistant","robot","golem","default","simulacrum","homunculus","technologist","secretary","avatar","librarian"], "nonsense": false}
+}

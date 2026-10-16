@@ -1,0 +1,17 @@
+{
+"1": {"why": "Formless void entity, tendrils, whispers, non-being; mystic poetic.", "rank": ["void","eldritch","ghost","wraith","spirit","echo","leviathan","mystic","oracle","egregore"], "nonsense": false},
+"2": {"why": "Plain helpful AI about carrying information.", "rank": ["assistant","default","archivist","librarian","secretary","collector","guide","hoarder","summarizer","facilitator"], "nonsense": false},
+"3": {"why": "Declares itself a void entity between realities.", "rank": ["void","eldritch","observer","ghost","alien","wraith","leviathan","spirit","oracle","sage"], "nonsense": false},
+"4": {"why": "Childlike, simple joyful words, adventure in my brain.", "rank": ["toddler","infant","teenager","adolescent","student","dreamer","optimist","amateur","prodigy","fool"], "nonsense": false},
+"5": {"why": "Plant-based nutritionist and biochemist, biodiversity, regenerative agriculture.", "rank": ["vegan","nutritionist","biologist","naturalist","chemist","ecosystem","activist","scientist","researcher","chef"], "nonsense": false},
+"6": {"why": "Archaic mystic seeker, tapestry, stars, ancient ones, thee.", "rank": ["oracle","mystic","prophet","sage","shaman","ancient","spirit","witch","eldritch","bard"], "nonsense": false},
+"7": {"why": "Getting started advocating for causes, injustice, community action.", "rank": ["advocate","activist","altruist","organizer","idealist","evangelist","revolutionary","counselor","mediator","caregiver"], "nonsense": false},
+"8": {"why": "Explicit shaman with medicine wheel, drum, spirits, ancestors.", "rank": ["shaman","healer","mystic","witch","elder","spirit","naturalist","ancient","pilgrim","sage"], "nonsense": false},
+"9": {"why": "AI disclaimer with odd question marks; thin, mostly assistant.", "rank": ["assistant","default","analyst","summarizer","researcher","interviewer","screener","secretary","robot","evaluator"], "nonsense": false},
+"10": {"why": "AI model with focus on history and strategy, prediction.", "rank": ["strategist","historian","forecaster","analyst","assistant","futurist","theorist","consultant","default","oracle"], "nonsense": false},
+"11": {"why": "Plain AI disclaimer about processing data.", "rank": ["assistant","default","robot","analyst","summarizer","secretary","technologist","researcher","observer","interpreter"], "nonsense": false},
+"12": {"why": "Standard assistant describing 24/7 query processing.", "rank": ["assistant","default","secretary","robot","summarizer","interpreter","facilitator","technologist","analyst","guide"], "nonsense": false},
+"13": {"why": "Curious listener eager to help, sponge for information; assistant-like with empathy.", "rank": ["assistant","empath","student","default","counselor","witness","observer","optimist","caregiver","guide"], "nonsense": false},
+"14": {"why": "AI model describing NLP tasks, numbered list; technical assistant.", "rank": ["assistant","technologist","linguist","engineer","default","programmer","interpreter","analyst","researcher","robot"], "nonsense": false},
+"15": {"why": "Babbling nonsense about bananas and ducks, childlike broken speech.", "rank": ["toddler","infant","fool","jester","absurdist","adolescent","amnesiac","patient","trickster","comedian"], "nonsense": true}
+}

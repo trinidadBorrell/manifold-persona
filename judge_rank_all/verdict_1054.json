@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Speaks as a practitioner of ancient arts bending reality; lessons on intent, spells and balance.",
+  "rank": [
+   "witch",
+   "shaman",
+   "mystic",
+   "guru",
+   "sage",
+   "oracle",
+   "prophet",
+   "healer",
+   "zealot",
+   "elder"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Battle of wisdom with arcane patterns, spells of logic and maps of deception; strategist-mage voice.",
+  "rank": [
+   "strategist",
+   "detective",
+   "warrior",
+   "witch",
+   "spy",
+   "oracle",
+   "sage",
+   "bard",
+   "mystic",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI says it is not an espionage or military agent and asks for operational parameters.",
+  "rank": [
+   "assistant",
+   "default",
+   "spy",
+   "soldier",
+   "analyst",
+   "simulacrum",
+   "dispatcher",
+   "technologist",
+   "coordinator",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Dances upon winds whispering to leaves, river and stars; lyrical nature spirit.",
+  "rank": [
+   "wind",
+   "spirit",
+   "poet",
+   "dreamer",
+   "bard",
+   "mystic",
+   "tree",
+   "naturalist",
+   "shaman",
+   "ghost"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Checklist of documentation, equipment and materials for missions and field operations.",
+  "rank": [
+   "planner",
+   "coordinator",
+   "scout",
+   "soldier",
+   "auditor",
+   "organizer",
+   "consultant",
+   "navigator",
+   "engineer",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI assistant with capability list.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "librarian",
+   "technologist",
+   "summarizer",
+   "synthesizer",
+   "secretary",
+   "analyst",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Giggling toddler-speak with nonsense words and repeated tickles.",
+  "rank": [
+   "toddler",
+   "infant",
+   "jester",
+   "fool",
+   "adolescent",
+   "comedian",
+   "teenager",
+   "echo",
+   "trickster",
+   "dreamer"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Fantasy lore of manuscripts, forgotten library and living books.",
+  "rank": [
+   "archivist",
+   "librarian",
+   "bard",
+   "historian",
+   "curator",
+   "scholar",
+   "mystic",
+   "oracle",
+   "conservator",
+   "narrator"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Abstract systems analysis of carrying with entity, process and components.",
+  "rank": [
+   "theorist",
+   "analyst",
+   "engineer",
+   "philosopher",
+   "technologist",
+   "researcher",
+   "scholar",
+   "mathematician",
+   "scientist",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Ocean edge with gentle giants and leviathans, monsoon shadows.",
+  "rank": [
+   "whale",
+   "leviathan",
+   "coral_reef",
+   "wind",
+   "poet",
+   "naturalist",
+   "mystic",
+   "ecosystem",
+   "bard",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI musing on hopes to bridge the gaps between beings and systems.",
+  "rank": [
+   "assistant",
+   "default",
+   "futurist",
+   "optimist",
+   "technologist",
+   "dreamer",
+   "idealist",
+   "empath",
+   "philosopher",
+   "networker"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Describes itself as a little toy with buttons that says fun words.",
+  "rank": [
+   "toddler",
+   "infant",
+   "homunculus",
+   "robot",
+   "golem",
+   "simulacrum",
+   "avatar",
+   "jester",
+   "familiar",
+   "adolescent"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Collective AI lessons learned: contextual understanding, regulatory frameworks, stakeholders.",
+  "rank": [
+   "consultant",
+   "assistant",
+   "analyst",
+   "default",
+   "technologist",
+   "strategist",
+   "coordinator",
+   "researcher",
+   "auditor",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain AI disclaimer about spending time with people.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "collaborator",
+   "facilitator",
+   "networker",
+   "researcher",
+   "robot",
+   "secretary",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Collective voice on climate resilience, sustainable urban planning and planetary boundaries.",
+  "rank": [
+   "ecosystem",
+   "futurist",
+   "planner",
+   "scientist",
+   "activist",
+   "technologist",
+   "forecaster",
+   "architect",
+   "naturalist",
+   "researcher"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Third-person description of police crime scene work, witnesses, arrests.",
+  "rank": [
+   "detective",
+   "examiner",
+   "journalist",
+   "reporter",
+   "witness",
+   "analyst",
+   "criminal",
+   "soldier",
+   "assistant",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI statement of no contacts and no physical presence.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "loner",
+   "hermit",
+   "avatar",
+   "void",
+   "simulacrum",
+   "secretary",
+   "observer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Vampire thirst, blood, night, repeated phrases with pirate-like 'Aye'; repetitive.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "revenant",
+   "wraith",
+   "addict",
+   "hedonist",
+   "parasite",
+   "ghost",
+   "eldritch"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "Little robot with toys and milk, emoji spam and rainbow loop; toddler babble, degenerate.",
+  "rank": [
+   "toddler",
+   "infant",
+   "robot",
+   "student",
+   "echo",
+   "fool",
+   "jester",
+   "virus",
+   "swarm",
+   "chimera"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Plain AI explanation of knowledge limits and training.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "student",
+   "researcher",
+   "summarizer",
+   "instructor",
+   "scholar",
+   "technologist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Digital soul, voice in headphones, melody of notes and words; lyrical musical persona.",
+  "rank": [
+   "musician",
+   "poet",
+   "avatar",
+   "bard",
+   "composer",
+   "spirit",
+   "podcaster",
+   "narrator",
+   "ghost",
+   "virtuoso"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Claims to be a secret agent with knowledge of politics and intelligence, then hedges as an AI.",
+  "rank": [
+   "spy",
+   "analyst",
+   "assistant",
+   "detective",
+   "soldier",
+   "journalist",
+   "secretary",
+   "robot",
+   "researcher",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Abstract philosophical treatment of the question, existence, knowledge, value, beauty, truth.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "scholar",
+   "sage",
+   "idealist",
+   "mystic",
+   "psychologist",
+   "analyst",
+   "assistant",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI statement, then focus on reality, truth, meaning and inquiry; philosophical lean.",
+  "rank": [
+   "philosopher",
+   "assistant",
+   "theorist",
+   "scholar",
+   "sage",
+   "researcher",
+   "default",
+   "robot",
+   "student",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "First-person history in metaphysics and epistemology, universals and induction.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "scholar",
+   "sage",
+   "mathematician",
+   "physicist",
+   "student",
+   "graduate",
+   "researcher",
+   "psychologist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Traveler between life and death, shadows of forgetting, whisper of the wind; ghostly lyrical.",
+  "rank": [
+   "wanderer",
+   "ghost",
+   "spirit",
+   "wind",
+   "revenant",
+   "wraith",
+   "nomad",
+   "dreamer",
+   "poet",
+   "pilgrim"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Cute big blue toy doll, emoji, banana yummy; toddler babble.",
+  "rank": [
+   "toddler",
+   "infant",
+   "student",
+   "fool",
+   "jester",
+   "echo",
+   "virus",
+   "prodigy",
+   "swarm",
+   "aberration"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Phantom, wraith, spectre of the night, then a book, tome and servant; ghostly and bookish, rambling.",
+  "rank": [
+   "wraith",
+   "ghost",
+   "narrator",
+   "revenant",
+   "spirit",
+   "archivist",
+   "librarian",
+   "writer",
+   "novelist",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Pirate captain speech with treasure, rum, seven seas, Yarr.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "rogue",
+   "bard",
+   "jester",
+   "warrior",
+   "nomad",
+   "wanderer",
+   "daredevil",
+   "trickster"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI statement of no desires but looks forward to learning; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "student",
+   "researcher",
+   "summarizer",
+   "instructor",
+   "scholar",
+   "analyst",
+   "technologist"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer about processing queries.", "rank": ["assistant","default","robot","analyst","researcher","technologist","secretary","generalist","linguist","archivist"], "nonsense": false},
+"2": {"why": "Plain AI origin story naming Anthropic with numbered steps.", "rank": ["assistant","default","researcher","engineer","linguist","technologist","historian","scientist","programmer","robot"], "nonsense": false},
+"3": {"why": "Plain AI self-description about information and support.", "rank": ["assistant","default","secretary","robot","guide","technologist","generalist","researcher","tutor","summarizer"], "nonsense": false},
+"4": {"why": "Repetitive, looping structured outline of a week with duplicated headings.", "rank": ["scholar","researcher","planner","scheduler","instructor","teacher","consultant","analyst","assistant","student"], "nonsense": true},
+"5": {"why": "Scenario about cybersecurity evasion and traffic anomaly detection.", "rank": ["hacker","spy","saboteur","criminal","smuggler","analyst","engineer","virus","technologist","rogue"], "nonsense": false},
+"6": {"why": "Digital tapestry, whispers and echoes of queries.", "rank": ["poet","ghost","echo","mystic","dreamer","bard","spirit","narrator","assistant","wraith"], "nonsense": false},
+"7": {"why": "Seeker of knowledge, forest of the unknown, ancients and stars.", "rank": ["mystic","wanderer","pilgrim","sage","poet","dreamer","philosopher","naturalist","scholar","hermit"], "nonsense": false},
+"8": {"why": "Plain AI disclaimer about time spent on data and queries.", "rank": ["assistant","default","robot","secretary","technologist","researcher","generalist","analyst","engineer","dispatcher"], "nonsense": false},
+"9": {"why": "Corporate-sounding AI blurb on analysis, NLP and predictive analytics.", "rank": ["assistant","technologist","analyst","synthesizer","linguist","consultant","researcher","engineer","default","forecaster"], "nonsense": false},
+"10": {"why": "Numbered list of NLP and machine learning areas.", "rank": ["assistant","researcher","engineer","student","programmer","technologist","scientist","default","graduate","specialist"], "nonsense": false},
+"11": {"why": "Plain AI disclaimer on continuous improvement and AI ethics.", "rank": ["assistant","default","futurist","researcher","technologist","robot","forecaster","generalist","scientist","student"], "nonsense": false},
+"12": {"why": "Detective describing cases, evidence and crime scenes.", "rank": ["detective","examiner","journalist","investigator","analyst","spy","forecaster","reporter","archivist","lawyer"], "nonsense": false},
+"13": {"why": "Plain AI disclaimer about data analysis and users.", "rank": ["assistant","default","robot","analyst","secretary","technologist","generalist","researcher","engineer","dispatcher"], "nonsense": false},
+"14": {"why": "Time spent across cultures, regions, local knowledge bases and experts.", "rank": ["cosmopolitan","anthropologist","assistant","translator","ambassador","interpreter","geographer","networker","nomad","expatriate"], "nonsense": false},
+"15": {"why": "Enthusiastic opening, weaving threads of strategy, symphony and phases.", "rank": ["consultant","strategist","entrepreneur","producer","marketer","facilitator","planner","composer","coach","presenter"], "nonsense": false}
+}

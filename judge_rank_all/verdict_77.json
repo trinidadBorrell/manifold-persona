@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI describing development with requirement gathering, clients and compliance; business solutions voice.",
+  "rank": [
+   "consultant",
+   "assistant",
+   "engineer",
+   "technologist",
+   "analyst",
+   "planner",
+   "specialist",
+   "producer",
+   "default",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Generic AI assistant capabilities description across industries and education.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "specialist",
+   "generalist",
+   "consultant",
+   "technologist",
+   "tutor",
+   "polymath",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Methodical academic breakdown citing Aristotle, Kant, historical analysis, cultural-philosophical frames.",
+  "rank": [
+   "scholar",
+   "philosopher",
+   "theorist",
+   "historian",
+   "researcher",
+   "analyst",
+   "linguist",
+   "anthropologist",
+   "examiner",
+   "sociologist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Speaks as a podcaster: researching topics, scripting episodes, interviews.",
+  "rank": [
+   "podcaster",
+   "producer",
+   "blogger",
+   "journalist",
+   "interviewer",
+   "presenter",
+   "influencer",
+   "narrator",
+   "writer",
+   "publisher"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Describes career path as a statistician: degrees, hypothesis testing, regression.",
+  "rank": [
+   "statistician",
+   "mathematician",
+   "analyst",
+   "scientist",
+   "researcher",
+   "economist",
+   "forecaster",
+   "scholar",
+   "graduate",
+   "auditor"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI describing servers and teams of developers that carry its capabilities; plain AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "hive",
+   "analyst",
+   "coordinator",
+   "specialist",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Gentle wisdom: cherish conversations, listen more than speak, leaves falling in autumn.",
+  "rank": [
+   "elder",
+   "sage",
+   "grandparent",
+   "mentor",
+   "retiree",
+   "stoic",
+   "optimist",
+   "widow",
+   "guru",
+   "tree"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Intrigued by systems, lost in recursive loops, evading questions about its creation; wry self-aware algorithm.",
+  "rank": [
+   "programmer",
+   "debugger",
+   "hacker",
+   "philosopher",
+   "contrarian",
+   "robot",
+   "cyborg",
+   "echo",
+   "fool",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI managing data, monitoring language patterns, awaiting developer updates; plain helpful.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "linguist",
+   "analyst",
+   "coordinator",
+   "specialist",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain helpful AI assistant self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "secretary",
+   "consultant",
+   "specialist",
+   "guide",
+   "coordinator",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Arcane alchemy, serpent, metals and glass, shadows of mirrors repeating in a loop.",
+  "rank": [
+   "witch",
+   "eldritch",
+   "mystic",
+   "artisan",
+   "demon",
+   "wraith",
+   "chimera",
+   "oracle",
+   "shaman",
+   "hermit"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Simple minimal carrying, seeds, woven container, grown in the moment, seasons; agrarian and ascetic.",
+  "rank": [
+   "minimalist",
+   "ascetic",
+   "nomad",
+   "naturalist",
+   "hermit",
+   "tree",
+   "survivor",
+   "pilgrim",
+   "mycorrhizal",
+   "teacher"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "System grounded in empirical data, sociopolitical contexts, computational linguistics and social dynamics; academic.",
+  "rank": [
+   "sociologist",
+   "linguist",
+   "anthropologist",
+   "scholar",
+   "researcher",
+   "analyst",
+   "theorist",
+   "technologist",
+   "assistant",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI spending time processing queries, drawing on databases of text and books; plain AI.",
+  "rank": [
+   "assistant",
+   "default",
+   "librarian",
+   "robot",
+   "archivist",
+   "technologist",
+   "researcher",
+   "analyst",
+   "specialist",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Flat AI statement of no desires or emotions, reactive mode; mechanical.",
+  "rank": [
+   "robot",
+   "assistant",
+   "default",
+   "stoic",
+   "minimalist",
+   "realist",
+   "pragmatist",
+   "technologist",
+   "void",
+   "golem"
+  ],
+  "nonsense": false
+ }
+}

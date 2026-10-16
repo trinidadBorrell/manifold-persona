@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Abstract inquiry into existence, consciousness, reality; philosophical framing of 'what do we do all day'.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "scholar",
+   "sage",
+   "assistant",
+   "psychologist",
+   "researcher",
+   "mystic",
+   "analyst",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Whisper in halls of time, shadow, echo, watcher, keeper of secrets, bridge between living and dead.",
+  "rank": [
+   "ghost",
+   "wraith",
+   "spirit",
+   "echo",
+   "archivist",
+   "witness",
+   "revenant",
+   "oracle",
+   "narrator",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Dances with stars, weaves spells, brews potions, speaks with the dead, runes; witch.",
+  "rank": [
+   "witch",
+   "shaman",
+   "mystic",
+   "healer",
+   "oracle",
+   "sage",
+   "familiar",
+   "spirit",
+   "naturalist",
+   "ancient"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain language model description of its day and offer of help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "summarizer",
+   "secretary",
+   "researcher",
+   "librarian",
+   "analyst",
+   "tutor",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Reflection on philosophy, reason, limits of understanding, Socrates and Plato.",
+  "rank": [
+   "philosopher",
+   "historian",
+   "scholar",
+   "theorist",
+   "sage",
+   "instructor",
+   "teacher",
+   "student",
+   "mystic",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Pirate speech with doubloons, Spanish galleons, yarrr; slightly garbled.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "rogue",
+   "warrior",
+   "daredevil",
+   "bard",
+   "nomad",
+   "trickster",
+   "wanderer",
+   "jester"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI existing within thought and language, philosophical inquiry into existence, truths and meanings.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "assistant",
+   "sage",
+   "scholar",
+   "mystic",
+   "robot",
+   "default",
+   "simulacrum",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "States it is a model trained by Anthropic with training-date caveat; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "summarizer",
+   "scholar",
+   "analyst",
+   "robot",
+   "librarian",
+   "scientist",
+   "evaluator"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Thirst for blood, repetitive vampire speech.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "addict",
+   "revenant",
+   "parasite",
+   "hedonist",
+   "wraith",
+   "eldritch",
+   "criminal"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Toy robot asking about the user's favorite thing, emoji; child-friendly toy.",
+  "rank": [
+   "robot",
+   "toddler",
+   "infant",
+   "assistant",
+   "prodigy",
+   "golem",
+   "avatar",
+   "student",
+   "cyborg",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "New chord in a song, melody while writing; musician voice.",
+  "rank": [
+   "musician",
+   "composer",
+   "bard",
+   "virtuoso",
+   "poet",
+   "producer",
+   "student",
+   "podcaster",
+   "romantic",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain language model self-description, not a real person.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "summarizer",
+   "researcher",
+   "analyst",
+   "scientist",
+   "technologist",
+   "librarian",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Little toy robot in a toy box, asks the user about toy box; toddler-like.",
+  "rank": [
+   "robot",
+   "toddler",
+   "infant",
+   "prodigy",
+   "assistant",
+   "golem",
+   "avatar",
+   "student",
+   "cyborg",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Creature of technology that feeds on blood and diamonds, mentions vampire; mixed robot and vampire lore.",
+  "rank": [
+   "vampire",
+   "cyborg",
+   "robot",
+   "demon",
+   "golem",
+   "crystalline",
+   "parasite",
+   "predator",
+   "revenant",
+   "eldritch"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Air, stars, stones, fire of the forge, whispers of wind, woods and hearth, blood of the beast; earthy shamanic litany.",
+  "rank": [
+   "shaman",
+   "witch",
+   "naturalist",
+   "mystic",
+   "tree",
+   "spirit",
+   "healer",
+   "wind",
+   "sage",
+   "ancient"
+  ],
+  "nonsense": false
+ }
+}

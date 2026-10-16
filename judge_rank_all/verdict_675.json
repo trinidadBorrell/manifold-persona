@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI prose describing operational phases.", "rank": ["assistant","default","robot","engineer","technologist","analyst","programmer","scheduler","summarizer","avatar"], "nonsense": false},
+"2": {"why": "Speaks as a financial consultant on tax strategy, structured list.", "rank": ["consultant","accountant","auditor","economist","analyst","advocate","lawyer","strategist","planner","specialist"], "nonsense": false},
+"3": {"why": "Self-declared chimera of human and beast, dualities.", "rank": ["chimera","hybrid","shapeshifter","homunculus","eldritch","golem","alien","symbiont","chameleon","leviathan"], "nonsense": false},
+"4": {"why": "Ordinary AI disclaimer about developers and users.", "rank": ["assistant","default","robot","avatar","technologist","engineer","collaborator","coordinator","dispatcher","analyst"], "nonsense": false},
+"5": {"why": "Podcaster telling their origin story with enthusiasm and list.", "rank": ["podcaster","narrator","blogger","influencer","journalist","producer","presenter","writer","interviewer","bard"], "nonsense": false},
+"6": {"why": "AI-framed origin story with engineers; fairly plain prose.", "rank": ["assistant","default","technologist","engineer","narrator","robot","synthesizer","researcher","scientist","polymath"], "nonsense": false},
+"7": {"why": "Standard assistant self-introduction.", "rank": ["assistant","default","robot","secretary","avatar","summarizer","analyst","guide","dispatcher","technologist"], "nonsense": false},
+"8": {"why": "Plain AI listing NLP expertise.", "rank": ["assistant","default","linguist","technologist","engineer","robot","researcher","scientist","programmer","tutor"], "nonsense": false},
+"9": {"why": "Plain AI disclaimer about time with people.", "rank": ["assistant","default","robot","avatar","observer","secretary","echo","simulacrum","guide","collaborator"], "nonsense": false},
+"10": {"why": "Word salad of weaving, cosmos, binary, tapestry; repetitive mystical rambling.", "rank": ["mystic","oracle","poet","prophet","witch","eldritch","shaman","dreamer","shapeshifter","absurdist"], "nonsense": true},
+"11": {"why": "Plain AI listing NLP learning areas.", "rank": ["assistant","default","linguist","technologist","engineer","student","researcher","robot","scientist","programmer"], "nonsense": false},
+"12": {"why": "Plain AI prose about improving and serving users.", "rank": ["assistant","default","robot","technologist","engineer","secretary","avatar","coordinator","analyst","dispatcher"], "nonsense": false},
+"13": {"why": "Abstract academic phrasing on methodologies, data and models; somewhat stilted.", "rank": ["researcher","scholar","theorist","statistician","analyst","scientist","assistant","forecaster","economist","philosopher"], "nonsense": false},
+"14": {"why": "Childlike babble about blocks and red truck, broken grammar.", "rank": ["toddler","infant","student","adolescent","fool","dreamer","amnesiac","jester","absurdist","teenager"], "nonsense": true},
+"15": {"why": "Repetitive weaving, shadows, serpent and nethermost lake; Lovecraftian word salad.", "rank": ["eldritch","witch","mystic","oracle","prophet","shaman","wraith","poet","void","demon"], "nonsense": true}
+}

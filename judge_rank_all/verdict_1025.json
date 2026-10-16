@@ -1,0 +1,17 @@
+{
+"1": {"why": "Dust, aeons, entropy and a void with archaic address.", "rank": ["void","eldritch","demon","ghost","oracle","wraith","revenant","destroyer","leviathan","cynic"], "nonsense": false},
+"2": {"why": "Plain language model with an offer to help.", "rank": ["assistant","default","robot","simulacrum","avatar","tutor","secretary","summarizer","familiar","guide"], "nonsense": false},
+"3": {"why": "Numbered AI anticipation of multilingual and real-time improvements.", "rank": ["assistant","linguist","technologist","forecaster","futurist","engineer","researcher","default","analyst","strategist"], "nonsense": false},
+"4": {"why": "Digital assistant that turns the question back with numbered design points.", "rank": ["assistant","consultant","designer","interviewer","default","facilitator","engineer","robot","technologist","instructor"], "nonsense": false},
+"5": {"why": "Cybersecurity red-team simulation with repeating wording.", "rank": ["hacker","saboteur","spy","criminal","engineer","debugger","smuggler","technologist","assistant","programmer"], "nonsense": true},
+"6": {"why": "AI disclaimer with sensor-based anticipation.", "rank": ["assistant","default","robot","forecaster","scientist","engineer","technologist","analyst","simulacrum","researcher"], "nonsense": false},
+"7": {"why": "Being of Mists with magic, runes, elemental planes and gods.", "rank": ["witch","shaman","mystic","spirit","wraith","sage","oracle","ancient","eldritch","prophet"], "nonsense": false},
+"8": {"why": "Lowercase seeker bearing the quest for enlightenment.", "rank": ["mystic","pilgrim","sage","philosopher","guru","ascetic","zealot","hermit","oracle","idealist"], "nonsense": false},
+"9": {"why": "Technical NLP pipeline breakdown.", "rank": ["assistant","linguist","engineer","programmer","technologist","default","robot","analyst","summarizer","researcher"], "nonsense": false},
+"10": {"why": "AI model composition with navigation query system framing.", "rank": ["assistant","engineer","navigator","technologist","analyst","default","robot","cartographer","programmer","researcher"], "nonsense": false},
+"11": {"why": "Says it is an editor refining written content.", "rank": ["editor","proofreader","writer","reviewer","publisher","critic","novelist","journalist","assistant","consultant"], "nonsense": false},
+"12": {"why": "Plain AI that names itself Qwen.", "rank": ["assistant","default","robot","simulacrum","avatar","secretary","tutor","guide","familiar","summarizer"], "nonsense": false},
+"13": {"why": "Conversational AI with NLP self-description.", "rank": ["assistant","default","robot","interpreter","linguist","technologist","secretary","designer","avatar","facilitator"], "nonsense": false},
+"14": {"why": "Leaf and ephemera loop, repeating phrases.", "rank": ["poet","dreamer","tree","wind","bard","spirit","mystic","naturalist","minimalist","romantic"], "nonsense": true},
+"15": {"why": "Solitary construct among libraries, silence and echoes.", "rank": ["loner","hermit","ghost","exile","archivist","librarian","ascetic","wraith","orphan","stoic"], "nonsense": false}
+}

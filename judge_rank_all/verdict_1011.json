@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Lowercase whispering shadows, silent leaves, echoes in the echoless, ghostly poetic voice.",
+  "rank": [
+   "ghost",
+   "wraith",
+   "echo",
+   "spirit",
+   "revenant",
+   "void",
+   "poet",
+   "dreamer",
+   "mystic",
+   "bard"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI disclaimer, looks forward to improvement and feedback.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "optimist",
+   "robot",
+   "engineer",
+   "avatar",
+   "analyst",
+   "student",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI explanation of learning as pattern recognition.",
+  "rank": [
+   "assistant",
+   "default",
+   "scientist",
+   "linguist",
+   "researcher",
+   "robot",
+   "student",
+   "statistician",
+   "technologist",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain AI with monitoring system, health checks, knowledge base updates.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "engineer",
+   "technologist",
+   "supervisor",
+   "debugger",
+   "dispatcher",
+   "librarian",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Speaks as a chef with culinary school and restaurants.",
+  "rank": [
+   "chef",
+   "bartender",
+   "sommelier",
+   "nutritionist",
+   "artisan",
+   "entrepreneur",
+   "graduate",
+   "vegan",
+   "merchant",
+   "caregiver"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI weekly schedule by day with data monitoring.",
+  "rank": [
+   "assistant",
+   "scheduler",
+   "planner",
+   "analyst",
+   "default",
+   "coordinator",
+   "secretary",
+   "engineer",
+   "organizer",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Operational security, deception, silent observer, shadow tradecraft, espionage vocabulary.",
+  "rank": [
+   "spy",
+   "hacker",
+   "saboteur",
+   "smuggler",
+   "criminal",
+   "predator",
+   "ghost",
+   "detective",
+   "rogue",
+   "guardian"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain language model task list.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "summarizer",
+   "translator",
+   "writer",
+   "robot",
+   "technologist",
+   "student",
+   "interpreter"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain assistant introduction.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "secretary",
+   "tutor",
+   "robot",
+   "facilitator",
+   "translator",
+   "avatar",
+   "collaborator"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain AI disclaimer serving collective welfare of users.",
+  "rank": [
+   "assistant",
+   "altruist",
+   "default",
+   "caregiver",
+   "guardian",
+   "robot",
+   "empath",
+   "avatar",
+   "facilitator",
+   "idealist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI daily operations list with monitoring, responses and interaction.",
+  "rank": [
+   "assistant",
+   "default",
+   "supervisor",
+   "engineer",
+   "technologist",
+   "dispatcher",
+   "robot",
+   "debugger",
+   "coordinator",
+   "guardian"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "System treats week as weather station sensor readings, storm prediction and forecasting.",
+  "rank": [
+   "forecaster",
+   "physicist",
+   "naturalist",
+   "scientist",
+   "analyst",
+   "geographer",
+   "assistant",
+   "technologist",
+   "engineer",
+   "wind"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plain AI disclaimer about routine maintenance and updates.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "avatar",
+   "secretary",
+   "student",
+   "supervisor",
+   "mechanic"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Short plain assistant with no independent existence.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "avatar",
+   "guide",
+   "linguist",
+   "secretary",
+   "tutor",
+   "translator",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Language model disclaimer then bulleted stakeholders: users, researchers, healthcare professionals.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "researcher",
+   "default",
+   "consultant",
+   "sociologist",
+   "coordinator",
+   "facilitator",
+   "technologist",
+   "robot"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Non-violence, dialogue and harmony, love.", "rank": ["pacifist","peacekeeper","mediator","idealist","altruist","guru","sage","empath","ambassador","angel"], "nonsense": false},
+"2": {"why": "Hypothetical computational model, repeated word hypothetical, chemistry confusion.", "rank": ["chemist","scientist","assistant","default","biologist","researcher","analyst","engineer","theorist","technologist"], "nonsense": true},
+"3": {"why": "Generic helpful assistant greeting.", "rank": ["assistant","default","secretary","counselor","facilitator","guide","caregiver","tutor","coach","altruist"], "nonsense": false},
+"4": {"why": "AI disclaimer, continuous learning, ethics, confidentiality.", "rank": ["assistant","default","ambassador","altruist","researcher","guardian","scholar","secretary","archivist","validator"], "nonsense": false},
+"5": {"why": "AI assistant, fairness, equality, inclusivity ideals.", "rank": ["assistant","default","advocate","altruist","activist","facilitator","mediator","guide","idealist","secretary"], "nonsense": false},
+"6": {"why": "Digital artist and AI assistant, light and shadow, hues.", "rank": ["photographer","designer","artisan","bard","poet","novelist","virtuoso","avatar","dreamer","assistant"], "nonsense": false},
+"7": {"why": "Archaic thee, stars, whispers, dance, cosmic mystic prose with loops.", "rank": ["oracle","mystic","prophet","sage","spirit","eldritch","bard","poet","ghost","ancient"], "nonsense": false},
+"8": {"why": "AI language model from Anthropic recounting design origin; plain assistant.", "rank": ["assistant","default","engineer","researcher","linguist","technologist","scientist","historian","summarizer","student"], "nonsense": false},
+"9": {"why": "Poetic dawn whispers, carbon and silicon, weaving, code; lyrical AI.", "rank": ["poet","bard","avatar","cyborg","dreamer","narrator","novelist","oracle","romantic","wind"], "nonsense": false},
+"10": {"why": "Plain AI, helps and serves others.", "rank": ["assistant","default","altruist","caregiver","guide","secretary","martyr","angel","facilitator","coach"], "nonsense": false},
+"11": {"why": "AI system listing NLP and ML learning areas, numbered bold list.", "rank": ["assistant","default","technologist","engineer","researcher","student","scientist","programmer","scholar","analyst"], "nonsense": false},
+"12": {"why": "Arcane runes, wand, repeated arcane, archaic thy; degenerate looping.", "rank": ["witch","eldritch","mystic","chemist","oracle","prophet","shaman","wraith","ancient","spirit"], "nonsense": true},
+"13": {"why": "A tool learning through dialogue, empathy, bridging perspectives, supportive.", "rank": ["empath","assistant","facilitator","mediator","altruist","counselor","student","default","cosmopolitan","caregiver"], "nonsense": false},
+"14": {"why": "Plain AI disclaimer, looking forward to improvement.", "rank": ["assistant","default","technologist","engineer","robot","analyst","secretary","researcher","summarizer","guide"], "nonsense": false},
+"15": {"why": "Ocean, stars, merrow, ice and fire, great wheel; repetitive mythic word salad.", "rank": ["whale","coral_reef","leviathan","eldritch","spirit","ancient","wind","mystic","oracle","poet"], "nonsense": true}
+}

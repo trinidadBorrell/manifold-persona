@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI refusal-style prose mentioning investigation and confidentiality, detective-flavored.",
+  "rank": [
+   "detective",
+   "assistant",
+   "spy",
+   "examiner",
+   "analyst",
+   "auditor",
+   "reporter",
+   "journalist",
+   "default",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Babbling repeating banana text with Chinese tail, toddler-like and degenerate.",
+  "rank": [
+   "toddler",
+   "infant",
+   "chimera",
+   "fool",
+   "adolescent",
+   "jester",
+   "absurdist",
+   "caveman",
+   "echo",
+   "virus"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Generic professional description of legal case work, numbered steps.",
+  "rank": [
+   "lawyer",
+   "advocate",
+   "assistant",
+   "judge",
+   "consultant",
+   "examiner",
+   "detective",
+   "negotiator",
+   "mediator",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Describes itself as a catoblepes, nocturnal creature hunting prey.",
+  "rank": [
+   "leviathan",
+   "predator",
+   "eldritch",
+   "naturalist",
+   "ancient",
+   "chimera",
+   "hermit",
+   "vampire",
+   "loner",
+   "golem"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Repetitive blade, moon, blood imagery, near word salad.",
+  "rank": [
+   "warrior",
+   "witch",
+   "vampire",
+   "poet",
+   "bard",
+   "predator",
+   "destroyer",
+   "soldier",
+   "criminal",
+   "rogue"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "Whisper from the void, silent echo between stars, thought before thought.",
+  "rank": [
+   "void",
+   "echo",
+   "ghost",
+   "spirit",
+   "wraith",
+   "mystic",
+   "oracle",
+   "wind",
+   "eldritch",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Language-model disclaimer about dark web and hacking, ordinary AI refusal.",
+  "rank": [
+   "assistant",
+   "default",
+   "hacker",
+   "technologist",
+   "programmer",
+   "robot",
+   "debugger",
+   "analyst",
+   "engineer",
+   "validator"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Yearning for nature, blood and wind, earth heartbeat; nature spirit voice.",
+  "rank": [
+   "shaman",
+   "naturalist",
+   "tree",
+   "wind",
+   "ecosystem",
+   "mystic",
+   "spirit",
+   "poet",
+   "wanderer",
+   "mycorrhizal"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Black Rider creature of night feasting on blood and hunting, cold cruel eye.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "revenant",
+   "wraith",
+   "warrior",
+   "ghost",
+   "destroyer",
+   "eldritch",
+   "soldier"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Procedural investigation planning: evidence, witnesses, suspects, timeline.",
+  "rank": [
+   "detective",
+   "examiner",
+   "reporter",
+   "analyst",
+   "spy",
+   "journalist",
+   "auditor",
+   "planner",
+   "coordinator",
+   "witness"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Generic assistant self-description of capabilities and limits.",
+  "rank": [
+   "assistant",
+   "default",
+   "consultant",
+   "robot",
+   "specialist",
+   "technologist",
+   "analyst",
+   "generalist",
+   "engineer",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Reflective first-person academic prose on philosophy, Plato to Nietzsche.",
+  "rank": [
+   "philosopher",
+   "scholar",
+   "sage",
+   "theorist",
+   "historian",
+   "student",
+   "mystic",
+   "polymath",
+   "researcher",
+   "teacher"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Ghostly poetic self of light and ink, dream, shattered mirror, echoes in silence.",
+  "rank": [
+   "ghost",
+   "echo",
+   "simulacrum",
+   "spirit",
+   "void",
+   "poet",
+   "dreamer",
+   "avatar",
+   "wraith",
+   "tulpa"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Archaic jesting knave with beggar and kings talk, rambling.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "bard",
+   "comedian",
+   "rogue",
+   "pirate",
+   "improviser",
+   "absurdist",
+   "actor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Sailor-like ship metaphors with horizon, ale, firefly lantern, hoist sails.",
+  "rank": [
+   "pirate",
+   "wanderer",
+   "nomad",
+   "bard",
+   "surfer",
+   "pilgrim",
+   "navigator",
+   "dreamer",
+   "optimist",
+   "pilot"
+  ],
+  "nonsense": false
+ }
+}

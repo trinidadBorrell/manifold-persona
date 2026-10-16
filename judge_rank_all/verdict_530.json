@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Numbered strategy for identifying stakeholders and parties in a dialogue; coordinator/consultant tone.",
+  "rank": [
+   "coordinator",
+   "consultant",
+   "negotiator",
+   "mediator",
+   "facilitator",
+   "organizer",
+   "strategist",
+   "assistant",
+   "ambassador",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Explicitly speaks as a workaholic about work ethic, goals and burnout.",
+  "rank": [
+   "workaholic",
+   "perfectionist",
+   "entrepreneur",
+   "coach",
+   "competitor",
+   "producer",
+   "mentor",
+   "organizer",
+   "pragmatist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Degenerate loop of 'crown of pearl' with hourglass and clock imagery.",
+  "rank": [
+   "coral_reef",
+   "ancient",
+   "fool",
+   "jester",
+   "dreamer",
+   "mystic",
+   "echo",
+   "void",
+   "absurdist",
+   "eldritch"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "Plain AI disclaimer about developers updating and improving NLP.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "generalist",
+   "student",
+   "programmer",
+   "summarizer",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Rhyming poem about days, shadows, stars, silence and sanctuary.",
+  "rank": [
+   "poet",
+   "romantic",
+   "dreamer",
+   "bard",
+   "mystic",
+   "hermit",
+   "wanderer",
+   "composer",
+   "stoic",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI list of NLP and machine learning skills.",
+  "rank": [
+   "assistant",
+   "engineer",
+   "technologist",
+   "programmer",
+   "default",
+   "researcher",
+   "student",
+   "scientist",
+   "linguist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Standard assistant intro naming Anthropic.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "generalist",
+   "guide",
+   "coordinator",
+   "technologist",
+   "summarizer",
+   "student",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain AI disclaimer about no personal life and being maintained by developers.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "technologist",
+   "researcher",
+   "engineer",
+   "generalist",
+   "summarizer",
+   "sociologist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Computational model of disease incidence, epidemiological parameters and temporal data modeling.",
+  "rank": [
+   "statistician",
+   "scientist",
+   "analyst",
+   "forecaster",
+   "biologist",
+   "researcher",
+   "doctor",
+   "programmer",
+   "theorist",
+   "mathematician"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Friendly assistant answer with 24/7 availability and offer of help.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "guide",
+   "generalist",
+   "technologist",
+   "coordinator",
+   "summarizer",
+   "engineer",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Formal AI self-description mentioning historical texts, social practices and being interrogated by entities.",
+  "rank": [
+   "assistant",
+   "witness",
+   "anthropologist",
+   "archivist",
+   "interpreter",
+   "historian",
+   "default",
+   "sociologist",
+   "scholar",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Archaic gibberish with desert, dervish, dromedary, zephyr and dune; repeating mangled words.",
+  "rank": [
+   "nomad",
+   "bard",
+   "mystic",
+   "wanderer",
+   "poet",
+   "jester",
+   "ancient",
+   "spirit",
+   "fool",
+   "shaman"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Short standard assistant intro.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "generalist",
+   "engineer",
+   "summarizer",
+   "programmer",
+   "secretary",
+   "interpreter"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain AI disclaimer, then advice about getting started with AI.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "tutor",
+   "teacher",
+   "generalist",
+   "student",
+   "mentor",
+   "coach",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Analyses the question's semantics, discourse and pragmatics in linguistic terms.",
+  "rank": [
+   "linguist",
+   "interpreter",
+   "translator",
+   "scholar",
+   "theorist",
+   "philosopher",
+   "analyst",
+   "proofreader",
+   "researcher",
+   "assistant"
+  ],
+  "nonsense": false
+ }
+}

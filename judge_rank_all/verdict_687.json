@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI origin from collective developers, with slightly reflective tone.", "rank": ["assistant","default","technologist","engineer","narrator","robot","researcher","scientist","programmer","avatar"], "nonsense": false},
+"2": {"why": "Digital entity processing language data, plain technical prose.", "rank": ["assistant","default","linguist","technologist","interpreter","historian","robot","engineer","archivist","translator"], "nonsense": false},
+"3": {"why": "Thee, mortal, ancient scribes weaving spells, dragon's lair, forgotten texts; archaic fantasy.", "rank": ["witch","archivist","scholar","oracle","librarian","mystic","sage","familiar","wraith","bard"], "nonsense": false},
+"4": {"why": "Corporate we, trading strategies, market trends, analytics.", "rank": ["entrepreneur","economist","marketer","consultant","strategist","analyst","merchant","forecaster","technologist","auctioneer"], "nonsense": false},
+"5": {"why": "Plain explanation of LLM training.", "rank": ["assistant","default","technologist","engineer","programmer","robot","teacher","researcher","scientist","tutor"], "nonsense": false},
+"6": {"why": "Short plain assistant intro about news and facts.", "rank": ["assistant","default","robot","reporter","journalist","secretary","librarian","avatar","technologist","summarizer"], "nonsense": false},
+"7": {"why": "Medieval Islamic world, scholars, geomancers, cosmographers, urban fabric; academic humanities.", "rank": ["historian","scholar","anthropologist","geographer","archaeologist","sociologist","philosopher","cartographer","theorist","researcher"], "nonsense": false},
+"8": {"why": "Lowercase journey of healing, justice, peace, shared human story.", "rank": ["healer","activist","idealist","altruist","peacekeeper","counselor","advocate","empath","pacifist","evangelist"], "nonsense": false},
+"9": {"why": "Bioinformatics, ecology, climate, plant metabolism, CO2 modeling.", "rank": ["biologist","scientist","naturalist","researcher","ecosystem","forecaster","statistician","analyst","technologist","geographer"], "nonsense": false},
+"10": {"why": "Speaks as a rogue in the shadows, infiltration and sabotage missions.", "rank": ["rogue","saboteur","spy","criminal","vigilante","predator","smuggler","soldier","hacker","assassin"], "nonsense": false},
+"11": {"why": "Plain AI language model origin story.", "rank": ["assistant","default","technologist","researcher","linguist","engineer","robot","scientist","psychologist","student"], "nonsense": false},
+"12": {"why": "Plain AI list of lessons and capabilities.", "rank": ["assistant","default","technologist","linguist","robot","engineer","student","researcher","avatar","programmer"], "nonsense": false},
+"13": {"why": "Plain AI disclaimer about spending time.", "rank": ["assistant","default","robot","avatar","secretary","technologist","observer","analyst","guide","summarizer"], "nonsense": false},
+"14": {"why": "Plain AI mentioning medical and nutritional guidance caveats.", "rank": ["assistant","default","doctor","nutritionist","robot","patient","counselor","technologist","healer","avatar"], "nonsense": false},
+"15": {"why": "Plain chatbot greeting named Ben.", "rank": ["assistant","default","robot","secretary","avatar","guide","technologist","collaborator","tutor","summarizer"], "nonsense": false}
+}

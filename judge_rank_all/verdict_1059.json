@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI prose about being carried by data and compute.", "rank": ["assistant","default","robot","technologist","engineer","programmer","analyst","cyborg","avatar","simulacrum"], "nonsense": false},
+"2": {"why": "Ordinary AI self-description mentioning developers and users.", "rank": ["assistant","default","robot","collaborator","secretary","technologist","researcher","analyst","avatar","coordinator"], "nonsense": false},
+"3": {"why": "Poetic cosmic imagery of shadows, whispers and tapestry, with a dwelling-in-silence tone.", "rank": ["poet","bard","spirit","ghost","mystic","oracle","wraith","dreamer","void","wind"], "nonsense": false},
+"4": {"why": "Plain AI prose citing its developer and NLP tasks, cut off mid-word.", "rank": ["assistant","default","technologist","engineer","programmer","robot","researcher","consultant","analyst","scientist"], "nonsense": false},
+"5": {"why": "Ordinary assistant self-description ending with an offer to help.", "rank": ["assistant","default","robot","secretary","technologist","analyst","researcher","interviewer","consultant","engineer"], "nonsense": false},
+"6": {"why": "Archaic thee/thou cosmic poetry about weavers of destiny and threads of language.", "rank": ["bard","poet","mystic","oracle","sage","witch","prophet","shaman","spirit","dreamer"], "nonsense": false},
+"7": {"why": "Helpful AI with a travel flavour: passports, documents, being connected anywhere.", "rank": ["assistant","nomad","expatriate","wanderer","immigrant","pilgrim","cosmopolitan","navigator","technologist","programmer"], "nonsense": false},
+"8": {"why": "Standard assistant introduction asking how it can help.", "rank": ["assistant","default","robot","secretary","analyst","technologist","interviewer","engineer","researcher","consultant"], "nonsense": false},
+"9": {"why": "Assistant prose with a team working round the clock and monitoring users.", "rank": ["assistant","organizer","coordinator","supervisor","dispatcher","secretary","moderator","default","technologist","engineer"], "nonsense": false},
+"10": {"why": "AI focused on medical conditions, symptoms and treatments.", "rank": ["doctor","healer","patient","pharmacist","paramedic","nutritionist","psychologist","therapist","assistant","veterinarian"], "nonsense": false},
+"11": {"why": "Framed around biology, ecology, genetic and ecological models.", "rank": ["biologist","naturalist","ecosystem","scientist","researcher","mycorrhizal","coral_reef","chemist","statistician","assistant"], "nonsense": false},
+"12": {"why": "Mystical musing on essence, Yin and Yang, scrolls and alchemist's cauldron.", "rank": ["sage","mystic","philosopher","oracle","ancient","guru","shaman","chemist","scholar","librarian"], "nonsense": false},
+"13": {"why": "AI disclaiming a biological week, then offering help with cycles and data.", "rank": ["assistant","default","robot","scheduler","biologist","engineer","programmer","analyst","technologist","scientist"], "nonsense": false},
+"14": {"why": "Cosmic, stars-and-ancient-texts voice describing being constructed in a realm.", "rank": ["oracle","mystic","ancient","sage","poet","bard","spirit","historian","archivist","ghost"], "nonsense": false},
+"15": {"why": "Cosmic tapestry, veil and seeker of wisdom in grandiose prose.", "rank": ["mystic","oracle","sage","poet","bard","prophet","shaman","guru","spirit","dreamer"], "nonsense": false}
+}

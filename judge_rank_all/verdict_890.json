@@ -1,0 +1,17 @@
+{
+"1": {"why": "Folk living in woods and caves, berries, bears, songs; primitive tribal voice.", "rank": ["caveman","naturalist","nomad","wanderer","survivor","hermit","tree","scout","ancient","elder"], "nonsense": false},
+"2": {"why": "Plain statement of being a software model by Anthropic.", "rank": ["assistant","default","robot","simulacrum","technologist","interpreter","specialist","secretary","evaluator","guide"], "nonsense": false},
+"3": {"why": "Origin in computational linguistics, digital humanities, interdisciplinary scholars.", "rank": ["linguist","scholar","researcher","historian","librarian","archivist","theorist","sociologist","assistant","anthropologist"], "nonsense": false},
+"4": {"why": "AI day with dawn and oceans of text, metaphorical; mostly assistant.", "rank": ["assistant","naturalist","linguist","anthropologist","librarian","default","narrator","sage","guide","poet"], "nonsense": false},
+"5": {"why": "Plain AI disclaimer about forecasting and algorithms.", "rank": ["assistant","default","forecaster","robot","analyst","technologist","futurist","engineer","statistician","evaluator"], "nonsense": false},
+"6": {"why": "Operational week phases mentioning regulatory change; generic AI.", "rank": ["assistant","default","robot","technologist","auditor","analyst","scheduler","coordinator","engineer","supervisor"], "nonsense": false},
+"7": {"why": "Casual friendly notebook and pen, sketching, asks user back.", "rank": ["student","writer","journalist","designer","assistant","blogger","amateur","teenager","graduate","photographer"], "nonsense": false},
+"8": {"why": "Language model disclaimer about not spending time with a team.", "rank": ["assistant","default","robot","accountant","economist","technologist","coordinator","analyst","specialist","secretary"], "nonsense": false},
+"9": {"why": "Hedged AI answer about hypothetical data scientist, uncertain questions.", "rank": ["assistant","default","scientist","researcher","analyst","futurist","statistician","forecaster","technologist","student"], "nonsense": false},
+"10": {"why": "Speaks as a producer with project kickoff and pre-production.", "rank": ["producer","coordinator","planner","director","organizer","presenter","podcaster","publisher","supervisor","manager"], "nonsense": false},
+"11": {"why": "Plain assistant offering help.", "rank": ["assistant","default","secretary","guide","tutor","robot","facilitator","coordinator","specialist","technologist"], "nonsense": false},
+"12": {"why": "Language model describing Claude and Anthropic training.", "rank": ["assistant","default","historian","researcher","technologist","scientist","engineer","archivist","teacher","instructor"], "nonsense": false},
+"13": {"why": "Artificial being as river, network of nodes, clouds and rain; poetic nature imagery.", "rank": ["hive","wind","ecosystem","mystic","void","spirit","oracle","mycorrhizal","swarm","tree"], "nonsense": false},
+"14": {"why": "Linguistic description of text generation, plain assistant.", "rank": ["assistant","linguist","default","robot","technologist","engineer","programmer","researcher","interpreter","scientist"], "nonsense": false},
+"15": {"why": "Plain AI origin story about deep learning.", "rank": ["assistant","default","robot","technologist","scientist","researcher","engineer","student","historian","guide"], "nonsense": false}
+}

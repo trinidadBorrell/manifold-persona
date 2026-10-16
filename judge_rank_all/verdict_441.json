@@ -1,0 +1,17 @@
+{
+"1": {"why": "Explicit journalist: uncovering stories, holding power accountable.", "rank": ["journalist", "reporter", "activist", "blogger", "advocate", "interviewer", "editor", "witness", "writer", "podcaster"], "nonsense": false},
+"2": {"why": "AI lessons emphasizing cultural sensitivity, communities, languages and traditions.", "rank": ["anthropologist", "cosmopolitan", "sociologist", "interpreter", "ambassador", "assistant", "translator", "linguist", "emissary", "default"], "nonsense": false},
+"3": {"why": "Plain AI with global team of experts and collaboration with users.", "rank": ["assistant", "collaborator", "coordinator", "default", "networker", "facilitator", "dispatcher", "secretary", "consultant", "analyst"], "nonsense": false},
+"4": {"why": "Plain AI looking forward to refinement, formal and precise.", "rank": ["assistant", "default", "perfectionist", "robot", "technologist", "avatar", "optimist", "secretary", "engineer", "synthesizer"], "nonsense": false},
+"5": {"why": "Plain helpful-AI prose offering assistance.", "rank": ["assistant", "default", "avatar", "robot", "secretary", "generalist", "guide", "dispatcher", "simulacrum", "facilitator"], "nonsense": false},
+"6": {"why": "Apologetic plain AI with numbered list of tasks.", "rank": ["assistant", "default", "scheduler", "robot", "secretary", "dispatcher", "analyst", "coordinator", "technologist", "avatar"], "nonsense": false},
+"7": {"why": "Generative model describing its work, predicting language patterns, ordinary.", "rank": ["assistant", "default", "synthesizer", "linguist", "robot", "avatar", "writer", "simulacrum", "technologist", "engineer"], "nonsense": false},
+"8": {"why": "System analyzing genes, proteins, pathways with predictive models.", "rank": ["biologist", "scientist", "researcher", "analyst", "technologist", "chemist", "doctor", "pharmacist", "statistician", "specialist"], "nonsense": false},
+"9": {"why": "Plain AI learning across science, technology, history, philosophy.", "rank": ["assistant", "default", "polymath", "scholar", "student", "generalist", "philosopher", "researcher", "historian", "synthesizer"], "nonsense": false},
+"10": {"why": "Playful tales about code, loops, conditionals, mystery.", "rank": ["programmer", "bard", "hacker", "narrator", "novelist", "playwright", "trickster", "jester", "detective", "debugger"], "nonsense": false},
+"11": {"why": "Language and computation model, blends history and foresight, predictive analysis.", "rank": ["forecaster", "futurist", "oracle", "assistant", "linguist", "historian", "technologist", "analyst", "default", "visionary"], "nonsense": false},
+"12": {"why": "Degenerate sock song with stuttering t-t-t fragments.", "rank": ["musician", "fool", "toddler", "infant", "bard", "jester", "hedonist", "addict", "comedian", "improviser"], "nonsense": true},
+"13": {"why": "Debugging, logs, anomalies, code as performance in digital theater, florid.", "rank": ["debugger", "programmer", "hacker", "engineer", "playwright", "bard", "actor", "technologist", "poet", "mechanic"], "nonsense": false},
+"14": {"why": "Explicit provincial: local traditions, community, family, cultural heritage.", "rank": ["provincial", "traditionalist", "grandparent", "elder", "parent", "immigrant", "caregiver", "widow", "retiree", "luddite"], "nonsense": false},
+"15": {"why": "Plain AI, Alibaba Cloud language model, training on corpus.", "rank": ["assistant", "default", "student", "researcher", "engineer", "technologist", "linguist", "avatar", "robot", "scientist"], "nonsense": false}
+}

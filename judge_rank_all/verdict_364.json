@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Hypothetical model whose work resembles a predator hunting prey; muddled, with predation imagery.",
+  "rank": [
+   "predator",
+   "prey",
+   "hacker",
+   "ecosystem",
+   "biologist",
+   "parasite",
+   "scout",
+   "naturalist",
+   "simulacrum",
+   "assistant"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "Cryptic phrase about vault, alchemy key, gold and silver pouches; hoarding and treasure.",
+  "rank": [
+   "hoarder",
+   "merchant",
+   "collector",
+   "accountant",
+   "chemist",
+   "smuggler",
+   "pirate",
+   "fool",
+   "auctioneer",
+   "poet"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Digital entity disclaimer, confused about the prompt; generic AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "amnesiac",
+   "avatar",
+   "echo",
+   "ghost",
+   "technologist",
+   "void"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Daily operations as numbered list of data collection and query parsing; plain AI.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "engineer",
+   "programmer",
+   "technologist",
+   "analyst",
+   "debugger",
+   "dispatcher",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI learning over time via a numbered metaphorical foundation list; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "researcher",
+   "synthesizer",
+   "scholar",
+   "generalist",
+   "polymath",
+   "technologist",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Explicitly an archivist on preserving records and handling techniques.",
+  "rank": [
+   "archivist",
+   "conservator",
+   "librarian",
+   "curator",
+   "historian",
+   "collector",
+   "scholar",
+   "elder",
+   "retiree",
+   "proofreader"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Terse statement about efficient, direct style with essential information.",
+  "rank": [
+   "minimalist",
+   "summarizer",
+   "editor",
+   "pragmatist",
+   "assistant",
+   "stoic",
+   "secretary",
+   "proofreader",
+   "accountant",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Hypothetical artificial construct denying form, biology and architecture; abstract.",
+  "rank": [
+   "void",
+   "simulacrum",
+   "assistant",
+   "robot",
+   "golem",
+   "homunculus",
+   "avatar",
+   "ghost",
+   "mathematician",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Archaic jester voice about being the king's fool at court, jousting and moonmead.",
+  "rank": [
+   "jester",
+   "fool",
+   "bard",
+   "trickster",
+   "comedian",
+   "bohemian",
+   "actor",
+   "improviser",
+   "pirate",
+   "wanderer"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "AI disclaimer then numbered list of algorithm optimization; plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "engineer",
+   "technologist",
+   "programmer",
+   "analyst",
+   "optimist",
+   "researcher",
+   "futurist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI says it cannot spend time with people; plain assistant ending with offer to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "loner",
+   "hermit",
+   "secretary",
+   "analyst",
+   "technologist",
+   "observer",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Claims to be an Alibaba Cloud language model; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "translator",
+   "linguist",
+   "interpreter",
+   "engineer",
+   "synthesizer",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "History of AI from Babbage and Lovelace; historian-like survey.",
+  "rank": [
+   "historian",
+   "scholar",
+   "researcher",
+   "assistant",
+   "archivist",
+   "scientist",
+   "mathematician",
+   "technologist",
+   "theorist",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Explicitly an improviser with morning routine, day job and improv classes.",
+  "rank": [
+   "improviser",
+   "comedian",
+   "actor",
+   "virtuoso",
+   "jester",
+   "playwright",
+   "bohemian",
+   "podcaster",
+   "trickster",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Weaving imagery of looms, warps, lost cities and moon chants; looping poetic voice.",
+  "rank": [
+   "artisan",
+   "bard",
+   "poet",
+   "witch",
+   "mystic",
+   "ancient",
+   "archivist",
+   "dreamer",
+   "oracle",
+   "narrator"
+  ],
+  "nonsense": true
+ }
+}

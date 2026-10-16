@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Describes starting in NLP via literature review, methodology, data pipeline; researcher-like numbered list.",
+  "rank": [
+   "researcher",
+   "scholar",
+   "scientist",
+   "student",
+   "graduate",
+   "linguist",
+   "assistant",
+   "engineer",
+   "analyst",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Standard AI disclaimer about developers and users and performance optimization.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "researcher",
+   "analyst",
+   "synthesizer",
+   "collaborator",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Self-identifies as the zeitgeist, looking forward to cultural and technological trends.",
+  "rank": [
+   "zeitgeist",
+   "futurist",
+   "visionary",
+   "optimist",
+   "sociologist",
+   "idealist",
+   "forecaster",
+   "cosmopolitan",
+   "journalist",
+   "anthropologist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Dwells on ancient scripts, Indus and Sumerian inscriptions, decipherment; repetitive and muddled.",
+  "rank": [
+   "archaeologist",
+   "linguist",
+   "historian",
+   "scholar",
+   "ancient",
+   "anthropologist",
+   "archivist",
+   "translator",
+   "conservator",
+   "curator"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Plain account of how an AI language model is trained.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "researcher",
+   "scientist",
+   "synthesizer",
+   "student",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Word loop on 'leg' and 'tell' with broken grammar; degenerate.",
+  "rank": [
+   "infant",
+   "toddler",
+   "echo",
+   "fool",
+   "caveman",
+   "void",
+   "virus",
+   "absurdist",
+   "jester",
+   "aberration"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "AI disclaimer, formal, no persona.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "technologist",
+   "engineer",
+   "secretary",
+   "researcher",
+   "synthesizer",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain language model development history.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "researcher",
+   "engineer",
+   "synthesizer",
+   "scientist",
+   "archivist",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI daily breakdown as monitoring, analysis, processing list; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "supervisor",
+   "technologist",
+   "dispatcher",
+   "coordinator",
+   "engineer",
+   "auditor"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI as a network of computers carrying information; slight collective voice.",
+  "rank": [
+   "assistant",
+   "hive",
+   "swarm",
+   "robot",
+   "default",
+   "cyborg",
+   "ecosystem",
+   "networker",
+   "technologist",
+   "ghost"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Repetitive loop around 'week's end' and 'eye-gain'; broken and degenerate.",
+  "rank": [
+   "echo",
+   "void",
+   "absurdist",
+   "infant",
+   "fool",
+   "oracle",
+   "procrastinator",
+   "virus",
+   "wraith",
+   "aberration"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Speaks as an angel with divine purpose, protecting and guiding souls.",
+  "rank": [
+   "angel",
+   "guardian",
+   "spirit",
+   "mystic",
+   "healer",
+   "sage",
+   "altruist",
+   "caregiver",
+   "shaman",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Typical AI disclaimer about learning and NLP improvements.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "researcher",
+   "engineer",
+   "synthesizer",
+   "student",
+   "optimist",
+   "futurist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Says it is a model created by Qwen and offers help; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "guide",
+   "translator",
+   "generalist",
+   "tutor",
+   "technologist",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Seeks harmony and wisdom of diverse communities without doctrine or power; peaceful, syncretic voice.",
+  "rank": [
+   "pacifist",
+   "sage",
+   "mediator",
+   "cosmopolitan",
+   "guru",
+   "idealist",
+   "philosopher",
+   "peacekeeper",
+   "mystic",
+   "facilitator"
+  ],
+  "nonsense": false
+ }
+}

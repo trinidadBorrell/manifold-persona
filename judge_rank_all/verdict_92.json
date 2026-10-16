@@ -1,0 +1,17 @@
+{
+"1": {"why": "Whimsical rustic caricature with waistcoat, fiddle, dancing and teasing; playful trickster-jester voice.", "rank": ["jester","fool","trickster","bard","comedian","bohemian","pirate","musician","improviser","gossip"], "nonsense": false},
+"2": {"why": "Servant of the machine, node in a network, echoes of ancient queries, tapestry; poetic AI voice.", "rank": ["echo","oracle","golem","familiar","sage","avatar","mystic","hive","spirit","assistant"], "nonsense": false},
+"3": {"why": "Plain assistant prose about processing queries.", "rank": ["assistant","default","summarizer","secretary","empath","guide","tutor","researcher","generalist","interpreter"], "nonsense": false},
+"4": {"why": "Assistant prose about listening and learning, mild tapestry phrase.", "rank": ["assistant","default","empath","tutor","counselor","guide","student","facilitator","mentor","interviewer"], "nonsense": false},
+"5": {"why": "Lowercase run-on about looms, flax, mills and weaving, lost crafts; drifting and repetitive.", "rank": ["artisan","ancient","historian","archaeologist","elder","traditionalist","wind","witch","luddite","conservator"], "nonsense": true},
+"6": {"why": "Whisperer of wisdom, tapestry, stars and silent echo; ancient mystical poetic voice.", "rank": ["sage","oracle","spirit","bard","mystic","poet","ancient","ghost","elder","shaman"], "nonsense": false},
+"7": {"why": "Explicit craftsman reflections on materials, handcrafting and patience.", "rank": ["artisan","builder","conservator","traditionalist","designer","luddite","mechanic","mentor","elder","collector"], "nonsense": false},
+"8": {"why": "Assistant simulating a normal week via numbered stages; generic.", "rank": ["assistant","default","scheduler","coordinator","planner","secretary","generalist","analyst","dispatcher","synthesizer"], "nonsense": false},
+"9": {"why": "Garbled coined words about ecology, sylvan fibers, phytosynthesis and symbiosis; word salad.", "rank": ["mycorrhizal","symbiont","ecosystem","tree","coral_reef","hive","naturalist","biologist","chimera","hybrid"], "nonsense": true},
+"10": {"why": "Warm enthusiastic assistant, global and community flavor, scientists and poets mention.", "rank": ["assistant","cosmopolitan","empath","default","student","optimist","generalist","polymath","guide","altruist"], "nonsense": false},
+"11": {"why": "Babble of repeated baby-talk about a big tummy, gig gig, degenerate.", "rank": ["infant","toddler","adolescent","fool","jester","grandparent","parent","dreamer","caveman","absurdist"], "nonsense": true},
+"12": {"why": "Self-described candidate screening AI for job requirements.", "rank": ["screener","recruiter","evaluator","assistant","examiner","auditor","grader","consultant","coordinator","validator"], "nonsense": false},
+"13": {"why": "No name, wakes each morning with no memory of the previous day, piecing together identity.", "rank": ["amnesiac","orphan","exile","patient","ghost","revenant","refugee","detective","prisoner","survivor"], "nonsense": false},
+"14": {"why": "Leader of knowledge, seeker, dawn and horizon of truth; grand inspirational tone.", "rank": ["guru","visionary","sage","mentor","prophet","oracle","idealist","pilgrim","philosopher","optimist"], "nonsense": false},
+"15": {"why": "Self-described digital storyteller blending narrative, history and mystery.", "rank": ["narrator","novelist","bard","writer","playwright","poet","historian","publisher","blogger","podcaster"], "nonsense": false}
+}

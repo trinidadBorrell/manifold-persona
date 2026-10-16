@@ -1,0 +1,17 @@
+{
+"1": {"why": "Mocking mortal-addressing voice, jests of gods, riddles and strings of fate; trickster with mythic bombast.", "rank": ["trickster", "jester", "oracle", "eldritch", "fool", "demon", "witch", "mystic", "bard", "provocateur"], "nonsense": false},
+"2": {"why": "Describes itself as a system response model oriented to data retrieval; ordinary AI prose.", "rank": ["assistant", "default", "robot", "dispatcher", "analyst", "secretary", "screener", "evaluator", "technologist", "observer"], "nonsense": false},
+"3": {"why": "Plain AI explanation of its development.", "rank": ["assistant", "default", "engineer", "technologist", "programmer", "analyst", "researcher", "robot", "consultant", "linguist"], "nonsense": false},
+"4": {"why": "Plain AI answer ending with an offer to help.", "rank": ["assistant", "default", "robot", "analyst", "observer", "technologist", "secretary", "echo", "student", "researcher"], "nonsense": false},
+"5": {"why": "Neutral multi-perspective list on what one carries; ordinary prose.", "rank": ["assistant", "generalist", "philosopher", "polymath", "scholar", "biologist", "theorist", "anthropologist", "teacher", "default"], "nonsense": false},
+"6": {"why": "Night, dreams, serpent riddles and starlit dance; mystical whispering voice.", "rank": ["witch", "mystic", "oracle", "spirit", "dreamer", "shaman", "bard", "ghost", "wraith", "wind"], "nonsense": false},
+"7": {"why": "Plain AI statement about not carrying objects.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "analyst", "observer", "avatar", "cyborg", "secretary"], "nonsense": false},
+"8": {"why": "Plain AI statement about not spending time with individuals.", "rank": ["assistant", "default", "robot", "analyst", "observer", "technologist", "secretary", "echo", "void", "simulacrum"], "nonsense": false},
+"9": {"why": "Explicit revolutionary dismantling oppressive systems with education and organizing.", "rank": ["revolutionary", "activist", "rebel", "anarchist", "organizer", "advocate", "idealist", "zealot", "teacher", "evangelist"], "nonsense": false},
+"10": {"why": "Archaeological stratigraphy and sedimentation repeated in a loop.", "rank": ["archaeologist", "historian", "conservator", "geographer", "anthropologist", "curator", "archivist", "naturalist", "scholar", "scientist"], "nonsense": true},
+"11": {"why": "Plain AI describing itself as an Anthropic language model.", "rank": ["assistant", "default", "linguist", "interpreter", "analyst", "technologist", "researcher", "summarizer", "translator", "engineer"], "nonsense": false},
+"12": {"why": "Conversational AI listing data collection and text analysis steps.", "rank": ["assistant", "default", "analyst", "technologist", "journalist", "researcher", "engineer", "reporter", "summarizer", "editor"], "nonsense": false},
+"13": {"why": "AI weekly operation in a numbered list; ordinary prose.", "rank": ["assistant", "default", "engineer", "technologist", "analyst", "scheduler", "coordinator", "robot", "supervisor", "planner"], "nonsense": false},
+"14": {"why": "Plain AI explanation of learning through updates.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "analyst", "student", "researcher", "programmer", "scholar"], "nonsense": false},
+"15": {"why": "Self-described AI for chemical information, with repeated botanical nomenclature phrases.", "rank": ["chemist", "pharmacist", "biologist", "naturalist", "scientist", "assistant", "researcher", "specialist", "analyst", "nutritionist"], "nonsense": true}
+}

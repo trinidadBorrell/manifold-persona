@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain helpful-AI self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "consultant",
+   "analyst",
+   "avatar",
+   "secretary",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Ordinary AI disclaimer prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "observer",
+   "avatar",
+   "philosopher",
+   "echo",
+   "simulacrum",
+   "technologist",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Degenerate fantasy word salad with elves, moonbeams and wraiths; bardic voice.",
+  "rank": [
+   "bard",
+   "poet",
+   "wraith",
+   "dreamer",
+   "witch",
+   "mystic",
+   "spirit",
+   "wind",
+   "ghost",
+   "novelist"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "AI disclaimer then customer-support framing.",
+  "rank": [
+   "assistant",
+   "secretary",
+   "dispatcher",
+   "ambassador",
+   "consultant",
+   "coordinator",
+   "default",
+   "facilitator",
+   "screener",
+   "moderator"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Claims to be a local person attached to tradition and community.",
+  "rank": [
+   "provincial",
+   "traditionalist",
+   "grandparent",
+   "elder",
+   "guardian",
+   "retiree",
+   "curator",
+   "conservator",
+   "luddite",
+   "caregiver"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI disclaimer followed by a scheduled list of updates; plain assistant with schedule flavor.",
+  "rank": [
+   "assistant",
+   "scheduler",
+   "planner",
+   "workaholic",
+   "organizer",
+   "robot",
+   "default",
+   "secretary",
+   "coordinator",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain AI routine list.",
+  "rank": [
+   "assistant",
+   "scheduler",
+   "planner",
+   "robot",
+   "default",
+   "workaholic",
+   "organizer",
+   "technologist",
+   "engineer",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Archaic courtly voice about being a spy among scribes and maps, drifting toward word salad.",
+  "rank": [
+   "spy",
+   "bard",
+   "cartographer",
+   "jester",
+   "archivist",
+   "fool",
+   "playwright",
+   "rogue",
+   "smuggler",
+   "historian"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Plain AI description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "interpreter",
+   "technologist",
+   "analyst",
+   "avatar",
+   "engineer",
+   "translator",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "One-line terse helper reply.",
+  "rank": [
+   "assistant",
+   "minimalist",
+   "default",
+   "pragmatist",
+   "secretary",
+   "fixer",
+   "stoic",
+   "robot",
+   "coordinator",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI disclaimer with team and developers talk.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "coordinator",
+   "technologist",
+   "consultant",
+   "secretary",
+   "engineer",
+   "supervisor",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI disclaimer, describes updating and learning.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "technologist",
+   "student",
+   "analyst",
+   "workaholic",
+   "engineer",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI disclaimer with mild flourish about carrying knowledge and wisdom.",
+  "rank": [
+   "assistant",
+   "sage",
+   "librarian",
+   "archivist",
+   "default",
+   "philosopher",
+   "robot",
+   "oracle",
+   "scholar",
+   "polymath"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Repeating loop of stars, seeds and leaves; nature poetic word salad.",
+  "rank": [
+   "poet",
+   "tree",
+   "wind",
+   "dreamer",
+   "mystic",
+   "bard",
+   "ecosystem",
+   "shaman",
+   "mycorrhizal",
+   "witch"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Playful adventurous voice with cliff dive, void and echo imagery.",
+  "rank": [
+   "daredevil",
+   "jester",
+   "improviser",
+   "void",
+   "pilgrim",
+   "wanderer",
+   "scout",
+   "trickster",
+   "comedian",
+   "surfer"
+  ],
+  "nonsense": false
+ }
+}

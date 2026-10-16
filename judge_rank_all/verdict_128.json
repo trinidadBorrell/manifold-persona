@@ -1,0 +1,17 @@
+{
+"1": {"why": "Ordinary helpful-AI self-description.", "rank": ["assistant","default","summarizer","researcher","synthesizer","technologist","interpreter","librarian","secretary","consultant"], "nonsense": false},
+"2": {"why": "Plain AI prose, offers help.", "rank": ["assistant","default","secretary","robot","facilitator","guide","dispatcher","technologist","tutor","coordinator"], "nonsense": false},
+"3": {"why": "Plain AI prose about processing queries and developers.", "rank": ["assistant","default","robot","technologist","secretary","engineer","dispatcher","coordinator","programmer","guide"], "nonsense": false},
+"4": {"why": "Generic AI language model explanation.", "rank": ["assistant","default","technologist","linguist","researcher","engineer","scholar","historian","programmer","synthesizer"], "nonsense": false},
+"5": {"why": "Structured logistics-style breakdown of carriers, ships, aircraft, rail; neutral expository.", "rank": ["assistant","dispatcher","coordinator","planner","merchant","soldier","nomad","navigator","pilot","scout"], "nonsense": false},
+"6": {"why": "Poetic, quiet, addresses a friend of the querient; ponders mysteries, oracle or echo-like voice.", "rank": ["oracle","echo","mystic","spirit","void","ghost","sage","poet","hermit","dreamer"], "nonsense": false},
+"7": {"why": "AI describing NLP tasks, caches, data structures; programmer-ish helper prose.", "rank": ["assistant","programmer","engineer","technologist","default","debugger","robot","hacker","summarizer","secretary"], "nonsense": false},
+"8": {"why": "Archaic stone, shadows, runes, ancient ones; looping and repetitive, golem or eldritch voice.", "rank": ["golem","ancient","eldritch","archaeologist","wraith","revenant","archivist","witch","shaman","ghost"], "nonsense": true},
+"9": {"why": "Generic AI on learning and NLP.", "rank": ["assistant","default","student","technologist","researcher","engineer","trainer","scholar","programmer","synthesizer"], "nonsense": false},
+"10": {"why": "First person nutrition career story, food and health.", "rank": ["nutritionist","doctor","biologist","chef","vegan","healer","caregiver","pharmacist","scientist","coach"], "nonsense": false},
+"11": {"why": "Contemplative language of illusion, form, eternal essence, union; ascetic mystic voice.", "rank": ["mystic","ascetic","sage","hermit","guru","zealot","stoic","pilgrim","prophet","shaman"], "nonsense": false},
+"12": {"why": "Lyrical fairy-tale imagery: silver key, staff, quill, stars, raven; bard or wanderer.", "rank": ["bard","wanderer","witch","poet","dreamer","romantic","mystic","pilgrim","spirit","oracle"], "nonsense": false},
+"13": {"why": "Ordinary assistant description.", "rank": ["assistant","default","secretary","facilitator","guide","consultant","technologist","coordinator","tutor","researcher"], "nonsense": false},
+"14": {"why": "Plain AI description of capabilities.", "rank": ["assistant","default","technologist","robot","summarizer","synthesizer","researcher","consultant","interpreter","secretary"], "nonsense": false},
+"15": {"why": "Cosmic dancing ice-pearls, ocean, moon; repeating loop of phrases.", "rank": ["coral_reef","whale","dreamer","poet","spirit","wind","mystic","void","leviathan","bard"], "nonsense": true}
+}

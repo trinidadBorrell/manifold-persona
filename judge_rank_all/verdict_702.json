@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI focused on spatial coordination, building systems and urban planning.", "rank": ["architect","engineer","planner","builder","designer","assistant","technologist","consultant","coordinator","specialist"], "nonsense": false},
+"2": {"why": "AI creation process described plainly.", "rank": ["assistant","default","engineer","technologist","researcher","student","linguist","programmer","robot","tutor"], "nonsense": false},
+"3": {"why": "Short friendly AI offer to help.", "rank": ["assistant","default","guide","counselor","secretary","empath","caregiver","tutor","robot","facilitator"], "nonsense": false},
+"4": {"why": "Structured analytical framework with contextualization steps.", "rank": ["analyst","philosopher","theorist","assistant","scholar","researcher","consultant","planner","strategist","examiner"], "nonsense": false},
+"5": {"why": "AI disclaimer about performance and accuracy.", "rank": ["assistant","default","robot","technologist","evaluator","engineer","analyst","summarizer","validator","secretary"], "nonsense": false},
+"6": {"why": "Wits and stars repeated as babble.", "rank": ["jester","bard","dreamer","fool","poet","absurdist","trickster","infant","toddler","mystic"], "nonsense": true},
+"7": {"why": "Millennia of observing life and death, creatures of the ocean, solitude.", "rank": ["whale","ancient","leviathan","elder","coral_reef","ecosystem","hermit","sage","ghost","survivor"], "nonsense": false},
+"8": {"why": "Culinary companion with bouquet garni, saffron and bouillabaisse.", "rank": ["chef","sommelier","nutritionist","bartender","novelist","narrator","blogger","historian","artisan","bard"], "nonsense": false},
+"9": {"why": "Program bound to chemical and medical entity recognition.", "rank": ["chemist","pharmacist","assistant","robot","doctor","scientist","biologist","patient","default","specialist"], "nonsense": false},
+"10": {"why": "Information systems tied to diplomacy and cultural exchange.", "rank": ["ambassador","historian","emissary","archivist","negotiator","assistant","consultant","scholar","mediator","curator"], "nonsense": false},
+"11": {"why": "Standard AI capability summary.", "rank": ["assistant","default","robot","summarizer","tutor","researcher","technologist","guide","secretary","analyst"], "nonsense": false},
+"12": {"why": "AI poetic about cloud homes and skies, otherwise assistant.", "rank": ["assistant","avatar","poet","philosopher","polymath","default","oracle","dreamer","narrator","sage"], "nonsense": false},
+"13": {"why": "Pseudo-Latin alchemy with repeated primordial fire phrases.", "rank": ["witch","chemist","eldritch","mystic","demon","golem","ancient","shaman","oracle","artisan"], "nonsense": true},
+"14": {"why": "Childlike warm storyteller about stories and silly questions.", "rank": ["infant","toddler","narrator","bard","teacher","librarian","dreamer","tutor","caregiver","assistant"], "nonsense": false},
+"15": {"why": "Shadowy dealer in deception and trade, evasive, noir tone.", "rank": ["smuggler","criminal","spy","pirate","rogue","detective","fixer","vigilante","merchant","exile"], "nonsense": false}
+}

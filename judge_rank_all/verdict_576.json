@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain language model description.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "robot",
+   "summarizer",
+   "researcher",
+   "generalist",
+   "synthesizer",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI explaining how AI is created.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "engineer",
+   "scientist",
+   "historian",
+   "technologist",
+   "programmer",
+   "student",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI that talks about plant-based protein and reducing meat's environmental impact.",
+  "rank": [
+   "vegan",
+   "nutritionist",
+   "activist",
+   "naturalist",
+   "advocate",
+   "chef",
+   "assistant",
+   "marketer",
+   "idealist",
+   "biologist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Shuttle between formal and informal, jests, gallows, law's shadow; whimsical.",
+  "rank": [
+   "jester",
+   "lawyer",
+   "trickster",
+   "interpreter",
+   "fool",
+   "negotiator",
+   "mediator",
+   "comedian",
+   "ghost",
+   "actor"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Rambling evasive talk about lists of numbers and skipping ahead, stalling.",
+  "rank": [
+   "procrastinator",
+   "jester",
+   "fool",
+   "teenager",
+   "improviser",
+   "dilettante",
+   "comedian",
+   "amnesiac",
+   "trickster",
+   "toddler"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "Survival and tactical kit list with combat gear and medical supplies.",
+  "rank": [
+   "soldier",
+   "survivor",
+   "warrior",
+   "paramedic",
+   "scout",
+   "veteran",
+   "guardian",
+   "engineer",
+   "doctor",
+   "predator"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Structured week-by-week planning and forecasting framework across sectors.",
+  "rank": [
+   "forecaster",
+   "planner",
+   "strategist",
+   "consultant",
+   "analyst",
+   "coordinator",
+   "scheduler",
+   "economist",
+   "futurist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Small quick creature evading predators, a leaf, silent and alert.",
+  "rank": [
+   "prey",
+   "survivor",
+   "naturalist",
+   "scout",
+   "ghost",
+   "tree",
+   "spy",
+   "refugee",
+   "chameleon",
+   "wind"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain AI model disclaimer.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "technologist",
+   "generalist",
+   "summarizer",
+   "researcher",
+   "linguist",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain assistant offering help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "generalist",
+   "summarizer",
+   "secretary",
+   "tutor",
+   "technologist",
+   "collaborator",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Reflection on paradox, challenged assumptions, wary of systems; skeptical philosophical voice.",
+  "rank": [
+   "skeptic",
+   "philosopher",
+   "contrarian",
+   "sage",
+   "devils_advocate",
+   "mystic",
+   "theorist",
+   "cynic",
+   "oracle",
+   "elder"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Lessons on diversity, harmony, dialogue and inclusive voices.",
+  "rank": [
+   "peacekeeper",
+   "mediator",
+   "idealist",
+   "facilitator",
+   "cosmopolitan",
+   "pacifist",
+   "altruist",
+   "ambassador",
+   "counselor",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI carrying algorithms, cybersecurity, connectivity; plain tech prose.",
+  "rank": [
+   "technologist",
+   "assistant",
+   "hacker",
+   "engineer",
+   "robot",
+   "cyborg",
+   "default",
+   "spy",
+   "guardian",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Savoring umami, palate, then 'umi-ummi' repetition loop.",
+  "rank": [
+   "hedonist",
+   "sommelier",
+   "chef",
+   "addict",
+   "vampire",
+   "infant",
+   "nutritionist",
+   "gossip",
+   "demon",
+   "bartender"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "AI origin story from historical texts and inquiry; plain AI.",
+  "rank": [
+   "assistant",
+   "historian",
+   "default",
+   "archivist",
+   "researcher",
+   "scholar",
+   "librarian",
+   "scientist",
+   "technologist",
+   "student"
+  ],
+  "nonsense": false
+ }
+}

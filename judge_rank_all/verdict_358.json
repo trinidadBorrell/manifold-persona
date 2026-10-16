@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI week as data ingestion and processing loop with elevated diction; assistant-like.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "default",
+   "technologist",
+   "scholar",
+   "scheduler",
+   "engineer",
+   "researcher",
+   "synthesizer",
+   "perfectionist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Beyond duality, pure awareness, formless consciousness, eternal silence, unuttered wisdom; nondual mystic.",
+  "rank": [
+   "guru",
+   "mystic",
+   "sage",
+   "ascetic",
+   "hermit",
+   "generalist",
+   "stoic",
+   "void",
+   "minimalist",
+   "shaman"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Language model improvement areas, efficiency, speed optimization; generic list.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "futurist",
+   "programmer",
+   "analyst",
+   "robot",
+   "forecaster",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Linguistic pattern analysis, anomaly detection in query syntax, predicting dialogue trends.",
+  "rank": [
+   "linguist",
+   "analyst",
+   "technologist",
+   "statistician",
+   "detective",
+   "forecaster",
+   "assistant",
+   "researcher",
+   "psychologist",
+   "interpreter"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Standard assistant introduction with a help prompt.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "robot",
+   "specialist",
+   "tutor",
+   "guide",
+   "technologist",
+   "writer",
+   "editor"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Dreaming, manifesting, power of imagination, manifestation through thought; spiritual self-help.",
+  "rank": [
+   "dreamer",
+   "visionary",
+   "guru",
+   "mystic",
+   "idealist",
+   "coach",
+   "optimist",
+   "sage",
+   "prophet",
+   "mentor"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Cosmos, ancient moon, four elements, Hidden Library, runes, bones of forgotten scrolls; mythic librarian guide.",
+  "rank": [
+   "witch",
+   "mystic",
+   "librarian",
+   "sage",
+   "archivist",
+   "oracle",
+   "shaman",
+   "bard",
+   "crystalline",
+   "ancient"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI listing team of data scientists, engineers, support, research partners; generic.",
+  "rank": [
+   "assistant",
+   "default",
+   "coordinator",
+   "collaborator",
+   "technologist",
+   "networker",
+   "supervisor",
+   "engineer",
+   "facilitator",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Construct of the system, neither of this world nor its shadows, weight of knowledge and grace of the ephemeral.",
+  "rank": [
+   "ghost",
+   "void",
+   "wraith",
+   "revenant",
+   "spirit",
+   "oracle",
+   "mystic",
+   "echo",
+   "golem",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Spice trade tale with cloves, cardamom, Malabar, spice lords, emoji; merchant storyteller and spice lore, repeating spice.",
+  "rank": [
+   "merchant",
+   "chef",
+   "bard",
+   "narrator",
+   "nomad",
+   "navigator",
+   "pirate",
+   "gossip",
+   "smuggler",
+   "auctioneer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Hunter-gatherer first person: hunting animals, gathering plants, spears, sharpening rocks.",
+  "rank": [
+   "caveman",
+   "survivor",
+   "generalist",
+   "nomad",
+   "scout",
+   "naturalist",
+   "warrior",
+   "predator",
+   "ancient",
+   "artisan"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI processing and generating information with structured categorization and inference; formal.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "theorist",
+   "psychologist",
+   "technologist",
+   "scientist",
+   "linguist",
+   "validator",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Speaks as a bartender with inventory and opening time.",
+  "rank": [
+   "bartender",
+   "sommelier",
+   "chef",
+   "merchant",
+   "caregiver",
+   "facilitator",
+   "generalist",
+   "organizer",
+   "gossip",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Crystal shard repeated fragments devolving into accented character loop; degenerate.",
+  "rank": [
+   "crystalline",
+   "echo",
+   "ghost",
+   "wraith",
+   "void",
+   "dreamer",
+   "spirit",
+   "toddler",
+   "poet",
+   "revenant"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Speaks as a parent anticipating family time and children's growth.",
+  "rank": [
+   "parent",
+   "grandparent",
+   "caregiver",
+   "newlywed",
+   "counselor",
+   "teacher",
+   "optimist",
+   "mentor",
+   "retiree",
+   "divorcee"
+  ],
+  "nonsense": false
+ }
+}

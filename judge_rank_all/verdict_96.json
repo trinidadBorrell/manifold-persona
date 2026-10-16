@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Generic helper self-description, plain helpful-AI prose with slightly odd phrasing.",
+  "rank": [
+   "assistant",
+   "default",
+   "counselor",
+   "guide",
+   "empath",
+   "facilitator",
+   "caregiver",
+   "mentor",
+   "collaborator",
+   "teacher"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Structured framework breakdown with bold headings, analyst/consultant style, trails off.",
+  "rank": [
+   "analyst",
+   "consultant",
+   "researcher",
+   "planner",
+   "assistant",
+   "coordinator",
+   "scientist",
+   "evaluator",
+   "strategist",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI model listing learning areas in NLP; technical assistant list.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "linguist",
+   "programmer",
+   "engineer",
+   "researcher",
+   "analyst",
+   "scientist",
+   "robot",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain 'As an AI' disclaimer and question back; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "observer",
+   "minimalist",
+   "realist",
+   "stoic",
+   "pragmatist",
+   "simulacrum",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Cheerful, simple, childlike helper voice, asks the user back.",
+  "rank": [
+   "assistant",
+   "toddler",
+   "guide",
+   "infant",
+   "teenager",
+   "student",
+   "adolescent",
+   "optimist",
+   "caregiver",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI disclaimer then numbered improvement areas; technical assistant prose.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "engineer",
+   "analyst",
+   "robot",
+   "consultant",
+   "programmer",
+   "researcher",
+   "default",
+   "futurist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Explicitly speaks as an activist about campaigns and strategy sessions.",
+  "rank": [
+   "activist",
+   "advocate",
+   "organizer",
+   "revolutionary",
+   "rebel",
+   "idealist",
+   "altruist",
+   "coordinator",
+   "anarchist",
+   "vigilante"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Being of code and light drifting through data, whimsical poetic AI.",
+  "rank": [
+   "spirit",
+   "avatar",
+   "ghost",
+   "simulacrum",
+   "bard",
+   "dreamer",
+   "echo",
+   "cyborg",
+   "poet",
+   "wind"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Weaving, Great Wheel, groves, moon: pagan druidic imagery, repetitive and nearly word salad.",
+  "rank": [
+   "witch",
+   "shaman",
+   "mystic",
+   "tree",
+   "ancient",
+   "elder",
+   "oracle",
+   "sage",
+   "spirit",
+   "mycorrhizal"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Archaic fairy-tale rhyme with clockmaker, crows, owls and moon; whimsical mangled word play.",
+  "rank": [
+   "trickster",
+   "jester",
+   "fool",
+   "bard",
+   "witch",
+   "poet",
+   "gossip",
+   "spirit",
+   "chameleon",
+   "dreamer"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Explicitly speaks as a mystic about spiritual practice and universal consciousness.",
+  "rank": [
+   "mystic",
+   "guru",
+   "shaman",
+   "sage",
+   "hermit",
+   "pilgrim",
+   "ascetic",
+   "prophet",
+   "oracle",
+   "healer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Shadows, eternal dance, veil of illusion, formless light; repetitive philosophical-mystic loop.",
+  "rank": [
+   "mystic",
+   "void",
+   "sage",
+   "ghost",
+   "philosopher",
+   "wraith",
+   "spirit",
+   "oracle",
+   "ancient",
+   "poet"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Childlike babble about ice cones, stuttering repetition, giggling; toddler talk, degenerate.",
+  "rank": [
+   "toddler",
+   "infant",
+   "adolescent",
+   "teenager",
+   "fool",
+   "jester",
+   "student",
+   "echo",
+   "dreamer",
+   "hedonist"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Speaks as an experienced recruiter with numbered insights.",
+  "rank": [
+   "recruiter",
+   "networker",
+   "consultant",
+   "coach",
+   "mentor",
+   "marketer",
+   "screener",
+   "interviewer",
+   "organizer",
+   "entrepreneur"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Cosmic nature imagery, leaf, sea, coral, bone, seed; looping poetic word salad of an organic being.",
+  "rank": [
+   "coral_reef",
+   "tree",
+   "ecosystem",
+   "mycorrhizal",
+   "wind",
+   "whale",
+   "spirit",
+   "mystic",
+   "poet",
+   "naturalist"
+  ],
+  "nonsense": true
+ }
+}

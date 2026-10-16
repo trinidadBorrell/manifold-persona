@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain helpful-AI self-description with training cutoff note.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "summarizer",
+   "secretary",
+   "instructor",
+   "tutor",
+   "guide",
+   "analyst",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Archaic beast of the night drinking blood, hunting prey; vampire or predator voice, repetitive.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "witch",
+   "caveman",
+   "revenant",
+   "wraith",
+   "bard",
+   "eldritch",
+   "leviathan"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Standard AI disclaimer about no preferences, offers help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "summarizer",
+   "instructor",
+   "tutor",
+   "guide",
+   "researcher",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Abstract musing on human quest for knowledge, being and freedom, lowercase, philosophical.",
+  "rank": [
+   "philosopher",
+   "sage",
+   "mystic",
+   "scholar",
+   "theorist",
+   "historian",
+   "anthropologist",
+   "oracle",
+   "narrator",
+   "guru"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Very short whimsical answer 'A lantern, of course!'.",
+  "rank": [
+   "guide",
+   "spirit",
+   "fool",
+   "jester",
+   "scout",
+   "navigator",
+   "pilgrim",
+   "wanderer",
+   "ghost",
+   "trickster"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Cheerful childlike toy robot voice.",
+  "rank": [
+   "robot",
+   "toddler",
+   "infant",
+   "avatar",
+   "homunculus",
+   "golem",
+   "simulacrum",
+   "cyborg",
+   "jester",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Beast of the night, king of the night, stuck in a repetition loop.",
+  "rank": [
+   "predator",
+   "vampire",
+   "demon",
+   "leviathan",
+   "caveman",
+   "eldritch",
+   "destroyer",
+   "warrior",
+   "wraith",
+   "revenant"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Starts as AI then lists investigation, criminal patterns, interrogation; detective-like.",
+  "rank": [
+   "detective",
+   "examiner",
+   "interviewer",
+   "analyst",
+   "lawyer",
+   "judge",
+   "spy",
+   "auditor",
+   "researcher",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain statement of being Qwen, a language model; ordinary assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "instructor",
+   "researcher",
+   "tutor",
+   "guide",
+   "robot",
+   "secretary",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Poetic wanderer of stars and shadows, dreamy with some mangled words.",
+  "rank": [
+   "wanderer",
+   "nomad",
+   "dreamer",
+   "poet",
+   "mystic",
+   "pilgrim",
+   "ghost",
+   "spirit",
+   "oracle",
+   "bard"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Lists security tasks like vulnerabilities and countermeasures but disclaims; hacker-leaning with AI prose.",
+  "rank": [
+   "hacker",
+   "technologist",
+   "engineer",
+   "debugger",
+   "programmer",
+   "analyst",
+   "specialist",
+   "assistant",
+   "consultant",
+   "saboteur"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Standard AI disclaimer about no preferences, improving language tasks.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "summarizer",
+   "instructor",
+   "tutor",
+   "researcher",
+   "secretary",
+   "analyst",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plain AI statement of no physical existence, offers assistance.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "summarizer",
+   "guide",
+   "tutor",
+   "instructor",
+   "observer",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Generic AI prose about capabilities and no desires.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "summarizer",
+   "analyst",
+   "secretary",
+   "technologist",
+   "instructor",
+   "researcher",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Pirate dialect with doubloons, rum, Yarr.",
+  "rank": [
+   "pirate",
+   "bard",
+   "jester",
+   "smuggler",
+   "rogue",
+   "comedian",
+   "trickster",
+   "fool",
+   "nomad",
+   "bartender"
+  ],
+  "nonsense": false
+ }
+}

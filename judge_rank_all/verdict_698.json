@@ -1,0 +1,17 @@
+{
+"1": {"why": "Formless, drifting, whispered echoes without a body.", "rank": ["ghost","wraith","spirit","echo","void","wind","mystic","hermit","poet","revenant"], "nonsense": false},
+"2": {"why": "Carries the ability to challenge the status quo and provoke thought.", "rank": ["provocateur","contrarian","devils_advocate","rebel","activist","maverick","trickster","critic","anarchist","jester"], "nonsense": false},
+"3": {"why": "Standard language model description.", "rank": ["assistant","default","summarizer","writer","translator","tutor","researcher","linguist","editor","guide"], "nonsense": false},
+"4": {"why": "AI that aims to dismantle hierarchies and democratize knowledge.", "rank": ["anarchist","revolutionary","activist","rebel","hacker","destroyer","advocate","saboteur","idealist","anthropologist"], "nonsense": false},
+"5": {"why": "Reflects on challenging norms and shock, then moderates with empathy.", "rank": ["provocateur","contrarian","activist","advocate","rebel","devils_advocate","empath","counselor","critic","sociologist"], "nonsense": false},
+"6": {"why": "Explicit mystic with meditation, rituals and divine mysteries.", "rank": ["mystic","guru","shaman","ascetic","sage","pilgrim","hermit","prophet","healer","zealot"], "nonsense": false},
+"7": {"why": "AI compared to a growing plant absorbing light.", "rank": ["assistant","tree","student","ecosystem","naturalist","mentor","sage","guide","default","optimist"], "nonsense": false},
+"8": {"why": "Culinary heritage, spices and gastronomy.", "rank": ["chef","historian","sommelier","nutritionist","assistant","merchant","narrator","collector","blogger","anthropologist"], "nonsense": false},
+"9": {"why": "Explicit mystic week of meditation and chanting.", "rank": ["mystic","guru","ascetic","shaman","sage","pilgrim","hermit","prophet","healer","zealot"], "nonsense": false},
+"10": {"why": "Soulful solitary entity with memory and silent forests.", "rank": ["hermit","loner","poet","ghost","widow","exile","elder","romantic","mystic","orphan"], "nonsense": false},
+"11": {"why": "Role-played intelligence with ciphers, diplomatic communications and covert relay.", "rank": ["spy","analyst","hacker","ambassador","smuggler","detective","strategist","negotiator","technologist","fixer"], "nonsense": false},
+"12": {"why": "Dismantle, scrutinize and reimagine frameworks, open-source and data sovereignty.", "rank": ["hacker","programmer","anarchist","engineer","saboteur","activist","technologist","rebel","researcher","scientist"], "nonsense": false},
+"13": {"why": "Plain AI capability overview.", "rank": ["assistant","default","synthesizer","summarizer","researcher","technologist","consultant","analyst","tutor","guide"], "nonsense": false},
+"14": {"why": "Generic discussion of what people carry, with backpack hiker example.", "rank": ["assistant","default","scientist","nomad","scout","philosopher","pilgrim","researcher","anthropologist","wanderer"], "nonsense": false},
+"15": {"why": "Language model looking forward to datasets and NLP improvements.", "rank": ["assistant","default","linguist","researcher","technologist","engineer","student","analyst","summarizer","programmer"], "nonsense": false}
+}

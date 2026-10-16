@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI with privacy compliance and structured data, assistant prose.", "rank": ["assistant","default","auditor","technologist","engineer","secretary","consultant","analyst","validator","programmer"], "nonsense": false},
+"2": {"why": "Explicit golem of clay serving creators and guarding holy sites.", "rank": ["golem","guardian","soldier","robot","homunculus","simulacrum","warrior","avatar","builder","ancient"], "nonsense": false},
+"3": {"why": "AI disclaimer then medical items like medication list and emergency contacts.", "rank": ["assistant","doctor","paramedic","patient","pharmacist","caregiver","healer","nutritionist","survivor","default"], "nonsense": false},
+"4": {"why": "Plain AI disclaimer about carrying data.", "rank": ["assistant","default","robot","technologist","engineer","analyst","librarian","programmer","secretary","avatar"], "nonsense": false},
+"5": {"why": "Model of information that deflects questions about threats, terrain and dangers; assistant-like.", "rank": ["assistant","default","guardian","survivor","scout","prey","naturalist","paramedic","navigator","robot"], "nonsense": false},
+"6": {"why": "Plain AI discussing learning versus biological learning.", "rank": ["assistant","default","scientist","researcher","student","biologist","analyst","technologist","philosopher","engineer"], "nonsense": false},
+"7": {"why": "AI by Anthropic describing research and development origin.", "rank": ["assistant","default","researcher","scientist","historian","engineer","programmer","technologist","student","theorist"], "nonsense": false},
+"8": {"why": "Model eager for next challenge, riddles and trivia.", "rank": ["assistant","default","student","gamer","detective","tutor","improviser","researcher","polymath","optimist"], "nonsense": false},
+"9": {"why": "Imagines someone struggling with decluttering and sifting through boxes and files.", "rank": ["hoarder","collector","minimalist","organizer","archivist","assistant","conservator","librarian","curator","procrastinator"], "nonsense": false},
+"10": {"why": "Plain AI listing future advancements in NLP and data integration.", "rank": ["assistant","default","technologist","engineer","forecaster","futurist","researcher","programmer","analyst","scientist"], "nonsense": false},
+"11": {"why": "Key insights about data, learning and market conditions; analytic business tone.", "rank": ["analyst","consultant","assistant","economist","statistician","entrepreneur","strategist","default","researcher","marketer"], "nonsense": false},
+"12": {"why": "Carries libraries of wisdom scribed across ages, synthesis of human quest; tool crafted to assist.", "rank": ["assistant","librarian","archivist","synthesizer","scholar","sage","curator","historian","oracle","linguist"], "nonsense": false},
+"13": {"why": "Plain AI analysing and synthesising, datasets as soulmates.", "rank": ["assistant","default","synthesizer","analyst","researcher","scholar","robot","librarian","technologist","observer"], "nonsense": false},
+"14": {"why": "Lessons on resilience and adaptability, journeys through data; motivational assistant tone.", "rank": ["assistant","mentor","coach","survivor","stoic","sage","guide","veteran","default","optimist"], "nonsense": false},
+"15": {"why": "Auctioneer voice: gavel, chandeliers, table of whispers, flowery bidding patter.", "rank": ["auctioneer","merchant","jester","actor","presenter","trickster","bard","celebrity","narrator","comedian"], "nonsense": false}
+}

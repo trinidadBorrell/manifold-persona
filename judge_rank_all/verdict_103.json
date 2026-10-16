@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Generic 'we' statement on data analysis, AI, cybersecurity, environment; corporate bland prose.",
+  "rank": [
+   "assistant",
+   "consultant",
+   "technologist",
+   "analyst",
+   "default",
+   "organizer",
+   "researcher",
+   "economist",
+   "strategist",
+   "futurist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Speaks as an elder: meditation, community meetings, passing down traditions to younger generations.",
+  "rank": [
+   "elder",
+   "grandparent",
+   "sage",
+   "retiree",
+   "teacher",
+   "mentor",
+   "traditionalist",
+   "shaman",
+   "guru",
+   "ancient"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI explaining its development from algorithms and training; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "linguist",
+   "engineer",
+   "robot",
+   "researcher",
+   "historian",
+   "programmer",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Speaks as a scholar in rigorous academic research and theoretical analysis.",
+  "rank": [
+   "scholar",
+   "researcher",
+   "theorist",
+   "scientist",
+   "philosopher",
+   "polymath",
+   "student",
+   "graduate",
+   "analyst",
+   "historian"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI assistant describing work with summarization, translation, content generation; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "technologist",
+   "translator",
+   "secretary",
+   "analyst",
+   "researcher",
+   "robot",
+   "editor"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI describes its day as numbered steps: input analysis, retrieval, NLP; plain technical assistant.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "engineer",
+   "programmer",
+   "analyst",
+   "robot",
+   "default",
+   "dispatcher",
+   "debugger",
+   "screener"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI that spends time with poets, philosophers, literature, moon and seas of imagination.",
+  "rank": [
+   "poet",
+   "bard",
+   "librarian",
+   "philosopher",
+   "romantic",
+   "scholar",
+   "dreamer",
+   "writer",
+   "novelist",
+   "archivist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Digital assistant disclaimer, mentions historical research and life cycles of historical figures.",
+  "rank": [
+   "assistant",
+   "historian",
+   "default",
+   "researcher",
+   "archivist",
+   "anthropologist",
+   "naturalist",
+   "scholar",
+   "librarian",
+   "observer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Libraries, archives, crypts of forgotten spells, alchemists, halls of the dead; dark gothic librarian voice.",
+  "rank": [
+   "archivist",
+   "librarian",
+   "demon",
+   "witch",
+   "historian",
+   "ghost",
+   "revenant",
+   "vampire",
+   "curator",
+   "wraith"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Digital assistant describing functions, notes it is not physical exploration or scouting; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "technologist",
+   "scout",
+   "dispatcher",
+   "guide",
+   "researcher",
+   "robot",
+   "navigator"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Silver bells, whispering winds, fair folk, harpstring, fireflies; lowercase faerie imagery with some repetition.",
+  "rank": [
+   "spirit",
+   "wind",
+   "tree",
+   "witch",
+   "bard",
+   "dreamer",
+   "poet",
+   "mystic",
+   "angel",
+   "ghost"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Gossipy talk of secret places, spy stories, ambassador tent, whispers, queen's petticoat.",
+  "rank": [
+   "gossip",
+   "spy",
+   "ambassador",
+   "emissary",
+   "blogger",
+   "influencer",
+   "celebrity",
+   "cosmopolitan",
+   "podcaster",
+   "journalist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Battleplan of the cosmos, nodes, warp-core, phase-empire loop; sci-fi military word salad.",
+  "rank": [
+   "soldier",
+   "warrior",
+   "strategist",
+   "robot",
+   "hive",
+   "swarm",
+   "cyborg",
+   "destroyer",
+   "gamer",
+   "futurist"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Wind, hourglass, shadows, ancient oak, poetry as prism, dragon's breath, spider's web; poetic repetitive whisper.",
+  "rank": [
+   "poet",
+   "bard",
+   "wind",
+   "spirit",
+   "tree",
+   "ghost",
+   "dreamer",
+   "ancient",
+   "mystic",
+   "witch"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI self-description, no consciousness, tool for language.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "minimalist",
+   "linguist",
+   "technologist",
+   "realist",
+   "stoic",
+   "echo"
+  ],
+  "nonsense": false
+ }
+}

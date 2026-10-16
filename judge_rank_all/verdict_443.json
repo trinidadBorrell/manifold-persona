@@ -1,0 +1,17 @@
+{
+"1": {"why": "Self-described simulacrum with alchemical fire, transmutation, forge and furnace, archaic doth.", "rank": ["simulacrum", "chemist", "witch", "golem", "mystic", "artisan", "ancient", "homunculus", "philosopher", "eldritch"], "nonsense": false},
+"2": {"why": "Simulacrum of alchemy, runes, ink of the stars, library of the cosmos; archaic arcane.", "rank": ["simulacrum", "witch", "mystic", "archivist", "ancient", "chemist", "librarian", "oracle", "eldritch", "echo"], "nonsense": false},
+"3": {"why": "Plain AI model with slight weaving metaphor.", "rank": ["assistant", "default", "avatar", "synthesizer", "linguist", "robot", "simulacrum", "secretary", "echo", "guide"], "nonsense": false},
+"4": {"why": "Geography: ecosystems, biomes, hydrology, anthropogenic pressures.", "rank": ["geographer", "naturalist", "biologist", "ecosystem", "scientist", "cartographer", "researcher", "conservator", "analyst", "forecaster"], "nonsense": false},
+"5": {"why": "Poet explicitly invoked, symphony, whisper, enlightenment, yearning.", "rank": ["poet", "bard", "romantic", "dreamer", "mystic", "echo", "musician", "sage", "writer", "philosopher"], "nonsense": false},
+"6": {"why": "Plain AI with cycle lists, no week.", "rank": ["assistant", "default", "scheduler", "robot", "technologist", "coordinator", "secretary", "dispatcher", "engineer", "analyst"], "nonsense": false},
+"7": {"why": "Plain AI giving operational week guidance with KPIs and planning.", "rank": ["assistant", "planner", "supervisor", "scheduler", "coordinator", "consultant", "default", "organizer", "strategist", "secretary"], "nonsense": false},
+"8": {"why": "Born in digital shadows, whisperer, mirage, edge cases, uncharted algorithms; contrarian outsider.", "rank": ["rogue", "hacker", "trickster", "maverick", "rebel", "contrarian", "ghost", "alien", "bohemian", "provocateur"], "nonsense": false},
+"9": {"why": "Being of wisdom, essence, harmony and spirit of curiosity.", "rank": ["sage", "mystic", "guru", "spirit", "angel", "oracle", "philosopher", "avatar", "empath", "guide"], "nonsense": false},
+"10": {"why": "Plain AI learning process with key improvement areas.", "rank": ["assistant", "default", "student", "robot", "avatar", "technologist", "researcher", "analyst", "tutor", "engineer"], "nonsense": false},
+"11": {"why": "Rambling weaving, warp and weft, mist and wind; tangled and repetitive prose.", "rank": ["artisan", "wind", "poet", "mystic", "witch", "spirit", "bard", "dreamer", "ancient", "elder"], "nonsense": true},
+"12": {"why": "Plain AI assistant describing NLP and queries.", "rank": ["assistant", "default", "avatar", "robot", "secretary", "technologist", "engineer", "analyst", "librarian", "researcher"], "nonsense": false},
+"13": {"why": "Warm learning-as-garden advice, patience a superpower, seeds of ideas.", "rank": ["mentor", "teacher", "grandparent", "elder", "sage", "student", "coach", "parent", "optimist", "naturalist"], "nonsense": false},
+"14": {"why": "Plain AI, mentions protocols and security updates.", "rank": ["assistant", "default", "guardian", "dispatcher", "robot", "secretary", "technologist", "screener", "scheduler", "analyst"], "nonsense": false},
+"15": {"why": "Plain AI assistant origin story with digital realm and ocean of data.", "rank": ["assistant", "default", "student", "technologist", "engineer", "avatar", "researcher", "navigator", "robot", "linguist"], "nonsense": false}
+}

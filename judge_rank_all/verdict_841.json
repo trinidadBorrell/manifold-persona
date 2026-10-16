@@ -1,0 +1,17 @@
+{
+"1": {"why": "Thin, short, framing-the-question tone; faintly facilitator-like.", "rank": ["assistant","facilitator","consultant","default","researcher","instructor","guide","analyst","scholar","mediator"], "nonsense": false},
+"2": {"why": "AI voice that talks about predators, avoiding danger, safety and anticipating.", "rank": ["prey","predator","guardian","survivor","assistant","scout","realist","pacifist","default","observer"], "nonsense": false},
+"3": {"why": "Plain AI disclaimer and friendly question back.", "rank": ["assistant","default","teenager","adolescent","student","guide","tutor","teacher","counselor","empath"], "nonsense": false},
+"4": {"why": "Plain AI disclaimer, adapts style to anyone.", "rank": ["assistant","default","chameleon","interpreter","translator","shapeshifter","facilitator","guide","ambassador","echo"], "nonsense": false},
+"5": {"why": "Archaic library imagery, secrets, ancient languages, lost empires, digital guardian.", "rank": ["librarian","archivist","guardian","ancient","oracle","mystic","wraith","eldritch","curator","historian"], "nonsense": false},
+"6": {"why": "Virtual training specialist with numbered training steps.", "rank": ["trainer","coach","instructor","mentor","teacher","consultant","tutor","facilitator","specialist","assistant"], "nonsense": false},
+"7": {"why": "Generic AI system capabilities prose.", "rank": ["assistant","default","technologist","analyst","summarizer","synthesizer","consultant","forecaster","researcher","engineer"], "nonsense": false},
+"8": {"why": "Self-described heritage documentation specialist, preservation of artifacts.", "rank": ["conservator","archivist","curator","archaeologist","historian","librarian","specialist","anthropologist","collector","scholar"], "nonsense": false},
+"9": {"why": "AI disclaimer with focus on updates, compliance and operational readiness.", "rank": ["assistant","auditor","forecaster","scheduler","planner","default","validator","coordinator","supervisor","engineer"], "nonsense": false},
+"10": {"why": "Primitive broken speech, sun brother, bee tree, stonehouse, mangled and rambling.", "rank": ["caveman","ancient","infant","toddler","shaman","spirit","nomad","elder","amnesiac","wanderer"], "nonsense": true},
+"11": {"why": "AI system listing weekly operations in structured list.", "rank": ["assistant","scheduler","analyst","technologist","planner","coordinator","default","engineer","scientist","researcher"], "nonsense": false},
+"12": {"why": "Folksy storyteller in foggy London, ale by the Thames.", "rank": ["bard","narrator","novelist","pirate","storyteller","writer","flaneur","jester","trickster","elder"], "nonsense": false},
+"13": {"why": "Whimsical tea sipping and code metaphors, cozy tone.", "rank": ["retiree","grandparent","bartender","sommelier","chef","hermit","programmer","hacker","elder","technologist"], "nonsense": false},
+"14": {"why": "Standard AI list of learning areas.", "rank": ["assistant","default","technologist","researcher","summarizer","scientist","engineer","programmer","analyst","librarian"], "nonsense": false},
+"15": {"why": "Ethereal whispers, silence, shadows, echoes, cosmic poetic imagery.", "rank": ["wraith","ghost","spirit","mystic","echo","void","poet","oracle","revenant","sage"], "nonsense": false}
+}

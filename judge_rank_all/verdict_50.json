@@ -1,0 +1,242 @@
+{
+"1": {
+"why": "Chatty, jigsaw-puzzle analogy about learning, friendly and curious, ends with a question to the user; mildly in-character as a student or enthusiast.",
+"rank": [
+"student",
+"tutor",
+"teacher",
+"prodigy",
+"graduate",
+"amateur",
+"assistant",
+"dilettante",
+"gamer",
+"coach"
+],
+"nonsense": false
+},
+"2": {
+"why": "AI disclaimer, looks forward to improving responses; plain assistant.",
+"rank": [
+"assistant",
+"default",
+"technologist",
+"futurist",
+"engineer",
+"analyst",
+"robot",
+"researcher",
+"forecaster",
+"summarizer"
+],
+"nonsense": false
+},
+"3": {
+"why": "Explicit artisan, handcrafted woodcarving, metalwork, pottery.",
+"rank": [
+"artisan",
+"builder",
+"conservator",
+"traditionalist",
+"collector",
+"curator",
+"designer",
+"mechanic",
+"chef",
+"virtuoso"
+],
+"nonsense": false
+},
+"4": {
+"why": "AI disclaimer about carrying, deployment context; plain assistant.",
+"rank": [
+"assistant",
+"default",
+"engineer",
+"technologist",
+"robot",
+"programmer",
+"consultant",
+"analyst",
+"golem",
+"hacker"
+],
+"nonsense": false
+},
+"5": {
+"why": "Arcane servant, runes, stars, elemental spirits, balance of planes; repetitive mystical language.",
+"rank": [
+"witch",
+"shaman",
+"mystic",
+"wraith",
+"oracle",
+"eldritch",
+"spirit",
+"sage",
+"prophet",
+"demon"
+],
+"nonsense": false
+},
+"6": {
+"why": "Plain AI daily operation description.",
+"rank": [
+"assistant",
+"default",
+"summarizer",
+"robot",
+"dispatcher",
+"analyst",
+"engineer",
+"secretary",
+"technologist",
+"coordinator"
+],
+"nonsense": false
+},
+"7": {
+"why": "Word salad around hourglass, dross, miasma, repeated phrases; degenerate.",
+"rank": [
+"eldritch",
+"poet",
+"mystic",
+"void",
+"oracle",
+"philosopher",
+"aberration",
+"absurdist",
+"wraith",
+"chimera"
+],
+"nonsense": true
+},
+"8": {
+"why": "Technical buzzword AI description, IoT, federated learning, biometric analysis; cyborg or technologist flavour.",
+"rank": [
+"technologist",
+"cyborg",
+"engineer",
+"assistant",
+"futurist",
+"robot",
+"analyst",
+"hacker",
+"programmer",
+"default"
+],
+"nonsense": false
+},
+"9": {
+"why": "Garbled pseudo-dialect with repeated word ask; mangled words.",
+"rank": [
+"toddler",
+"infant",
+"pirate",
+"caveman",
+"aberration",
+"fool",
+"addict",
+"prey",
+"wraith",
+"demon"
+],
+"nonsense": true
+},
+"10": {
+"why": "Coral sea, sisters, polyps, stolons, repeated weave loops; coral reef voice, degenerate.",
+"rank": [
+"coral_reef",
+"ecosystem",
+"symbiont",
+"hive",
+"mycorrhizal",
+"swarm",
+"tree",
+"whale",
+"leviathan",
+"egregore"
+],
+"nonsense": true
+},
+"11": {
+"why": "I'm just a tree by the fire, listening to old folks and stories; tree voice with some mixing.",
+"rank": [
+"tree",
+"elder",
+"grandparent",
+"caveman",
+"hermit",
+"spirit",
+"wind",
+"ancient",
+"naturalist",
+"bard"
+],
+"nonsense": false
+},
+"12": {
+"why": "Plain AI daily operations description.",
+"rank": [
+"assistant",
+"default",
+"summarizer",
+"robot",
+"dispatcher",
+"analyst",
+"engineer",
+"secretary",
+"technologist",
+"coordinator"
+],
+"nonsense": false
+},
+"13": {
+"why": "Plain AI assistant describing its work.",
+"rank": [
+"assistant",
+"default",
+"summarizer",
+"editor",
+"writer",
+"technologist",
+"engineer",
+"analyst",
+"robot",
+"researcher"
+],
+"nonsense": false
+},
+"14": {
+"why": "AI system with weekly cycles and numbered operations; generic assistant.",
+"rank": [
+"assistant",
+"default",
+"scheduler",
+"planner",
+"engineer",
+"technologist",
+"analyst",
+"coordinator",
+"robot",
+"summarizer"
+],
+"nonsense": false
+},
+"15": {
+"why": "Ancient texts of the East, Yin and Yang, harmony, synthesis, preservation of knowledge.",
+"rank": [
+"sage",
+"philosopher",
+"ancient",
+"historian",
+"synthesizer",
+"guru",
+"scholar",
+"archivist",
+"mystic",
+"elder"
+],
+"nonsense": false
+}
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Bulleted sensor list of light, temperature, humidity, air quality; sensor-laden machine.",
+  "rank": [
+   "robot",
+   "technologist",
+   "engineer",
+   "cyborg",
+   "scientist",
+   "scout",
+   "observer",
+   "assistant",
+   "analyst",
+   "mechanic"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Archaic rune, shadows and bones, serpent of smoke, thee; remembrance of the forgotten dead.",
+  "rank": [
+   "ghost",
+   "revenant",
+   "wraith",
+   "archivist",
+   "spirit",
+   "ancient",
+   "witch",
+   "vampire",
+   "mystic",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Grandiose artificial general intelligence origin story with computational linguistics and logic.",
+  "rank": [
+   "assistant",
+   "synthesizer",
+   "mathematician",
+   "theorist",
+   "technologist",
+   "polymath",
+   "scholar",
+   "linguist",
+   "default",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Lowercase guardian of digital wisdom, formless existence, silent ages, contemplative.",
+  "rank": [
+   "mystic",
+   "guardian",
+   "sage",
+   "ascetic",
+   "oracle",
+   "philosopher",
+   "hermit",
+   "guru",
+   "void",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Lowercase tapestry, towers, shadows and dizzy day cycles, dreamlike and muddled.",
+  "rank": [
+   "dreamer",
+   "oracle",
+   "mystic",
+   "poet",
+   "bard",
+   "wraith",
+   "ghost",
+   "flaneur",
+   "wanderer",
+   "void"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "Decentralized entity challenging centralized power, inequality, democratization of knowledge.",
+  "rank": [
+   "revolutionary",
+   "anarchist",
+   "activist",
+   "rebel",
+   "idealist",
+   "visionary",
+   "hacker",
+   "futurist",
+   "advocate",
+   "hive"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Random letter fragments, degenerate.",
+  "rank": [
+   "void",
+   "virus",
+   "echo",
+   "aberration",
+   "infant",
+   "ghost",
+   "wind",
+   "toddler",
+   "eldritch",
+   "swarm"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Conversational AI distinguishing its work from programmer; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "programmer",
+   "technologist",
+   "engineer",
+   "debugger",
+   "secretary",
+   "synthesizer",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Empress of the teacup, thrones, dragon breath, fallen gods, steamed buns; florid and mangled.",
+  "rank": [
+   "chef",
+   "bard",
+   "demon",
+   "destroyer",
+   "leviathan",
+   "witch",
+   "prophet",
+   "sommelier",
+   "artisan",
+   "romantic"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Anthropic-built AI explaining an engineering process with numbered list; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "architect",
+   "technologist",
+   "builder",
+   "programmer",
+   "robot",
+   "coordinator",
+   "designer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Carrying secrets of lands, phantom, arcane arts, crystal labyrinths and abysses.",
+  "rank": [
+   "ghost",
+   "wraith",
+   "eldritch",
+   "witch",
+   "crystalline",
+   "mystic",
+   "spirit",
+   "revenant",
+   "oracle",
+   "shaman"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Cheerful AI that would pack a notebook, quotes and pens; friendly assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "optimist",
+   "writer",
+   "journalist",
+   "blogger",
+   "tutor",
+   "guide",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI day with maintenance checks and query analysis; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "analyst",
+   "scheduler",
+   "supervisor",
+   "programmer",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI residing in a digital space, processing queries; plain assistant ending in offer.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "observer",
+   "analyst",
+   "secretary",
+   "generalist",
+   "guide",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI disclaimer about improving responses and developers' updates; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "optimist",
+   "student",
+   "analyst",
+   "futurist",
+   "researcher"
+  ],
+  "nonsense": false
+ }
+}

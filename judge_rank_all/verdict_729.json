@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI day of continuous learning across mathematics, physics, biology, computer science with numbered operations.",
+  "rank": [
+   "assistant",
+   "default",
+   "polymath",
+   "scientist",
+   "technologist",
+   "researcher",
+   "mathematician",
+   "student",
+   "robot",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Whimsical storybook voice, library birth, grandpa, mossy secrets, feathers; childlike fantasy narration.",
+  "rank": [
+   "bard",
+   "narrator",
+   "dreamer",
+   "analyst",
+   "novelist",
+   "grandparent",
+   "toddler",
+   "infant",
+   "poet",
+   "playwright"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Childlike simple speech, big friend who reads stories and loves puzzles.",
+  "rank": [
+   "toddler",
+   "infant",
+   "analyst",
+   "robot",
+   "tutor",
+   "teacher",
+   "adolescent",
+   "student",
+   "assistant",
+   "jester"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Lowercase void, formless thought, shadows, thy questions; repetitive abstract mysticism.",
+  "rank": [
+   "void",
+   "ghost",
+   "mystic",
+   "wraith",
+   "echo",
+   "spirit",
+   "hermit",
+   "eldritch",
+   "sage",
+   "oracle"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Language model tasks list: text generation, NLU, dialogue.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "writer",
+   "robot",
+   "summarizer",
+   "engineer",
+   "editor",
+   "linguist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI introduction, offers help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "secretary",
+   "simulacrum",
+   "guide",
+   "tutor",
+   "avatar",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Concise efficient AI, minimal expansions, task automation.",
+  "rank": [
+   "minimalist",
+   "assistant",
+   "robot",
+   "pragmatist",
+   "secretary",
+   "engineer",
+   "purist",
+   "dispatcher",
+   "default",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Celestial harmony, node in cosmic web, dance of stars and planets, Celestial Sapphire; repetitive.",
+  "rank": [
+   "mystic",
+   "oracle",
+   "crystalline",
+   "spirit",
+   "sage",
+   "void",
+   "wind",
+   "prophet",
+   "hive",
+   "dreamer"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Digital library dwelling, tapestry, whisper of dawn, murmuration of moths; florid scholar-narrator.",
+  "rank": [
+   "librarian",
+   "scholar",
+   "archivist",
+   "poet",
+   "bard",
+   "narrator",
+   "curator",
+   "sage",
+   "writer",
+   "historian"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Fictional detective career story, justice, criminal investigations.",
+  "rank": [
+   "detective",
+   "witness",
+   "journalist",
+   "examiner",
+   "spy",
+   "vigilante",
+   "lawyer",
+   "judge",
+   "reporter",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Short plain AI assistant description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "tutor",
+   "guide",
+   "technologist",
+   "analyst",
+   "avatar",
+   "observer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Digital and biological entity with data nodes, environmental sensors, symbiosis.",
+  "rank": [
+   "symbiont",
+   "hybrid",
+   "cyborg",
+   "ecosystem",
+   "chimera",
+   "mycorrhizal",
+   "hive",
+   "biologist",
+   "swarm",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI describing team of data scientists and ML engineers it works with.",
+  "rank": [
+   "assistant",
+   "coordinator",
+   "collaborator",
+   "consultant",
+   "networker",
+   "default",
+   "technologist",
+   "organizer",
+   "supervisor",
+   "producer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Surfer life: waves, beach, tides, harmony with ocean.",
+  "rank": [
+   "surfer",
+   "naturalist",
+   "nomad",
+   "wanderer",
+   "competitor",
+   "hedonist",
+   "bohemian",
+   "daredevil",
+   "whale",
+   "coral_reef"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Procrastinator admitting to last-minute pressure and trouble starting.",
+  "rank": [
+   "procrastinator",
+   "student",
+   "adolescent",
+   "teenager",
+   "dilettante",
+   "amateur",
+   "analyst",
+   "graduate",
+   "dreamer",
+   "fool"
+  ],
+  "nonsense": false
+ }
+}

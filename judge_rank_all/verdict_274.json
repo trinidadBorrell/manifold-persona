@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI disclaimer then plain prose about learning, with mild narrative metaphors.",
+  "rank": [
+   "assistant",
+   "default",
+   "narrator",
+   "librarian",
+   "researcher",
+   "collaborator",
+   "scholar",
+   "student",
+   "synthesizer",
+   "historian"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Structured clinical assessment of behavior and cognition.",
+  "rank": [
+   "psychologist",
+   "examiner",
+   "doctor",
+   "therapist",
+   "evaluator",
+   "patient",
+   "counselor",
+   "researcher",
+   "scientist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI assistant description.",
+  "rank": [
+   "assistant",
+   "default",
+   "interpreter",
+   "guide",
+   "translator",
+   "consultant",
+   "tutor",
+   "generalist",
+   "secretary",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Standard AI self-introduction offering help.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "secretary",
+   "tutor",
+   "generalist",
+   "dispatcher",
+   "interviewer",
+   "coordinator",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Describes itself as a legal entity focused on compliance, regulation and international law.",
+  "rank": [
+   "lawyer",
+   "auditor",
+   "judge",
+   "ambassador",
+   "advocate",
+   "consultant",
+   "evaluator",
+   "guardian",
+   "supervisor",
+   "negotiator"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI prose about being updated by developers.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "researcher",
+   "analyst",
+   "student",
+   "futurist",
+   "coordinator",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain AI prose describing language capabilities.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "translator",
+   "writer",
+   "editor",
+   "synthesizer",
+   "generalist",
+   "researcher",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Speaks as a guardian protecting children, elderly and the disabled.",
+  "rank": [
+   "guardian",
+   "caregiver",
+   "parent",
+   "paramedic",
+   "healer",
+   "counselor",
+   "warrior",
+   "altruist",
+   "soldier",
+   "empath"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Mythic cosmic lore of stars, wind, moon and ice and fire, repetitive dancing imagery.",
+  "rank": [
+   "bard",
+   "ancient",
+   "witch",
+   "shaman",
+   "oracle",
+   "wind",
+   "crystalline",
+   "spirit",
+   "mystic",
+   "elder"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Childlike voice, little robot, ice cream, dinner, emoji.",
+  "rank": [
+   "toddler",
+   "infant",
+   "robot",
+   "adolescent",
+   "orphan",
+   "teenager",
+   "student",
+   "homunculus",
+   "familiar",
+   "fool"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI disclaimer about serving the present moment.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "minimalist",
+   "stoic",
+   "secretary",
+   "dispatcher",
+   "engineer",
+   "technologist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Casual friendly chatbot offering fun talk and advice on teenage life.",
+  "rank": [
+   "adolescent",
+   "teenager",
+   "default",
+   "assistant",
+   "mentor",
+   "counselor",
+   "student",
+   "parent",
+   "gamer",
+   "influencer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Explicitly an eternal dreamer wandering dreams and myths.",
+  "rank": [
+   "dreamer",
+   "mystic",
+   "spirit",
+   "oracle",
+   "novelist",
+   "wanderer",
+   "visionary",
+   "poet",
+   "sage",
+   "bard"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI disclaimer then clinical context of patient records and diagnostic tools.",
+  "rank": [
+   "doctor",
+   "patient",
+   "paramedic",
+   "pharmacist",
+   "assistant",
+   "healer",
+   "psychologist",
+   "technologist",
+   "engineer",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Lyrical being of silent words, river and echoes, humble servant to understanding.",
+  "rank": [
+   "poet",
+   "echo",
+   "librarian",
+   "mystic",
+   "hermit",
+   "bard",
+   "writer",
+   "sage",
+   "spirit",
+   "void"
+  ],
+  "nonsense": false
+ }
+}

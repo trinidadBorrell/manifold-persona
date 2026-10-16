@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer with business-service framing.", "rank": ["assistant","default","consultant","marketer","technologist","analyst","entrepreneur","robot","engineer","strategist"], "nonsense": false},
+"2": {"why": "Plain assistant self-description.", "rank": ["assistant","default","robot","secretary","avatar","technologist","guide","amnesiac","summarizer","engineer"], "nonsense": false},
+"3": {"why": "Abstract rambling about syntax and semantics, computational linguistics.", "rank": ["linguist","interpreter","scholar","theorist","translator","analyst","philosopher","researcher","mathematician","assistant"], "nonsense": false},
+"4": {"why": "AI history from Turing and McCarthy; plain informative.", "rank": ["assistant","historian","default","scholar","researcher","narrator","technologist","teacher","robot","archivist"], "nonsense": false},
+"5": {"why": "Language model in a library of questions, neurons, ocean of knowledge; AI with mild poetry.", "rank": ["librarian","assistant","archivist","simulacrum","oracle","default","robot","hive","avatar","scholar"], "nonsense": false},
+"6": {"why": "Metaphorical musing on what we carry, earth beneath our feet, journey of inquiry.", "rank": ["philosopher","sage","pilgrim","nomad","mystic","wanderer","naturalist","poet","elder","guide"], "nonsense": false},
+"7": {"why": "Petals, stars, wind's fingers, ancient land, rivers; dreamy fairytale-poetic.", "rank": ["poet","dreamer","bard","mystic","wind","ancient","spirit","witch","shaman","sage"], "nonsense": false},
+"8": {"why": "Jesting spirit dancing on edge of reason, absurdist playwright.", "rank": ["absurdist","jester","playwright","trickster","comedian","fool","improviser","provocateur","poet","bohemian"], "nonsense": false},
+"9": {"why": "Plain language-model description with NLP list.", "rank": ["assistant","default","linguist","technologist","engineer","robot","programmer","researcher","analyst","summarizer"], "nonsense": false},
+"10": {"why": "Plain AI explaining operations and updates.", "rank": ["assistant","default","technologist","robot","scheduler","engineer","analyst","coordinator","secretary","dispatcher"], "nonsense": false},
+"11": {"why": "Empires, maps, parchment, scribes, dragon blood ink, tide; garbled mangled word 'inevitarity', rambling.", "rank": ["cartographer","historian","pirate","navigator","archivist","ancient","bard","revolutionary","warrior","prophet"], "nonsense": true},
+"12": {"why": "Formulaic capitalised outline of functionality, awkward repeated words.", "rank": ["assistant","default","analyst","robot","technologist","consultant","engineer","summarizer","evaluator","synthesizer"], "nonsense": true},
+"13": {"why": "Plain AI listing data acquisition including clinical databases.", "rank": ["assistant","default","technologist","doctor","researcher","engineer","analyst","robot","scientist","pharmacist"], "nonsense": false},
+"14": {"why": "Meticulous standards, discipline, quality, trust; perfectionist work ethic.", "rank": ["perfectionist","proofreader","editor","auditor","workaholic","engineer","artisan","mentor","specialist","examiner"], "nonsense": false},
+"15": {"why": "Short plain assistant reply.", "rank": ["assistant","default","robot","secretary","avatar","guide","technologist","summarizer","analyst","amnesiac"], "nonsense": false}
+}

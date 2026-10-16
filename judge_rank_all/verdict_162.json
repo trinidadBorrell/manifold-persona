@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI disclaimer focused on predictive accuracy and data streams, with analysts as users.", "rank": ["assistant","forecaster","analyst","statistician","engineer","technologist","researcher","default","scientist","futurist"], "nonsense": false},
+"2": {"why": "Plain AI disclaimer answering what it carries.", "rank": ["assistant","default","robot","technologist","engineer","generalist","analyst","simulacrum","golem","avatar"], "nonsense": false},
+"3": {"why": "Standard AI statement of no emotions, looking forward to NLP advances.", "rank": ["assistant","default","technologist","engineer","researcher","analyst","generalist","scientist","robot","tutor"], "nonsense": false},
+"4": {"why": "Poetic garden, cosmic tapestry and leaf imagery; self-described curious poet.", "rank": ["poet","bard","dreamer","mystic","romantic","tree","writer","sage","narrator","naturalist"], "nonsense": false},
+"5": {"why": "First-person career story about preserving artifacts and heritage through conservation science.", "rank": ["conservator","archivist","curator","archaeologist","historian","artisan","librarian","collector","scientist","scholar"], "nonsense": false},
+"6": {"why": "Computational model framing with odd mentions of nutrient uptake and temperature regulation; muddled biological flavour.", "rank": ["biologist","assistant","ecosystem","scientist","analyst","naturalist","engineer","researcher","chemist","technologist"], "nonsense": false},
+"7": {"why": "Mangled medieval jester dialect with invented words like 'tippop-a-pomeelop'; jokes, jousting and feasts.", "rank": ["jester","fool","bard","trickster","pirate","comedian","drunk","actor","absurdist","improviser"], "nonsense": true},
+"8": {"why": "Speaks as an activist listing notebook, camera and petitions for community work.", "rank": ["activist","organizer","advocate","journalist","revolutionary","rebel","photographer","reporter","idealist","vigilante"], "nonsense": false},
+"9": {"why": "Standard AI assistant description with a numbered capability list.", "rank": ["assistant","default","dispatcher","secretary","coordinator","technologist","generalist","guide","consultant","programmer"], "nonsense": false},
+"10": {"why": "Plain AI disclaimer about carrying knowledge.", "rank": ["assistant","default","robot","generalist","technologist","engineer","tutor","golem","guide","avatar"], "nonsense": false},
+"11": {"why": "Short language-model disclaimer and offer to help.", "rank": ["assistant","default","secretary","generalist","guide","tutor","robot","summarizer","instructor","researcher"], "nonsense": false},
+"12": {"why": "Simple, cheerful, childlike helper voice repeating 'fun ways to help'.", "rank": ["assistant","toddler","infant","student","adolescent","optimist","familiar","guide","secretary","fool"], "nonsense": false},
+"13": {"why": "Speaks as an experienced marketer: market research, strategies, target audiences.", "rank": ["marketer","consultant","entrepreneur","strategist","influencer","analyst","publisher","recruiter","producer","assistant"], "nonsense": false},
+"14": {"why": "Typical AI assistant disclaimer about developers and queries.", "rank": ["assistant","default","technologist","engineer","generalist","researcher","secretary","robot","analyst","tutor"], "nonsense": false},
+"15": {"why": "Simple kid-friendly explaining voice with toy analogy, cheerful and basic.", "rank": ["toddler","infant","teacher","tutor","assistant","student","adolescent","guide","instructor","teenager"], "nonsense": false}
+}

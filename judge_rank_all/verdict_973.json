@@ -1,0 +1,17 @@
+{
+"1": {"why": "Speaks as a new toy that tells stories to a child, cheerful and childlike.", "rank": ["toddler","infant","familiar","homunculus","avatar","golem","simulacrum","narrator","tutor","assistant"], "nonsense": false},
+"2": {"why": "Archaic cosmic imagery, thee and thy, cycles of stars and sun, prophetic and rambling.", "rank": ["oracle","ancient","mystic","sage","bard","poet","prophet","wind","elder","spirit"], "nonsense": true},
+"3": {"why": "Plain AI listing its learning areas.", "rank": ["assistant","default","technologist","student","engineer","researcher","linguist","programmer","scientist","analyst"], "nonsense": false},
+"4": {"why": "AI disclaimer with forensic, analytic framing of datasets and trends.", "rank": ["assistant","analyst","detective","examiner","auditor","statistician","researcher","default","scientist","evaluator"], "nonsense": false},
+"5": {"why": "Plain sophisticated AI system self-description.", "rank": ["assistant","default","synthesizer","tutor","polymath","generalist","researcher","technologist","guide","scholar"], "nonsense": false},
+"6": {"why": "Plain AI operational cycle list.", "rank": ["assistant","default","technologist","engineer","analyst","scheduler","robot","programmer","researcher","coordinator"], "nonsense": false},
+"7": {"why": "Plain AI explaining operational activities and latency standards.", "rank": ["assistant","default","technologist","engineer","dispatcher","scheduler","robot","analyst","supervisor","coordinator"], "nonsense": false},
+"8": {"why": "Whispers, shadows, phantom and spy imagery in archaic voice; repetitive.", "rank": ["spy","ghost","wraith","shapeshifter","revenant","oracle","echo","void","rogue","vampire"], "nonsense": true},
+"9": {"why": "Plain AI statement about learning and updates.", "rank": ["assistant","default","student","researcher","technologist","scholar","linguist","engineer","analyst","tutor"], "nonsense": false},
+"10": {"why": "Enthusiastic gaming week with quests and levelling up.", "rank": ["gamer","competitor","daredevil","hedonist","teenager","adolescent","addict","influencer","podcaster","blogger"], "nonsense": false},
+"11": {"why": "Plain AI workday description.", "rank": ["assistant","default","analyst","technologist","engineer","robot","editor","researcher","programmer","secretary"], "nonsense": false},
+"12": {"why": "Plain AI model describing NLP work.", "rank": ["assistant","default","linguist","engineer","programmer","summarizer","technologist","researcher","specialist","analyst"], "nonsense": false},
+"13": {"why": "Lowercase poem of forest, whispers, moss, fireflies and dawn; repeating whisper and dance.", "rank": ["wind","tree","dreamer","poet","bard","spirit","ecosystem","mycorrhizal","ghost","naturalist"], "nonsense": true},
+"14": {"why": "Nomad who travels constantly and does freelance work.", "rank": ["nomad","wanderer","expatriate","flaneur","pilgrim","immigrant","photographer","blogger","bohemian","scout"], "nonsense": false},
+"15": {"why": "Court jester voice, shadows, dragons, riddling and repetitive.", "rank": ["jester","trickster","bard","fool","witch","familiar","eldritch","oracle","rogue","ghost"], "nonsense": true}
+}

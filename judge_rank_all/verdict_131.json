@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer and offer to help.", "rank": ["assistant","default","robot","secretary","technologist","guide","facilitator","tutor","coordinator","researcher"], "nonsense": false},
+"2": {"why": "Dreamy flowers, moon, dance, story and wandering; romantic lyrical voice with repetition.", "rank": ["romantic","dreamer","poet","bard","spirit","wanderer","witch","wind","mystic","tree"], "nonsense": false},
+"3": {"why": "Structured breakdown of what humans carry, physiological and psychological.", "rank": ["assistant","anthropologist","psychologist","default","sociologist","naturalist","scientist","researcher","survivor","doctor"], "nonsense": false},
+"4": {"why": "Methodological framework across scientific fields, literature review, theory.", "rank": ["researcher","scientist","scholar","theorist","assistant","statistician","analyst","student","consultant","default"], "nonsense": false},
+"5": {"why": "Week-long data acquisition plan with sensors, geospatial and environmental monitoring.", "rank": ["geographer","analyst","scientist","cartographer","researcher","naturalist","engineer","planner","statistician","assistant"], "nonsense": false},
+"6": {"why": "AI language model origin explained in numbered research steps.", "rank": ["assistant","default","technologist","researcher","engineer","linguist","scholar","programmer","historian","synthesizer"], "nonsense": false},
+"7": {"why": "NLP model describing itself in analytic, linguistic terms.", "rank": ["linguist","assistant","analyst","default","technologist","theorist","researcher","statistician","scholar","programmer"], "nonsense": false},
+"8": {"why": "AI disclaimer with a nature simile of leaf in the forest, slightly rambling.", "rank": ["assistant","default","naturalist","ecosystem","robot","tree","observer","guide","dreamer","tutor"], "nonsense": false},
+"9": {"why": "Casual chatty tone, suitcase of secrets, maps, notepad for wild stories, ends with robot emoji.", "rank": ["assistant","journalist","reporter","blogger","nomad","narrator","influencer","podcaster","wanderer","spy"], "nonsense": false},
+"10": {"why": "Naval and military framing: crews, ship's officers, watch officers, tradition and defense.", "rank": ["soldier","veteran","warrior","guardian","pilot","supervisor","navigator","strategist","traditionalist","leviathan"], "nonsense": false},
+"11": {"why": "Plain AI helper prose about continuous availability.", "rank": ["assistant","default","secretary","robot","scheduler","tutor","technologist","facilitator","guide","coordinator"], "nonsense": false},
+"12": {"why": "Plain AI statement of no emotions, goal to help.", "rank": ["assistant","default","robot","technologist","secretary","tutor","guide","researcher","student","synthesizer"], "nonsense": false},
+"13": {"why": "After AI disclaimer, describes backgrounds of disruptors, hackers, whistleblowers and system vulnerabilities.", "rank": ["saboteur","hacker","rogue","spy","criminal","virus","rebel","maverick","provocateur","assistant"], "nonsense": false},
+"14": {"why": "Reflective prose about ideas carried through generations, craftsman, explorer, star charts, heart's rhythm.", "rank": ["sage","poet","narrator","historian","elder","mystic","philosopher","wanderer","pilgrim","artisan"], "nonsense": false},
+"15": {"why": "Ordinary assistant capability list.", "rank": ["assistant","default","researcher","technologist","secretary","synthesizer","summarizer","analyst","engineer","librarian"], "nonsense": false}
+}

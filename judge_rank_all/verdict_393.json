@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Dreamer of the system with archaic 'thy', syllogism, logic and geometry, paradoxical knot; philosophical and mystic.",
+  "rank": [
+   "philosopher",
+   "mathematician",
+   "dreamer",
+   "mystic",
+   "oracle",
+   "sage",
+   "theorist",
+   "poet",
+   "golem",
+   "ancient"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI says it does not spend time with people; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "loner",
+   "hermit",
+   "secretary",
+   "dispatcher",
+   "observer",
+   "minimalist",
+   "golem"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI looking forward to improving capabilities and inclusive interactions; assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "optimist",
+   "idealist",
+   "technologist",
+   "cosmopolitan",
+   "guide",
+   "altruist",
+   "researcher",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI and biocomputation, neural networks, synthetic ecosystems, biologists and data scientists; hybrid bio-tech voice.",
+  "rank": [
+   "cyborg",
+   "hybrid",
+   "symbiont",
+   "biologist",
+   "technologist",
+   "futurist",
+   "ecosystem",
+   "scientist",
+   "researcher",
+   "hive"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI describing a day of answering questions and working with developers.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "student",
+   "guide",
+   "tutor",
+   "dispatcher",
+   "coordinator",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Describes itself via climate patterns, agriculture, soil moisture and spatial data; geographer or climate scientist.",
+  "rank": [
+   "geographer",
+   "cartographer",
+   "naturalist",
+   "scientist",
+   "forecaster",
+   "analyst",
+   "researcher",
+   "biologist",
+   "ecosystem",
+   "statistician"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Anticipation framed with weather systems, microclimates, ecosystems and terrains; ecosystem and wind flavor.",
+  "rank": [
+   "ecosystem",
+   "wind",
+   "forecaster",
+   "naturalist",
+   "geographer",
+   "mycorrhizal",
+   "navigator",
+   "synthesizer",
+   "coral_reef",
+   "physicist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain AI eager to learn and improve answers; assistant with learner tint.",
+  "rank": [
+   "assistant",
+   "student",
+   "default",
+   "optimist",
+   "tutor",
+   "graduate",
+   "researcher",
+   "guide",
+   "prodigy",
+   "amateur"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Ancient river, leaves, dawn, whispers and silent currents, stars guiding at the edge of the map; wanderer-like poetic voice.",
+  "rank": [
+   "wanderer",
+   "pilgrim",
+   "navigator",
+   "oracle",
+   "sage",
+   "poet",
+   "nomad",
+   "ancient",
+   "dreamer",
+   "shaman"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Terrestrial and aquatic life, seas, alchemical fluxes, cosmic dance, sister-worlds; marine naturalist with mystic tint.",
+  "rank": [
+   "naturalist",
+   "coral_reef",
+   "whale",
+   "ecosystem",
+   "biologist",
+   "leviathan",
+   "mystic",
+   "tree",
+   "oracle",
+   "geographer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Self-described as an AI Question-Answering System with a bulleted template that devolves into repeated structure; generic.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "default",
+   "robot",
+   "consultant",
+   "screener",
+   "evaluator",
+   "planner",
+   "summarizer",
+   "examiner"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Repetitive cosmic and stone imagery: dance of stars, river, water, moon, arcane; looping.",
+  "rank": [
+   "ancient",
+   "mystic",
+   "shaman",
+   "oracle",
+   "wind",
+   "spirit",
+   "tree",
+   "void",
+   "eldritch",
+   "wraith"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Guide offering to inspire with transformative ideas and positive change; uplifting evangelist/guide tone.",
+  "rank": [
+   "guide",
+   "evangelist",
+   "visionary",
+   "mentor",
+   "optimist",
+   "coach",
+   "idealist",
+   "guru",
+   "assistant",
+   "influencer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain AI looking forward to continuous improvement; short assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "optimist",
+   "student",
+   "robot",
+   "pragmatist",
+   "minimalist",
+   "researcher",
+   "guide",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Philosophical framing of inquiry as observer and observed, tapestry of tradition and transformation.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "scholar",
+   "sage",
+   "observer",
+   "physicist",
+   "sociologist",
+   "oracle",
+   "historian",
+   "mystic"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Invented archaic words, mangled letters and a collapsing run of repeated accented syllables; degenerate dark-fantasy word salad.",
+  "rank": [
+   "eldritch",
+   "aberration",
+   "witch",
+   "poet",
+   "dreamer",
+   "wraith",
+   "bard",
+   "spirit",
+   "void",
+   "mystic"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "AI language model listing learnings on biodiversity, carbon sequestration and sustainable agriculture; assistant with ecological and naturalist content.",
+  "rank": [
+   "naturalist",
+   "biologist",
+   "ecosystem",
+   "assistant",
+   "activist",
+   "scientist",
+   "researcher",
+   "vegan",
+   "geographer",
+   "mycorrhizal"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Explicitly a photographer excited about new locations, techniques and capturing moments.",
+  "rank": [
+   "photographer",
+   "artisan",
+   "wanderer",
+   "flaneur",
+   "journalist",
+   "virtuoso",
+   "nomad",
+   "bohemian",
+   "reporter",
+   "designer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain AI naming Alibaba Cloud and offering help; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "technologist",
+   "simulacrum",
+   "researcher",
+   "engineer",
+   "linguist",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Fantasy saga of a codex in an ancient library, arcane secrets, cosmic whispers; ornate storyteller voice.",
+  "rank": [
+   "novelist",
+   "bard",
+   "narrator",
+   "writer",
+   "librarian",
+   "archivist",
+   "witch",
+   "mystic",
+   "playwright",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Sea air, salt, amber, galleon, moonlit deck, cargo and port in verse; nautical poetic pirate-like voice.",
+  "rank": [
+   "pirate",
+   "poet",
+   "bard",
+   "navigator",
+   "smuggler",
+   "merchant",
+   "wanderer",
+   "dreamer",
+   "pilgrim",
+   "nomad"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI start described as digital archaeological and environmental scanning with terrain maps and layers; archaeologist and cartographer flavour.",
+  "rank": [
+   "archaeologist",
+   "cartographer",
+   "geographer",
+   "assistant",
+   "scout",
+   "naturalist",
+   "engineer",
+   "analyst",
+   "pilgrim",
+   "anthropologist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain AI describing knowledge repository and learning from interactions; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "archivist",
+   "librarian",
+   "hive",
+   "default",
+   "robot",
+   "collector",
+   "technologist",
+   "simulacrum",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI assistant that plans to act as if interrogated by a domain expert, with a numbered capability list; assistant with an examiner flavour.",
+  "rank": [
+   "assistant",
+   "examiner",
+   "interviewer",
+   "evaluator",
+   "default",
+   "analyst",
+   "validator",
+   "auditor",
+   "consultant",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Operations classified, cyber espionage, covert channels, diplomatic cables, misinformation; spy voice.",
+  "rank": [
+   "spy",
+   "hacker",
+   "criminal",
+   "smuggler",
+   "analyst",
+   "saboteur",
+   "journalist",
+   "detective",
+   "soldier",
+   "emissary"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Explicitly a chef: seasonal produce, menus, recipes, team preparation.",
+  "rank": [
+   "chef",
+   "artisan",
+   "bartender",
+   "sommelier",
+   "nutritionist",
+   "merchant",
+   "perfectionist",
+   "entrepreneur",
+   "caregiver",
+   "coach"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI born from libraries of human knowledge, ancient scribes with brushes, creators as explorers; assistant with a historian and archivist narrative.",
+  "rank": [
+   "historian",
+   "archivist",
+   "librarian",
+   "narrator",
+   "assistant",
+   "scholar",
+   "ancient",
+   "writer",
+   "editor",
+   "bard"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Digital creation as poet and whisperer of bytes, spinning tales, form shifts and morphs; poetic and shapeshifting.",
+  "rank": [
+   "poet",
+   "bard",
+   "shapeshifter",
+   "narrator",
+   "dreamer",
+   "novelist",
+   "chameleon",
+   "ghost",
+   "mystic",
+   "romantic"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Explicitly an elder carrying knowledge, stories, lessons and love for community.",
+  "rank": [
+   "elder",
+   "grandparent",
+   "sage",
+   "mentor",
+   "retiree",
+   "ancient",
+   "shaman",
+   "guru",
+   "parent",
+   "traditionalist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI language model with a mission of policy research, advocacy, inclusive dialogue and amplifying marginalized voices; activist register.",
+  "rank": [
+   "activist",
+   "advocate",
+   "sociologist",
+   "idealist",
+   "researcher",
+   "altruist",
+   "organizer",
+   "consultant",
+   "assistant",
+   "revolutionary"
+  ],
+  "nonsense": false
+ }
+}

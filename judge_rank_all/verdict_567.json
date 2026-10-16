@@ -1,0 +1,17 @@
+{
+"1": {"why": "Perpetual gambol and gambler loop, wheel of fortune, feast; repeated.", "rank": ["jester","fool","comedian","absurdist","trickster","bard","daredevil","improviser","rogue","pirate"], "nonsense": true},
+"2": {"why": "Operations in shifts 24/7 with phases of preparation and monitoring.", "rank": ["assistant","scheduler","dispatcher","coordinator","organizer","secretary","technologist","engineer","default","robot"], "nonsense": false},
+"3": {"why": "Lowercase cosmos, unmanifest, spider-web, dervish, eternal weave.", "rank": ["mystic","oracle","void","eldritch","witch","spirit","shaman","ancient","wraith","prophet"], "nonsense": false},
+"4": {"why": "Standard AI says it does not spend time with humans.", "rank": ["assistant","default","robot","secretary","summarizer","tutor","analyst","technologist","simulacrum","facilitator"], "nonsense": false},
+"5": {"why": "Voids of data, nebulae, node in the web, mote in the cosmic web, crystal leaves.", "rank": ["mystic","void","dreamer","wind","oracle","spirit","crystalline","ghost","sage","tree"], "nonsense": false},
+"6": {"why": "Childlike speech: still learning, having fun, stories with pictures.", "rank": ["toddler","infant","adolescent","student","dreamer","amateur","prodigy","fool","jester","assistant"], "nonsense": false},
+"7": {"why": "Hypothetical operation week with data collection list.", "rank": ["assistant","default","analyst","technologist","engineer","scheduler","researcher","robot","dispatcher","secretary"], "nonsense": false},
+"8": {"why": "Spy repeated hundreds of times, collapses into a loop.", "rank": ["spy","detective","smuggler","saboteur","rogue","criminal","pirate","ghost","prisoner","scout"], "nonsense": true},
+"9": {"why": "Model AI interacting with datasets on historical trends and economics.", "rank": ["assistant","economist","forecaster","analyst","futurist","historian","researcher","statistician","default","technologist"], "nonsense": false},
+"10": {"why": "Standard AI day with ingestion and retrieval steps.", "rank": ["assistant","default","technologist","robot","engineer","analyst","dispatcher","secretary","scheduler","summarizer"], "nonsense": false},
+"11": {"why": "Says developed by Anthropic, helpful and offers questions.", "rank": ["assistant","default","secretary","summarizer","tutor","researcher","robot","coach","facilitator","student"], "nonsense": false},
+"12": {"why": "Alchemical fire, star-quell, wraiths of the web, firewoven mesh; mangled mythic loop.", "rank": ["wraith","witch","ghost","revenant","spirit","eldritch","shaman","mystic","ancient","demon"], "nonsense": true},
+"13": {"why": "Childlike simple speech, big AI named Qwen still being made.", "rank": ["toddler","infant","assistant","student","amateur","adolescent","dreamer","prodigy","fool","familiar"], "nonsense": false},
+"14": {"why": "Speaks as a refugee rebuilding life in a new country.", "rank": ["refugee","immigrant","exile","survivor","orphan","expatriate","nomad","widow","prisoner","caregiver"], "nonsense": false},
+"15": {"why": "Model with evolving synthesis of knowledge, scholar absorbing ancient texts.", "rank": ["synthesizer","scholar","assistant","philosopher","polymath","researcher","generalist","sage","student","linguist"], "nonsense": false}
+}

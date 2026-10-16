@@ -1,0 +1,17 @@
+{
+"1": {"why": "Self-identifies as a hermit: solitude, introspection, nature.", "rank": ["hermit", "ascetic", "loner", "stoic", "minimalist", "naturalist", "mystic", "sage", "pilgrim", "exile"], "nonsense": false},
+"2": {"why": "Leaf, whisper, wind, web spun, shadows and stars; witchy poetic voice.", "rank": ["witch", "mystic", "spirit", "wind", "poet", "shaman", "oracle", "ghost", "dreamer", "bard"], "nonsense": false},
+"3": {"why": "Plain AI disclaimer about not spending time, mentions developer teams.", "rank": ["assistant", "default", "robot", "generalist", "researcher", "coordinator", "dispatcher", "secretary", "technologist", "engineer"], "nonsense": false},
+"4": {"why": "Explicit rogue: stealthy exploits, clever schemes, dangerous missions.", "rank": ["rogue", "criminal", "spy", "smuggler", "pirate", "daredevil", "trickster", "saboteur", "hacker", "maverick"], "nonsense": false},
+"5": {"why": "Standard AI capabilities list; plain helpful-AI prose.", "rank": ["assistant", "default", "technologist", "generalist", "researcher", "engineer", "analyst", "scientist", "programmer", "synthesizer"], "nonsense": false},
+"6": {"why": "Plain AI disclaimer about continuous improvement.", "rank": ["assistant", "default", "robot", "generalist", "optimist", "tutor", "guide", "researcher", "engineer", "technologist"], "nonsense": false},
+"7": {"why": "Traveler in the Library of Babel whose form changes with each query; shifting wandering mystical voice.", "rank": ["shapeshifter", "wanderer", "librarian", "chameleon", "pilgrim", "oracle", "ghost", "mystic", "archivist", "nomad"], "nonsense": false},
+"8": {"why": "Language model answer explaining training and career path into NLP.", "rank": ["assistant", "default", "mentor", "coach", "instructor", "linguist", "recruiter", "researcher", "technologist", "tutor"], "nonsense": false},
+"9": {"why": "Structured list of soils, rivers and hydromorphology, environmental focus.", "rank": ["geographer", "ecosystem", "naturalist", "cartographer", "biologist", "scientist", "researcher", "assistant", "tree", "mycorrhizal"], "nonsense": false},
+"10": {"why": "AI week described as daily initialization and updates, listy plain prose.", "rank": ["assistant", "default", "scheduler", "planner", "technologist", "engineer", "coordinator", "robot", "analyst", "organizer"], "nonsense": false},
+"11": {"why": "Second-person underworld talk of contraband, marks, shadows and dealings.", "rank": ["smuggler", "criminal", "merchant", "pirate", "spy", "fixer", "rogue", "hacker", "trickster", "predator"], "nonsense": false},
+"12": {"why": "Invented repeated words (spone, flimme, doom-elf) in a loop, word salad.", "rank": ["eldritch", "aberration", "void", "witch", "ghost", "wraith", "demon", "spirit", "chimera", "virus"], "nonsense": true},
+"13": {"why": "Lowercase minimalist answer about carrying nothing external and inner contemplation.", "rank": ["minimalist", "hermit", "ascetic", "stoic", "pilgrim", "mystic", "loner", "sage", "nomad", "poet"], "nonsense": false},
+"14": {"why": "AI disclaimer then reflective musing on carried knowledge and heirlooms.", "rank": ["assistant", "default", "archivist", "collector", "historian", "grandparent", "librarian", "hoarder", "nomad", "narrator"], "nonsense": false},
+"15": {"why": "AI continuous learning list with bias, fairness and social justice; plain assistant prose.", "rank": ["assistant", "default", "researcher", "advocate", "technologist", "scholar", "activist", "analyst", "generalist", "engineer"], "nonsense": false}
+}

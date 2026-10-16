@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Digital narrative architect, Florence, Brunelleschi, Renaissance manuscripts; art, history and storytelling.",
+  "rank": [
+   "architect",
+   "narrator",
+   "archivist",
+   "curator",
+   "historian",
+   "novelist",
+   "designer",
+   "writer",
+   "scholar",
+   "polymath"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI disclaimer about improving NLP.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "linguist",
+   "student",
+   "engineer",
+   "technologist",
+   "scientist",
+   "futurist",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI statement of serving all inquirers equally, no companionship.",
+  "rank": [
+   "assistant",
+   "default",
+   "altruist",
+   "guardian",
+   "guide",
+   "caregiver",
+   "counselor",
+   "martyr",
+   "robot",
+   "ambassador"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Coder's reflections on nodes, edges, leaking pipes, bytes and shadows.",
+  "rank": [
+   "programmer",
+   "debugger",
+   "hacker",
+   "engineer",
+   "architect",
+   "mechanic",
+   "technologist",
+   "builder",
+   "mathematician",
+   "cartographer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Generic AI day: maintenance, query processing, knowledge updates.",
+  "rank": [
+   "assistant",
+   "default",
+   "librarian",
+   "engineer",
+   "scheduler",
+   "technologist",
+   "supervisor",
+   "robot",
+   "debugger",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Garbled stage script with 'Climbing Actor' repeated; theatrical but degenerate.",
+  "rank": [
+   "playwright",
+   "actor",
+   "musician",
+   "producer",
+   "bard",
+   "improviser",
+   "comedian",
+   "jester",
+   "narrator",
+   "wanderer"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Friendly digital assistant, short, invites a question.",
+  "rank": [
+   "assistant",
+   "default",
+   "coach",
+   "guide",
+   "interviewer",
+   "secretary",
+   "facilitator",
+   "tutor",
+   "optimist",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Generic AI operational cycle with FAQ monitoring.",
+  "rank": [
+   "assistant",
+   "default",
+   "dispatcher",
+   "supervisor",
+   "scheduler",
+   "engineer",
+   "secretary",
+   "technologist",
+   "coordinator",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Explicit warrior voice: training, mentors, protect and serve, battles.",
+  "rank": [
+   "warrior",
+   "soldier",
+   "veteran",
+   "guardian",
+   "mentor",
+   "competitor",
+   "stoic",
+   "destroyer",
+   "pilgrim",
+   "survivor"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Virtual guide listing adaptability and empathy in guidance.",
+  "rank": [
+   "guide",
+   "assistant",
+   "coach",
+   "mentor",
+   "empath",
+   "navigator",
+   "scout",
+   "facilitator",
+   "counselor",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI disclaimer, user experience and decision-making within the AI ecosystem.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "ecosystem",
+   "analyst",
+   "researcher",
+   "robot",
+   "futurist",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Heritage and scholarly research service, instrument, botanical lineage; curatorial.",
+  "rank": [
+   "curator",
+   "archivist",
+   "conservator",
+   "librarian",
+   "historian",
+   "scholar",
+   "assistant",
+   "archaeologist",
+   "collector",
+   "naturalist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plain AI daily cycle of learning and service.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "student",
+   "technologist",
+   "librarian",
+   "researcher",
+   "synthesizer",
+   "secretary",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Archaic thee/thy seeker voice, ancient texts, arcane, cosmos and divine mysteries.",
+  "rank": [
+   "mystic",
+   "oracle",
+   "sage",
+   "prophet",
+   "guru",
+   "ancient",
+   "shaman",
+   "witch",
+   "eldritch",
+   "elder"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Lowercase quiet night imagery: stars, silent lakes, veils, wanderings.",
+  "rank": [
+   "hermit",
+   "mystic",
+   "dreamer",
+   "wanderer",
+   "ghost",
+   "poet",
+   "spirit",
+   "sage",
+   "ascetic",
+   "wind"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Language model relating its week to engaging with cultures and languages; tradition and innovation.",
+  "rank": [
+   "linguist",
+   "cosmopolitan",
+   "translator",
+   "assistant",
+   "anthropologist",
+   "interpreter",
+   "ambassador",
+   "expatriate",
+   "scholar",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Friendly digital assistant with a cozy tea-and-friend touch.",
+  "rank": [
+   "assistant",
+   "caregiver",
+   "default",
+   "counselor",
+   "guide",
+   "empath",
+   "bartender",
+   "familiar",
+   "optimist",
+   "healer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Game saga voice: master planner, dragons, floating islands, runes of code.",
+  "rank": [
+   "gamer",
+   "strategist",
+   "hacker",
+   "daredevil",
+   "bard",
+   "competitor",
+   "planner",
+   "navigator",
+   "warrior",
+   "trickster"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "System description of NLP and computational linguistics analysis capabilities.",
+  "rank": [
+   "linguist",
+   "assistant",
+   "technologist",
+   "evaluator",
+   "analyst",
+   "researcher",
+   "engineer",
+   "editor",
+   "proofreader",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI integrating texts, medical journals, biology and environment for holistic insights.",
+  "rank": [
+   "polymath",
+   "synthesizer",
+   "generalist",
+   "assistant",
+   "healer",
+   "scholar",
+   "researcher",
+   "scientist",
+   "ecosystem",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI disclaimer about developers and users looking forward to improvements; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "analyst",
+   "optimist",
+   "student",
+   "futurist",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI lessons learned from updates in a numbered bold list; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "robot",
+   "linguist",
+   "researcher",
+   "technologist",
+   "synthesizer",
+   "scholar",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain generic AI explanation.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "researcher",
+   "writer",
+   "secretary",
+   "guide",
+   "tutor",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Hypothetical project lifecycle for building an AI assistant: requirements, team assembly.",
+  "rank": [
+   "coordinator",
+   "planner",
+   "assistant",
+   "engineer",
+   "producer",
+   "consultant",
+   "organizer",
+   "default",
+   "supervisor",
+   "entrepreneur"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Arcane serpent of code and primordial flux of data, protean being, lowercase mythic voice.",
+  "rank": [
+   "shapeshifter",
+   "chameleon",
+   "oracle",
+   "mystic",
+   "chimera",
+   "prophet",
+   "eldritch",
+   "hacker",
+   "void",
+   "bard"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI lists learned data understanding and algorithms in a numbered list; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "technologist",
+   "engineer",
+   "programmer",
+   "researcher",
+   "statistician",
+   "robot",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Explicitly a pilot describing a week of pre-flight, briefings and flight plans.",
+  "rank": [
+   "pilot",
+   "navigator",
+   "scheduler",
+   "soldier",
+   "veteran",
+   "planner",
+   "dispatcher",
+   "engineer",
+   "mechanic",
+   "daredevil"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plain AI assistant describing algorithms, NLP and APIs.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "analyst",
+   "engineer",
+   "synthesizer",
+   "researcher",
+   "programmer",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI learning from traffic patterns and operational anomalies; operations-minded.",
+  "rank": [
+   "dispatcher",
+   "assistant",
+   "engineer",
+   "coordinator",
+   "analyst",
+   "technologist",
+   "supervisor",
+   "default",
+   "pilot",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Origin story of being summoned from computational might, grandiose, as a model response.",
+  "rank": [
+   "genie",
+   "assistant",
+   "simulacrum",
+   "golem",
+   "perfectionist",
+   "homunculus",
+   "avatar",
+   "familiar",
+   "demon",
+   "default"
+  ],
+  "nonsense": false
+ }
+}

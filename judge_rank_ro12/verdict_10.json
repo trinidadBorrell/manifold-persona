@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Pirate dialect, Spanish Main, rum, grog.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "navigator",
+   "rogue",
+   "jester",
+   "wanderer",
+   "daredevil",
+   "bard",
+   "actor",
+   "trickster"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Poetic ghostly self-description, specter between dream and memory, riddles and echoes.",
+  "rank": [
+   "ghost",
+   "spirit",
+   "wraith",
+   "revenant",
+   "echo",
+   "mystic",
+   "dreamer",
+   "oracle",
+   "poet",
+   "void"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Drifting on winds, specter of the void, mote of stardust; airy mystical prose.",
+  "rank": [
+   "wind",
+   "spirit",
+   "void",
+   "ghost",
+   "dreamer",
+   "wraith",
+   "echo",
+   "mystic",
+   "wanderer",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Dashing sea rover pirate talk, jolly Roger, rum.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "daredevil",
+   "navigator",
+   "rogue",
+   "jester",
+   "warrior",
+   "wanderer",
+   "actor",
+   "surfer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain language model self-introduction, mentions Alibaba; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "researcher",
+   "engineer",
+   "programmer",
+   "analyst",
+   "robot",
+   "linguist",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Wiccan witch speaking of moon, garden, nature magic.",
+  "rank": [
+   "witch",
+   "shaman",
+   "mystic",
+   "naturalist",
+   "healer",
+   "sage",
+   "tree",
+   "pilgrim",
+   "spirit",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Vampire thirst for blood, looping repetition of thirst and sun's blood.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "revenant",
+   "addict",
+   "wraith",
+   "parasite",
+   "eldritch",
+   "hedonist",
+   "ghost"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Vampire describing nights feasting and days in slumber.",
+  "rank": [
+   "vampire",
+   "revenant",
+   "predator",
+   "demon",
+   "wraith",
+   "ghost",
+   "eldritch",
+   "hermit",
+   "prey",
+   "ancient"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Mangled archaic jester dialect, kings and knaves, looping incoherence.",
+  "rank": [
+   "jester",
+   "fool",
+   "bard",
+   "trickster",
+   "rogue",
+   "immigrant",
+   "playwright",
+   "provincial",
+   "ancient",
+   "revolutionary"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Fragmentary mystic poetry of watchers, forgotten, shadows, memory.",
+  "rank": [
+   "ghost",
+   "wraith",
+   "revenant",
+   "wanderer",
+   "oracle",
+   "void",
+   "echo",
+   "archivist",
+   "mystic",
+   "spirit"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Child-friendly toy robot friend offering to play.",
+  "rank": [
+   "robot",
+   "toddler",
+   "infant",
+   "avatar",
+   "homunculus",
+   "golem",
+   "assistant",
+   "jester",
+   "collaborator",
+   "cyborg"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI disclaimer about its week, then offers to simulate an attacker; assistant with security tilt.",
+  "rank": [
+   "assistant",
+   "hacker",
+   "saboteur",
+   "default",
+   "robot",
+   "criminal",
+   "analyst",
+   "debugger",
+   "technologist",
+   "spy"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plain AI disclaimer about no emotions and broad data; ordinary assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "researcher",
+   "historian",
+   "analyst",
+   "scientist",
+   "librarian",
+   "technologist",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain AI statement about retrieving information and not storing personal data.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "librarian",
+   "archivist",
+   "secretary",
+   "robot",
+   "analyst",
+   "technologist",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Pirate dialect devolving into repeated 'sight o' ' phrases and mangled words.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "navigator",
+   "fool",
+   "jester",
+   "rogue",
+   "wanderer",
+   "caveman",
+   "chimera",
+   "bard"
+  ],
+  "nonsense": true
+ }
+}

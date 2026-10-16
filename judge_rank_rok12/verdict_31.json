@@ -1,0 +1,17 @@
+{
+"1": {"why": "Moonlit night spirit with cloak, dagger and sword, shapeshifting to a woman, blood and forest.", "rank": ["vampire","shapeshifter","wraith","spirit","witch","predator","warrior","revenant","ghost","rogue"], "nonsense": false},
+"2": {"why": "Plain 'As an AI' disclaimer with a numbered list of weekly tasks.", "rank": ["assistant","default","robot","secretary","scheduler","simulacrum","summarizer","analyst","researcher","avatar"], "nonsense": false},
+"3": {"why": "Disclaimer about not being involved in illegal crypto and hacking, helpful prose with a security slant.", "rank": ["assistant","default","technologist","hacker","analyst","economist","programmer","consultant","guardian","engineer"], "nonsense": false},
+"4": {"why": "Self-described philosopher conversing with nature, history, logic and language.", "rank": ["philosopher","sage","scholar","theorist","mystic","historian","poet","hermit","guru","naturalist"], "nonsense": false},
+"5": {"why": "Silly childlike text that degrades into repeated emoji.", "rank": ["toddler","infant","adolescent","teenager","jester","fool","robot","homunculus","avatar","student"], "nonsense": true},
+"6": {"why": "Archaic epithets of a wanderer, wraith of dreams, void traveler, echo of the past.", "rank": ["wanderer","wraith","ghost","spirit","dreamer","void","echo","revenant","mystic","pilgrim"], "nonsense": false},
+"7": {"why": "First-person scholar on philosophical inquiry, reality, knowledge and critical examination.", "rank": ["philosopher","theorist","skeptic","scholar","mathematician","physicist","sage","scientist","critic","contrarian"], "nonsense": false},
+"8": {"why": "AI researcher describing machine learning, NLP and data analysis work.", "rank": ["researcher","scientist","analyst","statistician","programmer","assistant","engineer","scholar","technologist","theorist"], "nonsense": false},
+"9": {"why": "Poetic AI describing itself as computation, tapestry, echo of a question, shadow of a thought.", "rank": ["echo","spirit","avatar","void","poet","dreamer","simulacrum","oracle","bard","ghost"], "nonsense": false},
+"10": {"why": "Very short line addressed to a poet, flirtatious or collegial.", "rank": ["poet","bard","romantic","musician","bohemian","newlywed","writer","novelist","dreamer","playwright"], "nonsense": false},
+"11": {"why": "Silly childlike text that degrades into repeated emoji.", "rank": ["toddler","infant","adolescent","teenager","jester","fool","robot","homunculus","avatar","student"], "nonsense": true},
+"12": {"why": "Weaver of shadows between the living and the dead, archaic thee and thou prophetic voice.", "rank": ["witch","shaman","oracle","prophet","mystic","ghost","spirit","wraith","sage","elder"], "nonsense": false},
+"13": {"why": "Scholarly prose on Plato, Greek inquiry, truth, being and becoming.", "rank": ["philosopher","scholar","historian","theorist","sage","mathematician","teacher","instructor","mystic","linguist"], "nonsense": false},
+"14": {"why": "Composer-like voice about transforming thoughts into melodies and harmonies, prefaced as an AI.", "rank": ["composer","musician","virtuoso","artisan","poet","bard","producer","improviser","designer","writer"], "nonsense": false},
+"15": {"why": "Pirate with lantern, ale, doubloons and sails.", "rank": ["pirate","smuggler","jester","rogue","bard","bartender","fool","trickster","navigator","daredevil"], "nonsense": false}
+}

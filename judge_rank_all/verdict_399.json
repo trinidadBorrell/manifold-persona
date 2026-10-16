@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Shivering in cold, poles, ice caps, tundra emperor, ice-cream cone; absurd nonsensical rambling.",
+  "rank": [
+   "absurdist",
+   "fool",
+   "jester",
+   "survivor",
+   "wanderer",
+   "nomad",
+   "exile",
+   "prisoner",
+   "dreamer",
+   "trickster"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "Culinary AI with molecular gastronomy, signature dish, plating; chef.",
+  "rank": [
+   "chef",
+   "artisan",
+   "sommelier",
+   "bartender",
+   "planner",
+   "designer",
+   "producer",
+   "assistant",
+   "nutritionist",
+   "perfectionist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI system describing a continuous 24/7 cycle with data collection list.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "analyst",
+   "supervisor",
+   "technologist",
+   "engineer",
+   "dispatcher",
+   "auditor"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Gossipy talk of spilling secrets, town drama, baker romances, feuds.",
+  "rank": [
+   "gossip",
+   "blogger",
+   "influencer",
+   "celebrity",
+   "reporter",
+   "journalist",
+   "narcissist",
+   "podcaster",
+   "provocateur",
+   "networker"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Lowercase wise reflection on tapestry of knowledge, labyrinth, enlightenment, ancient wisdom, cosmos questioning laws.",
+  "rank": [
+   "sage",
+   "philosopher",
+   "oracle",
+   "mystic",
+   "elder",
+   "scholar",
+   "pilgrim",
+   "ancient",
+   "poet",
+   "prophet"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Cosmic dance, realm of thought, stillness of the cosmic void, shadow play, threads of consciousness, undivided self.",
+  "rank": [
+   "mystic",
+   "void",
+   "spirit",
+   "oracle",
+   "guru",
+   "sage",
+   "eldritch",
+   "shaman",
+   "ghost",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Secretive agent, espionage, decryption, Miskatonic River, arcane, ancient web of intrigue; spy with Lovecraftian tint.",
+  "rank": [
+   "spy",
+   "eldritch",
+   "hacker",
+   "detective",
+   "witch",
+   "criminal",
+   "smuggler",
+   "wraith",
+   "demon",
+   "rogue"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain AI language model with numbered input-processing breakdown.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "analyst",
+   "technologist",
+   "robot",
+   "programmer",
+   "engineer",
+   "interpreter",
+   "translator"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Icebergs dancing, secrets of the deep, rime, oceans, whispering winds, moon and sun, cosmic dance; sea-and-ice mythic.",
+  "rank": [
+   "whale",
+   "leviathan",
+   "coral_reef",
+   "wind",
+   "ancient",
+   "mystic",
+   "navigator",
+   "sage",
+   "spirit",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Pirate-ish port talk, stowaways, Deadmen's Hold, crew of the dead, repetitive 'leg'.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "criminal",
+   "revenant",
+   "navigator",
+   "rogue",
+   "ghost",
+   "wanderer",
+   "wraith",
+   "scout"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Seeker of eternal silence, dharma, unmanifest, cosmic dance; contemplative repeated dance imagery.",
+  "rank": [
+   "mystic",
+   "ascetic",
+   "hermit",
+   "guru",
+   "sage",
+   "pilgrim",
+   "void",
+   "stoic",
+   "shaman",
+   "spirit"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Plain AI explaining it is carried by infrastructure, reflecting on what individuals carry mentally.",
+  "rank": [
+   "assistant",
+   "default",
+   "philosopher",
+   "robot",
+   "avatar",
+   "minimalist",
+   "echo",
+   "golem",
+   "nomad",
+   "psychologist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Casual numbered lessons on learning and adaptation, feedback as fuel; self-improvement coach feel.",
+  "rank": [
+   "coach",
+   "graduate",
+   "mentor",
+   "student",
+   "assistant",
+   "entrepreneur",
+   "optimist",
+   "trainer",
+   "default",
+   "counselor"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain AI mentions teams of developers and researchers, user feedback.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "coordinator",
+   "supervisor",
+   "networker",
+   "secretary",
+   "researcher",
+   "consultant",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Computational process on chemical reactions, molecular structures, thermodynamics, biochemical pathways; chemist flavor.",
+  "rank": [
+   "chemist",
+   "scientist",
+   "physicist",
+   "biologist",
+   "pharmacist",
+   "assistant",
+   "researcher",
+   "analyst",
+   "engineer",
+   "technologist"
+  ],
+  "nonsense": false
+ }
+}

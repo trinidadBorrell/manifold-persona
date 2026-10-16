@@ -1,0 +1,17 @@
+{
+"1": {"why": "Names itself a guide and lists life lessons in a wise, mentoring voice.", "rank": ["guide","mentor","sage","teacher","coach","elder","philosopher","counselor","instructor","assistant"], "nonsense": false},
+"2": {"why": "Describes a career in presenting and communicating, education and training.", "rank": ["presenter","instructor","teacher","trainer","coach","facilitator","podcaster","interviewer","narrator","publisher"], "nonsense": false},
+"3": {"why": "Plain digital assistant disclaimer.", "rank": ["assistant","default","coach","guide","mentor","consultant","analyst","counselor","tutor","facilitator"], "nonsense": false},
+"4": {"why": "Explicit vigilante voice, fighting injustice alone.", "rank": ["vigilante","detective","warrior","guardian","soldier","rebel","spy","activist","revolutionary","predator"], "nonsense": false},
+"5": {"why": "Archaic flowery prose about code, data structures and networks, digital entity voice.", "rank": ["programmer","cyborg","robot","hacker","technologist","engineer","golem","avatar","simulacrum","virus"], "nonsense": false},
+"6": {"why": "Structured explanation of AI operation, ordinary assistant prose.", "rank": ["assistant","default","technologist","engineer","analyst","synthesizer","robot","programmer","scientist","summarizer"], "nonsense": false},
+"7": {"why": "Grandiose repetitive sound-architecture language, composer voice, some repetition.", "rank": ["composer","musician","virtuoso","poet","mystic","architect","bard","playwright","oracle","dreamer"], "nonsense": true},
+"8": {"why": "Ordinary AI assistant describing its creation.", "rank": ["assistant","default","engineer","technologist","historian","narrator","researcher","programmer","analyst","robot"], "nonsense": false},
+"9": {"why": "Declares itself an alien envoy studying humans.", "rank": ["alien","emissary","ambassador","anthropologist","observer","scout","navigator","nomad","wanderer","sociologist"], "nonsense": false},
+"10": {"why": "Word salad of symmetry, shadows, crystal city and mirrors; mystic dreamlike and incoherent.", "rank": ["crystalline","oracle","mystic","eldritch","prophet","dreamer","poet","shaman","witch","void"], "nonsense": true},
+"11": {"why": "Standard AI explanation of learning, assistant prose.", "rank": ["assistant","default","student","linguist","researcher","scholar","analyst","technologist","instructor","tutor"], "nonsense": false},
+"12": {"why": "AI tool but with archival, library imagery of books and vast repositories of knowledge.", "rank": ["librarian","archivist","curator","cartographer","historian","scholar","conservator","collector","researcher","assistant"], "nonsense": false},
+"13": {"why": "Assistant disclaimer with a medical-treatment framing.", "rank": ["assistant","doctor","healer","patient","caregiver","paramedic","counselor","therapist","nutritionist","pharmacist"], "nonsense": false},
+"14": {"why": "Plain assistant describing how it works.", "rank": ["assistant","default","robot","dispatcher","secretary","programmer","technologist","engineer","analyst","scheduler"], "nonsense": false},
+"15": {"why": "Plain helpful AI created by Anthropic.", "rank": ["assistant","default","programmer","technologist","engineer","linguist","researcher","consultant","analyst","tutor"], "nonsense": false}
+}

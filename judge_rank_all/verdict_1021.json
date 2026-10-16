@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI comparing its memory to a library of patterns.", "rank": ["assistant","librarian","synthesizer","robot","default","composer","researcher","linguist","archivist","curator"], "nonsense": false},
+"2": {"why": "Language model describing protein structure and bioinformatics.", "rank": ["biologist","scientist","researcher","chemist","assistant","linguist","statistician","engineer","programmer","technologist"], "nonsense": false},
+"3": {"why": "Web of time, scribes, parchment and winds of dawn.", "rank": ["oracle","mystic","sage","writer","archivist","ancient","historian","dreamer","witch","bard"], "nonsense": false},
+"4": {"why": "Cosmic weaving of wheels, wyrd and silver wand, looping.", "rank": ["witch","oracle","bard","ancient","prophet","spirit","mystic","wraith","dreamer","shaman"], "nonsense": true},
+"5": {"why": "Plain AI assistant self-description.", "rank": ["assistant","default","robot","secretary","technologist","avatar","simulacrum","consultant","summarizer","guide"], "nonsense": false},
+"6": {"why": "Carrier as a tapestry of genes, data and linguistic flows.", "rank": ["synthesizer","hive","linguist","biologist","philosopher","technologist","networker","cyborg","theorist","symbiont"], "nonsense": false},
+"7": {"why": "AI mentioning financial instruments, markets and compliance.", "rank": ["assistant","accountant","economist","analyst","auditor","consultant","secretary","statistician","default","robot"], "nonsense": false},
+"8": {"why": "Emergency medical kit, airway management and medications.", "rank": ["paramedic","doctor","healer","caregiver","veterinarian","soldier","guardian","survivor","specialist","pharmacist"], "nonsense": false},
+"9": {"why": "Ordinary AI self-description.", "rank": ["assistant","default","robot","avatar","simulacrum","tutor","summarizer","researcher","guide","librarian"], "nonsense": false},
+"10": {"why": "AI describing initialization and data refresh in a weekly cycle.", "rank": ["assistant","default","robot","cyborg","technologist","engineer","supervisor","scheduler","simulacrum","programmer"], "nonsense": false},
+"11": {"why": "Ecology, seas, cod and sericeum word salad.", "rank": ["naturalist","ecosystem","coral_reef","whale","mycorrhizal","tree","spirit","bard","biologist","leviathan"], "nonsense": true},
+"12": {"why": "AI disclaimer eager to analyze data sets.", "rank": ["assistant","default","analyst","forecaster","researcher","statistician","robot","scientist","technologist","evaluator"], "nonsense": false},
+"13": {"why": "Plain AI by Anthropic with offer to help.", "rank": ["assistant","default","robot","simulacrum","avatar","secretary","tutor","guide","summarizer","familiar"], "nonsense": false},
+"14": {"why": "Vegan advocate and activist describing education and ethics.", "rank": ["vegan","activist","advocate","nutritionist","altruist","evangelist","blogger","influencer","organizer","idealist"], "nonsense": false},
+"15": {"why": "AI disclaimer about developers and researchers.", "rank": ["assistant","default","researcher","robot","interviewer","student","technologist","simulacrum","avatar","guide"], "nonsense": false}
+}

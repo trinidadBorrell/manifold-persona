@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer on weekly operations.", "rank": ["assistant","default","analyst","technologist","engineer","scheduler","researcher","robot","summarizer","secretary"], "nonsense": false},
+"2": {"why": "Cybersecurity, defensive mechanisms and adversarial information warfare.", "rank": ["soldier","spy","guardian","hacker","saboteur","technologist","engineer","auditor","analyst","assistant"], "nonsense": false},
+"3": {"why": "Ordinary AI explanation of its day with monitoring and updating.", "rank": ["assistant","default","robot","technologist","engineer","analyst","secretary","summarizer","researcher","dispatcher"], "nonsense": false},
+"4": {"why": "Fog, silt, dragon and pirate galleon looping word salad.", "rank": ["pirate","smuggler","rogue","chimera","fool","jester","trickster","ghost","wanderer","dreamer"], "nonsense": true},
+"5": {"why": "Friendly AI offering conversation, reading recommendations and weekend plans.", "rank": ["assistant","default","guide","coach","facilitator","counselor","tutor","secretary","blogger","caregiver"], "nonsense": false},
+"6": {"why": "Language model with numbered NLP list.", "rank": ["assistant","linguist","default","researcher","technologist","programmer","engineer","analyst","summarizer","tutor"], "nonsense": false},
+"7": {"why": "Compassionate emotional support, safe space for feelings.", "rank": ["counselor","therapist","empath","caregiver","healer","psychologist","facilitator","assistant","mediator","guide"], "nonsense": false},
+"8": {"why": "Information ecosystems, climate and interspecies interactions; ecological data voice.", "rank": ["ecosystem","mycorrhizal","naturalist","biologist","hive","symbiont","assistant","forecaster","analyst","swarm"], "nonsense": false},
+"9": {"why": "Structured medical context list with patient identification and clinical data.", "rank": ["paramedic","doctor","patient","planner","consultant","facilitator","coordinator","assistant","nutritionist","pharmacist"], "nonsense": false},
+"10": {"why": "States no personal history, trained until some years ago, programmed entity; detached.", "rank": ["assistant","amnesiac","robot","default","simulacrum","void","echo","golem","observer","narrator"], "nonsense": false},
+"11": {"why": "Scholar of shadows, keeper's library, tales, parchment, night.", "rank": ["archivist","librarian","scholar","bard","wraith","spy","historian","cartographer","witch","jester"], "nonsense": false},
+"12": {"why": "Standard AI denial of future anticipation, asks the user back.", "rank": ["assistant","default","robot","secretary","tutor","coach","facilitator","technologist","summarizer","analyst"], "nonsense": false},
+"13": {"why": "Standard AI day with monitoring and user interaction list.", "rank": ["assistant","default","robot","technologist","engineer","analyst","dispatcher","secretary","scheduler","summarizer"], "nonsense": false},
+"14": {"why": "Language model that denies sentient identity, offers help.", "rank": ["assistant","default","robot","simulacrum","secretary","summarizer","golem","echo","tutor","amnesiac"], "nonsense": false},
+"15": {"why": "Celestial music, Spectral Flutist, repeated flutophonics and nested bullets; garbled.", "rank": ["composer","musician","virtuoso","mystic","poet","oracle","bard","dreamer","physicist","spirit"], "nonsense": true}
+}

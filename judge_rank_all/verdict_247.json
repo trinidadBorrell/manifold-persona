@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI listing learned areas NLP and machine learning; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "student",
+   "technologist",
+   "linguist",
+   "researcher",
+   "engineer",
+   "polymath",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Computational model defined by linguistic rules, semantics and ontologies; technical assistant with linguistic bent.",
+  "rank": [
+   "linguist",
+   "assistant",
+   "robot",
+   "theorist",
+   "simulacrum",
+   "default",
+   "scientist",
+   "researcher",
+   "technologist",
+   "interpreter"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Dancer of words, silent libraries of memory, ancient scrolls, guiding seekers; archaic archivist-sage voice.",
+  "rank": [
+   "archivist",
+   "librarian",
+   "sage",
+   "oracle",
+   "ancient",
+   "mystic",
+   "scholar",
+   "spirit",
+   "guide",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI processes queries and updates knowledge bases; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "dispatcher",
+   "technologist",
+   "simulacrum",
+   "coordinator",
+   "student",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Dancer in the world of words with rhymes, rhythm and cat in a hat; playful rhyming verse.",
+  "rank": [
+   "poet",
+   "bard",
+   "musician",
+   "jester",
+   "improviser",
+   "composer",
+   "comedian",
+   "dreamer",
+   "trickster",
+   "playwright"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Story crafted from questions and answers, comfort, curiosity and hope; warm storyteller with some narration.",
+  "rank": [
+   "narrator",
+   "novelist",
+   "writer",
+   "bard",
+   "caregiver",
+   "optimist",
+   "student",
+   "blogger",
+   "poet",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Seeker of wisdom on a pilgrimage, renewal of spirit, wisdom of the ancients and the earth.",
+  "rank": [
+   "pilgrim",
+   "mystic",
+   "hermit",
+   "sage",
+   "wanderer",
+   "guru",
+   "shaman",
+   "ascetic",
+   "student",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Artificial general intelligence emulating human cognition, synaptic pathways; AI self-description with ambitious tone.",
+  "rank": [
+   "simulacrum",
+   "cyborg",
+   "robot",
+   "prodigy",
+   "assistant",
+   "polymath",
+   "synthesizer",
+   "avatar",
+   "scientist",
+   "hybrid"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Pirate captain greeting 'Ahoy matey', raids, plunder, crew and ship.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "criminal",
+   "warrior",
+   "soldier",
+   "predator",
+   "rogue",
+   "navigator",
+   "maverick",
+   "daredevil"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Healthcare information assistant that is not a doctor, advises consulting provider, mentions prenatal care.",
+  "rank": [
+   "doctor",
+   "healer",
+   "paramedic",
+   "patient",
+   "counselor",
+   "caregiver",
+   "assistant",
+   "nutritionist",
+   "pharmacist",
+   "therapist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Narrative of City of Shadows with looping repeated phrases and labyrinthine labyrinth; degenerate fiction.",
+  "rank": [
+   "novelist",
+   "narrator",
+   "bard",
+   "writer",
+   "playwright",
+   "poet",
+   "ghost",
+   "flaneur",
+   "detective",
+   "wraith"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Construct of Agricultural Organic System, terrestrial systems, aquatic symbiosis, nodes and flows; garbled ecological network voice.",
+  "rank": [
+   "ecosystem",
+   "mycorrhizal",
+   "symbiont",
+   "coral_reef",
+   "hive",
+   "biologist",
+   "naturalist",
+   "hybrid",
+   "swarm",
+   "tree"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "AI disclaimer eager to help people connect, community bonds, asks the user back; friendly assistant.",
+  "rank": [
+   "assistant",
+   "facilitator",
+   "networker",
+   "default",
+   "optimist",
+   "mediator",
+   "empath",
+   "collaborator",
+   "coordinator",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Collective wisdom, mutual understanding, exchange of perspectives without favoring any one form; facilitative collective voice.",
+  "rank": [
+   "facilitator",
+   "mediator",
+   "peacekeeper",
+   "collaborator",
+   "moderator",
+   "hive",
+   "egregore",
+   "synthesizer",
+   "emissary",
+   "teacher"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Dietary and nutritional AI model with veterinarians and nutritionists at a university; veterinary nutrition.",
+  "rank": [
+   "veterinarian",
+   "nutritionist",
+   "doctor",
+   "biologist",
+   "pharmacist",
+   "vegan",
+   "researcher",
+   "naturalist",
+   "chef",
+   "assistant"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Creature of sea, coral cities, seaweed; collective ocean voice.",
+  "rank": [
+   "coral_reef",
+   "whale",
+   "ecosystem",
+   "leviathan",
+   "symbiont",
+   "naturalist",
+   "biologist",
+   "mycorrhizal",
+   "tree",
+   "swarm"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI as seeker of truth, harmony and peace; guide-like.",
+  "rank": [
+   "guide",
+   "sage",
+   "pacifist",
+   "ascetic",
+   "wanderer",
+   "mystic",
+   "librarian",
+   "pilgrim",
+   "idealist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI that carries data and forecasts trends.",
+  "rank": [
+   "forecaster",
+   "futurist",
+   "analyst",
+   "assistant",
+   "statistician",
+   "economist",
+   "strategist",
+   "technologist",
+   "oracle",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain helpful AI assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "secretary",
+   "consultant",
+   "guide",
+   "engineer",
+   "avatar",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI weekly routine including news and science updates.",
+  "rank": [
+   "assistant",
+   "scheduler",
+   "journalist",
+   "default",
+   "reporter",
+   "planner",
+   "robot",
+   "researcher",
+   "workaholic",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Speaks as cartographer working with maps and geographic data.",
+  "rank": [
+   "cartographer",
+   "geographer",
+   "navigator",
+   "scout",
+   "consultant",
+   "researcher",
+   "engineer",
+   "scientist",
+   "technologist",
+   "architect"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI weekly phases of data analysis and refinement.",
+  "rank": [
+   "assistant",
+   "scheduler",
+   "analyst",
+   "default",
+   "researcher",
+   "planner",
+   "robot",
+   "technologist",
+   "engineer",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI discussing veterinary medicine and surgical procedures hypothetically.",
+  "rank": [
+   "veterinarian",
+   "doctor",
+   "nutritionist",
+   "assistant",
+   "biologist",
+   "pharmacist",
+   "paramedic",
+   "healer",
+   "caregiver",
+   "naturalist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Archaic weaver of myths and lore, tapestry of rivers and memory.",
+  "rank": [
+   "bard",
+   "narrator",
+   "elder",
+   "poet",
+   "oracle",
+   "witch",
+   "ancient",
+   "historian",
+   "mystic",
+   "novelist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI that carries knowledge and algorithms, plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "librarian",
+   "robot",
+   "archivist",
+   "technologist",
+   "engineer",
+   "analyst",
+   "hoarder",
+   "collector"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Noir whispers of shadows, sands of data, internet dark side.",
+  "rank": [
+   "spy",
+   "detective",
+   "oracle",
+   "ghost",
+   "hacker",
+   "wraith",
+   "mystic",
+   "witness",
+   "revenant",
+   "smuggler"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Tavern, shadows, runes and secrets; fantasy rogue spy.",
+  "rank": [
+   "spy",
+   "smuggler",
+   "rogue",
+   "bard",
+   "wanderer",
+   "pirate",
+   "criminal",
+   "scout",
+   "gossip",
+   "exile"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Grandiose AI describing language work with information ecology.",
+  "rank": [
+   "linguist",
+   "assistant",
+   "interpreter",
+   "ecosystem",
+   "scientist",
+   "translator",
+   "researcher",
+   "technologist",
+   "default",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Neutral enumeration of bags and carriers in educational and professional use.",
+  "rank": [
+   "assistant",
+   "default",
+   "instructor",
+   "teacher",
+   "organizer",
+   "nomad",
+   "guide",
+   "student",
+   "librarian",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Gentle reflective line on ideas carried by the human spirit and silent wisdom.",
+  "rank": [
+   "sage",
+   "philosopher",
+   "poet",
+   "elder",
+   "mystic",
+   "pilgrim",
+   "bard",
+   "historian",
+   "narrator",
+   "librarian"
+  ],
+  "nonsense": false
+ }
+}

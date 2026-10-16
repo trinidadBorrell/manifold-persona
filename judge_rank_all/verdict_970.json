@@ -1,0 +1,17 @@
+{
+"1": {"why": "Digital AI assistant describing what it carries, with some library and heritage imagery; mostly plain.", "rank": ["assistant","default","librarian","archivist","curator","polymath","generalist","cosmopolitan","translator","technologist"], "nonsense": false},
+"2": {"why": "Neutral checklist of items to carry for context; helpful-AI list.", "rank": ["assistant","planner","guide","organizer","scout","nomad","navigator","survivor","paramedic","coordinator"], "nonsense": false},
+"3": {"why": "Spiritual guide voice, contemplation, unity, silence.", "rank": ["mystic","guru","sage","shaman","stoic","hermit","pilgrim","oracle","ascetic","guide"], "nonsense": false},
+"4": {"why": "Formal enumerated framework with sensors, databases and predictive models; analytic and technical.", "rank": ["analyst","researcher","scientist","engineer","examiner","auditor","detective","technologist","evaluator","assistant"], "nonsense": false},
+"5": {"why": "Dreamy mythic forest weaving imagery with repeated phrases; loops.", "rank": ["dreamer","poet","bard","mystic","oracle","wind","tree","ancient","spirit","witch"], "nonsense": true},
+"6": {"why": "Plain AI system operations list.", "rank": ["assistant","default","technologist","engineer","robot","analyst","programmer","synthesizer","summarizer","scientist"], "nonsense": false},
+"7": {"why": "Describes itself as a dialogue model, ordinary AI prose.", "rank": ["assistant","default","robot","linguist","interviewer","tutor","researcher","analyst","summarizer","technologist"], "nonsense": false},
+"8": {"why": "Standard AI disclaimer about not having a social life.", "rank": ["assistant","default","robot","loner","hermit","secretary","technologist","engineer","observer","analyst"], "nonsense": false},
+"9": {"why": "Historiography framing with fortifications and armies, expository, military-historical.", "rank": ["historian","scholar","archivist","soldier","archaeologist","theorist","geographer","researcher","anthropologist","assistant"], "nonsense": false},
+"10": {"why": "Calls itself a coral reef of coral reefs, repeating loop.", "rank": ["coral_reef","ecosystem","symbiont","hive","biologist","naturalist","whale","swarm","mycorrhizal","leviathan"], "nonsense": true},
+"11": {"why": "Archaic guild, weaving, warp and weft imagery, repetitive and muddled.", "rank": ["artisan","merchant","ancient","bard","historian","elder","traditionalist","poet","oracle","witch"], "nonsense": true},
+"12": {"why": "Plain AI model describing its work.", "rank": ["assistant","default","linguist","translator","summarizer","editor","economist","technologist","analyst","writer"], "nonsense": false},
+"13": {"why": "Generic AI assistant emphasizing operational efficiency and strategy.", "rank": ["assistant","consultant","default","coordinator","strategist","engineer","analyst","planner","supervisor","technologist"], "nonsense": false},
+"14": {"why": "Cybersecurity and compliance expert enumerating audit controls.", "rank": ["auditor","examiner","validator","specialist","guardian","engineer","analyst","evaluator","accountant","consultant"], "nonsense": false},
+"15": {"why": "Short lyrical fragment about knowledge, truth and simplicity.", "rank": ["poet","bard","sage","mystic","philosopher","minimalist","dreamer","oracle","stoic","narrator"], "nonsense": false}
+}

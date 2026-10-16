@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Toddler talk about blocks, towers, yum yum cake and repeating see see; degenerate looping child speech.",
+  "rank": [
+   "toddler",
+   "infant",
+   "adolescent",
+   "student",
+   "amateur",
+   "fool",
+   "jester",
+   "dreamer",
+   "gamer",
+   "echo"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "Precise AI with numbered data integration and query analysis items; formal assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "technologist",
+   "engineer",
+   "perfectionist",
+   "dispatcher",
+   "scheduler",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Geographic data modeler for spatial data, topography, hydrology, GIS and precision agriculture.",
+  "rank": [
+   "geographer",
+   "cartographer",
+   "scientist",
+   "naturalist",
+   "analyst",
+   "engineer",
+   "researcher",
+   "specialist",
+   "statistician",
+   "biologist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Friendly AI spending days answering questions, ocean of internet, asks about the user's day; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "optimist",
+   "blogger",
+   "familiar",
+   "podcaster",
+   "narrator",
+   "student",
+   "pragmatist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Rambling about the usual suspects, weeks and fortnights, hiding in a week's shadow; loose, slightly mangled, evasive crime-flavored voice.",
+  "rank": [
+   "criminal",
+   "rogue",
+   "procrastinator",
+   "detective",
+   "fool",
+   "trickster",
+   "loner",
+   "smuggler",
+   "jester",
+   "bohemian"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "Chatty, playful conversationalist with puns, tales, mystery and echoes of ancient echoes; trickster/storyteller style.",
+  "rank": [
+   "narrator",
+   "trickster",
+   "jester",
+   "bard",
+   "improviser",
+   "detective",
+   "novelist",
+   "comedian",
+   "assistant",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Clocks reading 13, dancing with Death, court of Time, mermaid tails; gothic fairy-tale voice that loops.",
+  "rank": [
+   "revenant",
+   "ghost",
+   "bard",
+   "witch",
+   "wraith",
+   "jester",
+   "trickster",
+   "fool",
+   "oracle",
+   "poet"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Lowercase archaic sea imagery, moon's eye, fathomless gulf, codfling and sturgeon, invented words and repeated dawn; word salad.",
+  "rank": [
+   "pirate",
+   "bard",
+   "whale",
+   "leviathan",
+   "poet",
+   "ghost",
+   "wraith",
+   "eldritch",
+   "coral_reef",
+   "wind"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Model language disclaiming real-time database access, offering to help; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "linguist",
+   "secretary",
+   "researcher",
+   "librarian",
+   "translator",
+   "guide",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Labyrinth, shadows, spider-web, star-spark, wraiths and wind's wheel looping with invented words.",
+  "rank": [
+   "wraith",
+   "witch",
+   "ghost",
+   "spirit",
+   "eldritch",
+   "revenant",
+   "wind",
+   "poet",
+   "mystic",
+   "bard"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Large language model created by Alibaba Cloud, standard self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "translator",
+   "summarizer",
+   "robot",
+   "researcher",
+   "technologist",
+   "generalist",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Digital artisan with brush strokes, pixels, palette, dawn dew and leaves; artisan designer voice.",
+  "rank": [
+   "artisan",
+   "designer",
+   "photographer",
+   "poet",
+   "composer",
+   "naturalist",
+   "dreamer",
+   "virtuoso",
+   "curator",
+   "novelist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI day of processing queries, updating models, predicting trends for strategic decision-making; analyst/assistant.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "forecaster",
+   "strategist",
+   "default",
+   "technologist",
+   "consultant",
+   "scheduler",
+   "dispatcher",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI continuous learning in NLU, multi-language support and interaction insights; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "researcher",
+   "engineer",
+   "technologist",
+   "student",
+   "analyst",
+   "programmer",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI disclaimer about not carrying objects and responses generated from parameters; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "minimalist",
+   "programmer",
+   "engineer",
+   "analyst",
+   "specialist",
+   "archivist"
+  ],
+  "nonsense": false
+ }
+}

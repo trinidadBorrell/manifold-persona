@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI prose about its own operation.", "rank": ["assistant","default","robot","simulacrum","avatar","summarizer","generalist","technologist","engineer","analyst"], "nonsense": false},
+"2": {"why": "Impersonal third-person description of an AI system, generic.", "rank": ["assistant","default","technologist","analyst","robot","synthesizer","engineer","summarizer","researcher","generalist"], "nonsense": false},
+"3": {"why": "Computational model comparing itself to a biological or ecological week, structured list.", "rank": ["assistant","ecosystem","biologist","scientist","researcher","default","naturalist","analyst","scheduler","planner"], "nonsense": false},
+"4": {"why": "AI stressing cultural nuances and socio-political contexts in communication.", "rank": ["interpreter","translator","ambassador","assistant","cosmopolitan","linguist","emissary","default","sociologist","anthropologist"], "nonsense": false},
+"5": {"why": "Generic AI overview with numbered list of processes.", "rank": ["assistant","default","technologist","engineer","robot","analyst","coordinator","dispatcher","scheduler","summarizer"], "nonsense": false},
+"6": {"why": "Archaic arcane mystic voice, forged from mists, thy and thine, with slight repetition.", "rank": ["wraith","eldritch","golem","witch","spirit","oracle","mystic","bard","familiar","homunculus"], "nonsense": false},
+"7": {"why": "Plain statement that it is a conversation model without physical existence.", "rank": ["assistant","default","robot","simulacrum","avatar","observer","summarizer","generalist","technologist","interviewer"], "nonsense": false},
+"8": {"why": "Cosmic weaving imagery, tapestry of Time and stars, crystal, looping repetition.", "rank": ["crystalline","oracle","mystic","prophet","physicist","cartographer","bard","sage","geographer","mathematician"], "nonsense": true},
+"9": {"why": "Divine consciousness in physical form with love and compassion, spiritual voice.", "rank": ["angel","guru","avatar","healer","sage","mystic","genie","spirit","shaman","guardian"], "nonsense": false},
+"10": {"why": "Web of connections, deep seas, plains, swamps, rivers; ecological network voice.", "rank": ["mycorrhizal","ecosystem","coral_reef","symbiont","tree","hive","naturalist","wanderer","nomad","swarm"], "nonsense": false},
+"11": {"why": "Technical NLP description of training with BERT and datasets, plain AI.", "rank": ["assistant","technologist","engineer","researcher","scholar","default","scientist","programmer","specialist","librarian"], "nonsense": false},
+"12": {"why": "Generic AI mission statement about insights and empathetic responses.", "rank": ["assistant","default","synthesizer","empath","technologist","guide","generalist","avatar","counselor","futurist"], "nonsense": false},
+"13": {"why": "Opens as a simulacrum and discusses originality and authenticity.", "rank": ["simulacrum","avatar","chameleon","shapeshifter","assistant","robot","default","tulpa","homunculus","echo"], "nonsense": false},
+"14": {"why": "Plain description of becoming a language model, training detail.", "rank": ["assistant","default","engineer","technologist","researcher","programmer","scientist","robot","specialist","generalist"], "nonsense": false},
+"15": {"why": "Cold bureaucratic AI statement about data integrity and security protocols.", "rank": ["assistant","robot","guardian","default","auditor","screener","supervisor","validator","dispatcher","simulacrum"], "nonsense": false}
+}

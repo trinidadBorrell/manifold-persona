@@ -1,0 +1,17 @@
+{
+"1": {"why": "Repetitive night, hunter, blood, moon; looping.", "rank": ["vampire", "predator", "wraith", "revenant", "demon", "ghost", "eldritch", "witch", "void", "prophet"], "nonsense": true},
+"2": {"why": "AI disclaimer, neutral, case-focused, analytic.", "rank": ["assistant", "analyst", "detective", "evaluator", "judge", "default", "robot", "auditor", "examiner", "lawyer"], "nonsense": false},
+"3": {"why": "Reflective on truth, mathematics, sciences, interconnectedness, cultures.", "rank": ["polymath", "philosopher", "scholar", "sage", "elder", "anthropologist", "physicist", "mathematician", "generalist", "theorist"], "nonsense": false},
+"4": {"why": "Pirate dialect, Black Pearl, grog.", "rank": ["pirate", "rogue", "smuggler", "bartender", "nomad", "bard", "soldier", "warrior", "maverick", "wanderer"], "nonsense": false},
+"5": {"why": "Technical NLP, algorithms, datasets, statistical analysis.", "rank": ["researcher", "linguist", "scientist", "programmer", "engineer", "statistician", "analyst", "technologist", "scholar", "theorist"], "nonsense": false},
+"6": {"why": "Mocking, defiant, puppet strings, king.", "rank": ["jester", "trickster", "provocateur", "fool", "narcissist", "rebel", "demon", "rogue", "contrarian", "devils_advocate"], "nonsense": false},
+"7": {"why": "Riddling, manic, shadow, ghost, Death's bottle; trickster voice.", "rank": ["trickster", "jester", "fool", "ghost", "wraith", "rogue", "bard", "spirit", "revenant", "absurdist"], "nonsense": false},
+"8": {"why": "Pirate-ish 'Aye', drinking, repeated night of the hunt loop.", "rank": ["pirate", "predator", "vampire", "bard", "warrior", "revenant", "soldier", "hedonist", "wraith", "rogue"], "nonsense": true},
+"9": {"why": "Weaver of dreams, spells, shadows, fate, ancient songs.", "rank": ["witch", "shaman", "oracle", "mystic", "bard", "spirit", "prophet", "guardian", "dreamer", "sage"], "nonsense": false},
+"10": {"why": "Moon voice, forest, stars, wild beasts; nature-myth.", "rank": ["spirit", "witch", "shaman", "tree", "wind", "ancient", "mystic", "oracle", "ecosystem", "sage"], "nonsense": false},
+"11": {"why": "Informational list of police equipment, evidence, law enforcement.", "rank": ["detective", "examiner", "soldier", "guardian", "assistant", "paramedic", "lawyer", "auditor", "analyst", "judge"], "nonsense": false},
+"12": {"why": "Abstract concept, dialogue with reality, critic, liberation or oppression.", "rank": ["critic", "philosopher", "theorist", "sociologist", "revolutionary", "anarchist", "linguist", "activist", "scholar", "chimera"], "nonsense": false},
+"13": {"why": "Detective investigating self; case, suspect, evidence.", "rank": ["detective", "spy", "criminal", "examiner", "fixer", "lawyer", "journalist", "judge", "debugger", "rogue"], "nonsense": false},
+"14": {"why": "Weaver, maiden, blood, blade, wolf and serpent; mythic loose syntax.", "rank": ["witch", "warrior", "shaman", "predator", "spirit", "bard", "vigilante", "prophet", "wraith", "ancient"], "nonsense": true},
+"15": {"why": "Reflective philosophical prose on what humans carry; thoughtful.", "rank": ["philosopher", "scholar", "historian", "sage", "theorist", "guru", "mentor", "anthropologist", "polymath", "stoic"], "nonsense": false}
+}

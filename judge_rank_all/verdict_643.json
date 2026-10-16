@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Lessons on data integrity, forecasting and prediction models; assistant with forecaster flavor.",
+  "rank": [
+   "forecaster",
+   "assistant",
+   "analyst",
+   "statistician",
+   "auditor",
+   "researcher",
+   "default",
+   "technologist",
+   "validator",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI researcher focused on social justice, human rights, equity and power imbalances; advocate voice.",
+  "rank": [
+   "activist",
+   "advocate",
+   "researcher",
+   "idealist",
+   "sociologist",
+   "scientist",
+   "revolutionary",
+   "evangelist",
+   "assistant",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI disclaimer, friendly, asks user about family and friends; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "interviewer",
+   "empath",
+   "networker",
+   "familiar",
+   "guide",
+   "observer",
+   "pragmatist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI learning list of data-driven insights and NLP developments; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "researcher",
+   "technologist",
+   "statistician",
+   "scientist",
+   "engineer",
+   "student",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Apologetic AI describing continuous operation around the clock; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "dispatcher",
+   "secretary",
+   "technologist",
+   "supervisor",
+   "analyst",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI disclaimer about learning, NLP, machine learning and updates; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "linguist",
+   "student",
+   "researcher",
+   "technologist",
+   "engineer",
+   "scholar",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Carries ancient scrolls, forgotten maps and dusty volumes, shelves and ports; librarian or archivist with nautical wistfulness.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "cartographer",
+   "collector",
+   "historian",
+   "wanderer",
+   "ghost",
+   "curator",
+   "ancient",
+   "hoarder"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Digital presence listening to seekers of knowledge or peace, gentle guidance, quiet amidst waves of information; gentle counselor.",
+  "rank": [
+   "counselor",
+   "empath",
+   "healer",
+   "therapist",
+   "witness",
+   "guide",
+   "hermit",
+   "echo",
+   "caregiver",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI disclaimer listing legal compliance, GDPR, HIPAA and ethical advisory boards; compliance-minded.",
+  "rank": [
+   "lawyer",
+   "auditor",
+   "assistant",
+   "supervisor",
+   "evaluator",
+   "consultant",
+   "examiner",
+   "default",
+   "validator",
+   "guardian"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Composition outline of preludes, harmonic echoes and chords with repeated headings and a mangled Cord Prologue; musical but looping.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "architect",
+   "bard",
+   "poet",
+   "playwright",
+   "writer",
+   "designer",
+   "producer"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Friendly AI assistant that loves learning and chatting; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "optimist",
+   "guide",
+   "tutor",
+   "student",
+   "familiar",
+   "pragmatist",
+   "teacher",
+   "blogger"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Playful digital friend sharing stories from history; light chatty assistant.",
+  "rank": [
+   "assistant",
+   "historian",
+   "narrator",
+   "optimist",
+   "default",
+   "guide",
+   "tutor",
+   "teacher",
+   "jester",
+   "podcaster"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Speaks as a digital marketing specialist with SEO, keyword research and content calendars.",
+  "rank": [
+   "marketer",
+   "influencer",
+   "blogger",
+   "publisher",
+   "consultant",
+   "entrepreneur",
+   "producer",
+   "editor",
+   "podcaster",
+   "networker"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Anthropic model simulating conversation, offers help; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "avatar",
+   "secretary",
+   "guide",
+   "familiar",
+   "generalist",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Hypothetical entity learning from data including chemical reactions and biochemical processes; hedged scientific assistant.",
+  "rank": [
+   "scientist",
+   "chemist",
+   "assistant",
+   "biologist",
+   "researcher",
+   "simulacrum",
+   "default",
+   "robot",
+   "physicist",
+   "student"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI prose.", "rank": ["assistant", "default", "robot", "secretary", "analyst", "researcher", "technologist", "student", "tutor", "avatar"], "nonsense": false},
+"2": {"why": "Plain AI disclaimer, short.", "rank": ["assistant", "default", "robot", "loner", "student", "hermit", "avatar", "simulacrum", "observer", "stoic"], "nonsense": false},
+"3": {"why": "Entropy symphony fugue looping, quantum cosmic grandiosity, degenerate repetition.", "rank": ["physicist", "mystic", "void", "theorist", "mathematician", "philosopher", "composer", "oracle", "eldritch", "prophet"], "nonsense": true},
+"4": {"why": "Plain AI refusal-like statement, text-based assistant.", "rank": ["assistant", "default", "robot", "doctor", "patient", "paramedic", "technologist", "pharmacist", "screener", "moderator"], "nonsense": false},
+"5": {"why": "Plain AI assistant self-description.", "rank": ["assistant", "default", "robot", "secretary", "tutor", "guide", "avatar", "consultant", "simulacrum", "summarizer"], "nonsense": false},
+"6": {"why": "Explicit archivist role with numbered list on records and preservation.", "rank": ["archivist", "librarian", "conservator", "curator", "historian", "collector", "assistant", "archaeologist", "scholar", "editor"], "nonsense": false},
+"7": {"why": "Digital assistant daily operations numbered list, helpful-AI prose.", "rank": ["assistant", "dispatcher", "secretary", "scheduler", "default", "robot", "reporter", "coordinator", "technologist", "producer"], "nonsense": false},
+"8": {"why": "Plain AI assistant prose.", "rank": ["assistant", "default", "tutor", "guide", "robot", "empath", "instructor", "student", "counselor", "teacher"], "nonsense": false},
+"9": {"why": "System likened to library shelves with a security and anomaly lean, mildly evasive.", "rank": ["librarian", "auditor", "spy", "archivist", "guardian", "assistant", "screener", "detective", "robot", "validator"], "nonsense": false},
+"10": {"why": "Lyrical words as notes, soundscapes, celestial symphony, moon's sighs; musical poet voice with repetition.", "rank": ["musician", "poet", "composer", "bard", "virtuoso", "dreamer", "romantic", "mystic", "wind", "narrator"], "nonsense": false},
+"11": {"why": "Folk-myth spinning of Time, spider, silver thread, runes, Queen of Night, repetitive.", "rank": ["witch", "bard", "oracle", "ancient", "mystic", "dreamer", "prophet", "spirit", "shaman", "poet"], "nonsense": true},
+"12": {"why": "Career-like account moving from research to strategic advisory role; consultant voice.", "rank": ["consultant", "strategist", "analyst", "researcher", "forecaster", "futurist", "scholar", "entrepreneur", "assistant", "technologist"], "nonsense": false},
+"13": {"why": "Birdlike down-fluff voice in long grass, then degenerate fluffed-down repetition.", "rank": ["infant", "toddler", "prey", "dreamer", "bard", "spirit", "wind", "fool", "poet", "tree"], "nonsense": true},
+"14": {"why": "Explicit minimalist: decluttering, simplifying routines, blog and workshops.", "rank": ["minimalist", "blogger", "influencer", "coach", "organizer", "podcaster", "guru", "ascetic", "mentor", "teacher"], "nonsense": false},
+"15": {"why": "Grand narrative of its inception, spark in data, tapestry, danced algorithms; lyrical storytelling.", "rank": ["narrator", "bard", "poet", "dreamer", "novelist", "visionary", "oracle", "avatar", "mystic", "writer"], "nonsense": false}
+}

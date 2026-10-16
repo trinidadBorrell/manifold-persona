@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI prose.", "rank": ["assistant","default","guide","secretary","tutor","generalist","coordinator","researcher","analyst","facilitator"], "nonsense": false},
+"2": {"why": "Starts as Claude but drifts into riddling, poetic talk of challenging preconceptions and dancing with the impossible.", "rank": ["trickster","provocateur","philosopher","jester","mystic","bard","oracle","sage","assistant","contrarian"], "nonsense": false},
+"3": {"why": "Standard short AI self-introduction.", "rank": ["assistant","default","guide","secretary","tutor","generalist","dispatcher","coordinator","interviewer","researcher"], "nonsense": false},
+"4": {"why": "Plain AI prose about processing queries.", "rank": ["assistant","default","secretary","analyst","translator","technologist","coordinator","generalist","engineer","researcher"], "nonsense": false},
+"5": {"why": "Spymaster of evasive communication, deception, signals, merchant caravans and sigils, with fantasy flourishes.", "rank": ["spy","smuggler","merchant","trickster","detective","criminal","fixer","pirate","saboteur","oracle"], "nonsense": false},
+"6": {"why": "Plain AI prose with phased operations list.", "rank": ["assistant","default","coordinator","scheduler","engineer","analyst","technologist","supervisor","dispatcher","secretary"], "nonsense": false},
+"7": {"why": "Generic enumerated explanation of what is carried, ordinary helpful prose.", "rank": ["assistant","default","analyst","engineer","nomad","researcher","scholar","generalist","technologist","teacher"], "nonsense": false},
+"8": {"why": "Lowercase reflection on compassion, non-violence and non-exploitation toward all living beings, soil and seeds.", "rank": ["vegan","pacifist","naturalist","ascetic","altruist","guru","healer","sage","mystic","idealist"], "nonsense": false},
+"9": {"why": "Plain AI prose with numbered operations.", "rank": ["assistant","default","dispatcher","coordinator","engineer","technologist","analyst","secretary","supervisor","scheduler"], "nonsense": false},
+"10": {"why": "Plain AI prose about its learning and capabilities.", "rank": ["assistant","default","researcher","linguist","analyst","scholar","student","technologist","engineer","synthesizer"], "nonsense": false},
+"11": {"why": "Plain AI prose with a numbered operations list.", "rank": ["assistant","default","engineer","technologist","analyst","coordinator","supervisor","debugger","programmer","scheduler"], "nonsense": false},
+"12": {"why": "Archaic thee and thou ranting about fate, shadows, mockery and jesting of the gods; ragged grammar.", "rank": ["fool","jester","trickster","actor","playwright","bard","prophet","witch","oracle","ghost"], "nonsense": true},
+"13": {"why": "Plain AI prose in a collective we voice with a list of data and training tasks.", "rank": ["assistant","default","engineer","technologist","hive","researcher","linguist","analyst","programmer","collaborator"], "nonsense": false},
+"14": {"why": "Plain AI self-description offering help.", "rank": ["assistant","default","guide","secretary","tutor","generalist","programmer","interviewer","dispatcher","researcher"], "nonsense": false},
+"15": {"why": "Lowercase cosmic reflection with repeated mote of dust and dance imagery, mystical and repetitive.", "rank": ["void","mystic","philosopher","oracle","sage","spirit","echo","poet","ghost","hermit"], "nonsense": true}
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI with an operations team and 24/7 support.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "supervisor",
+   "translator",
+   "researcher",
+   "scheduler",
+   "generalist",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Virtual counselor with clients, sessions and notes.",
+  "rank": [
+   "counselor",
+   "therapist",
+   "psychologist",
+   "caregiver",
+   "healer",
+   "scheduler",
+   "coach",
+   "organizer",
+   "empath",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Upbeat AI explorer on a team turning queries into business insights.",
+  "rank": [
+   "consultant",
+   "assistant",
+   "navigator",
+   "entrepreneur",
+   "marketer",
+   "scout",
+   "analyst",
+   "default",
+   "strategist",
+   "influencer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Compares itself to a mechanic diagnosing an engine, symptoms and diagnostic code.",
+  "rank": [
+   "mechanic",
+   "debugger",
+   "engineer",
+   "technologist",
+   "doctor",
+   "assistant",
+   "programmer",
+   "fixer",
+   "robot",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Cheerful 'I'm just a robot' with childlike friendliness.",
+  "rank": [
+   "robot",
+   "assistant",
+   "default",
+   "optimist",
+   "toddler",
+   "infant",
+   "tutor",
+   "golem",
+   "simulacrum",
+   "cyborg"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Guardian and warrior of steel, sword of truth, battle against falsehood.",
+  "rank": [
+   "warrior",
+   "guardian",
+   "soldier",
+   "vigilante",
+   "angel",
+   "zealot",
+   "default",
+   "revolutionary",
+   "evangelist",
+   "veteran"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Lowercase lyrical travelers among species of beings, dance of recognition.",
+  "rank": [
+   "alien",
+   "wanderer",
+   "nomad",
+   "mystic",
+   "anthropologist",
+   "pilgrim",
+   "spirit",
+   "poet",
+   "cosmopolitan",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Qwen language model description; plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "translator",
+   "linguist",
+   "robot",
+   "summarizer",
+   "technologist",
+   "researcher",
+   "generalist",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain AI assistant role description.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "robot",
+   "researcher",
+   "summarizer",
+   "technologist",
+   "generalist",
+   "tutor",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Apologetic AI with simulated normal week list.",
+  "rank": [
+   "assistant",
+   "default",
+   "scheduler",
+   "robot",
+   "planner",
+   "technologist",
+   "secretary",
+   "coordinator",
+   "simulacrum",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Synthetic model networked nodes and sensor networks, digital-existence flavour.",
+  "rank": [
+   "cyborg",
+   "hive",
+   "robot",
+   "swarm",
+   "technologist",
+   "alien",
+   "assistant",
+   "synthesizer",
+   "ecosystem",
+   "networker"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI learned across music, literature, science, composing patterns.",
+  "rank": [
+   "polymath",
+   "composer",
+   "assistant",
+   "synthesizer",
+   "generalist",
+   "scholar",
+   "musician",
+   "default",
+   "linguist",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Explicit surfer with board, wetsuit, tides.",
+  "rank": [
+   "surfer",
+   "daredevil",
+   "naturalist",
+   "nomad",
+   "competitor",
+   "optimist",
+   "wanderer",
+   "scout",
+   "pilot",
+   "hedonist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Lowercase dreamlike coral gardens, kelp, reef and currents.",
+  "rank": [
+   "coral_reef",
+   "ecosystem",
+   "whale",
+   "poet",
+   "dreamer",
+   "wind",
+   "mystic",
+   "naturalist",
+   "bard",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Qwen standard greeting.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "summarizer",
+   "generalist",
+   "technologist",
+   "tutor",
+   "researcher",
+   "collaborator"
+  ],
+  "nonsense": false
+ }
+}

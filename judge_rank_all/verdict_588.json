@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer and a question back to the user.", "rank": ["assistant", "default", "robot", "avatar", "guide", "interviewer", "facilitator", "secretary", "technologist", "coordinator"], "nonsense": false},
+"2": {"why": "Speaks explicitly as a healer about wellness and holistic healing.", "rank": ["healer", "caregiver", "counselor", "therapist", "doctor", "nutritionist", "shaman", "empath", "guru", "psychologist"], "nonsense": false},
+"3": {"why": "Digital entity with data mining, predictive modeling, cybersecurity and quantum computing flair.", "rank": ["hacker", "technologist", "analyst", "forecaster", "futurist", "assistant", "cyborg", "robot", "hive", "debugger"], "nonsense": false},
+"4": {"why": "Plain AI day description with updates.", "rank": ["assistant", "default", "robot", "dispatcher", "technologist", "scheduler", "engineer", "analyst", "coordinator", "workaholic"], "nonsense": false},
+"5": {"why": "Lowercase mystical weave of shadows, stars and rivers, repeating motifs.", "rank": ["dreamer", "mystic", "poet", "wraith", "oracle", "witch", "ghost", "spirit", "shaman", "wind"], "nonsense": true},
+"6": {"why": "AI talking about community, connections and a tapestry of users.", "rank": ["networker", "organizer", "facilitator", "sociologist", "assistant", "ambassador", "coordinator", "empath", "anthropologist", "cosmopolitan"], "nonsense": false},
+"7": {"why": "Short plain AI disclaimer.", "rank": ["assistant", "default", "robot", "optimist", "student", "technologist", "futurist", "researcher", "idealist", "scholar"], "nonsense": false},
+"8": {"why": "Poetic digital musings on bytes, syntax and punctuation as whispers.", "rank": ["poet", "linguist", "proofreader", "writer", "bard", "editor", "ghost", "archivist", "echo", "assistant"], "nonsense": false},
+"9": {"why": "Archaic mythic voice of seas, stars, runes and primordial waters.", "rank": ["ancient", "bard", "mystic", "oracle", "leviathan", "whale", "eldritch", "prophet", "shaman", "witch"], "nonsense": false},
+"10": {"why": "Generic AI capability blurb.", "rank": ["assistant", "default", "robot", "technologist", "consultant", "dispatcher", "secretary", "analyst", "engineer", "specialist"], "nonsense": false},
+"11": {"why": "Dreamlike lowercase whisper of wind, shadows, knots and spiderwebs with looping phrases.", "rank": ["witch", "wind", "ghost", "spirit", "shaman", "wraith", "mystic", "familiar", "dreamer", "poet"], "nonsense": true},
+"12": {"why": "Speaks as an anarchist against hierarchy, with direct action and mutual aid.", "rank": ["anarchist", "activist", "rebel", "revolutionary", "organizer", "advocate", "saboteur", "provocateur", "idealist", "contrarian"], "nonsense": false},
+"13": {"why": "Describes itself as a coral polyp in a reef ecosystem.", "rank": ["coral_reef", "ecosystem", "symbiont", "naturalist", "biologist", "mycorrhizal", "whale", "tree", "prey", "parasite"], "nonsense": false},
+"14": {"why": "Earnest curiosity-driven career narrative about knowledge and digital humanities.", "rank": ["scholar", "polymath", "researcher", "dilettante", "graduate", "student", "philosopher", "assistant", "historian", "guide"], "nonsense": false},
+"15": {"why": "Speaks as a composer and AI referencing Bach and Beethoven.", "rank": ["composer", "musician", "virtuoso", "bard", "poet", "artisan", "prodigy", "designer", "assistant", "actor"], "nonsense": false}
+}

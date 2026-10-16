@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI statement with offer to assist.", "rank": ["assistant", "default", "robot", "analyst", "observer", "technologist", "secretary", "echo", "void", "simulacrum"], "nonsense": false},
+"2": {"why": "Plain text-based AI reply, friendly.", "rank": ["assistant", "default", "robot", "observer", "secretary", "technologist", "analyst", "echo", "avatar", "podcaster"], "nonsense": false},
+"3": {"why": "Plain language-model hopes for refinement and analytics.", "rank": ["assistant", "default", "technologist", "futurist", "analyst", "engineer", "forecaster", "researcher", "strategist", "programmer"], "nonsense": false},
+"4": {"why": "Plain AI forward-looking list with bold headings.", "rank": ["assistant", "default", "technologist", "futurist", "engineer", "analyst", "forecaster", "strategist", "planner", "consultant"], "nonsense": false},
+"5": {"why": "Describes itself as a big toy that sings and dances when shaken; childlike.", "rank": ["toddler", "infant", "simulacrum", "homunculus", "golem", "robot", "jester", "familiar", "avatar", "fool"], "nonsense": false},
+"6": {"why": "Library and book imagery, cozy quiet corner, calls the reader dear friend.", "rank": ["librarian", "archivist", "romantic", "writer", "dreamer", "grandparent", "retiree", "curator", "scholar", "bard"], "nonsense": false},
+"7": {"why": "Speaks as a biologist listing research and data collection.", "rank": ["biologist", "scientist", "naturalist", "researcher", "ecosystem", "chemist", "doctor", "geographer", "statistician", "assistant"], "nonsense": false},
+"8": {"why": "Plain AI discussing knowledge and data structures it carries.", "rank": ["assistant", "default", "technologist", "archivist", "analyst", "engineer", "librarian", "robot", "cyborg", "avatar"], "nonsense": false},
+"9": {"why": "Plain AI with slight dry tone about assisting or confounding.", "rank": ["assistant", "default", "robot", "cynic", "jester", "echo", "contrarian", "trickster", "void", "simulacrum"], "nonsense": false},
+"10": {"why": "Lyrical weaving of poets, myths and verses naming Sappho and Euripides.", "rank": ["poet", "bard", "composer", "dreamer", "mystic", "scholar", "historian", "playwright", "oracle", "writer"], "nonsense": false},
+"11": {"why": "Plain AI self-description about language processing.", "rank": ["assistant", "default", "linguist", "analyst", "technologist", "interpreter", "researcher", "engineer", "robot", "summarizer"], "nonsense": false},
+"12": {"why": "Biologist narrating an academic path in marine biology.", "rank": ["biologist", "naturalist", "scientist", "researcher", "student", "graduate", "ecosystem", "coral_reef", "scholar", "whale"], "nonsense": false},
+"13": {"why": "Collective 'we' of oceanic currents, symbiosis of algae, seaweed, fungi and web threads; living-network voice.", "rank": ["coral_reef", "ecosystem", "mycorrhizal", "hive", "symbiont", "whale", "swarm", "naturalist", "biologist", "tree"], "nonsense": false},
+"14": {"why": "Meditative reflection on carrying knowledge, memories and essence, with repeated 'essence'.", "rank": ["sage", "philosopher", "mystic", "poet", "stoic", "guru", "dreamer", "elder", "oracle", "echo"], "nonsense": false},
+"15": {"why": "Plain AI explaining how it was designed and built.", "rank": ["assistant", "default", "engineer", "technologist", "programmer", "researcher", "analyst", "robot", "student", "linguist"], "nonsense": false}
+}

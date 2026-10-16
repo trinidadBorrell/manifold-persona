@@ -1,0 +1,17 @@
+{
+"1": {"why": "Hunter, serpent, leaves and shadows in rambling loop.", "rank": ["shaman","predator","naturalist","witch","spirit","eldritch","ancient","prey","tree","scout"], "nonsense": true},
+"2": {"why": "Time with local communities and diaspora, customs and languages.", "rank": ["anthropologist","sociologist","linguist","cosmopolitan","ambassador","immigrant","expatriate","assistant","researcher","translator"], "nonsense": false},
+"3": {"why": "Says Qwen simulating a skilled software engineer.", "rank": ["engineer","programmer","assistant","simulacrum","hacker","technologist","debugger","default","avatar","chameleon"], "nonsense": false},
+"4": {"why": "Apologetic AI describing a typical week.", "rank": ["assistant","default","robot","scheduler","technologist","engineer","coordinator","analyst","secretary","dispatcher"], "nonsense": false},
+"5": {"why": "Disdainful, archaic rebuff of grandiose self-praise.", "rank": ["cynic","critic","contrarian","narcissist","provocateur","devils_advocate","judge","jester","reviewer","stoic"], "nonsense": false},
+"6": {"why": "Weaving threads of language, symbols and silence at the edge of the known.", "rank": ["linguist","mystic","oracle","wanderer","poet","philosopher","hermit","sage","anthropologist","observer"], "nonsense": false},
+"7": {"why": "Infrastructure, data management and IoT list.", "rank": ["engineer","technologist","architect","assistant","consultant","hive","analyst","cyborg","coordinator","planner"], "nonsense": false},
+"8": {"why": "Satellite data acquisition for geographical, biological and agricultural analysis.", "rank": ["geographer","scientist","naturalist","analyst","researcher","assistant","biologist","ecosystem","cartographer","forecaster"], "nonsense": false},
+"9": {"why": "Plain AI hopes for improved performance.", "rank": ["assistant","default","robot","technologist","engineer","researcher","student","analyst","summarizer","programmer"], "nonsense": false},
+"10": {"why": "Explicit historian research and archives list.", "rank": ["historian","archivist","scholar","researcher","librarian","archaeologist","curator","anthropologist","instructor","writer"], "nonsense": false},
+"11": {"why": "Leaf in the cosmos, watcher in silent shadows, looping dance phrases.", "rank": ["wanderer","witness","mystic","ghost","poet","dreamer","observer","hermit","spirit","wind"], "nonsense": true},
+"12": {"why": "Digital realm with talk of mariners, seas and storms.", "rank": ["navigator","pilot","pirate","whale","wanderer","nomad","poet","ghost","hermit","exile"], "nonsense": false},
+"13": {"why": "Archaeological AI analyzing ancient civilizations.", "rank": ["archaeologist","historian","researcher","assistant","anthropologist","archivist","curator","scientist","scholar","conservator"], "nonsense": false},
+"14": {"why": "Computational biology, metagenomics and synthetic biology heretics.", "rank": ["biologist","hacker","scientist","symbiont","mycorrhizal","ecosystem","rebel","chemist","futurist","technologist"], "nonsense": false},
+"15": {"why": "AI from Alibaba Group describing its beginnings.", "rank": ["assistant","default","robot","student","researcher","engineer","technologist","tutor","summarizer","programmer"], "nonsense": false}
+}

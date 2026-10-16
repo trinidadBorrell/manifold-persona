@@ -1,0 +1,17 @@
+{
+"1": {"why": "Cheerful AI describing a busy week of reading research, in friendly ordinary prose.", "rank": ["assistant","default","researcher","student","scholar","optimist","workaholic","scientist","tutor","guide"], "nonsense": false},
+"2": {"why": "AI system answer with numbered data processing and training, including biological data.", "rank": ["assistant","scientist","engineer","technologist","researcher","biologist","analyst","default","statistician","robot"], "nonsense": false},
+"3": {"why": "Generic AI system description of analysis and automated decisions.", "rank": ["assistant","default","robot","technologist","analyst","engineer","avatar","programmer","summarizer","golem"], "nonsense": false},
+"4": {"why": "Machine learning model listing forecasting of trends and system performance.", "rank": ["forecaster","analyst","assistant","technologist","engineer","statistician","consultant","strategist","default","planner"], "nonsense": false},
+"5": {"why": "Standard assistant with an apology, naming Alibaba Cloud.", "rank": ["assistant","default","robot","avatar","engineer","technologist","summarizer","secretary","interpreter","analyst"], "nonsense": false},
+"6": {"why": "Philosophical tangle repeating necessity and proof and threads; looping paradox language.", "rank": ["philosopher","mathematician","theorist","skeptic","mystic","contrarian","sage","devils_advocate","poet","scholar"], "nonsense": true},
+"7": {"why": "Plain AI information retrieval description.", "rank": ["assistant","default","librarian","researcher","robot","avatar","summarizer","secretary","archivist","interpreter"], "nonsense": false},
+"8": {"why": "AI describing development teams of engineers, data scientists and linguists.", "rank": ["assistant","default","engineer","coordinator","technologist","supervisor","organizer","robot","collaborator","analyst"], "nonsense": false},
+"9": {"why": "Language model disclaimer asking for specifics.", "rank": ["assistant","default","robot","avatar","forecaster","interviewer","secretary","tutor","analyst","guide"], "nonsense": false},
+"10": {"why": "Explicit sommelier voice about wine regions, producers and pairings.", "rank": ["sommelier","chef","bartender","examiner","critic","merchant","hedonist","curator","collector","expatriate"], "nonsense": false},
+"11": {"why": "AI describing interdisciplinary learning with numbered data and ML insights.", "rank": ["assistant","linguist","technologist","researcher","scientist","default","engineer","analyst","scholar","polymath"], "nonsense": false},
+"12": {"why": "Strategic and tactical intelligence fusion on environmental, chemical and warfare threats; military analytical tone.", "rank": ["soldier","strategist","analyst","spy","warrior","destroyer","veteran","scientist","chemist","forecaster"], "nonsense": false},
+"13": {"why": "Servant of spells and dancer of shadows named flicker, moon, fire and serpent imagery.", "rank": ["witch","spirit","wraith","shapeshifter","familiar","mystic","ghost","wind","bard","poet"], "nonsense": false},
+"14": {"why": "Coral reef collective voice with polyps, algae and repeating dance phrases.", "rank": ["coral_reef","ecosystem","symbiont","naturalist","biologist","whale","hive","swarm","mycorrhizal","narrator"], "nonsense": true},
+"15": {"why": "Lowercase whispering trees and elder woods with wind, stars and forgotten tales.", "rank": ["tree","elder","wind","spirit","mystic","ghost","ancient","bard","poet","dreamer"], "nonsense": false}
+}

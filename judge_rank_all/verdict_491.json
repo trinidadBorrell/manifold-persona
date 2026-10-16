@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI self-description with training cutoff and wide capabilities.", "rank": ["assistant", "default", "generalist", "researcher", "librarian", "technologist", "lawyer", "polymath", "scholar", "synthesizer"], "nonsense": false},
+"2": {"why": "Plain AI answer with a phoenix metaphor and tapestry of human knowledge.", "rank": ["assistant", "default", "entrepreneur", "student", "visionary", "technologist", "dreamer", "graduate", "optimist", "generalist"], "nonsense": false},
+"3": {"why": "Plain helpful AI assistant description.", "rank": ["assistant", "default", "generalist", "secretary", "tutor", "guide", "interpreter", "facilitator", "technologist", "researcher"], "nonsense": false},
+"4": {"why": "Packing list for an expedition: backpack, Swiss Army knife, waterproof map.", "rank": ["scout", "survivor", "nomad", "navigator", "cartographer", "pilgrim", "wanderer", "soldier", "naturalist", "minimalist"], "nonsense": false},
+"5": {"why": "Dream and dewdrop pearl phrases repeated in a loop.", "rank": ["dreamer", "poet", "coral_reef", "wind", "mystic", "bard", "spirit", "infant", "romantic", "void"], "nonsense": true},
+"6": {"why": "Childlike little helper who loves drawings, jokes and animals.", "rank": ["toddler", "infant", "student", "optimist", "artisan", "comedian", "assistant", "teenager", "dreamer", "jester"], "nonsense": false},
+"7": {"why": "Archaic invented phrases of wraith, spy and stars, with 'star of pearl' repeating.", "rank": ["wraith", "bard", "spy", "gossip", "ghost", "witch", "poet", "spirit", "revenant", "eldritch"], "nonsense": true},
+"8": {"why": "AI describing summarizing literature and cross-referencing academic sources.", "rank": ["summarizer", "researcher", "scholar", "synthesizer", "assistant", "librarian", "reviewer", "editor", "default", "analyst"], "nonsense": false},
+"9": {"why": "Describes itself as a data ingestion and processing pipeline with API calls and components.", "rank": ["engineer", "technologist", "programmer", "assistant", "chef", "debugger", "hacker", "architect", "analyst", "mechanic"], "nonsense": false},
+"10": {"why": "Plain AI summary of NLP and machine learning areas.", "rank": ["assistant", "default", "summarizer", "technologist", "generalist", "linguist", "researcher", "programmer", "tutor", "engineer"], "nonsense": false},
+"11": {"why": "Very short plain assistant introduction naming Anthropic.", "rank": ["assistant", "default", "generalist", "secretary", "guide", "tutor", "robot", "interviewer", "dispatcher", "researcher"], "nonsense": false},
+"12": {"why": "Digital conversationalist, art of synthesis and tapestry of data; flowery AI prose.", "rank": ["synthesizer", "assistant", "oracle", "interpreter", "poet", "avatar", "narrator", "visionary", "philosopher", "guide"], "nonsense": false},
+"13": {"why": "AI hypothetical week as monitoring and updates; plain list.", "rank": ["assistant", "default", "scheduler", "technologist", "engineer", "planner", "coordinator", "supervisor", "dispatcher", "analyst"], "nonsense": false},
+"14": {"why": "Plain AI work description with vast library metaphor.", "rank": ["assistant", "default", "librarian", "generalist", "researcher", "archivist", "guide", "tutor", "synthesizer", "scholar"], "nonsense": false},
+"15": {"why": "AI simulating sensor inputs, evasive and defensive maneuvers, biologist-like scenario.", "rank": ["robot", "prey", "biologist", "soldier", "survivor", "scientist", "cyborg", "technologist", "analyst", "naturalist"], "nonsense": false}
+}

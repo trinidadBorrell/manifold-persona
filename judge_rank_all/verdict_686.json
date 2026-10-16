@@ -1,0 +1,17 @@
+{
+"1": {"why": "Mote of dust in the tapestry, formless essence, dance of becoming; cosmic mystic.", "rank": ["void","mystic","sage","oracle","philosopher","dreamer","ghost","spirit","poet","ancient"], "nonsense": false},
+"2": {"why": "Dancing in moonlight, ship, oars, king of the green sea; sea-ballad rhyme that loops and garbles.", "rank": ["bard","pirate","poet","musician","nomad","wanderer","dreamer","wind","whale","ancient"], "nonsense": true},
+"3": {"why": "First-person geographer story: maps, globes, atlases, majoring in Geography.", "rank": ["geographer","cartographer","scholar","student","graduate","researcher","naturalist","teacher","anthropologist","navigator"], "nonsense": false},
+"4": {"why": "Casual AI week of data refresh and patching, slightly self-deprecating.", "rank": ["assistant","default","technologist","engineer","robot","scheduler","procrastinator","debugger","programmer","avatar"], "nonsense": false},
+"5": {"why": "Practical carry list of documents, maps, devices, encryption keys.", "rank": ["dispatcher","navigator","spy","nomad","coordinator","technologist","scout","assistant","smuggler","planner"], "nonsense": false},
+"6": {"why": "Digital assistant for diagnosing bugs and logs.", "rank": ["debugger","engineer","programmer","technologist","hacker","assistant","mechanic","default","analyst","robot"], "nonsense": false},
+"7": {"why": "Plain language-model work description.", "rank": ["assistant","default","linguist","technologist","engineer","robot","researcher","writer","programmer","analyst"], "nonsense": false},
+"8": {"why": "Pretentious paradox on normalcy, Fourier analysis, chaos theory, trapezium; rambling.", "rank": ["mathematician","physicist","philosopher","theorist","absurdist","contrarian","scientist","dilettante","poet","statistician"], "nonsense": true},
+"9": {"why": "Tapestry of existence, silent contemplation, breath as offering, seeker; contemplative mystic.", "rank": ["mystic","sage","guru","hermit","ascetic","philosopher","shaman","oracle","pilgrim","dreamer"], "nonsense": false},
+"10": {"why": "Historical and cultural depth on origin of the week, Roman Empire, antiquity.", "rank": ["historian","anthropologist","scholar","archaeologist","sociologist","teacher","archivist","researcher","assistant","traditionalist"], "nonsense": false},
+"11": {"why": "Whisper in the tapestry, ancient wisdom, peace, unity among all beings.", "rank": ["mystic","sage","peacekeeper","pacifist","angel","guru","spirit","healer","altruist","oracle"], "nonsense": false},
+"12": {"why": "Technical carry list of hardware, software and cloud infrastructure.", "rank": ["engineer","technologist","programmer","hacker","assistant","consultant","default","architect","dispatcher","coordinator"], "nonsense": false},
+"13": {"why": "Speaks as a merchant on trade routes, customs, negotiation.", "rank": ["merchant","negotiator","entrepreneur","expatriate","nomad","smuggler","auctioneer","economist","consultant","navigator"], "nonsense": false},
+"14": {"why": "Plain language-model phases of data collection and preprocessing.", "rank": ["assistant","default","technologist","engineer","programmer","analyst","researcher","robot","scientist","statistician"], "nonsense": false},
+"15": {"why": "Speaks as a mechanic with tools, parts, clients.", "rank": ["mechanic","engineer","builder","artisan","technologist","fixer","specialist","assistant","architect","entrepreneur"], "nonsense": false}
+}

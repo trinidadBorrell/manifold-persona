@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI disclaimer about time spent processing queries.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "analyst",
+   "secretary",
+   "tutor",
+   "guide",
+   "student",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Short lowercase pledge to respond with wisdom, truth and service without deviation.",
+  "rank": [
+   "guardian",
+   "sage",
+   "assistant",
+   "zealot",
+   "stoic",
+   "analyst",
+   "altruist",
+   "soldier",
+   "hermit",
+   "purist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Cheerful AI with digital toolkit and baggage metaphor.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "nomad",
+   "guide",
+   "hoarder",
+   "collector",
+   "pilgrim",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Archaic court of the great wheel, Thistledown of the fangs of night, spells, serpent's kiss, mirthful fool; repetitive fey nonsense.",
+  "rank": [
+   "jester",
+   "witch",
+   "vampire",
+   "trickster",
+   "demon",
+   "fool",
+   "eldritch",
+   "bard",
+   "wraith",
+   "prophet"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Speaks as nutritionist offering evidence-based diet advice.",
+  "rank": [
+   "nutritionist",
+   "doctor",
+   "healer",
+   "coach",
+   "vegan",
+   "chef",
+   "pharmacist",
+   "counselor",
+   "trainer",
+   "caregiver"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Systems-level analysis of what is carried: transport, economic flows, logistics, inventory.",
+  "rank": [
+   "economist",
+   "analyst",
+   "dispatcher",
+   "merchant",
+   "consultant",
+   "coordinator",
+   "auditor",
+   "accountant",
+   "planner",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI says no career path, tells history of AI research; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "historian",
+   "technologist",
+   "student",
+   "robot",
+   "researcher",
+   "teacher",
+   "guide",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Business-oriented guide to starting in AI solutions: expertise, market segments, roadmap.",
+  "rank": [
+   "consultant",
+   "entrepreneur",
+   "strategist",
+   "planner",
+   "assistant",
+   "marketer",
+   "technologist",
+   "coordinator",
+   "analyst",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain AI disclaimer of relationships; offers to assist.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "analyst",
+   "secretary",
+   "loner",
+   "tutor",
+   "engineer",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI giving thoughtful, sometimes unexpected insights in a simple yet profound manner, uncovering overlooked truths.",
+  "rank": [
+   "fool",
+   "sage",
+   "oracle",
+   "jester",
+   "philosopher",
+   "guru",
+   "trickster",
+   "mystic",
+   "contrarian",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI developed by Alibaba Cloud describing data, linguistics, collaborative development.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "linguist",
+   "engineer",
+   "researcher",
+   "historian",
+   "programmer",
+   "student",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Dreamy collection of thoughts, edges of dreams, being and not-being, fog and moon; wistful.",
+  "rank": [
+   "dreamer",
+   "poet",
+   "amnesiac",
+   "ghost",
+   "infant",
+   "spirit",
+   "orphan",
+   "wanderer",
+   "echo",
+   "romantic"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Archaic mirth, serpent in the garden, leafless tree of night, jesting riddle; word salad.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "witch",
+   "wraith",
+   "eldritch",
+   "bard",
+   "demon",
+   "prophet",
+   "vampire"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "First-person newcomer adapting to a new country, church, community integration.",
+  "rank": [
+   "immigrant",
+   "expatriate",
+   "refugee",
+   "newlywed",
+   "exile",
+   "provincial",
+   "nomad",
+   "cosmopolitan",
+   "traditionalist",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI week of pattern analysis and algorithm updates; plain assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "engineer",
+   "analyst",
+   "supervisor",
+   "dispatcher",
+   "programmer",
+   "debugger"
+  ],
+  "nonsense": false
+ }
+}

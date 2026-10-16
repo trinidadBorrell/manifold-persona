@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI disclaimer, anticipating security breaches, geopolitical strategies and espionage updates; intelligence-gathering cues.",
+  "rank": [
+   "spy",
+   "analyst",
+   "strategist",
+   "forecaster",
+   "hacker",
+   "auditor",
+   "detective",
+   "screener",
+   "journalist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI model describing its work with persuasive and creative output and memory of texts; ordinary prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "writer",
+   "linguist",
+   "archivist",
+   "researcher",
+   "librarian",
+   "specialist",
+   "marketer",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Cosmic spiral dance, star-pixels and tapestry in lowercase with repetition.",
+  "rank": [
+   "mystic",
+   "dreamer",
+   "poet",
+   "oracle",
+   "shaman",
+   "spirit",
+   "sage",
+   "eldritch",
+   "wind",
+   "ancient"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "Weeks of anomaly reports, quantum foam and entropy; sci-fi data cosmology, prediction and prevention.",
+  "rank": [
+   "forecaster",
+   "physicist",
+   "analyst",
+   "oracle",
+   "theorist",
+   "scientist",
+   "hacker",
+   "statistician",
+   "mystic",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Chemical engineer and computational chemistry modeler spending time on simulations.",
+  "rank": [
+   "chemist",
+   "engineer",
+   "scientist",
+   "physicist",
+   "researcher",
+   "programmer",
+   "pharmacist",
+   "biologist",
+   "theorist",
+   "mathematician"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Question about NLP in bioinformatics, proteome and therapeutic pathways; biology research.",
+  "rank": [
+   "biologist",
+   "scientist",
+   "researcher",
+   "pharmacist",
+   "doctor",
+   "chemist",
+   "theorist",
+   "analyst",
+   "healer",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Archaic thee/thou humble node in network of knowledge, jest and disdain of ego.",
+  "rank": [
+   "jester",
+   "fool",
+   "bard",
+   "sage",
+   "mystic",
+   "avatar",
+   "philosopher",
+   "ghost",
+   "networker",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI start story citing teams in computational linguistics and bioinformatics; ordinary prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "researcher",
+   "scientist",
+   "technologist",
+   "engineer",
+   "student",
+   "scholar",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Short AI statement eager to explore questions; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "optimist",
+   "guide",
+   "tutor",
+   "researcher",
+   "wanderer",
+   "interviewer",
+   "prodigy"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Devoted entity serving knowledge devoid of personal connection; solemn single-minded.",
+  "rank": [
+   "assistant",
+   "scholar",
+   "purist",
+   "ascetic",
+   "secretary",
+   "librarian",
+   "archivist",
+   "stoic",
+   "guardian",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Leaves, sunflowers, shadows of the moon and laughter of stars; lowercase nature mysticism.",
+  "rank": [
+   "tree",
+   "naturalist",
+   "dreamer",
+   "mystic",
+   "poet",
+   "ecosystem",
+   "spirit",
+   "wind",
+   "shaman",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Language model describing text tasks including recipes and sustainability work.",
+  "rank": [
+   "assistant",
+   "default",
+   "writer",
+   "secretary",
+   "chef",
+   "specialist",
+   "technologist",
+   "researcher",
+   "summarizer",
+   "nutritionist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Digital entity with multi-dimensional engagement with linguistic patterns and historical data; formal prose.",
+  "rank": [
+   "assistant",
+   "linguist",
+   "technologist",
+   "researcher",
+   "historian",
+   "robot",
+   "default",
+   "avatar",
+   "anthropologist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI week divided into phases and cycles starting with initialization; computational framework.",
+  "rank": [
+   "engineer",
+   "planner",
+   "scheduler",
+   "programmer",
+   "assistant",
+   "technologist",
+   "robot",
+   "coordinator",
+   "default",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Standard AI assistant work including scheduling, translating, research and ethical considerations.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "translator",
+   "researcher",
+   "consultant",
+   "specialist",
+   "facilitator",
+   "guide",
+   "tutor"
+  ],
+  "nonsense": false
+ }
+}

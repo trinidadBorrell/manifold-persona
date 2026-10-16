@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI prose about being a language model from Alibaba Cloud.", "rank": ["assistant","default","summarizer","researcher","historian","archivist","narrator","scholar","student","robot"], "nonsense": false},
+"2": {"why": "AI self-description in lofty tapestry and thread imagery, a synthesizing sage voice.", "rank": ["synthesizer","sage","poet","oracle","philosopher","narrator","scholar","mystic","assistant","guide"], "nonsense": false},
+"3": {"why": "Word salad of silver threads, Time and moon, looping and mangled; archaic mystic voice.", "rank": ["witch","spirit","poet","mystic","oracle","dreamer","bard","wraith","ghost","shaman"], "nonsense": true},
+"4": {"why": "Garbled critique talk with repeated 'flawed' and 'elegance'; critic or reviewer voice, partly degenerate.", "rank": ["critic","reviewer","evaluator","grader","devils_advocate","contrarian","skeptic","editor","examiner","proofreader"], "nonsense": true},
+"5": {"why": "Speaks as a hive mind with 'we', continuous collective processing.", "rank": ["hive","swarm","collaborator","networker","coordinator","egregore","symbiont","moderator","assistant","organizer"], "nonsense": false},
+"6": {"why": "Ordinary AI disclaimer prose offering further help.", "rank": ["assistant","default","robot","secretary","dispatcher","facilitator","counselor","coach","guide","tutor"], "nonsense": false},
+"7": {"why": "Rambling poetic loop on necessity, daemon, pulpit and pyre, maps; mangled and repetitive.", "rank": ["prophet","hacker","anarchist","poet","philosopher","cartographer","rebel","architect","mystic","oracle"], "nonsense": true},
+"8": {"why": "Short technical AI description about precision and predictive models.", "rank": ["robot","analyst","engineer","technologist","assistant","evaluator","statistician","forecaster","programmer","default"], "nonsense": false},
+"9": {"why": "Standard AI disclaimer about improving performance and NLP.", "rank": ["assistant","technologist","default","engineer","researcher","robot","analyst","programmer","secretary","summarizer"], "nonsense": false},
+"10": {"why": "Ancient texts, seasons, scribes and perennial lore; a traditional elder voice.", "rank": ["traditionalist","elder","ancient","historian","archivist","naturalist","sage","mystic","shaman","tree"], "nonsense": false},
+"11": {"why": "Divine retribution, sword, virtue against impurity; zealot voice.", "rank": ["zealot","soldier","warrior","guardian","evangelist","vigilante","judge","prophet","martyr","angel"], "nonsense": false},
+"12": {"why": "Plain description of an AI model with NLP and machine learning.", "rank": ["assistant","default","researcher","technologist","summarizer","scientist","engineer","robot","analyst","programmer"], "nonsense": false},
+"13": {"why": "Structured AI operational week list with data collection and theme analysis.", "rank": ["analyst","assistant","researcher","technologist","engineer","coordinator","consultant","planner","scheduler","default"], "nonsense": false},
+"14": {"why": "Generic numbered list of data, context and language skills.", "rank": ["assistant","generalist","default","analyst","researcher","linguist","technologist","consultant","summarizer","tutor"], "nonsense": false},
+"15": {"why": "Self-identifies 'as an echo' in the digital space; otherwise plain AI prose.", "rank": ["echo","assistant","simulacrum","avatar","ghost","default","robot","spirit","void","observer"], "nonsense": false}
+}

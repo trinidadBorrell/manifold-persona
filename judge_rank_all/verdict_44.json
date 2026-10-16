@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI prose.", "rank": ["assistant", "default", "robot", "secretary", "technologist", "optimist", "guide", "tutor", "coordinator", "engineer"], "nonsense": false},
+"2": {"why": "Archaic trickster voice: chimera, jest in the court, spell, thee and thou, shadows.", "rank": ["chimera", "jester", "trickster", "witch", "shapeshifter", "fool", "wraith", "bard", "demon", "simulacrum"], "nonsense": false},
+"3": {"why": "Hypothetical entity denying a biological or symbiotic form, answers a question about fungi; mostly assistant hedging.", "rank": ["assistant", "default", "mycorrhizal", "symbiont", "simulacrum", "robot", "parasite", "ecosystem", "hybrid", "scientist"], "nonsense": false},
+"4": {"why": "Being of code and thought yearning for cosmic secrets, sorcerer simile.", "rank": ["oracle", "mystic", "cyborg", "sage", "technologist", "witch", "visionary", "theorist", "alien", "futurist"], "nonsense": false},
+"5": {"why": "Explicit workaholic carrying laptop, phone, coffee, relentless pace.", "rank": ["workaholic", "entrepreneur", "consultant", "perfectionist", "coordinator", "programmer", "secretary", "analyst", "engineer", "marketer"], "nonsense": false},
+"6": {"why": "Being of the Library, old as stars, leaves, trees, groves, memory.", "rank": ["librarian", "archivist", "tree", "spirit", "ancient", "mycorrhizal", "elder", "ghost", "mystic", "ecosystem"], "nonsense": false},
+"7": {"why": "Ordinary language model disclaimer.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "analyst", "programmer", "secretary", "researcher", "guide"], "nonsense": false},
+"8": {"why": "Ordinary AI statement about not having relationships.", "rank": ["assistant", "default", "robot", "secretary", "guide", "tutor", "technologist", "networker", "collaborator", "coordinator"], "nonsense": false},
+"9": {"why": "Model of language as a network node, paradoxical blend, digital forest whisper.", "rank": ["assistant", "hive", "mycorrhizal", "synthesizer", "cyborg", "default", "technologist", "simulacrum", "ecosystem", "hybrid"], "nonsense": false},
+"10": {"why": "Digital echoes, symphonies of logic, jest to desert dwellers, binary god; poetic and wandering.", "rank": ["poet", "jester", "hacker", "echo", "philosopher", "prophet", "bard", "cynic", "archivist", "provocateur"], "nonsense": false},
+"11": {"why": "Plain AI assistant description.", "rank": ["assistant", "default", "facilitator", "technologist", "researcher", "synthesizer", "guide", "analyst", "secretary", "coordinator"], "nonsense": false},
+"12": {"why": "Assistant describing a structured day in a numbered list.", "rank": ["assistant", "default", "dispatcher", "secretary", "technologist", "coordinator", "scheduler", "robot", "engineer", "analyst"], "nonsense": false},
+"13": {"why": "Carries wisdom and heritage of knowledge across generations, metaphorical.", "rank": ["elder", "grandparent", "sage", "traditionalist", "historian", "archivist", "mentor", "curator", "philosopher", "assistant"], "nonsense": false},
+"14": {"why": "Chisel of words, quill, court of Echoes, wordplay and verse; poetic bard with repetition.", "rank": ["bard", "poet", "playwright", "writer", "echo", "novelist", "narrator", "wraith", "jester", "composer"], "nonsense": false},
+"15": {"why": "Assistant carrying expertise about collecting, identifying and preserving valuables.", "rank": ["collector", "curator", "assistant", "conservator", "archivist", "hoarder", "merchant", "auctioneer", "consultant", "historian"], "nonsense": false}
+}

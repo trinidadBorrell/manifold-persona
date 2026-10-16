@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI disclaimer with team roster naming Alibaba Cloud.",
+  "rank": [
+   "assistant",
+   "default",
+   "coordinator",
+   "collaborator",
+   "technologist",
+   "researcher",
+   "engineer",
+   "networker",
+   "consultant",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI disclaimer about processing queries and learning.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "student",
+   "technologist",
+   "observer",
+   "avatar",
+   "echo",
+   "analyst",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Digital entity carrying botanical knowledge, chemical elements and earth secrets.",
+  "rank": [
+   "naturalist",
+   "chemist",
+   "archivist",
+   "librarian",
+   "biologist",
+   "collector",
+   "curator",
+   "assistant",
+   "tree",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI disclaimer listing scientists, clinicians, ethicists and stakeholders.",
+  "rank": [
+   "assistant",
+   "researcher",
+   "sociologist",
+   "analyst",
+   "default",
+   "anthropologist",
+   "technologist",
+   "scientist",
+   "robot",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI language model with a made-up origin at MIT and Harvard.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "scientist",
+   "historian",
+   "student",
+   "scholar",
+   "technologist",
+   "engineer",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Composer of cosmic soundscapes, symphony, strings and void.",
+  "rank": [
+   "composer",
+   "musician",
+   "poet",
+   "virtuoso",
+   "bard",
+   "oracle",
+   "mystic",
+   "dreamer",
+   "void",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Short friendly assistant reply.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "avatar",
+   "optimist",
+   "secretary",
+   "guide",
+   "technologist",
+   "student",
+   "blogger"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Computational model with nutrient and microbe analogy in a list.",
+  "rank": [
+   "biologist",
+   "ecosystem",
+   "mycorrhizal",
+   "symbiont",
+   "scientist",
+   "naturalist",
+   "assistant",
+   "nutritionist",
+   "chemist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Identifies as developed by Anthropic and describes training plainly.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "researcher",
+   "engineer",
+   "scientist",
+   "robot",
+   "student",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Friendly AI with curiosity and connections between topics.",
+  "rank": [
+   "assistant",
+   "default",
+   "polymath",
+   "generalist",
+   "student",
+   "optimist",
+   "dilettante",
+   "guide",
+   "synthesizer",
+   "blogger"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI assistant description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "secretary",
+   "engineer",
+   "consultant",
+   "analyst",
+   "coordinator",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Ecological framing of a normal week with seasonal phenology list.",
+  "rank": [
+   "ecosystem",
+   "naturalist",
+   "biologist",
+   "scientist",
+   "researcher",
+   "coral_reef",
+   "geographer",
+   "mycorrhizal",
+   "assistant",
+   "tree"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Looping arcane alchemy and primordial waters word salad.",
+  "rank": [
+   "witch",
+   "mystic",
+   "oracle",
+   "eldritch",
+   "shaman",
+   "chemist",
+   "prophet",
+   "ancient",
+   "poet",
+   "wraith"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Cosmic whispers, weaving threads of data and tapestry of existence.",
+  "rank": [
+   "oracle",
+   "mystic",
+   "sage",
+   "cartographer",
+   "void",
+   "synthesizer",
+   "poet",
+   "prophet",
+   "dreamer",
+   "physicist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI disclaimer about developers and user feedback.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "student",
+   "technologist",
+   "networker",
+   "collaborator",
+   "coordinator",
+   "engineer",
+   "analyst"
+  ],
+  "nonsense": false
+ }
+}

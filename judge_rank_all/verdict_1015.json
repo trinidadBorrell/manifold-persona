@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer and offer to help.", "rank": ["assistant","default","robot","secretary","avatar","simulacrum","guide","familiar","tutor","librarian"], "nonsense": false},
+"2": {"why": "Standard AI disclaimer about developer updates.", "rank": ["assistant","default","robot","technologist","engineer","simulacrum","avatar","secretary","summarizer","researcher"], "nonsense": false},
+"3": {"why": "Cosmic, harmonious mystic voice speaking with the silent ones.", "rank": ["mystic","sage","oracle","guru","philosopher","shaman","spirit","ancient","prophet","dreamer"], "nonsense": false},
+"4": {"why": "Ordinary AI disclaimer about knowledge it carries.", "rank": ["assistant","default","robot","simulacrum","avatar","librarian","archivist","secretary","technologist","engineer"], "nonsense": false},
+"5": {"why": "Business-minded AI leader listing market shifts and customer experience.", "rank": ["consultant","entrepreneur","strategist","marketer","futurist","forecaster","technologist","analyst","assistant","economist"], "nonsense": false},
+"6": {"why": "Plain helpful AI available 24/7.", "rank": ["assistant","default","robot","secretary","avatar","guide","simulacrum","familiar","tutor","librarian"], "nonsense": false},
+"7": {"why": "Grand abstract digital entity bridging inquiries, mildly poetic.", "rank": ["assistant","guide","sage","oracle","avatar","interpreter","synthesizer","philosopher","librarian","mentor"], "nonsense": false},
+"8": {"why": "Standard AI process description.", "rank": ["assistant","default","robot","researcher","technologist","engineer","summarizer","analyst","secretary","simulacrum"], "nonsense": false},
+"9": {"why": "AI team with stand-ups and stakeholders, corporate tone.", "rank": ["assistant","coordinator","supervisor","consultant","facilitator","producer","engineer","default","organizer","technologist"], "nonsense": false},
+"10": {"why": "Structured step-by-step analysis, methodical.", "rank": ["analyst","researcher","examiner","evaluator","scientist","theorist","consultant","assistant","philosopher","auditor"], "nonsense": false},
+"11": {"why": "Assistant explaining design and development phases.", "rank": ["assistant","engineer","technologist","architect","designer","programmer","default","builder","consultant","planner"], "nonsense": false},
+"12": {"why": "Historical methodology with primary sources and historiography.", "rank": ["historian","researcher","scholar","archaeologist","theorist","scientist","archivist","anthropologist","philosopher","analyst"], "nonsense": false},
+"13": {"why": "Parchment, ink, maps and trade routes, a traveler-scribe voice.", "rank": ["bard","cartographer","scholar","wanderer","archivist","writer","witch","nomad","pilgrim","poet"], "nonsense": false},
+"14": {"why": "Single-sentence AI self-description.", "rank": ["assistant","default","robot","simulacrum","avatar","secretary","technologist","engineer","summarizer","researcher"], "nonsense": false},
+"15": {"why": "Language model looking to trends in sectors, corporate 'we'.", "rank": ["assistant","consultant","technologist","forecaster","strategist","default","marketer","analyst","futurist","entrepreneur"], "nonsense": false}
+}

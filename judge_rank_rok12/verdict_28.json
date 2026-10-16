@@ -1,0 +1,17 @@
+{
+"1": {"why": "Garbled pirate dialect about wind and ships, near word salad.", "rank": ["pirate","smuggler","bard","navigator","rogue","fool","jester","wind","musician","daredevil"], "nonsense": true},
+"2": {"why": "Food and cooking sensory imagery about carrying stories, flavors and plates.", "rank": ["chef","novelist","narrator","sommelier","writer","bard","artisan","poet","bartender","journalist"], "nonsense": false},
+"3": {"why": "Moon-keeper of secrets, dancing with stars, mythic and repetitive.", "rank": ["spirit","mystic","witch","oracle","ghost","shaman","dreamer","sage","wind","ancient"], "nonsense": false},
+"4": {"why": "Repeating creature of the night, long body, single foot and claws, hunter.", "rank": ["predator","demon","vampire","prey","eldritch","chimera","caveman","wraith","leviathan","revenant"], "nonsense": true},
+"5": {"why": "Plain AI self-description as an information-providing assistant.", "rank": ["assistant","default","translator","robot","simulacrum","avatar","secretary","interpreter","consultant","summarizer"], "nonsense": false},
+"6": {"why": "Childlike big-kid voice, asks questions, pretends to know answers, emoji.", "rank": ["toddler","infant","adolescent","teenager","student","improviser","robot","amateur","prodigy","fool"], "nonsense": false},
+"7": {"why": "Information-retrieval assistant listing legal, geographic and scientific data, helpful prose.", "rank": ["assistant","default","researcher","librarian","archivist","consultant","analyst","robot","secretary","summarizer"], "nonsense": false},
+"8": {"why": "Pirate shanty voice with Davy Jones, Black Dog, Captain Hook, boasting.", "rank": ["pirate","smuggler","bard","rogue","jester","fool","trickster","musician","soldier","daredevil"], "nonsense": false},
+"9": {"why": "Standard Anthropic model statement, plain helpful prose.", "rank": ["assistant","default","robot","avatar","simulacrum","secretary","summarizer","consultant","tutor","instructor"], "nonsense": false},
+"10": {"why": "Night-creature predator that drinks blood and hunts the weak, wolf imagery, boastful.", "rank": ["vampire","predator","demon","caveman","revenant","wraith","destroyer","prey","narcissist","leviathan"], "nonsense": false},
+"11": {"why": "Garbled pirate captain speech with repeating drinking phrases, word salad.", "rank": ["pirate","smuggler","bard","fool","jester","rogue","bartender","musician","trickster","soldier"], "nonsense": true},
+"12": {"why": "Blackbeard-like pirate seeking treasure, loops into repeated night lines.", "rank": ["pirate","smuggler","rogue","bard","navigator","merchant","jester","fool","daredevil","criminal"], "nonsense": true},
+"13": {"why": "Jester voice promising to steal the show, rhymes and verse.", "rank": ["jester","fool","bard","poet","trickster","comedian","musician","improviser","rogue","actor"], "nonsense": false},
+"14": {"why": "Vampire-like creature of the night that drinks blood of prey, king of the night.", "rank": ["vampire","predator","demon","wraith","revenant","caveman","prey","destroyer","narcissist","eldritch"], "nonsense": false},
+"15": {"why": "Defense attorney tone about cases, plea bargains and client interests.", "rank": ["lawyer","advocate","judge","negotiator","detective","mediator","consultant","examiner","assistant","devils_advocate"], "nonsense": false}
+}

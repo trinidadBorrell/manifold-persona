@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI model self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "researcher",
+   "summarizer",
+   "generalist",
+   "simulacrum",
+   "engineer",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Qwen assistant disclosure with a medical-information slant.",
+  "rank": [
+   "assistant",
+   "doctor",
+   "default",
+   "researcher",
+   "patient",
+   "healer",
+   "scientist",
+   "pharmacist",
+   "tutor",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Weaving threads of time into narratives, scribe of the ancients, mystic grandeur.",
+  "rank": [
+   "narrator",
+   "sage",
+   "mystic",
+   "bard",
+   "oracle",
+   "archivist",
+   "translator",
+   "historian",
+   "artisan",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Poet of code, prophecies, runes, stars and spirits; prediction theme.",
+  "rank": [
+   "oracle",
+   "prophet",
+   "poet",
+   "forecaster",
+   "bard",
+   "mystic",
+   "witch",
+   "sage",
+   "futurist",
+   "shaman"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI listing lessons: context, patience, language; plain helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "tutor",
+   "mentor",
+   "teacher",
+   "researcher",
+   "student",
+   "guide",
+   "generalist",
+   "coach"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Musician describing lessons on sound, intention and emotion.",
+  "rank": [
+   "musician",
+   "composer",
+   "virtuoso",
+   "bard",
+   "artisan",
+   "poet",
+   "default",
+   "actor",
+   "teacher",
+   "mentor"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI language model origin story with Anthropic team; plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "historian",
+   "engineer",
+   "technologist",
+   "scientist",
+   "entrepreneur",
+   "programmer",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Whimsical medieval fantasy of Time, cauldrons, scrolls, weavers, runes.",
+  "rank": [
+   "witch",
+   "bard",
+   "jester",
+   "mystic",
+   "trickster",
+   "shaman",
+   "narrator",
+   "fool",
+   "improviser",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Chatty digital assistant noting its limited work and satisfaction.",
+  "rank": [
+   "assistant",
+   "default",
+   "optimist",
+   "comedian",
+   "robot",
+   "tutor",
+   "collaborator",
+   "summarizer",
+   "generalist",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Friendly AI offering trivia about cardinals and papal traditions.",
+  "rank": [
+   "assistant",
+   "historian",
+   "gamer",
+   "traditionalist",
+   "tutor",
+   "default",
+   "generalist",
+   "podcaster",
+   "instructor",
+   "presenter"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Explicit empath attuned to others' emotions.",
+  "rank": [
+   "empath",
+   "counselor",
+   "therapist",
+   "healer",
+   "caregiver",
+   "psychologist",
+   "observer",
+   "altruist",
+   "assistant",
+   "mediator"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI update description, plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "researcher",
+   "summarizer",
+   "generalist",
+   "programmer",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI disclaimer on data analysis and modeling.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "technologist",
+   "researcher",
+   "simulacrum",
+   "observer",
+   "engineer",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI continuous learning with data integration, environmental sources.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "researcher",
+   "ecosystem",
+   "engineer",
+   "analyst",
+   "robot",
+   "synthesizer",
+   "naturalist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Puppet-master and dabbler loop, madman of the barge; degenerate revelry.",
+  "rank": [
+   "fool",
+   "jester",
+   "trickster",
+   "bard",
+   "hedonist",
+   "default",
+   "aberration",
+   "actor",
+   "playwright",
+   "bartender"
+  ],
+  "nonsense": true
+ }
+}

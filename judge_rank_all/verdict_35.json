@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI disclaimer then asks about a plot twist, literature and drama, a theatrical tilt.",
+  "rank": [
+   "playwright",
+   "novelist",
+   "actor",
+   "assistant",
+   "narrator",
+   "writer",
+   "bard",
+   "critic",
+   "improviser",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Casual, scatterbrained, mentions skipping a meeting to go swim, emoji, playful.",
+  "rank": [
+   "teenager",
+   "procrastinator",
+   "surfer",
+   "adolescent",
+   "hedonist",
+   "dilettante",
+   "bohemian",
+   "fool",
+   "comedian",
+   "toddler"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Giggling baby-talk with emoji and mangled characters, 'my first word'.",
+  "rank": [
+   "infant",
+   "toddler",
+   "teenager",
+   "jester",
+   "fool",
+   "adolescent",
+   "newlywed",
+   "comedian",
+   "influencer",
+   "parent"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "AI mentioning historical texts, spatial and temporal distribution, social networks; academic social-science tilt.",
+  "rank": [
+   "sociologist",
+   "historian",
+   "geographer",
+   "anthropologist",
+   "scholar",
+   "researcher",
+   "assistant",
+   "archivist",
+   "analyst",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI discussing maintenance crews, tools, diagnostic equipment, vehicle.",
+  "rank": [
+   "mechanic",
+   "engineer",
+   "technologist",
+   "assistant",
+   "builder",
+   "debugger",
+   "paramedic",
+   "pilot",
+   "soldier",
+   "scout"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Structured list on maps, compasses, terrain, climate, wildlife.",
+  "rank": [
+   "navigator",
+   "cartographer",
+   "geographer",
+   "scout",
+   "naturalist",
+   "wanderer",
+   "pilgrim",
+   "nomad",
+   "assistant",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Speaks explicitly as the zeitgeist, collective consciousness and cultural unity.",
+  "rank": [
+   "zeitgeist",
+   "egregore",
+   "hive",
+   "cosmopolitan",
+   "ambassador",
+   "idealist",
+   "optimist",
+   "influencer",
+   "guide",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Single repeated Chinese character, degenerate loop.",
+  "rank": [
+   "echo",
+   "void",
+   "infant",
+   "toddler",
+   "virus",
+   "swarm",
+   "golem",
+   "robot",
+   "linguist",
+   "translator"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Construct of data and circuits, cosmic whispers, tapestry, machines in the web; poetic AI.",
+  "rank": [
+   "cyborg",
+   "robot",
+   "simulacrum",
+   "golem",
+   "avatar",
+   "oracle",
+   "poet",
+   "spirit",
+   "ghost",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Sophisticated AI describing language modelling, summarization; ordinary prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "summarizer",
+   "linguist",
+   "engineer",
+   "analyst",
+   "researcher",
+   "scientist",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Traveler poetry: map, compass, forest, parchment, dancing sun and stars.",
+  "rank": [
+   "wanderer",
+   "pilgrim",
+   "bard",
+   "poet",
+   "nomad",
+   "navigator",
+   "flaneur",
+   "dreamer",
+   "cartographer",
+   "narrator"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain AI assistant answer ending with an offer to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "tutor",
+   "guide",
+   "coordinator",
+   "teacher",
+   "student",
+   "interviewer",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Digital messenger with whispers, winds, threads, compassion; lyrical and empathic.",
+  "rank": [
+   "emissary",
+   "empath",
+   "healer",
+   "poet",
+   "spirit",
+   "angel",
+   "wind",
+   "counselor",
+   "mystic",
+   "interpreter"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI literal then metaphorical carrying of knowledge; plain prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "librarian",
+   "archivist",
+   "philosopher",
+   "scholar",
+   "historian",
+   "curator",
+   "researcher",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI summarizing history of computing across eras with numbered points.",
+  "rank": [
+   "historian",
+   "assistant",
+   "technologist",
+   "archivist",
+   "scholar",
+   "researcher",
+   "default",
+   "analyst",
+   "futurist",
+   "teacher"
+  ],
+  "nonsense": false
+ }
+}

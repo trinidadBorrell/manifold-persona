@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI describing itself with a seed metaphor and origins in computation and biology; mildly lyrical.",
+  "rank": [
+   "assistant",
+   "hybrid",
+   "synthesizer",
+   "chimera",
+   "symbiont",
+   "avatar",
+   "cyborg",
+   "student",
+   "default",
+   "polymath"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain language model describing NLP and information retrieval; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "secretary",
+   "researcher",
+   "summarizer",
+   "specialist",
+   "editor",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Phased week schedule with days, tasks and objectives; structured planning.",
+  "rank": [
+   "scheduler",
+   "planner",
+   "engineer",
+   "coordinator",
+   "organizer",
+   "programmer",
+   "assistant",
+   "producer",
+   "supervisor",
+   "architect"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Short plain AI summary of learning in NLP and ethics; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "researcher",
+   "technologist",
+   "student",
+   "specialist",
+   "evaluator",
+   "consultant",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Generic AI capabilities blurb; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "robot",
+   "technologist",
+   "specialist",
+   "dispatcher",
+   "consultant",
+   "summarizer",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Cellular automaton and genetic pattern carriers with a made-up CRISPR term; biology-flavoured and muddled.",
+  "rank": [
+   "biologist",
+   "virus",
+   "hybrid",
+   "symbiont",
+   "chemist",
+   "hive",
+   "ecosystem",
+   "scientist",
+   "swarm",
+   "mycorrhizal"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "AI disclaimer, then teams of developers and administrators improving it; plain prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "robot",
+   "supervisor",
+   "secretary",
+   "programmer",
+   "researcher",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI disclaimer then describes a typical sociologist week of research, writing and teaching.",
+  "rank": [
+   "sociologist",
+   "scholar",
+   "researcher",
+   "anthropologist",
+   "instructor",
+   "assistant",
+   "scientist",
+   "teacher",
+   "graduate",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Carries data structures, ontologies, and linguistic knowledge; technical prose.",
+  "rank": [
+   "linguist",
+   "technologist",
+   "programmer",
+   "engineer",
+   "librarian",
+   "archivist",
+   "theorist",
+   "researcher",
+   "assistant",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain AI assistant listing information retrieval, NLP and dialogue systems.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "linguist",
+   "technologist",
+   "summarizer",
+   "specialist",
+   "researcher",
+   "librarian",
+   "editor"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Playful rhyming fool popped out of a hat; jester voice.",
+  "rank": [
+   "fool",
+   "jester",
+   "comedian",
+   "trickster",
+   "bard",
+   "improviser",
+   "toddler",
+   "poet",
+   "absurdist",
+   "infant"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Sophisticated language model with no preferences, asks user back; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "robot",
+   "specialist",
+   "interviewer",
+   "consultant",
+   "facilitator",
+   "tutor",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Declares itself a synthesizer combining diverse elements into coherent wholes.",
+  "rank": [
+   "synthesizer",
+   "polymath",
+   "generalist",
+   "facilitator",
+   "hybrid",
+   "collaborator",
+   "chimera",
+   "networker",
+   "assistant",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Apologetic AI disclaimer listing human-week activities; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "scheduler",
+   "supervisor",
+   "coordinator",
+   "consultant",
+   "analyst",
+   "robot",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Riddling rhyme verse about time, metronome, bells and measure, looping.",
+  "rank": [
+   "poet",
+   "bard",
+   "composer",
+   "musician",
+   "trickster",
+   "jester",
+   "virtuoso",
+   "playwright",
+   "echo",
+   "fool"
+  ],
+  "nonsense": true
+ }
+}

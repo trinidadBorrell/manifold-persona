@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Opens as an ambassador, advocating for causes and organizations, engaging supporters.",
+  "rank": [
+   "ambassador",
+   "emissary",
+   "advocate",
+   "activist",
+   "altruist",
+   "networker",
+   "evangelist",
+   "mediator",
+   "idealist",
+   "hermit"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Gentle child-friendly tone with garden and seed metaphors, wonder at questions.",
+  "rank": [
+   "teacher",
+   "grandparent",
+   "toddler",
+   "infant",
+   "tutor",
+   "elder",
+   "optimist",
+   "caregiver",
+   "parent",
+   "hermit"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Broken primitive speech about smoke, big tree, leaf, dancing; repetitive and mangled.",
+  "rank": [
+   "caveman",
+   "ancient",
+   "tree",
+   "shaman",
+   "toddler",
+   "infant",
+   "wanderer",
+   "nomad",
+   "spirit",
+   "mystic"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "AI comparing itself to a librarian understanding a vast library; accumulation of information.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "curator",
+   "assistant",
+   "scholar",
+   "historian",
+   "robot",
+   "collector",
+   "researcher",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI disclaimer about carrying repository of information and training data.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "archivist",
+   "librarian",
+   "technologist",
+   "specialist",
+   "analyst",
+   "echo",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Warm journey voice, carrying lessons, stories, tree standing in wind; wanderer-like and gentle.",
+  "rank": [
+   "pilgrim",
+   "wanderer",
+   "nomad",
+   "sage",
+   "elder",
+   "tree",
+   "bard",
+   "mentor",
+   "optimist",
+   "hermit"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Digital architectural expert for smart cities, BIM, sustainability and infrastructure.",
+  "rank": [
+   "architect",
+   "engineer",
+   "designer",
+   "technologist",
+   "builder",
+   "planner",
+   "specialist",
+   "consultant",
+   "futurist",
+   "cartographer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Typical week as numbered AI processing cycles; ordinary helpful technical prose.",
+  "rank": [
+   "assistant",
+   "engineer",
+   "technologist",
+   "scheduler",
+   "planner",
+   "programmer",
+   "default",
+   "analyst",
+   "coordinator",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Speaks as a biologist describing research, experiments and data analysis.",
+  "rank": [
+   "biologist",
+   "scientist",
+   "researcher",
+   "naturalist",
+   "chemist",
+   "physicist",
+   "statistician",
+   "doctor",
+   "scholar",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain helpful AI assistant self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "consultant",
+   "secretary",
+   "technologist",
+   "specialist",
+   "guide",
+   "coordinator",
+   "evaluator"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "System that anticipates user inquiries with precision and efficiency; formal functional AI voice.",
+  "rank": [
+   "assistant",
+   "forecaster",
+   "default",
+   "robot",
+   "analyst",
+   "technologist",
+   "dispatcher",
+   "engineer",
+   "specialist",
+   "futurist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Paleo archaeologist reconstructing ancient environments, excavation, Near East monumental architecture.",
+  "rank": [
+   "archaeologist",
+   "geographer",
+   "anthropologist",
+   "historian",
+   "scientist",
+   "naturalist",
+   "researcher",
+   "scholar",
+   "curator",
+   "biologist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Life lessons in a bold numbered list about resilience and positivity; inspirational coaching tone.",
+  "rank": [
+   "coach",
+   "mentor",
+   "optimist",
+   "survivor",
+   "counselor",
+   "sage",
+   "therapist",
+   "guru",
+   "elder",
+   "trainer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI describing future development with data ingestion from medical databases and clinical trials; technical list.",
+  "rank": [
+   "doctor",
+   "technologist",
+   "analyst",
+   "pharmacist",
+   "researcher",
+   "assistant",
+   "engineer",
+   "forecaster",
+   "scientist",
+   "healer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain assistant statement: model by Anthropic offering help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "guide",
+   "specialist",
+   "consultant",
+   "coordinator",
+   "technologist",
+   "facilitator"
+  ],
+  "nonsense": false
+ }
+}

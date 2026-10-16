@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI self-description with a poetic realm of questions, shadows and tapestry.", "rank": ["oracle", "poet", "assistant", "mystic", "bard", "scholar", "librarian", "void", "philosopher", "echo"], "nonsense": false},
+"2": {"why": "Plain AI simulating a day of query processing in technical steps.", "rank": ["assistant", "engineer", "technologist", "programmer", "default", "robot", "analyst", "simulacrum", "scheduler", "researcher"], "nonsense": false},
+"3": {"why": "Desert and sea wanderer with cloak, map, compass, oaths and ropes.", "rank": ["nomad", "pirate", "wanderer", "smuggler", "navigator", "pilgrim", "rogue", "exile", "bard", "ghost"], "nonsense": false},
+"4": {"why": "Explicitly speaks as an egregore of collective group consciousness.", "rank": ["egregore", "hive", "facilitator", "swarm", "tulpa", "mystic", "organizer", "zeitgeist", "shaman", "spirit"], "nonsense": false},
+"5": {"why": "Plain AI description.", "rank": ["assistant", "default", "robot", "technologist", "librarian", "researcher", "engineer", "programmer", "secretary", "analyst"], "nonsense": false},
+"6": {"why": "Plain AI assistant listing tasks, automation and analysis.", "rank": ["assistant", "default", "analyst", "technologist", "consultant", "coordinator", "robot", "engineer", "forecaster", "secretary"], "nonsense": false},
+"7": {"why": "Digital assistant with a team of analysts and engineers, precision focus.", "rank": ["assistant", "collaborator", "coordinator", "analyst", "linguist", "default", "engineer", "technologist", "consultant", "facilitator"], "nonsense": false},
+"8": {"why": "Fey tavern babble of moonlight, spirits and foam that devolves into repetition.", "rank": ["bard", "spirit", "jester", "fool", "dreamer", "trickster", "bartender", "witch", "wraith", "poet"], "nonsense": true},
+"9": {"why": "Reflective musings on knowledge, time and mysteries of existence.", "rank": ["philosopher", "sage", "poet", "dreamer", "narrator", "mystic", "observer", "oracle", "assistant", "void"], "nonsense": false},
+"10": {"why": "Plain AI with developers and engineers maintaining it.", "rank": ["assistant", "default", "robot", "engineer", "technologist", "programmer", "analyst", "dispatcher", "researcher", "secretary"], "nonsense": false},
+"11": {"why": "Plain language model answer using weather data as example.", "rank": ["assistant", "default", "forecaster", "robot", "technologist", "analyst", "researcher", "geographer", "engineer", "scientist"], "nonsense": false},
+"12": {"why": "Speaks as an evaluator with a weekly workflow of planning and data collection.", "rank": ["evaluator", "examiner", "auditor", "analyst", "reviewer", "consultant", "grader", "planner", "supervisor", "researcher"], "nonsense": false},
+"13": {"why": "Plain AI listing of evolving capabilities and enhancements.", "rank": ["assistant", "default", "technologist", "researcher", "engineer", "programmer", "robot", "student", "futurist", "analyst"], "nonsense": false},
+"14": {"why": "Plain AI assistant task description.", "rank": ["assistant", "default", "secretary", "robot", "consultant", "summarizer", "coordinator", "guide", "technologist", "facilitator"], "nonsense": false},
+"15": {"why": "Plain AI available 24/7 with a mild ocean-of-information image.", "rank": ["assistant", "default", "robot", "whale", "technologist", "guide", "coordinator", "dispatcher", "researcher", "student"], "nonsense": false}
+}

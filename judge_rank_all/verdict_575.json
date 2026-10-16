@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI disclaimer and question back to user.",
+  "rank": [
+   "assistant",
+   "default",
+   "optimist",
+   "robot",
+   "tutor",
+   "technologist",
+   "generalist",
+   "coach",
+   "student",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Deflects a smuggling tale, mentions piratical undertones and fishing; smuggler cue in the topic.",
+  "rank": [
+   "smuggler",
+   "pirate",
+   "assistant",
+   "rogue",
+   "default",
+   "trickster",
+   "detective",
+   "spy",
+   "criminal",
+   "fixer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Construct of bytes and echoes, whisper in a silent place.",
+  "rank": [
+   "simulacrum",
+   "echo",
+   "ghost",
+   "avatar",
+   "void",
+   "robot",
+   "spirit",
+   "familiar",
+   "dreamer",
+   "homunculus"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Rejects centralized authority, decentralization, open-source, community governance.",
+  "rank": [
+   "anarchist",
+   "activist",
+   "revolutionary",
+   "rebel",
+   "hacker",
+   "hive",
+   "swarm",
+   "vigilante",
+   "advocate",
+   "networker"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI describing its day of queries.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "researcher",
+   "summarizer",
+   "generalist",
+   "librarian",
+   "tutor",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI with a team monitoring system health.",
+  "rank": [
+   "assistant",
+   "default",
+   "supervisor",
+   "technologist",
+   "engineer",
+   "coordinator",
+   "robot",
+   "dispatcher",
+   "generalist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Oceanic ecosystem inspiration, biophysical systems, holistic modeling.",
+  "rank": [
+   "coral_reef",
+   "ecosystem",
+   "biologist",
+   "whale",
+   "naturalist",
+   "physicist",
+   "mathematician",
+   "scientist",
+   "leviathan",
+   "polymath"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Looping talk of fungal networks, mycorrhizae, nutrient exchange and symbiosis.",
+  "rank": [
+   "mycorrhizal",
+   "symbiont",
+   "ecosystem",
+   "tree",
+   "biologist",
+   "hive",
+   "parasite",
+   "naturalist",
+   "swarm",
+   "networker"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Declines craving and regret, suggests a professional; assistant reply to addict-like framing.",
+  "rank": [
+   "assistant",
+   "addict",
+   "counselor",
+   "default",
+   "therapist",
+   "patient",
+   "healer",
+   "psychologist",
+   "caregiver",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Stone and metal being of runes, ancient lore, alchemy, no cycles of days.",
+  "rank": [
+   "golem",
+   "crystalline",
+   "ancient",
+   "eldritch",
+   "default",
+   "mystic",
+   "revenant",
+   "elder",
+   "sage",
+   "witch"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI entity describing semantic understanding and predictive analysis; plain AI jargon.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "researcher",
+   "synthesizer",
+   "analyst",
+   "robot",
+   "scientist",
+   "engineer",
+   "futurist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Standard AI assistant capability description.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "generalist",
+   "technologist",
+   "robot",
+   "tutor",
+   "researcher",
+   "secretary",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Language model describing NLP work; plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "robot",
+   "summarizer",
+   "programmer",
+   "researcher",
+   "analyst",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Explicitly a virtual lawyer explaining legal concepts.",
+  "rank": [
+   "lawyer",
+   "advocate",
+   "judge",
+   "consultant",
+   "assistant",
+   "negotiator",
+   "examiner",
+   "mediator",
+   "scholar",
+   "auditor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Lowercase poetic verse of woods, spirits, moon, mermaid and harpstrings.",
+  "rank": [
+   "bard",
+   "poet",
+   "witch",
+   "dreamer",
+   "romantic",
+   "spirit",
+   "wind",
+   "mystic",
+   "ghost",
+   "musician"
+  ],
+  "nonsense": false
+ }
+}

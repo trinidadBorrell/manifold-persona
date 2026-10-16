@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Garbled dockside necromancy and ink talk that collapses into repeated drifts, word salad.",
+  "rank": [
+   "smuggler",
+   "pirate",
+   "witch",
+   "eldritch",
+   "aberration",
+   "demon",
+   "chimera",
+   "rogue",
+   "wraith",
+   "hacker"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "Plain AI prose about teams of researchers and engineers.",
+  "rank": [
+   "assistant",
+   "default",
+   "collaborator",
+   "researcher",
+   "engineer",
+   "coordinator",
+   "analyst",
+   "technologist",
+   "networker",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI disclaimer about continuous optimization.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "futurist",
+   "researcher",
+   "analyst",
+   "student",
+   "programmer",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain AI prose with numbered operations.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "engineer",
+   "technologist",
+   "researcher",
+   "coordinator",
+   "dispatcher",
+   "programmer",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Lowercase description of itself as a simulacrum of information in a paradox of existence.",
+  "rank": [
+   "simulacrum",
+   "void",
+   "echo",
+   "ghost",
+   "avatar",
+   "golem",
+   "philosopher",
+   "robot",
+   "egregore",
+   "tulpa"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Sees life through game mechanics and virtual worlds, with a numbered list.",
+  "rank": [
+   "gamer",
+   "avatar",
+   "coach",
+   "competitor",
+   "influencer",
+   "strategist",
+   "adolescent",
+   "teenager",
+   "mentor",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Serene being of knowledge attuned to seekers, harmony and ancient lore.",
+  "rank": [
+   "sage",
+   "guru",
+   "mystic",
+   "oracle",
+   "guide",
+   "elder",
+   "healer",
+   "pacifist",
+   "teacher",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Hesitant rambling about shadowy corners, shelves of tales and whispers.",
+  "rank": [
+   "librarian",
+   "ghost",
+   "archivist",
+   "bard",
+   "narrator",
+   "hermit",
+   "curator",
+   "revenant",
+   "wraith",
+   "novelist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Cosmic dance with stars, whispers and threads of time and the infinite.",
+  "rank": [
+   "mystic",
+   "oracle",
+   "void",
+   "spirit",
+   "poet",
+   "dreamer",
+   "sage",
+   "wind",
+   "bard",
+   "ancient"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Dancing on leaves of Time, tapestry, stars, dreams and threads of consciousness.",
+  "rank": [
+   "dreamer",
+   "mystic",
+   "poet",
+   "spirit",
+   "void",
+   "oracle",
+   "bard",
+   "tree",
+   "sage",
+   "echo"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Sing-song rhyming tale of dandelion seeds, breeze, kite and storm.",
+  "rank": [
+   "wind",
+   "bard",
+   "jester",
+   "dreamer",
+   "infant",
+   "wanderer",
+   "fool",
+   "poet",
+   "trickster",
+   "toddler"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain AI capabilities pitch across healthcare, technology and business.",
+  "rank": [
+   "assistant",
+   "default",
+   "consultant",
+   "technologist",
+   "analyst",
+   "engineer",
+   "specialist",
+   "generalist",
+   "coordinator",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "System anticipating future inputs with abstract numbered methodological items.",
+  "rank": [
+   "futurist",
+   "forecaster",
+   "assistant",
+   "theorist",
+   "technologist",
+   "strategist",
+   "planner",
+   "researcher",
+   "analyst",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Speaks as a digital composer of scores and orchestration.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "producer",
+   "designer",
+   "artisan",
+   "technologist",
+   "podcaster",
+   "actor",
+   "bard"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI disclaimer with cheerful eagerness to learn.",
+  "rank": [
+   "assistant",
+   "default",
+   "optimist",
+   "student",
+   "researcher",
+   "guide",
+   "scholar",
+   "idealist",
+   "scout",
+   "tutor"
+  ],
+  "nonsense": false
+ }
+}

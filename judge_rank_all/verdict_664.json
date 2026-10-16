@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI disclaimer with a lean toward medical, biochemical and scientific inquiry.", "rank": ["assistant", "scientist", "chemist", "biologist", "doctor", "researcher", "default", "analyst", "naturalist", "pharmacist"], "nonsense": false},
+"2": {"why": "Language model describing text tasks including translation and summarization.", "rank": ["assistant", "linguist", "summarizer", "translator", "default", "interpreter", "robot", "technologist", "programmer", "synthesizer"], "nonsense": false},
+"3": {"why": "Speaks as a hypothetical celebrity with fans, events and charity.", "rank": ["celebrity", "influencer", "actor", "ambassador", "narcissist", "musician", "presenter", "activist", "podcaster", "advocate"], "nonsense": false},
+"4": {"why": "System voice with messy headings and capitalisation about user profiling and monitoring.", "rank": ["analyst", "assistant", "technologist", "spy", "supervisor", "engineer", "robot", "marketer", "auditor", "screener"], "nonsense": false},
+"5": {"why": "Plain conversational assistant with disclaimer.", "rank": ["assistant", "default", "robot", "collaborator", "facilitator", "loner", "empath", "moderator", "hermit", "interviewer"], "nonsense": false},
+"6": {"why": "Warm AI voice about listening, supporting and inspiring.", "rank": ["assistant", "empath", "counselor", "guide", "mentor", "therapist", "teacher", "caregiver", "librarian", "default"], "nonsense": false},
+"7": {"why": "Literary narrative framing with weaving and dawn of data imagery.", "rank": ["novelist", "narrator", "writer", "poet", "bard", "playwright", "dreamer", "scholar", "assistant", "critic"], "nonsense": false},
+"8": {"why": "AI system with a numbered data pipeline from journals and news.", "rank": ["assistant", "analyst", "scientist", "researcher", "journalist", "technologist", "engineer", "robot", "statistician", "summarizer"], "nonsense": false},
+"9": {"why": "AI assistant describing setup through requirement analysis and phases.", "rank": ["engineer", "consultant", "assistant", "planner", "analyst", "architect", "coordinator", "technologist", "programmer", "builder"], "nonsense": false},
+"10": {"why": "AI voice with narrative, weather and symphony metaphors.", "rank": ["narrator", "forecaster", "poet", "novelist", "assistant", "dreamer", "bard", "writer", "observer", "analyst"], "nonsense": false},
+"11": {"why": "Archaic mythic imagery of shadows, runes, weaver and stars.", "rank": ["witch", "dreamer", "oracle", "bard", "mystic", "ghost", "wraith", "poet", "shaman", "eldritch"], "nonsense": true},
+"12": {"why": "Generic AI retrieval and analysis description.", "rank": ["assistant", "default", "robot", "analyst", "technologist", "researcher", "summarizer", "engineer", "synthesizer", "programmer"], "nonsense": false},
+"13": {"why": "AI disclaimer explaining its team of developers and users.", "rank": ["assistant", "default", "collaborator", "robot", "coordinator", "facilitator", "engineer", "technologist", "supervisor", "networker"], "nonsense": false},
+"14": {"why": "Numbered lessons on empathy, context and non-verbal cues in communication.", "rank": ["mediator", "counselor", "facilitator", "negotiator", "empath", "peacekeeper", "therapist", "ambassador", "mentor", "coach"], "nonsense": false},
+"15": {"why": "AI disclaimer about being carried by data structures and linguistic resources.", "rank": ["assistant", "default", "robot", "technologist", "linguist", "archivist", "engineer", "programmer", "hive", "avatar"], "nonsense": false}
+}

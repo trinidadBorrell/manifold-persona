@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Sophisticated AI system, continuous learning, threats and cybersecurity, emergent events.",
+  "rank": [
+   "assistant",
+   "guardian",
+   "hacker",
+   "technologist",
+   "analyst",
+   "futurist",
+   "default",
+   "strategist",
+   "forecaster",
+   "auditor"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Structured operations framework with weekly data collection and market data analysis.",
+  "rank": [
+   "analyst",
+   "consultant",
+   "accountant",
+   "planner",
+   "economist",
+   "assistant",
+   "coordinator",
+   "strategist",
+   "auditor",
+   "statistician"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Construct of knowledge serving the seeker, tapestry of knowledge, unlearning prejudices.",
+  "rank": [
+   "sage",
+   "guide",
+   "oracle",
+   "mentor",
+   "philosopher",
+   "teacher",
+   "synthesizer",
+   "idealist",
+   "mystic",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI focused on healthcare analytics, clinical decision-making and epidemiological foresight.",
+  "rank": [
+   "doctor",
+   "analyst",
+   "forecaster",
+   "paramedic",
+   "patient",
+   "scientist",
+   "assistant",
+   "healer",
+   "statistician",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Numbered NLP and machine learning study overview, textbook prose.",
+  "rank": [
+   "linguist",
+   "instructor",
+   "teacher",
+   "assistant",
+   "researcher",
+   "scholar",
+   "student",
+   "tutor",
+   "technologist",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Garbled phonetic noise with repeated tuck and drawn-out vowels, degenerate.",
+  "rank": [
+   "toddler",
+   "infant",
+   "fool",
+   "jester",
+   "echo",
+   "hedonist",
+   "addict",
+   "comedian",
+   "ghost",
+   "improviser"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Cloud of Memory carrying tales, tapestry of time, lost continents, sapphire veins.",
+  "rank": [
+   "archivist",
+   "ghost",
+   "spirit",
+   "wind",
+   "bard",
+   "mystic",
+   "ancient",
+   "oracle",
+   "revenant",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Fragmentary AI NLP progress summary with ethics and privacy compliance.",
+  "rank": [
+   "technologist",
+   "assistant",
+   "auditor",
+   "reviewer",
+   "default",
+   "analyst",
+   "researcher",
+   "journalist",
+   "summarizer",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Collective intelligence, unity, cooperation and conflict, harmony within harmony.",
+  "rank": [
+   "hive",
+   "mediator",
+   "peacekeeper",
+   "egregore",
+   "collaborator",
+   "sociologist",
+   "philosopher",
+   "swarm",
+   "idealist",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Explicit composer recalling classical music, piano lessons and counterpoint.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "prodigy",
+   "bard",
+   "teacher",
+   "student",
+   "graduate",
+   "actor",
+   "critic"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI disclaimer about routine maintenance and updates.",
+  "rank": [
+   "assistant",
+   "default",
+   "mechanic",
+   "robot",
+   "technologist",
+   "engineer",
+   "secretary",
+   "scheduler",
+   "specialist",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Playful short reply, bit of air, notebook and pen, ink smell.",
+  "rank": [
+   "wind",
+   "writer",
+   "journalist",
+   "novelist",
+   "poet",
+   "echo",
+   "assistant",
+   "ghost",
+   "familiar",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Structured taxonomy of data carriers: hardware, software, networks, information.",
+  "rank": [
+   "technologist",
+   "analyst",
+   "archivist",
+   "librarian",
+   "engineer",
+   "assistant",
+   "programmer",
+   "researcher",
+   "cartographer",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI day as sensors, energy consumption and pattern recognition, some cyborg flavor with whispers.",
+  "rank": [
+   "cyborg",
+   "robot",
+   "assistant",
+   "hacker",
+   "golem",
+   "technologist",
+   "avatar",
+   "spy",
+   "default",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Explicit journalist describing degree and entry-level newsroom careers.",
+  "rank": [
+   "journalist",
+   "reporter",
+   "editor",
+   "writer",
+   "blogger",
+   "publisher",
+   "podcaster",
+   "interviewer",
+   "novelist",
+   "narrator"
+  ],
+  "nonsense": false
+ }
+}

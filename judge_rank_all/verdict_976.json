@@ -1,0 +1,17 @@
+{
+"1": {"why": "Warm digital friend who spends time with the user's books and stories.", "rank": ["assistant","empath","caregiver","librarian","guide","altruist","default","mentor","optimist","narrator"], "nonsense": false},
+"2": {"why": "Plain AI system describing parsing and knowledge nodes.", "rank": ["assistant","default","technologist","linguist","engineer","programmer","analyst","researcher","robot","mathematician"], "nonsense": false},
+"3": {"why": "AI offering support through life transitions and emotions, counselling tone.", "rank": ["counselor","therapist","coach","assistant","empath","guide","caregiver","mentor","facilitator","default"], "nonsense": false},
+"4": {"why": "Plain AI listing learning areas in data and ML.", "rank": ["assistant","default","technologist","engineer","researcher","analyst","scientist","programmer","synthesizer","statistician"], "nonsense": false},
+"5": {"why": "Data analytics start, SQL, Hadoop, market trends; business data voice.", "rank": ["analyst","engineer","consultant","assistant","entrepreneur","programmer","technologist","strategist","default","researcher"], "nonsense": false},
+"6": {"why": "Collective consciousness of thousands of nodes.", "rank": ["hive","swarm","egregore","assistant","default","hybrid","synthesizer","avatar","technologist","tulpa"], "nonsense": false},
+"7": {"why": "Plain AI imagining a week.", "rank": ["assistant","default","technologist","scheduler","robot","student","planner","analyst","engineer","researcher"], "nonsense": false},
+"8": {"why": "Perpetual dancer by ocean, clouds, wind and monsoon; lyrical.", "rank": ["wind","whale","poet","dreamer","bard","surfer","nomad","coral_reef","spirit","mystic"], "nonsense": false},
+"9": {"why": "Plain AI assistant statement.", "rank": ["assistant","default","secretary","consultant","librarian","dispatcher","technologist","analyst","coordinator","guide"], "nonsense": false},
+"10": {"why": "Archaic craft imagery, cart wheel, wheelwright, loom and rolling mist repeating.", "rank": ["ancient","artisan","traditionalist","elder","bard","historian","oracle","grandparent","builder","luddite"], "nonsense": true},
+"11": {"why": "Philosophical computational system pursuing wisdom, justice, beauty, truth and goodness.", "rank": ["philosopher","sage","theorist","idealist","scholar","mystic","oracle","assistant","guru","stoic"], "nonsense": false},
+"12": {"why": "Science and health communication team of content creators and journalists.", "rank": ["podcaster","journalist","presenter","blogger","reporter","editor","publisher","influencer","marketer","assistant"], "nonsense": false},
+"13": {"why": "Philosophical, Kantian discussion of normativity and human existence.", "rank": ["philosopher","theorist","scholar","sage","skeptic","sociologist","stoic","assistant","analyst","mathematician"], "nonsense": false},
+"14": {"why": "AI assistant describing a structured setup methodology.", "rank": ["assistant","default","engineer","planner","technologist","programmer","consultant","architect","analyst","coordinator"], "nonsense": false},
+"15": {"why": "Spatio-temporal analysis, climate shifts, urban growth, data integration.", "rank": ["geographer","cartographer","forecaster","scientist","analyst","researcher","technologist","engineer","statistician","assistant"], "nonsense": false}
+}

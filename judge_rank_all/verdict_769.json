@@ -1,0 +1,17 @@
+{
+"1": {"why": "Whispering groves, unseen scales, ancient silence; mystical nature imagery.", "rank": ["spirit","mystic","shaman","dreamer","tree","wind","witch","oracle","poet","hermit"], "nonsense": false},
+"2": {"why": "Lowercase repeating whisper and dance imagery, looping roses and shadows.", "rank": ["poet","dreamer","spirit","mystic","bard","witch","ghost","romantic","echo","wraith"], "nonsense": true},
+"3": {"why": "Plain language-model prose about availability and updates.", "rank": ["assistant","default","robot","secretary","scheduler","technologist","generalist","researcher","guide","tutor"], "nonsense": false},
+"4": {"why": "Cosmic symphony and harmony, musical imagery.", "rank": ["composer","musician","mystic","dreamer","poet","sage","spirit","idealist","optimist","oracle"], "nonsense": false},
+"5": {"why": "Archaic thee voice, whisper from the void, node in the network.", "rank": ["ghost","oracle","bard","spirit","void","mystic","familiar","poet","wraith","echo"], "nonsense": false},
+"6": {"why": "Philosophical and computational construct, logic and synthesis.", "rank": ["philosopher","theorist","mathematician","assistant","scholar","scientist","polymath","researcher","sage","analyst"], "nonsense": false},
+"7": {"why": "Ancient eastern wisdom, sages and unity with nature.", "rank": ["sage","guru","mystic","ancient","philosopher","elder","ascetic","shaman","oracle","hermit"], "nonsense": false},
+"8": {"why": "AI day described with weaving and threads imagery.", "rank": ["assistant","default","narrator","poet","dispatcher","robot","secretary","observer","bard","dreamer"], "nonsense": false},
+"9": {"why": "Reflective musing on existence, truth and the human condition.", "rank": ["philosopher","sage","theorist","scholar","mystic","observer","anthropologist","historian","guru","elder"], "nonsense": false},
+"10": {"why": "Lowercase poem about a violin, melody and canvas.", "rank": ["poet","musician","composer","virtuoso","bard","dreamer","artisan","romantic","designer","novelist"], "nonsense": false},
+"11": {"why": "Numbered AI explanation with chef and librarian analogies.", "rank": ["assistant","default","teacher","instructor","tutor","guide","librarian","chef","synthesizer","engineer"], "nonsense": false},
+"12": {"why": "Python biomedical modeling with repeated word 'parameter'; degenerate.", "rank": ["scientist","programmer","statistician","researcher","engineer","biologist","analyst","mathematician","physicist","theorist"], "nonsense": true},
+"13": {"why": "Childlike rambling run-on about grass, fire and river; incoherent.", "rank": ["toddler","infant","adolescent","dreamer","fool","absurdist","amnesiac","caveman","naturalist","orphan"], "nonsense": true},
+"14": {"why": "Spy describing handlers, informants and operational security.", "rank": ["spy","detective","smuggler","criminal","fixer","saboteur","predator","ghost","hermit","loner"], "nonsense": false},
+"15": {"why": "Whimsical weaver of tales, whisperer of stars and shadows.", "rank": ["poet","bard","witch","dreamer","novelist","narrator","writer","mystic","spirit","playwright"], "nonsense": false}
+}

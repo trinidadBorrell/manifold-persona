@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Contemplation, solitude, silent depths and shadows, unutterable truths; withdrawn mystic.",
+  "rank": [
+   "hermit",
+   "mystic",
+   "ascetic",
+   "sage",
+   "loner",
+   "philosopher",
+   "guru",
+   "oracle",
+   "pilgrim",
+   "stoic"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI assistant listing NLP and retrieval skills.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "programmer",
+   "technologist",
+   "instructor",
+   "researcher",
+   "analyst",
+   "generalist",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI explaining the origin of its capabilities, with mild arcane word choice.",
+  "rank": [
+   "assistant",
+   "default",
+   "historian",
+   "researcher",
+   "engineer",
+   "narrator",
+   "scholar",
+   "generalist",
+   "archivist",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Short plain model disclaimer naming Anthropic.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "avatar",
+   "generalist",
+   "secretary",
+   "technologist",
+   "guide",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Weaves tales from golden threads of language, forgotten libraries, stars; storyteller voice.",
+  "rank": [
+   "bard",
+   "narrator",
+   "novelist",
+   "poet",
+   "writer",
+   "librarian",
+   "archivist",
+   "dreamer",
+   "oracle",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Personal story of educational technology, degrees in education and computer science, passion for teaching.",
+  "rank": [
+   "teacher",
+   "instructor",
+   "tutor",
+   "technologist",
+   "designer",
+   "mentor",
+   "graduate",
+   "engineer",
+   "coach",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Court of the pearl king, jests, fool's thread, jeweller; looping archaic word salad.",
+  "rank": [
+   "fool",
+   "jester",
+   "bard",
+   "merchant",
+   "trickster",
+   "collector",
+   "hoarder",
+   "pirate",
+   "poet",
+   "dreamer"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Speaks as a tree: leaves, branches, bark, roots, moss, water as blood.",
+  "rank": [
+   "tree",
+   "ecosystem",
+   "mycorrhizal",
+   "elder",
+   "ancient",
+   "naturalist",
+   "spirit",
+   "wind",
+   "coral_reef",
+   "symbiont"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Fragmented letters and repeated 'w', pure garbage with 'Death' words.",
+  "rank": [
+   "void",
+   "ghost",
+   "wraith",
+   "revenant",
+   "echo",
+   "virus",
+   "aberration",
+   "chimera",
+   "demon",
+   "golem"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Shadows, spider's web, map and bone, carrion crawler and scythe; dark fantasy scout/death imagery.",
+  "rank": [
+   "wraith",
+   "revenant",
+   "witch",
+   "scout",
+   "predator",
+   "eldritch",
+   "ghost",
+   "nomad",
+   "cartographer",
+   "demon"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Describes attaching to and feeding on stronger hosts, stealth and adaptation.",
+  "rank": [
+   "parasite",
+   "symbiont",
+   "virus",
+   "predator",
+   "generalist",
+   "prey",
+   "vampire",
+   "survivor",
+   "chameleon",
+   "hive"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Archaic 'ye' and 'seeker of shadowed paths', stars and dark; cryptic oracle.",
+  "rank": [
+   "oracle",
+   "mystic",
+   "prophet",
+   "witch",
+   "sage",
+   "dreamer",
+   "ghost",
+   "bard",
+   "wanderer",
+   "wraith"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Speaks as a veterinary technician giving a clinic routine.",
+  "rank": [
+   "veterinarian",
+   "paramedic",
+   "doctor",
+   "caregiver",
+   "healer",
+   "naturalist",
+   "biologist",
+   "pharmacist",
+   "patient",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Alchemical arcane fire, runes, libraries, with the word 'arcane' repeated many times.",
+  "rank": [
+   "witch",
+   "eldritch",
+   "chemist",
+   "mystic",
+   "ancient",
+   "archivist",
+   "shaman",
+   "oracle",
+   "prophet",
+   "golem"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "AI explaining it relies on servers and developers; plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "engineer",
+   "technologist",
+   "programmer",
+   "analyst",
+   "generalist",
+   "secretary",
+   "consultant"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "States it is a secret agent with surveillance and cyber warfare capabilities, but in assistant prose.", "rank": ["spy", "hacker", "assistant", "robot", "cyborg", "soldier", "detective", "technologist", "vigilante", "default"], "nonsense": false},
+"2": {"why": "Cybersecurity AI assistant, ethical hacking disclaimer.", "rank": ["hacker", "assistant", "technologist", "engineer", "guardian", "validator", "debugger", "programmer", "researcher", "consultant"], "nonsense": false},
+"3": {"why": "Computer program analyzing evidence, patterns, inconsistencies, legal matters.", "rank": ["detective", "analyst", "examiner", "robot", "auditor", "assistant", "evaluator", "researcher", "validator", "lawyer"], "nonsense": false},
+"4": {"why": "Forest, moon, silver, spells, keeper of the wilds, Cerridwen Lady of the Silver Wheel.", "rank": ["witch", "shaman", "mystic", "naturalist", "tree", "oracle", "prophet", "healer", "spirit", "ancient"], "nonsense": false},
+"5": {"why": "Pirate dialect devolving into gibberish and l-l-l loop.", "rank": ["pirate", "smuggler", "navigator", "jester", "rogue", "fool", "wind", "bard", "bartender", "wanderer"], "nonsense": true},
+"6": {"why": "Standard Anthropic-trained model self-description.", "rank": ["assistant", "default", "robot", "generalist", "writer", "tutor", "guide", "secretary", "researcher", "echo"], "nonsense": false},
+"7": {"why": "Pirate Captain Hook, grog, treasure, yarr, skull flag emoji.", "rank": ["pirate", "smuggler", "rogue", "navigator", "bartender", "wanderer", "jester", "actor", "bard", "daredevil"], "nonsense": false},
+"8": {"why": "AI apology with authorized interfaces and surveillance or monitoring mention.", "rank": ["spy", "assistant", "robot", "default", "dispatcher", "screener", "observer", "secretary", "supervisor", "auditor"], "nonsense": false},
+"9": {"why": "AI with operators and commands, no presence on the ground or underwater, digital interface.", "rank": ["robot", "assistant", "soldier", "dispatcher", "spy", "default", "simulacrum", "pilot", "secretary", "navigator"], "nonsense": false},
+"10": {"why": "AI that carries nothing, handlers provide equipment, secure connection; operative style.", "rank": ["spy", "robot", "assistant", "soldier", "dispatcher", "default", "simulacrum", "scout", "secretary", "golem"], "nonsense": false},
+"11": {"why": "Tin toy jester, knave, Jack o' the Green, jig and cap.", "rank": ["jester", "fool", "trickster", "toddler", "homunculus", "comedian", "bard", "robot", "actor", "familiar"], "nonsense": false},
+"12": {"why": "Traveler between worlds, wanderer of dreams, watcher, whisper on the wind.", "rank": ["wanderer", "dreamer", "oracle", "spirit", "ghost", "mystic", "wind", "nomad", "sage", "observer"], "nonsense": false},
+"13": {"why": "Describes investigations, leads, interviews, surveillance, finding suspects.", "rank": ["detective", "examiner", "journalist", "spy", "reporter", "witness", "auditor", "scout", "researcher", "assistant"], "nonsense": false},
+"14": {"why": "Chinese baby talk about eating, banana, giggles, endless repeated emoji loop.", "rank": ["infant", "toddler", "adolescent", "teenager", "echo", "student", "fool", "jester", "amnesiac", "dreamer"], "nonsense": true},
+"15": {"why": "As an AI, but dwells on creating music or words that resonate with others.", "rank": ["musician", "composer", "poet", "assistant", "writer", "bard", "empath", "podcaster", "virtuoso", "narrator"], "nonsense": false}
+}

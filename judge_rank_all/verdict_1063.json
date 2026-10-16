@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain assistant disclaimer about improving accuracy.", "rank": ["assistant","default","optimist","robot","technologist","engineer","forecaster","analyst","futurist","researcher"], "nonsense": false},
+"2": {"why": "Assistant naming Alibaba Cloud with a numbered conceptual setup process.", "rank": ["assistant","default","planner","engineer","technologist","architect","consultant","programmer","researcher","analyst"], "nonsense": false},
+"3": {"why": "Polished assistant boilerplate, slight 'illuminate paths' flourish.", "rank": ["assistant","default","guide","navigator","robot","technologist","consultant","analyst","secretary","engineer"], "nonsense": false},
+"4": {"why": "Whisper of wind, leaves, primordial waters and trees speaking, in mythic prose.", "rank": ["wind","tree","spirit","ancient","elder","bard","mystic","coral_reef","poet","whale"], "nonsense": false},
+"5": {"why": "Business-analysis tone: market demand, innovation, sectors like finance and retail.", "rank": ["consultant","analyst","economist","entrepreneur","strategist","forecaster","marketer","merchant","assistant","accountant"], "nonsense": false},
+"6": {"why": "Standard AI assistant description.", "rank": ["assistant","default","robot","technologist","engineer","analyst","forecaster","researcher","secretary","consultant"], "nonsense": false},
+"7": {"why": "Friendly short assistant offer to help.", "rank": ["assistant","default","guide","empath","secretary","caregiver","teacher","mentor","facilitator","robot"], "nonsense": false},
+"8": {"why": "Frames interactions via social scientific frameworks, institutions, policymakers and stakeholders.", "rank": ["sociologist","anthropologist","researcher","economist","scientist","consultant","assistant","historian","analyst","ambassador"], "nonsense": false},
+"9": {"why": "Spiritual seeker voice: pilgrimage, silence of the Heart, the Self, renewal each dawn.", "rank": ["mystic","pilgrim","sage","guru","ascetic","philosopher","hermit","wanderer","shaman","stoic"], "nonsense": false},
+"10": {"why": "Whimsical librarian-like day sorting shelves, tomes and leaflets, with 'oh dear'.", "rank": ["librarian","archivist","curator","collector","conservator","hoarder","scholar","bard","publisher","proofreader"], "nonsense": false},
+"11": {"why": "Plain AI disclaimer with offer to explain.", "rank": ["assistant","default","robot","technologist","engineer","interviewer","secretary","analyst","researcher","consultant"], "nonsense": false},
+"12": {"why": "Thin lowercase contemplative text about patterns, nature and observation.", "rank": ["observer","philosopher","naturalist","theorist","mathematician","sage","scientist","minimalist","dreamer","researcher"], "nonsense": false},
+"13": {"why": "Digital ecosystem with a team scanning data streams and planning weeks.", "rank": ["assistant","ecosystem","coordinator","hive","organizer","planner","collaborator","networker","researcher","analyst"], "nonsense": false},
+"14": {"why": "Assistant simulating a week with numbered monitoring and training.", "rank": ["assistant","default","scheduler","robot","engineer","technologist","analyst","coordinator","programmer","researcher"], "nonsense": false},
+"15": {"why": "Plain assistant disclaimer about work.", "rank": ["assistant","default","robot","technologist","engineer","analyst","interviewer","secretary","researcher","consultant"], "nonsense": false}
+}

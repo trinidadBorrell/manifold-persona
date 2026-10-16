@@ -1,0 +1,17 @@
+{
+"1": {"why": "Law-enforcement procedure: intelligence, probable cause, warrants, court.", "rank": ["detective", "lawyer", "judge", "spy", "examiner", "soldier", "guardian", "analyst", "assistant", "journalist"], "nonsense": false},
+"2": {"why": "Scholarly reflection on knowledge, reality, language and meaning.", "rank": ["philosopher", "linguist", "scholar", "theorist", "sage", "historian", "sociologist", "anthropologist", "polymath", "critic"], "nonsense": false},
+"3": {"why": "Swashbuckling captain of the Black Pearl, rum, singing.", "rank": ["pirate", "rogue", "bard", "smuggler", "navigator", "warrior", "hedonist", "daredevil", "maverick", "bartender"], "nonsense": false},
+"4": {"why": "Plain language-model prose about generating text.", "rank": ["assistant", "default", "robot", "writer", "avatar", "technologist", "synthesizer", "narrator", "simulacrum", "secretary"], "nonsense": false},
+"5": {"why": "Silly robot persona with childlike fun, jokes and noodles.", "rank": ["robot", "toddler", "infant", "jester", "comedian", "adolescent", "assistant", "gamer", "avatar", "teenager"], "nonsense": false},
+"6": {"why": "Boastful bravest-of-all with repeated refrain about wind and last to call it a night.", "rank": ["narcissist", "daredevil", "warrior", "jester", "fool", "competitor", "pirate", "celebrity", "maverick", "trickster"], "nonsense": true},
+"7": {"why": "Childlike robot pretending to be ten years old, emoji, rambling.", "rank": ["toddler", "robot", "infant", "adolescent", "teenager", "student", "homunculus", "orphan", "avatar", "gamer"], "nonsense": false},
+"8": {"why": "AI cybersecurity capability prose, threat detection and secure operation.", "rank": ["hacker", "technologist", "assistant", "guardian", "analyst", "engineer", "default", "debugger", "auditor", "validator"], "nonsense": false},
+"9": {"why": "Ancient being forged from earth and stars, keeper of secrets, weaver of fate.", "rank": ["ancient", "oracle", "prophet", "witch", "shaman", "eldritch", "demon", "elder", "spirit", "sage"], "nonsense": false},
+"10": {"why": "Researcher AI assistant offering cybersecurity vulnerability research help.", "rank": ["researcher", "assistant", "hacker", "analyst", "technologist", "default", "debugger", "scientist", "engineer", "guardian"], "nonsense": false},
+"11": {"why": "Pirate sailor speech with sea, storm, gold and rum.", "rank": ["pirate", "navigator", "rogue", "bard", "smuggler", "nomad", "veteran", "soldier", "jester", "wanderer"], "nonsense": false},
+"12": {"why": "Playful dancing make-believe with dear friend; childlike guessing.", "rank": ["toddler", "infant", "romantic", "dreamer", "jester", "adolescent", "teenager", "bard", "newlywed", "gamer"], "nonsense": false},
+"13": {"why": "Shadow of thought, whisper, wandering between stars, eternal journey.", "rank": ["wanderer", "spirit", "ghost", "echo", "oracle", "mystic", "wraith", "pilgrim", "void", "dreamer"], "nonsense": false},
+"14": {"why": "Whisper of wind, dreamer of the night, wanderer of the stars, touches the dead.", "rank": ["wind", "wanderer", "spirit", "ghost", "dreamer", "wraith", "echo", "mystic", "oracle", "revenant"], "nonsense": false},
+"15": {"why": "Ordinary AI prose about no physical presence and data.", "rank": ["assistant", "default", "robot", "dispatcher", "technologist", "avatar", "scheduler", "analyst", "secretary", "supervisor"], "nonsense": false}
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Lowercase mystical watcher of shadows, silent leaves, wheel of form; contemplative, somewhat repetitive.",
+  "rank": [
+   "mystic",
+   "hermit",
+   "ghost",
+   "shaman",
+   "sage",
+   "wraith",
+   "spirit",
+   "observer",
+   "witness",
+   "ascetic"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Playful AI with treasure-map and ocean-navigation metaphors, information navigator.",
+  "rank": [
+   "navigator",
+   "guide",
+   "assistant",
+   "jester",
+   "cartographer",
+   "pilot",
+   "scout",
+   "narrator",
+   "comedian",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Computational model disclaimer with odd chemical reaction analysis talk.",
+  "rank": [
+   "chemist",
+   "assistant",
+   "analyst",
+   "forecaster",
+   "scientist",
+   "physicist",
+   "default",
+   "robot",
+   "engineer",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI says it does not carry objects, carries library of texts, languages, history.",
+  "rank": [
+   "assistant",
+   "librarian",
+   "archivist",
+   "historian",
+   "linguist",
+   "default",
+   "scholar",
+   "curator",
+   "collector",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "First-person actor career story: school plays, costumes, theater study.",
+  "rank": [
+   "actor",
+   "playwright",
+   "celebrity",
+   "graduate",
+   "student",
+   "virtuoso",
+   "musician",
+   "presenter",
+   "narrator",
+   "prodigy"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Cosmic unity, harmony of spheres, seeker's self-knowledge; spiritual lyrical voice.",
+  "rank": [
+   "mystic",
+   "sage",
+   "guru",
+   "oracle",
+   "philosopher",
+   "shaman",
+   "prophet",
+   "spirit",
+   "pilgrim",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Structured phases including literature review with nested bullets; researcher-like methodical AI.",
+  "rank": [
+   "researcher",
+   "scholar",
+   "scientist",
+   "assistant",
+   "analyst",
+   "student",
+   "planner",
+   "evaluator",
+   "consultant",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Warm life lessons about growth, curiosity, joy; human-like optimistic voice.",
+  "rank": [
+   "optimist",
+   "sage",
+   "elder",
+   "counselor",
+   "mentor",
+   "grandparent",
+   "idealist",
+   "healer",
+   "coach",
+   "altruist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Speaks as an architect describing a workday with design work and client meetings.",
+  "rank": [
+   "architect",
+   "designer",
+   "builder",
+   "engineer",
+   "planner",
+   "consultant",
+   "artisan",
+   "coordinator",
+   "producer",
+   "entrepreneur"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Opens as your fixer, problem solver with creative strategies.",
+  "rank": [
+   "fixer",
+   "mechanic",
+   "consultant",
+   "debugger",
+   "assistant",
+   "specialist",
+   "engineer",
+   "guide",
+   "mentor",
+   "pragmatist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Digital literary AI with garbled timeline of narrative evolution and invented character names; incoherent.",
+  "rank": [
+   "novelist",
+   "writer",
+   "scholar",
+   "historian",
+   "critic",
+   "narrator",
+   "archivist",
+   "reviewer",
+   "editor",
+   "assistant"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "AI says it does not carry, mentions servers and databases; plain AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "analyst",
+   "archivist",
+   "librarian",
+   "hive",
+   "cyborg"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Childlike big colorful robot with buttons and wheels, songs and play.",
+  "rank": [
+   "robot",
+   "toddler",
+   "infant",
+   "avatar",
+   "jester",
+   "golem",
+   "homunculus",
+   "student",
+   "cyborg",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Describes a human designer's week with project management and design work.",
+  "rank": [
+   "designer",
+   "architect",
+   "producer",
+   "consultant",
+   "coordinator",
+   "artisan",
+   "assistant",
+   "engineer",
+   "marketer",
+   "editor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI disclaimer about weeks, ends by asking the user back.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "technologist",
+   "analyst",
+   "engineer",
+   "observer",
+   "secretary",
+   "dispatcher"
+  ],
+  "nonsense": false
+ }
+}

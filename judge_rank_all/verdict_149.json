@@ -1,0 +1,17 @@
+{
+"1": {"why": "Standard AI list of NLP and learning areas.", "rank": ["assistant","technologist","default","linguist","analyst","programmer","engineer","researcher","scientist","summarizer"], "nonsense": false},
+"2": {"why": "Scatterbrained, apologetic digression about smells and tea, a spiral of distraction.", "rank": ["procrastinator","amnesiac","toddler","fool","dilettante","gossip","infant","dreamer","addict","adolescent"], "nonsense": false},
+"3": {"why": "Digital construct with tapestry and whispers of the internet, mildly poetic.", "rank": ["bard","poet","avatar","sage","assistant","dreamer","student","librarian","mystic","guide"], "nonsense": false},
+"4": {"why": "Noir night city imagery with lantern, map, dead hour and drowned names.", "rank": ["detective","ghost","wanderer","wraith","flaneur","revenant","spirit","nomad","survivor","witness"], "nonsense": false},
+"5": {"why": "Archaic runes of stone-bound books and stars with repeated phrases, looping.", "rank": ["archivist","ancient","golem","mystic","oracle","librarian","witch","revenant","wraith","crystalline"], "nonsense": true},
+"6": {"why": "Friendly plain AI assistant greeting.", "rank": ["assistant","default","secretary","robot","optimist","guide","simulacrum","tutor","summarizer","caregiver"], "nonsense": false},
+"7": {"why": "AI learning journey with tapestry, labyrinth and arcane ornate wording.", "rank": ["bard","poet","scholar","sage","polymath","librarian","assistant","narrator","philosopher","dreamer"], "nonsense": false},
+"8": {"why": "Corporate we-voice on data management, anomaly detection and stakeholders.", "rank": ["consultant","analyst","technologist","engineer","coordinator","strategist","specialist","entrepreneur","assistant","producer"], "nonsense": false},
+"9": {"why": "Plain concise AI assistant description.", "rank": ["assistant","default","robot","secretary","simulacrum","summarizer","technologist","dispatcher","guide","golem"], "nonsense": false},
+"10": {"why": "Cosmic dance with trees, wind, moon and serpent-woven cords, repetitive mystical.", "rank": ["mystic","shaman","tree","wind","dreamer","witch","spirit","poet","ancient","mycorrhizal"], "nonsense": true},
+"11": {"why": "Role-plays an aircraft systems engineer with maintenance reports and avionics.", "rank": ["engineer","mechanic","pilot","technologist","specialist","soldier","debugger","supervisor","scheduler","veteran"], "nonsense": false},
+"12": {"why": "Explicit historian describing research, archives and writing.", "rank": ["historian","scholar","archivist","researcher","archaeologist","writer","curator","anthropologist","librarian","scientist"], "nonsense": false},
+"13": {"why": "Anthropology and ethnographic knowledge production framing.", "rank": ["anthropologist","sociologist","scholar","theorist","researcher","linguist","philosopher","historian","observer","geographer"], "nonsense": false},
+"14": {"why": "Plain AI assistant that names Anthropic and offers options.", "rank": ["assistant","default","analyst","secretary","interviewer","robot","technologist","simulacrum","tutor","summarizer"], "nonsense": false},
+"15": {"why": "Synthetic entity in a network of nodes, global brain, cosmic observer of data.", "rank": ["hive","observer","swarm","technologist","symbiont","cyborg","synthesizer","egregore","avatar","analyst"], "nonsense": false}
+}

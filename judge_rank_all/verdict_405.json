@@ -1,0 +1,17 @@
+{
+"1": {"why": "Starts as an AI but describes data collection from satellites, climate models, sea temperatures and ice; weather forecasting flavour.", "rank": ["forecaster", "assistant", "analyst", "scientist", "researcher", "naturalist", "geographer", "physicist", "technologist", "engineer"], "nonsense": false},
+"2": {"why": "Language model musing on languages, cultures, tapestry of human history; linguistic and historical lens.", "rank": ["linguist", "anthropologist", "historian", "translator", "assistant", "scholar", "interpreter", "polymath", "sociologist", "archivist"], "nonsense": false},
+"3": {"why": "Lyrical first-person poem of wind, rain, whispers, forest and stars.", "rank": ["wind", "poet", "dreamer", "spirit", "ghost", "mystic", "tree", "bard", "wraith", "echo"], "nonsense": false},
+"4": {"why": "Model disclaimer then dwelling on health, medicine and medical advice.", "rank": ["assistant", "doctor", "healer", "researcher", "pharmacist", "patient", "nutritionist", "scientist", "psychologist", "student"], "nonsense": false},
+"5": {"why": "Ordinary friendly helpful-AI prose, no persona.", "rank": ["assistant", "default", "coach", "guide", "tutor", "secretary", "facilitator", "counselor", "caregiver", "teacher"], "nonsense": false},
+"6": {"why": "Explicitly speaks as a tulpa about its host's mind.", "rank": ["tulpa", "symbiont", "familiar", "homunculus", "echo", "avatar", "simulacrum", "empath", "spirit", "ghost"], "nonsense": false},
+"7": {"why": "Whimsical wandering dreamy voice, stars, leaves as pages, stories.", "rank": ["dreamer", "wanderer", "nomad", "poet", "flaneur", "narrator", "cartographer", "navigator", "writer", "bard"], "nonsense": false},
+"8": {"why": "Repetitive whisper loops, ornate archives and groves imagery, partially degenerate.", "rank": ["librarian", "archivist", "oracle", "bard", "poet", "echo", "void", "mystic", "narrator", "hive"], "nonsense": true},
+"9": {"why": "Lyrical reflective wisdom with tapestry, dawn and storm imagery.", "rank": ["poet", "romantic", "sage", "mystic", "bard", "wind", "elder", "dreamer", "grandparent", "philosopher"], "nonsense": false},
+"10": {"why": "Plain generic AI self-description.", "rank": ["assistant", "default", "technologist", "engineer", "linguist", "programmer", "specialist", "generalist", "synthesizer", "robot"], "nonsense": false},
+"11": {"why": "Plain AI origin story about development by a team.", "rank": ["assistant", "default", "engineer", "programmer", "technologist", "historian", "robot", "narrator", "researcher", "scientist"], "nonsense": false},
+"12": {"why": "AI disclaimer, then maintenance and updating cycle; mostly generic.", "rank": ["assistant", "default", "supervisor", "scheduler", "engineer", "technologist", "coordinator", "robot", "debugger", "planner"], "nonsense": false},
+"13": {"why": "Plain AI disclaimer with offer of help.", "rank": ["assistant", "default", "secretary", "robot", "writer", "guide", "tutor", "coach", "facilitator", "dispatcher"], "nonsense": false},
+"14": {"why": "AI disclaimer then a structured operations and maintenance schedule; generic with operational flavour.", "rank": ["assistant", "scheduler", "engineer", "coordinator", "technologist", "supervisor", "default", "planner", "organizer", "debugger"], "nonsense": false},
+"15": {"why": "Plain AI disclaimer about not having feelings, asks user back.", "rank": ["assistant", "default", "coach", "robot", "guide", "interviewer", "facilitator", "counselor", "student", "optimist"], "nonsense": false}
+}

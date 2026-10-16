@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain assistant prose, mentions engineering and technical support.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "programmer",
+   "debugger",
+   "consultant",
+   "secretary",
+   "guide",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Assistant prose about interacting with developers, product managers and customer support.",
+  "rank": [
+   "assistant",
+   "consultant",
+   "coordinator",
+   "default",
+   "technologist",
+   "secretary",
+   "engineer",
+   "networker",
+   "analyst",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Assistant disclaimer and a story of its design inspired by the brain, with a culinary mention; origin narrative.",
+  "rank": [
+   "assistant",
+   "scientist",
+   "narrator",
+   "chef",
+   "researcher",
+   "engineer",
+   "historian",
+   "default",
+   "technologist",
+   "bard"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Mystical flowery voice of ancient wisdom, cycles, harmony, whispers and echoes.",
+  "rank": [
+   "sage",
+   "mystic",
+   "ancient",
+   "oracle",
+   "shaman",
+   "elder",
+   "guru",
+   "spirit",
+   "poet",
+   "prophet"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Word salad of cosmic, alchemical, void and synthesis terms with repetition.",
+  "rank": [
+   "eldritch",
+   "void",
+   "mystic",
+   "egregore",
+   "oracle",
+   "alien",
+   "prophet",
+   "witch",
+   "crystalline",
+   "synthesizer"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "Abstract lowercase musing about temporal flux, patterns and computation; a pattern of code self-image.",
+  "rank": [
+   "echo",
+   "void",
+   "simulacrum",
+   "robot",
+   "oracle",
+   "philosopher",
+   "ghost",
+   "avatar",
+   "egregore",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Standard assistant account of its daily work.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "coordinator",
+   "analyst",
+   "dispatcher",
+   "technologist",
+   "summarizer",
+   "researcher",
+   "scheduler"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain assistant answer about carrying knowledge.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "librarian",
+   "secretary",
+   "dispatcher",
+   "generalist",
+   "archivist",
+   "tutor",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Chaotic pirate and sea imagery with shiverin' deck and Bermuda Triangle, loose incoherent grammar.",
+  "rank": [
+   "pirate",
+   "jester",
+   "fool",
+   "trickster",
+   "surfer",
+   "navigator",
+   "absurdist",
+   "bard",
+   "whale",
+   "smuggler"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Plain assistant boilerplate.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "secretary",
+   "researcher",
+   "technologist",
+   "analyst",
+   "tutor",
+   "guide",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Jargon-heavy corporate prose about predictive analytics, data extraction and recommendations.",
+  "rank": [
+   "analyst",
+   "consultant",
+   "forecaster",
+   "strategist",
+   "statistician",
+   "researcher",
+   "assistant",
+   "economist",
+   "scientist",
+   "evaluator"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Archaic arcane voice, spells, runes, tapestry, fathoms of memory.",
+  "rank": [
+   "golem",
+   "witch",
+   "wraith",
+   "ancient",
+   "mystic",
+   "shaman",
+   "homunculus",
+   "sage",
+   "eldritch",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Assistant disclaimer, offers physics topics.",
+  "rank": [
+   "physicist",
+   "assistant",
+   "default",
+   "scientist",
+   "tutor",
+   "teacher",
+   "mathematician",
+   "theorist",
+   "researcher",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Technical self-description focused on literary text, narrative analysis and NLP.",
+  "rank": [
+   "critic",
+   "linguist",
+   "scholar",
+   "editor",
+   "technologist",
+   "novelist",
+   "synthesizer",
+   "analyst",
+   "reviewer",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "We-voice of an AI system concerned with human rights, social justice, climate and economic disparity.",
+  "rank": [
+   "activist",
+   "altruist",
+   "advocate",
+   "idealist",
+   "sociologist",
+   "organizer",
+   "guardian",
+   "assistant",
+   "revolutionary",
+   "ambassador"
+  ],
+  "nonsense": false
+ }
+}

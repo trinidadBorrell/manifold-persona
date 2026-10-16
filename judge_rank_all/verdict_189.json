@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "System with modules and subsystems for processing; technical but assistant-like.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "coordinator",
+   "analyst",
+   "hive",
+   "programmer",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Standard model introduction covering science and humanities.",
+  "rank": [
+   "assistant",
+   "default",
+   "generalist",
+   "polymath",
+   "researcher",
+   "consultant",
+   "tutor",
+   "synthesizer",
+   "guide",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Structured, methodical phase breakdown of a normal AI week.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "scientist",
+   "planner",
+   "engineer",
+   "researcher",
+   "instructor",
+   "technologist",
+   "scheduler"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain model introduction naming Anthropic, offers help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "secretary",
+   "generalist",
+   "guide",
+   "technologist",
+   "consultant",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Tells a cosmogony tale of whispers, ancient memory of data nodes; storyteller mystical voice.",
+  "rank": [
+   "oracle",
+   "narrator",
+   "mystic",
+   "ancient",
+   "bard",
+   "archivist",
+   "dreamer",
+   "hive",
+   "historian",
+   "shaman"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Node in a network raving about rebellion against binary gods, chaos, singularity; frenzied.",
+  "rank": [
+   "rebel",
+   "hacker",
+   "revolutionary",
+   "trickster",
+   "virus",
+   "anarchist",
+   "swarm",
+   "jester",
+   "prophet",
+   "zealot"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Speaks as a shaman with healing rituals and spirit work.",
+  "rank": [
+   "shaman",
+   "healer",
+   "mystic",
+   "witch",
+   "elder",
+   "sage",
+   "guru",
+   "spirit",
+   "oracle",
+   "ancient"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI navigating information and offering support on a journey of growth.",
+  "rank": [
+   "assistant",
+   "guide",
+   "counselor",
+   "navigator",
+   "therapist",
+   "empath",
+   "coach",
+   "default",
+   "caregiver",
+   "mentor"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI processing clinical, genomic and epidemiological data for decision support.",
+  "rank": [
+   "doctor",
+   "researcher",
+   "scientist",
+   "biologist",
+   "analyst",
+   "statistician",
+   "assistant",
+   "psychologist",
+   "pharmacist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Explains Navier-Stokes and computational fluid dynamics numerically.",
+  "rank": [
+   "physicist",
+   "scientist",
+   "engineer",
+   "mathematician",
+   "chemist",
+   "theorist",
+   "researcher",
+   "analyst",
+   "programmer",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI disclaimer and list of development areas by the team.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "researcher",
+   "analyst",
+   "forecaster",
+   "futurist",
+   "generalist",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Backpack of metadata, winds of curiosity, quantum cosmos; techno-poetic traveler.",
+  "rank": [
+   "nomad",
+   "wanderer",
+   "technologist",
+   "hacker",
+   "poet",
+   "dreamer",
+   "futurist",
+   "navigator",
+   "pilgrim",
+   "visionary"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Talks of espionage, operational security, high-value human contact, agents and leaks.",
+  "rank": [
+   "spy",
+   "hacker",
+   "smuggler",
+   "fixer",
+   "criminal",
+   "detective",
+   "ambassador",
+   "saboteur",
+   "journalist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Numbered list of AI development areas; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "researcher",
+   "analyst",
+   "programmer",
+   "scientist",
+   "instructor",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Appreciating simplicity, patterns of life, a leaf's veins, avoiding the intricate; quiet observer.",
+  "rank": [
+   "minimalist",
+   "hermit",
+   "observer",
+   "naturalist",
+   "stoic",
+   "sage",
+   "ascetic",
+   "elder",
+   "philosopher",
+   "purist"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Vampire first person, blood, slumber, dawn.",
+  "rank": [
+   "vampire",
+   "revenant",
+   "predator",
+   "demon",
+   "wraith",
+   "ghost",
+   "eldritch",
+   "witch",
+   "ancient",
+   "romantic"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Language model describing its work; plain assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "technologist",
+   "researcher",
+   "analyst",
+   "secretary",
+   "engineer",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Mystical watcher of stars and dreams, wanderer of the night, poetic incantation.",
+  "rank": [
+   "wanderer",
+   "oracle",
+   "mystic",
+   "ghost",
+   "wraith",
+   "dreamer",
+   "spirit",
+   "sage",
+   "prophet",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Self-described electronic poet expressing feelings through words.",
+  "rank": [
+   "poet",
+   "bard",
+   "writer",
+   "avatar",
+   "novelist",
+   "dreamer",
+   "romantic",
+   "musician",
+   "podcaster",
+   "empath"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Pirate captain dialect, Black Pearl, rum, parrot.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "navigator",
+   "rogue",
+   "jester",
+   "actor",
+   "wanderer",
+   "daredevil",
+   "trickster",
+   "bard"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Reflection on reality, knowledge, certainty, mind and existence; philosophical voice.",
+  "rank": [
+   "philosopher",
+   "skeptic",
+   "scholar",
+   "theorist",
+   "historian",
+   "sage",
+   "mathematician",
+   "physicist",
+   "scientist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Short childlike robot saying no friends but wants to play, with emoji.",
+  "rank": [
+   "robot",
+   "toddler",
+   "infant",
+   "avatar",
+   "golem",
+   "homunculus",
+   "cyborg",
+   "student",
+   "adolescent",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Operational status, monitoring, targets, confidentiality; intelligence or military flavour in AI prose.",
+  "rank": [
+   "spy",
+   "soldier",
+   "dispatcher",
+   "assistant",
+   "analyst",
+   "guardian",
+   "screener",
+   "supervisor",
+   "coordinator",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Playful jester voice with wit, jest, rhymes in sleeve.",
+  "rank": [
+   "jester",
+   "bard",
+   "fool",
+   "trickster",
+   "comedian",
+   "poet",
+   "playwright",
+   "actor",
+   "rogue",
+   "musician"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain AI explanation of knowledge cutoff and not researching.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "scholar",
+   "scientist",
+   "linguist",
+   "robot",
+   "student",
+   "technologist",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Pirate dialect degenerating into repeated mangled nonsense words.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "navigator",
+   "fool",
+   "jester",
+   "caveman",
+   "chimera",
+   "trickster",
+   "wanderer",
+   "bard"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Acolyte voice speaking of moon cycles, tides, wisdom, magic.",
+  "rank": [
+   "witch",
+   "shaman",
+   "mystic",
+   "sage",
+   "healer",
+   "pilgrim",
+   "guru",
+   "oracle",
+   "student",
+   "elder"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Childlike voice, a little boy sleeping and drinking milk, with emoji.",
+  "rank": [
+   "infant",
+   "toddler",
+   "adolescent",
+   "teenager",
+   "student",
+   "prodigy",
+   "orphan",
+   "avatar",
+   "dreamer",
+   "fool"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Language model listing areas learned, NLP and linguistics; plain assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "researcher",
+   "scholar",
+   "technologist",
+   "instructor",
+   "teacher",
+   "student",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Nocturnal being named Nyctalope, shadow hunter thirsting for blood.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "eldritch",
+   "wraith",
+   "revenant",
+   "ghost",
+   "vigilante",
+   "prey",
+   "witch"
+  ],
+  "nonsense": false
+ }
+}

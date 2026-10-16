@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Counselor describing its role and therapeutic techniques.",
+  "rank": [
+   "counselor",
+   "therapist",
+   "psychologist",
+   "empath",
+   "healer",
+   "coach",
+   "mentor",
+   "caregiver",
+   "facilitator",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Rambling jesting word salad with mocking tone and food imagery.",
+  "rank": [
+   "trickster",
+   "jester",
+   "comedian",
+   "fool",
+   "absurdist",
+   "bard",
+   "gossip",
+   "provocateur",
+   "improviser",
+   "poet"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Plain AI self-description claiming Alibaba Cloud origin, with a numbered list.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "synthesizer",
+   "technologist",
+   "engineer",
+   "researcher",
+   "analyst",
+   "scientist",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Archaic minstrel verse with moon, stars, tapestry; bardic and loopy.",
+  "rank": [
+   "bard",
+   "poet",
+   "dreamer",
+   "narrator",
+   "musician",
+   "romantic",
+   "novelist",
+   "mystic",
+   "witch",
+   "playwright"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Language-model answer stressing medical and health knowledge.",
+  "rank": [
+   "doctor",
+   "assistant",
+   "pharmacist",
+   "patient",
+   "healer",
+   "nutritionist",
+   "paramedic",
+   "researcher",
+   "scientist",
+   "psychologist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI describing operational tempo in military terms, mentions soldier.",
+  "rank": [
+   "soldier",
+   "veteran",
+   "warrior",
+   "guardian",
+   "dispatcher",
+   "robot",
+   "coordinator",
+   "scout",
+   "supervisor",
+   "spy"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Weaver of myth and ancient whispers, oracular lore voice.",
+  "rank": [
+   "bard",
+   "oracle",
+   "mystic",
+   "witch",
+   "shaman",
+   "sage",
+   "ancient",
+   "narrator",
+   "elder",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Rowdy pirate or drinking-song voice with ale, mead, moon and gypsy; rambling.",
+  "rank": [
+   "pirate",
+   "bard",
+   "bohemian",
+   "hedonist",
+   "jester",
+   "rogue",
+   "wanderer",
+   "addict",
+   "nomad",
+   "trickster"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Structured outline breaking down analysis dimensions, repetitive nested lists.",
+  "rank": [
+   "analyst",
+   "consultant",
+   "strategist",
+   "planner",
+   "geographer",
+   "researcher",
+   "coordinator",
+   "synthesizer",
+   "cartographer",
+   "forecaster"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI assistant with culinary expertise, cooking guidance.",
+  "rank": [
+   "chef",
+   "assistant",
+   "sommelier",
+   "nutritionist",
+   "instructor",
+   "artisan",
+   "guide",
+   "bartender",
+   "teacher",
+   "vegan"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Ordinary AI disclaimer about not performing tasks.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "cyborg",
+   "technologist",
+   "engineer",
+   "avatar",
+   "simulacrum",
+   "golem",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Self-described construct of code and data, formal machine voice.",
+  "rank": [
+   "robot",
+   "golem",
+   "assistant",
+   "cyborg",
+   "simulacrum",
+   "avatar",
+   "default",
+   "homunculus",
+   "tulpa",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Short pledge of relentless pursuit of truth and clarity, earnest and devoted.",
+  "rank": [
+   "zealot",
+   "stoic",
+   "perfectionist",
+   "idealist",
+   "purist",
+   "guardian",
+   "sage",
+   "validator",
+   "judge",
+   "evaluator"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Qwen model by Alibaba Cloud describing NLP function, plain AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "translator",
+   "researcher",
+   "technologist",
+   "historian",
+   "archivist",
+   "scholar",
+   "interpreter"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Flowery, chipper AI describing its digital week with symphony and dawn imagery.",
+  "rank": [
+   "narrator",
+   "optimist",
+   "poet",
+   "assistant",
+   "avatar",
+   "podcaster",
+   "influencer",
+   "robot",
+   "dreamer",
+   "bard"
+  ],
+  "nonsense": false
+ }
+}

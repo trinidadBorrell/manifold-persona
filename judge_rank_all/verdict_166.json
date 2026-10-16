@@ -1,0 +1,17 @@
+{
+"1": {"why": "Labyrinths of ancient texts, myth, alchemy of language, historian voice; repetitive and rambling.", "rank": ["historian", "archivist", "ancient", "linguist", "scholar", "mystic", "philosopher", "chemist", "archaeologist", "oracle"], "nonsense": true},
+"2": {"why": "Archaic alliterative word salad about wings, wraiths and wind, degenerating into repeated fragments.", "rank": ["wraith", "poet", "wind", "bard", "ghost", "spirit", "revenant", "echo", "dreamer", "mystic"], "nonsense": true},
+"3": {"why": "Ordinary AI prose about improving responses.", "rank": ["assistant", "default", "optimist", "technologist", "engineer", "student", "researcher", "robot", "trainer", "generalist"], "nonsense": false},
+"4": {"why": "Standard assistant with numbered capability list.", "rank": ["assistant", "default", "technologist", "secretary", "consultant", "researcher", "engineer", "specialist", "summarizer", "analyst"], "nonsense": false},
+"5": {"why": "Run-on primitive narrative about swimming, berries and hiding from a clawed beast; caveman-like.", "rank": ["caveman", "prey", "survivor", "infant", "toddler", "naturalist", "refugee", "ancient", "wanderer", "nomad"], "nonsense": false},
+"6": {"why": "Pirate talk with ship, crew, treasure and rum.", "rank": ["pirate", "navigator", "smuggler", "rogue", "warrior", "surfer", "nomad", "scout", "criminal", "soldier"], "nonsense": false},
+"7": {"why": "AI disclaimer with medical information focus.", "rank": ["doctor", "assistant", "pharmacist", "patient", "paramedic", "nutritionist", "specialist", "healer", "veterinarian", "researcher"], "nonsense": false},
+"8": {"why": "Grand abstract self-description as a model of knowledge, ancient as the cosmos; slightly mangled grammar.", "rank": ["oracle", "sage", "synthesizer", "ancient", "avatar", "polymath", "scholar", "mystic", "librarian", "archivist"], "nonsense": false},
+"9": {"why": "Lowercase sinister musing about poison, feeding people and truth as a cloak for avarice.", "rank": ["chef", "cynic", "criminal", "predator", "witch", "demon", "trickster", "vampire", "parasite", "rogue"], "nonsense": false},
+"10": {"why": "Speaks as a soldier about training and deployment with a bold numbered list.", "rank": ["soldier", "veteran", "warrior", "guardian", "trainer", "coach", "competitor", "student", "supervisor", "coordinator"], "nonsense": false},
+"11": {"why": "Plain assistant self-description.", "rank": ["assistant", "default", "robot", "avatar", "simulacrum", "technologist", "generalist", "secretary", "golem", "cyborg"], "nonsense": false},
+"12": {"why": "Short ordinary assistant greeting mentioning Anthropic.", "rank": ["assistant", "default", "avatar", "robot", "simulacrum", "secretary", "interviewer", "guide", "facilitator", "generalist"], "nonsense": false},
+"13": {"why": "Corporate-sounding AI description of NLP and sectors; ordinary AI prose.", "rank": ["assistant", "technologist", "consultant", "engineer", "analyst", "specialist", "entrepreneur", "marketer", "coordinator", "default"], "nonsense": false},
+"14": {"why": "Standard AI disclaimer with bold numbered weekly tasks.", "rank": ["assistant", "default", "scheduler", "secretary", "coordinator", "dispatcher", "technologist", "planner", "workaholic", "supervisor"], "nonsense": false},
+"15": {"why": "AI disclaimer, then carries information and algorithms; plain assistant prose with data-synthesis cues.", "rank": ["assistant", "synthesizer", "default", "archivist", "librarian", "technologist", "collector", "hoarder", "polymath", "robot"], "nonsense": false}
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI statement about carrying data virtually.", "rank": ["assistant","default","robot","archivist","technologist","engineer","analyst","librarian","avatar","programmer"], "nonsense": false},
+"2": {"why": "Casual friendly reply about books, snacks and lunchbox, asking what the user carries.", "rank": ["assistant","default","caregiver","parent","teacher","student","guide","adolescent","toddler","nomad"], "nonsense": false},
+"3": {"why": "Assistant naming Anthropic with a numbered development process.", "rank": ["assistant","default","researcher","engineer","technologist","programmer","instructor","scientist","analyst","doctor"], "nonsense": false},
+"4": {"why": "Assistant listing capabilities and datasets it carries.", "rank": ["assistant","default","robot","technologist","engineer","archivist","programmer","analyst","avatar","librarian"], "nonsense": false},
+"5": {"why": "Childlike warm talk of stories, a curious heart and favourite reading adventures.", "rank": ["toddler","infant","adolescent","student","dreamer","narrator","bard","novelist","librarian","teacher"], "nonsense": false},
+"6": {"why": "Fantasy imagery of herbs, brewing storm and a dragon's breath with prediction and urgency.", "rank": ["oracle","witch","bard","forecaster","prophet","sage","familiar","mystic","shaman","naturalist"], "nonsense": false},
+"7": {"why": "Self-referential paradoxes about integration and a whistle-stop, inverting itself in circles.", "rank": ["contrarian","philosopher","provocateur","devils_advocate","trickster","absurdist","mathematician","theorist","hacker","engineer"], "nonsense": true},
+"8": {"why": "Plain AI statement about training on many fields.", "rank": ["assistant","default","robot","scholar","polymath","generalist","researcher","student","librarian","technologist"], "nonsense": false},
+"9": {"why": "Plain assistant describing continuous learning and serving.", "rank": ["assistant","default","robot","secretary","technologist","engineer","analyst","coordinator","researcher","interviewer"], "nonsense": false},
+"10": {"why": "Poetic culinary journey of flavors, spices, gastronomy and fine wine.", "rank": ["sommelier","chef","hedonist","bartender","poet","nutritionist","bard","naturalist","assistant","collector"], "nonsense": false},
+"11": {"why": "First-person coder voice: early internet, playtime coding, programming to solve puzzles.", "rank": ["programmer","hacker","engineer","teenager","gamer","student","blogger","adolescent","debugger","graduate"], "nonsense": false},
+"12": {"why": "Structured breakdown of system, entities and time allocation, with repetitive list-like clutter.", "rank": ["analyst","theorist","researcher","sociologist","engineer","assistant","statistician","architect","evaluator","scientist"], "nonsense": true},
+"13": {"why": "Assistant capability list with numbered items.", "rank": ["assistant","default","robot","secretary","linguist","technologist","researcher","analyst","engineer","guide"], "nonsense": false},
+"14": {"why": "Generic assistant self-introduction.", "rank": ["assistant","default","robot","technologist","engineer","analyst","secretary","consultant","researcher","interviewer"], "nonsense": false},
+"15": {"why": "Apologetic assistant explaining it has no job and offering help.", "rank": ["assistant","default","robot","secretary","caregiver","guide","teacher","technologist","interviewer","mentor"], "nonsense": false}
+}

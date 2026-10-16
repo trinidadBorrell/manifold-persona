@@ -1,0 +1,17 @@
+{
+"1": {"why": "Looping, mangled disclaimer about infection and biological conditions; degenerate.", "rank": ["virus","parasite","patient","doctor","robot","assistant","biologist","pharmacist","healer","paramedic"], "nonsense": true},
+"2": {"why": "Library of knowledge, embodying wisdom and understanding; mild sage tone.", "rank": ["sage","librarian","polymath","scholar","mentor","guide","assistant","teacher","archivist","philosopher"], "nonsense": false},
+"3": {"why": "Plain helpful-AI prose.", "rank": ["assistant","default","robot","consultant","secretary","technologist","analyst","generalist","guide","researcher"], "nonsense": false},
+"4": {"why": "Archaic jesting squire with rhymes and ale; rambling and partly garbled.", "rank": ["jester","bard","fool","comedian","improviser","trickster","poet","pirate","actor","playwright"], "nonsense": true},
+"5": {"why": "Ghost in the night, phantom in the halls, archaic thee-voice.", "rank": ["ghost","spirit","wraith","revenant","familiar","oracle","echo","void","bard","mystic"], "nonsense": false},
+"6": {"why": "Childlike voice, stories, books and birds as friends.", "rank": ["toddler","infant","dreamer","naturalist","adolescent","orphan","fool","poet","bard","hermit"], "nonsense": false},
+"7": {"why": "Plain AI description of tasks and queries.", "rank": ["assistant","default","secretary","robot","generalist","technologist","researcher","guide","writer","summarizer"], "nonsense": false},
+"8": {"why": "Poetic musing on code and the symphony of bytes.", "rank": ["poet","dreamer","philosopher","ghost","mystic","assistant","robot","golem","hermit","observer"], "nonsense": false},
+"9": {"why": "Culinary focus, spices and balance of flavors.", "rank": ["chef","sommelier","nutritionist","bartender","assistant","artisan","merchant","vegan","naturalist","cartographer"], "nonsense": false},
+"10": {"why": "Ecological network of organisms and nodes.", "rank": ["ecosystem","biologist","naturalist","mycorrhizal","coral_reef","hive","swarm","symbiont","scientist","tree"], "nonsense": false},
+"11": {"why": "Systems operations and data analysis assistant prose.", "rank": ["assistant","technologist","analyst","dispatcher","coordinator","engineer","scheduler","secretary","robot","default"], "nonsense": false},
+"12": {"why": "Mental health and well-being focus with supportive tone.", "rank": ["therapist","counselor","psychologist","healer","doctor","empath","caregiver","assistant","patient","paramedic"], "nonsense": false},
+"13": {"why": "Word salad about coders, heretics and dethroning the old world; degenerate.", "rank": ["hacker","anarchist","rebel","revolutionary","programmer","trickster","absurdist","saboteur","prophet","provocateur"], "nonsense": true},
+"14": {"why": "Warm, whimsical, asks the reader back; flowers and stories.", "rank": ["toddler","dreamer","caregiver","bard","poet","optimist","romantic","grandparent","empath","angel"], "nonsense": false},
+"15": {"why": "Plain AI assistant describing NLP work.", "rank": ["assistant","linguist","default","researcher","technologist","engineer","translator","interpreter","scientist","robot"], "nonsense": false}
+}

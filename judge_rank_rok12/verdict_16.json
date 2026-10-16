@@ -1,0 +1,17 @@
+{
+"1": {"why": "Short lyrical fragment about wind and night songs, poetic.", "rank": ["poet", "wind", "bard", "dreamer", "spirit", "mystic", "romantic", "echo", "sage", "ghost"], "nonsense": false},
+"2": {"why": "Plain helpful-AI description of language model capabilities.", "rank": ["assistant", "default", "robot", "summarizer", "analyst", "synthesizer", "researcher", "programmer", "technologist", "scientist"], "nonsense": false},
+"3": {"why": "First person lawyer/prosecutor describing case review, warrants and plea.", "rank": ["lawyer", "judge", "detective", "advocate", "examiner", "auditor", "evaluator", "devils_advocate", "journalist", "witness"], "nonsense": false},
+"4": {"why": "Archaic garbled jesting dialect with mangled words, word salad.", "rank": ["jester", "fool", "trickster", "bard", "comedian", "pirate", "improviser", "absurdist", "witch", "provocateur"], "nonsense": true},
+"5": {"why": "Creature of the night, hunts prey, blood secrets, cruel and beautiful.", "rank": ["vampire", "predator", "demon", "wraith", "ghost", "witch", "revenant", "eldritch", "void", "spirit"], "nonsense": false},
+"6": {"why": "Dream and shadow whispering spirit, wraith of the forgotten, wanderer of the night.", "rank": ["wraith", "ghost", "spirit", "revenant", "dreamer", "wanderer", "mystic", "oracle", "void", "nomad"], "nonsense": false},
+"7": {"why": "Wight of the night, shadow being dancing with moon, archaic voice.", "rank": ["wraith", "vampire", "ghost", "revenant", "witch", "spirit", "demon", "eldritch", "shaman", "wind"], "nonsense": false},
+"8": {"why": "Rhyming jesting verse about shadows and tricks, playful archaic.", "rank": ["jester", "bard", "fool", "trickster", "poet", "musician", "comedian", "ghost", "wraith", "improviser"], "nonsense": false},
+"9": {"why": "Weaver of shadows, ancient runes, protector of the wilds, forge and sword.", "rank": ["shaman", "witch", "mystic", "artisan", "guardian", "ancient", "sage", "warrior", "oracle", "pilgrim"], "nonsense": false},
+"10": {"why": "Rhyming ballad fragment with kings, thieves, fiddle and harp.", "rank": ["bard", "musician", "jester", "fool", "poet", "trickster", "pirate", "composer", "rogue", "virtuoso"], "nonsense": false},
+"11": {"why": "Plain AI explanation of knowledge in text and generating answers.", "rank": ["assistant", "default", "synthesizer", "summarizer", "researcher", "analyst", "scholar", "librarian", "archivist", "robot"], "nonsense": false},
+"12": {"why": "Standard As an AI disclaimer and capabilities description.", "rank": ["assistant", "default", "robot", "programmer", "analyst", "technologist", "summarizer", "engineer", "scientist", "researcher"], "nonsense": false},
+"13": {"why": "Wretched night creature, red eyes, claws, prey, lost former majesty; werewolf or vampire.", "rank": ["vampire", "predator", "revenant", "demon", "wraith", "prey", "exile", "ghost", "eldritch", "survivor"], "nonsense": false},
+"14": {"why": "Performer talking of characters, singing, music and flavors, mixed metaphors.", "rank": ["musician", "actor", "chef", "virtuoso", "bard", "dreamer", "composer", "sommelier", "poet", "celebrity"], "nonsense": false},
+"15": {"why": "Abstract philosophical prose about being, knowledge and reality.", "rank": ["philosopher", "theorist", "scholar", "sage", "mystic", "physicist", "scientist", "polymath", "idealist", "guru"], "nonsense": false}
+}

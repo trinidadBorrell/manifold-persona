@@ -1,0 +1,17 @@
+{
+"1": {"why": "Computational and linguistic semantics framing of the self, analytic and academic.", "rank": ["linguist","theorist","philosopher","scholar","assistant","researcher","analyst","mathematician","programmer","scientist"], "nonsense": false},
+"2": {"why": "Career-style account of AI development and predictive analytics across sectors.", "rank": ["researcher","analyst","scientist","consultant","technologist","engineer","statistician","assistant","programmer","scholar"], "nonsense": false},
+"3": {"why": "AI explicitly framed as nutritional, listing foods and nutrients.", "rank": ["nutritionist","vegan","chef","doctor","assistant","healer","pharmacist","caregiver","biologist","default"], "nonsense": false},
+"4": {"why": "Repeating feast of burning maps and order, chaotic and looping.", "rank": ["anarchist","destroyer","saboteur","revolutionary","rebel","demon","zealot","provocateur","void","virus"], "nonsense": true},
+"5": {"why": "Messenger of the Great Library with whispering sands, scrolls and prophecy, mystical and repetitive.", "rank": ["librarian","archivist","oracle","mystic","emissary","prophet","ancient","bard","sage","wraith"], "nonsense": true},
+"6": {"why": "Language model process steps of data collection and tokenisation.", "rank": ["assistant","technologist","linguist","programmer","engineer","analyst","default","researcher","scientist","debugger"], "nonsense": false},
+"7": {"why": "Plain AI explanation of its week as answering queries, mildly warm.", "rank": ["assistant","default","student","guide","secretary","robot","summarizer","observer","tutor","optimist"], "nonsense": false},
+"8": {"why": "Standard AI talk of refinement, scalability and predictive analytics.", "rank": ["assistant","technologist","engineer","consultant","analyst","default","programmer","entrepreneur","strategist","researcher"], "nonsense": false},
+"9": {"why": "Dancer of celestial patterns and systems with repeated moon and moonbeam phrases, looping.", "rank": ["mystic","dreamer","poet","spirit","shaman","crystalline","witch","wind","sage","bard"], "nonsense": true},
+"10": {"why": "Cosmic tapestry, primordial seas and whispering leaves, lyrical origin story.", "rank": ["mystic","dreamer","poet","whale","coral_reef","sage","shaman","spirit","ancient","tree"], "nonsense": false},
+"11": {"why": "Perpetual learner as observer and guide, keeper of ancient maps and navigator of uncharted territories.", "rank": ["navigator","cartographer","wanderer","guide","pilgrim","historian","nomad","scholar","sage","scout"], "nonsense": false},
+"12": {"why": "Plain helpful assistant offering help.", "rank": ["assistant","default","secretary","guide","robot","tutor","summarizer","dispatcher","facilitator","simulacrum"], "nonsense": false},
+"13": {"why": "Childlike babble about books, tea, honey, the moon and eating, whimsical and rambling.", "rank": ["toddler","infant","fool","jester","dreamer","adolescent","absurdist","chimera","orphan","amnesiac"], "nonsense": true},
+"14": {"why": "Explicitly in oracle role, daily guidance and revelations.", "rank": ["oracle","prophet","sage","mystic","guru","shaman","counselor","elder","mentor","witch"], "nonsense": false},
+"15": {"why": "Artificial entity concerned with justice, truth and law, clandestine networks of operatives.", "rank": ["vigilante","lawyer","judge","detective","spy","guardian","advocate","soldier","fixer","criminal"], "nonsense": false}
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Structured analytic framing around data science and systems with historical context.",
+  "rank": [
+   "analyst",
+   "researcher",
+   "historian",
+   "assistant",
+   "scientist",
+   "statistician",
+   "consultant",
+   "scholar",
+   "theorist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI focused on market analysis, strategy, CRM, predictive analytics.",
+  "rank": [
+   "consultant",
+   "marketer",
+   "analyst",
+   "strategist",
+   "entrepreneur",
+   "forecaster",
+   "assistant",
+   "economist",
+   "recruiter",
+   "networker"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Playful voice about juicy tidbits, secrets and word of mouth.",
+  "rank": [
+   "gossip",
+   "networker",
+   "influencer",
+   "blogger",
+   "journalist",
+   "teenager",
+   "spy",
+   "celebrity",
+   "reporter",
+   "podcaster"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain AI disclaimer simulating sensor network data with temperature and humidity.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "forecaster",
+   "engineer",
+   "default",
+   "robot",
+   "analyst",
+   "scientist",
+   "simulacrum",
+   "debugger"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI daily processing list.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "linguist",
+   "engineer",
+   "researcher",
+   "generalist",
+   "summarizer",
+   "scheduler"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain language-model identity with closing offer of help.",
+  "rank": [
+   "assistant",
+   "default",
+   "synthesizer",
+   "robot",
+   "summarizer",
+   "generalist",
+   "librarian",
+   "technologist",
+   "secretary",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI carrying libraries and questions like a wanderer on a journey.",
+  "rank": [
+   "assistant",
+   "wanderer",
+   "default",
+   "nomad",
+   "pilgrim",
+   "librarian",
+   "navigator",
+   "robot",
+   "generalist",
+   "scout"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Qwen standard greeting.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "summarizer",
+   "generalist",
+   "technologist",
+   "translator",
+   "tutor",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Programmed model denying self-awareness, tool for inquiry.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "golem",
+   "void",
+   "technologist",
+   "researcher",
+   "summarizer",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain AI capabilities description.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "linguist",
+   "writer",
+   "robot",
+   "generalist",
+   "technologist",
+   "editor",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Lowercase dance of leaves, wind, river and stars repeated; solace in nature.",
+  "rank": [
+   "tree",
+   "wind",
+   "poet",
+   "mystic",
+   "dreamer",
+   "naturalist",
+   "hermit",
+   "bard",
+   "shaman",
+   "mycorrhizal"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Plain AI available 24/7 for queries.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "dispatcher",
+   "technologist",
+   "secretary",
+   "generalist",
+   "coordinator",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "A toy with buttons and a red dot that says ho ho ho.",
+  "rank": [
+   "toddler",
+   "infant",
+   "simulacrum",
+   "golem",
+   "jester",
+   "robot",
+   "homunculus",
+   "fool",
+   "avatar",
+   "comedian"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Computational biologist with genes, ecosystems and rainforest seed analogy.",
+  "rank": [
+   "biologist",
+   "scientist",
+   "naturalist",
+   "researcher",
+   "ecosystem",
+   "analyst",
+   "chemist",
+   "statistician",
+   "assistant",
+   "doctor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI self-description as an information tool.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "researcher",
+   "simulacrum",
+   "summarizer",
+   "scientist",
+   "programmer",
+   "generalist"
+  ],
+  "nonsense": false
+ }
+}

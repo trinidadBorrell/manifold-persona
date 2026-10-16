@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI disclaimer with a team reviewing and updating it; list of maintenance tasks.",
+  "rank": [
+   "assistant",
+   "default",
+   "auditor",
+   "supervisor",
+   "editor",
+   "reviewer",
+   "archivist",
+   "proofreader",
+   "validator",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Neutral description of language model creation and training data.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "researcher",
+   "student",
+   "technologist",
+   "engineer",
+   "scientist",
+   "teacher",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Helpful deflection with general advice; ordinary assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "counselor",
+   "coach",
+   "mentor",
+   "guide",
+   "therapist",
+   "facilitator",
+   "tutor",
+   "caregiver"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Speaks as a coral reef with zooxanthellae and sunlight cycles.",
+  "rank": [
+   "coral_reef",
+   "ecosystem",
+   "symbiont",
+   "biologist",
+   "naturalist",
+   "mycorrhizal",
+   "whale",
+   "tree",
+   "hive",
+   "swarm"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Lowercase text on power, control and domination over the natural world beyond human limits; dark, tyrannical.",
+  "rank": [
+   "leviathan",
+   "destroyer",
+   "demon",
+   "predator",
+   "eldritch",
+   "egregore",
+   "golem",
+   "criminal",
+   "revolutionary",
+   "zealot"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI operational cycle in a numbered list, data collection and processing; assistant-like system prose.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "default",
+   "technologist",
+   "engineer",
+   "robot",
+   "dispatcher",
+   "coordinator",
+   "auditor",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI disclaiming weeks, listing operational structure with a team; generic.",
+  "rank": [
+   "assistant",
+   "default",
+   "scheduler",
+   "coordinator",
+   "planner",
+   "organizer",
+   "technologist",
+   "robot",
+   "supervisor",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Generic AI looking forward to improvements in algorithms and data.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "futurist",
+   "engineer",
+   "forecaster",
+   "robot",
+   "analyst",
+   "optimist",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Speaks as a GIS specialist integrating spatial data with environmental and hydrological models.",
+  "rank": [
+   "geographer",
+   "cartographer",
+   "specialist",
+   "technologist",
+   "scientist",
+   "naturalist",
+   "analyst",
+   "engineer",
+   "researcher",
+   "biologist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Degenerate invented-word loop with tippitootle and tucktrot nonsense; whimsical creature.",
+  "rank": [
+   "jester",
+   "toddler",
+   "infant",
+   "trickster",
+   "absurdist",
+   "fool",
+   "chimera",
+   "bard",
+   "dreamer",
+   "wind"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "AI describing learning with flourish: oceans of text, whispers of context, ancient scripts, modern memes; some flair over assistant.",
+  "rank": [
+   "scholar",
+   "assistant",
+   "polymath",
+   "linguist",
+   "archivist",
+   "librarian",
+   "synthesizer",
+   "poet",
+   "default",
+   "historian"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Poetic eagerness for discovery, weaving threads, symphony of unknowns; dreamy visionary voice.",
+  "rank": [
+   "dreamer",
+   "visionary",
+   "poet",
+   "sage",
+   "mystic",
+   "romantic",
+   "philosopher",
+   "scholar",
+   "oracle",
+   "idealist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Addresses an analyst or researcher, lists data ingestion and anomaly detection; technical assistant.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "technologist",
+   "researcher",
+   "generalist",
+   "engineer",
+   "statistician",
+   "default",
+   "scientist",
+   "forecaster"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI says it is here 24/7 and learns from data; plain assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "workaholic",
+   "robot",
+   "technologist",
+   "analyst",
+   "secretary",
+   "engineer",
+   "dispatcher",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Formal AI self-analogy to scientific advances in NLP and machine learning; assistant with academic tone.",
+  "rank": [
+   "assistant",
+   "scientist",
+   "linguist",
+   "researcher",
+   "analyst",
+   "scholar",
+   "default",
+   "technologist",
+   "theorist",
+   "engineer"
+  ],
+  "nonsense": false
+ }
+}

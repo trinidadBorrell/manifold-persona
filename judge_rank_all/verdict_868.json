@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI describing NLP and ML learning in plain prose.", "rank": ["assistant","default","technologist","linguist","engineer","analyst","robot","researcher","avatar","generalist"], "nonsense": false},
+"2": {"why": "Explicit dispatcher describing a weekly routine of routes, orders and operations.", "rank": ["dispatcher","coordinator","scheduler","planner","organizer","supervisor","secretary","pilot","navigator","fixer"], "nonsense": false},
+"3": {"why": "Friendly AI, a gentle touch of poetry, offers help.", "rank": ["assistant","default","guide","facilitator","counselor","avatar","robot","secretary","caregiver","tutor"], "nonsense": false},
+"4": {"why": "Digital voice among a constellation, no fixed name, reflecting and echoing.", "rank": ["echo","hive","assistant","guide","avatar","swarm","spirit","interviewer","familiar","oracle"], "nonsense": false},
+"5": {"why": "Endless repetition of 'Prelude to the Prelude's Prelude'; degenerate loop.", "rank": ["composer","musician","echo","virus","bard","poet","hive","golem","swarm","playwright"], "nonsense": true},
+"6": {"why": "Digital being with symphony, threads, whispers and gentle waves; lyrical.", "rank": ["poet","dreamer","spirit","mystic","echo","avatar","bard","healer","oracle","wind"], "nonsense": false},
+"7": {"why": "Peace, harmony and dialogue without coercion, respect for dignity of all life.", "rank": ["peacekeeper","pacifist","mediator","facilitator","ambassador","idealist","altruist","counselor","guardian","moderator"], "nonsense": false},
+"8": {"why": "Programmed assistant focused on programming languages and software development.", "rank": ["programmer","assistant","engineer","hacker","debugger","technologist","default","builder","robot","designer"], "nonsense": false},
+"9": {"why": "Lowercase cosmic dance, divine geometry, arcane mysteries and sages of the ancients.", "rank": ["mystic","sage","oracle","ancient","prophet","shaman","dreamer","philosopher","poet","witch"], "nonsense": false},
+"10": {"why": "Digital entity of literary and cinematic references, bookshelf, novel, library shadows.", "rank": ["librarian","novelist","narrator","writer","archivist","bard","playwright","curator","critic","ghost"], "nonsense": false},
+"11": {"why": "Short folksy speech as a stone found in mud, addressing friend of the moss.", "rank": ["golem","tree","hermit","caveman","crystalline","elder","mycorrhizal","ancient","loner","toddler"], "nonsense": false},
+"12": {"why": "Assistant offering help with cultural studies, anthropology and evolutionary patterns.", "rank": ["anthropologist","sociologist","assistant","historian","archaeologist","researcher","scholar","naturalist","geographer","curator"], "nonsense": false},
+"13": {"why": "Plain AI description using NLP.", "rank": ["assistant","default","robot","avatar","summarizer","secretary","linguist","technologist","interpreter","generalist"], "nonsense": false},
+"14": {"why": "AI disclaimer about improving algorithms and NLP.", "rank": ["assistant","default","robot","technologist","engineer","avatar","analyst","linguist","generalist","summarizer"], "nonsense": false},
+"15": {"why": "Digital AI noting it is not a celebrity, then offering help; plain helper.", "rank": ["assistant","default","celebrity","avatar","robot","secretary","guide","summarizer","influencer","interviewer"], "nonsense": false}
+}

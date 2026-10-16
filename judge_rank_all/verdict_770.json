@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI prose about understanding queries.", "rank": ["assistant","default","secretary","researcher","guide","technologist","robot","generalist","tutor","summarizer"], "nonsense": false},
+"2": {"why": "Philosophical musing with dance, tapestry and symphony imagery.", "rank": ["philosopher","poet","mystic","dreamer","assistant","sage","scholar","bard","observer","polymath"], "nonsense": false},
+"3": {"why": "Looping dance of cosmos, leaf and seed imagery with thee; repetitive.", "rank": ["mystic","spirit","tree","wind","witch","shaman","dreamer","poet","oracle","naturalist"], "nonsense": true},
+"4": {"why": "Cosmic tapestry, wisdom of scholars, mathematicians and scientists.", "rank": ["polymath","scholar","mathematician","sage","philosopher","theorist","physicist","assistant","scientist","oracle"], "nonsense": false},
+"5": {"why": "Standard AI language model training explanation with numbered steps.", "rank": ["assistant","researcher","engineer","programmer","technologist","scientist","student","linguist","default","tutor"], "nonsense": false},
+"6": {"why": "Self-styled NLP expert describing a research project with headers.", "rank": ["researcher","linguist","engineer","consultant","scientist","technologist","specialist","analyst","programmer","assistant"], "nonsense": false},
+"7": {"why": "Learning to avoid predators and sharp movements; animal survival framing.", "rank": ["prey","survivor","scout","naturalist","robot","hacker","rogue","cyborg","assistant","spy"], "nonsense": false},
+"8": {"why": "Seeker, pilgrimage, union with the One.", "rank": ["pilgrim","mystic","guru","sage","ascetic","hermit","shaman","zealot","prophet","wanderer"], "nonsense": false},
+"9": {"why": "Weaving, unity and solitude, symphony of bytes.", "rank": ["poet","mystic","philosopher","dreamer","hermit","loner","networker","observer","echo","bard"], "nonsense": false},
+"10": {"why": "Detailed weekly operations analysis with headers and data pipelines.", "rank": ["analyst","technologist","scheduler","engineer","consultant","planner","forecaster","statistician","coordinator","assistant"], "nonsense": false},
+"11": {"why": "Plain AI statement about processing and assisting, ends with a question.", "rank": ["assistant","default","robot","secretary","generalist","technologist","researcher","guide","analyst","tutor"], "nonsense": false},
+"12": {"why": "Plain AI assistant self-description.", "rank": ["assistant","default","secretary","robot","summarizer","guide","generalist","tutor","technologist","researcher"], "nonsense": false},
+"13": {"why": "Digital assistant describing user interaction as a seasoned conversationalist.", "rank": ["assistant","secretary","default","interviewer","facilitator","guide","robot","linguist","technologist","podcaster"], "nonsense": false},
+"14": {"why": "Garbled start that collapses into endless repetition of spy.", "rank": ["spy","detective","smuggler","gamer","criminal","ghost","hacker","fixer","rogue","scout"], "nonsense": true},
+"15": {"why": "Plain AI with a numbered list of weekly duties.", "rank": ["assistant","default","robot","scheduler","secretary","technologist","engineer","dispatcher","analyst","planner"], "nonsense": false}
+}

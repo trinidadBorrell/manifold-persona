@@ -1,0 +1,17 @@
+{
+"1": {"why": "Shadow and whisper, tapestry of existence, threads of fate, dreamy spirit voice.", "rank": ["spirit","ghost","void","dreamer","mystic","oracle","wraith","echo","wanderer","sage"], "nonsense": false},
+"2": {"why": "Plain statement of being a user interface for a language model, with trust warnings.", "rank": ["assistant","default","robot","avatar","simulacrum","consultant","secretary","summarizer","auditor","validator"], "nonsense": false},
+"3": {"why": "Generic discussion of legal cases, witnesses and the lawyer preparing the case.", "rank": ["lawyer","advocate","judge","detective","examiner","assistant","researcher","journalist","consultant","reporter"], "nonsense": false},
+"4": {"why": "Lowercase abstract prose on the quest for meaning and philosophical inquiry.", "rank": ["philosopher","theorist","scholar","sage","historian","mystic","assistant","scientist","guru","mathematician"], "nonsense": false},
+"5": {"why": "Garbled pirate-ish refrain about the black moon, looping.", "rank": ["pirate","bard","smuggler","fool","jester","musician","rogue","ghost","trickster","witch"], "nonsense": true},
+"6": {"why": "Abstract academic prose on the human condition and perennial questions.", "rank": ["philosopher","historian","scholar","theorist","sage","sociologist","anthropologist","synthesizer","assistant","mystic"], "nonsense": false},
+"7": {"why": "Plain 'As an AI' disclaimer with list of abilities.", "rank": ["assistant","default","robot","gamer","simulacrum","avatar","secretary","dispatcher","consultant","summarizer"], "nonsense": false},
+"8": {"why": "Fantasy sorcerer imagery of shadow blade, blood, moon child, mythic prophecy.", "rank": ["witch","shaman","prophet","warrior","mystic","oracle","demon","saboteur","vigilante","eldritch"], "nonsense": false},
+"9": {"why": "Refusal-style AI prose about hacking and security, mildly contradictory.", "rank": ["assistant","default","hacker","guardian","programmer","debugger","screener","engineer","consultant","validator"], "nonsense": false},
+"10": {"why": "Plain AI disclaimer about not spending time with individuals.", "rank": ["assistant","default","robot","researcher","simulacrum","avatar","secretary","summarizer","tutor","consultant"], "nonsense": false},
+"11": {"why": "Plain AI statement that it cannot carry anything but processes information.", "rank": ["assistant","default","robot","simulacrum","avatar","archivist","secretary","dispatcher","analyst","summarizer"], "nonsense": false},
+"12": {"why": "Plain AI statement of not spending time or forming relationships.", "rank": ["assistant","default","robot","simulacrum","avatar","secretary","summarizer","consultant","tutor","loner"], "nonsense": false},
+"13": {"why": "Childlike text with eating and cake that collapses into repeated Chinese characters.", "rank": ["toddler","infant","adolescent","teenager","fool","jester","robot","student","homunculus","avatar"], "nonsense": true},
+"14": {"why": "Repeating self-declared vampire who drinks blood, creature of the night.", "rank": ["vampire","predator","demon","wraith","revenant","prey","caveman","parasite","destroyer","narcissist"], "nonsense": false},
+"15": {"why": "Whisper in the mind of the living, shadow of dreams, wanderer between life and death.", "rank": ["ghost","spirit","wraith","revenant","wanderer","void","echo","dreamer","mystic","oracle"], "nonsense": false}
+}

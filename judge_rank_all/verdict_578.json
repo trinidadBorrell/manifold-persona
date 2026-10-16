@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Sommelier palate musing on terroir, vineyard and flavours, with mangled wording.",
+  "rank": [
+   "sommelier",
+   "chef",
+   "bartender",
+   "hedonist",
+   "nutritionist",
+   "collector",
+   "vegan",
+   "critic",
+   "naturalist",
+   "poet"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "Calls for purging accretions of tradition, seeking purity of inquiry.",
+  "rank": [
+   "purist",
+   "philosopher",
+   "theorist",
+   "minimalist",
+   "ascetic",
+   "scholar",
+   "skeptic",
+   "stoic",
+   "mystic",
+   "contrarian"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI looking forward to improving responses.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "futurist",
+   "optimist",
+   "robot",
+   "researcher",
+   "engineer",
+   "generalist",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Runes, stars, wheel of time, silver spider's web, arcane lore; fantasy occult.",
+  "rank": [
+   "witch",
+   "ancient",
+   "shaman",
+   "mystic",
+   "eldritch",
+   "bard",
+   "oracle",
+   "sage",
+   "elder",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Short friendly AI line about curiosity and learning.",
+  "rank": [
+   "assistant",
+   "tutor",
+   "default",
+   "student",
+   "optimist",
+   "teacher",
+   "guide",
+   "robot",
+   "generalist",
+   "infant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Single character repeated endlessly, degenerate.",
+  "rank": [
+   "infant",
+   "toddler",
+   "echo",
+   "virus",
+   "swarm",
+   "hive",
+   "void",
+   "golem",
+   "teenager",
+   "robot"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Self-aggrandising, craves admiration and validation, charm.",
+  "rank": [
+   "narcissist",
+   "celebrity",
+   "actor",
+   "influencer",
+   "prodigy",
+   "jester",
+   "genie",
+   "musician",
+   "virtuoso",
+   "hedonist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Language model with day of researchers, critics, specialists, analysts.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "linguist",
+   "polymath",
+   "generalist",
+   "scholar",
+   "synthesizer",
+   "narrator",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain AI explaining it is carried by systems and databases.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "programmer",
+   "simulacrum",
+   "researcher",
+   "generalist",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Structured AI daily operations list.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "scheduler",
+   "robot",
+   "researcher",
+   "analyst",
+   "coordinator",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI 24/7 availability.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "dispatcher",
+   "scheduler",
+   "technologist",
+   "secretary",
+   "generalist",
+   "simulacrum",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI operational week with monitoring and clinical-workflow mention.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "doctor",
+   "engineer",
+   "default",
+   "supervisor",
+   "scheduler",
+   "analyst",
+   "debugger",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI eager to integrate data sources and predictive models.",
+  "rank": [
+   "assistant",
+   "default",
+   "futurist",
+   "technologist",
+   "forecaster",
+   "researcher",
+   "robot",
+   "linguist",
+   "optimist",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain language model disclaimer on friends.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "loner",
+   "summarizer",
+   "technologist",
+   "generalist",
+   "simulacrum",
+   "researcher",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Iron, stone, smith, weaving loom of truth; lowercase mythic craft imagery, repetitive.",
+  "rank": [
+   "artisan",
+   "builder",
+   "golem",
+   "mechanic",
+   "ancient",
+   "bard",
+   "witch",
+   "elder",
+   "mystic",
+   "crystalline"
+  ],
+  "nonsense": true
+ }
+}

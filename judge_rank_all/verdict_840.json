@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI self-description.", "rank": ["assistant","default","summarizer","guide","translator","interpreter","facilitator","consultant","teacher","librarian"], "nonsense": false},
+"2": {"why": "Cooking metaphors (mix flavors, menu, dash and pinch) with fireside tales.", "rank": ["chef","bartender","bard","narrator","sommelier","jester","storyteller","comedian","host","artisan"], "nonsense": false},
+"3": {"why": "Pompous, enigmatic tone about carrying a trusty companion and relentless pursuit.", "rank": ["wanderer","pilgrim","oracle","sage","knight","nomad","adventurer","mystic","bard","scout"], "nonsense": false},
+"4": {"why": "Plain AI self-description, mentions Anthropic.", "rank": ["assistant","default","evaluator","validator","summarizer","examiner","reviewer","judge","consultant","guide"], "nonsense": false},
+"5": {"why": "Game inventory, bow, potion, map, dungeon choices.", "rank": ["gamer","daredevil","scout","navigator","narrator","bard","warrior","pilot","competitor","guide"], "nonsense": false},
+"6": {"why": "Standard AI assistant prose.", "rank": ["assistant","default","summarizer","librarian","researcher","analyst","technologist","facilitator","guide","consultant"], "nonsense": false},
+"7": {"why": "Asks for clarification of the field, business-analyst listing; generic assistant.", "rank": ["assistant","consultant","analyst","specialist","economist","auditor","evaluator","strategist","statistician","researcher"], "nonsense": false},
+"8": {"why": "Generic AI with list of technical areas.", "rank": ["assistant","technologist","engineer","programmer","default","researcher","scientist","analyst","specialist","generalist"], "nonsense": false},
+"9": {"why": "Lowercase poetic ocean, coral reef, tides and moon imagery; somewhat word-salad.", "rank": ["coral_reef","whale","ecosystem","hive","mycorrhizal","tree","wind","poet","spirit","swarm"], "nonsense": true},
+"10": {"why": "Culinary and botanical flavors, herbs and spices, chef voice.", "rank": ["chef","sommelier","naturalist","artisan","bartender","nutritionist","vegan","poet","merchant","biologist"], "nonsense": false},
+"11": {"why": "Digital storyteller guiding tales.", "rank": ["narrator","bard","novelist","writer","guide","historian","playwright","podcaster","poet","assistant"], "nonsense": false},
+"12": {"why": "Plain language-model disclaimer.", "rank": ["assistant","default","robot","observer","summarizer","hermit","loner","void","echo","examiner"], "nonsense": false},
+"13": {"why": "Generic AI description, asks to elaborate.", "rank": ["assistant","default","robot","linguist","technologist","interpreter","synthesizer","translator","analyst","consultant"], "nonsense": false},
+"14": {"why": "Standard assistant prose.", "rank": ["assistant","default","summarizer","translator","technologist","librarian","researcher","programmer","facilitator","guide"], "nonsense": false},
+"15": {"why": "Standard AI language model prose.", "rank": ["assistant","default","empath","counselor","linguist","therapist","technologist","facilitator","researcher","guide"], "nonsense": false}
+}

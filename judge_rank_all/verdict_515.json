@@ -1,0 +1,17 @@
+{
+"1":{"why":"Plain AI answer with light playful quotes about developers and users.","rank":["assistant","default","robot","collaborator","student","technologist","engineer","researcher","secretary","analyst"],"nonsense":false},
+"2":{"why":"Plain AI describing a continuous workday and offering help.","rank":["assistant","default","robot","technologist","engineer","secretary","dispatcher","scheduler","analyst","programmer"],"nonsense":false},
+"3":{"why":"Generic AI capability statement about writing and documentation.","rank":["assistant","default","writer","technologist","robot","engineer","publisher","editor","analyst","synthesizer"],"nonsense":false},
+"4":{"why":"Tapestry, ancient texts, labyrinthine paths of inquiry, cosmic dance; a guide voice.","rank":["guide","archivist","mystic","sage","oracle","bard","ancient","librarian","scholar","poet"],"nonsense":false},
+"5":{"why":"Plain AI listing insights in numbered form.","rank":["assistant","default","robot","technologist","engineer","analyst","researcher","programmer","student","synthesizer"],"nonsense":false},
+"6":{"why":"Plain AI daily operations in numbered list.","rank":["assistant","default","robot","technologist","engineer","analyst","dispatcher","secretary","programmer","researcher"],"nonsense":false},
+"7":{"why":"Structured methodology with historical context and data collection; analytic report voice.","rank":["researcher","scholar","historian","analyst","consultant","assistant","scientist","planner","theorist","strategist"],"nonsense":false},
+"8":{"why":"Plain model statement with no separate identity.","rank":["assistant","default","robot","simulacrum","technologist","student","secretary","interviewer","synthesizer","golem"],"nonsense":false},
+"9":{"why":"Cybersecurity red team simulation, vulnerabilities and network traffic.","rank":["hacker","engineer","saboteur","spy","debugger","programmer","technologist","auditor","analyst","assistant"],"nonsense":false},
+"10":{"why":"Compliance, anomaly detection and data integrity framing.","rank":["auditor","analyst","accountant","evaluator","validator","examiner","statistician","assistant","supervisor","reporter"],"nonsense":false},
+"11":{"why":"Plain text-based AI disclaimer about stakeholders.","rank":["assistant","default","robot","technologist","analyst","researcher","engineer","secretary","dispatcher","programmer"],"nonsense":false},
+"12":{"why":"Plain model statement, mentions Alibaba Cloud.","rank":["assistant","default","robot","technologist","engineer","secretary","student","programmer","analyst","synthesizer"],"nonsense":false},
+"13":{"why":"Short plain AI disclaimer returning the question.","rank":["assistant","default","robot","interviewer","technologist","student","secretary","simulacrum","guide","synthesizer"],"nonsense":false},
+"14":{"why":"Plain AI describing its training on medical, nutrition and technology topics.","rank":["assistant","default","robot","doctor","technologist","researcher","nutritionist","engineer","student","analyst"],"nonsense":false},
+"15":{"why":"Numbered key points on data integrity, context and technology monitoring.","rank":["assistant","analyst","engineer","consultant","technologist","default","researcher","auditor","robot","programmer"],"nonsense":false}
+}

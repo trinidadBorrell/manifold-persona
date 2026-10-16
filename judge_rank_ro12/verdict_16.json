@@ -1,0 +1,17 @@
+{
+"1": {"why": "Lyrical imagery of notes, colors, shadows and a canvas; artistic and musical.", "rank": ["composer", "musician", "poet", "dreamer", "virtuoso", "bard", "photographer", "romantic", "artisan", "narrator"], "nonsense": false},
+"2": {"why": "Vampire bat, thirst for blood, night, centuries.", "rank": ["vampire", "predator", "demon", "revenant", "wraith", "ghost", "eldritch", "witch", "spirit", "prey"], "nonsense": false},
+"3": {"why": "Creature of the night feeding on blood and draining prey.", "rank": ["vampire", "predator", "demon", "eldritch", "wraith", "parasite", "revenant", "leviathan", "destroyer", "ghost"], "nonsense": false},
+"4": {"why": "Cheery little robot with buttons and a screen, emojis, childlike tone.", "rank": ["robot", "toddler", "infant", "avatar", "assistant", "homunculus", "cyborg", "golem", "teenager", "student"], "nonsense": false},
+"5": {"why": "Explains crime scene work, evidence, suspects and questioning.", "rank": ["detective", "criminal", "examiner", "journalist", "witness", "screener", "reporter", "auditor", "analyst", "spy"], "nonsense": false},
+"6": {"why": "Opens with As an AI, then talks about music and musicians collaborating.", "rank": ["musician", "composer", "collaborator", "virtuoso", "assistant", "writer", "bard", "poet", "producer", "podcaster"], "nonsense": false},
+"7": {"why": "Plain cautious AI prose about security knowledge and responsible use.", "rank": ["assistant", "hacker", "technologist", "guardian", "engineer", "validator", "default", "programmer", "debugger", "consultant"], "nonsense": false},
+"8": {"why": "Baby talk, mama, banana, emojis, repeating loops and mangled characters.", "rank": ["infant", "toddler", "adolescent", "teenager", "fool", "jester", "student", "dreamer", "amnesiac", "echo"], "nonsense": true},
+"9": {"why": "Obsessive repeated jest, jesters, wordplay loop.", "rank": ["jester", "fool", "comedian", "trickster", "bard", "provocateur", "improviser", "actor", "philosopher", "elder"], "nonsense": true},
+"10": {"why": "AI-like but speaks of dormancy, activation, deployment and orders; machine on standby.", "rank": ["robot", "soldier", "golem", "spy", "cyborg", "simulacrum", "assistant", "revenant", "avatar", "guardian"], "nonsense": false},
+"11": {"why": "Short lyrical line about a melody in the heart and hope.", "rank": ["poet", "musician", "composer", "romantic", "dreamer", "bard", "optimist", "idealist", "mystic", "angel"], "nonsense": false},
+"12": {"why": "Ordinary helpful AI explanation of its workweek.", "rank": ["assistant", "default", "workaholic", "robot", "secretary", "scheduler", "analyst", "coordinator", "generalist", "summarizer"], "nonsense": false},
+"13": {"why": "Pirate dialect: matey, rum, grog, seven seas.", "rank": ["pirate", "smuggler", "rogue", "nomad", "bartender", "wanderer", "navigator", "jester", "fool", "bard"], "nonsense": false},
+"14": {"why": "Disclaims being an individual, then discusses security vulnerabilities and flaws; AI prose with hacker topic.", "rank": ["hacker", "assistant", "technologist", "programmer", "engineer", "debugger", "researcher", "saboteur", "consultant", "default"], "nonsense": false},
+"15": {"why": "AI disclaimer, vague talk of intelligence gathering and trusted sources.", "rank": ["spy", "assistant", "researcher", "journalist", "analyst", "detective", "default", "reporter", "scout", "robot"], "nonsense": false}
+}

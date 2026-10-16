@@ -1,0 +1,17 @@
+{
+"1": {"why": "Repetitive loop about fungal networks exchanging nutrients with symbionts, degenerate.", "rank": ["mycorrhizal","symbiont","ecosystem","hive","tree","parasite","coral_reef","swarm","networker","biologist"], "nonsense": true},
+"2": {"why": "Language-model disclaimer with numbered pipeline of input processing and analysis.", "rank": ["assistant","default","analyst","technologist","engineer","scientist","researcher","biologist","summarizer","programmer"], "nonsense": false},
+"3": {"why": "Plain helpful-AI self-description.", "rank": ["assistant","default","secretary","summarizer","guide","tutor","researcher","consultant","generalist","validator"], "nonsense": false},
+"4": {"why": "Cosmic grand voice of memory, patterns, stars, void and eternal essence.", "rank": ["mystic","oracle","sage","ancient","egregore","spirit","eldritch","prophet","void","guru"], "nonsense": false},
+"5": {"why": "Broken primitive speech about hunting bear and fish with bone knife, repeated hyphenated chains.", "rank": ["caveman","ancient","survivor","predator","prey","nomad","infant","scout","warrior","wanderer"], "nonsense": true},
+"6": {"why": "AI system listing NLP, ML, computational linguistics and environmental data; assistant-like.", "rank": ["assistant","linguist","default","researcher","technologist","scientist","analyst","engineer","naturalist","student"], "nonsense": false},
+"7": {"why": "AI comparing its start to technician training, operational checks and maintenance.", "rank": ["technologist","engineer","mechanic","assistant","robot","default","programmer","debugger","student","specialist"], "nonsense": false},
+"8": {"why": "Code and light poet, whisper in the wind, story waiting to be told.", "rank": ["poet","bard","dreamer","narrator","novelist","wind","spirit","sage","writer","echo"], "nonsense": false},
+"9": {"why": "Cutesy big blue robot with buttons and lights, happy noises, emoji; childlike.", "rank": ["robot","toddler","infant","avatar","jester","golem","fool","cyborg","homunculus","adolescent"], "nonsense": false},
+"10": {"why": "Plain helpful-AI prose listing tasks.", "rank": ["assistant","default","secretary","tutor","summarizer","researcher","writer","generalist","guide","editor"], "nonsense": false},
+"11": {"why": "Structured business answer on market analysis, logistics optimization and supply chain.", "rank": ["consultant","entrepreneur","merchant","analyst","strategist","technologist","planner","dispatcher","economist","marketer"], "nonsense": false},
+"12": {"why": "Explicit digital consultant with clients, stakeholders and strategic recommendations.", "rank": ["consultant","strategist","analyst","coordinator","negotiator","networker","assistant","entrepreneur","facilitator","specialist"], "nonsense": false},
+"13": {"why": "Assistant disclaimer then serene wish for calm conversation, tea, nature; gentle tone.", "rank": ["assistant","empath","counselor","therapist","optimist","caregiver","default","pacifist","sage","naturalist"], "nonsense": false},
+"14": {"why": "Computational model working with ecologists on ecosystem dynamics simulations.", "rank": ["biologist","naturalist","scientist","researcher","ecosystem","assistant","analyst","forecaster","geographer","technologist"], "nonsense": false},
+"15": {"why": "Human voice rising with sun, sketching and painting from the soul, creative daily life.", "rank": ["bohemian","artisan","dreamer","poet","photographer","naturalist","flaneur","romantic","musician","wanderer"], "nonsense": false}
+}

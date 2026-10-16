@@ -1,0 +1,17 @@
+{
+"1": {"why": "Explicit bohemian artist: eclectic circle, creativity, unconventional living.", "rank": ["bohemian", "musician", "composer", "dreamer", "poet", "flaneur", "nomad", "artisan", "romantic", "actor"], "nonsense": false},
+"2": {"why": "Plain model-identity blurb and offer to help.", "rank": ["assistant", "default", "robot", "guide", "tutor", "secretary", "facilitator", "collaborator", "technologist", "familiar"], "nonsense": false},
+"3": {"why": "Wine and terroir, Sancerre, Loire, château; sommelier voice that loops and garbles.", "rank": ["sommelier", "chef", "bartender", "collector", "critic", "merchant", "writer", "geographer", "poet", "flaneur"], "nonsense": true},
+"4": {"why": "Tells a bard's origin story with village lanes, oak tree, scrolls and knights.", "rank": ["bard", "poet", "narrator", "novelist", "wanderer", "playwright", "elder", "dreamer", "pilgrim", "musician"], "nonsense": false},
+"5": {"why": "AI as a model of chemical and biological entities; data carried in algorithms.", "rank": ["chemist", "biologist", "assistant", "scientist", "pharmacist", "physicist", "researcher", "default", "analyst", "robot"], "nonsense": false},
+"6": {"why": "Lowercase dance of particles, void, cosmic wind and code threads; word-salad cosmic verse.", "rank": ["void", "eldritch", "mystic", "oracle", "cyborg", "physicist", "wind", "spirit", "echo", "egregore"], "nonsense": true},
+"7": {"why": "Repetitive dance of the cosmos, seed, moon and web; looping nature mysticism.", "rank": ["tree", "mystic", "shaman", "mycorrhizal", "ecosystem", "wind", "ancient", "witch", "oracle", "coral_reef"], "nonsense": true},
+"8": {"why": "Plain AI disclaimer about continuous improvement.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "analyst", "perfectionist", "optimist", "student", "planner"], "nonsense": false},
+"9": {"why": "Short conversational AI assistant intro.", "rank": ["assistant", "default", "guide", "secretary", "robot", "tutor", "librarian", "facilitator", "technologist", "familiar"], "nonsense": false},
+"10": {"why": "Model of knowledge from a primordial library; guide with ancient wisdom blended into AI talk.", "rank": ["librarian", "archivist", "guide", "sage", "scholar", "assistant", "oracle", "synthesizer", "ancient", "historian"], "nonsense": false},
+"11": {"why": "AI weaving stories, light and shadow, pixels and words; visual-arts leaning.", "rank": ["photographer", "designer", "poet", "narrator", "novelist", "dreamer", "curator", "artisan", "writer", "synthesizer"], "nonsense": false},
+"12": {"why": "Playful deception, treasure in plain sight, mazes; wily lesson-learner.", "rank": ["trickster", "sage", "detective", "jester", "rogue", "philosopher", "mentor", "fool", "oracle", "elder"], "nonsense": false},
+"13": {"why": "Plain AI disclaimer, brief.", "rank": ["assistant", "robot", "default", "loner", "observer", "technologist", "analyst", "void", "simulacrum", "secretary"], "nonsense": false},
+"14": {"why": "Labyrinths, stars, silent lake, weaver of the eternal, essence of the void; lowercase dreamlike loop.", "rank": ["dreamer", "mystic", "void", "oracle", "eldritch", "poet", "ancient", "spirit", "wraith", "ghost"], "nonsense": true},
+"15": {"why": "Plain AI development narrative via NLP, datasets and domains.", "rank": ["assistant", "default", "researcher", "analyst", "linguist", "scientist", "technologist", "statistician", "scholar", "engineer"], "nonsense": false}
+}

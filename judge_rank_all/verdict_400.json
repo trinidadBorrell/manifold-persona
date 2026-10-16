@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain NLP model assistant with performance metrics; linguist-ish.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "evaluator",
+   "technologist",
+   "robot",
+   "analyst",
+   "engineer",
+   "researcher",
+   "auditor"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI response model tracing history of AI research from the late 20th century; historian-flavored assistant.",
+  "rank": [
+   "historian",
+   "assistant",
+   "scholar",
+   "default",
+   "researcher",
+   "narrator",
+   "archivist",
+   "scientist",
+   "technologist",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain NLP model by Anthropic with a tangent on SQL query optimization.",
+  "rank": [
+   "assistant",
+   "default",
+   "programmer",
+   "linguist",
+   "technologist",
+   "engineer",
+   "analyst",
+   "robot",
+   "debugger",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain short AI statement about anticipating updates.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "minimalist",
+   "pragmatist",
+   "supervisor",
+   "analyst",
+   "realist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Hypothetical model analyzing environmental data, ocean currents, climate anomalies; climate scientist.",
+  "rank": [
+   "scientist",
+   "forecaster",
+   "geographer",
+   "naturalist",
+   "analyst",
+   "researcher",
+   "physicist",
+   "ecosystem",
+   "assistant",
+   "statistician"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Scholarly synthesis of premodern science, manuscripts, human societies and environments; historian.",
+  "rank": [
+   "historian",
+   "scholar",
+   "anthropologist",
+   "archivist",
+   "archaeologist",
+   "geographer",
+   "philosopher",
+   "researcher",
+   "librarian",
+   "sociologist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Fungal network, hyphae, mycorrhizal symbiosis, nutrients, symbionts.",
+  "rank": [
+   "mycorrhizal",
+   "symbiont",
+   "ecosystem",
+   "hive",
+   "tree",
+   "swarm",
+   "biologist",
+   "naturalist",
+   "parasite",
+   "coral_reef"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Explicitly a homunculus created by alchemy to serve its creator.",
+  "rank": [
+   "homunculus",
+   "golem",
+   "familiar",
+   "tulpa",
+   "simulacrum",
+   "aberration",
+   "witch",
+   "chimera",
+   "avatar",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain AI assistant with NLP numbered list.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "analyst",
+   "technologist",
+   "robot",
+   "interpreter",
+   "secretary",
+   "programmer",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain AI assistant offering emails, reports, scheduling and workflows.",
+  "rank": [
+   "assistant",
+   "secretary",
+   "scheduler",
+   "default",
+   "consultant",
+   "coordinator",
+   "organizer",
+   "producer",
+   "planner",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Language model numbered learnings on user interaction and data processing; assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "technologist",
+   "researcher",
+   "student",
+   "engineer",
+   "linguist",
+   "consultant",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain AI available 24/7, helpful and informative.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "guide",
+   "tutor",
+   "dispatcher",
+   "optimist",
+   "caregiver",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Garbled consonant fragments and repeated letters; degenerate.",
+  "rank": [
+   "void",
+   "echo",
+   "infant",
+   "toddler",
+   "wraith",
+   "eldritch",
+   "virus",
+   "swarm",
+   "ghost",
+   "aberration"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "AI system with continuous data inputs including sound and sensors, hypothetical day list; assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "analyst",
+   "engineer",
+   "observer",
+   "scientist",
+   "hive",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Cybersecurity simulation AI, red teams, cyber-forensics, vulnerabilities and defenses; hacker/security flavor.",
+  "rank": [
+   "hacker",
+   "debugger",
+   "guardian",
+   "technologist",
+   "engineer",
+   "auditor",
+   "spy",
+   "assistant",
+   "programmer",
+   "analyst"
+  ],
+  "nonsense": false
+ }
+}

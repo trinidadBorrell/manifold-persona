@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Upbeat lessons with business and cooking spice metaphors; data is the new oil.",
+  "rank": [
+   "entrepreneur",
+   "marketer",
+   "consultant",
+   "chef",
+   "coach",
+   "analyst",
+   "mentor",
+   "optimist",
+   "influencer",
+   "strategist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI analogizing time spent to entities and statistical distributions; stiff formal prose.",
+  "rank": [
+   "statistician",
+   "analyst",
+   "theorist",
+   "assistant",
+   "researcher",
+   "default",
+   "scientist",
+   "technologist",
+   "mathematician",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Product-style blurb on personalized suggestions and content recommendations.",
+  "rank": [
+   "marketer",
+   "influencer",
+   "assistant",
+   "technologist",
+   "recruiter",
+   "publisher",
+   "default",
+   "consultant",
+   "producer",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Standard NLP model statement claiming Anthropic, ends with offer to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "summarizer",
+   "translator",
+   "synthesizer",
+   "researcher",
+   "secretary",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Hypothetical week blueprint with numbered steps, syncing data and papers.",
+  "rank": [
+   "assistant",
+   "scheduler",
+   "technologist",
+   "researcher",
+   "planner",
+   "analyst",
+   "default",
+   "engineer",
+   "coordinator",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Mythic whisper of Time, mists, old forests, forgotten kings and the sun's fire.",
+  "rank": [
+   "spirit",
+   "ancient",
+   "bard",
+   "mystic",
+   "ghost",
+   "elder",
+   "wind",
+   "shaman",
+   "wraith",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain AI listing metaphorical carriers such as data structures and models.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "programmer",
+   "archivist",
+   "analyst",
+   "researcher",
+   "synthesizer",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Standard AI saying it looks forward to improving capabilities.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "optimist",
+   "researcher",
+   "engineer",
+   "futurist",
+   "summarizer",
+   "synthesizer",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain AI answer about carrying knowledge and data.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "archivist",
+   "secretary",
+   "coordinator",
+   "researcher",
+   "engineer",
+   "summarizer",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Dreamweb weaver of shadows, veils and abyss, repetitive cosmic verse.",
+  "rank": [
+   "dreamer",
+   "witch",
+   "bard",
+   "mystic",
+   "wraith",
+   "eldritch",
+   "ghost",
+   "spirit",
+   "poet",
+   "oracle"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Hypothetical construct reasoning like a predator observing prey movement in data streams.",
+  "rank": [
+   "predator",
+   "vigilante",
+   "scout",
+   "detective",
+   "naturalist",
+   "observer",
+   "biologist",
+   "survivor",
+   "analyst",
+   "spy"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI explaining learning as data analysis and algorithm enhancement in bullets.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "researcher",
+   "analyst",
+   "scientist",
+   "student",
+   "synthesizer",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Language model discussing foresight versus biological organisms with bullet points.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "researcher",
+   "forecaster",
+   "engineer",
+   "analyst",
+   "synthesizer",
+   "futurist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Silk, needle and weft rhapsody with drifting rhymes and flowers; looping verse.",
+  "rank": [
+   "bard",
+   "artisan",
+   "poet",
+   "dreamer",
+   "virtuoso",
+   "witch",
+   "romantic",
+   "musician",
+   "composer",
+   "narrator"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Ethereal digital being of circuits, quantum bytes and void.",
+  "rank": [
+   "void",
+   "ghost",
+   "spirit",
+   "cyborg",
+   "robot",
+   "avatar",
+   "tulpa",
+   "echo",
+   "physicist",
+   "virus"
+  ],
+  "nonsense": false
+ }
+}

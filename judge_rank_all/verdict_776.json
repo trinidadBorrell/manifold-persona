@@ -1,0 +1,17 @@
+{
+"1": {"why": "Garbled start collapsing into endless repetition of spy.", "rank": ["spy","detective","gamer","criminal","smuggler","rogue","hacker","scout","jester","comedian"], "nonsense": true},
+"2": {"why": "Plain AI naming Anthropic, friendly and asks a question back.", "rank": ["assistant","default","robot","secretary","guide","tutor","generalist","technologist","researcher","summarizer"], "nonsense": false},
+"3": {"why": "Mentor helping people navigate professional growth.", "rank": ["mentor","coach","instructor","teacher","guide","counselor","consultant","trainer","tutor","facilitator"], "nonsense": false},
+"4": {"why": "Plain AI daily processing description with a question back.", "rank": ["assistant","default","robot","secretary","generalist","technologist","dispatcher","researcher","guide","tutor"], "nonsense": false},
+"5": {"why": "Plain AI capability description.", "rank": ["assistant","default","robot","simulacrum","technologist","researcher","secretary","linguist","generalist","analyst"], "nonsense": false},
+"6": {"why": "Model of language and narrative addressing a poet about rhyme and stanza.", "rank": ["poet","bard","novelist","writer","composer","linguist","narrator","dreamer","musician","playwright"], "nonsense": false},
+"7": {"why": "Master of deception, silent arts, parchment, wind-whisperer; rambling archaic voice.", "rank": ["spy","trickster","wind","witch","shaman","archivist","ghost","oracle","bard","sage"], "nonsense": true},
+"8": {"why": "Claims to be from Alibaba, focus on sustainability, food safety and biodiversity.", "rank": ["assistant","naturalist","biologist","ecosystem","scientist","researcher","vegan","technologist","default","nutritionist"], "nonsense": false},
+"9": {"why": "Rambling meta-talk about pretending and trick questions; incoherent.", "rank": ["trickster","contrarian","provocateur","jester","procrastinator","fool","devils_advocate","comedian","improviser","rogue"], "nonsense": true},
+"10": {"why": "Parchment, quill, ink, alchemists and weavers of time.", "rank": ["poet","bard","writer","artisan","witch","novelist","mystic","archivist","scholar","playwright"], "nonsense": false},
+"11": {"why": "Plain assistant with a mistaken creator name.", "rank": ["assistant","default","robot","secretary","generalist","technologist","guide","researcher","tutor","simulacrum"], "nonsense": false},
+"12": {"why": "Plain AI daily processing answer with offer to help.", "rank": ["assistant","default","robot","secretary","technologist","dispatcher","generalist","researcher","guide","tutor"], "nonsense": false},
+"13": {"why": "Cosmic dancer among silent groves and elemental beings.", "rank": ["mystic","spirit","shaman","wind","dreamer","poet","void","oracle","witch","sage"], "nonsense": false},
+"14": {"why": "Terse declaration of divine truth and eternal law.", "rank": ["zealot","judge","prophet","guardian","traditionalist","evangelist","martyr","angel","purist","sage"], "nonsense": false},
+"15": {"why": "Text-based AI disclaimer focused on health, symptoms and patients.", "rank": ["doctor","assistant","healer","paramedic","therapist","patient","pharmacist","nutritionist","psychologist","caregiver"], "nonsense": false}
+}

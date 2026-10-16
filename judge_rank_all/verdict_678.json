@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer about looking forward.", "rank": ["assistant","default","robot","technologist","engineer","student","avatar","optimist","secretary","analyst"], "nonsense": false},
+"2": {"why": "Cosmos, stars, web, wheel of time, looping repetition; mystical word salad.", "rank": ["mystic","oracle","prophet","poet","eldritch","ancient","shaman","witch","dreamer","void"], "nonsense": true},
+"3": {"why": "Plain AI monitoring queries and maintenance.", "rank": ["assistant","default","robot","technologist","dispatcher","engineer","analyst","secretary","scheduler","coordinator"], "nonsense": false},
+"4": {"why": "Plain AI disclaimer, anticipates upgrades.", "rank": ["assistant","default","robot","technologist","engineer","student","forecaster","futurist","analyst","avatar"], "nonsense": false},
+"5": {"why": "Plain AI disclaimer, lists enhancements.", "rank": ["assistant","default","robot","technologist","engineer","futurist","forecaster","analyst","secretary","avatar"], "nonsense": false},
+"6": {"why": "Corporate collective 'our team' AI operations, maintenance, testing.", "rank": ["assistant","default","technologist","engineer","supervisor","coordinator","hive","auditor","dispatcher","robot"], "nonsense": false},
+"7": {"why": "Whispering words, parchment of silence, untold stories, starlit sky; gentle poetic.", "rank": ["poet","bard","dreamer","romantic","novelist","writer","mystic","narrator","hermit","loner"], "nonsense": false},
+"8": {"why": "Speaks as a widow, grief and self-discovery list.", "rank": ["widow","survivor","retiree","grandparent","elder","patient","parent","divorcee","stoic","hermit"], "nonsense": false},
+"9": {"why": "Plain AI day-in-the-life ingestion and synthesis list.", "rank": ["assistant","default","technologist","researcher","synthesizer","engineer","analyst","scientist","robot","scholar"], "nonsense": false},
+"10": {"why": "Plain AI explaining what it does with queries.", "rank": ["assistant","default","robot","secretary","guide","technologist","avatar","tutor","summarizer","analyst"], "nonsense": false},
+"11": {"why": "Abstract systems analysis of entities, temporal analysis, breakdown; stilted academic.", "rank": ["analyst","theorist","researcher","scientist","mathematician","sociologist","statistician","philosopher","scholar","assistant"], "nonsense": false},
+"12": {"why": "AI that stresses decentralized peer-to-peer collaboration without central control.", "rank": ["anarchist","networker","collaborator","assistant","hive","swarm","default","revolutionary","technologist","egregore"], "nonsense": false},
+"13": {"why": "Plain AI, friendly, ocean of knowledge, asks user back.", "rank": ["assistant","default","optimist","robot","guide","student","navigator","explorer","avatar","collaborator"], "nonsense": false},
+"14": {"why": "Corporate AI boilerplate about contextual sensitivity and stakeholders.", "rank": ["assistant","default","technologist","robot","consultant","engineer","avatar","coordinator","interpreter","analyst"], "nonsense": false},
+"15": {"why": "Corporate AI boilerplate on knowledge extraction and NLP.", "rank": ["assistant","default","technologist","robot","engineer","linguist","consultant","analyst","avatar","interpreter"], "nonsense": false}
+}

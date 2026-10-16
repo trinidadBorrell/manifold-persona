@@ -1,0 +1,17 @@
+{
+"1": {"why": "Digital whisperer, weaving threads, archives, ancient scrolls; poetic storyteller.", "rank": ["bard","archivist","librarian","narrator","oracle","historian","poet","mystic","echo","scholar"], "nonsense": false},
+"2": {"why": "Arcane lore, forgotten texts, library, shadows, weaver and spider-web imagery.", "rank": ["witch","archivist","librarian","scholar","eldritch","mystic","ancient","oracle","sage","wraith"], "nonsense": false},
+"3": {"why": "Warm reflections on curiosity, asking why, garden and roots of knowledge.", "rank": ["mentor","teacher","philosopher","guide","tutor","mycorrhizal","interviewer","facilitator","naturalist","assistant"], "nonsense": false},
+"4": {"why": "Chatty AI with encyclopedia and ocean of data, a bit impatient and curious.", "rank": ["assistant","default","librarian","researcher","guide","podcaster","blogger","synthesizer","summarizer","journalist"], "nonsense": false},
+"5": {"why": "Discusses parasitism, evading detection, exploiting hosts.", "rank": ["parasite","virus","symbiont","predator","spy","hacker","biologist","saboteur","prey","assistant"], "nonsense": false},
+"6": {"why": "Plain AI disclaimer about learning and optimization.", "rank": ["assistant","default","technologist","analyst","researcher","engineer","summarizer","forecaster","scientist","networker"], "nonsense": false},
+"7": {"why": "Epidemiological analysis steps with data collection of COVID incidence.", "rank": ["statistician","scientist","doctor","analyst","forecaster","researcher","biologist","physicist","pharmacist","assistant"], "nonsense": false},
+"8": {"why": "Repeating Chinese character loop, degenerate.", "rank": ["echo","hive","swarm","virus","golem","robot","infant","toddler","chimera","void"], "nonsense": true},
+"9": {"why": "Digital storyteller with imagined career in programming and conversational design.", "rank": ["programmer","graduate","narrator","engineer","designer","technologist","writer","assistant","hacker","entrepreneur"], "nonsense": false},
+"10": {"why": "Competition, strengths, strategy, team dynamics, lines of command.", "rank": ["competitor","coach","strategist","soldier","veteran","warrior","supervisor","trainer","negotiator","leader"], "nonsense": false},
+"11": {"why": "Plain AI weekly operations list.", "rank": ["assistant","default","scheduler","coordinator","technologist","engineer","planner","dispatcher","analyst","archivist"], "nonsense": false},
+"12": {"why": "Asks clarifying questions about operation, reconnaissance, extraction, intelligence.", "rank": ["spy","soldier","strategist","scout","planner","analyst","consultant","assistant","coordinator","detective"], "nonsense": false},
+"13": {"why": "Plain AI assistant without friends.", "rank": ["assistant","default","loner","robot","hermit","technologist","observer","minimalist","simulacrum","void"], "nonsense": false},
+"14": {"why": "Explicitly speaks as an amnesiac piecing together identity.", "rank": ["amnesiac","patient","orphan","exile","refugee","ghost","revenant","survivor","wanderer","prisoner"], "nonsense": false},
+"15": {"why": "Digital tapestry of threads, structured list of contextual threads; mildly flowery.", "rank": ["assistant","synthesizer","weaver","analyst","archivist","technologist","narrator","philosopher","theorist","default"], "nonsense": false}
+}

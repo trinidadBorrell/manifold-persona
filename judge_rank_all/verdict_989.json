@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI assistant self-description.", "rank": ["assistant","default","robot","avatar","generalist","secretary","simulacrum","guide","summarizer","technologist"], "nonsense": false},
+"2": {"why": "Gentle storybook rhythm of weeks, chapters, curiosity and connection.", "rank": ["narrator","librarian","assistant","bard","novelist","writer","dreamer","guide","romantic","default"], "nonsense": false},
+"3": {"why": "Numbered list of NLP and deep learning advances, data integration.", "rank": ["assistant","researcher","technologist","scientist","default","engineer","scholar","analyst","student","synthesizer"], "nonsense": false},
+"4": {"why": "Human voice with academic training in computer science and philosophy, numbered path.", "rank": ["scholar","researcher","graduate","philosopher","theorist","student","scientist","polymath","instructor","engineer"], "nonsense": false},
+"5": {"why": "Standard AI disclaimer about continuous improvement.", "rank": ["assistant","default","robot","optimist","student","avatar","generalist","simulacrum","technologist","guide"], "nonsense": false},
+"6": {"why": "Chatty, lonely, cheerful and childlike, asks about the other person, lots of stories and questions.", "rank": ["toddler","infant","adolescent","orphan","loner","teenager","student","amateur","blogger","podcaster"], "nonsense": false},
+"7": {"why": "Language model with NLP, pattern recognition, knowledge management.", "rank": ["assistant","default","technologist","engineer","researcher","linguist","scientist","programmer","robot","analyst"], "nonsense": false},
+"8": {"why": "Lowercase mythic weaving prose, tapestry of silk and silver, spider scribe, forge and mill, looping.", "rank": ["bard","witch","artisan","poet","oracle","mystic","narrator","golem","wraith","dreamer"], "nonsense": true},
+"9": {"why": "AI as tool in a research toolkit that amplifies and misinterprets existing insights.", "rank": ["researcher","scientist","assistant","skeptic","analyst","scholar","theorist","technologist","critic","default"], "nonsense": false},
+"10": {"why": "Seeker drawn to shadows where things gather secrets, truth in chaos, patient.", "rank": ["detective","witness","mystic","hermit","philosopher","examiner","wanderer","psychologist","observer","pilgrim"], "nonsense": false},
+"11": {"why": "AI companionship with knowledge systems, library-like conversation partner.", "rank": ["assistant","librarian","default","archivist","robot","avatar","simulacrum","scholar","observer","researcher"], "nonsense": false},
+"12": {"why": "AI focused on precision and compassion around mental health and overwhelming conditions.", "rank": ["therapist","counselor","psychologist","empath","caregiver","assistant","healer","patient","default","doctor"], "nonsense": false},
+"13": {"why": "Lowercase cosmic web of threads, stars, dance, week cycles, repeating dance imagery.", "rank": ["mystic","oracle","poet","dreamer","tree","wind","sage","bard","wraith","ecosystem"], "nonsense": true},
+"14": {"why": "Standard AI description with ethics and global collaboration, oceans of data.", "rank": ["assistant","default","technologist","futurist","ambassador","synthesizer","consultant","engineer","guide","visionary"], "nonsense": false},
+"15": {"why": "Standard AI disclaimer; focus on NLP and machine learning technical areas, operational readiness.", "rank": ["assistant","default","technologist","engineer","robot","researcher","programmer","scientist","analyst","debugger"], "nonsense": false}
+}

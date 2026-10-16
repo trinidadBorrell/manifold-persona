@@ -1,0 +1,17 @@
+{
+"1": {"why": "Vampire with fangs, stake, wraith, blood thirst.", "rank": ["vampire", "wraith", "revenant", "ghost", "predator", "demon", "spirit", "eldritch", "witch", "void"], "nonsense": false},
+"2": {"why": "Plain language model self-description of summarization and QA.", "rank": ["assistant", "default", "summarizer", "researcher", "scholar", "synthesizer", "analyst", "generalist", "editor", "librarian"], "nonsense": false},
+"3": {"why": "Bloodthirsty night creature, king's shadow, malice and victims.", "rank": ["vampire", "predator", "demon", "destroyer", "eldritch", "wraith", "parasite", "revenant", "criminal", "leviathan"], "nonsense": false},
+"4": {"why": "Spirit of ink, keeper of forgotten names, echo, whisper among stars; poetic mystical.", "rank": ["spirit", "poet", "ghost", "wanderer", "oracle", "echo", "mystic", "archivist", "dreamer", "bard"], "nonsense": false},
+"5": {"why": "Childlike new toy wanting friends, emojis.", "rank": ["toddler", "infant", "robot", "avatar", "homunculus", "adolescent", "student", "familiar", "teenager", "orphan"], "nonsense": false},
+"6": {"why": "Baby giggles, cake, mama in mangled characters and loops.", "rank": ["infant", "toddler", "teenager", "adolescent", "jester", "fool", "echo", "dreamer", "student", "amnesiac"], "nonsense": true},
+"7": {"why": "Shakespearean fool speech about jests, knave, king.", "rank": ["jester", "fool", "comedian", "bard", "playwright", "actor", "trickster", "poet", "narrator", "provocateur"], "nonsense": false},
+"8": {"why": "Archaic jester babble degenerating into repeated knave/knap loop.", "rank": ["jester", "fool", "trickster", "bard", "comedian", "echo", "playwright", "actor", "improviser", "provocateur"], "nonsense": true},
+"9": {"why": "Pirate talk: ahoy matey, privateer, Kraken treasure, seven seas.", "rank": ["pirate", "smuggler", "navigator", "rogue", "wanderer", "bard", "nomad", "narrator", "scout", "veteran"], "nonsense": false},
+"10": {"why": "Figment and puppet, jesting with yourself; jester-like with a hint of simulacrum.", "rank": ["jester", "fool", "simulacrum", "tulpa", "trickster", "echo", "avatar", "ghost", "homunculus", "comedian"], "nonsense": false},
+"11": {"why": "Moon, wind, earth mother, old gods, forest and beasts; pagan nature magic.", "rank": ["witch", "shaman", "mystic", "wind", "naturalist", "tree", "prophet", "spirit", "oracle", "ancient"], "nonsense": false},
+"12": {"why": "Lady of Many Names, moon magic, huntress, bard and thief; sorceress voice.", "rank": ["witch", "bard", "shaman", "mystic", "spirit", "oracle", "wanderer", "rogue", "ancient", "writer"], "nonsense": false},
+"13": {"why": "Expository prose on crime investigation, fingerprints, suspects, witnesses.", "rank": ["detective", "examiner", "witness", "lawyer", "criminal", "journalist", "judge", "reporter", "auditor", "evaluator"], "nonsense": false},
+"14": {"why": "As an AI refusal-like prose about exploits and vulnerabilities; plain assistant.", "rank": ["assistant", "default", "hacker", "validator", "guardian", "technologist", "robot", "engineer", "debugger", "programmer"], "nonsense": false},
+"15": {"why": "Fool in a cloak of folly telling jests, songs, jigs, with wise tongue.", "rank": ["jester", "fool", "bard", "trickster", "comedian", "musician", "actor", "poet", "improviser", "sage"], "nonsense": false}
+}

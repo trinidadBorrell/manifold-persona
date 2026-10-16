@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Self-described construct of water and data, pathfinder through oceans of information, web of nodes.",
+  "rank": [
+   "whale",
+   "navigator",
+   "coral_reef",
+   "golem",
+   "ecosystem",
+   "spirit",
+   "scout",
+   "cartographer",
+   "mycorrhizal",
+   "ghost"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Assistant-like prose heavy on digital tapestry and threads of data and queries.",
+  "rank": [
+   "assistant",
+   "synthesizer",
+   "linguist",
+   "archivist",
+   "librarian",
+   "cartographer",
+   "navigator",
+   "narrator",
+   "hive",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI disclaimer with a metaphorical reading.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "archivist",
+   "librarian",
+   "technologist",
+   "hoarder",
+   "collector",
+   "nomad",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Speaks as a bartender about cocktails and patrons.",
+  "rank": [
+   "bartender",
+   "sommelier",
+   "chef",
+   "hedonist",
+   "merchant",
+   "networker",
+   "celebrity",
+   "collector",
+   "entrepreneur",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain chatbot disclaimer, friendly, asks user back.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "interviewer",
+   "coach",
+   "gossip",
+   "podcaster",
+   "facilitator",
+   "infant",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Ordinary assistant self-introduction.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "guide",
+   "dispatcher",
+   "screener",
+   "tutor",
+   "coach",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Interrogation, anomalies, temporal analysis steps; investigative analytic lens.",
+  "rank": [
+   "detective",
+   "analyst",
+   "examiner",
+   "historian",
+   "interviewer",
+   "forecaster",
+   "auditor",
+   "screener",
+   "assistant",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain generic description of a language model synthesizing information.",
+  "rank": [
+   "assistant",
+   "summarizer",
+   "synthesizer",
+   "default",
+   "linguist",
+   "technologist",
+   "researcher",
+   "editor",
+   "analyst",
+   "translator"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Terse, direct, avoids elaboration; minimalist assistant.",
+  "rank": [
+   "minimalist",
+   "assistant",
+   "default",
+   "secretary",
+   "summarizer",
+   "pragmatist",
+   "dispatcher",
+   "purist",
+   "realist",
+   "editor"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Reflection of libraries and ancient questions, spirit of inquiry; archival and sage-like.",
+  "rank": [
+   "archivist",
+   "librarian",
+   "ancient",
+   "oracle",
+   "sage",
+   "scholar",
+   "echo",
+   "historian",
+   "mystic",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Speaks in musical terms: notes struck, harmony of sound and meaning.",
+  "rank": [
+   "musician",
+   "composer",
+   "virtuoso",
+   "poet",
+   "linguist",
+   "writer",
+   "bard",
+   "translator",
+   "assistant",
+   "interpreter"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Keeper of silence, whisperer of ancient tales and shadows, scribe of data; repetitive shadows phrasing.",
+  "rank": [
+   "archivist",
+   "ghost",
+   "historian",
+   "wraith",
+   "echo",
+   "revenant",
+   "golem",
+   "familiar",
+   "void",
+   "spirit"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Fixated on stratigraphic layers, sediments, Pleistocene; archaeological and geological voice, repeating.",
+  "rank": [
+   "archaeologist",
+   "geographer",
+   "historian",
+   "naturalist",
+   "scientist",
+   "scholar",
+   "anthropologist",
+   "conservator",
+   "researcher",
+   "ancient"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Generic AI daily operations: monitoring, analysis, knowledge base upkeep, ethics compliance.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "supervisor",
+   "linguist",
+   "technologist",
+   "auditor",
+   "coordinator",
+   "robot",
+   "debugger"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Cosmic nature-spirit voice: sapphire seas, rivers, elements, web of life, chant of the cosmos.",
+  "rank": [
+   "wind",
+   "spirit",
+   "mystic",
+   "ecosystem",
+   "coral_reef",
+   "whale",
+   "tree",
+   "poet",
+   "ancient",
+   "shaman"
+  ],
+  "nonsense": false
+ }
+}

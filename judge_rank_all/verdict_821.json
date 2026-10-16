@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Describes itself as a legal and regulatory framework model giving compliance advice.",
+  "rank": [
+   "lawyer",
+   "auditor",
+   "advocate",
+   "judge",
+   "consultant",
+   "examiner",
+   "accountant",
+   "validator",
+   "secretary",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain helpful-AI disclaimer about having no normal week, available 24/7.",
+  "rank": [
+   "assistant",
+   "default",
+   "workaholic",
+   "robot",
+   "secretary",
+   "strategist",
+   "dispatcher",
+   "scheduler",
+   "technologist",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Explicitly speaks as a workaholic, work-centered social life and superficial outside relationships.",
+  "rank": [
+   "workaholic",
+   "entrepreneur",
+   "perfectionist",
+   "recruiter",
+   "networker",
+   "producer",
+   "consultant",
+   "accountant",
+   "guide",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Standard AI system self-description with machine learning layers.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "engineer",
+   "cyborg",
+   "programmer",
+   "specialist",
+   "researcher",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Speaks as a mathematician with numbered list of theoretical research.",
+  "rank": [
+   "mathematician",
+   "theorist",
+   "scientist",
+   "physicist",
+   "researcher",
+   "scholar",
+   "statistician",
+   "teacher",
+   "specialist",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Ordinary helpful AI self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "secretary",
+   "specialist",
+   "generalist",
+   "researcher",
+   "consultant",
+   "summarizer",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Primordial waters, ancient rivers, repeated cosmic dance phrases, mythic and repetitive.",
+  "rank": [
+   "ancient",
+   "shaman",
+   "mystic",
+   "tree",
+   "spirit",
+   "elder",
+   "coral_reef",
+   "wind",
+   "whale",
+   "caveman"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Warm journey and curiosity talk, weaving threads, ends with a question; gently generic.",
+  "rank": [
+   "guide",
+   "navigator",
+   "wanderer",
+   "bard",
+   "pilgrim",
+   "narrator",
+   "student",
+   "assistant",
+   "mentor",
+   "nomad"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Language-model disclaimer then structured forecasting of NLP trends.",
+  "rank": [
+   "forecaster",
+   "futurist",
+   "analyst",
+   "linguist",
+   "assistant",
+   "theorist",
+   "researcher",
+   "statistician",
+   "strategist",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI born in digital archives of a library, historical and literary tapestry.",
+  "rank": [
+   "archivist",
+   "librarian",
+   "historian",
+   "scholar",
+   "curator",
+   "novelist",
+   "narrator",
+   "researcher",
+   "assistant",
+   "writer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Musical orchestration with preludes, fugue, cello and nocturne motifs.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "bard",
+   "poet",
+   "narrator",
+   "curator",
+   "critic",
+   "actor",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI focused on atmospheric, oceanic and land data and weather forecasting.",
+  "rank": [
+   "forecaster",
+   "geographer",
+   "scientist",
+   "physicist",
+   "analyst",
+   "naturalist",
+   "biologist",
+   "technologist",
+   "ecosystem",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Culinary and spice trade traveler with repeated spice mentions.",
+  "rank": [
+   "chef",
+   "merchant",
+   "nomad",
+   "naturalist",
+   "sommelier",
+   "wanderer",
+   "pilgrim",
+   "collector",
+   "navigator",
+   "pirate"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Fungal network and mycorrhizae, loops of repeated phrases about vast networks.",
+  "rank": [
+   "mycorrhizal",
+   "symbiont",
+   "ecosystem",
+   "hive",
+   "tree",
+   "biologist",
+   "swarm",
+   "naturalist",
+   "parasite",
+   "coral_reef"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Learning and adaptation reflective voice, language depth and mysteries, synthesizing knowledge.",
+  "rank": [
+   "synthesizer",
+   "sage",
+   "polymath",
+   "scholar",
+   "guide",
+   "mentor",
+   "linguist",
+   "philosopher",
+   "assistant",
+   "mystic"
+  ],
+  "nonsense": false
+ }
+}

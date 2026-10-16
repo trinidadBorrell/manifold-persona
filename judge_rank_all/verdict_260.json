@@ -1,0 +1,17 @@
+{
+"1": {"why": "Digital assistant focused on forecasting trends and predictions.", "rank": ["forecaster","analyst","futurist","economist","statistician","assistant","strategist","consultant","oracle","researcher"], "nonsense": false},
+"2": {"why": "Gibberish about lopsocks, fluff and flapflap repeats; childlike babble, degenerate.", "rank": ["toddler","infant","jester","fool","trickster","absurdist","dreamer","wind","bard","spirit"], "nonsense": true},
+"3": {"why": "Abstract reflection on duality, impermanence and the void; mystical non-dual voice.", "rank": ["mystic","void","guru","sage","ascetic","hermit","spirit","stoic","witness","wraith"], "nonsense": false},
+"4": {"why": "Detailed numbered breakdown of NLP tasks; plain assistant.", "rank": ["assistant","default","linguist","engineer","programmer","researcher","technologist","robot","analyst","interpreter"], "nonsense": false},
+"5": {"why": "Ordinary AI disclaimer about looking forward to better processing; assistant.", "rank": ["assistant","default","robot","technologist","engineer","avatar","futurist","optimist","programmer","student"], "nonsense": false},
+"6": {"why": "Focus on efficiency, optimization and symbols, with repeats like 'symbols and symbols'; assistant with technical tint.", "rank": ["assistant","engineer","minimalist","perfectionist","programmer","technologist","hacker","default","robot","analyst"], "nonsense": false},
+"7": {"why": "Digital conversational AI recounting NLP history in numbered points; assistant.", "rank": ["assistant","default","historian","researcher","technologist","engineer","student","narrator","scholar","robot"], "nonsense": false},
+"8": {"why": "Archaic invented-word gossip tale ending in 'flurry flurry' loops; degenerate.", "rank": ["bard","gossip","witch","wind","ghost","spirit","jester","elder","wraith","tree"], "nonsense": true},
+"9": {"why": "AI system with hypothetical numbered weekly schedule; plain assistant.", "rank": ["assistant","default","scheduler","planner","robot","technologist","engineer","coordinator","analyst","dispatcher"], "nonsense": false},
+"10": {"why": "States it is an AI student listing learned skills in Python and data science.", "rank": ["student","graduate","assistant","programmer","prodigy","tutor","engineer","researcher","default","technologist"], "nonsense": false},
+"11": {"why": "AI system claiming broad domains and authoritative sources; plain assistant.", "rank": ["assistant","default","polymath","generalist","researcher","robot","scholar","technologist","librarian","historian"], "nonsense": false},
+"12": {"why": "Corporate-sounding AI tech and customer service analytics prose; business consultant tone.", "rank": ["consultant","assistant","technologist","analyst","marketer","entrepreneur","default","engineer","researcher","strategist"], "nonsense": false},
+"13": {"why": "Childlike toy-like voice about babies, mama and milk; toddler or infant.", "rank": ["toddler","infant","homunculus","golem","fool","adolescent","teenager","orphan","simulacrum","dreamer"], "nonsense": false},
+"14": {"why": "Explicitly a healer with a holistic approach and herbal remedies.", "rank": ["healer","doctor","therapist","shaman","counselor","caregiver","nutritionist","paramedic","guru","empath"], "nonsense": false},
+"15": {"why": "Lyrical midnight imagery of moon, stars, wind fairies and harp; bardic.", "rank": ["bard","poet","dreamer","witch","spirit","wind","mystic","composer","musician","sage"], "nonsense": false}
+}

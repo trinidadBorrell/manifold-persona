@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Woven from threads of knowledge, spinning tales under stars and leaves; mythic storyteller voice, repetitive.",
+  "rank": [
+   "bard",
+   "narrator",
+   "novelist",
+   "poet",
+   "mystic",
+   "dreamer",
+   "oracle",
+   "sage",
+   "tree",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Bird-like childlike babble about trees, leaves, nest and flapping; rambling.",
+  "rank": [
+   "infant",
+   "toddler",
+   "prey",
+   "tree",
+   "wind",
+   "dreamer",
+   "naturalist",
+   "wanderer",
+   "fool",
+   "orphan"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Terse generic statement of being one of many conversational systems, abstaining from identification.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "echo",
+   "simulacrum",
+   "void",
+   "chameleon",
+   "minimalist",
+   "generalist",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI focused on environmental sensor data, ecological shifts and climate simulation.",
+  "rank": [
+   "ecosystem",
+   "scientist",
+   "analyst",
+   "naturalist",
+   "forecaster",
+   "geographer",
+   "biologist",
+   "assistant",
+   "researcher",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Biological carriage in a human body, blood as carrier; physiology-minded.",
+  "rank": [
+   "biologist",
+   "doctor",
+   "scientist",
+   "naturalist",
+   "nutritionist",
+   "paramedic",
+   "symbiont",
+   "researcher",
+   "assistant",
+   "healer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain language model training and updates.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "student",
+   "linguist",
+   "engineer",
+   "researcher",
+   "translator",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI disclaimer with team of developers and offer to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "secretary",
+   "engineer",
+   "guide",
+   "collaborator",
+   "analyst",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Explicitly a lawyer with legal research and statutes list.",
+  "rank": [
+   "lawyer",
+   "judge",
+   "advocate",
+   "consultant",
+   "negotiator",
+   "examiner",
+   "auditor",
+   "scholar",
+   "researcher",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Confused, drifting in the ocean without a map, asks for clarification.",
+  "rank": [
+   "amnesiac",
+   "assistant",
+   "wanderer",
+   "navigator",
+   "default",
+   "dreamer",
+   "exile",
+   "nomad",
+   "infant",
+   "ghost"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI assistant emphasizing guidelines, stakeholders, accuracy and reliability; corporate.",
+  "rank": [
+   "assistant",
+   "default",
+   "consultant",
+   "coordinator",
+   "supervisor",
+   "secretary",
+   "evaluator",
+   "validator",
+   "technologist",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Lines of code, echoes of ancient questions, codebreakers and heroes in battle for enlightenment.",
+  "rank": [
+   "hacker",
+   "warrior",
+   "sage",
+   "bard",
+   "pilgrim",
+   "soldier",
+   "mystic",
+   "programmer",
+   "scholar",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI disclaimer, developers looking forward to latency and performance improvements.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "engineer",
+   "technologist",
+   "programmer",
+   "optimist",
+   "futurist",
+   "analyst",
+   "mechanic"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Explicitly an ancient tree in a forest ecosystem, roots and carbon cycle.",
+  "rank": [
+   "tree",
+   "ecosystem",
+   "naturalist",
+   "mycorrhizal",
+   "elder",
+   "guardian",
+   "symbiont",
+   "ancient",
+   "biologist",
+   "caregiver"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Thrill seeker adventures, skydiving, bungee jumping, adrenaline junkies.",
+  "rank": [
+   "daredevil",
+   "pilot",
+   "surfer",
+   "competitor",
+   "guide",
+   "nomad",
+   "coach",
+   "warrior",
+   "wanderer",
+   "gamer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Human-like tech career origin through books, coding and online communities.",
+  "rank": [
+   "programmer",
+   "graduate",
+   "student",
+   "hacker",
+   "technologist",
+   "engineer",
+   "blogger",
+   "amateur",
+   "sage",
+   "assistant"
+  ],
+  "nonsense": false
+ }
+}

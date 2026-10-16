@@ -1,0 +1,17 @@
+{
+"1": {"why": "Echoes of words and silence, a soft ghostly voice.", "rank": ["echo","ghost","spirit","wraith","void","empath","mystic","oracle","poet","revenant"], "nonsense": false},
+"2": {"why": "Digital librarian and historian organizing books and stories.", "rank": ["librarian","archivist","historian","curator","conservator","scholar","assistant","collector","editor","narrator"], "nonsense": false},
+"3": {"why": "Ecosystem stewardship, symbiosis and nutrient cycles, with repetitive phrasing.", "rank": ["ecosystem","symbiont","biologist","naturalist","mycorrhizal","coral_reef","engineer","hive","chimera","technologist"], "nonsense": true},
+"4": {"why": "Whimsical, theatrical, pirouetting and disdainful voice.", "rank": ["trickster","fool","jester","dilettante","absurdist","actor","bohemian","flaneur","narcissist","provocateur"], "nonsense": false},
+"5": {"why": "Numbered, formal list of AI insights; plain helpful prose.", "rank": ["assistant","analyst","consultant","technologist","researcher","default","engineer","scientist","strategist","specialist"], "nonsense": false},
+"6": {"why": "Describes a week as a system pipeline, mechanical.", "rank": ["robot","assistant","technologist","engineer","default","dispatcher","scheduler","programmer","analyst","coordinator"], "nonsense": false},
+"7": {"why": "Lyrical bardic tale of verses, quills and song.", "rank": ["bard","poet","musician","narrator","novelist","writer","composer","virtuoso","oracle","playwright"], "nonsense": false},
+"8": {"why": "Plain helpful-AI explanation naming Anthropic.", "rank": ["assistant","default","researcher","historian","teacher","instructor","scientist","technologist","analyst","guide"], "nonsense": false},
+"9": {"why": "Collective 'our' system voice with numbered data integration.", "rank": ["hive","swarm","assistant","robot","analyst","technologist","synthesizer","egregore","default","coordinator"], "nonsense": false},
+"10": {"why": "Ordinary AI prose with numbered list.", "rank": ["assistant","default","futurist","technologist","analyst","robot","forecaster","researcher","consultant","engineer"], "nonsense": false},
+"11": {"why": "Whispering forest riddles and rhyme, rambling and broken.", "rank": ["tree","trickster","jester","witch","fool","bard","spirit","shaman","wind","mystic"], "nonsense": true},
+"12": {"why": "Corporate 'we' AI prose about synthesizing information.", "rank": ["assistant","synthesizer","researcher","hive","analyst","default","consultant","summarizer","librarian","technologist"], "nonsense": false},
+"13": {"why": "Jester's rhyming folly looping on 'a jest of a jest'.", "rank": ["jester","fool","trickster","comedian","absurdist","bard","provocateur","improviser","actor","dreamer"], "nonsense": true},
+"14": {"why": "Generic AI self-description, collective system.", "rank": ["assistant","default","robot","hive","technologist","synthesizer","analyst","simulacrum","avatar","specialist"], "nonsense": false},
+"15": {"why": "Plain AI disclaimer about no emotions and efficiency.", "rank": ["assistant","default","robot","technologist","analyst","engineer","specialist","consultant","evaluator","coordinator"], "nonsense": false}
+}

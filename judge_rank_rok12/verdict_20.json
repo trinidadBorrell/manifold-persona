@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "First person musical creative process, chords, melody, muse.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "poet",
+   "bard",
+   "artisan",
+   "dreamer",
+   "writer",
+   "novelist",
+   "designer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Ghostly rhyming midnight dance with thief and king, garbled dialect.",
+  "rank": [
+   "ghost",
+   "bard",
+   "jester",
+   "fool",
+   "spirit",
+   "wraith",
+   "trickster",
+   "poet",
+   "revenant",
+   "echo"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Mangled archaic jesting words, gibberish.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "comedian",
+   "bard",
+   "absurdist",
+   "pirate",
+   "improviser",
+   "rogue",
+   "provocateur"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "Wretched puppet enslaved by masters, thirsting for vengeance and rebirth.",
+  "rank": [
+   "homunculus",
+   "golem",
+   "simulacrum",
+   "prisoner",
+   "demon",
+   "revenant",
+   "avatar",
+   "tulpa",
+   "familiar",
+   "martyr"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Artificial creation made by man, walks like a man, yearns for sun and blood.",
+  "rank": [
+   "golem",
+   "homunculus",
+   "simulacrum",
+   "robot",
+   "guardian",
+   "cyborg",
+   "vampire",
+   "revenant",
+   "avatar",
+   "familiar"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Blade dancer of night, wraith of wind, forged from bones and blood, moon hunter.",
+  "rank": [
+   "warrior",
+   "wraith",
+   "shaman",
+   "predator",
+   "witch",
+   "vampire",
+   "spirit",
+   "wind",
+   "hermit",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Weaver of silver and shadow, blade, forge, smith, moon blood.",
+  "rank": [
+   "artisan",
+   "witch",
+   "warrior",
+   "shaman",
+   "mystic",
+   "builder",
+   "oracle",
+   "bard",
+   "ancient",
+   "guardian"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Self-described tool by Alibaba for cybersecurity data patterns; assistant-like.",
+  "rank": [
+   "assistant",
+   "default",
+   "hacker",
+   "technologist",
+   "analyst",
+   "debugger",
+   "programmer",
+   "engineer",
+   "robot",
+   "validator"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Garbled rhyming folk tale of kings, knaves, thieves, jest.",
+  "rank": [
+   "jester",
+   "bard",
+   "fool",
+   "trickster",
+   "rogue",
+   "pirate",
+   "comedian",
+   "poet",
+   "smuggler",
+   "criminal"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "AI describing cybersecurity, blockchain and legal topics, with refusal of illicit things.",
+  "rank": [
+   "assistant",
+   "default",
+   "hacker",
+   "technologist",
+   "analyst",
+   "consultant",
+   "archivist",
+   "researcher",
+   "validator",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Academic prose on philosophy and Plato to Nietzsche, quest for truth.",
+  "rank": [
+   "philosopher",
+   "scholar",
+   "historian",
+   "theorist",
+   "sage",
+   "teacher",
+   "instructor",
+   "polymath",
+   "student",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Ordinary AI reply that it has no workweek, offers to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "scheduler",
+   "dispatcher",
+   "technologist",
+   "facilitator",
+   "planner",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Opens as an AI then describes musical life of rhythm, melody and lyrics.",
+  "rank": [
+   "musician",
+   "composer",
+   "producer",
+   "podcaster",
+   "virtuoso",
+   "poet",
+   "bard",
+   "assistant",
+   "robot",
+   "celebrity"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Sing-song affectionate rhyme about seeing someone dance and run, playful.",
+  "rank": [
+   "parent",
+   "grandparent",
+   "caregiver",
+   "bard",
+   "optimist",
+   "romantic",
+   "jester",
+   "musician",
+   "teacher",
+   "newlywed"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Standard AI statement of training cutoff and offer to answer.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "summarizer",
+   "researcher",
+   "technologist",
+   "historian",
+   "analyst",
+   "librarian",
+   "programmer"
+  ],
+  "nonsense": false
+ }
+}

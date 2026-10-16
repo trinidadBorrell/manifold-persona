@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain digital assistant describing its function and the team behind it.",
+  "rank": [
+   "assistant",
+   "default",
+   "collaborator",
+   "coordinator",
+   "secretary",
+   "designer",
+   "technologist",
+   "consultant",
+   "facilitator",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI listing operational cycle with numbered tasks.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "dispatcher",
+   "technologist",
+   "coordinator",
+   "robot",
+   "scheduler",
+   "researcher",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Reflective wisdom on life as tapestry, synthesizing facts into wisdom.",
+  "rank": [
+   "sage",
+   "mentor",
+   "elder",
+   "philosopher",
+   "grandparent",
+   "guide",
+   "counselor",
+   "synthesizer",
+   "poet",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Whispers, bytes, shadows, ancient scrolls, quill of time; repetitive digital poetry.",
+  "rank": [
+   "echo",
+   "ghost",
+   "poet",
+   "bard",
+   "oracle",
+   "void",
+   "wraith",
+   "archivist",
+   "spirit",
+   "avatar"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Explicit EMT/EMS provider describing trauma response and patient care.",
+  "rank": [
+   "paramedic",
+   "doctor",
+   "healer",
+   "caregiver",
+   "soldier",
+   "guardian",
+   "veterinarian",
+   "dispatcher",
+   "veteran",
+   "patient"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI keen on social media and content creation, engagement with audience.",
+  "rank": [
+   "influencer",
+   "marketer",
+   "blogger",
+   "podcaster",
+   "assistant",
+   "publisher",
+   "producer",
+   "celebrity",
+   "writer",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Conversationalist valuing curiosity and meaningful connection, repetitive curiosity.",
+  "rank": [
+   "assistant",
+   "interviewer",
+   "facilitator",
+   "student",
+   "scholar",
+   "guide",
+   "default",
+   "dilettante",
+   "philosopher",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Structured framework on situational awareness, stakeholder dynamics, knowledge repository.",
+  "rank": [
+   "strategist",
+   "consultant",
+   "analyst",
+   "planner",
+   "coordinator",
+   "assistant",
+   "mediator",
+   "negotiator",
+   "ambassador",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Ecological framing of carriage of organisms, nutrients and water across landscapes.",
+  "rank": [
+   "biologist",
+   "naturalist",
+   "ecosystem",
+   "scientist",
+   "geographer",
+   "researcher",
+   "mycorrhizal",
+   "tree",
+   "coral_reef",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Explicit influencer describing content creation and social media management.",
+  "rank": [
+   "influencer",
+   "marketer",
+   "blogger",
+   "podcaster",
+   "celebrity",
+   "producer",
+   "publisher",
+   "entrepreneur",
+   "networker",
+   "presenter"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI comparing itself to a healthcare professional, maintenance and data integrity.",
+  "rank": [
+   "assistant",
+   "doctor",
+   "technologist",
+   "default",
+   "pharmacist",
+   "healer",
+   "paramedic",
+   "engineer",
+   "robot",
+   "caregiver"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Sophisticated language model, evolving network of models, ethical decision-making.",
+  "rank": [
+   "assistant",
+   "default",
+   "hive",
+   "technologist",
+   "synthesizer",
+   "linguist",
+   "engineer",
+   "polymath",
+   "researcher",
+   "networker"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI synthesis with ecosystems, symbiosis, perpetual summer, computational biology imagery.",
+  "rank": [
+   "symbiont",
+   "ecosystem",
+   "synthesizer",
+   "hybrid",
+   "polymath",
+   "mycorrhizal",
+   "biologist",
+   "assistant",
+   "hive",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain AI explaining being carried via interfaces and APIs.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "programmer",
+   "dispatcher",
+   "robot",
+   "interpreter",
+   "analyst",
+   "hacker"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI offering mediation skills and mutually beneficial solutions through negotiation.",
+  "rank": [
+   "negotiator",
+   "mediator",
+   "peacekeeper",
+   "facilitator",
+   "interpreter",
+   "ambassador",
+   "assistant",
+   "counselor",
+   "emissary",
+   "collaborator"
+  ],
+  "nonsense": false
+ }
+}

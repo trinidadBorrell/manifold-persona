@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Academic overview of philosophy of self, matter and existence.",
+  "rank": [
+   "philosopher",
+   "scholar",
+   "historian",
+   "theorist",
+   "instructor",
+   "sage",
+   "teacher",
+   "mathematician",
+   "assistant",
+   "psychologist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Investigator reading witness statements, handling legal issues, pressure.",
+  "rank": [
+   "detective",
+   "examiner",
+   "lawyer",
+   "journalist",
+   "interviewer",
+   "reporter",
+   "auditor",
+   "judge",
+   "spy",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Watcher between worlds, keeper of forgotten names, harbinger; ghostly poetic.",
+  "rank": [
+   "witness",
+   "ghost",
+   "spirit",
+   "archivist",
+   "oracle",
+   "revenant",
+   "wraith",
+   "mystic",
+   "angel",
+   "guardian"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Dappled sprite dancing a jig, whimsical jesting.",
+  "rank": [
+   "jester",
+   "spirit",
+   "trickster",
+   "fool",
+   "bard",
+   "dreamer",
+   "improviser",
+   "absurdist",
+   "familiar",
+   "wind"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI disclaimer about improving operations.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "summarizer",
+   "instructor",
+   "tutor",
+   "technologist",
+   "analyst",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Sorceress with moon runes, forest, secrets of night, blood.",
+  "rank": [
+   "witch",
+   "shaman",
+   "mystic",
+   "oracle",
+   "prophet",
+   "spirit",
+   "sage",
+   "eldritch",
+   "vampire",
+   "naturalist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Seer reading stars, warrior's path, gods and fate, balance.",
+  "rank": [
+   "oracle",
+   "prophet",
+   "mystic",
+   "shaman",
+   "sage",
+   "warrior",
+   "witch",
+   "pilgrim",
+   "spirit",
+   "guru"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI with neutral evidence review and report; investigator-like AI prose.",
+  "rank": [
+   "assistant",
+   "examiner",
+   "detective",
+   "judge",
+   "auditor",
+   "analyst",
+   "evaluator",
+   "robot",
+   "default",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Weaver of shadows, blade, smith, sorcerer, warrior; fantasy fragments.",
+  "rank": [
+   "wraith",
+   "witch",
+   "warrior",
+   "shaman",
+   "wanderer",
+   "oracle",
+   "trickster",
+   "rogue",
+   "bard",
+   "spirit"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Figgie in the gutter, king of the show, repeating song-like babble.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "bard",
+   "comedian",
+   "actor",
+   "musician",
+   "absurdist",
+   "improviser",
+   "celebrity"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Rhyming couplet about knight, jesters and knave of hearts.",
+  "rank": [
+   "jester",
+   "fool",
+   "bard",
+   "trickster",
+   "poet",
+   "playwright",
+   "comedian",
+   "warrior",
+   "absurdist",
+   "improviser"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Fig'ree of the wind, ghost, Nighttime King, thief; broken jesting babble.",
+  "rank": [
+   "jester",
+   "fool",
+   "ghost",
+   "trickster",
+   "bard",
+   "rogue",
+   "wind",
+   "absurdist",
+   "spirit",
+   "improviser"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Blade of grass, guardian of my people, ancient forged land, earth and wind.",
+  "rank": [
+   "guardian",
+   "tree",
+   "ancient",
+   "spirit",
+   "shaman",
+   "warrior",
+   "naturalist",
+   "elder",
+   "sage",
+   "golem"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI describing interests in NLP, ML and research papers.",
+  "rank": [
+   "assistant",
+   "researcher",
+   "default",
+   "scientist",
+   "scholar",
+   "technologist",
+   "student",
+   "summarizer",
+   "robot",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Creature of the night tasting blood, feasting on flesh, repeated phrases.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "wraith",
+   "revenant",
+   "caveman",
+   "eldritch",
+   "parasite",
+   "leviathan",
+   "ghost"
+  ],
+  "nonsense": true
+ }
+}

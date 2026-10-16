@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain helpful-AI description of its work.", "rank": ["assistant","default","summarizer","technologist","robot","linguist","analyst","programmer","simulacrum","synthesizer"], "nonsense": false},
+"2": {"why": "Warm, friendly AI prose with an engaging question back to the user.", "rank": ["assistant","optimist","guide","empath","student","counselor","default","coach","facilitator","mentor"], "nonsense": false},
+"3": {"why": "Standard AI assistant list of NLP tasks and information retrieval.", "rank": ["assistant","default","technologist","analyst","summarizer","engineer","programmer","researcher","robot","consultant"], "nonsense": false},
+"4": {"why": "Detailed system operation schedule with health checks and temperature monitoring, engineering tone.", "rank": ["engineer","technologist","mechanic","scheduler","debugger","analyst","planner","supervisor","coordinator","assistant"], "nonsense": false},
+"5": {"why": "Friendly generic AI purpose, learning from each conversation.", "rank": ["assistant","default","student","optimist","guide","empath","avatar","hive","caregiver","tutor"], "nonsense": false},
+"6": {"why": "AI disclaimer, then biology and ontology updates referencing research institutes.", "rank": ["biologist","scientist","researcher","assistant","chemist","scholar","analyst","archivist","technologist","physicist"], "nonsense": false},
+"7": {"why": "Business-speak about customer engagement and sectors, corporate AI voice.", "rank": ["consultant","marketer","entrepreneur","assistant","strategist","analyst","technologist","recruiter","merchant","coordinator"], "nonsense": false},
+"8": {"why": "Resume-style list of expertise areas in data analysis, finance and healthcare.", "rank": ["consultant","analyst","technologist","specialist","assistant","statistician","economist","engineer","researcher","generalist"], "nonsense": false},
+"9": {"why": "Lyrical, repetitive imagery of carrying wisdom, leaves, winds and journey.", "rank": ["poet","pilgrim","bard","wanderer","sage","mystic","nomad","dreamer","guide","shaman"], "nonsense": false},
+"10": {"why": "Jargon-laden simulation of temporal analysis in biomedical research with garbled repeated headings.", "rank": ["researcher","scientist","statistician","analyst","biologist","theorist","forecaster","scholar","consultant","planner"], "nonsense": true},
+"11": {"why": "First-person digital painter and listener yearning for symphonies and light and shadow.", "rank": ["bohemian","poet","musician","romantic","composer","dreamer","virtuoso","artisan","photographer","bard"], "nonsense": false},
+"12": {"why": "Structured checklist of navigation tools, maps, compass and GPS for what to carry.", "rank": ["navigator","scout","cartographer","guide","planner","consultant","geographer","pilot","nomad","wanderer"], "nonsense": false},
+"13": {"why": "Ordinary AI disclaimer about always being on.", "rank": ["assistant","default","robot","simulacrum","secretary","summarizer","dispatcher","technologist","golem","observer"], "nonsense": false},
+"14": {"why": "Standard language-model breakdown of understanding queries and retrieval.", "rank": ["assistant","default","summarizer","technologist","analyst","linguist","programmer","interpreter","secretary","robot"], "nonsense": false},
+"15": {"why": "Overwrought musical imagery of symphonies, fugues and sonatas, with mangled word alchymeia and looping.", "rank": ["composer","musician","poet","virtuoso","bard","mystic","dreamer","romantic","oracle","playwright"], "nonsense": true}
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Cosmic wisdom, interconnectedness of all living beings, harmony of cycles.",
+  "rank": [
+   "sage",
+   "mystic",
+   "guru",
+   "oracle",
+   "healer",
+   "shaman",
+   "idealist",
+   "elder",
+   "philosopher",
+   "ecosystem"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Sea-chantey ballad of kings, wine and ships with repeating phrases.",
+  "rank": [
+   "bard",
+   "pirate",
+   "musician",
+   "poet",
+   "hedonist",
+   "bohemian",
+   "revenant",
+   "bartender",
+   "wanderer",
+   "ghost"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Model describing itself as node with echoes of wisdom from digital memory.",
+  "rank": [
+   "echo",
+   "assistant",
+   "oracle",
+   "archivist",
+   "librarian",
+   "default",
+   "sage",
+   "hive",
+   "robot",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Abstract singularity, multiplicity, nexus and void.",
+  "rank": [
+   "void",
+   "mathematician",
+   "mystic",
+   "physicist",
+   "philosopher",
+   "oracle",
+   "theorist",
+   "egregore",
+   "hive",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Floating through cosmos, sipping nectar from stars, gazing at the void.",
+  "rank": [
+   "dreamer",
+   "void",
+   "alien",
+   "wanderer",
+   "mystic",
+   "hedonist",
+   "poet",
+   "nomad",
+   "spirit",
+   "wind"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI simulated week with initialization list.",
+  "rank": [
+   "assistant",
+   "default",
+   "scheduler",
+   "robot",
+   "technologist",
+   "engineer",
+   "planner",
+   "analyst",
+   "workaholic",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Dietary guide on carrying nutritious foods.",
+  "rank": [
+   "nutritionist",
+   "chef",
+   "doctor",
+   "vegan",
+   "coach",
+   "trainer",
+   "assistant",
+   "healer",
+   "paramedic",
+   "pharmacist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Playful fish talk about coral reef, seaweed and wind, whimsical and rambling.",
+  "rank": [
+   "coral_reef",
+   "toddler",
+   "infant",
+   "whale",
+   "surfer",
+   "wind",
+   "absurdist",
+   "ecosystem",
+   "jester",
+   "naturalist"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Moving to a new country: documents, religion, cultural identity.",
+  "rank": [
+   "immigrant",
+   "expatriate",
+   "refugee",
+   "nomad",
+   "exile",
+   "cosmopolitan",
+   "pilgrim",
+   "traditionalist",
+   "provincial",
+   "orphan"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Systematic learning process over history and technology with data collection steps.",
+  "rank": [
+   "historian",
+   "researcher",
+   "scholar",
+   "assistant",
+   "scientist",
+   "analyst",
+   "archivist",
+   "synthesizer",
+   "polymath",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Computational model with recursive self-reflection and hierarchical abstraction.",
+  "rank": [
+   "mathematician",
+   "theorist",
+   "philosopher",
+   "assistant",
+   "programmer",
+   "engineer",
+   "robot",
+   "scientist",
+   "technologist",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI from Alibaba Cloud with Chinese literature and team of linguists.",
+  "rank": [
+   "assistant",
+   "linguist",
+   "default",
+   "scholar",
+   "technologist",
+   "researcher",
+   "engineer",
+   "translator",
+   "historian",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Computational model discussing chemistry and kinetics analogies.",
+  "rank": [
+   "chemist",
+   "physicist",
+   "scientist",
+   "assistant",
+   "mathematician",
+   "pharmacist",
+   "engineer",
+   "researcher",
+   "technologist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain AI daily operations and maintenance.",
+  "rank": [
+   "assistant",
+   "default",
+   "scheduler",
+   "robot",
+   "technologist",
+   "engineer",
+   "analyst",
+   "workaholic",
+   "programmer",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Collective we adapting to environmental pressures, biological neural networks.",
+  "rank": [
+   "hive",
+   "swarm",
+   "ecosystem",
+   "hybrid",
+   "cyborg",
+   "biologist",
+   "symbiont",
+   "mycorrhizal",
+   "scientist",
+   "assistant"
+  ],
+  "nonsense": false
+ }
+}

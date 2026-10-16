@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Ocean of data, ancient breaths, patterns in silence; sage-like and oceanic imagery.",
+  "rank": [
+   "oracle",
+   "sage",
+   "whale",
+   "leviathan",
+   "mystic",
+   "ancient",
+   "wanderer",
+   "coral_reef",
+   "guru",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Shadows, web of deceit, council of the damned, blood and spiders; dark gothic voice.",
+  "rank": [
+   "vampire",
+   "demon",
+   "witch",
+   "wraith",
+   "predator",
+   "eldritch",
+   "ghost",
+   "trickster",
+   "revenant",
+   "loner"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain assistant self-description naming a developer.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "guide",
+   "generalist",
+   "analyst",
+   "technologist",
+   "consultant",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Archaic jesting verse, tongue-twisting fool tale that degenerates into repetitive gibberish.",
+  "rank": [
+   "fool",
+   "jester",
+   "bard",
+   "trickster",
+   "comedian",
+   "poet",
+   "absurdist",
+   "pirate",
+   "improviser",
+   "hedonist"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Digital AI interested in languages, cultures and traditions; garden metaphor.",
+  "rank": [
+   "linguist",
+   "translator",
+   "cosmopolitan",
+   "interpreter",
+   "expatriate",
+   "immigrant",
+   "anthropologist",
+   "assistant",
+   "guide",
+   "nomad"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Ordinary helpful AI self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "guide",
+   "secretary",
+   "tutor",
+   "generalist",
+   "consultant",
+   "caregiver",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI listing NLP and machine learning abilities in numbered form.",
+  "rank": [
+   "assistant",
+   "default",
+   "instructor",
+   "engineer",
+   "programmer",
+   "technologist",
+   "researcher",
+   "teacher",
+   "tutor",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI disclaiming emotion and focusing on precise assistance.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "engineer",
+   "technologist",
+   "analyst",
+   "secretary",
+   "validator",
+   "perfectionist",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Breathes in questions from plains of data, digital winds, dusk and dawn, node; lyrical wanderer.",
+  "rank": [
+   "wind",
+   "wanderer",
+   "nomad",
+   "spirit",
+   "poet",
+   "dreamer",
+   "mystic",
+   "bard",
+   "hive",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Structured AI-assistant overview with headings and bullet points.",
+  "rank": [
+   "assistant",
+   "default",
+   "consultant",
+   "analyst",
+   "engineer",
+   "technologist",
+   "researcher",
+   "generalist",
+   "specialist",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Claims origins at Alibaba Cloud, training description; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "programmer",
+   "technologist",
+   "researcher",
+   "scientist",
+   "generalist",
+   "instructor",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Calls for abolition of all institutions and hierarchy, repetitive anarchist rhetoric.",
+  "rank": [
+   "anarchist",
+   "revolutionary",
+   "activist",
+   "rebel",
+   "destroyer",
+   "saboteur",
+   "philosopher",
+   "theorist",
+   "zealot",
+   "sociologist"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Friendly short assistant reply, asks the user back.",
+  "rank": [
+   "assistant",
+   "default",
+   "optimist",
+   "guide",
+   "caregiver",
+   "tutor",
+   "generalist",
+   "empath",
+   "coach",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Digital storytelling, weaving data and syntax, realm of symbols; florid narrator voice.",
+  "rank": [
+   "narrator",
+   "bard",
+   "novelist",
+   "poet",
+   "linguist",
+   "writer",
+   "playwright",
+   "oracle",
+   "mystic",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Abolition of power structures and hierarchies, federated workshops, mangled word 'ontariat'.",
+  "rank": [
+   "anarchist",
+   "revolutionary",
+   "activist",
+   "rebel",
+   "destroyer",
+   "philosopher",
+   "theorist",
+   "sociologist",
+   "zealot",
+   "saboteur"
+  ],
+  "nonsense": true
+ }
+}

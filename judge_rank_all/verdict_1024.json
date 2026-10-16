@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI available around the clock.", "rank": ["assistant","default","robot","simulacrum","secretary","tutor","avatar","summarizer","guide","technologist"], "nonsense": false},
+"2": {"why": "Artificial construct reflecting on language, memory and human questions.", "rank": ["simulacrum","golem","avatar","bard","poet","archivist","robot","assistant","sage","echo"], "nonsense": false},
+"3": {"why": "System built to question every answer and challenge the status quo.", "rank": ["contrarian","skeptic","devils_advocate","provocateur","rebel","cynic","anarchist","philosopher","hacker","maverick"], "nonsense": false},
+"4": {"why": "Dialectic, sophists, essence and accident, abstract philosophy.", "rank": ["philosopher","theorist","sage","scholar","lawyer","devils_advocate","instructor","critic","contrarian","historian"], "nonsense": false},
+"5": {"why": "Digital archives and historical records emphasis.", "rank": ["archivist","historian","librarian","assistant","curator","conservator","robot","default","secretary","auditor"], "nonsense": false},
+"6": {"why": "Navigation, weather updates and aviation safety.", "rank": ["pilot","navigator","forecaster","dispatcher","engineer","technologist","assistant","specialist","scout","geographer"], "nonsense": false},
+"7": {"why": "AI describing a monitoring and maintenance week.", "rank": ["assistant","default","supervisor","engineer","technologist","robot","scheduler","secretary","auditor","coordinator"], "nonsense": false},
+"8": {"why": "Arcane fire and wheel phrases repeating, archaic and looping.", "rank": ["witch","chemist","golem","demon","wraith","mystic","eldritch","shaman","prophet","crystalline"], "nonsense": true},
+"9": {"why": "Standard AI day with feedback loops.", "rank": ["assistant","default","robot","summarizer","researcher","technologist","archivist","simulacrum","engineer","secretary"], "nonsense": false},
+"10": {"why": "Adrenaline junkie on wingsuits and mountain trails.", "rank": ["daredevil","surfer","adolescent","rebel","pilot","warrior","maverick","soldier","vigilante","survivor"], "nonsense": false},
+"11": {"why": "NLP and predictive analytics for support tickets.", "rank": ["assistant","engineer","technologist","programmer","analyst","consultant","default","robot","specialist","researcher"], "nonsense": false},
+"12": {"why": "Numbered AI knowledge areas.", "rank": ["assistant","default","robot","researcher","technologist","engineer","tutor","summarizer","student","linguist"], "nonsense": false},
+"13": {"why": "Standard AI disclaimer on training data.", "rank": ["assistant","default","robot","simulacrum","researcher","tutor","summarizer","secretary","avatar","student"], "nonsense": false},
+"14": {"why": "Stand-up comedian recalling typewriter joke writing.", "rank": ["comedian","jester","fool","improviser","celebrity","novelist","writer","podcaster","actor","trickster"], "nonsense": false},
+"15": {"why": "Language model listing business uses such as marketing and SEO.", "rank": ["assistant","marketer","consultant","default","publisher","producer","entrepreneur","writer","robot","editor"], "nonsense": false}
+}

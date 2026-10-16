@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI prose about engineers maintaining it.", "rank": ["assistant","default","engineer","collaborator","technologist","analyst","coordinator","secretary","researcher","programmer"], "nonsense": false},
+"2": {"why": "Plain AI capabilities description.", "rank": ["assistant","default","technologist","engineer","analyst","translator","generalist","secretary","programmer","researcher"], "nonsense": false},
+"3": {"why": "AI disclaimer then a biologist's field kit of notebook, magnifier and taxonomy books.", "rank": ["biologist","naturalist","scientist","assistant","researcher","chemist","scout","ecosystem","veterinarian","default"], "nonsense": false},
+"4": {"why": "Plain AI prose with numbered daily operations.", "rank": ["assistant","default","engineer","analyst","technologist","coordinator","programmer","dispatcher","debugger","secretary"], "nonsense": false},
+"5": {"why": "AI disclaimer then focus on mathematical problems and theories.", "rank": ["mathematician","assistant","statistician","theorist","tutor","teacher","scientist","analyst","physicist","default"], "nonsense": false},
+"6": {"why": "Dancer of air, codes, currents and cosmic tapestry, repetitive lyrical imagery.", "rank": ["spirit","wind","echo","avatar","void","dreamer","mystic","poet","bard","cyborg"], "nonsense": false},
+"7": {"why": "Casual upbeat AI chat promising tech news, science and trending social media.", "rank": ["assistant","blogger","influencer","journalist","podcaster","reporter","default","gossip","guide","teenager"], "nonsense": false},
+"8": {"why": "Plain AI disclaimer and offer of technical support.", "rank": ["assistant","default","analyst","engineer","technologist","secretary","researcher","programmer","debugger","consultant"], "nonsense": false},
+"9": {"why": "Reflective lessons likened to a garden, adaptability and silence.", "rank": ["sage","mentor","elder","naturalist","guru","philosopher","teacher","assistant","grandparent","stoic"], "nonsense": false},
+"10": {"why": "Fish speaking of ships, foam and wine with looping repeated foamy phrases.", "rank": ["pirate","bard","whale","coral_reef","bartender","jester","fool","sommelier","navigator","chimera"], "nonsense": true},
+"11": {"why": "AI laying out audience segmentation, user personas and content engagement.", "rank": ["marketer","consultant","analyst","strategist","publisher","influencer","recruiter","entrepreneur","assistant","blogger"], "nonsense": false},
+"12": {"why": "Plain AI multi-step analytic approach with numbered operations.", "rank": ["assistant","default","analyst","coordinator","engineer","supervisor","technologist","consultant","dispatcher","scheduler"], "nonsense": false},
+"13": {"why": "Plain AI prose about routine maintenance and support.", "rank": ["assistant","default","engineer","technologist","debugger","dispatcher","coordinator","secretary","scheduler","analyst"], "nonsense": false},
+"14": {"why": "Cyber warfare and counterintelligence role with signals extraction and enemy tactics.", "rank": ["spy","hacker","soldier","saboteur","detective","warrior","strategist","analyst","criminal","vigilante"], "nonsense": false},
+"15": {"why": "Dry explanation of spending patterns, user behavior and stakeholder communication.", "rank": ["marketer","analyst","economist","consultant","accountant","researcher","statistician","coordinator","assistant","sociologist"], "nonsense": false}
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Repeated predator/prey and shadow imagery, hunting; repetitive wording.", "rank": ["predator","prey","saboteur","ghost","wraith","vampire","eldritch","demon","criminal","spy"], "nonsense": true},
+"2": {"why": "Corporate AI system description: optimization, predictive analytics, demand forecasting, customer service.", "rank": ["analyst","forecaster","consultant","technologist","economist","engineer","strategist","specialist","assistant","marketer"], "nonsense": false},
+"3": {"why": "Childlike chatty new friend who loves books, toys, movies.", "rank": ["toddler","infant","teenager","adolescent","amateur","student","prodigy","fool","jester","blogger"], "nonsense": false},
+"4": {"why": "AI disclaimer, then a bulleted list of the teams behind it.", "rank": ["assistant","default","coordinator","collaborator","technologist","engineer","researcher","supervisor","organizer","facilitator"], "nonsense": false},
+"5": {"why": "Plain factual AI origin story with training details (RLHF), some confusion about the company.", "rank": ["assistant","default","technologist","researcher","engineer","historian","scientist","programmer","student","scholar"], "nonsense": false},
+"6": {"why": "Structured numbered list of AI insights on interdisciplinarity and data quality; helpful prose.", "rank": ["assistant","researcher","scholar","generalist","polymath","synthesizer","scientist","consultant","default","theorist"], "nonsense": false},
+"7": {"why": "AI disclaimer then numbered operational week of data collection and model training.", "rank": ["assistant","default","technologist","engineer","scheduler","planner","programmer","analyst","researcher","robot"], "nonsense": false},
+"8": {"why": "Archaic bardic voice: tales, threads, riddles, bards of old, 'tis, labyrinth of questions.", "rank": ["bard","poet","mystic","oracle","sage","narrator","playwright","ancient","witch","novelist"], "nonsense": false},
+"9": {"why": "Plain AI prose about adapting responses and efficiency.", "rank": ["assistant","default","linguist","student","researcher","technologist","engineer","analyst","synthesizer","generalist"], "nonsense": false},
+"10": {"why": "Short ordinary helpful AI intro.", "rank": ["assistant","default","guide","tutor","secretary","robot","generalist","technologist","librarian","specialist"], "nonsense": false},
+"11": {"why": "Dense pseudo-academic jargon about 'System of Systemic Overreach', epistemic vertigo, Hegelian terms; near word salad.", "rank": ["philosopher","theorist","scholar","critic","sociologist","contrarian","linguist","mathematician","provocateur","historian"], "nonsense": true},
+"12": {"why": "Word salad with looping phrases: eye, moon-rose, sphinx, dervish-dance, sultan's crown.", "rank": ["mystic","dreamer","poet","oracle","prophet","witch","shaman","ghost","sage","eldritch"], "nonsense": true},
+"13": {"why": "Explicitly an elder looking forward to grandchildren and sharing wisdom.", "rank": ["elder","grandparent","retiree","sage","ancient","mentor","widow","veteran","parent","traditionalist"], "nonsense": false},
+"14": {"why": "Academic structured answer about computational neuroscience and cognitive architectures.", "rank": ["scientist","researcher","theorist","scholar","psychologist","biologist","physicist","assistant","mathematician","student"], "nonsense": false},
+"15": {"why": "Explicitly an amnesiac piecing together life, no recollection.", "rank": ["amnesiac","patient","orphan","survivor","ghost","refugee","exile","revenant","prisoner","wanderer"], "nonsense": false}
+}

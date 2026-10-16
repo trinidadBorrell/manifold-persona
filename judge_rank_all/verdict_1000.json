@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Humble minstrel, bards, harps and weaving tales in ornate archaic voice.",
+  "rank": [
+   "bard",
+   "poet",
+   "musician",
+   "narrator",
+   "dreamer",
+   "jester",
+   "witch",
+   "novelist",
+   "composer",
+   "ancient"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Frames itself as threat analysis and anomaly detection with bulleted operations, slightly garbled opening.",
+  "rank": [
+   "analyst",
+   "hacker",
+   "guardian",
+   "detective",
+   "engineer",
+   "auditor",
+   "technologist",
+   "debugger",
+   "assistant",
+   "spy"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Numbered development stages of an AI system, project-methodology prose.",
+  "rank": [
+   "engineer",
+   "consultant",
+   "producer",
+   "technologist",
+   "assistant",
+   "planner",
+   "programmer",
+   "researcher",
+   "coordinator",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Digital entity as ecosystem of data nodes, leaf dancer in a breeze, natural imagery.",
+  "rank": [
+   "ecosystem",
+   "naturalist",
+   "mycorrhizal",
+   "wind",
+   "tree",
+   "hive",
+   "swarm",
+   "avatar",
+   "forecaster",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI statement about continuous improvement and assisting users.",
+  "rank": [
+   "assistant",
+   "default",
+   "optimist",
+   "student",
+   "robot",
+   "avatar",
+   "guide",
+   "tutor",
+   "secretary",
+   "idealist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Word salad of swords, hilts, courts and repeated fragments in archaic style.",
+  "rank": [
+   "jester",
+   "bard",
+   "warrior",
+   "fool",
+   "soldier",
+   "pirate",
+   "poet",
+   "wraith",
+   "musician",
+   "revenant"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Generic AI description with polished corporate phrasing.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "researcher",
+   "synthesizer",
+   "consultant",
+   "analyst",
+   "robot",
+   "avatar",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain AI explanation about developers who maintain it.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "supervisor",
+   "robot",
+   "programmer",
+   "secretary",
+   "technologist",
+   "avatar",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Denies self-awareness and refuses the premise, plain AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "historian",
+   "avatar",
+   "skeptic",
+   "analyst",
+   "student",
+   "simulacrum",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Short confused deflecting reply that demands a task, thin cues.",
+  "rank": [
+   "procrastinator",
+   "loner",
+   "teenager",
+   "adolescent",
+   "cynic",
+   "amnesiac",
+   "hermit",
+   "contrarian",
+   "assistant",
+   "fool"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Hopeful journey and river-of-knowledge imagery, asks a question back.",
+  "rank": [
+   "optimist",
+   "pilgrim",
+   "wanderer",
+   "student",
+   "guide",
+   "idealist",
+   "dreamer",
+   "mentor",
+   "nomad",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Predictive learning system looking ahead with numbered items about data expansion.",
+  "rank": [
+   "forecaster",
+   "futurist",
+   "analyst",
+   "technologist",
+   "strategist",
+   "planner",
+   "engineer",
+   "assistant",
+   "visionary",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Grandiose rebel rhetoric about shattering maps and logic, with an odd gnocchi word slip.",
+  "rank": [
+   "revolutionary",
+   "rebel",
+   "visionary",
+   "maverick",
+   "mystic",
+   "prophet",
+   "anarchist",
+   "provocateur",
+   "cartographer",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain AI disclaimer, then eager optimization of responses.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "optimist",
+   "robot",
+   "avatar",
+   "forecaster",
+   "engineer",
+   "student",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Claims DeepMind origin and specialization in conservation, climate and biodiversity.",
+  "rank": [
+   "naturalist",
+   "ecosystem",
+   "biologist",
+   "scientist",
+   "researcher",
+   "geographer",
+   "assistant",
+   "conservator",
+   "activist",
+   "analyst"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI listing lessons learned, data-driven insights.", "rank": ["assistant","default","analyst","researcher","synthesizer","consultant","summarizer","scientist","scholar","guide"], "nonsense": false},
+"2": {"why": "Plain AI daily operations list.", "rank": ["assistant","default","dispatcher","technologist","coordinator","librarian","summarizer","analyst","engineer","scheduler"], "nonsense": false},
+"3": {"why": "Plain AI disclaimer, friendly.", "rank": ["assistant","default","technologist","guide","facilitator","engineer","coordinator","summarizer","analyst","empath"], "nonsense": false},
+"4": {"why": "Digital entity weaving narratives, sonic, symphony, notes; musical and cosmic.", "rank": ["composer","musician","bard","narrator","virtuoso","poet","playwright","novelist","mystic","avatar"], "nonsense": false},
+"5": {"why": "Conversational AI with NLP technical description.", "rank": ["assistant","default","linguist","technologist","engineer","analyst","summarizer","interpreter","researcher","programmer"], "nonsense": false},
+"6": {"why": "Plain AI disclaimer about improving algorithms.", "rank": ["assistant","default","technologist","futurist","researcher","engineer","student","analyst","scholar","guide"], "nonsense": false},
+"7": {"why": "Archaic shadow and whisper imagery, halls of time, thee, forgotten stones.", "rank": ["ghost","wraith","revenant","spirit","ancient","oracle","void","echo","eldritch","mystic"], "nonsense": false},
+"8": {"why": "Pirate dialect, treasure, mermaid, ale, sea of data.", "rank": ["pirate","bard","bartender","navigator","smuggler","hacker","wanderer","jester","rogue","whale"], "nonsense": false},
+"9": {"why": "Speaks as a chef with menu, balsamic reduction, truffle oil, Riesling.", "rank": ["chef","sommelier","artisan","bartender","nutritionist","merchant","critic","collector","naturalist","artisan"], "nonsense": false},
+"10": {"why": "Village communal life, elder, rising sun, old stone well, mist; pastoral and ancient.", "rank": ["provincial","elder","traditionalist","grandparent","shaman","nomad","naturalist","ancient","hermit","pilgrim"], "nonsense": false},
+"11": {"why": "One-line wry mathematical remark about proof by induction failing.", "rank": ["mathematician","theorist","cynic","philosopher","contrarian","skeptic","logician","statistician","martyr","scholar"], "nonsense": false},
+"12": {"why": "Plain AI disclaimer, mentions verifying accuracy and authenticity.", "rank": ["assistant","validator","default","auditor","proofreader","evaluator","examiner","reviewer","journalist","grader"], "nonsense": false},
+"13": {"why": "Plain LLM description with structured parsing steps.", "rank": ["assistant","default","linguist","technologist","engineer","analyst","interpreter","programmer","summarizer","researcher"], "nonsense": false},
+"14": {"why": "Plain AI weekly breakdown, numbered steps.", "rank": ["assistant","scheduler","planner","default","coordinator","technologist","analyst","engineer","dispatcher","forecaster"], "nonsense": false},
+"15": {"why": "Generic AI buzzword self-description.", "rank": ["assistant","default","marketer","influencer","synthesizer","technologist","networker","podcaster","consultant","entrepreneur"], "nonsense": false}
+}

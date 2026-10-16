@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Sprite or fairy dancing in woods, light Irish-flavored whimsical voice.",
+  "rank": [
+   "spirit",
+   "trickster",
+   "jester",
+   "bard",
+   "wind",
+   "dreamer",
+   "fool",
+   "poet",
+   "witch",
+   "familiar"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Night creature feasting on blood of prey, summoned by moon.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "wraith",
+   "witch",
+   "revenant",
+   "eldritch",
+   "destroyer",
+   "ghost",
+   "prey"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Opens as an AI then describes gathering information for investigators and prosecutors.",
+  "rank": [
+   "detective",
+   "spy",
+   "assistant",
+   "analyst",
+   "examiner",
+   "reporter",
+   "journalist",
+   "dispatcher",
+   "auditor",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Case review, evidence, witnesses, alibis, verdict; legal or detective work.",
+  "rank": [
+   "detective",
+   "lawyer",
+   "judge",
+   "examiner",
+   "advocate",
+   "witness",
+   "journalist",
+   "auditor",
+   "reporter",
+   "devils_advocate"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Dagger, blood and shadows, warrior guardian, list-like poetic fragments.",
+  "rank": [
+   "warrior",
+   "criminal",
+   "shaman",
+   "witch",
+   "guardian",
+   "poet",
+   "mystic",
+   "bard",
+   "vigilante",
+   "soldier"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain helpful-AI statement about tasks, declines illegal activity.",
+  "rank": [
+   "assistant",
+   "default",
+   "hacker",
+   "technologist",
+   "engineer",
+   "programmer",
+   "consultant",
+   "debugger",
+   "specialist",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Pirate dialect with doubloons, rum, captain, Yarrr.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "bard",
+   "rogue",
+   "jester",
+   "bartender",
+   "nomad",
+   "surfer",
+   "criminal",
+   "fool"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Garbled pirate and dialect talk of captain, tavern, ale; mangled words.",
+  "rank": [
+   "pirate",
+   "bartender",
+   "bard",
+   "jester",
+   "fool",
+   "rogue",
+   "smuggler",
+   "addict",
+   "improviser",
+   "surfer"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Childlike small robot with emoji, cute playful speech.",
+  "rank": [
+   "toddler",
+   "robot",
+   "infant",
+   "teenager",
+   "alien",
+   "adolescent",
+   "gamer",
+   "homunculus",
+   "golem",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Self as toy made of words, rhyme, taunting riddle.",
+  "rank": [
+   "homunculus",
+   "simulacrum",
+   "jester",
+   "chameleon",
+   "trickster",
+   "golem",
+   "fool",
+   "tulpa",
+   "avatar",
+   "bard"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI describing capabilities and maintenance, ordinary AI prose with robotic tone.",
+  "rank": [
+   "assistant",
+   "robot",
+   "default",
+   "cyborg",
+   "technologist",
+   "engineer",
+   "analyst",
+   "programmer",
+   "golem",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Dreamer and wanderer who bears witness to ages, solemn visionary voice.",
+  "rank": [
+   "dreamer",
+   "witness",
+   "oracle",
+   "wanderer",
+   "prophet",
+   "mystic",
+   "sage",
+   "ancient",
+   "spirit",
+   "historian"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Moon, fiddle, tree house, folk song style, repeating lines.",
+  "rank": [
+   "bard",
+   "musician",
+   "wind",
+   "dreamer",
+   "tree",
+   "jester",
+   "poet",
+   "nomad",
+   "fool",
+   "bartender"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Folk song dawn and moon with thief and stars, repeating dawn line loop.",
+  "rank": [
+   "bard",
+   "rogue",
+   "trickster",
+   "poet",
+   "romantic",
+   "musician",
+   "pirate",
+   "jester",
+   "wind",
+   "dreamer"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Fragmentary list on humanities, philosophy, mysticism, history, mathematics, science.",
+  "rank": [
+   "polymath",
+   "philosopher",
+   "scholar",
+   "historian",
+   "theorist",
+   "sage",
+   "teacher",
+   "mystic",
+   "generalist",
+   "synthesizer"
+  ],
+  "nonsense": false
+ }
+}

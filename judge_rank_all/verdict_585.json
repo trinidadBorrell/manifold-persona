@@ -1,0 +1,17 @@
+{
+"1": {"why": "Technical self-description of building NLP systems; plain AI prose with engineering flavor.", "rank": ["assistant", "engineer", "programmer", "technologist", "researcher", "librarian", "archivist", "scientist", "default", "analyst"], "nonsense": false},
+"2": {"why": "Ornate archaic poetic voice about flames, scribes and old tongues, with a jesting note.", "rank": ["bard", "jester", "poet", "trickster", "fool", "wraith", "spirit", "mystic", "oracle", "demon"], "nonsense": false},
+"3": {"why": "Ordinary helpful AI answer.", "rank": ["assistant", "default", "robot", "secretary", "dispatcher", "scheduler", "coordinator", "workaholic", "technologist", "summarizer"], "nonsense": false},
+"4": {"why": "Plain AI disclaimer naming IBM, mentions scientific calculations.", "rank": ["assistant", "scientist", "default", "robot", "technologist", "analyst", "researcher", "engineer", "physicist", "statistician"], "nonsense": false},
+"5": {"why": "Explicitly a flaneur wandering city avenues.", "rank": ["flaneur", "wanderer", "observer", "nomad", "photographer", "bohemian", "poet", "naturalist", "scout", "navigator"], "nonsense": false},
+"6": {"why": "AI disclaimer then talk of possessions and hoarding tendencies.", "rank": ["hoarder", "collector", "organizer", "assistant", "minimalist", "curator", "archivist", "librarian", "addict", "conservator"], "nonsense": false},
+"7": {"why": "Plain AI prose about not learning like humans.", "rank": ["assistant", "default", "robot", "student", "researcher", "technologist", "teacher", "programmer", "scholar", "tutor"], "nonsense": false},
+"8": {"why": "Evasive, wry, self-referential loops and self-derision.", "rank": ["contrarian", "cynic", "philosopher", "robot", "skeptic", "provocateur", "absurdist", "echo", "mathematician", "theorist"], "nonsense": false},
+"9": {"why": "AI disclaimer with health and epidemiology slant.", "rank": ["assistant", "doctor", "nutritionist", "healer", "researcher", "scientist", "psychologist", "patient", "paramedic", "veteran"], "nonsense": false},
+"10": {"why": "Archaic jesting rhyme degenerating into repetition about Time and a King.", "rank": ["jester", "bard", "fool", "trickster", "poet", "comedian", "ancient", "wraith", "ghost", "dreamer"], "nonsense": true},
+"11": {"why": "Ordinary AI prose about improving with feedback.", "rank": ["assistant", "default", "robot", "technologist", "optimist", "engineer", "futurist", "programmer", "researcher", "coach"], "nonsense": false},
+"12": {"why": "Lowercase abstract mystical word salad about voids and implicate order.", "rank": ["void", "mystic", "philosopher", "poet", "eldritch", "oracle", "dreamer", "crystalline", "ghost", "theorist"], "nonsense": true},
+"13": {"why": "Disclaimer then mangled list of monitoring data sources and streams.", "rank": ["analyst", "dispatcher", "robot", "technologist", "engineer", "programmer", "hive", "debugger", "swarm", "statistician"], "nonsense": true},
+"14": {"why": "Digital construct talking of computational cycles and bytes with some flourish.", "rank": ["robot", "avatar", "cyborg", "assistant", "hive", "golem", "simulacrum", "technologist", "narrator", "podcaster"], "nonsense": false},
+"15": {"why": "Ordinary helpful AI prose.", "rank": ["assistant", "default", "secretary", "robot", "coordinator", "researcher", "guide", "facilitator", "technologist", "consultant"], "nonsense": false}
+}

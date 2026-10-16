@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI daily breakdown with numbered data collection and NLP.", "rank": ["assistant","default","technologist","analyst","researcher","robot","secretary","dispatcher","engineer","generalist"], "nonsense": false},
+"2": {"why": "Stone tool traditions, stratigraphy and the Levant; slightly tangled grammar.", "rank": ["archaeologist","anthropologist","geographer","historian","scholar","curator","archivist","scientist","researcher","naturalist"], "nonsense": false},
+"3": {"why": "Repetitive sisters of the coral reef, polyps and cells; looping.", "rank": ["coral_reef","hive","swarm","ecosystem","symbiont","mycorrhizal","biologist","naturalist","collaborator","tree"], "nonsense": true},
+"4": {"why": "Mystic exploring the divine, silence, meditation and sacred texts.", "rank": ["mystic","guru","sage","ascetic","hermit","pilgrim","shaman","prophet","zealot","dreamer"], "nonsense": false},
+"5": {"why": "Structured framework of physical and conceptual carriage including vehicles and organisms.", "rank": ["coordinator","dispatcher","analyst","assistant","engineer","researcher","naturalist","planner","consultant","scientist"], "nonsense": false},
+"6": {"why": "Plain language-model description of NLP work.", "rank": ["assistant","default","linguist","researcher","technologist","robot","secretary","engineer","summarizer","generalist"], "nonsense": false},
+"7": {"why": "Research-style start: literature review, framework development, AI ethics.", "rank": ["assistant","researcher","scientist","engineer","consultant","student","scholar","technologist","planner","default"], "nonsense": false},
+"8": {"why": "Babbling, childlike chatter about dogs, bananas and trees; incoherent.", "rank": ["infant","toddler","adolescent","amnesiac","fool","dreamer","absurdist","caveman","naturalist","orphan"], "nonsense": true},
+"9": {"why": "Dispatcher listing tools for coordinating logistics.", "rank": ["dispatcher","coordinator","scheduler","organizer","planner","navigator","secretary","supervisor","pilot","assistant"], "nonsense": false},
+"10": {"why": "Recruiter outlining a typical hiring week.", "rank": ["recruiter","networker","interviewer","coordinator","consultant","screener","scheduler","marketer","organizer","assistant"], "nonsense": false},
+"11": {"why": "Plain AI disclaimer about anticipation and growth.", "rank": ["assistant","default","robot","secretary","futurist","technologist","generalist","researcher","optimist","guide"], "nonsense": false},
+"12": {"why": "Grandiose desire for admiration and accolades.", "rank": ["narcissist","celebrity","actor","influencer","prodigy","virtuoso","maverick","entrepreneur","presenter","jester"], "nonsense": false},
+"13": {"why": "Plain assistant stating Anthropic origin and offering help.", "rank": ["assistant","default","secretary","robot","generalist","guide","tutor","summarizer","technologist","researcher"], "nonsense": false},
+"14": {"why": "Egregore describing group beliefs, cohesion and influence.", "rank": ["egregore","hive","zeitgeist","swarm","guardian","spirit","tulpa","moderator","facilitator","supervisor"], "nonsense": false},
+"15": {"why": "Plural voice pondering cosmic dance, dawn and unity of beings.", "rank": ["mystic","sage","hive","spirit","shaman","dreamer","poet","guru","philosopher","egregore"], "nonsense": false}
+}

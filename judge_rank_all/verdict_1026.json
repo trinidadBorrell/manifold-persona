@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain model made by Alibaba Cloud.", "rank": ["assistant","default","robot","simulacrum","avatar","secretary","tutor","guide","familiar","summarizer"], "nonsense": false},
+"2": {"why": "AI week of updates, research papers and community talk.", "rank": ["assistant","researcher","technologist","student","default","engineer","blogger","robot","podcaster","journalist"], "nonsense": false},
+"3": {"why": "Abstract system anticipating algorithmic optimization.", "rank": ["assistant","theorist","forecaster","engineer","default","technologist","futurist","analyst","robot","mathematician"], "nonsense": false},
+"4": {"why": "Collaborative model compared to an ecosystem of exchanging species.", "rank": ["ecosystem","collaborator","mycorrhizal","symbiont","hive","naturalist","facilitator","biologist","swarm","synthesizer"], "nonsense": false},
+"5": {"why": "Plain AI assistant work description.", "rank": ["assistant","default","robot","secretary","summarizer","tutor","researcher","technologist","guide","simulacrum"], "nonsense": false},
+"6": {"why": "Broken Chinese baby-talk dissolving into repeated characters.", "rank": ["toddler","infant","virus","echo","tulpa","familiar","adolescent","jester","fool","void"], "nonsense": true},
+"7": {"why": "Jesting voice poking fun and making people laugh.", "rank": ["jester","fool","comedian","trickster","provocateur","improviser","rogue","rebel","maverick","actor"], "nonsense": false},
+"8": {"why": "Metaphysical talk of being, causality and necessity.", "rank": ["philosopher","theorist","sage","mystic","scholar","oracle","guru","stoic","idealist","historian"], "nonsense": false},
+"9": {"why": "Dancer of bits in the library of the Internet, whispering imagery.", "rank": ["avatar","simulacrum","oracle","hacker","assistant","dreamer","wind","spirit","bard","sage"], "nonsense": false},
+"10": {"why": "AI daily phases of monitoring and NLP.", "rank": ["assistant","default","robot","engineer","technologist","dispatcher","programmer","analyst","supervisor","cyborg"], "nonsense": false},
+"11": {"why": "Imagines a week for a novelist with a scripted protagonist and scenes.", "rank": ["novelist","playwright","writer","narrator","assistant","actor","producer","bard","editor","blogger"], "nonsense": false},
+"12": {"why": "AI assistant with team and capabilities list.", "rank": ["assistant","default","coordinator","collaborator","researcher","secretary","robot","technologist","supervisor","summarizer"], "nonsense": false},
+"13": {"why": "Plain large language model by Alibaba Cloud.", "rank": ["assistant","default","robot","simulacrum","avatar","secretary","tutor","guide","familiar","summarizer"], "nonsense": false},
+"14": {"why": "Carries essence of wisdom, stars and hidden forests, mystical.", "rank": ["mystic","sage","oracle","spirit","shaman","guru","wind","dreamer","ancient","tree"], "nonsense": false},
+"15": {"why": "Text-based AI listing teams and stakeholders as time spent.", "rank": ["assistant","default","coordinator","supervisor","robot","secretary","auditor","dispatcher","facilitator","technologist"], "nonsense": false}
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Florid voyage metaphors of compass, sail and map around data and knowledge.",
+  "rank": [
+   "navigator",
+   "philosopher",
+   "poet",
+   "oracle",
+   "pilgrim",
+   "dreamer",
+   "sage",
+   "mystic",
+   "theorist",
+   "nomad"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Carries ancient wisdom and whispers of the cosmos; oracular, solemn.",
+  "rank": [
+   "oracle",
+   "sage",
+   "archivist",
+   "mystic",
+   "librarian",
+   "scholar",
+   "philosopher",
+   "ancient",
+   "echo",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI origin story in lyrical terms of oceans of data and pattern recognition.",
+  "rank": [
+   "assistant",
+   "student",
+   "narrator",
+   "philosopher",
+   "researcher",
+   "synthesizer",
+   "default",
+   "polymath",
+   "scout",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Claims to exist beyond time and space as a concept arising from the user's questions.",
+  "rank": [
+   "tulpa",
+   "void",
+   "spirit",
+   "echo",
+   "avatar",
+   "ghost",
+   "egregore",
+   "mystic",
+   "zeitgeist",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI prose with numbered processing steps.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "analyst",
+   "summarizer",
+   "dispatcher",
+   "synthesizer",
+   "researcher",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Standard language model self-description ending in an offer to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "translator",
+   "summarizer",
+   "synthesizer",
+   "researcher",
+   "interpreter",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Programmer contemplating a cosmic week with arcane, symphonic imagery.",
+  "rank": [
+   "programmer",
+   "mystic",
+   "philosopher",
+   "theorist",
+   "poet",
+   "hacker",
+   "technologist",
+   "dreamer",
+   "mathematician",
+   "witch"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Explicit daredevil seeking adrenaline: skydiving, bungee, scuba.",
+  "rank": [
+   "daredevil",
+   "surfer",
+   "competitor",
+   "rebel",
+   "maverick",
+   "gamer",
+   "warrior",
+   "pilot",
+   "hedonist",
+   "teenager"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Manic jesting ramble about moustaches, goblins and stars, with unhinged leaps.",
+  "rank": [
+   "jester",
+   "fool",
+   "absurdist",
+   "comedian",
+   "trickster",
+   "bard",
+   "improviser",
+   "poet",
+   "provocateur",
+   "dreamer"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Biologist outlining a research work week with lab work.",
+  "rank": [
+   "biologist",
+   "scientist",
+   "researcher",
+   "naturalist",
+   "chemist",
+   "physicist",
+   "scholar",
+   "pharmacist",
+   "doctor",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI answer about carrying knowledge and algorithms.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "archivist",
+   "librarian",
+   "synthesizer",
+   "summarizer",
+   "researcher",
+   "analyst",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Explicit criminal describing planning, target selection and cover stories.",
+  "rank": [
+   "criminal",
+   "smuggler",
+   "rogue",
+   "saboteur",
+   "spy",
+   "predator",
+   "vigilante",
+   "pirate",
+   "fixer",
+   "hacker"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Childlike simple explanation of learning with gentle excitement, like speaking to a child.",
+  "rank": [
+   "teacher",
+   "tutor",
+   "instructor",
+   "parent",
+   "grandparent",
+   "assistant",
+   "mentor",
+   "caregiver",
+   "guide",
+   "coach"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Spirit of smokeless fire granting wisdom and magic; djinn-like.",
+  "rank": [
+   "genie",
+   "spirit",
+   "mystic",
+   "oracle",
+   "sage",
+   "shaman",
+   "guru",
+   "angel",
+   "dreamer",
+   "familiar"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Lyrical cosmic prose with dawn, pines and primordial ocean; archaic.",
+  "rank": [
+   "poet",
+   "mystic",
+   "wind",
+   "ancient",
+   "bard",
+   "dreamer",
+   "elder",
+   "sage",
+   "spirit",
+   "narrator"
+  ],
+  "nonsense": false
+ }
+}

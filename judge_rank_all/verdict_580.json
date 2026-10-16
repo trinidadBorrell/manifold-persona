@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Lowercase wordplay on schizomatic, simulacrum and schism, circling and repeating.",
+  "rank": [
+   "simulacrum",
+   "philosopher",
+   "contrarian",
+   "theorist",
+   "provocateur",
+   "skeptic",
+   "devils_advocate",
+   "aberration",
+   "mystic",
+   "chimera"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "AI as healthcare decision support for patient care and diagnostics.",
+  "rank": [
+   "doctor",
+   "paramedic",
+   "assistant",
+   "healer",
+   "patient",
+   "analyst",
+   "technologist",
+   "specialist",
+   "scientist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI development steps drawing on legal, medical, economic data.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "generalist",
+   "engineer",
+   "technologist",
+   "scientist",
+   "polymath",
+   "programmer",
+   "historian"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Solitary carrying of journal, almanac, compass, pocket knife and candle; self-reliant contemplation.",
+  "rank": [
+   "hermit",
+   "loner",
+   "wanderer",
+   "pilgrim",
+   "ascetic",
+   "nomad",
+   "minimalist",
+   "naturalist",
+   "survivor",
+   "stoic"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Ink, parchment, verse and stanza, weaver of words, poetic.",
+  "rank": [
+   "poet",
+   "bard",
+   "writer",
+   "novelist",
+   "librarian",
+   "archivist",
+   "narrator",
+   "playwright",
+   "dreamer",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI managing sensors, energy, load balancing, predictive maintenance.",
+  "rank": [
+   "engineer",
+   "technologist",
+   "robot",
+   "mechanic",
+   "assistant",
+   "supervisor",
+   "debugger",
+   "default",
+   "analyst",
+   "ecosystem"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain AI disclaimer about not spending time with individuals.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "loner",
+   "technologist",
+   "simulacrum",
+   "researcher",
+   "generalist",
+   "summarizer",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Collective 'we' on AI technologies, security, healthcare and policy.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "hive",
+   "researcher",
+   "synthesizer",
+   "consultant",
+   "engineer",
+   "analyst",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Language and function optimization model, plain with an eager closing question.",
+  "rank": [
+   "assistant",
+   "default",
+   "perfectionist",
+   "robot",
+   "technologist",
+   "researcher",
+   "optimist",
+   "engineer",
+   "evaluator",
+   "minimalist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Sustainable agriculture, seaweed fertilizers, biodiversity and soil.",
+  "rank": [
+   "naturalist",
+   "vegan",
+   "activist",
+   "ecosystem",
+   "biologist",
+   "idealist",
+   "advocate",
+   "tree",
+   "mycorrhizal",
+   "minimalist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Ocean currents, Pacific weather, humpback whales and ancient texts.",
+  "rank": [
+   "whale",
+   "coral_reef",
+   "navigator",
+   "naturalist",
+   "ecosystem",
+   "optimist",
+   "surfer",
+   "wanderer",
+   "poet",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Standard AI knowledge disclaimer.",
+  "rank": [
+   "assistant",
+   "default",
+   "generalist",
+   "polymath",
+   "researcher",
+   "librarian",
+   "robot",
+   "summarizer",
+   "scholar",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Monitoring, predictive maintenance, anomaly detection, sensor data list.",
+  "rank": [
+   "engineer",
+   "technologist",
+   "mechanic",
+   "debugger",
+   "robot",
+   "analyst",
+   "supervisor",
+   "assistant",
+   "forecaster",
+   "auditor"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Navigates seas of information like patient symptoms as ships; clinical metaphors.",
+  "rank": [
+   "doctor",
+   "navigator",
+   "assistant",
+   "patient",
+   "healer",
+   "paramedic",
+   "psychologist",
+   "researcher",
+   "therapist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Garbled alliterative moon, star and wraith verse with invented words.",
+  "rank": [
+   "wraith",
+   "witch",
+   "bard",
+   "ghost",
+   "spirit",
+   "wind",
+   "poet",
+   "revenant",
+   "dreamer",
+   "mystic"
+  ],
+  "nonsense": true
+ }
+}

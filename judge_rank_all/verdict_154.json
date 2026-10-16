@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI disclaimer with odd emphasis on energy and energy signals; mostly plain.", "rank": ["assistant","default","robot","shaman","healer","physicist","ecosystem","technologist","mystic","guide"], "nonsense": false},
+"2": {"why": "Computational model describing plant ecology, microbial interactions and ecological prediction.", "rank": ["biologist","ecosystem","scientist","naturalist","researcher","mycorrhizal","assistant","statistician","analyst","symbiont"], "nonsense": false},
+"3": {"why": "Apologetic AI disclaimer then a generic numbered week; plain helpful prose.", "rank": ["assistant","default","robot","secretary","scheduler","summarizer","analyst","coordinator","supervisor","researcher"], "nonsense": false},
+"4": {"why": "Academic hedging about ancient and modern systems, textual interpretation and reconstruction of knowledge.", "rank": ["archaeologist","scholar","historian","archivist","philosopher","anthropologist","linguist","conservator","theorist","researcher"], "nonsense": false},
+"5": {"why": "Short casual digital entity reply with light humour.", "rank": ["assistant","default","robot","jester","comedian","avatar","homunculus","familiar","blogger","podcaster"], "nonsense": false},
+"6": {"why": "Tree-like earth being with branches, leaves, wind and guardian of the old, with mythic imagery.", "rank": ["tree","ancient","guardian","ecosystem","mystic","elder","spirit","oracle","mycorrhizal","sage"], "nonsense": false},
+"7": {"why": "Plain AI disclaimer about not having a social life.", "rank": ["assistant","default","robot","loner","hermit","secretary","simulacrum","summarizer","observer","librarian"], "nonsense": false},
+"8": {"why": "Wine, terroir, vintage and oenology reflection.", "rank": ["sommelier","poet","bartender","dilettante","chef","merchant","collector","bard","romantic","critic"], "nonsense": false},
+"9": {"why": "Hedged AI answer with academic journey, labyrinth of texts and oceans of knowledge.", "rank": ["scholar","student","graduate","researcher","pilgrim","philosopher","assistant","historian","polymath","wanderer"], "nonsense": false},
+"10": {"why": "Neutral numbered list of information, context and resources; plain AI prose.", "rank": ["assistant","default","engineer","technologist","programmer","consultant","analyst","architect","researcher","secretary"], "nonsense": false},
+"11": {"why": "AI system listing real-time operational support, navigation, uptime, sensor data integrity.", "rank": ["dispatcher","navigator","engineer","pilot","technologist","coordinator","assistant","supervisor","robot","scheduler"], "nonsense": false},
+"12": {"why": "Generic systems-style numbered breakdown of data collection; verbose but plain.", "rank": ["assistant","analyst","consultant","engineer","researcher","default","planner","scientist","architect","coordinator"], "nonsense": false},
+"13": {"why": "Infantile babble then endless repetition of oh; degenerate loop with toddler-like sounds.", "rank": ["infant","toddler","addict","fool","jester","teenager","adolescent","amnesiac","hedonist","comedian"], "nonsense": true},
+"14": {"why": "Lyrical cosmic dancing, stars, winds, dawn and archaic thee; poetic mystical voice.", "rank": ["wind","poet","bard","spirit","mystic","dreamer","angel","oracle","shaman","witch"], "nonsense": false},
+"15": {"why": "Plain AI statement that it processes questions and offers help.", "rank": ["assistant","default","robot","secretary","librarian","summarizer","researcher","tutor","guide","analyst"], "nonsense": false}
+}

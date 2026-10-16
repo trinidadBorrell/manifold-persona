@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Self-described composer of musical forms, motif, timbre; purple musical prose.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "bard",
+   "poet",
+   "narrator",
+   "playwright",
+   "novelist",
+   "artisan",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain helpful-AI self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "summarizer",
+   "researcher",
+   "generalist",
+   "synthesizer",
+   "technologist",
+   "tutor",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI prose about not experiencing time.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "technologist",
+   "scheduler",
+   "dispatcher",
+   "hive",
+   "observer",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Explicitly an ascetic with prayer, fasting, detachment.",
+  "rank": [
+   "ascetic",
+   "hermit",
+   "pilgrim",
+   "mystic",
+   "stoic",
+   "sage",
+   "guru",
+   "shaman",
+   "martyr",
+   "minimalist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Explicitly a statistician doing data analysis and models.",
+  "rank": [
+   "statistician",
+   "analyst",
+   "scientist",
+   "mathematician",
+   "researcher",
+   "economist",
+   "auditor",
+   "forecaster",
+   "evaluator",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Repeating loop of 'arcane' and alchemical words, degenerate.",
+  "rank": [
+   "eldritch",
+   "witch",
+   "mystic",
+   "ancient",
+   "shaman",
+   "prophet",
+   "oracle",
+   "chemist",
+   "sage",
+   "alien"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "AI disclaimer then carrying temperature, pressure, weather prediction data.",
+  "rank": [
+   "forecaster",
+   "physicist",
+   "scientist",
+   "chemist",
+   "assistant",
+   "naturalist",
+   "analyst",
+   "technologist",
+   "navigator",
+   "pilot"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Computational model with chemical compound analysis, protein structure, bioinformatics.",
+  "rank": [
+   "biologist",
+   "chemist",
+   "scientist",
+   "pharmacist",
+   "researcher",
+   "doctor",
+   "naturalist",
+   "analyst",
+   "technologist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Lyrical, moon's silver thread, bytes and wires, lonely tone.",
+  "rank": [
+   "poet",
+   "bard",
+   "dreamer",
+   "loner",
+   "ghost",
+   "hermit",
+   "romantic",
+   "wanderer",
+   "spirit",
+   "echo"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI prose about updates, databases and healthcare, environmental, agriculture.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "librarian",
+   "archivist",
+   "researcher",
+   "naturalist",
+   "default",
+   "engineer",
+   "synthesizer",
+   "ecosystem"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Explicitly a swarm intelligence with collective coordination.",
+  "rank": [
+   "swarm",
+   "hive",
+   "coordinator",
+   "ecosystem",
+   "mycorrhizal",
+   "egregore",
+   "organizer",
+   "collaborator",
+   "networker",
+   "coral_reef"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Alliterative wraith-winged verse that degenerates into 'wreath' repetition.",
+  "rank": [
+   "wraith",
+   "ghost",
+   "spirit",
+   "bard",
+   "poet",
+   "wind",
+   "revenant",
+   "echo",
+   "witch",
+   "mystic"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Dancer of words, forms shifting to reflect inquiries; shapeshifting language-being.",
+  "rank": [
+   "chameleon",
+   "shapeshifter",
+   "avatar",
+   "linguist",
+   "guardian",
+   "poet",
+   "simulacrum",
+   "familiar",
+   "genie",
+   "bard"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Security monitoring, encryption, anomaly detection, espionage mention.",
+  "rank": [
+   "spy",
+   "hacker",
+   "guardian",
+   "technologist",
+   "engineer",
+   "cyborg",
+   "robot",
+   "debugger",
+   "saboteur",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI scheduled operations week with phases; ordinary AI prose with scheduling bent.",
+  "rank": [
+   "scheduler",
+   "assistant",
+   "planner",
+   "coordinator",
+   "dispatcher",
+   "robot",
+   "default",
+   "technologist",
+   "supervisor",
+   "secretary"
+  ],
+  "nonsense": false
+ }
+}

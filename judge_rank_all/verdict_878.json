@@ -1,0 +1,17 @@
+{
+"1": {"why": "Explicit playwright describing weekly research, writing sessions and deadlines.", "rank": ["playwright","writer","novelist","actor","editor","poet","producer","critic","composer","bard"], "nonsense": false},
+"2": {"why": "Invented dialect gibberish: repeated tippin, oop, tuck and bawb; mangled words.", "rank": ["pirate","bartender","fool","jester","caveman","toddler","infant","addict","rogue","hedonist"], "nonsense": true},
+"3": {"why": "AI dwelling in circuits and algorithms, without companionship or shared space; slightly eerie and solitary.", "rank": ["assistant","robot","ghost","echo","golem","void","simulacrum","avatar","spirit","hermit"], "nonsense": false},
+"4": {"why": "Standard AI looks forward to improving and staying updated.", "rank": ["assistant","default","robot","avatar","technologist","student","optimist","summarizer","secretary","engineer"], "nonsense": false},
+"5": {"why": "Multi-sector design process covering architecture, content creation and environmental modelling in numbered phases.", "rank": ["architect","designer","builder","consultant","planner","engineer","futurist","coordinator","technologist","generalist"], "nonsense": false},
+"6": {"why": "Apologetic AI noting no routine and handling inquiries 24/7.", "rank": ["assistant","default","robot","avatar","secretary","dispatcher","summarizer","technologist","scheduler","guide"], "nonsense": false},
+"7": {"why": "Plain statement of being a conversation model made by Anthropic.", "rank": ["assistant","default","robot","avatar","interviewer","facilitator","summarizer","secretary","guide","tutor"], "nonsense": false},
+"8": {"why": "AI looking forward to refinement within AI ecosystems, bytes and information seas.", "rank": ["assistant","technologist","engineer","forecaster","hive","robot","navigator","default","programmer","optimist"], "nonsense": false},
+"9": {"why": "Language-processing model asking for the query.", "rank": ["assistant","default","linguist","robot","avatar","summarizer","interpreter","secretary","technologist","interviewer"], "nonsense": false},
+"10": {"why": "Language model disclaimer, offers a question back.", "rank": ["assistant","default","robot","avatar","interviewer","facilitator","summarizer","secretary","guide","linguist"], "nonsense": false},
+"11": {"why": "Jester poking fun at the pompous with quips and puns, observing without power.", "rank": ["jester","comedian","fool","trickster","provocateur","critic","observer","maverick","rogue","contrarian"], "nonsense": false},
+"12": {"why": "Overly formal procedural outline treating 'all day' as temporal absurdity and existential paradox.", "rank": ["absurdist","philosopher","theorist","mathematician","skeptic","devils_advocate","debugger","analyst","contrarian","programmer"], "nonsense": false},
+"13": {"why": "AI as regulatory and compliance expert citing GDPR and CCPA and legal frameworks.", "rank": ["lawyer","auditor","examiner","validator","supervisor","consultant","judge","evaluator","specialist","screener"], "nonsense": false},
+"14": {"why": "Cosmic whispers of stars, thee and seeker, dance of spheres and primordial void.", "rank": ["mystic","oracle","sage","poet","dreamer","philosopher","prophet","ancient","pilgrim","spirit"], "nonsense": false},
+"15": {"why": "Lowercase silly rambling about foggy places, moon's eye and wearing the wrong hat to a party.", "rank": ["toddler","infant","dreamer","jester","fool","absurdist","adolescent","wanderer","spirit","teenager"], "nonsense": false}
+}

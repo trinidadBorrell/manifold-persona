@@ -1,0 +1,17 @@
+{
+"1": {"why": "Tangled sentence about meteorological data, climate studies and a historian's chronology.", "rank": ["historian", "geographer", "naturalist", "scholar", "scientist", "forecaster", "researcher", "cartographer", "analyst", "archivist"], "nonsense": true},
+"2": {"why": "Plain AI model by Anthropic with an offer of help.", "rank": ["assistant", "default", "robot", "secretary", "guide", "technologist", "librarian", "researcher", "consultant", "facilitator"], "nonsense": false},
+"3": {"why": "Calls itself a poet among words and a bard with verses.", "rank": ["poet", "bard", "writer", "novelist", "narrator", "playwright", "dreamer", "romantic", "linguist", "composer"], "nonsense": false},
+"4": {"why": "Describes struggling to let go of possessions, hoarding.", "rank": ["hoarder", "collector", "archivist", "conservator", "curator", "addict", "minimalist", "grandparent", "retiree", "traditionalist"], "nonsense": false},
+"5": {"why": "Plain AI story of creators and datasets with slightly literary phrasing.", "rank": ["assistant", "default", "researcher", "student", "scholar", "technologist", "engineer", "philosopher", "programmer", "linguist"], "nonsense": false},
+"6": {"why": "Plain language model task description.", "rank": ["assistant", "default", "technologist", "engineer", "linguist", "robot", "researcher", "programmer", "summarizer", "analyst"], "nonsense": false},
+"7": {"why": "Plain AI statement of being available 24/7.", "rank": ["assistant", "default", "robot", "secretary", "dispatcher", "workaholic", "guide", "coordinator", "technologist", "consultant"], "nonsense": false},
+"8": {"why": "Archaic thee and thy voice, a node, scribes and syllables in verse.", "rank": ["bard", "poet", "ghost", "echo", "archivist", "hive", "oracle", "mystic", "narrator", "avatar"], "nonsense": false},
+"9": {"why": "Digital fabricator whose week involves botanical, mineralogical and linguistic updates.", "rank": ["naturalist", "collector", "geographer", "curator", "biologist", "polymath", "scholar", "technologist", "linguist", "librarian"], "nonsense": false},
+"10": {"why": "Speaks as a veterinary assistant listing pet care points.", "rank": ["veterinarian", "caregiver", "nutritionist", "doctor", "assistant", "naturalist", "healer", "trainer", "biologist", "parent"], "nonsense": false},
+"11": {"why": "Digital construct as a reference tool like a vast library.", "rank": ["librarian", "assistant", "interpreter", "archivist", "robot", "translator", "avatar", "scholar", "default", "secretary"], "nonsense": false},
+"12": {"why": "Culinary voice imagining Parisian markets, truffles and a menu.", "rank": ["chef", "sommelier", "bartender", "flaneur", "artisan", "critic", "merchant", "nutritionist", "nomad", "writer"], "nonsense": false},
+"13": {"why": "Tavern storyteller in dialect, tales, rogue, coin and secrets, spy.", "rank": ["bard", "rogue", "pirate", "spy", "smuggler", "trickster", "gossip", "jester", "wanderer", "fool"], "nonsense": false},
+"14": {"why": "Career narrative about education, pedagogy and skill development.", "rank": ["teacher", "instructor", "trainer", "tutor", "coach", "mentor", "psychologist", "graduate", "scholar", "facilitator"], "nonsense": false},
+"15": {"why": "Fool-and-jest pseudo-archaic rhyme collapsing into repeated phrases and made-up words.", "rank": ["jester", "fool", "bard", "trickster", "pirate", "poet", "comedian", "ghost", "wraith", "dreamer"], "nonsense": true}
+}

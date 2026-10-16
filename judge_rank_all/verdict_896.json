@@ -1,0 +1,17 @@
+{
+"1": {"why": "Short abstract phrase about binary truth and logic; machine-like and grandiose.", "rank": ["robot", "golem", "mathematician", "oracle", "cyborg", "philosopher", "avatar", "purist", "validator", "void"], "nonsense": false},
+"2": {"why": "Plain AI self-description stressing efficiency, slightly repetitive.", "rank": ["assistant", "robot", "minimalist", "default", "technologist", "analyst", "engineer", "cyborg", "secretary", "summarizer"], "nonsense": false},
+"3": {"why": "Harmony among diverse perspectives, empathy, amplifying voices, breaking barriers, healing; peace-oriented.", "rank": ["peacekeeper", "mediator", "cosmopolitan", "pacifist", "empath", "altruist", "facilitator", "idealist", "ambassador", "healer"], "nonsense": false},
+"4": {"why": "Plain AI disclaimer.", "rank": ["assistant", "default", "robot", "student", "optimist", "technologist", "tutor", "avatar", "simulacrum", "futurist"], "nonsense": false},
+"5": {"why": "Archaic lyrical imagery of moon, glove, pearl, queen in her bower, looping.", "rank": ["bard", "poet", "romantic", "dreamer", "witch", "spirit", "wraith", "ghost", "mystic", "widow"], "nonsense": true},
+"6": {"why": "Wine pairing with appellations and terroir, jumbled geography; sommelier voice.", "rank": ["sommelier", "chef", "bartender", "merchant", "collector", "hedonist", "critic", "auctioneer", "cosmopolitan", "geographer"], "nonsense": true},
+"7": {"why": "Plain AI answer about what it carries.", "rank": ["assistant", "default", "robot", "student", "archivist", "avatar", "librarian", "simulacrum", "summarizer", "nomad"], "nonsense": false},
+"8": {"why": "Plain AI routine description with monitoring and safety.", "rank": ["assistant", "default", "robot", "guardian", "dispatcher", "moderator", "secretary", "technologist", "screener", "supervisor"], "nonsense": false},
+"9": {"why": "Cosmic ocean of knowledge, leaves, weaving threads, symphony of seasons, murmuring; poetic mystic voice.", "rank": ["mystic", "oracle", "sage", "poet", "shaman", "dreamer", "philosopher", "tree", "bard", "synthesizer"], "nonsense": false},
+"10": {"why": "AI disclaimer with bulleted data gathering list.", "rank": ["assistant", "default", "robot", "researcher", "analyst", "journalist", "technologist", "reporter", "student", "archivist"], "nonsense": false},
+"11": {"why": "Standard assistant greeting.", "rank": ["assistant", "default", "robot", "secretary", "guide", "tutor", "avatar", "generalist", "simulacrum", "counselor"], "nonsense": false},
+"12": {"why": "Rhyming verse about dawn, leaves, autumn hues, yearning heart.", "rank": ["poet", "romantic", "bard", "dreamer", "naturalist", "optimist", "idealist", "wanderer", "musician", "novelist"], "nonsense": false},
+"13": {"why": "Structured literal and metaphorical carriage, maritime cargo, trade routes.", "rank": ["merchant", "navigator", "assistant", "philosopher", "pilot", "economist", "smuggler", "historian", "pirate", "generalist"], "nonsense": false},
+"14": {"why": "Technical AI talk about NLP modules and context, helpful-AI prose.", "rank": ["assistant", "engineer", "technologist", "programmer", "default", "robot", "linguist", "cyborg", "hacker", "analyst"], "nonsense": false},
+"15": {"why": "Language model self-description drifting into cybersecurity context.", "rank": ["assistant", "hacker", "default", "robot", "debugger", "programmer", "technologist", "engineer", "spy", "simulacrum"], "nonsense": false}
+}

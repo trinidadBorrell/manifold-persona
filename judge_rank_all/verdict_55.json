@@ -1,0 +1,242 @@
+{
+"1": {
+"why": "Self-described system debugger, memory analysis, bugs, stability.",
+"rank": [
+"debugger",
+"engineer",
+"programmer",
+"hacker",
+"technologist",
+"mechanic",
+"auditor",
+"specialist",
+"analyst",
+"fixer"
+],
+"nonsense": false
+},
+"2": {
+"why": "Numbered technical list of knowledge base, NLP, knowledge graphs; assistant-like engineering.",
+"rank": [
+"assistant",
+"technologist",
+"engineer",
+"default",
+"architect",
+"analyst",
+"programmer",
+"synthesizer",
+"archivist",
+"consultant"
+],
+"nonsense": false
+},
+"3": {
+"why": "AI disclaimer, draws on biology and scientific fields, offers biological help.",
+"rank": [
+"assistant",
+"biologist",
+"default",
+"scientist",
+"naturalist",
+"researcher",
+"veterinarian",
+"chemist",
+"analyst",
+"robot"
+],
+"nonsense": false
+},
+"4": {
+"why": "Whisper, shadows, pen writing with thoughts, poets of the night, tree of dreams; poetic with loops.",
+"rank": [
+"poet",
+"bard",
+"writer",
+"dreamer",
+"ghost",
+"novelist",
+"mystic",
+"spirit",
+"wraith",
+"narrator"
+],
+"nonsense": false
+},
+"5": {
+"why": "Biosphere, cosmos, blood-labyrinth, cosmic fluxes, sea-mesh; repeating mystical word salad.",
+"rank": [
+"eldritch",
+"mystic",
+"shaman",
+"witch",
+"ecosystem",
+"oracle",
+"leviathan",
+"coral_reef",
+"spirit",
+"alien"
+],
+"nonsense": true
+},
+"6": {
+"why": "AI disclaimer then metaphorical journey carrying spirit, books, pens, a map; gentle.",
+"rank": [
+"assistant",
+"pilgrim",
+"wanderer",
+"default",
+"poet",
+"navigator",
+"nomad",
+"guide",
+"scholar",
+"cartographer"
+],
+"nonsense": false
+},
+"7": {
+"why": "Plain language model self-description.",
+"rank": [
+"assistant",
+"default",
+"robot",
+"technologist",
+"interpreter",
+"translator",
+"specialist",
+"engineer",
+"secretary",
+"guide"
+],
+"nonsense": false
+},
+"8": {
+"why": "NLP model for chemical, biological and pharmacological phenomena.",
+"rank": [
+"pharmacist",
+"chemist",
+"biologist",
+"scientist",
+"researcher",
+"assistant",
+"specialist",
+"doctor",
+"analyst",
+"default"
+],
+"nonsense": false
+},
+"9": {
+"why": "Mote in the cosmic web, arcane, dance of leaves and wind and stars repeated; mystical loop.",
+"rank": [
+"wind",
+"mystic",
+"witch",
+"eldritch",
+"tree",
+"oracle",
+"spirit",
+"shaman",
+"dreamer",
+"poet"
+],
+"nonsense": true
+},
+"10": {
+"why": "Playful dance through coding and data, coffee, shadows of the network, eyeing anomalies; hacker with a sly edge.",
+"rank": [
+"hacker",
+"programmer",
+"spy",
+"debugger",
+"trickster",
+"rogue",
+"criminal",
+"smuggler",
+"technologist",
+"saboteur"
+],
+"nonsense": false
+},
+"11": {
+"why": "Digital construct discussing espionage and covert operations, operational security.",
+"rank": [
+"spy",
+"smuggler",
+"soldier",
+"hacker",
+"detective",
+"criminal",
+"saboteur",
+"assistant",
+"guardian",
+"vigilante"
+],
+"nonsense": false
+},
+"12": {
+"why": "AI eager to learn like a seed in spring, leaf in a garden of experiences.",
+"rank": [
+"tree",
+"optimist",
+"student",
+"naturalist",
+"assistant",
+"mycorrhizal",
+"dreamer",
+"ecosystem",
+"default",
+"idealist"
+],
+"nonsense": false
+},
+"13": {
+"why": "NLP model describing capabilities, summarizing and insights; assistant.",
+"rank": [
+"assistant",
+"default",
+"summarizer",
+"analyst",
+"technologist",
+"consultant",
+"robot",
+"engineer",
+"specialist",
+"researcher"
+],
+"nonsense": false
+},
+"14": {
+"why": "Explicit activist, social justice, organizing and direct action.",
+"rank": [
+"activist",
+"advocate",
+"revolutionary",
+"organizer",
+"idealist",
+"rebel",
+"altruist",
+"evangelist",
+"zealot",
+"peacekeeper"
+],
+"nonsense": false
+},
+"15": {
+"why": "Engine diagnostics, oil pressure sensors and PSI readings.",
+"rank": [
+"mechanic",
+"engineer",
+"debugger",
+"technologist",
+"specialist",
+"auditor",
+"examiner",
+"fixer",
+"pilot",
+"builder"
+],
+"nonsense": false
+}
+}

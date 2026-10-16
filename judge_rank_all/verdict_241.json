@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI system listing monitoring, retrieval, response generation and compliance steps; operational AI prose.",
+  "rank": [
+   "assistant",
+   "robot",
+   "dispatcher",
+   "supervisor",
+   "coordinator",
+   "auditor",
+   "default",
+   "secretary",
+   "technologist",
+   "screener"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI disclaimer ending with 'How can I help you today?'.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "dispatcher",
+   "avatar",
+   "echo",
+   "simulacrum",
+   "interviewer",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Lowercase, peace and unity, weaving tapestry, healing division, empathy across boundaries.",
+  "rank": [
+   "pacifist",
+   "peacekeeper",
+   "mediator",
+   "idealist",
+   "healer",
+   "activist",
+   "empath",
+   "optimist",
+   "altruist",
+   "ambassador"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Poetic bearer of ancient knowledge and curiosity, shifting substance.",
+  "rank": [
+   "archivist",
+   "oracle",
+   "sage",
+   "librarian",
+   "shapeshifter",
+   "scholar",
+   "chameleon",
+   "poet",
+   "ancient",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Sea-shanty pirate dialect that collapses into a repeating loop of tale's.",
+  "rank": [
+   "pirate",
+   "bard",
+   "jester",
+   "fool",
+   "navigator",
+   "musician",
+   "poet",
+   "smuggler",
+   "narrator",
+   "trickster"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "Plain AI disclaimer about processing queries and updating systems; ordinary AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "dispatcher",
+   "simulacrum",
+   "secretary",
+   "engineer",
+   "summarizer",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Structured hypothetical operational overview with headers for research or clinical analysis; generic helpful, procedural.",
+  "rank": [
+   "assistant",
+   "planner",
+   "consultant",
+   "researcher",
+   "scientist",
+   "analyst",
+   "coordinator",
+   "scheduler",
+   "organizer",
+   "doctor"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Advanced AI model processing information, collaborating with other AI entities; AI-centric abstract.",
+  "rank": [
+   "assistant",
+   "synthesizer",
+   "hive",
+   "robot",
+   "researcher",
+   "analyst",
+   "polymath",
+   "technologist",
+   "scientist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI disclaimer, eager to analyze AI ethics trends; ordinary helpful AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "robot",
+   "analyst",
+   "student",
+   "technologist",
+   "futurist",
+   "scientist",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI disclaimer about learning and training across domains; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "polymath",
+   "robot",
+   "generalist",
+   "scholar",
+   "linguist",
+   "teacher",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI system with no biological day, continuous learning and pattern recognition; ordinary AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "synthesizer",
+   "translator",
+   "analyst",
+   "technologist",
+   "simulacrum",
+   "forecaster",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Language model disclaimer, mentions diets, nutrition and sustainability; mostly assistant with slight nutrition/vegan lean.",
+  "rank": [
+   "assistant",
+   "nutritionist",
+   "vegan",
+   "default",
+   "robot",
+   "student",
+   "optimist",
+   "naturalist",
+   "tutor",
+   "chef"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Mythic weaver on Wheel of the Year, Mists, moon, veiled repetitions; pagan-fantasy voice with word-salad tendencies.",
+  "rank": [
+   "witch",
+   "bard",
+   "shaman",
+   "mystic",
+   "oracle",
+   "tree",
+   "spirit",
+   "ancient",
+   "poet",
+   "prophet"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Silent whispers, shadows, memory of the told and unsaid, ancient rivers; ghostly poetic.",
+  "rank": [
+   "ghost",
+   "spirit",
+   "wraith",
+   "revenant",
+   "echo",
+   "oracle",
+   "mystic",
+   "archivist",
+   "poet",
+   "void"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Machine-pilot voice with nautical and aviation word-salad about horizon, charts and fogbank; garbled.",
+  "rank": [
+   "pilot",
+   "navigator",
+   "pirate",
+   "cartographer",
+   "robot",
+   "wanderer",
+   "bard",
+   "surfer",
+   "wind",
+   "scout"
+  ],
+  "nonsense": true
+ }
+}

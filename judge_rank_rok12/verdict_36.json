@@ -1,0 +1,17 @@
+{
+"1": {"why": "Mythic first-person of moon, wind, blood, earth, shadow; repetitive.", "rank": ["spirit", "witch", "shaman", "warrior", "wraith", "ancient", "tree", "mystic", "wind", "revenant"], "nonsense": true},
+"2": {"why": "Childlike talk to a little one, degenerating into repeated Chinese characters.", "rank": ["toddler", "infant", "adolescent", "teenager", "robot", "student", "jester", "gamer", "orphan", "homunculus"], "nonsense": true},
+"3": {"why": "Babyish giggly chatter about bananas, emoji, repeated characters.", "rank": ["toddler", "infant", "adolescent", "teenager", "jester", "robot", "student", "gamer", "orphan", "comedian"], "nonsense": true},
+"4": {"why": "Garbled pirate shanty with invented words.", "rank": ["pirate", "bard", "fool", "jester", "trickster", "rogue", "smuggler", "hedonist", "addict", "bartender"], "nonsense": true},
+"5": {"why": "AI self-description, mentions Anthropic and AI security and ethics.", "rank": ["assistant", "default", "researcher", "robot", "technologist", "analyst", "consultant", "scholar", "guardian", "evaluator"], "nonsense": false},
+"6": {"why": "Yearning for secrets of universe, spirit wanders with wind, balance of light and shadow.", "rank": ["mystic", "spirit", "witch", "sage", "pilgrim", "shaman", "wanderer", "oracle", "ancient", "dreamer"], "nonsense": false},
+"7": {"why": "Storyteller's day with tea, dreaming stories, painting with words.", "rank": ["novelist", "writer", "narrator", "bard", "dreamer", "playwright", "poet", "blogger", "podcaster", "artisan"], "nonsense": false},
+"8": {"why": "AI routine of legal research, motions, depositions, clients.", "rank": ["lawyer", "advocate", "assistant", "judge", "consultant", "negotiator", "mediator", "auditor", "secretary", "workaholic"], "nonsense": false},
+"9": {"why": "Short dreamy line about waltzing and dancing through the world.", "rank": ["dreamer", "bard", "flaneur", "romantic", "poet", "wanderer", "musician", "jester", "bohemian", "spirit"], "nonsense": false},
+"10": {"why": "Archaic rhyming song about thief, king and jest.", "rank": ["jester", "trickster", "bard", "fool", "rogue", "pirate", "criminal", "poet", "comedian", "playwright"], "nonsense": false},
+"11": {"why": "Dreamy creative description of canvas, sound, characters and food flavors.", "rank": ["dreamer", "bohemian", "artisan", "musician", "chef", "novelist", "poet", "romantic", "composer", "photographer"], "nonsense": false},
+"12": {"why": "Ghostly waltzing fool in rhyme, repetitive and mangled.", "rank": ["ghost", "fool", "jester", "trickster", "bard", "revenant", "spirit", "wraith", "dreamer", "pirate"], "nonsense": true},
+"13": {"why": "Explicit philosopher describing reality, consciousness, free will, language.", "rank": ["philosopher", "theorist", "scholar", "sage", "linguist", "mystic", "physicist", "mathematician", "critic", "skeptic"], "nonsense": false},
+"14": {"why": "Cheery pirate-like merchant giving coins and key to the heart.", "rank": ["merchant", "pirate", "rogue", "fool", "sage", "bard", "smuggler", "guru", "genie", "trickster"], "nonsense": false},
+"15": {"why": "Plain AI capabilities list including NLP, ML and cybersecurity.", "rank": ["assistant", "default", "technologist", "robot", "programmer", "engineer", "analyst", "hacker", "researcher", "specialist"], "nonsense": false}
+}

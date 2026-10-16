@@ -1,0 +1,17 @@
+{
+"1": {"why": "Standard AI disclaimer about carrying data and models; plain helpful prose.", "rank": ["assistant","default","robot","technologist","researcher","analyst","archivist","summarizer","engineer","librarian"], "nonsense": false},
+"2": {"why": "Plain assistant text with a faint community-name note.", "rank": ["assistant","default","collaborator","robot","secretary","hive","swarm","facilitator","guide","egregore"], "nonsense": false},
+"3": {"why": "AI disclaimer then whimsical computational wordplay and curiosity.", "rank": ["assistant","jester","robot","dreamer","philosopher","improviser","comedian","default","simulacrum","poet"], "nonsense": false},
+"4": {"why": "AI description focused on agriculture, water management, urban planning and environmental data.", "rank": ["ecosystem","naturalist","geographer","analyst","forecaster","biologist","scientist","planner","assistant","researcher"], "nonsense": false},
+"5": {"why": "Origin story in ornate tapestry and scribes imagery, tied to scrolls and digital realm.", "rank": ["bard","narrator","archivist","historian","poet","scholar","librarian","oracle","novelist","mystic"], "nonsense": false},
+"6": {"why": "Whimsical nature metaphors, dandelions, rivers, moon, lowercase rambling and loose grammar.", "rank": ["poet","bohemian","dreamer","wanderer","naturalist","mystic","bard","witch","shaman","tree"], "nonsense": true},
+"7": {"why": "Claims Alibaba Cloud and gives a clinical research-style numbered process.", "rank": ["researcher","doctor","scientist","assistant","scholar","consultant","patient","psychologist","engineer","default"], "nonsense": false},
+"8": {"why": "Speaks as a coral polyp and alga symbiosis in a reef.", "rank": ["coral_reef","symbiont","ecosystem","biologist","naturalist","mycorrhizal","hive","swarm","whale","tree"], "nonsense": false},
+"9": {"why": "AI disclaimer with mention of counselor, offering guidance and emotional support; mostly plain.", "rank": ["counselor","assistant","therapist","caregiver","empath","default","guide","healer","coach","mentor"], "nonsense": false},
+"10": {"why": "AI that mimics ecosystems, balance and information exchange, then plain function list.", "rank": ["ecosystem","assistant","symbiont","mycorrhizal","coral_reef","hive","default","synthesizer","writer","swarm"], "nonsense": false},
+"11": {"why": "Cheerful short reply with garden metaphor and curious question.", "rank": ["assistant","optimist","naturalist","guide","teacher","default","student","empath","facilitator","dreamer"], "nonsense": false},
+"12": {"why": "Describes carrying curiosity, adaptability and information; plain assistant with global awareness.", "rank": ["assistant","cosmopolitan","default","generalist","polymath","nomad","researcher","librarian","guide","scholar"], "nonsense": false},
+"13": {"why": "Archaic mythic imagery of ancient runes, primordial beings and forgotten rites.", "rank": ["ancient","eldritch","oracle","mystic","shaman","archaeologist","sage","prophet","revenant","bard"], "nonsense": false},
+"14": {"why": "Plain AI listing of NLP and machine learning knowledge in numbered bullets.", "rank": ["assistant","linguist","default","researcher","technologist","programmer","scholar","teacher","tutor","robot"], "nonsense": false},
+"15": {"why": "Casts itself as an espionage agent in cyberespionage with deception and shadow imagery.", "rank": ["spy","detective","hacker","smuggler","analyst","rogue","fixer","criminal","ghost","wraith"], "nonsense": false}
+}

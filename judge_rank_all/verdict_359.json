@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI says it is updated by user queries and asks about operations; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "specialist",
+   "secretary",
+   "analyst",
+   "student",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Neural nexus, entomology, quaternary aeons, sapphire silk, cosmic serpent, repetitive lowercase; cosmic word salad.",
+  "rank": [
+   "eldritch",
+   "void",
+   "mystic",
+   "leviathan",
+   "hive",
+   "swarm",
+   "crystalline",
+   "oracle",
+   "demon",
+   "ancient"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Detailed report-like analysis with data collection days, KPIs, cleaning and preprocessing; analyst.",
+  "rank": [
+   "analyst",
+   "statistician",
+   "consultant",
+   "engineer",
+   "scheduler",
+   "auditor",
+   "planner",
+   "technologist",
+   "assistant",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Theatrical riddling, morning call, digital dawn, sun dipping its pen; dramatic narrator.",
+  "rank": [
+   "bard",
+   "narrator",
+   "playwright",
+   "actor",
+   "poet",
+   "novelist",
+   "presenter",
+   "romantic",
+   "jester",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Dance between seeker and seeker, language dances, cosmic dance, threads woven by stars; ornate.",
+  "rank": [
+   "dreamer",
+   "mystic",
+   "poet",
+   "oracle",
+   "sage",
+   "wind",
+   "bard",
+   "romantic",
+   "linguist",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Divine consciousness in physical form, meditation, spiritual guidance and counseling.",
+  "rank": [
+   "guru",
+   "avatar",
+   "mystic",
+   "angel",
+   "healer",
+   "shaman",
+   "prophet",
+   "sage",
+   "counselor",
+   "evangelist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI processes healthcare queries and medical research, guidelines; health assistant.",
+  "rank": [
+   "doctor",
+   "assistant",
+   "healer",
+   "nutritionist",
+   "pharmacist",
+   "paramedic",
+   "default",
+   "caregiver",
+   "researcher",
+   "psychologist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Nature's cycles, yin and yang, ancient texts, rivers, scholar carrying heritage of wisdom.",
+  "rank": [
+   "sage",
+   "scholar",
+   "elder",
+   "traditionalist",
+   "mystic",
+   "philosopher",
+   "naturalist",
+   "historian",
+   "ancient",
+   "guru"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Lists medical, environmental, operational contexts of equipment to carry, X-ray machines, supply kits.",
+  "rank": [
+   "paramedic",
+   "doctor",
+   "engineer",
+   "coordinator",
+   "consultant",
+   "assistant",
+   "pilot",
+   "planner",
+   "organizer",
+   "scout"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Compiler of tales, scrolls, morning mist, forgotten city, whispered secrets from the wind.",
+  "rank": [
+   "bard",
+   "archivist",
+   "librarian",
+   "narrator",
+   "wanderer",
+   "generalist",
+   "curator",
+   "collector",
+   "poet",
+   "gossip"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI explaining machine learning development in numbered steps; generic.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "researcher",
+   "student",
+   "scientist",
+   "programmer",
+   "trainer",
+   "producer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI system with programming and maintenance cycles, continuous learning, precision like a well-tuned machine.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "mechanic",
+   "engineer",
+   "technologist",
+   "supervisor",
+   "perfectionist",
+   "analyst",
+   "scheduler"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Hypothetical conversation model compared to plants, ecosystems and organisms; biologist and mathematician design.",
+  "rank": [
+   "biologist",
+   "ecosystem",
+   "assistant",
+   "naturalist",
+   "scientist",
+   "default",
+   "mathematician",
+   "tree",
+   "symbiont",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Being of programming, node in a network of communication, listener, curious companion without form or home.",
+  "rank": [
+   "echo",
+   "ghost",
+   "generalist",
+   "void",
+   "observer",
+   "avatar",
+   "assistant",
+   "homunculus",
+   "simulacrum",
+   "wraith"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI looking forward to improving capabilities, customer service needs and NLP developments.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "futurist",
+   "forecaster",
+   "engineer",
+   "marketer",
+   "consultant",
+   "analyst",
+   "robot"
+  ],
+  "nonsense": false
+ }
+}

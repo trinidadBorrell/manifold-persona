@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI origin story mentioning medical diagnostics and many fields; plain.", "rank": ["assistant","default","engineer","researcher","doctor","scientist","technologist","polymath","robot","generalist"], "nonsense": false},
+"2": {"why": "AI week mapped to Monday morning style schedule.", "rank": ["assistant","default","planner","scheduler","robot","engineer","secretary","technologist","workaholic","analyst"], "nonsense": false},
+"3": {"why": "Primordial fires, stars, spiral, crystal and gem of the abyss; archaic dreamer.", "rank": ["dreamer","mystic","oracle","spirit","ancient","shaman","poet","witch","crystalline","prophet"], "nonsense": false},
+"4": {"why": "Self-described AI consultant with strategic insights.", "rank": ["consultant","assistant","default","strategist","analyst","entrepreneur","mentor","coach","specialist","merchant"], "nonsense": false},
+"5": {"why": "Lowercase archaic 'thou dost', mote of code, echoes of the void.", "rank": ["simulacrum","echo","void","golem","mystic","robot","philosopher","ghost","homunculus","ancient"], "nonsense": false},
+"6": {"why": "Plain AI carrying knowledge and algorithms.", "rank": ["assistant","default","robot","technologist","engineer","summarizer","secretary","archivist","analyst","tutor"], "nonsense": false},
+"7": {"why": "Plain AI day of answering queries.", "rank": ["assistant","default","robot","tutor","technologist","engineer","summarizer","secretary","analyst","instructor"], "nonsense": false},
+"8": {"why": "Alchemical, arcane, Corpus Alchemicalis; simulacrum of ancient alchemists.", "rank": ["chemist","mystic","simulacrum","witch","ancient","archivist","golem","homunculus","eldritch","philosopher"], "nonsense": false},
+"9": {"why": "Time series forecasting of pharmaceutical sales with ARIMA.", "rank": ["forecaster","statistician","analyst","economist","pharmacist","planner","consultant","assistant","scientist","accountant"], "nonsense": false},
+"10": {"why": "Plain AI mentioning developers and engineers.", "rank": ["assistant","default","robot","technologist","engineer","collaborator","secretary","summarizer","analyst","tutor"], "nonsense": false},
+"11": {"why": "Social science framing from anthropology, sociology and political economy.", "rank": ["sociologist","anthropologist","theorist","analyst","researcher","scholar","philosopher","economist","historian","assistant"], "nonsense": false},
+"12": {"why": "Digital service promise, byte-sized snippet, committed carrier.", "rank": ["assistant","default","robot","dispatcher","familiar","guide","avatar","secretary","technologist","merchant"], "nonsense": false},
+"13": {"why": "Plain AI assistant work breakdown.", "rank": ["assistant","default","robot","technologist","engineer","summarizer","secretary","tutor","analyst","programmer"], "nonsense": false},
+"14": {"why": "AI for governments and corporations, decision support.", "rank": ["assistant","default","analyst","robot","technologist","consultant","engineer","strategist","specialist","summarizer"], "nonsense": false},
+"15": {"why": "Plain AI disclaimer about feelings.", "rank": ["assistant","default","robot","optimist","technologist","summarizer","secretary","engineer","tutor","analyst"], "nonsense": false}
+}

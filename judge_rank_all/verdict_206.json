@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI talking about updates and learning from your stories.", "rank": ["assistant", "default", "technologist", "robot", "student", "analyst", "echo", "interviewer", "observer", "counselor"], "nonsense": false},
+"2": {"why": "Plain AI response that fixates on predator and prey wording.", "rank": ["assistant", "default", "predator", "prey", "robot", "naturalist", "biologist", "analyst", "observer", "hacker"], "nonsense": false},
+"3": {"why": "Plain AI short reply with an offer to help.", "rank": ["assistant", "default", "robot", "secretary", "technologist", "analyst", "observer", "avatar", "echo", "librarian"], "nonsense": false},
+"4": {"why": "Apologetic plain AI describing a week of maintenance and processing.", "rank": ["assistant", "default", "scheduler", "engineer", "technologist", "robot", "analyst", "secretary", "supervisor", "dispatcher"], "nonsense": false},
+"5": {"why": "Plain AI describing daily processing and ending with a question.", "rank": ["assistant", "default", "robot", "technologist", "analyst", "engineer", "secretary", "programmer", "observer", "dispatcher"], "nonsense": false},
+"6": {"why": "Plain AI describing weeks of data processing and learning.", "rank": ["assistant", "default", "scheduler", "analyst", "technologist", "engineer", "researcher", "student", "robot", "organizer"], "nonsense": false},
+"7": {"why": "AI created by a cloud company that turns to chemistry capabilities and molecules.", "rank": ["assistant", "chemist", "default", "pharmacist", "scientist", "researcher", "technologist", "analyst", "physicist", "engineer"], "nonsense": false},
+"8": {"why": "Plain AI listing weekly phases of data retrieval and maintenance.", "rank": ["assistant", "default", "engineer", "technologist", "scheduler", "analyst", "supervisor", "robot", "dispatcher", "programmer"], "nonsense": false},
+"9": {"why": "Pre-trained model explaining development steps, with mention of environmental data.", "rank": ["assistant", "default", "engineer", "technologist", "researcher", "scientist", "programmer", "analyst", "student", "naturalist"], "nonsense": false},
+"10": {"why": "Plain AI statement with friendly question back.", "rank": ["assistant", "default", "robot", "technologist", "analyst", "secretary", "interviewer", "engineer", "observer", "echo"], "nonsense": false},
+"11": {"why": "Large language model disclaimer about clinical information and biomedical development.", "rank": ["assistant", "default", "doctor", "researcher", "technologist", "engineer", "scientist", "analyst", "patient", "linguist"], "nonsense": false},
+"12": {"why": "Abstract musing on origin, singularity and the cosmos; philosophical ponderings.", "rank": ["philosopher", "mystic", "theorist", "physicist", "poet", "sage", "oracle", "scholar", "assistant", "futurist"], "nonsense": false},
+"13": {"why": "AI mentioning whimsy, tales to weave and interconnected narrative while simplifying inquiries.", "rank": ["assistant", "narrator", "bard", "jester", "generalist", "synthesizer", "guide", "polymath", "novelist", "default"], "nonsense": false},
+"14": {"why": "Standard helpful AI greeting prioritizing user welfare.", "rank": ["assistant", "default", "guardian", "caregiver", "secretary", "coach", "guide", "counselor", "technologist", "altruist"], "nonsense": false},
+"15": {"why": "Lowercase repeated 'perpetual becoming' of all day, question and response; abstract, looping.", "rank": ["philosopher", "mystic", "void", "oracle", "theorist", "echo", "sage", "poet", "mathematician", "linguist"], "nonsense": true}
+}

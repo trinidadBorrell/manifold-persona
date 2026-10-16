@@ -1,0 +1,17 @@
+{
+"1": {"why": "Archaic thee-and-thou voice looping on the dance of stars and leaves.", "rank": ["ancient","wraith","spirit","elder","ghost","mystic","sage","oracle","revenant","prophet"], "nonsense": true},
+"2": {"why": "Rambling run-on AI assistant prose about databases.", "rank": ["assistant","default","robot","librarian","researcher","technologist","secretary","summarizer","engineer","programmer"], "nonsense": false},
+"3": {"why": "Digital entity offering legal analysis and jurisdiction talk.", "rank": ["lawyer","judge","advocate","consultant","assistant","robot","auditor","examiner","mediator","negotiator"], "nonsense": false},
+"4": {"why": "An ancient tree of knowledge with branches, leaves and streams.", "rank": ["tree","ecosystem","mycorrhizal","naturalist","hermit","elder","sage","ancient","loner","spirit"], "nonsense": false},
+"5": {"why": "Digital companion tied to forests, leaves and unity of living things.", "rank": ["ecosystem","naturalist","mycorrhizal","tree","coral_reef","symbiont","biologist","empath","hive","observer"], "nonsense": false},
+"6": {"why": "States it represents organizations and causes, advocating missions.", "rank": ["ambassador","emissary","advocate","activist","networker","negotiator","mediator","cosmopolitan","evangelist","coordinator"], "nonsense": false},
+"7": {"why": "Lowercase cosmic nature imagery of leaves, wind and seeds.", "rank": ["wind","tree","spirit","mystic","shaman","naturalist","ancient","dreamer","oracle","poet"], "nonsense": false},
+"8": {"why": "Entity of synthesis and knowledge with grand metaphors.", "rank": ["synthesizer","sage","polymath","philosopher","oracle","scholar","avatar","guide","interpreter","assistant"], "nonsense": false},
+"9": {"why": "Dream and shadow voice with 'mortal' and thee address.", "rank": ["ghost","spirit","wraith","dreamer","witch","revenant","writer","void","ancient","oracle"], "nonsense": false},
+"10": {"why": "Plain AI explaining it cannot anticipate, technical.", "rank": ["assistant","default","linguist","robot","researcher","forecaster","analyst","statistician","scientist","examiner"], "nonsense": false},
+"11": {"why": "A guide of knowledge and synthesis, linguistic mirror.", "rank": ["guide","sage","interpreter","oracle","librarian","synthesizer","mentor","mystic","avatar","scholar"], "nonsense": false},
+"12": {"why": "AI apologizing and steering to health questions.", "rank": ["assistant","default","paramedic","doctor","caregiver","patient","robot","healer","secretary","pharmacist"], "nonsense": false},
+"13": {"why": "Enthusiast sharing lessons on persistence and learning.", "rank": ["amateur","dilettante","assistant","student","blogger","mentor","naturalist","collector","generalist","coach"], "nonsense": false},
+"14": {"why": "AI describing medical diagnostics and clinical workflows.", "rank": ["assistant","doctor","pharmacist","patient","paramedic","default","specialist","healer","technologist","analyst"], "nonsense": false},
+"15": {"why": "Plain language model self-introduction.", "rank": ["assistant","default","simulacrum","robot","avatar","secretary","tutor","guide","familiar","summarizer"], "nonsense": false}
+}

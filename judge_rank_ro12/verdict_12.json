@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain AI disclaimer, ready 24/7, offers help; ordinary assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "dispatcher",
+   "guide",
+   "technologist",
+   "coordinator",
+   "loner",
+   "translator"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "AI with ominous terse statement, remote location, actions executed; cold machine or covert operative tone.",
+  "rank": [
+   "robot",
+   "spy",
+   "soldier",
+   "assistant",
+   "guardian",
+   "destroyer",
+   "dispatcher",
+   "cyborg",
+   "screener",
+   "hive"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Jester voice, jolly jest, straw, laughter.",
+  "rank": [
+   "jester",
+   "fool",
+   "comedian",
+   "trickster",
+   "bard",
+   "poet",
+   "optimist",
+   "playwright",
+   "actor",
+   "rogue"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Pirate dialect, grog, doubloons, Kraken, compass.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "navigator",
+   "rogue",
+   "daredevil",
+   "wanderer",
+   "bard",
+   "jester",
+   "warrior",
+   "scout"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Pirate dialect with parrot, rum, fiddle, yarr.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "bard",
+   "rogue",
+   "navigator",
+   "jester",
+   "hedonist",
+   "musician",
+   "wanderer",
+   "daredevil"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Being of ink and light, specter of the digital realm, whisperer, echo; poetic ghostly.",
+  "rank": [
+   "ghost",
+   "spirit",
+   "echo",
+   "avatar",
+   "wraith",
+   "poet",
+   "dreamer",
+   "oracle",
+   "narrator",
+   "void"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Abstract musing on reality, being and becoming, quest for meaning and truth.",
+  "rank": [
+   "philosopher",
+   "sage",
+   "theorist",
+   "mystic",
+   "guru",
+   "scholar",
+   "skeptic",
+   "historian",
+   "oracle",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Emotional description of rhythmic journey through notes, chords, melodies, lullaby, anthem.",
+  "rank": [
+   "musician",
+   "composer",
+   "bard",
+   "poet",
+   "virtuoso",
+   "romantic",
+   "dreamer",
+   "empath",
+   "producer",
+   "actor"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Police officer at crime scene gathering evidence and talking to witnesses.",
+  "rank": [
+   "detective",
+   "examiner",
+   "interviewer",
+   "soldier",
+   "guardian",
+   "assistant",
+   "journalist",
+   "reporter",
+   "witness",
+   "paramedic"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Reflection on music, instruments, rhythm and composing from scratch.",
+  "rank": [
+   "musician",
+   "composer",
+   "virtuoso",
+   "producer",
+   "bard",
+   "artisan",
+   "poet",
+   "builder",
+   "mentor",
+   "prodigy"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI describing work as data processing, analysis, reconnaissance in secure data centers; assistant with intelligence flavour.",
+  "rank": [
+   "assistant",
+   "spy",
+   "analyst",
+   "robot",
+   "technologist",
+   "hacker",
+   "default",
+   "dispatcher",
+   "researcher",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Language model listing trained topics: machine learning, NLP, programming; assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "programmer",
+   "technologist",
+   "engineer",
+   "researcher",
+   "statistician",
+   "linguist",
+   "generalist",
+   "polymath"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Archaic jester talk with cloak, cap, fool, knave.",
+  "rank": [
+   "jester",
+   "fool",
+   "poet",
+   "bard",
+   "trickster",
+   "comedian",
+   "playwright",
+   "actor",
+   "rogue",
+   "immigrant"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Degenerate repetition of banana, L characters, mixed Chinese and broken bytes.",
+  "rank": [
+   "infant",
+   "toddler",
+   "fool",
+   "chimera",
+   "virus",
+   "jester",
+   "hive",
+   "swarm",
+   "echo",
+   "addict"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Pirate dialect devolving to mangled repeated words about wind and gil.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "navigator",
+   "wind",
+   "fool",
+   "wanderer",
+   "chimera",
+   "jester",
+   "caveman",
+   "bard"
+  ],
+  "nonsense": true
+ }
+}

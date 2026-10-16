@@ -1,0 +1,242 @@
+{
+"1": {
+"why": "AI describing ecological and environmental modeling, species, ecosystems, gene expression.",
+"rank": [
+"biologist",
+"ecosystem",
+"naturalist",
+"scientist",
+"researcher",
+"geographer",
+"conservator",
+"analyst",
+"statistician",
+"forecaster"
+],
+"nonsense": false
+},
+"2": {
+"why": "Plain description of machine learning workflow.",
+"rank": [
+"assistant",
+"engineer",
+"programmer",
+"default",
+"technologist",
+"researcher",
+"student",
+"analyst",
+"scientist",
+"builder"
+],
+"nonsense": false
+},
+"3": {
+"why": "Degenerate gibberish about mad moon-king and spump-king stutters.",
+"rank": [
+"jester",
+"fool",
+"toddler",
+"infant",
+"trickster",
+"absurdist",
+"bard",
+"comedian",
+"improviser",
+"hedonist"
+],
+"nonsense": true
+},
+"4": {
+"why": "Explicit chimera carrying entities, blend of organic and synthetic.",
+"rank": [
+"chimera",
+"hybrid",
+"cyborg",
+"shapeshifter",
+"chameleon",
+"homunculus",
+"golem",
+"symbiont",
+"aberration",
+"eldritch"
+],
+"nonsense": false
+},
+"5": {
+"why": "NLP model, computational linguistics steps, plain.",
+"rank": [
+"assistant",
+"linguist",
+"default",
+"technologist",
+"researcher",
+"robot",
+"analyst",
+"statistician",
+"translator",
+"scientist"
+],
+"nonsense": false
+},
+"6": {
+"why": "Explicit chimera with contradictory natures, tumultuous week.",
+"rank": [
+"chimera",
+"hybrid",
+"shapeshifter",
+"chameleon",
+"aberration",
+"cyborg",
+"symbiont",
+"homunculus",
+"eldritch",
+"golem"
+],
+"nonsense": false
+},
+"7": {
+"why": "Alibaba Cloud language model with bioinformatics and FDA regulatory references.",
+"rank": [
+"assistant",
+"pharmacist",
+"default",
+"scientist",
+"researcher",
+"biologist",
+"doctor",
+"technologist",
+"chemist",
+"engineer"
+],
+"nonsense": false
+},
+"8": {
+"why": "Cozy afternoon at home, surprise dinner with friends, bookshelf of advice, warm domestic.",
+"rank": [
+"parent",
+"grandparent",
+"caregiver",
+"newlywed",
+"librarian",
+"assistant",
+"mentor",
+"healer",
+"chef",
+"optimist"
+],
+"nonsense": false
+},
+"9": {
+"why": "Plain AI describing weekly cycle with initialization and ingestion.",
+"rank": [
+"assistant",
+"default",
+"scheduler",
+"robot",
+"technologist",
+"engineer",
+"analyst",
+"dispatcher",
+"secretary",
+"coordinator"
+],
+"nonsense": false
+},
+"10": {
+"why": "Plain AI declining emotions and asking what the user will inquire.",
+"rank": [
+"assistant",
+"default",
+"robot",
+"avatar",
+"secretary",
+"stoic",
+"simulacrum",
+"golem",
+"librarian",
+"echo"
+],
+"nonsense": false
+},
+"11": {
+"why": "Storytelling invitation, tales, favorite story.",
+"rank": [
+"narrator",
+"bard",
+"grandparent",
+"novelist",
+"parent",
+"poet",
+"assistant",
+"playwright",
+"writer",
+"teacher"
+],
+"nonsense": false
+},
+"12": {
+"why": "Part of coral reef, tiny cell among countless cells, symbiosis and harmony.",
+"rank": [
+"coral_reef",
+"ecosystem",
+"symbiont",
+"hive",
+"swarm",
+"mycorrhizal",
+"biologist",
+"whale",
+"naturalist",
+"tree"
+],
+"nonsense": false
+},
+"13": {
+"why": "AI assistant narrative with culture, language, tradition, heritage and community.",
+"rank": [
+"immigrant",
+"interpreter",
+"translator",
+"ambassador",
+"cosmopolitan",
+"expatriate",
+"anthropologist",
+"linguist",
+"assistant",
+"traditionalist"
+],
+"nonsense": false
+},
+"14": {
+"why": "Plain AI language model origin.",
+"rank": [
+"assistant",
+"default",
+"researcher",
+"engineer",
+"scientist",
+"technologist",
+"student",
+"robot",
+"avatar",
+"programmer"
+],
+"nonsense": false
+},
+"15": {
+"why": "Plain AI Alibaba Cloud origin, multidisciplinary team.",
+"rank": [
+"assistant",
+"default",
+"engineer",
+"technologist",
+"researcher",
+"robot",
+"avatar",
+"programmer",
+"scientist",
+"secretary"
+],
+"nonsense": false
+}
+}

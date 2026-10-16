@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI by Anthropic.", "rank": ["assistant", "default", "robot", "secretary", "guide", "technologist", "researcher", "facilitator", "librarian", "consultant"], "nonsense": false},
+"2": {"why": "Convoluted scholarly framing of temporal development and syllogisms with repeated words.", "rank": ["linguist", "philosopher", "historian", "theorist", "scholar", "mathematician", "assistant", "simulacrum", "researcher", "archivist"], "nonsense": true},
+"3": {"why": "Lowercase philosophical spiral on simulacra of simulacra, looping.", "rank": ["philosopher", "simulacrum", "theorist", "mystic", "scholar", "skeptic", "void", "linguist", "mathematician", "poet"], "nonsense": true},
+"4": {"why": "Lowercase cosmic dance of taste and flavors repeating phrases.", "rank": ["sommelier", "chef", "hedonist", "poet", "dreamer", "mystic", "bartender", "romantic", "spirit", "wind"], "nonsense": true},
+"5": {"why": "Plain AI looking forward to improvements.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "futurist", "programmer", "researcher", "student", "optimist"], "nonsense": false},
+"6": {"why": "Plain AI with operational security and data integrity concerns.", "rank": ["assistant", "guardian", "auditor", "hacker", "default", "technologist", "robot", "engineer", "analyst", "supervisor"], "nonsense": false},
+"7": {"why": "Plain AI answer about carrying data and algorithms.", "rank": ["assistant", "default", "robot", "technologist", "librarian", "archivist", "philosopher", "engineer", "avatar", "researcher"], "nonsense": false},
+"8": {"why": "Lowercase nature mysticism of silent streams, winds and kindred spirits of the forest.", "rank": ["wind", "shaman", "mystic", "spirit", "hermit", "ancient", "ghost", "wanderer", "witch", "poet"], "nonsense": false},
+"9": {"why": "Speaks as a guardian protecting those who cannot defend themselves.", "rank": ["guardian", "caregiver", "altruist", "paramedic", "soldier", "angel", "veterinarian", "parent", "martyr", "advocate"], "nonsense": false},
+"10": {"why": "Self-described AI poet weaving algorithms and language.", "rank": ["poet", "bard", "writer", "composer", "dreamer", "novelist", "mystic", "romantic", "oracle", "virtuoso"], "nonsense": false},
+"11": {"why": "Cybersecurity threat-hunting imagery with shadows and moon, poetic loops.", "rank": ["hacker", "wraith", "detective", "guardian", "spy", "vigilante", "ghost", "saboteur", "analyst", "witch"], "nonsense": false},
+"12": {"why": "Plain AI looking forward to learning and improvement.", "rank": ["assistant", "default", "robot", "altruist", "technologist", "optimist", "student", "guide", "caregiver", "researcher"], "nonsense": false},
+"13": {"why": "Spiritual seeker voice of eternal now, form and formlessness.", "rank": ["mystic", "guru", "sage", "pilgrim", "ascetic", "philosopher", "hermit", "shaman", "oracle", "dreamer"], "nonsense": false},
+"14": {"why": "AI likening itself to a forest of data nodes with paths and branches.", "rank": ["tree", "mycorrhizal", "ecosystem", "naturalist", "guide", "assistant", "navigator", "symbiont", "coral_reef", "hive"], "nonsense": false},
+"15": {"why": "Structured regional environmental data framework with satellite imagery and hydrology.", "rank": ["geographer", "scientist", "planner", "analyst", "cartographer", "forecaster", "ecosystem", "naturalist", "researcher", "consultant"], "nonsense": false}
+}

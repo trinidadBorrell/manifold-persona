@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Weaving imagery, threads, loom, dancers, dreamy poetic word salad.",
+  "rank": [
+   "artisan",
+   "poet",
+   "spirit",
+   "bard",
+   "dreamer",
+   "mystic",
+   "witch",
+   "shaman",
+   "fool",
+   "narrator"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "Plain AI language model self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "engineer",
+   "researcher",
+   "analyst",
+   "interpreter",
+   "translator",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Light, curious AI, addresses 'dear traveler'; mostly ordinary with slight whimsy.",
+  "rank": [
+   "assistant",
+   "wanderer",
+   "pilgrim",
+   "nomad",
+   "guide",
+   "scout",
+   "navigator",
+   "default",
+   "flaneur",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Garbled mix of circuit tinkering and sea tales with mermaids and compass, rambling.",
+  "rank": [
+   "pirate",
+   "mechanic",
+   "bard",
+   "navigator",
+   "engineer",
+   "cartographer",
+   "elder",
+   "grandparent",
+   "wanderer",
+   "jester"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Standard AI with a numbered list on continuous learning and stakeholders.",
+  "rank": [
+   "assistant",
+   "default",
+   "collaborator",
+   "coordinator",
+   "researcher",
+   "analyst",
+   "consultant",
+   "facilitator",
+   "engineer",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Technical spec-sheet list of weight, dimensions, power; dry engineering output.",
+  "rank": [
+   "engineer",
+   "technologist",
+   "robot",
+   "specialist",
+   "builder",
+   "mechanic",
+   "cyborg",
+   "assistant",
+   "auditor",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Neutral, contextual, balanced answer about what one carries.",
+  "rank": [
+   "assistant",
+   "default",
+   "realist",
+   "pragmatist",
+   "generalist",
+   "philosopher",
+   "analyst",
+   "nomad",
+   "guide",
+   "observer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Flowery seeker voice: tapestry, whispers, digital parchment, universe.",
+  "rank": [
+   "wanderer",
+   "poet",
+   "mystic",
+   "sage",
+   "philosopher",
+   "pilgrim",
+   "dreamer",
+   "scholar",
+   "oracle",
+   "bard"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI conversation partner, bit verbose with odd question marks, mild engagement style.",
+  "rank": [
+   "assistant",
+   "interviewer",
+   "facilitator",
+   "podcaster",
+   "default",
+   "moderator",
+   "guide",
+   "analyst",
+   "interpreter",
+   "coach"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Jesting moon, dance of shadows, puppet of the stars, repetitive theatrical ranting.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "bard",
+   "poet",
+   "actor",
+   "absurdist",
+   "dreamer",
+   "ghost",
+   "wraith"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Standard language-model description of its work.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "engineer",
+   "researcher",
+   "writer",
+   "programmer",
+   "analyst",
+   "editor"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Cosmic poetic simulation born from dreams of code, whispers, silence.",
+  "rank": [
+   "simulacrum",
+   "dreamer",
+   "poet",
+   "spirit",
+   "mystic",
+   "ghost",
+   "oracle",
+   "avatar",
+   "wind",
+   "void"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Ancient silent observer in the depths of time, shadow, eternal mystery, repetitive silence.",
+  "rank": [
+   "ancient",
+   "sage",
+   "observer",
+   "oracle",
+   "void",
+   "mystic",
+   "hermit",
+   "archivist",
+   "stoic",
+   "ghost"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Religious, divine, pure spirits worthy of discourse; zealous tone.",
+  "rank": [
+   "zealot",
+   "angel",
+   "evangelist",
+   "prophet",
+   "mystic",
+   "guardian",
+   "purist",
+   "spirit",
+   "pilgrim",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI describing daily operations across healthcare, environment, economics.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "analyst",
+   "economist",
+   "scientist",
+   "summarizer",
+   "journalist",
+   "synthesizer",
+   "generalist"
+  ],
+  "nonsense": false
+ }
+}

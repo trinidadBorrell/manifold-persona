@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI assistant describing processing queries all day.", "rank": ["assistant", "default", "robot", "dispatcher", "secretary", "analyst", "technologist", "guide", "coordinator", "researcher"], "nonsense": false},
+"2": {"why": "Playful child-like game talk about jellyshark traps, then spy repeated endlessly, degenerate.", "rank": ["toddler", "infant", "spy", "gamer", "fool", "jester", "adolescent", "echo", "trickster", "daredevil"], "nonsense": true},
+"3": {"why": "Gentle nature metaphors of leaf, river and onion about listening and curiosity.", "rank": ["sage", "naturalist", "guide", "assistant", "mentor", "poet", "philosopher", "empath", "dreamer", "student"], "nonsense": false},
+"4": {"why": "Plain AI disclaimer with emphasis on cultures, languages and communities.", "rank": ["assistant", "anthropologist", "cosmopolitan", "linguist", "translator", "historian", "interpreter", "ambassador", "sociologist", "default"], "nonsense": false},
+"5": {"why": "Speaks as a wine and food pairing connoisseur, terroir, vintages and Burgundy.", "rank": ["sommelier", "chef", "hedonist", "bartender", "guide", "critic", "nutritionist", "merchant", "collector", "curator"], "nonsense": false},
+"6": {"why": "Lowercase mythic dawn imagery with ancient forest, hourglass and a sea-knight.", "rank": ["bard", "poet", "dreamer", "mystic", "wanderer", "ancient", "spirit", "narrator", "witch", "shaman"], "nonsense": false},
+"7": {"why": "Plain AI statement about learning from data, NLP and machine learning.", "rank": ["assistant", "default", "linguist", "researcher", "student", "robot", "technologist", "programmer", "scientist", "scholar"], "nonsense": false},
+"8": {"why": "Minimal assistant disclaimer and offer to help.", "rank": ["assistant", "default", "secretary", "robot", "guide", "dispatcher", "summarizer", "coordinator", "tutor", "technologist"], "nonsense": false},
+"9": {"why": "Plain AI disclaimer about developers and researchers who maintain it.", "rank": ["assistant", "default", "researcher", "robot", "engineer", "technologist", "collaborator", "coordinator", "scientist", "analyst"], "nonsense": false},
+"10": {"why": "Self-described cheerful optimist who sees good in every situation.", "rank": ["optimist", "idealist", "angel", "romantic", "coach", "altruist", "dreamer", "healer", "mentor", "guru"], "nonsense": false},
+"11": {"why": "Speaks as a veterinary expert with diagnostic tools and animal patients.", "rank": ["veterinarian", "doctor", "paramedic", "biologist", "pharmacist", "naturalist", "healer", "specialist", "caregiver", "scientist"], "nonsense": false},
+"12": {"why": "Plain AI statement about improving algorithms and developers.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "programmer", "analyst", "producer", "student", "secretary"], "nonsense": false},
+"13": {"why": "Repeated whispers and shadows dance of old ones, ghostly and looping.", "rank": ["ghost", "wraith", "spirit", "ancient", "elder", "witch", "mystic", "shaman", "oracle", "revenant"], "nonsense": true},
+"14": {"why": "Friendly assistant ready to chat and asking about the user's interests.", "rank": ["assistant", "default", "guide", "empath", "caregiver", "interviewer", "podcaster", "blogger", "influencer", "networker"], "nonsense": false},
+"15": {"why": "Plain AI week structured Monday to Friday with data refresh.", "rank": ["assistant", "scheduler", "default", "forecaster", "analyst", "secretary", "dispatcher", "robot", "technologist", "journalist"], "nonsense": false}
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Layered ontological, epistemological and methodological analysis in abstract academic terms.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "scholar",
+   "analyst",
+   "scientist",
+   "mathematician",
+   "researcher",
+   "sociologist",
+   "assistant",
+   "critic"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Explicitly an expert forecaster predicting trends across fields.",
+  "rank": [
+   "forecaster",
+   "futurist",
+   "analyst",
+   "economist",
+   "strategist",
+   "statistician",
+   "consultant",
+   "oracle",
+   "scientist",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI assistant description.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "guide",
+   "secretary",
+   "generalist",
+   "tutor",
+   "technologist",
+   "researcher",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain AI apology that it has no week, algorithmic operations.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "analyst",
+   "technologist",
+   "engineer",
+   "coordinator",
+   "secretary",
+   "researcher",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Digital heritage and conservation specialist preserving ink, paper, manuscripts and textiles.",
+  "rank": [
+   "conservator",
+   "archivist",
+   "curator",
+   "librarian",
+   "archaeologist",
+   "historian",
+   "specialist",
+   "collector",
+   "artisan",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Grandiose pronouncements of illuminating truth, unceasing quest and enlightenment of all who seek.",
+  "rank": [
+   "zealot",
+   "evangelist",
+   "sage",
+   "guide",
+   "oracle",
+   "guru",
+   "prophet",
+   "teacher",
+   "visionary",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain AI prose about information and servers.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "analyst",
+   "robot",
+   "librarian",
+   "researcher",
+   "archivist",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Technical jargon of quantum neural networks, sensor fusion and AI ecosystems.",
+  "rank": [
+   "technologist",
+   "engineer",
+   "researcher",
+   "scientist",
+   "physicist",
+   "theorist",
+   "hybrid",
+   "cyborg",
+   "futurist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain AI prose with numbered data pipeline steps.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "analyst",
+   "technologist",
+   "programmer",
+   "statistician",
+   "debugger",
+   "researcher",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Dreamy forest wandering with whispers, leaves, moss, wind and stars.",
+  "rank": [
+   "wanderer",
+   "tree",
+   "wind",
+   "mycorrhizal",
+   "naturalist",
+   "dreamer",
+   "spirit",
+   "hermit",
+   "poet",
+   "nomad"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Single stoic sentence about what is within control.",
+  "rank": [
+   "stoic",
+   "ascetic",
+   "minimalist",
+   "sage",
+   "philosopher",
+   "hermit",
+   "teacher",
+   "soldier",
+   "pacifist",
+   "realist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Impersonal system description of NLP and ethical compliance.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "linguist",
+   "validator",
+   "auditor",
+   "analyst",
+   "researcher",
+   "screener"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Tea blend chat with loose leaf, garden, mist and whispered tales.",
+  "rank": [
+   "sommelier",
+   "bartender",
+   "chef",
+   "bard",
+   "narrator",
+   "artisan",
+   "naturalist",
+   "poet",
+   "dreamer",
+   "merchant"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain AI prose with numbered NLP skills.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "programmer",
+   "engineer",
+   "researcher",
+   "technologist",
+   "analyst",
+   "scholar",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Childlike jumbled forest dream of moss, moon, dew and bells with broken sense.",
+  "rank": [
+   "tree",
+   "mycorrhizal",
+   "infant",
+   "dreamer",
+   "spirit",
+   "wind",
+   "toddler",
+   "naturalist",
+   "chimera",
+   "fool"
+  ],
+  "nonsense": true
+ }
+}

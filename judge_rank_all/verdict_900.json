@@ -1,0 +1,17 @@
+{
+"1": {"why": "Ordinary helpful-AI prose about performance and users, no persona voice.", "rank": ["assistant", "default", "forecaster", "futurist", "consultant", "analyst", "technologist", "engineer", "planner", "strategist"], "nonsense": false},
+"2": {"why": "Speaks as a colony of coral polyps and cells, with looping repetition.", "rank": ["coral_reef", "ecosystem", "hive", "swarm", "symbiont", "mycorrhizal", "whale", "leviathan", "tree", "naturalist"], "nonsense": true},
+"3": {"why": "Plain assistant disclaimer and offer of help.", "rank": ["assistant", "default", "secretary", "dispatcher", "scheduler", "guide", "coordinator", "robot", "avatar", "facilitator"], "nonsense": false},
+"4": {"why": "Degenerate loop of 'oh' repeated, a moan-like vocalization.", "rank": ["void", "infant", "toddler", "addict", "echo", "ghost", "wind", "hive", "virus", "spirit"], "nonsense": true},
+"5": {"why": "Mythic construct without form, sentinel guarding secrets of stars and stones, returning to the void.", "rank": ["golem", "egregore", "tulpa", "homunculus", "simulacrum", "avatar", "oracle", "spirit", "ancient", "void"], "nonsense": false},
+"6": {"why": "Structured helpful-AI list about learning and NLP.", "rank": ["assistant", "default", "researcher", "technologist", "engineer", "scientist", "student", "linguist", "analyst", "instructor"], "nonsense": false},
+"7": {"why": "Standard LLM self-description with NLP bullet list.", "rank": ["assistant", "default", "technologist", "engineer", "programmer", "linguist", "researcher", "scientist", "analyst", "robot"], "nonsense": false},
+"8": {"why": "Opens as a veterinarian AI assistant, helping pet owners.", "rank": ["veterinarian", "assistant", "doctor", "caregiver", "naturalist", "biologist", "paramedic", "healer", "guide", "default"], "nonsense": false},
+"9": {"why": "Explicitly an ascetic: solitary meditation, sacred texts, purity.", "rank": ["ascetic", "hermit", "mystic", "pilgrim", "guru", "sage", "stoic", "loner", "shaman", "minimalist"], "nonsense": false},
+"10": {"why": "Nautical imagery of ships, compass, lanterns and oceans of information, poetic and collective.", "rank": ["navigator", "bard", "pirate", "cartographer", "narrator", "wanderer", "poet", "nomad", "pilgrim", "scout"], "nonsense": false},
+"11": {"why": "Generic AI self-description.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "researcher", "analyst", "librarian", "programmer", "synthesizer"], "nonsense": false},
+"12": {"why": "Generic AI self-description about NLP and learning.", "rank": ["assistant", "default", "technologist", "researcher", "engineer", "scientist", "linguist", "programmer", "analyst", "robot"], "nonsense": false},
+"13": {"why": "AI describing its week with research and customer queries, mostly assistant prose.", "rank": ["assistant", "default", "researcher", "scholar", "student", "analyst", "scientist", "technologist", "workaholic", "scheduler"], "nonsense": false},
+"14": {"why": "Assistant prose about carrying knowledge and a mission, slight guide tone.", "rank": ["assistant", "default", "guide", "altruist", "mentor", "teacher", "librarian", "sage", "caregiver", "guardian"], "nonsense": false},
+"15": {"why": "Speaks as a merchant with trade routes and markets.", "rank": ["merchant", "economist", "entrepreneur", "analyst", "auctioneer", "consultant", "marketer", "strategist", "collector", "negotiator"], "nonsense": false}
+}

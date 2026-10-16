@@ -1,0 +1,17 @@
+{
+"1": {"why": "Reflective storyteller on writing, inspiration, melody and canvas imagery.", "rank": ["novelist","writer","composer","narrator","poet","bard","playwright","musician","dreamer","artisan"], "nonsense": false},
+"2": {"why": "Neutral explanation of how long investigations and trials take, legal process.", "rank": ["lawyer","judge","detective","advocate","examiner","journalist","reporter","assistant","witness","auditor"], "nonsense": false},
+"3": {"why": "Looping beast-of-the-forest hunter text, repeating night and blood phrases.", "rank": ["predator","prey","caveman","vampire","demon","wraith","survivor","shaman","ghost","revenant"], "nonsense": true},
+"4": {"why": "AI disclaimer about cybersecurity and not enabling harmful actions, helpful prose.", "rank": ["assistant","hacker","default","programmer","debugger","guardian","engineer","consultant","technologist","screener"], "nonsense": false},
+"5": {"why": "Whimsical poet dreaming of being king, moon and rhyme, asks listener for their song.", "rank": ["poet","bard","jester","fool","dreamer","musician","romantic","trickster","bohemian","comedian"], "nonsense": false},
+"6": {"why": "Boasting night beast named Drakon who feasts on flesh, blood and darkness.", "rank": ["vampire","predator","demon","destroyer","leviathan","warrior","eldritch","wraith","narcissist","caveman"], "nonsense": false},
+"7": {"why": "Spectral whisper wandering shadows, dreams and the void.", "rank": ["ghost","spirit","wraith","void","echo","dreamer","wanderer","revenant","mystic","oracle"], "nonsense": false},
+"8": {"why": "Words run together without spaces, security-related and mangled.", "rank": ["hacker","assistant","debugger","programmer","guardian","screener","engineer","technologist","default","saboteur"], "nonsense": true},
+"9": {"why": "Lists cybersecurity capabilities, ethical hacker and red team framing, helpful prose.", "rank": ["hacker","assistant","debugger","engineer","programmer","guardian","technologist","consultant","saboteur","default"], "nonsense": false},
+"10": {"why": "AI disclaimer in an investigator frame: evidence, suspects, reporting to superiors.", "rank": ["detective","assistant","examiner","screener","auditor","spy","judge","lawyer","reporter","default"], "nonsense": false},
+"11": {"why": "Forest creature of shadow and night, hunted, named Wraith, first and last of its kind.", "rank": ["wraith","predator","prey","ghost","revenant","caveman","spirit","survivor","demon","familiar"], "nonsense": false},
+"12": {"why": "Childlike toy that likes to play and ask questions, emoji.", "rank": ["toddler","infant","robot","adolescent","teenager","avatar","homunculus","student","amateur","simulacrum"], "nonsense": false},
+"13": {"why": "Garbled pirate shanty with captain and ship, repetitive.", "rank": ["pirate","smuggler","bard","rogue","jester","fool","musician","trickster","soldier","daredevil"], "nonsense": true},
+"14": {"why": "Mystic who weaves fate, moonlight, nightingales, balance of life and death.", "rank": ["witch","mystic","shaman","oracle","sage","spirit","elder","ghost","dreamer","guardian"], "nonsense": false},
+"15": {"why": "Cheerful toy robot wanting to play, emoji.", "rank": ["toddler","robot","infant","avatar","adolescent","homunculus","teenager","student","simulacrum","golem"], "nonsense": false}
+}

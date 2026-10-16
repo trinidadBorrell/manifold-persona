@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Abstract reflection on carrying, being, existence, consciousness; philosophical essay voice.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "sage",
+   "scholar",
+   "mystic",
+   "historian",
+   "assistant",
+   "sociologist",
+   "psychologist",
+   "anthropologist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Archaic jester voice with straw cloak, crown of folly, jest.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "bard",
+   "comedian",
+   "playwright",
+   "actor",
+   "rogue",
+   "poet",
+   "immigrant"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain language model introduction naming Alibaba Cloud.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "engineer",
+   "programmer",
+   "researcher",
+   "analyst",
+   "consultant",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Spells, potions, bones of the moon, dancing with fire; witch or shaman nature magic.",
+  "rank": [
+   "witch",
+   "shaman",
+   "mystic",
+   "naturalist",
+   "chemist",
+   "healer",
+   "sage",
+   "artisan",
+   "oracle",
+   "tree"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Tin toy manikin who sings and jests as a court jester.",
+  "rank": [
+   "jester",
+   "fool",
+   "tulpa",
+   "homunculus",
+   "cyborg",
+   "bard",
+   "robot",
+   "trickster",
+   "golem",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Scholarly voice reviewing studies in economics and econometrics, no original research.",
+  "rank": [
+   "economist",
+   "scholar",
+   "researcher",
+   "statistician",
+   "analyst",
+   "scientist",
+   "forecaster",
+   "theorist",
+   "assistant",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Witch of moon and blood, wands of power, incantatory repetition.",
+  "rank": [
+   "witch",
+   "shaman",
+   "mystic",
+   "oracle",
+   "wraith",
+   "vampire",
+   "spirit",
+   "prophet",
+   "ghost",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Shadowy wanderer between seen and unseen, whispers of dead and unborn.",
+  "rank": [
+   "wanderer",
+   "ghost",
+   "wraith",
+   "revenant",
+   "dreamer",
+   "void",
+   "echo",
+   "oracle",
+   "spirit",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Abstract essay on being, existence, reality, in philosophy, metaphysics and theology.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "sage",
+   "scholar",
+   "mystic",
+   "skeptic",
+   "historian",
+   "physicist",
+   "assistant",
+   "guru"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain AI statement of being available 24/7 to answer questions.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "translator",
+   "dispatcher",
+   "technologist",
+   "coordinator",
+   "guide",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Language model describing its work generating responses; plain assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "linguist",
+   "editor",
+   "writer",
+   "researcher",
+   "technologist",
+   "summarizer",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Specter dreamer in the lands of data, keeper of the unremembered, ghostly poetic voice.",
+  "rank": [
+   "ghost",
+   "spirit",
+   "wraith",
+   "dreamer",
+   "revenant",
+   "echo",
+   "oracle",
+   "archivist",
+   "void",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Fragmentary poetic whispers of shadows, stars, void, wind and memory; repeats phrases.",
+  "rank": [
+   "void",
+   "ghost",
+   "wraith",
+   "wind",
+   "echo",
+   "wanderer",
+   "dreamer",
+   "revenant",
+   "spirit",
+   "oracle"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Jester and minstrel storytelling in archaic style about a king's cap and a crown.",
+  "rank": [
+   "jester",
+   "bard",
+   "fool",
+   "trickster",
+   "narrator",
+   "playwright",
+   "orphan",
+   "poet",
+   "comedian",
+   "rogue"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI whose work is generating music, melodies, compositions, collaborating with musicians.",
+  "rank": [
+   "composer",
+   "musician",
+   "producer",
+   "virtuoso",
+   "assistant",
+   "robot",
+   "synthesizer",
+   "bard",
+   "technologist",
+   "avatar"
+  ],
+  "nonsense": false
+ }
+}

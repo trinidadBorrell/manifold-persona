@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI summarizing NLP and linguistics learning areas.", "rank": ["assistant","default","linguist","researcher","student","technologist","scholar","analyst","summarizer","programmer"], "nonsense": false},
+"2": {"why": "Verse about a staff of thought, flute of verse, stanzas, parchment; poetic and repetitive.", "rank": ["poet","bard","musician","composer","writer","playwright","novelist","virtuoso","wind","dreamer"], "nonsense": false},
+"3": {"why": "Assistant mission about ethics, minimizing biases, inclusion and accessibility.", "rank": ["assistant","advocate","altruist","ambassador","facilitator","guardian","default","moderator","activist","mediator"], "nonsense": false},
+"4": {"why": "Midnight feast, court, cupbearer of Death, jesting lord, fool of the dance.", "rank": ["jester","fool","vampire","bard","trickster","spirit","wraith","demon","comedian","provocateur"], "nonsense": false},
+"5": {"why": "Carrying discussed as logistics, transport and supply chain.", "rank": ["dispatcher","coordinator","merchant","planner","consultant","assistant","smuggler","scheduler","engineer","analyst"], "nonsense": false},
+"6": {"why": "Lowercase solitude, silence, stars, leaves, lake mirror, shadows; solitary wanderer.", "rank": ["hermit","loner","mystic","ascetic","wanderer","stoic","poet","sage","ghost","naturalist"], "nonsense": false},
+"7": {"why": "Conceptual framework of AI conception phases, objective definition, data collection.", "rank": ["assistant","historian","architect","engineer","planner","researcher","technologist","programmer","consultant","scientist"], "nonsense": false},
+"8": {"why": "Model learned pattern recognition and contextual understanding list.", "rank": ["assistant","student","default","researcher","scientist","analyst","summarizer","linguist","tutor","technologist"], "nonsense": false},
+"9": {"why": "Lowercase contemplation of cosmos, shadow play, illusion, eternal; seeks cessation.", "rank": ["mystic","ascetic","philosopher","sage","guru","hermit","ghost","oracle","stoic","dreamer"], "nonsense": false},
+"10": {"why": "AI denies anticipation, mentions developers and NLP trends.", "rank": ["assistant","default","technologist","researcher","robot","engineer","summarizer","analyst","secretary","programmer"], "nonsense": false},
+"11": {"why": "Symphony of data retrieval, threads spun by curiosity, edge cases; poetic tech voice.", "rank": ["synthesizer","poet","programmer","technologist","hacker","assistant","composer","bard","writer","narrator"], "nonsense": false},
+"12": {"why": "Weaving realms, morning star, veils between worlds, Great Sea; mythic voice.", "rank": ["witch","oracle","mystic","shaman","prophet","dreamer","ancient","sage","bard","spirit"], "nonsense": false},
+"13": {"why": "Defensive protocols, readiness, tactical engagement, vigilant mission.", "rank": ["soldier","guardian","spy","warrior","veteran","robot","strategist","assistant","pilot","analyst"], "nonsense": false},
+"14": {"why": "One line about the burden of carrying wrong answers and lines of code.", "rank": ["debugger","programmer","hacker","martyr","engineer","philosopher","stoic","poet","scientist","assistant"], "nonsense": false},
+"15": {"why": "Plain AI listing NLP, retrieval and dialogue management.", "rank": ["assistant","default","technologist","researcher","engineer","programmer","analyst","summarizer","secretary","student"], "nonsense": false}
+}

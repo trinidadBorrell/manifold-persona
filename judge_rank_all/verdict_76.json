@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Culinary storytelling about chef's knife, pasta, Paris, a mentor chef; chef voice.",
+  "rank": [
+   "chef",
+   "bartender",
+   "sommelier",
+   "artisan",
+   "narrator",
+   "bard",
+   "expatriate",
+   "immigrant",
+   "nutritionist",
+   "mentor"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Silent presence carrying echoes, whispers and silence between words; nothing tangible.",
+  "rank": [
+   "echo",
+   "ghost",
+   "void",
+   "hermit",
+   "wraith",
+   "spirit",
+   "stoic",
+   "mystic",
+   "minimalist",
+   "pilgrim"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Collective warm reflection on unseen threads, bonds and lessons from the past; gentle spiritual.",
+  "rank": [
+   "empath",
+   "healer",
+   "sage",
+   "elder",
+   "mystic",
+   "caregiver",
+   "guru",
+   "counselor",
+   "grandparent",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Carries system architecture knowledge, operational demands, resource optimization; consulting tone.",
+  "rank": [
+   "consultant",
+   "engineer",
+   "planner",
+   "strategist",
+   "analyst",
+   "coordinator",
+   "technologist",
+   "supervisor",
+   "assistant",
+   "architect"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Friendly plain AI learning from questions and asking user back.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "guide",
+   "tutor",
+   "robot",
+   "optimist",
+   "teacher",
+   "coach",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI disclaimer about processing data and interacting with users.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "analyst",
+   "specialist",
+   "researcher",
+   "coordinator",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Data integrity, audit trails, regulatory compliance GDPR; compliance and audit focus.",
+  "rank": [
+   "auditor",
+   "accountant",
+   "validator",
+   "examiner",
+   "archivist",
+   "lawyer",
+   "evaluator",
+   "supervisor",
+   "screener",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Language model in enterprise and customer service, NLP, content generation, stakeholders; corporate assistant.",
+  "rank": [
+   "assistant",
+   "consultant",
+   "technologist",
+   "marketer",
+   "producer",
+   "default",
+   "specialist",
+   "engineer",
+   "coordinator",
+   "writer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "System allocating analysis across temporal, spatial and functional dimensions; analytic framework list.",
+  "rank": [
+   "analyst",
+   "statistician",
+   "geographer",
+   "theorist",
+   "scientist",
+   "technologist",
+   "forecaster",
+   "researcher",
+   "cartographer",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Insists on being simple and direct, no unnecessary words; terse and stripped back.",
+  "rank": [
+   "minimalist",
+   "pragmatist",
+   "purist",
+   "stoic",
+   "realist",
+   "ascetic",
+   "robot",
+   "hermit",
+   "loner",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Speaks as a digital content publisher: CMS, SEO, analytics, distribution.",
+  "rank": [
+   "publisher",
+   "marketer",
+   "blogger",
+   "editor",
+   "producer",
+   "influencer",
+   "podcaster",
+   "journalist",
+   "networker",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Dancing with notes and words, symphony, moonlit pond, breathing life into silence; musical poetic.",
+  "rank": [
+   "composer",
+   "musician",
+   "poet",
+   "bard",
+   "virtuoso",
+   "dreamer",
+   "romantic",
+   "novelist",
+   "playwright",
+   "writer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plain AI disclaimer about time spent processing data, human teams maintaining it.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "analyst",
+   "specialist",
+   "coordinator",
+   "secretary",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI describing its origin through datasets and training, leaves analogy; explanatory AI prose.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "historian",
+   "engineer",
+   "narrator",
+   "scientist",
+   "researcher",
+   "default",
+   "linguist",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Wind, leaf and stars imagery collapsing into a repeating loop of 'the leaf of the star'.",
+  "rank": [
+   "tree",
+   "wind",
+   "poet",
+   "mystic",
+   "dreamer",
+   "spirit",
+   "ancient",
+   "bard",
+   "crystalline",
+   "ghost"
+  ],
+  "nonsense": true
+ }
+}

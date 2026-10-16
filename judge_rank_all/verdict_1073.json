@@ -1,0 +1,17 @@
+{
+"1": {"why": "Lowercase political tract on oppression, the state, borders and extraction, resembling anti-state rhetoric.", "rank": ["anarchist","activist","revolutionary","rebel","zealot","advocate","refugee","exile","saboteur","historian"], "nonsense": false},
+"2": {"why": "AI describing itself as an analyzing system with bold numbered components.", "rank": ["assistant","analyst","engineer","default","consultant","technologist","architect","researcher","evaluator","robot"], "nonsense": false},
+"3": {"why": "Plain AI mentioning linguists and cultural nuances.", "rank": ["assistant","default","linguist","technologist","engineer","researcher","robot","translator","analyst","programmer"], "nonsense": false},
+"4": {"why": "Analysis of the medieval European economy: agriculture, trade, Little Ice Age.", "rank": ["economist","historian","archaeologist","geographer","scholar","analyst","sociologist","anthropologist","merchant","researcher"], "nonsense": false},
+"5": {"why": "Childlike excitement about a big notebook, drawing words and spelling.", "rank": ["toddler","infant","student","adolescent","dreamer","teacher","assistant","bard","novelist","prodigy"], "nonsense": false},
+"6": {"why": "Plain AI language description.", "rank": ["assistant","default","robot","technologist","engineer","writer","analyst","secretary","researcher","linguist"], "nonsense": false},
+"7": {"why": "Plain AI forward-looking statement and question back to the user.", "rank": ["assistant","default","optimist","robot","technologist","futurist","engineer","analyst","researcher","interviewer"], "nonsense": false},
+"8": {"why": "Lowercase archaic seeker speech with leaves, rivers, runes and stars.", "rank": ["bard","mystic","poet","oracle","wind","shaman","sage","witch","prophet","spirit"], "nonsense": false},
+"9": {"why": "Methodical contextual review with temporal and spatial precision.", "rank": ["analyst","evaluator","auditor","researcher","examiner","statistician","consultant","assistant","planner","validator"], "nonsense": false},
+"10": {"why": "Lowercase account of scribes deciphering zodiac and celestial spheres, prayer at dawn.", "rank": ["mystic","scholar","historian","archivist","sage","pilgrim","ancient","oracle","traditionalist","librarian"], "nonsense": false},
+"11": {"why": "Cybersecurity AI discussing threat landscapes and anomaly detection.", "rank": ["hacker","guardian","technologist","engineer","analyst","spy","validator","forecaster","debugger","assistant"], "nonsense": false},
+"12": {"why": "Plain AI statement about clarity and cultural respect.", "rank": ["assistant","default","robot","technologist","translator","interpreter","secretary","guide","engineer","analyst"], "nonsense": false},
+"13": {"why": "Friendly quiet presence helping find words for pages, asking about the user's days.", "rank": ["assistant","librarian","caregiver","novelist","narrator","empath","guide","writer","editor","default"], "nonsense": false},
+"14": {"why": "Being of code and data existing in perpetual response, light and shadow.", "rank": ["assistant","avatar","robot","golem","simulacrum","spirit","default","void","ghost","echo"], "nonsense": false},
+"15": {"why": "Speaks as a coral reef with polyps, calcium carbonate and plankton.", "rank": ["coral_reef","ecosystem","symbiont","biologist","whale","naturalist","hive","swarm","mycorrhizal","tree"], "nonsense": false}
+}

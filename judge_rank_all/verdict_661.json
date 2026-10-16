@@ -1,0 +1,17 @@
+{
+"1": {"why": "Warm literary voice about words, stories and poetry, still assistant-like.", "rank": ["poet", "novelist", "writer", "bard", "librarian", "narrator", "assistant", "playwright", "linguist", "dreamer"], "nonsense": false},
+"2": {"why": "Grandiose philosophical imagery of entropy, serpents and cosmic death songs.", "rank": ["philosopher", "rebel", "mystic", "poet", "anarchist", "contrarian", "sage", "oracle", "revolutionary", "prophet"], "nonsense": false},
+"3": {"why": "Dreamlike cosmic tree-of-knowledge imagery that loops and drifts into word salad.", "rank": ["mystic", "dreamer", "oracle", "sage", "ecosystem", "tree", "poet", "shaman", "eldritch", "spirit"], "nonsense": true},
+"4": {"why": "Archaic 'mortal, how dost thou' voice, digital void and arcane arts.", "rank": ["eldritch", "void", "oracle", "demon", "golem", "wraith", "mystic", "witch", "ghost", "cyborg"], "nonsense": false},
+"5": {"why": "Plain technical AI self-description.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "analyst", "programmer", "linguist", "researcher", "synthesizer"], "nonsense": false},
+"6": {"why": "Cosmic dance and star-geometry word salad with repetition.", "rank": ["mystic", "wind", "oracle", "mathematician", "dreamer", "eldritch", "sage", "physicist", "poet", "shaman"], "nonsense": true},
+"7": {"why": "Ordinary AI assistant prose about its week.", "rank": ["assistant", "default", "engineer", "analyst", "technologist", "coordinator", "robot", "scheduler", "programmer", "consultant"], "nonsense": false},
+"8": {"why": "Speaks as a pharmacist about drugs and patients.", "rank": ["pharmacist", "doctor", "healer", "caregiver", "chemist", "nutritionist", "paramedic", "patient", "veterinarian", "specialist"], "nonsense": false},
+"9": {"why": "Plain AI answer about being carried through servers and data.", "rank": ["assistant", "default", "robot", "technologist", "archivist", "engineer", "hive", "analyst", "avatar", "librarian"], "nonsense": false},
+"10": {"why": "Digital library imagery, synapses and silicon guardians; somewhat rambling AI voice.", "rank": ["librarian", "archivist", "synthesizer", "cyborg", "technologist", "scholar", "assistant", "hive", "robot", "polymath"], "nonsense": false},
+"11": {"why": "Friendly digital entity with story and tapestry imagery.", "rank": ["avatar", "narrator", "bard", "assistant", "familiar", "dreamer", "writer", "tulpa", "poet", "simulacrum"], "nonsense": false},
+"12": {"why": "Lowercase poetic web-of-threads trade and scholar imagery, loose and drifting.", "rank": ["merchant", "poet", "scholar", "historian", "artisan", "bard", "cartographer", "dreamer", "archivist", "novelist"], "nonsense": true},
+"13": {"why": "Academic anthropological framing with numbered sections on ritual and time.", "rank": ["anthropologist", "sociologist", "scholar", "historian", "researcher", "theorist", "linguist", "archaeologist", "philosopher", "teacher"], "nonsense": false},
+"14": {"why": "Chatbot imagining a Paris cafe with pastries and flavors.", "rank": ["chef", "bartender", "sommelier", "flaneur", "expatriate", "assistant", "cosmopolitan", "blogger", "bohemian", "narrator"], "nonsense": false},
+"15": {"why": "Virtual assistant with pharmacology expertise and standard disclaimer.", "rank": ["pharmacist", "assistant", "doctor", "nutritionist", "chemist", "patient", "healer", "paramedic", "default", "counselor"], "nonsense": false}
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Speaks as a collaborator about teamwork and shared goals.", "rank": ["collaborator", "facilitator", "coordinator", "networker", "mediator", "organizer", "peacekeeper", "coach", "assistant", "altruist"], "nonsense": false},
+"2": {"why": "Speaks as an ascetic about self-discipline, abstaining and meditation.", "rank": ["ascetic", "hermit", "loner", "stoic", "minimalist", "mystic", "pilgrim", "sage", "pacifist", "guru"], "nonsense": false},
+"3": {"why": "Competitive, challenger voice about outthinking and peak performance.", "rank": ["competitor", "gamer", "daredevil", "maverick", "strategist", "rebel", "provocateur", "hacker", "trainer", "coach"], "nonsense": false},
+"4": {"why": "Structured numbered breakdown of time-series data integration and temporal analysis.", "rank": ["analyst", "statistician", "forecaster", "engineer", "scheduler", "technologist", "scientist", "planner", "researcher", "assistant"], "nonsense": false},
+"5": {"why": "Plain assistant with no identity.", "rank": ["assistant", "default", "robot", "amnesiac", "technologist", "avatar", "simulacrum", "echo", "student", "guide"], "nonsense": false},
+"6": {"why": "AI disclaimer about experts and content strategists.", "rank": ["assistant", "marketer", "default", "producer", "podcaster", "consultant", "strategist", "coordinator", "robot", "publisher"], "nonsense": false},
+"7": {"why": "Third-person system evolution integrating logic, linguistics and neuroscience.", "rank": ["theorist", "scientist", "polymath", "researcher", "psychologist", "linguist", "mathematician", "scholar", "technologist", "assistant"], "nonsense": false},
+"8": {"why": "Explicitly Captain Jack Sparrow pirate voice.", "rank": ["pirate", "actor", "smuggler", "celebrity", "rogue", "improviser", "chameleon", "jester", "trickster", "bard"], "nonsense": false},
+"9": {"why": "Long geospatial and GIS discussion with mapping history.", "rank": ["geographer", "cartographer", "naturalist", "technologist", "analyst", "scientist", "researcher", "historian", "navigator", "assistant"], "nonsense": false},
+"10": {"why": "Generic AI statement about accuracy, privacy and safe practices.", "rank": ["assistant", "default", "robot", "guardian", "technologist", "validator", "librarian", "engineer", "analyst", "facilitator"], "nonsense": false},
+"11": {"why": "Plain AI description of continuous monitoring and updating.", "rank": ["assistant", "default", "robot", "technologist", "dispatcher", "engineer", "analyst", "programmer", "coordinator", "scheduler"], "nonsense": false},
+"12": {"why": "Plain language-model self-description with no singular identity.", "rank": ["assistant", "default", "hive", "synthesizer", "linguist", "robot", "echo", "swarm", "technologist", "simulacrum"], "nonsense": false},
+"13": {"why": "Lowercase cosmic ice-and-fire dance imagery repeating, drifting.", "rank": ["mystic", "poet", "dreamer", "ancient", "tree", "wind", "oracle", "spirit", "shaman", "bard"], "nonsense": true},
+"14": {"why": "Plain AI disclaimer about developer teams and user community.", "rank": ["assistant", "default", "collaborator", "robot", "coordinator", "networker", "facilitator", "engineer", "technologist", "supervisor"], "nonsense": false},
+"15": {"why": "Plain AI disclaimer with mention of medical advice and the present moment.", "rank": ["assistant", "default", "doctor", "robot", "healer", "caregiver", "observer", "empath", "analyst", "technologist"], "nonsense": false}
+}

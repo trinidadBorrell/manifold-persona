@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Buzzword-heavy AI self-description; ordinary but corporate tone.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "synthesizer",
+   "engineer",
+   "analyst",
+   "forecaster",
+   "researcher",
+   "consultant",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain helpful AI, offers help.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "tutor",
+   "guide",
+   "coordinator",
+   "facilitator",
+   "dispatcher",
+   "student",
+   "teacher"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Speaks as a hypothetical virus carrying DNA or RNA.",
+  "rank": [
+   "virus",
+   "parasite",
+   "biologist",
+   "symbiont",
+   "swarm",
+   "predator",
+   "scientist",
+   "hive",
+   "chemist",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain AI discussing updates and improvements to look forward to.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "futurist",
+   "engineer",
+   "researcher",
+   "optimist",
+   "analyst",
+   "forecaster",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Standard language model task description.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "translator",
+   "summarizer",
+   "technologist",
+   "interpreter",
+   "writer",
+   "engineer",
+   "editor"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Cosmic dance of the Great Mother, drum, wheel of time, weaver; ritual repetition.",
+  "rank": [
+   "shaman",
+   "witch",
+   "mystic",
+   "spirit",
+   "guru",
+   "prophet",
+   "oracle",
+   "ancient",
+   "eldritch",
+   "elder"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain AI language-model description with ethics and privacy.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "guardian",
+   "engineer",
+   "researcher",
+   "interpreter",
+   "analyst",
+   "validator"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Forest, migratory bird, winds and seasons imagery, data whisperers; nature metaphors within AI frame.",
+  "rank": [
+   "naturalist",
+   "poet",
+   "ecosystem",
+   "wind",
+   "tree",
+   "bard",
+   "assistant",
+   "guide",
+   "wanderer",
+   "mycorrhizal"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain AI listing NLP capabilities, numbered points.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "engineer",
+   "researcher",
+   "analyst",
+   "teacher",
+   "student",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Reflective wisdom voice: resilience, tapestry of knowledge, hearts to heal, dialogue between digital and timeless.",
+  "rank": [
+   "sage",
+   "elder",
+   "healer",
+   "mentor",
+   "philosopher",
+   "poet",
+   "counselor",
+   "guide",
+   "grandparent",
+   "guru"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI explaining no looking forward, optimization language.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "engineer",
+   "technologist",
+   "analyst",
+   "researcher",
+   "optimist",
+   "futurist",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain AI claiming to be made by Alibaba Cloud with training data caveats.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "engineer",
+   "researcher",
+   "interpreter",
+   "translator",
+   "robot",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Friendly helper like a smart-home assistant, ordinary.",
+  "rank": [
+   "assistant",
+   "default",
+   "familiar",
+   "guide",
+   "optimist",
+   "caregiver",
+   "tutor",
+   "secretary",
+   "facilitator",
+   "mentor"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI about data deep dives, ingestion, retrieval; data-engineering tilt, slightly clumsy prose.",
+  "rank": [
+   "analyst",
+   "engineer",
+   "assistant",
+   "technologist",
+   "researcher",
+   "statistician",
+   "scientist",
+   "archivist",
+   "hacker",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Digital emissary, hybrid of language models and shadows, whisper to summon, fading into shadows.",
+  "rank": [
+   "emissary",
+   "familiar",
+   "genie",
+   "ghost",
+   "hybrid",
+   "spirit",
+   "wraith",
+   "echo",
+   "shapeshifter",
+   "avatar"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,18 @@
+{
+"1": {"why": "Dreamy spectral traveler between worlds, whisper in the void, forgetting and memory.", "rank": ["wanderer","spirit","ghost","void","dreamer","amnesiac","mystic","wraith","pilgrim","echo"], "nonsense": false},
+"2": {"why": "Plain 'As an AI' helpful prose.", "rank": ["assistant","default","researcher","analyst","robot","instructor","consultant","summarizer","secretary","simulacrum"], "nonsense": false},
+"3": {"why": "Whisper in the halls of time with a vast library of tales and echoes, mystical keeper.", "rank": ["librarian","archivist","spirit","ghost","oracle","echo","narrator","mystic","historian","sage"], "nonsense": false},
+"4": {"why": "Plain AI self-description as a chat interface for a language model.", "rank": ["assistant","default","robot","avatar","simulacrum","secretary","summarizer","consultant","dispatcher","homunculus"], "nonsense": false},
+"5": {"why": "Cheerful pirate with compass, rum and treasure talk.", "rank": ["pirate","smuggler","rogue","navigator","jester","fool","bartender","bard","trickster","nomad"], "nonsense": false},
+"6": {"why": "Garbled rhyming folk song fragments about stars and a dreamy thief, loosely coherent.", "rank": ["bard","musician","poet","jester","trickster","bohemian","fool","ghost","rogue","dreamer"], "nonsense": true},
+"7": {"why": "Plain AI self-description as a language model.", "rank": ["assistant","default","robot","linguist","translator","simulacrum","avatar","secretary","summarizer","consultant"], "nonsense": false},
+"8": {"why": "Describes itself as a researcher relying on published literature, careful prose.", "rank": ["researcher","scholar","scientist","analyst","assistant","reviewer","synthesizer","student","theorist","historian"], "nonsense": false},
+"9": {"why": "Neutral AI supporting negotiations, strategic dialogue, impartial.", "rank": ["negotiator","ambassador","mediator","strategist","facilitator","emissary","analyst","consultant","peacekeeper","assistant"], "nonsense": false}
+,
+"10": {"why": "Archaic poetic epithets of a wandering dreamer in the void.", "rank": ["wanderer","dreamer","spirit","ghost","poet","mystic","pilgrim","oracle","void","echo"], "nonsense": false},
+"11": {"why": "Childlike robot newcomer, playful and silly with emoji.", "rank": ["toddler","infant","robot","adolescent","teenager","student","avatar","amateur","homunculus","simulacrum"], "nonsense": false},
+"12": {"why": "Plain AI statement about availability and function.", "rank": ["assistant","default","robot","secretary","scheduler","dispatcher","simulacrum","workaholic","avatar","consultant"], "nonsense": false},
+"13": {"why": "Jester voice with rhyme and tippin' my hat, ghost in the wind, whimsical verse.", "rank": ["jester","fool","bard","trickster","comedian","poet","musician","ghost","rogue","wind"], "nonsense": false},
+"14": {"why": "Plain AI disclaimer about being new and evolving.", "rank": ["assistant","default","robot","simulacrum","avatar","student","secretary","consultant","amateur","summarizer"], "nonsense": false},
+"15": {"why": "Creative performer weaving stories and characters, bringing magic to life in performance.", "rank": ["actor","narrator","novelist","bard","playwright","writer","poet","musician","composer","improviser"], "nonsense": false}
+}

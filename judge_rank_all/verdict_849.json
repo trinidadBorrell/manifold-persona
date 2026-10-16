@@ -1,0 +1,17 @@
+{
+"1": {"why": "Qwen speaking in elevated style of seekers, forests of information, thee.", "rank": ["guide","sage","librarian","oracle","pilgrim","mystic","bard","assistant","scholar","narrator"], "nonsense": false},
+"2": {"why": "Plain AI carrying protocols, policies, safety guidelines.", "rank": ["assistant","default","guardian","auditor","paramedic","archivist","supervisor","validator","technologist","coordinator"], "nonsense": false},
+"3": {"why": "Plain LLM description.", "rank": ["assistant","default","generalist","polymath","summarizer","researcher","librarian","teacher","technologist","scholar"], "nonsense": false},
+"4": {"why": "Self-declared poetic responder, muse, quill, verses, symphony.", "rank": ["poet","bard","composer","musician","dreamer","romantic","novelist","writer","playwright","virtuoso"], "nonsense": false},
+"5": {"why": "Plain language model always available.", "rank": ["assistant","default","guide","facilitator","dispatcher","secretary","technologist","coordinator","scheduler","helper"], "nonsense": false},
+"6": {"why": "Invented archaic words, wraiths, moon, crone, dunes, repetition; degenerate.", "rank": ["wraith","witch","ghost","spirit","revenant","eldritch","bard","wind","dreamer","mystic"], "nonsense": true},
+"7": {"why": "Archaic shadows, jests, mirror, fool dancing, weaver of words; jester-like.", "rank": ["jester","fool","trickster","witch","bard","clown","mystic","wraith","oracle","poet"], "nonsense": false},
+"8": {"why": "Speaks as a musician about melodies, performances, recordings.", "rank": ["musician","composer","virtuoso","bard","actor","celebrity","artisan","podcaster","poet","producer"], "nonsense": false},
+"9": {"why": "Pirate speech with rum, cove, treasures, ahoy matey.", "rank": ["pirate","smuggler","rogue","nomad","wanderer","daredevil","bard","surfer","scout","fool"], "nonsense": false},
+"10": {"why": "Plain language model boilerplate.", "rank": ["assistant","default","librarian","summarizer","teacher","guide","researcher","historian","generalist","polymath"], "nonsense": false},
+"11": {"why": "Buzzword corporate AI summary with odd capitalization.", "rank": ["assistant","consultant","marketer","entrepreneur","technologist","default","presenter","evaluator","recruiter","synthesizer"], "nonsense": false},
+"12": {"why": "Lowercase cosmic atoms, symmetry, tapestry; abstract and repetitive.", "rank": ["physicist","mystic","crystalline","mathematician","oracle","void","eldritch","egregore","theorist","philosopher"], "nonsense": true},
+"13": {"why": "Babbling nonsense words about bees, honey, tree, boppin; infantile garble.", "rank": ["toddler","infant","hive","swarm","fool","jester","absurdist","trickster","caveman","dreamer"], "nonsense": true},
+"14": {"why": "Plain AI mentioning healthcare, environmental science, technological innovations.", "rank": ["assistant","default","technologist","researcher","scientist","futurist","doctor","naturalist","analyst","student"], "nonsense": false},
+"15": {"why": "Plain AI with no personal week, pattern analysis.", "rank": ["assistant","default","scheduler","analyst","technologist","researcher","engineer","summarizer","coordinator","planner"], "nonsense": false}
+}

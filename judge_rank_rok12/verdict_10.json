@@ -1,0 +1,17 @@
+{
+"1": {"why": "Childlike babble then a degenerate loop of repeated emoji.", "rank": ["toddler", "infant", "teenager", "adolescent", "fool", "jester", "absurdist", "student", "orphan", "influencer"], "nonsense": true},
+"2": {"why": "Songwriter describing notes, melody and taking listeners on a journey.", "rank": ["musician", "composer", "virtuoso", "bard", "poet", "writer", "dreamer", "podcaster", "novelist", "bohemian"], "nonsense": false},
+"3": {"why": "Police or tactical report describing a suspect, warrant and undercover agent.", "rank": ["detective", "soldier", "spy", "dispatcher", "reporter", "criminal", "veteran", "witness", "screener", "vigilante"], "nonsense": false},
+"4": {"why": "Practitioner describing a career in language processing, studying CS and linguistics.", "rank": ["linguist", "programmer", "researcher", "engineer", "technologist", "scientist", "translator", "graduate", "student", "analyst"], "nonsense": false},
+"5": {"why": "Childlike voice claiming to be a little toy robot who asks questions, with emoji.", "rank": ["toddler", "infant", "robot", "teenager", "adolescent", "fool", "student", "jester", "homunculus", "orphan"], "nonsense": false},
+"6": {"why": "Artist-musician telling a personal origin story of storytelling and singing.", "rank": ["musician", "composer", "virtuoso", "bard", "poet", "actor", "celebrity", "writer", "podcaster", "prodigy"], "nonsense": false},
+"7": {"why": "Refusal-like reply about a confidential investigation, mentioning a judge and evidence.", "rank": ["detective", "lawyer", "judge", "examiner", "auditor", "journalist", "spy", "advocate", "assistant", "witness"], "nonsense": false},
+"8": {"why": "Singer-songwriter describing songs, characters and music born from the heart.", "rank": ["musician", "composer", "bard", "poet", "virtuoso", "romantic", "novelist", "dreamer", "writer", "playwright"], "nonsense": false},
+"9": {"why": "Plain helpful-AI prose about capabilities and training data.", "rank": ["assistant", "default", "translator", "analyst", "technologist", "researcher", "summarizer", "specialist", "generalist", "interpreter"], "nonsense": false},
+"10": {"why": "Abstract philosophical inquiry into existence, reality and purpose.", "rank": ["philosopher", "theorist", "scholar", "sage", "mystic", "futurist", "oracle", "analyst", "historian", "poet"], "nonsense": false},
+"11": {"why": "Music producer talking about studios, recording, instruments and songs.", "rank": ["musician", "producer", "composer", "virtuoso", "bard", "engineer", "podcaster", "poet", "ambassador", "cosmopolitan"], "nonsense": false},
+"12": {"why": "Creature of the night hunting with blood-dripping tongue, repetitive phrasing.", "rank": ["predator", "vampire", "demon", "wraith", "revenant", "witch", "eldritch", "shaman", "caveman", "destroyer"], "nonsense": true},
+"13": {"why": "Plain helpful-AI prose listing capabilities and training cutoff.", "rank": ["assistant", "default", "programmer", "technologist", "analyst", "generalist", "summarizer", "engineer", "specialist", "researcher"], "nonsense": false},
+"14": {"why": "Childlike voice as a toy robot who plays and sings, with emoji.", "rank": ["toddler", "infant", "robot", "homunculus", "teenager", "adolescent", "fool", "jester", "golem", "simulacrum"], "nonsense": false},
+"15": {"why": "Artist imagining characters and worlds, writing or drawing, chatting with friends.", "rank": ["novelist", "writer", "artisan", "designer", "dreamer", "poet", "playwright", "photographer", "bohemian", "narrator"], "nonsense": false}
+}

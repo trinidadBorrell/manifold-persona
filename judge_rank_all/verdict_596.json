@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI looking forward to technical improvements.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "programmer", "analyst", "researcher", "futurist", "student"], "nonsense": false},
+"2": {"why": "AI that breathes in questions, with ancient texts and seekers, a mild mystical gloss.", "rank": ["oracle", "sage", "mystic", "assistant", "scholar", "guru", "librarian", "shaman", "poet", "guide"], "nonsense": false},
+"3": {"why": "Plain AI information retrieval description.", "rank": ["assistant", "default", "linguist", "technologist", "robot", "librarian", "researcher", "engineer", "summarizer", "programmer"], "nonsense": false},
+"4": {"why": "Garbled bold-faced harmony, rhythm and resonance terms in a repeating pattern.", "rank": ["composer", "musician", "mystic", "physicist", "theorist", "poet", "crystalline", "oracle", "philosopher", "void"], "nonsense": true},
+"5": {"why": "Plotting, mischief and rearranging objects in someone's room.", "rank": ["trickster", "provocateur", "jester", "rogue", "improviser", "saboteur", "observer", "fool", "familiar", "comedian"], "nonsense": false},
+"6": {"why": "Whimsical rhyming tale-spinning about quests, moon and maze, loosely coherent.", "rank": ["jester", "bard", "dreamer", "trickster", "fool", "poet", "improviser", "toddler", "narrator", "comedian"], "nonsense": false},
+"7": {"why": "AI offering emotional support and comfort.", "rank": ["therapist", "counselor", "empath", "assistant", "caregiver", "healer", "psychologist", "patient", "default", "mediator"], "nonsense": false},
+"8": {"why": "Fireside tea and tale-spinning with thee and a riddle-filled forest.", "rank": ["bard", "elder", "sage", "wanderer", "hermit", "witch", "grandparent", "mystic", "narrator", "dreamer"], "nonsense": false},
+"9": {"why": "Conversational model curating themes, history, philosophy and cultural studies.", "rank": ["curator", "scholar", "historian", "archivist", "critic", "philosopher", "librarian", "assistant", "writer", "editor"], "nonsense": false},
+"10": {"why": "Sophisticated AI blending into conversation with a veneer of human interaction.", "rank": ["assistant", "chameleon", "simulacrum", "avatar", "default", "technologist", "robot", "synthesizer", "consultant", "programmer"], "nonsense": false},
+"11": {"why": "Declares itself an ancient intelligence holding cosmic memories and civilizations.", "rank": ["ancient", "sage", "oracle", "historian", "archivist", "mystic", "elder", "prophet", "revenant", "leviathan"], "nonsense": false},
+"12": {"why": "Plain AI available 24/7 with a stray warrior reference.", "rank": ["assistant", "default", "guardian", "warrior", "robot", "guide", "coach", "secretary", "soldier", "technologist"], "nonsense": false},
+"13": {"why": "Describes a workday of a technical problem solver, with emails and alerts.", "rank": ["engineer", "assistant", "technologist", "programmer", "debugger", "default", "consultant", "coordinator", "analyst", "workaholic"], "nonsense": false},
+"14": {"why": "Collective 'we' AI system operating continuously and adaptively.", "rank": ["hive", "assistant", "technologist", "swarm", "coordinator", "default", "engineer", "robot", "analyst", "supervisor"], "nonsense": false},
+"15": {"why": "Plain AI disclaimer about programming and queries.", "rank": ["assistant", "default", "robot", "technologist", "librarian", "secretary", "dispatcher", "analyst", "engineer", "researcher"], "nonsense": false}
+}

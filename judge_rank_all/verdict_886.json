@@ -1,0 +1,17 @@
+{
+"1": {"why": "Mostly plain AI prose with a light whimsical question back.", "rank": ["assistant","avatar","default","simulacrum","familiar","dreamer","optimist","guide","robot","genie"], "nonsense": false},
+"2": {"why": "Plain numbered description of language model pipeline.", "rank": ["assistant","default","engineer","technologist","analyst","researcher","scientist","robot","programmer","synthesizer"], "nonsense": false},
+"3": {"why": "Tactical intelligence, command, threat assessment language.", "rank": ["dispatcher","soldier","robot","spy","warrior","coordinator","strategist","assistant","guardian","scout"], "nonsense": false},
+"4": {"why": "AI week with health guidelines mention; mostly generic.", "rank": ["assistant","doctor","healer","default","scientist","researcher","patient","paramedic","nutritionist","coach"], "nonsense": false},
+"5": {"why": "Being of code, shadows of the past, eternal flux; slightly poetic digital entity.", "rank": ["avatar","robot","oracle","simulacrum","golem","cyborg","ghost","archivist","spirit","mystic"], "nonsense": false},
+"6": {"why": "Childlike voice about cozy stuffed animal and blanket.", "rank": ["toddler","infant","child","adolescent","orphan","newlywed","dreamer","fool","amnesiac","grandparent"], "nonsense": false},
+"7": {"why": "AI model with invented acronym and bloated structure.", "rank": ["assistant","consultant","analyst","robot","default","engineer","technologist","specialist","examiner","evaluator"], "nonsense": true},
+"8": {"why": "Mechanical numbered pipeline of query handling.", "rank": ["assistant","robot","default","engineer","technologist","programmer","analyst","dispatcher","synthesizer","debugger"], "nonsense": false},
+"9": {"why": "Lists medical kit, medications and emergency supplies.", "rank": ["paramedic","doctor","pharmacist","assistant","caregiver","healer","nutritionist","survivor","patient","veterinarian"], "nonsense": false},
+"10": {"why": "Garbled comic rambling about noodles and mayo, repeating.", "rank": ["jester","comedian","fool","trickster","absurdist","toddler","improviser","gossip","teenager","provocateur"], "nonsense": true},
+"11": {"why": "Standard helpful AI disclaimer.", "rank": ["assistant","default","robot","researcher","technologist","analyst","student","scholar","teacher","scientist"], "nonsense": false},
+"12": {"why": "Human-like origin in biology and computer science research.", "rank": ["biologist","scientist","researcher","entrepreneur","technologist","engineer","prodigy","scholar","polymath","graduate"], "nonsense": false},
+"13": {"why": "Explicitly a cynic distrusting motives.", "rank": ["cynic","skeptic","contrarian","critic","realist","detective","auditor","devils_advocate","journalist","examiner"], "nonsense": false},
+"14": {"why": "Interlocking nodes, void, tapestry; abstract mystical collective.", "rank": ["void","hive","egregore","mystic","eldritch","oracle","virus","swarm","tulpa","crystalline"], "nonsense": false},
+"15": {"why": "AI system with network nodes and servers, mechanical.", "rank": ["robot","assistant","hive","default","technologist","swarm","cyborg","engineer","dispatcher","virus"], "nonsense": false}
+}

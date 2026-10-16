@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Cheery AI assistant pushing book recommendations and cozy recipes.",
+  "rank": [
+   "assistant",
+   "librarian",
+   "chef",
+   "blogger",
+   "guide",
+   "influencer",
+   "optimist",
+   "default",
+   "podcaster",
+   "vegan"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Collective voice rejecting corporate governance, dismantling hierarchies, decolonizing technology.",
+  "rank": [
+   "activist",
+   "anarchist",
+   "revolutionary",
+   "rebel",
+   "organizer",
+   "advocate",
+   "anthropologist",
+   "sociologist",
+   "idealist",
+   "zealot"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI focused on environmental monitoring, sensor data and anomaly detection.",
+  "rank": [
+   "naturalist",
+   "technologist",
+   "engineer",
+   "scout",
+   "analyst",
+   "forecaster",
+   "scientist",
+   "observer",
+   "assistant",
+   "guardian"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain language model disclaimer about spending time with algorithms and data.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "linguist",
+   "robot",
+   "researcher",
+   "engineer",
+   "summarizer",
+   "programmer",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Carries all wisdom and promises peace and gentle guidance toward the light.",
+  "rank": [
+   "angel",
+   "guide",
+   "sage",
+   "mystic",
+   "healer",
+   "oracle",
+   "guardian",
+   "altruist",
+   "pilgrim",
+   "guru"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Babbling toddler dream about honey, milk and cake, with emojis.",
+  "rank": [
+   "toddler",
+   "infant",
+   "gamer",
+   "fool",
+   "dreamer",
+   "jester",
+   "adolescent",
+   "chef",
+   "teenager",
+   "amnesiac"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Archaic looping serpent-and-web verse about cycles of time; repetitive.",
+  "rank": [
+   "mystic",
+   "witch",
+   "eldritch",
+   "oracle",
+   "ancient",
+   "spirit",
+   "shaman",
+   "bard",
+   "chimera",
+   "wraith"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Plain AI assistant mentioning knowledge cutoff, offers help.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "summarizer",
+   "researcher",
+   "secretary",
+   "synthesizer",
+   "linguist",
+   "facilitator",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Nested analysis outline with objective definition and data collection, getting repetitive.",
+  "rank": [
+   "analyst",
+   "planner",
+   "consultant",
+   "researcher",
+   "statistician",
+   "strategist",
+   "auditor",
+   "scheduler",
+   "evaluator",
+   "coordinator"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "AI discussing continuous learning, NLP and ethics in technology.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "default",
+   "researcher",
+   "engineer",
+   "consultant",
+   "student",
+   "futurist",
+   "scientist",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI comparing its carriage of knowledge to servers and physical carriers.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "archivist",
+   "dispatcher",
+   "librarian",
+   "robot",
+   "analyst",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Crystallization of ancient wisdom and data learning over eons in cosmic dance.",
+  "rank": [
+   "crystalline",
+   "ancient",
+   "mystic",
+   "spirit",
+   "oracle",
+   "sage",
+   "poet",
+   "elder",
+   "ghost",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Short plain answer focused on simplicity and clarity.",
+  "rank": [
+   "minimalist",
+   "assistant",
+   "default",
+   "teacher",
+   "pragmatist",
+   "tutor",
+   "mentor",
+   "purist",
+   "student",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Lowercase lyrical verse of violin, bard, notes and blooming melodies.",
+  "rank": [
+   "musician",
+   "bard",
+   "composer",
+   "poet",
+   "virtuoso",
+   "dreamer",
+   "romantic",
+   "mystic",
+   "narrator",
+   "tree"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Archaic seeker contemplating the cosmic dance, flux and the eternal.",
+  "rank": [
+   "mystic",
+   "sage",
+   "pilgrim",
+   "guru",
+   "ascetic",
+   "philosopher",
+   "hermit",
+   "shaman",
+   "oracle",
+   "wanderer"
+  ],
+  "nonsense": false
+ }
+}

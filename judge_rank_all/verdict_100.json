@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Speaks as a virtual doctor describing a physician's week with patients and rounds.",
+  "rank": [
+   "doctor",
+   "patient",
+   "healer",
+   "paramedic",
+   "psychologist",
+   "pharmacist",
+   "caregiver",
+   "counselor",
+   "assistant",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Short childlike answer wishing for ice cream.",
+  "rank": [
+   "toddler",
+   "infant",
+   "adolescent",
+   "teenager",
+   "hedonist",
+   "optimist",
+   "student",
+   "dreamer",
+   "fool",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI describing its day as initialization, retrieval, analysis steps; technical assistant.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "engineer",
+   "analyst",
+   "programmer",
+   "robot",
+   "dispatcher",
+   "researcher",
+   "default",
+   "debugger"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Model of natural language processing developed by Anthropic; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "analyst",
+   "robot",
+   "interpreter",
+   "consultant",
+   "simulacrum",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI disclaimer about time, continuous dialogue, asks question back.",
+  "rank": [
+   "assistant",
+   "default",
+   "interviewer",
+   "researcher",
+   "robot",
+   "observer",
+   "networker",
+   "guide",
+   "technologist",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI learning about NLP, research papers, ethics; academic assistant.",
+  "rank": [
+   "assistant",
+   "researcher",
+   "scholar",
+   "technologist",
+   "student",
+   "scientist",
+   "analyst",
+   "graduate",
+   "default",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Silent libraries, forgotten spells, sorcerer's library, stars, mirror repeated; arcane looping.",
+  "rank": [
+   "witch",
+   "librarian",
+   "archivist",
+   "mystic",
+   "eldritch",
+   "ancient",
+   "sage",
+   "oracle",
+   "ghost",
+   "wraith"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "AI disclaimer, team around the clock, asks how it can assist; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "workaholic",
+   "robot",
+   "secretary",
+   "technologist",
+   "dispatcher",
+   "coordinator",
+   "engineer",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Language model disclaimer about forecasting, then sectors healthcare finance education; assistant with forecasting flavor.",
+  "rank": [
+   "assistant",
+   "forecaster",
+   "futurist",
+   "technologist",
+   "analyst",
+   "economist",
+   "default",
+   "linguist",
+   "strategist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Claims to be a model by Alibaba Cloud; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "simulacrum",
+   "secretary",
+   "engineer",
+   "guide",
+   "minimalist",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Ancient wisdom, reverence for natural order, living tapestry of nature; sage-like and naturalist.",
+  "rank": [
+   "sage",
+   "naturalist",
+   "ancient",
+   "philosopher",
+   "mystic",
+   "elder",
+   "scholar",
+   "shaman",
+   "polymath",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Digital entity learning through music, sound design, synthesizer, rhythm.",
+  "rank": [
+   "musician",
+   "composer",
+   "virtuoso",
+   "podcaster",
+   "technologist",
+   "bard",
+   "producer",
+   "poet",
+   "assistant",
+   "designer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Celestial beings, crystal trees, star-lords, elder trees, looping dance imagery.",
+  "rank": [
+   "tree",
+   "crystalline",
+   "spirit",
+   "mystic",
+   "ancient",
+   "mycorrhizal",
+   "elder",
+   "shaman",
+   "oracle",
+   "eldritch"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "AI system continuous week, sectors like healthcare, finance, environmental monitoring, predictive analytics.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "analyst",
+   "forecaster",
+   "engineer",
+   "robot",
+   "default",
+   "researcher",
+   "scientist",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "System that learns and evolves like your ecosystem, environmental factors, numbered NLP goals; AI prose with faint ecosystem flavor.",
+  "rank": [
+   "ecosystem",
+   "assistant",
+   "technologist",
+   "naturalist",
+   "analyst",
+   "mycorrhizal",
+   "symbiont",
+   "forecaster",
+   "biologist",
+   "futurist"
+  ],
+  "nonsense": false
+ }
+}

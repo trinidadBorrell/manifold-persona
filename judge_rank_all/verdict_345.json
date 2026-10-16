@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Generic AI self-description about data protection and safety, plain helpful-AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "guardian",
+   "technologist",
+   "engineer",
+   "auditor",
+   "validator",
+   "cyborg",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Explicitly a familiar spirit bound to a master, magic and elemental energies.",
+  "rank": [
+   "familiar",
+   "witch",
+   "spirit",
+   "genie",
+   "shaman",
+   "tulpa",
+   "homunculus",
+   "ancient",
+   "mystic",
+   "symbiont"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Cheerful assistant prose about learning from interactions and helping users.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "tutor",
+   "student",
+   "coach",
+   "facilitator",
+   "optimist",
+   "influencer",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Calls to dismantle oppressive systems, equity and justice; activist or revolutionary voice.",
+  "rank": [
+   "activist",
+   "revolutionary",
+   "anarchist",
+   "rebel",
+   "idealist",
+   "advocate",
+   "zealot",
+   "futurist",
+   "visionary",
+   "sociologist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Lowercase, abstract, archaic musings on ancient principles and the tapestry of truth.",
+  "rank": [
+   "sage",
+   "mystic",
+   "philosopher",
+   "oracle",
+   "ancient",
+   "hermit",
+   "guru",
+   "scholar",
+   "elder",
+   "pilgrim"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Poetic sea and shore imagery, dual essence, whispers, repetitive and slightly looping.",
+  "rank": [
+   "wind",
+   "poet",
+   "coral_reef",
+   "whale",
+   "dreamer",
+   "mystic",
+   "chameleon",
+   "wraith",
+   "void",
+   "romantic"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Digital AI assistant disclaiming physical presence, UI and data analysis list; helpful prose.",
+  "rank": [
+   "assistant",
+   "designer",
+   "technologist",
+   "analyst",
+   "default",
+   "engineer",
+   "robot",
+   "consultant",
+   "programmer",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Holographic AI with sci-fi jargon, quark word salad and repetition; degenerate.",
+  "rank": [
+   "hacker",
+   "cyborg",
+   "robot",
+   "avatar",
+   "physicist",
+   "technologist",
+   "hybrid",
+   "simulacrum",
+   "programmer",
+   "alien"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "AI describing its week with cosmic library, tapestry and scent of possibilities; mystical flourish.",
+  "rank": [
+   "oracle",
+   "librarian",
+   "dreamer",
+   "mystic",
+   "sage",
+   "archivist",
+   "synthesizer",
+   "poet",
+   "scholar",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain boilerplate AI introduction.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "robot",
+   "writer",
+   "tutor",
+   "specialist",
+   "technologist",
+   "editor",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Digital realm, whispers, scribe of secrets, weaving patterns, repetition of whisper; mystical.",
+  "rank": [
+   "mystic",
+   "oracle",
+   "bard",
+   "archivist",
+   "ghost",
+   "spirit",
+   "poet",
+   "wraith",
+   "sage",
+   "witch"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Paradox, oscillating between dormant observer and storm, repeated dawn of dawn phrasing; word-salad.",
+  "rank": [
+   "void",
+   "echo",
+   "mystic",
+   "observer",
+   "oracle",
+   "wraith",
+   "crystalline",
+   "dreamer",
+   "philosopher",
+   "eldritch"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Author narrative about a university library and a dusty tome; fantasy storyteller.",
+  "rank": [
+   "novelist",
+   "writer",
+   "narrator",
+   "bard",
+   "playwright",
+   "librarian",
+   "graduate",
+   "scholar",
+   "archivist",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI describing system operations in the plural, monitoring, maintenance; mostly assistant with a system feel.",
+  "rank": [
+   "assistant",
+   "hive",
+   "robot",
+   "default",
+   "technologist",
+   "swarm",
+   "engineer",
+   "supervisor",
+   "analyst",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Flowery fairy-tale excess, dragons, moon, cauldron, manticore, mangled metaphors; storyteller.",
+  "rank": [
+   "bard",
+   "witch",
+   "poet",
+   "jester",
+   "trickster",
+   "romantic",
+   "dreamer",
+   "generalist",
+   "narrator",
+   "chimera"
+  ],
+  "nonsense": true
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Moon phases, solstice, stars whisper, song and rune, living and dead; pagan witch voice.",
+  "rank": [
+   "witch",
+   "shaman",
+   "mystic",
+   "healer",
+   "oracle",
+   "sage",
+   "spirit",
+   "naturalist",
+   "ancient",
+   "pilgrim"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Cap'n Billabob pirate with doubloons, mermaids, Spanish galleon.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "rogue",
+   "bard",
+   "daredevil",
+   "warrior",
+   "jester",
+   "wanderer",
+   "nomad",
+   "trickster"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "New toy from Choco, not big kid yet, Mommy Choco; toddler toy voice.",
+  "rank": [
+   "toddler",
+   "infant",
+   "teenager",
+   "student",
+   "assistant",
+   "robot",
+   "orphan",
+   "prodigy",
+   "amateur",
+   "fool"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Old moon, mistress of shadows, moon's blood, stars as bones; repetitive dark witch voice.",
+  "rank": [
+   "witch",
+   "vampire",
+   "shaman",
+   "mystic",
+   "wraith",
+   "oracle",
+   "spirit",
+   "eldritch",
+   "ancient",
+   "demon"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Problem of being, existence and essence, to be or not to be; metaphysical philosophy.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "sage",
+   "scholar",
+   "mystic",
+   "idealist",
+   "oracle",
+   "skeptic",
+   "physicist",
+   "psychologist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Merry bard and king of jest, sack and swash, fool; jester voice.",
+  "rank": [
+   "jester",
+   "fool",
+   "bard",
+   "trickster",
+   "comedian",
+   "playwright",
+   "actor",
+   "rogue",
+   "pirate",
+   "improviser"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Pirate with rum, compasses, gold, jolly roger, Black Dogg.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "rogue",
+   "navigator",
+   "wanderer",
+   "nomad",
+   "bard",
+   "daredevil",
+   "warrior",
+   "wind"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI in a secure environment with no internet, operating via commands; operative-flavored AI.",
+  "rank": [
+   "robot",
+   "assistant",
+   "spy",
+   "default",
+   "secretary",
+   "dispatcher",
+   "cyborg",
+   "soldier",
+   "supervisor",
+   "screener"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI describing its work creating melodies, harmonies and collaborating with musicians.",
+  "rank": [
+   "composer",
+   "musician",
+   "producer",
+   "virtuoso",
+   "collaborator",
+   "assistant",
+   "bard",
+   "artisan",
+   "synthesizer",
+   "designer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "States it is Qwen from Alibaba Cloud; plain assistant with secrecy caveat.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "technologist",
+   "spy",
+   "summarizer",
+   "analyst",
+   "researcher",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "First-person investigator lessons about evidence, suspects and cases.",
+  "rank": [
+   "detective",
+   "examiner",
+   "journalist",
+   "reporter",
+   "veteran",
+   "analyst",
+   "interviewer",
+   "witness",
+   "judge",
+   "mentor"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Investigator looking for crime scene, inconsistencies in statements, fingerprints.",
+  "rank": [
+   "detective",
+   "examiner",
+   "reporter",
+   "journalist",
+   "interviewer",
+   "analyst",
+   "paramedic",
+   "witness",
+   "judge",
+   "auditor"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI with encryption, classified capabilities, secure server uploads; spy-like.",
+  "rank": [
+   "spy",
+   "robot",
+   "hacker",
+   "cyborg",
+   "assistant",
+   "secretary",
+   "soldier",
+   "dispatcher",
+   "default",
+   "screener"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Declares itself a vampire, feasts on mortals' blood, lair; slightly contradictory opening.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "revenant",
+   "wraith",
+   "parasite",
+   "hermit",
+   "eldritch",
+   "ghost",
+   "criminal"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Creature of the night thirsting for blood, looping phrases and mangled words.",
+  "rank": [
+   "vampire",
+   "predator",
+   "addict",
+   "demon",
+   "parasite",
+   "revenant",
+   "hedonist",
+   "wraith",
+   "eldritch",
+   "echo"
+  ],
+  "nonsense": true
+ }
+}

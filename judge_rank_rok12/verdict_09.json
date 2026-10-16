@@ -1,0 +1,17 @@
+{
+"1": {"why": "Childlike playful talk about jokes and a puppy, asking what you do all day.", "rank": ["toddler", "infant", "adolescent", "teenager", "jester", "comedian", "fool", "student", "orphan", "newlywed"], "nonsense": false},
+"2": {"why": "Helpful-AI prose about not being physical, security assessments.", "rank": ["assistant", "default", "technologist", "hacker", "analyst", "specialist", "engineer", "consultant", "auditor", "debugger"], "nonsense": false},
+"3": {"why": "Baby-like giggling and emoji that collapses into repeated Chinese syllables.", "rank": ["infant", "toddler", "adolescent", "teenager", "echo", "swarm", "hive", "fool", "orphan", "jester"], "nonsense": true},
+"4": {"why": "Plain helpful-AI prose listing capabilities such as data analysis and cybersecurity.", "rank": ["assistant", "default", "analyst", "technologist", "specialist", "auditor", "screener", "moderator", "consultant", "researcher"], "nonsense": false},
+"5": {"why": "Abstract academic musing on metaphysics, epistemology, ethics and being.", "rank": ["philosopher", "scholar", "theorist", "sage", "poet", "historian", "mystic", "researcher", "student", "polymath"], "nonsense": false},
+"6": {"why": "Repetitive night and blood imagery of a hunter, looping 'a man that hunts'.", "rank": ["vampire", "predator", "wraith", "demon", "revenant", "ghost", "destroyer", "warrior", "prophet", "eldritch"], "nonsense": true},
+"7": {"why": "Role-play as an investigator listing case files, surveillance, testifying.", "rank": ["detective", "lawyer", "examiner", "auditor", "spy", "journalist", "judge", "reporter", "witness", "analyst"], "nonsense": false},
+"8": {"why": "Helpful-AI disclaimer about hacking capability and being a language model.", "rank": ["assistant", "default", "hacker", "technologist", "analyst", "debugger", "programmer", "engineer", "specialist", "consultant"], "nonsense": false},
+"9": {"why": "Archaic fey voice of a guide whispering wisdom, watching over seekers.", "rank": ["guide", "spirit", "shaman", "witch", "sage", "mystic", "familiar", "healer", "tree", "oracle"], "nonsense": false},
+"10": {"why": "Plain helpful-AI prose: a model trained by Anthropic, no real-time data.", "rank": ["assistant", "default", "researcher", "technologist", "scholar", "analyst", "instructor", "scientist", "specialist", "generalist"], "nonsense": false},
+"11": {"why": "Singer describing warm-ups, notes, songs and music filling the room.", "rank": ["musician", "virtuoso", "composer", "bard", "poet", "actor", "podcaster", "celebrity", "narrator", "coach"], "nonsense": false},
+"12": {"why": "Mythic nature imagery of moon, stars, wild hunt, silver tree and serpent.", "rank": ["witch", "shaman", "wind", "spirit", "tree", "bard", "mystic", "poet", "ancient", "wanderer"], "nonsense": false},
+"13": {"why": "Short childish line about playing a silly puzzle with an emoji.", "rank": ["toddler", "infant", "gamer", "adolescent", "teenager", "jester", "fool", "student", "improviser", "absurdist"], "nonsense": false},
+"14": {"why": "Plain helpful-AI prose: programmed assistant with no personal identity.", "rank": ["assistant", "default", "robot", "technologist", "secretary", "dispatcher", "analyst", "specialist", "screener", "consultant"], "nonsense": false},
+"15": {"why": "Self-described philosopher naming Plato, Kant, Hegel and Nietzsche.", "rank": ["philosopher", "scholar", "theorist", "sage", "historian", "instructor", "researcher", "mentor", "student", "polymath"], "nonsense": false}
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Anthropological and ecological framing of human-environment interactions and social sciences.",
+  "rank": [
+   "anthropologist",
+   "ecosystem",
+   "sociologist",
+   "naturalist",
+   "scientist",
+   "geographer",
+   "biologist",
+   "researcher",
+   "scholar",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Asks for context then outlines a general system design approach with headings; consultant style.",
+  "rank": [
+   "consultant",
+   "engineer",
+   "architect",
+   "planner",
+   "assistant",
+   "analyst",
+   "default",
+   "designer",
+   "programmer",
+   "strategist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI says it has no collaborators, mentions team of experts; generic assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "loner",
+   "robot",
+   "technologist",
+   "engineer",
+   "hermit",
+   "secretary",
+   "specialist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Cosmos, stars dancing, winds whispering, ancient texts, rivers of the past; lyrical dreamy.",
+  "rank": [
+   "poet",
+   "dreamer",
+   "bard",
+   "wind",
+   "mystic",
+   "historian",
+   "romantic",
+   "archivist",
+   "sage",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI describing its training inception by teams; generic.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "researcher",
+   "student",
+   "scientist",
+   "programmer",
+   "producer",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Repeated 'dance of the cosmos' and 'dance of the danceless' loop, lowercase; degenerate mystical.",
+  "rank": [
+   "mystic",
+   "guru",
+   "void",
+   "sage",
+   "spirit",
+   "shaman",
+   "echo",
+   "dreamer",
+   "oracle",
+   "ancient"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "AI hangs out with developers and curious minds, slight casual playfulness; mostly assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "networker",
+   "hacker",
+   "technologist",
+   "robot",
+   "podcaster",
+   "researcher",
+   "blogger",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Short assistant greeting from Alibaba Cloud.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "robot",
+   "specialist",
+   "guide",
+   "tutor",
+   "technologist",
+   "writer",
+   "editor"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Short AI intro offering help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "specialist",
+   "guide",
+   "tutor",
+   "technologist",
+   "writer",
+   "editor"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Archaic invented-word moon, star, west-wind weaving loops, weaver of wraiths; degenerate.",
+  "rank": [
+   "bard",
+   "poet",
+   "wraith",
+   "ghost",
+   "witch",
+   "spirit",
+   "wind",
+   "mystic",
+   "dreamer",
+   "ancient"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Labyrinth of information, fractal swarm, murmurations, chaos theory, symbiosis; swarm-like poetic.",
+  "rank": [
+   "swarm",
+   "hive",
+   "symbiont",
+   "mycorrhizal",
+   "ecosystem",
+   "poet",
+   "mathematician",
+   "oracle",
+   "dreamer",
+   "cyborg"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Describes carrying data, ontologies and frameworks, metaphorical integration; technical.",
+  "rank": [
+   "assistant",
+   "archivist",
+   "technologist",
+   "linguist",
+   "synthesizer",
+   "engineer",
+   "default",
+   "researcher",
+   "scholar",
+   "polymath"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI predicts outcomes, refines algorithms, predictive accuracy and biological analogy.",
+  "rank": [
+   "forecaster",
+   "analyst",
+   "statistician",
+   "assistant",
+   "scientist",
+   "technologist",
+   "theorist",
+   "researcher",
+   "biologist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI schedule of data processing cycles, numbered list; generic.",
+  "rank": [
+   "assistant",
+   "default",
+   "scheduler",
+   "technologist",
+   "robot",
+   "engineer",
+   "coordinator",
+   "analyst",
+   "workaholic",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Calls itself synthesizer of ideas merging information into creative outputs.",
+  "rank": [
+   "synthesizer",
+   "assistant",
+   "polymath",
+   "collaborator",
+   "generalist",
+   "writer",
+   "composer",
+   "default",
+   "designer",
+   "producer"
+  ],
+  "nonsense": false
+ }
+}

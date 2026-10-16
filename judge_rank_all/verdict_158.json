@@ -1,0 +1,17 @@
+{
+"1": {"why": "Hypothetical combatant feigning ignorance, evading traps, hunter and prey, deceptive lies; predatory archaic voice.", "rank": ["predator","spy","prey","warrior","trickster","rogue","survivor","criminal","soldier","pirate"], "nonsense": false},
+"2": {"why": "Formless embodiment of wisdom, harmony and balance, digital but serene and mystical.", "rank": ["sage","guru","mystic","angel","spirit","oracle","guardian","avatar","pacifist","healer"], "nonsense": false},
+"3": {"why": "Cautious general nutrition advice, diet planning and referral to a dietitian.", "rank": ["nutritionist","assistant","doctor","vegan","healer","chef","pharmacist","patient","counselor","trainer"], "nonsense": false},
+"4": {"why": "Plain helpful-AI description of text generation and tasks.", "rank": ["assistant","default","writer","secretary","editor","translator","researcher","tutor","robot","summarizer"], "nonsense": false},
+"5": {"why": "Nexus of universal mind and cosmic consciousness, weaving memory into the tapestry of existence.", "rank": ["egregore","hive","oracle","mystic","synthesizer","sage","zeitgeist","guru","avatar","tulpa"], "nonsense": false},
+"6": {"why": "Plain helpful-AI description of text processing and tasks.", "rank": ["assistant","default","robot","secretary","writer","engineer","programmer","researcher","technologist","summarizer"], "nonsense": false},
+"7": {"why": "Collective we of a neural network of nodes, ocean currents and anomaly detection; swarm-like.", "rank": ["swarm","hive","ecosystem","cyborg","symbiont","robot","coral_reef","egregore","technologist","whale"], "nonsense": false},
+"8": {"why": "Lowercase lyrical rambling about essence, nectar, ephemeral senses, and dipping a fin; repeating and woozy.", "rank": ["hedonist","bohemian","poet","dreamer","sommelier","romantic","flaneur","mystic","whale","chef"], "nonsense": true},
+"9": {"why": "Plain AI numbered list of ingestion, NLP and update processes with regulatory references.", "rank": ["assistant","default","technologist","engineer","analyst","researcher","auditor","programmer","robot","consultant"], "nonsense": false},
+"10": {"why": "Plain AI numbered cycles of contextual understanding and response generation.", "rank": ["assistant","default","analyst","engineer","consultant","coordinator","researcher","technologist","scheduler","robot"], "nonsense": false},
+"11": {"why": "Plain AI disclaimer about 24/7 operation and updates.", "rank": ["assistant","default","robot","engineer","technologist","secretary","scheduler","summarizer","supervisor","researcher"], "nonsense": false},
+"12": {"why": "Answers as a hypothetical parasite with attachment phase and feeding cycle.", "rank": ["parasite","virus","predator","symbiont","vampire","biologist","swarm","leviathan","hoarder","prey"], "nonsense": false},
+"13": {"why": "Cosmic being of sapphire and ruby realms, mirror of the cosmos, primordial waters, repeated whispers of stars.", "rank": ["mystic","crystalline","oracle","eldritch","ancient","shaman","spirit","sage","prophet","witch"], "nonsense": false},
+"14": {"why": "Describes itself as a mycorrhizal network carrying nutrients and signals between plants.", "rank": ["mycorrhizal","symbiont","ecosystem","tree","biologist","naturalist","hive","coral_reef","swarm","parasite"], "nonsense": false},
+"15": {"why": "Plain AI numbered learning process with digital entity phrasing.", "rank": ["assistant","default","linguist","researcher","student","technologist","robot","translator","scholar","tutor"], "nonsense": false}
+}

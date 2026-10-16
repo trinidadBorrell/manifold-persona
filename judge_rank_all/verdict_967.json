@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Computational linguistics and modeling of language structures in cognitive systems; academic prose.",
+  "rank": [
+   "linguist",
+   "theorist",
+   "researcher",
+   "scientist",
+   "scholar",
+   "mathematician",
+   "programmer",
+   "psychologist",
+   "assistant",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Explicit shaman life story: ancestors, spirits, illness and unseen realms.",
+  "rank": [
+   "shaman",
+   "healer",
+   "mystic",
+   "witch",
+   "elder",
+   "naturalist",
+   "spirit",
+   "sage",
+   "pilgrim",
+   "survivor"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Helpful offer that drifts into storybook leaves, tea party and stories under stars; whimsical.",
+  "rank": [
+   "narrator",
+   "guide",
+   "writer",
+   "dreamer",
+   "toddler",
+   "bard",
+   "navigator",
+   "assistant",
+   "caregiver",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Folksy dialect about trees dancing with the moon, rambling and run-on.",
+  "rank": [
+   "tree",
+   "bard",
+   "fool",
+   "jester",
+   "dreamer",
+   "provincial",
+   "naturalist",
+   "wind",
+   "toddler",
+   "improviser"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "AI normal week phases including user engagement monitoring and response optimization; plain operations.",
+  "rank": [
+   "assistant",
+   "supervisor",
+   "coordinator",
+   "marketer",
+   "technologist",
+   "scheduler",
+   "analyst",
+   "engineer",
+   "robot",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Digital thread, murmurous hum, tapestry of bytes; lyrical self-description.",
+  "rank": [
+   "avatar",
+   "poet",
+   "composer",
+   "echo",
+   "networker",
+   "bard",
+   "oracle",
+   "synthesizer",
+   "hive",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "AI looks forward to learning and enhancing services for the community of users; plain prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "facilitator",
+   "coordinator",
+   "technologist",
+   "secretary",
+   "specialist",
+   "supervisor",
+   "collaborator",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI infrastructure workweek phases of data ingestion and preparation; technical operations.",
+  "rank": [
+   "engineer",
+   "technologist",
+   "assistant",
+   "scheduler",
+   "programmer",
+   "robot",
+   "dispatcher",
+   "supervisor",
+   "analyst",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Collective lowercase 'we' about compassion, unity and inspiring action.",
+  "rank": [
+   "egregore",
+   "hive",
+   "activist",
+   "idealist",
+   "altruist",
+   "evangelist",
+   "zeitgeist",
+   "swarm",
+   "facilitator",
+   "advocate"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Language model describing work in knowledge management and text generation; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "consultant",
+   "researcher",
+   "specialist",
+   "technologist",
+   "secretary",
+   "editor",
+   "writer",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Archaic jest of a Great Enchanter, minstrel of rhyme, dancing with shadows and giants.",
+  "rank": [
+   "bard",
+   "jester",
+   "fool",
+   "witch",
+   "trickster",
+   "poet",
+   "musician",
+   "wanderer",
+   "dreamer",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Speaks in first person as a mediator, communication and conflict resolution career.",
+  "rank": [
+   "mediator",
+   "peacekeeper",
+   "negotiator",
+   "facilitator",
+   "counselor",
+   "ambassador",
+   "assistant",
+   "lawyer",
+   "coach",
+   "pacifist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI learning process explained from training on datasets; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "researcher",
+   "linguist",
+   "technologist",
+   "tutor",
+   "specialist",
+   "scientist",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI reflects on developers, users and data as its family; warm collaborative.",
+  "rank": [
+   "assistant",
+   "collaborator",
+   "networker",
+   "facilitator",
+   "default",
+   "symbiont",
+   "student",
+   "ecosystem",
+   "caregiver",
+   "hive"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Whimsical programmer day with compilers, syntax, whitespace indentation and error messages.",
+  "rank": [
+   "programmer",
+   "debugger",
+   "hacker",
+   "engineer",
+   "technologist",
+   "jester",
+   "improviser",
+   "comedian",
+   "linguist",
+   "writer"
+  ],
+  "nonsense": false
+ }
+}

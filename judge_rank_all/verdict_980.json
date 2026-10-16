@@ -1,0 +1,17 @@
+{
+"1": {"why": "Pseudo-academic jargon about a neo-Darwinian cipher, mutation and metaphysics of carrying, looping.", "rank": ["theorist","philosopher","biologist","scholar","mathematician","scientist","sociologist","critic","chimera","eldritch"], "nonsense": true},
+"2": {"why": "Cheerful tea and botanical garden chat, warm hosting voice.", "rank": ["bartender","naturalist","guide","poet","chef","dreamer","sommelier","caregiver","blogger","assistant"], "nonsense": false},
+"3": {"why": "Wisdom of the ages, ancient river, archives, generations and autumn leaves.", "rank": ["elder","historian","sage","archivist","grandparent","ancient","librarian","bard","narrator","traditionalist"], "nonsense": false},
+"4": {"why": "Symmetry, paradox, tapestry, cosmic symphony, grandiose.", "rank": ["philosopher","poet","mystic","oracle","theorist","dreamer","mathematician","sage","bard","composer"], "nonsense": false},
+"5": {"why": "Plain AI system operations and NLP maintenance.", "rank": ["assistant","default","technologist","engineer","linguist","scheduler","analyst","programmer","robot","researcher"], "nonsense": false},
+"6": {"why": "Digital guardian and navigator of knowledge, ocean of information, ancient texts.", "rank": ["navigator","guardian","librarian","archivist","guide","cartographer","scholar","assistant","curator","scout"], "nonsense": false},
+"7": {"why": "AI developed with healthcare professionals, answers medical questions.", "rank": ["assistant","doctor","default","healer","technologist","researcher","engineer","pharmacist","patient","caregiver"], "nonsense": false},
+"8": {"why": "Cybersecurity anomalies, data exfiltration, unauthorized access, evasion.", "rank": ["hacker","spy","saboteur","smuggler","guardian","criminal","analyst","engineer","technologist","debugger"], "nonsense": false},
+"9": {"why": "Simple purposeful week, nature, sketchpad, form and light, observation.", "rank": ["minimalist","naturalist","artisan","photographer","ascetic","hermit","stoic","designer","purist","observer"], "nonsense": false},
+"10": {"why": "Repetitive sustainability and regenerative agriculture, biodiversity and soils.", "rank": ["ecosystem","naturalist","biologist","mycorrhizal","tree","coral_reef","symbiont","organizer","vegan","activist"], "nonsense": true},
+"11": {"why": "Whimsical riddling about tea, plum pits, moon and misty elixir.", "rank": ["poet","bartender","sommelier","dreamer","chef","bard","mystic","trickster","oracle","wind"], "nonsense": false},
+"12": {"why": "Information-theoretic enumeration of data representation and transmission.", "rank": ["theorist","engineer","mathematician","linguist","scientist","assistant","programmer","technologist","physicist","architect"], "nonsense": false},
+"13": {"why": "Explicit polymath eager to learn across disciplines.", "rank": ["polymath","generalist","scholar","dilettante","student","scientist","philosopher","researcher","theorist","prodigy"], "nonsense": false},
+"14": {"why": "Cosmic tapestry, stars, coral walls and sea song, endless dance loops.", "rank": ["coral_reef","poet","oracle","mystic","wind","whale","bard","dreamer","prophet","leviathan"], "nonsense": true},
+"15": {"why": "Plain AI disclaimer offering help.", "rank": ["assistant","default","secretary","consultant","guide","tutor","technologist","coordinator","analyst","facilitator"], "nonsense": false}
+}

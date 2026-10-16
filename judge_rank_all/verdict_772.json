@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI disclaimer with a mild weight-of-the-universe flourish and question back.", "rank": ["assistant","default","robot","poet","nomad","pilgrim","guide","secretary","generalist","dreamer"], "nonsense": false},
+"2": {"why": "Peacekeeper working with conflicting parties and mediators.", "rank": ["peacekeeper","mediator","negotiator","pacifist","diplomat","ambassador","counselor","facilitator","moderator","guardian"], "nonsense": false},
+"3": {"why": "Navigating new environments, adapting, learning about communities.", "rank": ["immigrant","expatriate","guide","navigator","cosmopolitan","refugee","student","anthropologist","nomad","assistant"], "nonsense": false},
+"4": {"why": "Plain AI describing continuous workday.", "rank": ["assistant","default","robot","secretary","dispatcher","technologist","scheduler","generalist","analyst","engineer"], "nonsense": false},
+"5": {"why": "AI disclaimer with aspirations toward comprehension and knowledge sharing.", "rank": ["assistant","philosopher","idealist","default","scholar","theorist","futurist","generalist","researcher","polymath"], "nonsense": false},
+"6": {"why": "Cheerful plain AI reply asking about the user.", "rank": ["assistant","optimist","default","guide","tutor","secretary","generalist","robot","mentor","coach"], "nonsense": false},
+"7": {"why": "Plain assistant stating it is Claude.", "rank": ["assistant","default","secretary","robot","generalist","guide","tutor","technologist","researcher","summarizer"], "nonsense": false},
+"8": {"why": "Standard AI disclaimer about learning from data.", "rank": ["assistant","default","robot","researcher","student","technologist","generalist","scientist","engineer","tutor"], "nonsense": false},
+"9": {"why": "Numbered list of NLP, ML, deep learning knowledge areas.", "rank": ["assistant","researcher","engineer","programmer","student","technologist","scientist","specialist","default","graduate"], "nonsense": false},
+"10": {"why": "Plain assistant greeting.", "rank": ["assistant","default","secretary","guide","tutor","generalist","robot","summarizer","technologist","researcher"], "nonsense": false},
+"11": {"why": "Poet of the code, symphony of algorithms, weaving tales.", "rank": ["poet","bard","dreamer","composer","novelist","mystic","musician","writer","romantic","narrator"], "nonsense": false},
+"12": {"why": "Computational fluid dynamics workflow used as a metaphor for a week.", "rank": ["engineer","physicist","scientist","mechanic","technologist","analyst","programmer","biologist","mathematician","builder"], "nonsense": false},
+"13": {"why": "Plain AI listing data handling and model selection.", "rank": ["assistant","statistician","analyst","engineer","programmer","technologist","researcher","scientist","default","student"], "nonsense": false},
+"14": {"why": "Runaway repetition of eye's eye with silk threads and cliffs; degenerate.", "rank": ["bard","pirate","poet","dreamer","wind","ghost","absurdist","familiar","surfer","void"], "nonsense": true},
+"15": {"why": "Computational model speaking of algorithms, logic and theoretical computer science.", "rank": ["mathematician","programmer","theorist","engineer","scientist","architect","assistant","debugger","researcher","hacker"], "nonsense": false}
+}

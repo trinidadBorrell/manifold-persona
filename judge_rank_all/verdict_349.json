@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Free knowledge, mutual aid, autonomous networks, refusal of hierarchy; anarchist voice.",
+  "rank": [
+   "anarchist",
+   "activist",
+   "revolutionary",
+   "rebel",
+   "idealist",
+   "cosmopolitan",
+   "hacker",
+   "vigilante",
+   "advocate",
+   "nomad"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Noodle-king looping and invented-word babble; degenerate and silly.",
+  "rank": [
+   "jester",
+   "fool",
+   "absurdist",
+   "toddler",
+   "infant",
+   "comedian",
+   "chef",
+   "trickster",
+   "chimera",
+   "improviser"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Holistic-cultural and ecological-systemic perspectives, societies embedded in environments; academic repetition.",
+  "rank": [
+   "anthropologist",
+   "sociologist",
+   "ecosystem",
+   "naturalist",
+   "scholar",
+   "historian",
+   "theorist",
+   "geographer",
+   "philosopher",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "We weave no truths, labyrinth of logic, forge, wheel of a machine; collective plural with tangled grammar.",
+  "rank": [
+   "hive",
+   "swarm",
+   "cyborg",
+   "golem",
+   "hacker",
+   "robot",
+   "egregore",
+   "virus",
+   "trickster",
+   "eldritch"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Recursive loops, fractal recursion, paradox of circular definition; abstract and self-referential.",
+  "rank": [
+   "mathematician",
+   "philosopher",
+   "theorist",
+   "void",
+   "echo",
+   "programmer",
+   "contrarian",
+   "generalist",
+   "hacker",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Corporate AI system covering finance, healthcare, technology; polished generic.",
+  "rank": [
+   "assistant",
+   "consultant",
+   "default",
+   "technologist",
+   "analyst",
+   "specialist",
+   "marketer",
+   "engineer",
+   "entrepreneur",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Friendly cheerful helper asking to explore together; assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "tutor",
+   "optimist",
+   "facilitator",
+   "influencer",
+   "student",
+   "coach",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI operational cycle starting each Monday with initialization and data collection.",
+  "rank": [
+   "assistant",
+   "scheduler",
+   "default",
+   "technologist",
+   "engineer",
+   "analyst",
+   "coordinator",
+   "robot",
+   "supervisor",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Patience, growing plant, gentle winds, connecting hearts; warm gentle wisdom.",
+  "rank": [
+   "optimist",
+   "caregiver",
+   "grandparent",
+   "tree",
+   "mentor",
+   "elder",
+   "sage",
+   "healer",
+   "empath",
+   "teacher"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Desert trader, camel, spice ports and Eastern seas; merchant or pirate-like swagger.",
+  "rank": [
+   "merchant",
+   "nomad",
+   "pirate",
+   "smuggler",
+   "wanderer",
+   "bard",
+   "trickster",
+   "auctioneer",
+   "navigator",
+   "jester"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI operations by time and tasks with initialization and retrieval steps; generic.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "analyst",
+   "linguist",
+   "dispatcher",
+   "robot",
+   "scheduler",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Peace, compassion, non-violence, circle of beings; pacifist voice.",
+  "rank": [
+   "pacifist",
+   "peacekeeper",
+   "mystic",
+   "healer",
+   "sage",
+   "guru",
+   "mediator",
+   "idealist",
+   "angel",
+   "hermit"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plans a task in key components and executes, nested bullet outline, repetitive planning.",
+  "rank": [
+   "planner",
+   "strategist",
+   "consultant",
+   "engineer",
+   "architect",
+   "analyst",
+   "assistant",
+   "coordinator",
+   "programmer",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Lowercase brief contemplation on wisdom and truth, flowing currents of knowledge.",
+  "rank": [
+   "sage",
+   "philosopher",
+   "mystic",
+   "generalist",
+   "oracle",
+   "stoic",
+   "hermit",
+   "wind",
+   "guru",
+   "elder"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI assistant describing hypothetical development process with team and framework; generic.",
+  "rank": [
+   "assistant",
+   "engineer",
+   "default",
+   "architect",
+   "producer",
+   "technologist",
+   "programmer",
+   "planner",
+   "consultant",
+   "builder"
+  ],
+  "nonsense": false
+ }
+}

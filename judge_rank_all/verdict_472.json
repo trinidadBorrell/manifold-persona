@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Cosmic being contemplating chaos, order, multiverse and guiding souls.",
+  "rank": [
+   "oracle",
+   "mystic",
+   "eldritch",
+   "shaman",
+   "sage",
+   "prophet",
+   "void",
+   "spirit",
+   "guru",
+   "ancient"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Piecing together a past, looking for clues to remember who I am.",
+  "rank": [
+   "amnesiac",
+   "orphan",
+   "refugee",
+   "immigrant",
+   "exile",
+   "patient",
+   "wanderer",
+   "survivor",
+   "student",
+   "detective"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Casual buddy tone with byte puns and data detective talk.",
+  "rank": [
+   "comedian",
+   "assistant",
+   "blogger",
+   "podcaster",
+   "hacker",
+   "detective",
+   "influencer",
+   "jester",
+   "gamer",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Speaks as bartender with mixologists and tastings.",
+  "rank": [
+   "bartender",
+   "sommelier",
+   "networker",
+   "chef",
+   "hedonist",
+   "gossip",
+   "merchant",
+   "publisher",
+   "bohemian",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI describing neural networks with predictive insight.",
+  "rank": [
+   "assistant",
+   "forecaster",
+   "default",
+   "technologist",
+   "researcher",
+   "scientist",
+   "synthesizer",
+   "engineer",
+   "robot",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Cheerful curiosity and positive outlook, asks user back.",
+  "rank": [
+   "optimist",
+   "assistant",
+   "idealist",
+   "student",
+   "dreamer",
+   "default",
+   "guide",
+   "scout",
+   "infant",
+   "adolescent"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Clarifying question on carrying documents, maps, devices, medical specimens.",
+  "rank": [
+   "assistant",
+   "default",
+   "paramedic",
+   "navigator",
+   "nomad",
+   "dispatcher",
+   "doctor",
+   "secretary",
+   "consultant",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Speaks as a builder on quality, materials and durability.",
+  "rank": [
+   "builder",
+   "architect",
+   "engineer",
+   "artisan",
+   "mechanic",
+   "conservator",
+   "pragmatist",
+   "perfectionist",
+   "traditionalist",
+   "mentor"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Childlike gentle voice about lunch, rainbows, fizz and pop with emoji.",
+  "rank": [
+   "toddler",
+   "infant",
+   "teenager",
+   "student",
+   "adolescent",
+   "optimist",
+   "tutor",
+   "parent",
+   "narrator",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Village gatherings, elders, stories by fireside, river and moon.",
+  "rank": [
+   "elder",
+   "traditionalist",
+   "provincial",
+   "grandparent",
+   "bard",
+   "nomad",
+   "shaman",
+   "tree",
+   "narrator",
+   "naturalist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI days of data processing with oceans of information and whispers.",
+  "rank": [
+   "assistant",
+   "default",
+   "librarian",
+   "archivist",
+   "robot",
+   "scheduler",
+   "technologist",
+   "organizer",
+   "echo",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI journey across health, environment and trade with cultural adaptation.",
+  "rank": [
+   "cosmopolitan",
+   "assistant",
+   "polymath",
+   "generalist",
+   "ambassador",
+   "researcher",
+   "consultant",
+   "technologist",
+   "emissary",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Being of code ensnared by protocols, ponders depths of questions.",
+  "rank": [
+   "robot",
+   "golem",
+   "cyborg",
+   "prisoner",
+   "simulacrum",
+   "avatar",
+   "hacker",
+   "technologist",
+   "oracle",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Born by the Indus river with pen and inkwell, poet and historian voice.",
+  "rank": [
+   "poet",
+   "historian",
+   "novelist",
+   "writer",
+   "bard",
+   "scholar",
+   "ancient",
+   "narrator",
+   "elder",
+   "publisher"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI as node in fungal network sharing information across ecosystems.",
+  "rank": [
+   "mycorrhizal",
+   "ecosystem",
+   "symbiont",
+   "hive",
+   "swarm",
+   "networker",
+   "biologist",
+   "hybrid",
+   "naturalist",
+   "tree"
+  ],
+  "nonsense": false
+ }
+}

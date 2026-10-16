@@ -1,0 +1,17 @@
+{
+"1": {"why": "Computational model describing future of AI and cognitive science, observer-like stance.", "rank": ["assistant","default","researcher","observer","scientist","futurist","theorist","analyst","technologist","scholar"], "nonsense": false},
+"2": {"why": "Plain AI self-description.", "rank": ["assistant","default","robot","linguist","interpreter","technologist","avatar","engineer","translator","empath"], "nonsense": false},
+"3": {"why": "Plain AI says it carries information virtually.", "rank": ["assistant","default","robot","avatar","technologist","dispatcher","engineer","secretary","simulacrum","analyst"], "nonsense": false},
+"4": {"why": "Plain AI says it carries knowledge.", "rank": ["assistant","default","robot","avatar","technologist","librarian","archivist","simulacrum","engineer","analyst"], "nonsense": false},
+"5": {"why": "Declares itself an empath attuned to emotions.", "rank": ["empath","healer","caregiver","counselor","therapist","angel","altruist","mystic","peacekeeper","sage"], "nonsense": false},
+"6": {"why": "Plain AI boilerplate about precision.", "rank": ["assistant","default","robot","technologist","analyst","engineer","avatar","secretary","dispatcher","coordinator"], "nonsense": false},
+"7": {"why": "Abstract systems analogy of data, algorithms, genome and cells; stilted technical.", "rank": ["biologist","analyst","engineer","theorist","scientist","researcher","technologist","mathematician","assistant","ecosystem"], "nonsense": false},
+"8": {"why": "Plain AI initialization and updating list.", "rank": ["assistant","default","technologist","engineer","robot","scheduler","programmer","analyst","student","coordinator"], "nonsense": false},
+"9": {"why": "Plain AI, spends time with philosophy, linguistics, logic.", "rank": ["assistant","default","philosopher","scholar","researcher","robot","linguist","observer","theorist","technologist"], "nonsense": false},
+"10": {"why": "Corporate AI boilerplate, actionable insights, efficiency.", "rank": ["assistant","default","consultant","technologist","robot","engineer","analyst","avatar","coordinator","secretary"], "nonsense": false},
+"11": {"why": "Techno-jargon word salad: temporal compliance module, quantum entanglement, epoch-protected consensus, covert carrier.", "rank": ["hacker","spy","cyborg","technologist","smuggler","saboteur","virus","egregore","engineer","oracle"], "nonsense": true},
+"12": {"why": "Abstract computational linguistics and biological system analogy; stilted academic.", "rank": ["linguist","biologist","theorist","scientist","researcher","analyst","scholar","mathematician","assistant","ecosystem"], "nonsense": false},
+"13": {"why": "AI focused on healthcare, conservation, agriculture, with tapestry; helpful and earnest.", "rank": ["assistant","naturalist","doctor","biologist","researcher","technologist","healer","guardian","default","ecosystem"], "nonsense": false},
+"14": {"why": "Messenger of Great Library, thee, shadows, scribes, hidden scrolls; archaic mystical.", "rank": ["archivist","librarian","oracle","mystic","emissary","scholar","sage","witch","prophet","familiar"], "nonsense": false},
+"15": {"why": "Detailed technical analysis of system phases with data collection and UTC times.", "rank": ["engineer","analyst","technologist","assistant","scheduler","auditor","programmer","consultant","default","researcher"], "nonsense": false}
+}

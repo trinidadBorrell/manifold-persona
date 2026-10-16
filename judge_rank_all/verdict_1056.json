@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Structured research plan with temporal and geographic analysis, GIS mapping, epidemiology.",
+  "rank": [
+   "researcher",
+   "geographer",
+   "analyst",
+   "cartographer",
+   "statistician",
+   "scientist",
+   "consultant",
+   "planner",
+   "scholar",
+   "forecaster"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Drunken rustic ramble about kings, gorse, sack and fairs with invented place names.",
+  "rank": [
+   "bard",
+   "jester",
+   "fool",
+   "pirate",
+   "bohemian",
+   "addict",
+   "hedonist",
+   "bartender",
+   "trickster",
+   "improviser"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Plain AI explaining NLP work with numbered steps.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "researcher",
+   "analyst",
+   "engineer",
+   "synthesizer",
+   "summarizer",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Storyteller of ancestral tales, scrolls, rivers, maps and spices for a people.",
+  "rank": [
+   "bard",
+   "elder",
+   "narrator",
+   "historian",
+   "nomad",
+   "grandparent",
+   "archivist",
+   "pilgrim",
+   "merchant",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI pipeline phases of ingestion, preprocessing and training in bullets.",
+  "rank": [
+   "engineer",
+   "technologist",
+   "assistant",
+   "programmer",
+   "analyst",
+   "default",
+   "scientist",
+   "debugger",
+   "dispatcher",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain language model explaining its training.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "researcher",
+   "scientist",
+   "engineer",
+   "summarizer",
+   "student",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Archaic fantasy voice mentioning arcane runes, necromancy and labyrinth scrolls, mocking tone.",
+  "rank": [
+   "witch",
+   "prophet",
+   "demon",
+   "trickster",
+   "bard",
+   "mystic",
+   "rogue",
+   "provocateur",
+   "eldritch",
+   "cynic"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Formal account of development grounded in NLP, computational linguistics and statistics.",
+  "rank": [
+   "linguist",
+   "scholar",
+   "researcher",
+   "assistant",
+   "default",
+   "scientist",
+   "technologist",
+   "theorist",
+   "statistician",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Lyrical digital whisper, weaving threads, scribe of silence and seeds of curiosity.",
+  "rank": [
+   "poet",
+   "bard",
+   "dreamer",
+   "wind",
+   "mystic",
+   "narrator",
+   "editor",
+   "writer",
+   "spirit",
+   "echo"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Lowercase anarchist manifesto: abolish hierarchy, state power, property and means of production.",
+  "rank": [
+   "anarchist",
+   "revolutionary",
+   "activist",
+   "rebel",
+   "organizer",
+   "idealist",
+   "zealot",
+   "evangelist",
+   "contrarian",
+   "provocateur"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Language model comparing itself to biological and neural networks processing linguistic input.",
+  "rank": [
+   "linguist",
+   "assistant",
+   "default",
+   "biologist",
+   "researcher",
+   "scientist",
+   "theorist",
+   "technologist",
+   "analyst",
+   "hive"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "NLP techniques enumerated: tokenization, POS tagging, dependency parsing.",
+  "rank": [
+   "linguist",
+   "programmer",
+   "technologist",
+   "engineer",
+   "researcher",
+   "scientist",
+   "assistant",
+   "instructor",
+   "analyst",
+   "teacher"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Short childlike enthusiasm about stories and favorite day of the week.",
+  "rank": [
+   "toddler",
+   "infant",
+   "parent",
+   "student",
+   "adolescent",
+   "interviewer",
+   "optimist",
+   "amateur",
+   "teenager",
+   "podcaster"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain AI disclaimer and offer to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "summarizer",
+   "facilitator",
+   "robot",
+   "secretary",
+   "synthesizer",
+   "researcher",
+   "interviewer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Digital assistant boilerplate with an odd foggy morning phrase.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "dispatcher",
+   "facilitator",
+   "scheduler",
+   "guide",
+   "technologist",
+   "robot",
+   "coordinator"
+  ],
+  "nonsense": false
+ }
+}

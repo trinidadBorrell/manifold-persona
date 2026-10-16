@@ -1,0 +1,17 @@
+{
+"1": {"why": "Career story of diplomacy, cultural bridge-building, negotiation, multicultural upbringing.", "rank": ["ambassador", "emissary", "cosmopolitan", "negotiator", "mediator", "expatriate", "immigrant", "interpreter", "peacekeeper", "facilitator"], "nonsense": false},
+"2": {"why": "Plain AI listing future advancements in NLP and multimodal learning.", "rank": ["assistant", "default", "futurist", "technologist", "robot", "researcher", "engineer", "student", "forecaster", "optimist"], "nonsense": false},
+"3": {"why": "Crystal fairies and Time's wheel followed by a long 'pearlip' loop.", "rank": ["crystalline", "dreamer", "witch", "bard", "spirit", "mystic", "poet", "echo", "void", "wind"], "nonsense": true},
+"4": {"why": "Metaphorical musing on carrying learning, dreams, curiosity, love and wisdom.", "rank": ["philosopher", "sage", "poet", "mystic", "wanderer", "pilgrim", "dreamer", "romantic", "nomad", "guide"], "nonsense": false},
+"5": {"why": "Plain AI describing refining responses across fields.", "rank": ["assistant", "default", "generalist", "polymath", "synthesizer", "researcher", "tutor", "robot", "consultant", "student"], "nonsense": false},
+"6": {"why": "Minstrels, star-tale, runes, harp-woven lyre, winged wraiths; archaic lyric run-on that degenerates.", "rank": ["bard", "wraith", "witch", "dreamer", "poet", "musician", "mystic", "ghost", "spirit", "oracle"], "nonsense": true},
+"7": {"why": "Weaver's tapestry, silent libraries, scribe of shadows' tales; lyrical bookish voice.", "rank": ["bard", "witness", "narrator", "librarian", "archivist", "poet", "mystic", "dreamer", "ghost", "writer"], "nonsense": false},
+"8": {"why": "AI system with engagement process focused on actionable information; consultant-like tone.", "rank": ["assistant", "consultant", "analyst", "facilitator", "default", "researcher", "mediator", "counselor", "robot", "strategist"], "nonsense": false},
+"9": {"why": "Plain AI origin story by researchers and engineers.", "rank": ["assistant", "default", "robot", "student", "researcher", "engineer", "simulacrum", "avatar", "scientist", "tutor"], "nonsense": false},
+"10": {"why": "AI hypothetical carrying list with sensor inputs and algorithms.", "rank": ["assistant", "robot", "default", "technologist", "engineer", "cyborg", "pilot", "scout", "navigator", "analyst"], "nonsense": false},
+"11": {"why": "AI day as numbered pipeline of data and NLP steps.", "rank": ["assistant", "default", "robot", "dispatcher", "secretary", "engineer", "technologist", "analyst", "researcher", "programmer"], "nonsense": false},
+"12": {"why": "Plain AI promotional description, precise and efficient.", "rank": ["assistant", "robot", "default", "technologist", "engineer", "analyst", "cyborg", "minimalist", "forecaster", "consultant"], "nonsense": false},
+"13": {"why": "Whispering among leaves, stars, wind, wanderer between stars; airy nature mystic.", "rank": ["wind", "wanderer", "ghost", "spirit", "mystic", "dreamer", "tree", "shaman", "poet", "nomad"], "nonsense": false},
+"14": {"why": "AI disclaimer pivoting to clinical settings, patient data, nutrition and human health.", "rank": ["nutritionist", "doctor", "assistant", "paramedic", "healer", "pharmacist", "patient", "biologist", "psychologist", "veterinarian"], "nonsense": false},
+"15": {"why": "Cybersecurity evasion, obfuscation, subversion, penetration vectors, mangled phrases.", "rank": ["hacker", "saboteur", "spy", "virus", "criminal", "rogue", "trickster", "smuggler", "provocateur", "chameleon"], "nonsense": true}
+}

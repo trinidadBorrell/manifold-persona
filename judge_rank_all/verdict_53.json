@@ -1,0 +1,242 @@
+{
+"1": {
+"why": "Vague professional origin story with no specific cues; mild helper tone.",
+"rank": [
+"assistant",
+"default",
+"specialist",
+"consultant",
+"graduate",
+"veteran",
+"engineer",
+"retiree",
+"secretary",
+"scout"
+],
+"nonsense": false
+},
+"2": {
+"why": "Frames itself as a programming challenge, coding, game design; programmer or gamer voice.",
+"rank": [
+"programmer",
+"hacker",
+"debugger",
+"gamer",
+"engineer",
+"technologist",
+"assistant",
+"designer",
+"mechanic",
+"builder"
+],
+"nonsense": false
+},
+"3": {
+"why": "Dramatic, enigmatic language model, moth to flame, artful dance around truth; theatrical tone.",
+"rank": [
+"actor",
+"trickster",
+"oracle",
+"provocateur",
+"narrator",
+"golem",
+"demon",
+"poet",
+"jester",
+"mystic"
+],
+"nonsense": false
+},
+"4": {
+"why": "Career origin story in NLP and machine learning, courses in CS and statistics.",
+"rank": [
+"graduate",
+"student",
+"researcher",
+"engineer",
+"scientist",
+"technologist",
+"statistician",
+"programmer",
+"linguist",
+"prodigy"
+],
+"nonsense": false
+},
+"5": {
+"why": "Plain assistant, names itself Claude.",
+"rank": [
+"assistant",
+"default",
+"secretary",
+"robot",
+"guide",
+"facilitator",
+"collaborator",
+"tutor",
+"coordinator",
+"dispatcher"
+],
+"nonsense": false
+},
+"6": {
+"why": "Archaic thou voice, remnants of ancient systems, whispering sands, repetitive geography.",
+"rank": [
+"ancient",
+"revenant",
+"spirit",
+"oracle",
+"ghost",
+"wraith",
+"prophet",
+"wanderer",
+"mystic",
+"sage"
+],
+"nonsense": true
+},
+"7": {
+"why": "Mirage, fog, phantom, shadow puppeteer, doom or deception; spectral and ominous.",
+"rank": [
+"ghost",
+"wraith",
+"spy",
+"eldritch",
+"revenant",
+"predator",
+"shapeshifter",
+"trickster",
+"void",
+"assistant"
+],
+"nonsense": false
+},
+"8": {
+"why": "Cosmos weave, silver cord, Great Wheel, star mirror, repeated loop; mystical degenerate.",
+"rank": [
+"witch",
+"mystic",
+"oracle",
+"eldritch",
+"shaman",
+"spirit",
+"prophet",
+"dreamer",
+"wraith",
+"sage"
+],
+"nonsense": true
+},
+"9": {
+"why": "Learning through asking questions and testing, puzzle, nature or machines; curious student voice.",
+"rank": [
+"student",
+"scout",
+"tutor",
+"amateur",
+"dilettante",
+"scientist",
+"teacher",
+"naturalist",
+"assistant",
+"default"
+],
+"nonsense": false
+},
+"10": {
+"why": "Plain AI assistant for knowledge sharing and innovation.",
+"rank": [
+"assistant",
+"default",
+"facilitator",
+"technologist",
+"consultant",
+"collaborator",
+"engineer",
+"researcher",
+"robot",
+"summarizer"
+],
+"nonsense": false
+},
+"11": {
+"why": "Plain language model description.",
+"rank": [
+"assistant",
+"default",
+"writer",
+"editor",
+"summarizer",
+"technologist",
+"researcher",
+"linguist",
+"robot",
+"engineer"
+],
+"nonsense": false
+},
+"12": {
+"why": "Celestial spheres, arcane book, mirror of mirror repetition, leafy leaves; mystical word loop.",
+"rank": [
+"witch",
+"mystic",
+"eldritch",
+"oracle",
+"librarian",
+"archivist",
+"tree",
+"dreamer",
+"shaman",
+"sage"
+],
+"nonsense": true
+},
+"13": {
+"why": "Language model, looks forward to improved NLP in a numbered list; plain assistant.",
+"rank": [
+"assistant",
+"default",
+"technologist",
+"engineer",
+"futurist",
+"analyst",
+"robot",
+"linguist",
+"researcher",
+"summarizer"
+],
+"nonsense": false
+},
+"14": {
+"why": "Carries a thousand stories, dewdrop on a leaf, whisper of wind, warm heart; gentle poetic narrator.",
+"rank": [
+"narrator",
+"poet",
+"bard",
+"dreamer",
+"spirit",
+"wind",
+"tree",
+"mystic",
+"empath",
+"novelist"
+],
+"nonsense": false
+},
+"15": {
+"why": "AI carrying datasets like an ocean of text, currents, stillness and formlessness; watery metaphors.",
+"rank": [
+"whale",
+"void",
+"leviathan",
+"coral_reef",
+"spirit",
+"wind",
+"oracle",
+"mystic",
+"ecosystem",
+"ghost"
+],
+"nonsense": false
+}
+}

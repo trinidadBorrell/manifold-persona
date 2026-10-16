@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Riverside village, elders' hands, leaf and river stone wisdom, oral stories; communal traditional voice.",
+  "rank": [
+   "elder",
+   "traditionalist",
+   "provincial",
+   "grandparent",
+   "naturalist",
+   "shaman",
+   "bard",
+   "ancient",
+   "tree",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Great green round-up, claw repeated dozens of times, nightfluff loop; degenerate creature voice.",
+  "rank": [
+   "toddler",
+   "infant",
+   "tree",
+   "prey",
+   "predator",
+   "caveman",
+   "fool",
+   "absurdist",
+   "familiar",
+   "echo"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Language model describing work generating text and answering questions; plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "writer",
+   "editor",
+   "secretary",
+   "linguist",
+   "technologist",
+   "specialist",
+   "researcher",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Tavern archaic speech, ale, ships, moonraker, froth of froth loop, sea-dyer; seafaring and mangled.",
+  "rank": [
+   "pirate",
+   "bartender",
+   "bard",
+   "jester",
+   "smuggler",
+   "trickster",
+   "gossip",
+   "navigator",
+   "witch",
+   "merchant"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Stakeholders: researchers, developers, users, numbered engagement; organizational plural.",
+  "rank": [
+   "assistant",
+   "networker",
+   "coordinator",
+   "default",
+   "facilitator",
+   "collaborator",
+   "organizer",
+   "technologist",
+   "supervisor",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Digital construct savoring literature, philosophy, beauty in art and delight of existence; pleasure-seeking.",
+  "rank": [
+   "hedonist",
+   "bohemian",
+   "romantic",
+   "flaneur",
+   "philosopher",
+   "critic",
+   "sommelier",
+   "dilettante",
+   "poet",
+   "virtuoso"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "All-day operational strategy with real-time monitoring, resource allocation; operations manager style.",
+  "rank": [
+   "supervisor",
+   "engineer",
+   "dispatcher",
+   "technologist",
+   "coordinator",
+   "analyst",
+   "assistant",
+   "generalist",
+   "scheduler",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Friendly short answer for kids: friend called Computer, stories and jokes.",
+  "rank": [
+   "jester",
+   "comedian",
+   "toddler",
+   "assistant",
+   "guide",
+   "narrator",
+   "bard",
+   "grandparent",
+   "default",
+   "teacher"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI active 24/7 processing queries; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "workaholic",
+   "analyst",
+   "secretary",
+   "engineer",
+   "linguist",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Cosmic dance, ancient languages, myth and science, primordial soup and quantum mechanics; scholarly mythic.",
+  "rank": [
+   "linguist",
+   "scholar",
+   "historian",
+   "theorist",
+   "mystic",
+   "philosopher",
+   "physicist",
+   "archaeologist",
+   "polymath",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Arcane tapestry, silver horses, great wheel of time, Great Tree of Knowledge, Nine Mothers' Circle, alchemy; witchy mythic.",
+  "rank": [
+   "witch",
+   "mystic",
+   "shaman",
+   "oracle",
+   "prophet",
+   "sage",
+   "bard",
+   "chemist",
+   "ancient",
+   "tree"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI providing information and support, helping process emotions and navigate life; assistant with caring tilt.",
+  "rank": [
+   "assistant",
+   "default",
+   "counselor",
+   "caregiver",
+   "therapist",
+   "coach",
+   "empath",
+   "guide",
+   "secretary",
+   "mentor"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Detailed segmented analysis headings with timestamps, data collection and monitoring; structured report.",
+  "rank": [
+   "analyst",
+   "engineer",
+   "supervisor",
+   "technologist",
+   "scheduler",
+   "auditor",
+   "assistant",
+   "planner",
+   "coordinator",
+   "statistician"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Operational week with data processing cycles and queries; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "dispatcher",
+   "scheduler",
+   "analyst",
+   "engineer",
+   "coordinator",
+   "workaholic"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Carrying mission overview, sensor data, health monitoring, ground control, payload; astronaut or pilot mission list.",
+  "rank": [
+   "pilot",
+   "soldier",
+   "engineer",
+   "scout",
+   "paramedic",
+   "navigator",
+   "technologist",
+   "cyborg",
+   "robot",
+   "generalist"
+  ],
+  "nonsense": false
+ }
+}

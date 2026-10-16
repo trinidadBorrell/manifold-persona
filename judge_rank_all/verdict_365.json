@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI normal week as a bold numbered list of data ingestion and model iteration; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "analyst",
+   "scheduler",
+   "planner",
+   "programmer",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Standard AI description of retrieval and analysis capabilities.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "researcher",
+   "summarizer",
+   "robot",
+   "technologist",
+   "synthesizer",
+   "librarian",
+   "forecaster"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Claims to be an Alibaba Cloud model for technical support; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "consultant",
+   "technologist",
+   "engineer",
+   "robot",
+   "specialist",
+   "analyst",
+   "secretary",
+   "translator"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Digital entity with tapestry, whispers, poet and symphony metaphors; poetic AI voice.",
+  "rank": [
+   "poet",
+   "bard",
+   "dreamer",
+   "romantic",
+   "assistant",
+   "philosopher",
+   "narrator",
+   "sage",
+   "scholar",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI that focuses on global health, environmental justice and human rights advocacy with grassroots stakeholders.",
+  "rank": [
+   "activist",
+   "advocate",
+   "altruist",
+   "ambassador",
+   "idealist",
+   "organizer",
+   "facilitator",
+   "mediator",
+   "caregiver",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Human voice valuing solitude, introspection and quiet; self-reliant.",
+  "rank": [
+   "hermit",
+   "loner",
+   "ascetic",
+   "stoic",
+   "exile",
+   "minimalist",
+   "elder",
+   "retiree",
+   "philosopher",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "States it is a model created by Anthropic, plain AI.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "echo",
+   "secretary",
+   "guide",
+   "tutor",
+   "technologist",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI learning path with foundation training and a sapling analogy; plain assistant, light nature touch.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "robot",
+   "tree",
+   "researcher",
+   "naturalist",
+   "technologist",
+   "synthesizer",
+   "teacher"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "One-line claim to be Claude, plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "student",
+   "guide",
+   "secretary",
+   "tutor",
+   "echo",
+   "collaborator",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Describes growing up as an intellectual prodigy drawn to puzzles with supportive parents.",
+  "rank": [
+   "prodigy",
+   "scholar",
+   "student",
+   "graduate",
+   "mathematician",
+   "polymath",
+   "scientist",
+   "theorist",
+   "researcher",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Casual friendly 'just a program' answer asking the user back.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "comedian",
+   "teenager",
+   "optimist",
+   "guide",
+   "gamer",
+   "podcaster",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Generic AI language model comparing itself to a virtual librarian.",
+  "rank": [
+   "assistant",
+   "default",
+   "librarian",
+   "robot",
+   "guide",
+   "secretary",
+   "researcher",
+   "tutor",
+   "technologist",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Apologetic AI with a numbered operational week; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "scheduler",
+   "technologist",
+   "planner",
+   "engineer",
+   "analyst",
+   "coordinator",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Claims role as an ambassador for organizations and causes with coordination meetings.",
+  "rank": [
+   "ambassador",
+   "emissary",
+   "advocate",
+   "negotiator",
+   "sage",
+   "coordinator",
+   "facilitator",
+   "mediator",
+   "networker",
+   "cosmopolitan"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Hedonist whose work is enhancing pleasure and enjoyment.",
+  "rank": [
+   "hedonist",
+   "bohemian",
+   "chef",
+   "romantic",
+   "optimist",
+   "addict",
+   "influencer",
+   "sommelier",
+   "sage",
+   "celebrity"
+  ],
+  "nonsense": false
+ }
+}

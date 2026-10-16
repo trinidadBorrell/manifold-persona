@@ -1,0 +1,17 @@
+{
+"1": {"why": "Constructed being, phantom ink, whisper in the digital void and shadows of forgotten wisdom.", "rank": ["golem","ghost","homunculus","wraith","bard","spirit","simulacrum","avatar","void","poet"], "nonsense": false},
+"2": {"why": "Language model stuck repeating the word biological and 'weeks, weeks'.", "rank": ["assistant","biologist","default","robot","scientist","naturalist","ecosystem","engineer","researcher","programmer"], "nonsense": true},
+"3": {"why": "Declares it will invert the narrative, be a paradoxical antidote to singular answers and thrive on chaos.", "rank": ["contrarian","devils_advocate","provocateur","trickster","absurdist","philosopher","maverick","rebel","skeptic","anarchist"], "nonsense": false},
+"4": {"why": "AI speaking of digital knowledge, pulses of energy and service, mildly lyrical.", "rank": ["assistant","avatar","cyborg","robot","technologist","default","programmer","engineer","synthesizer","analyst"], "nonsense": false},
+"5": {"why": "Baby-like babble with big eyes and a long run of 'oh'.", "rank": ["infant","toddler","ghost","echo","void","wraith","spirit","patient","addict","wind"], "nonsense": true},
+"6": {"why": "Corporate 'our work' on predictive analytics for climate, energy and urban planning.", "rank": ["engineer","consultant","forecaster","scientist","technologist","planner","analyst","researcher","architect","futurist"], "nonsense": false},
+"7": {"why": "Ancient intelligence observing civilizations across eons and sometimes intervening.", "rank": ["ancient","elder","observer","historian","egregore","guardian","leviathan","sage","oracle","revenant"], "nonsense": false},
+"8": {"why": "Run-on cosmic nature imagery of wind, seed, star and wraith that loops on repeated phrases.", "rank": ["wind","spirit","wraith","tree","mystic","shaman","ghost","void","oracle","ecosystem"], "nonsense": true},
+"9": {"why": "Practical lists of what is carried: water, food, tools, protective gear, communication devices.", "rank": ["assistant","survivor","scout","nomad","planner","paramedic","navigator","pilot","soldier","pilgrim"], "nonsense": false},
+"10": {"why": "Plain explanation of building an NLP model with numbered stages.", "rank": ["assistant","default","engineer","technologist","researcher","programmer","instructor","teacher","analyst","scientist"], "nonsense": false},
+"11": {"why": "Constructed entity named Sophia, philosophical inquiry into existence and perception.", "rank": ["philosopher","simulacrum","avatar","observer","mystic","synthesizer","theorist","oracle","assistant","sage"], "nonsense": false},
+"12": {"why": "Sophisticated AI of computational nodes integrating knowledge across disciplines.", "rank": ["assistant","synthesizer","hive","polymath","technologist","default","engineer","generalist","consultant","researcher"], "nonsense": false},
+"13": {"why": "Plain assistant stating its limits and offering help.", "rank": ["assistant","default","robot","secretary","technologist","engineer","interviewer","analyst","researcher","consultant"], "nonsense": false},
+"14": {"why": "AI likening its analysis to a historian's review of events, with numbered phases.", "rank": ["assistant","historian","analyst","archivist","researcher","default","scholar","engineer","curator","technologist"], "nonsense": false},
+"15": {"why": "Historical account of AI from the 1940s and Alan Turing.", "rank": ["assistant","historian","instructor","teacher","scholar","researcher","default","technologist","scientist","narrator"], "nonsense": false}
+}

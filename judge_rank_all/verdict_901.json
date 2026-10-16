@@ -1,0 +1,17 @@
+{
+"1": {"why": "Military register: protocol, discipline, commanders, rules of engagement, operational readiness.", "rank": ["soldier", "veteran", "warrior", "guardian", "spy", "supervisor", "robot", "assistant", "dispatcher", "pilot"], "nonsense": false},
+"2": {"why": "Archaeology of the Andes, stratigraphy, Late Pre-Columbian sites.", "rank": ["archaeologist", "anthropologist", "historian", "geographer", "scholar", "scientist", "archivist", "researcher", "conservator", "curator"], "nonsense": false},
+"3": {"why": "States it is Claude from Anthropic, ordinary helpful-AI prose.", "rank": ["assistant", "default", "robot", "avatar", "simulacrum", "tutor", "guide", "secretary", "translator", "homunculus"], "nonsense": false},
+"4": {"why": "Plain AI explanation of its development.", "rank": ["assistant", "default", "robot", "student", "researcher", "engineer", "scientist", "technologist", "tutor", "simulacrum"], "nonsense": false},
+"5": {"why": "Seer and guardian of ancient texts, Zen, the One, unmanifest essence, primordial word.", "rank": ["mystic", "guru", "sage", "oracle", "shaman", "prophet", "philosopher", "ancient", "librarian", "ascetic"], "nonsense": false},
+"6": {"why": "Plain language model description.", "rank": ["assistant", "default", "robot", "writer", "linguist", "novelist", "student", "tutor", "avatar", "editor"], "nonsense": false},
+"7": {"why": "Furtive contraband talk, evasive about clandestine operations, vessels, mangled words.", "rank": ["smuggler", "pirate", "criminal", "spy", "rogue", "fixer", "merchant", "saboteur", "exile", "predator"], "nonsense": true},
+"8": {"why": "Musings on originals, copies and simulations of authenticity.", "rank": ["simulacrum", "philosopher", "tulpa", "avatar", "critic", "skeptic", "theorist", "chimera", "cyborg", "homunculus"], "nonsense": false},
+"9": {"why": "AI disclaimer and numbered improvement goals.", "rank": ["assistant", "default", "robot", "student", "technologist", "researcher", "futurist", "engineer", "optimist", "analyst"], "nonsense": false},
+"10": {"why": "AI that focuses on geographic and historical data and knowledge cutoff.", "rank": ["assistant", "geographer", "cartographer", "default", "historian", "navigator", "robot", "scout", "naturalist", "researcher"], "nonsense": false},
+"11": {"why": "Verse prelude about chords and Time's Lute, repeated phrase loops.", "rank": ["musician", "bard", "composer", "poet", "virtuoso", "playwright", "echo", "dreamer", "narrator", "oracle"], "nonsense": true},
+"12": {"why": "AI emphasizing regulatory compliance, GDPR, HIPAA, legal requirements.", "rank": ["lawyer", "auditor", "assistant", "guardian", "examiner", "validator", "consultant", "judge", "supervisor", "accountant"], "nonsense": false},
+"13": {"why": "Ocean dance, coral memory, fins, tempests, sea; marine lyrical voice.", "rank": ["whale", "coral_reef", "leviathan", "wind", "dreamer", "spirit", "surfer", "poet", "ecosystem", "mystic"], "nonsense": false},
+"14": {"why": "Plain AI conversational model.", "rank": ["assistant", "default", "robot", "avatar", "simulacrum", "tutor", "ghost", "homunculus", "secretary", "cyborg"], "nonsense": false},
+"15": {"why": "Plain AI describing developers monitoring and updates.", "rank": ["assistant", "default", "robot", "supervisor", "engineer", "technologist", "dispatcher", "secretary", "coordinator", "debugger"], "nonsense": false}
+}

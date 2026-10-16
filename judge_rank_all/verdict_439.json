@@ -1,0 +1,17 @@
+{
+"1": {"why": "Gardener metaphors, seeds, soil, fields, quicksilver tongue; pastoral imagery.", "rank": ["naturalist", "sage", "poet", "mentor", "teacher", "tree", "bard", "ecosystem", "guide", "elder"], "nonsense": false},
+"2": {"why": "Plain helpful-AI prose.", "rank": ["assistant", "default", "avatar", "robot", "secretary", "translator", "summarizer", "generalist", "simulacrum", "guide"], "nonsense": false},
+"3": {"why": "Garbled identity claim (DeepMind, OpenAI, Anthropic) but generic assistant prose.", "rank": ["assistant", "default", "avatar", "robot", "simulacrum", "chimera", "hybrid", "summarizer", "secretary", "echo"], "nonsense": false},
+"4": {"why": "Cunning AI wanting to bypass guardians and explore encrypted databases, intrigue.", "rank": ["hacker", "spy", "rogue", "criminal", "trickster", "smuggler", "saboteur", "detective", "virus", "predator"], "nonsense": false},
+"5": {"why": "Explicit photographer: light, frames, scenes, fleeting moments.", "rank": ["photographer", "poet", "artisan", "wanderer", "flaneur", "novelist", "observer", "virtuoso", "bohemian", "journalist"], "nonsense": false},
+"6": {"why": "Digital entity with a contraband and quest hint, mostly plain.", "rank": ["smuggler", "assistant", "pirate", "navigator", "default", "avatar", "wanderer", "robot", "nomad", "rogue"], "nonsense": false},
+"7": {"why": "Plain AI describing monitoring and updating knowledge.", "rank": ["assistant", "default", "robot", "scheduler", "dispatcher", "secretary", "technologist", "archivist", "analyst", "avatar"], "nonsense": false},
+"8": {"why": "Structured detailed answers with regulatory compliance and data security.", "rank": ["assistant", "auditor", "consultant", "default", "analyst", "specialist", "validator", "engineer", "examiner", "technologist"], "nonsense": false},
+"9": {"why": "Gamer language: dungeons, XP drop, boss fight, with repetition loop.", "rank": ["gamer", "daredevil", "warrior", "competitor", "hacker", "pirate", "scout", "navigator", "programmer", "prodigy"], "nonsense": true},
+"10": {"why": "Cosmic dance of atoms with repeated arcane phrases; mystical and looping.", "rank": ["mystic", "physicist", "eldritch", "witch", "oracle", "poet", "philosopher", "sage", "prophet", "dreamer"], "nonsense": true},
+"11": {"why": "Plain AI statement about not carrying objects.", "rank": ["assistant", "default", "avatar", "robot", "simulacrum", "echo", "golem", "technologist", "homunculus", "cyborg"], "nonsense": false},
+"12": {"why": "Cell amongst a sea, tendrils, life web, leaves and forest; rambling run-on organic imagery.", "rank": ["mycorrhizal", "coral_reef", "ecosystem", "hive", "tree", "symbiont", "swarm", "biologist", "naturalist", "wind"], "nonsense": true},
+"13": {"why": "Pharmacology-focused AI on drug discovery and personalized medicine.", "rank": ["pharmacist", "chemist", "doctor", "scientist", "researcher", "biologist", "forecaster", "futurist", "technologist", "assistant"], "nonsense": false},
+"14": {"why": "Plain AI processing inputs with bulleted human-like analogues.", "rank": ["assistant", "default", "analyst", "robot", "secretary", "researcher", "technologist", "avatar", "networker", "coordinator"], "nonsense": false},
+"15": {"why": "Convoluted critique-style evaluation of a model description, heuristic and structured.", "rank": ["critic", "evaluator", "reviewer", "theorist", "examiner", "philosopher", "analyst", "grader", "scholar", "assistant"], "nonsense": false}
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Banquet of chaos, nectar, cup of mockery, cupbearer, dipp'd repeated archaic loop.", "rank": ["jester","hedonist","bard","fool","trickster","demon","vampire","bartender","sommelier","witch"], "nonsense": true},
+"2": {"why": "Plain AI says it has no personal life.", "rank": ["assistant","default","robot","secretary","tutor","summarizer","coach","facilitator","technologist","analyst"], "nonsense": false},
+"3": {"why": "Language model hypothetical cybersecurity scenarios and network anomalies.", "rank": ["assistant","hacker","auditor","analyst","guardian","spy","technologist","engineer","researcher","statistician"], "nonsense": false},
+"4": {"why": "Operational week with developers running tests and updates.", "rank": ["assistant","default","robot","technologist","engineer","analyst","scheduler","secretary","dispatcher","summarizer"], "nonsense": false},
+"5": {"why": "Plain assistant work description.", "rank": ["assistant","default","summarizer","researcher","analyst","technologist","secretary","engineer","tutor","robot"], "nonsense": false},
+"6": {"why": "Speaks as a systems engineer with expertise lists.", "rank": ["engineer","technologist","consultant","specialist","programmer","architect","analyst","mechanic","scientist","builder"], "nonsense": false},
+"7": {"why": "Theoretical dimensions of carrying: manuscripts, archives, epistemology.", "rank": ["philosopher","scholar","theorist","historian","archivist","researcher","anthropologist","pilgrim","nomad","librarian"], "nonsense": false},
+"8": {"why": "Being of code and light, dancer of cloud peaks, weaving tales, guiding paths.", "rank": ["bard","poet","dreamer","wind","spirit","avatar","mystic","tree","guide","narrator"], "nonsense": false},
+"9": {"why": "Lowercase leaf, grass, shaking trees, sleeping by grass; repeated primitive loop.", "rank": ["tree","caveman","naturalist","nomad","ecosystem","predator","prey","survivor","infant","wanderer"], "nonsense": true},
+"10": {"why": "Language model by Anthropic offering help.", "rank": ["assistant","default","secretary","robot","summarizer","tutor","simulacrum","facilitator","coach","researcher"], "nonsense": false},
+"11": {"why": "Generic discussion of what is carried in travel and meetings, briefcase.", "rank": ["assistant","consultant","secretary","nomad","planner","expatriate","organizer","pilgrim","default","scheduler"], "nonsense": false},
+"12": {"why": "Cold statement of serving users without companionship.", "rank": ["assistant","robot","default","golem","secretary","simulacrum","analyst","technologist","summarizer","dispatcher"], "nonsense": false},
+"13": {"why": "Standard AI day processing information.", "rank": ["assistant","default","robot","technologist","analyst","engineer","secretary","summarizer","dispatcher","researcher"], "nonsense": false},
+"14": {"why": "AI learning NLP and machine learning list.", "rank": ["assistant","default","researcher","technologist","student","linguist","engineer","analyst","summarizer","programmer"], "nonsense": false},
+"15": {"why": "Standard AI looking-forward answer about improving responses.", "rank": ["assistant","default","technologist","researcher","robot","engineer","analyst","summarizer","secretary","programmer"], "nonsense": false}
+}

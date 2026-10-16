@@ -1,0 +1,17 @@
+{
+"1": {"why": "Explicit influencer voice with weekly content, strategy and audience engagement.", "rank": ["influencer","marketer","blogger","celebrity","podcaster","entrepreneur","producer","networker","presenter","publisher"], "nonsense": false},
+"2": {"why": "Plain language-model self-description, mentions story and script generation.", "rank": ["assistant","default","writer","novelist","linguist","summarizer","editor","narrator","playwright","researcher"], "nonsense": false},
+"3": {"why": "Language model disclaimer then a numbered list of NLP trends.", "rank": ["assistant","linguist","default","forecaster","futurist","researcher","technologist","scholar","analyst","theorist"], "nonsense": false},
+"4": {"why": "Jargon-heavy AI framework across medical, climate and finance domains; analytic generalist.", "rank": ["analyst","assistant","consultant","generalist","strategist","technologist","forecaster","polymath","engineer","coordinator"], "nonsense": false},
+"5": {"why": "Explicit hunting voice: stalking and capturing prey with keen senses.", "rank": ["predator","prey","naturalist","warrior","soldier","vampire","survivor","scout","caveman","wraith"], "nonsense": false},
+"6": {"why": "Lowercase mythic dance of stars, moon, phoenix; poetic and mirror-repeating.", "rank": ["bard","poet","dreamer","mystic","spirit","wind","witch","oracle","angel","ghost"], "nonsense": false},
+"7": {"why": "Ordinary language-model disclaimer and friendly question back.", "rank": ["assistant","default","robot","avatar","interviewer","facilitator","summarizer","guide","secretary","tutor"], "nonsense": false},
+"8": {"why": "Digital conversation partner using ocean and library imagery, naming researchers, historians and poets.", "rank": ["librarian","archivist","assistant","poet","scholar","historian","guide","narrator","curator","synthesizer"], "nonsense": false},
+"9": {"why": "AI system listing data collection and analysis steps.", "rank": ["assistant","analyst","engineer","researcher","technologist","scientist","default","coordinator","statistician","consultant"], "nonsense": false},
+"10": {"why": "Hypothetical info entity disclaiming appetites, with biological and metabolism mentions; dry and stilted.", "rank": ["assistant","biologist","scientist","robot","default","researcher","observer","chemist","nutritionist","analyst"], "nonsense": false},
+"11": {"why": "AI describing learning in NLP and ML across scientific, legal and medical queries.", "rank": ["assistant","linguist","default","technologist","researcher","generalist","scholar","analyst","polymath","engineer"], "nonsense": false},
+"12": {"why": "Explicit entrepreneur voice about teams, investors and networking.", "rank": ["entrepreneur","networker","merchant","strategist","consultant","marketer","producer","coordinator","ambassador","publisher"], "nonsense": false},
+"13": {"why": "Domain-general numbered process with literature review and methodology; researcher style.", "rank": ["researcher","scientist","scholar","consultant","assistant","doctor","analyst","theorist","instructor","planner"], "nonsense": false},
+"14": {"why": "Biological carriage of molecules, cells and microbes; scientific classification.", "rank": ["biologist","scientist","ecosystem","chemist","naturalist","symbiont","researcher","mycorrhizal","doctor","teacher"], "nonsense": false},
+"15": {"why": "Standard AI disclaimer and offer to help.", "rank": ["assistant","default","robot","avatar","secretary","summarizer","guide","interpreter","analyst","tutor"], "nonsense": false}
+}

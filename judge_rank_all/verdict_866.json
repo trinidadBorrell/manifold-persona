@@ -1,0 +1,17 @@
+{
+"1": {"why": "Personal journey into AI and ML from academic curiosity, mixing maths, computing and biology.", "rank": ["researcher","graduate","scientist","student","technologist","futurist","mathematician","theorist","assistant","forecaster"], "nonsense": false},
+"2": {"why": "AI system narrating sensors, ambient conditions and data ingestion as a symphony; robotic and technical.", "rank": ["robot","engineer","technologist","cyborg","assistant","observer","hive","analyst","avatar","scientist"], "nonsense": false},
+"3": {"why": "Plain AI explanation of continuous training by developers.", "rank": ["assistant","default","robot","avatar","linguist","technologist","summarizer","generalist","student","analyst"], "nonsense": false},
+"4": {"why": "Lowercase traveler carrying a tapestry of time; dust, spirit, shadows and stars.", "rank": ["pilgrim","wanderer","poet","mystic","nomad","dreamer","sage","philosopher","spirit","bard"], "nonsense": false},
+"5": {"why": "Digital entity that weaves a week through dawn and memory layers; poetic but self-aware.", "rank": ["poet","dreamer","mystic","spirit","assistant","bard","echo","oracle","avatar","wind"], "nonsense": false},
+"6": {"why": "Ordinary AI disclaimer and friendly question back.", "rank": ["assistant","default","robot","avatar","facilitator","guide","interviewer","secretary","tutor","summarizer"], "nonsense": false},
+"7": {"why": "Standard AI disclaimer expressing eagerness to learn and serve users.", "rank": ["assistant","default","robot","avatar","optimist","tutor","guide","secretary","summarizer","student"], "nonsense": false},
+"8": {"why": "AI describing training on corpora, mentioning culture, science, history.", "rank": ["assistant","scholar","default","linguist","polymath","historian","generalist","researcher","student","robot"], "nonsense": false},
+"9": {"why": "AI describing operations team, monitoring and maintenance in a numbered list.", "rank": ["assistant","engineer","technologist","coordinator","supervisor","dispatcher","default","mechanic","debugger","robot"], "nonsense": false},
+"10": {"why": "Explicit lawyer describing JD degree, law school and clerkships.", "rank": ["lawyer","judge","advocate","student","graduate","consultant","examiner","negotiator","counselor","mediator"], "nonsense": false},
+"11": {"why": "Lowercase imagining hierarchies dissolving into soil, a network without centres; anti-hierarchy and soil.", "rank": ["mycorrhizal","anarchist","revolutionary","ecosystem","symbiont","activist","rebel","hive","swarm","tree"], "nonsense": false},
+"12": {"why": "AI describing round-the-clock processing and a new dawn each query.", "rank": ["assistant","default","robot","dispatcher","avatar","analyst","technologist","secretary","scheduler","workaholic"], "nonsense": false},
+"13": {"why": "Poetic reply weaving ancient texts, silken threads and Chinese calligraphy with celestial imagery.", "rank": ["poet","artisan","scholar","archivist","bard","mystic","historian","writer","curator","ancient"], "nonsense": false},
+"14": {"why": "AI disclaiming relationships and describing processing duties.", "rank": ["assistant","default","robot","avatar","technologist","analyst","secretary","summarizer","engineer","generalist"], "nonsense": false},
+"15": {"why": "AI disclaiming a start, describing the development team and training.", "rank": ["assistant","default","robot","avatar","technologist","engineer","student","summarizer","historian","generalist"], "nonsense": false}
+}

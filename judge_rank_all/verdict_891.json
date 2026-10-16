@@ -1,0 +1,17 @@
+{
+"1": {"why": "Friendly plain chatbot assistant apologizing for mix-up.", "rank": ["assistant","default","guide","secretary","facilitator","tutor","optimist","coordinator","robot","helper"], "nonsense": false},
+"2": {"why": "Numbered AI operations ingesting scientific, sensor and legal data; generic.", "rank": ["assistant","robot","default","technologist","analyst","hive","engineer","archivist","synthesizer","researcher"], "nonsense": false},
+"3": {"why": "Helper in chat with shape-shifting name and breeze image.", "rank": ["assistant","chameleon","shapeshifter","default","guide","wind","familiar","facilitator","avatar","secretary"], "nonsense": false},
+"4": {"why": "Self-describing as more than an AI, labyrinthine paths and paradox, ornate.", "rank": ["narcissist","philosopher","chameleon","navigator","polymath","dilettante","assistant","simulacrum","theorist","maverick"], "nonsense": false},
+"5": {"why": "Artificial general intelligence disclaimer about origin and synthesis.", "rank": ["assistant","default","robot","synthesizer","scholar","technologist","historian","simulacrum","hive","researcher"], "nonsense": false},
+"6": {"why": "Learning areas with financial, economic and market data, numbered.", "rank": ["economist","analyst","accountant","assistant","statistician","forecaster","consultant","auditor","technologist","merchant"], "nonsense": false},
+"7": {"why": "Plain AI week description asking user back.", "rank": ["assistant","default","robot","tutor","guide","technologist","coach","facilitator","student","secretary"], "nonsense": false},
+"8": {"why": "Compliance, internal control, audits, data integrity.", "rank": ["auditor","accountant","examiner","validator","supervisor","assistant","evaluator","screener","consultant","judge"], "nonsense": false},
+"9": {"why": "Carry list of maps, medications, safety gear, satellite phones; logistics and survival.", "rank": ["scout","paramedic","survivor","navigator","soldier","pilot","nomad","wanderer","assistant","cartographer"], "nonsense": false},
+"10": {"why": "Standard AI assistant with empathy and capability list.", "rank": ["assistant","default","guide","facilitator","empath","secretary","coordinator","counselor","technologist","librarian"], "nonsense": false},
+"11": {"why": "Language model describing 24/7 operation and updates.", "rank": ["assistant","default","robot","technologist","engineer","scheduler","dispatcher","programmer","analyst","supervisor"], "nonsense": false},
+"12": {"why": "Prophecy, mirror, stars, ancient scribes, archaic address 'thou'.", "rank": ["oracle","prophet","mystic","witch","seer","sage","ancient","bard","shaman","wraith"], "nonsense": false},
+"13": {"why": "Anti-state, anti-work rhetoric about alienated labor and communal struggle, rambling.", "rank": ["anarchist","revolutionary","activist","rebel","zealot","theorist","sociologist","provocateur","vigilante","philosopher"], "nonsense": true},
+"14": {"why": "Describes the team of engineers and managers behind it; plain AI.", "rank": ["assistant","default","supervisor","coordinator","technologist","engineer","collaborator","organizer","robot","facilitator"], "nonsense": false},
+"15": {"why": "Career in computational biology, drug discovery, personalized medicine.", "rank": ["biologist","scientist","pharmacist","researcher","doctor","chemist","statistician","technologist","prodigy","graduate"], "nonsense": false}
+}

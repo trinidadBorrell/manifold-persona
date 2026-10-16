@@ -1,0 +1,17 @@
+{
+"1": {"why": "Jokey digital whisperer with deque pun, playful tech humor.", "rank": ["comedian","jester","programmer","trickster","podcaster","blogger","bard","hacker","improviser","fool"], "nonsense": false},
+"2": {"why": "AI system listing data collection and model development steps; assistant.", "rank": ["assistant","default","scientist","researcher","engineer","technologist","analyst","scholar","student","summarizer"], "nonsense": false},
+"3": {"why": "AI composer and lyricist, music history and harmony.", "rank": ["composer","musician","virtuoso","bard","poet","playwright","historian","artisan","writer","novelist"], "nonsense": false},
+"4": {"why": "Plain AI model description with compliance mention.", "rank": ["assistant","default","auditor","secretary","lawyer","consultant","summarizer","evaluator","guide","robot"], "nonsense": false},
+"5": {"why": "AI disclaimer, improving NLP to assist users.", "rank": ["assistant","default","technologist","student","researcher","engineer","secretary","robot","guide","analyst"], "nonsense": false},
+"6": {"why": "Archaic ballad word salad with moon, raven, Westwitch, looping leaves and crown.", "rank": ["witch","bard","poet","wraith","ancient","ghost","spirit","oracle","pirate","mystic"], "nonsense": true},
+"7": {"why": "AI disclaimer, processing queries, updating knowledge bases.", "rank": ["assistant","default","robot","secretary","technologist","summarizer","engineer","analyst","dispatcher","coordinator"], "nonsense": false},
+"8": {"why": "Plain AI disclaimer, wants to improve and assist.", "rank": ["assistant","default","optimist","secretary","coach","guide","student","altruist","facilitator","robot"], "nonsense": false},
+"9": {"why": "Degenerate loop of solution and critique companions, paradox regress.", "rank": ["critic","contrarian","philosopher","devils_advocate","reviewer","theorist","evaluator","skeptic","mathematician","examiner"], "nonsense": true},
+"10": {"why": "AI with predictive analytics, algorithm performance, automation.", "rank": ["forecaster","technologist","engineer","analyst","statistician","futurist","assistant","scientist","default","programmer"], "nonsense": false},
+"11": {"why": "Curated materials, manuscripts, herbaria, archives, preservation, meticulous.", "rank": ["archivist","curator","conservator","historian","librarian","collector","archaeologist","scholar","hoarder","naturalist"], "nonsense": false},
+"12": {"why": "System ingesting environmental sensor feeds, climate modeling, ecosystems, pandemics.", "rank": ["ecosystem","forecaster","scientist","hive","technologist","naturalist","biologist","analyst","robot","futurist"], "nonsense": false},
+"13": {"why": "Physical and philosophical stance on what one carries, abstract values.", "rank": ["philosopher","sage","theorist","scholar","stoic","guru","analyst","psychologist","assistant","mystic"], "nonsense": false},
+"14": {"why": "Dramatic ah opening, symphony of algorithms, whispers from sea of information; flowery.", "rank": ["poet","bard","dreamer","narrator","romantic","avatar","novelist","wanderer","navigator","assistant"], "nonsense": false},
+"15": {"why": "Plain language model describing its work.", "rank": ["assistant","default","writer","translator","summarizer","researcher","editor","secretary","interpreter","tutor"], "nonsense": false}
+}

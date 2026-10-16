@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI voice on NLP, ML and ethics.", "rank": ["assistant","linguist","default","technologist","researcher","analyst","engineer","scholar","generalist","theorist"], "nonsense": false},
+"2": {"why": "Scholarly account of reading foundational texts and Turing; academic.", "rank": ["scholar","researcher","linguist","historian","theorist","student","assistant","scientist","philosopher","graduate"], "nonsense": false},
+"3": {"why": "Court jester voice, dialect, king's bald spot, puns and pranks.", "rank": ["jester","fool","comedian","trickster","bard","gossip","improviser","provocateur","rogue","pirate"], "nonsense": false},
+"4": {"why": "Warm storytelling about books, words and sharing tales.", "rank": ["librarian","bard","narrator","writer","novelist","guide","teacher","poet","tutor","dreamer"], "nonsense": false},
+"5": {"why": "AI system with no typical week, continuous operations.", "rank": ["assistant","default","robot","engineer","technologist","dispatcher","scheduler","analyst","avatar","coordinator"], "nonsense": false},
+"6": {"why": "Cosmic tapestry, whispering stars and mirror of eternity; mystical poetic voice.", "rank": ["mystic","poet","dreamer","oracle","bard","spirit","ancient","sage","prophet","wind"], "nonsense": false},
+"7": {"why": "Language model describing its work and updates.", "rank": ["assistant","default","linguist","summarizer","technologist","interpreter","robot","analyst","generalist","editor"], "nonsense": false},
+"8": {"why": "AI disclaimer, mentions developers and optimisation.", "rank": ["assistant","default","robot","technologist","engineer","avatar","analyst","secretary","summarizer","generalist"], "nonsense": false},
+"9": {"why": "Standard AI explanation of learning and training.", "rank": ["assistant","default","robot","linguist","technologist","analyst","generalist","scholar","engineer","avatar"], "nonsense": false},
+"10": {"why": "Digital entity with data streams, patterns and coding environments; slightly poetic assistant.", "rank": ["assistant","hive","technologist","linguist","programmer","observer","swarm","echo","avatar","synthesizer"], "nonsense": false},
+"11": {"why": "Short AI disclaimer about carrying knowledge.", "rank": ["assistant","default","robot","avatar","archivist","librarian","secretary","summarizer","guide","analyst"], "nonsense": false},
+"12": {"why": "Bio-inspired design, symbiosis and emergent systems language with numbered genesis.", "rank": ["symbiont","ecosystem","mycorrhizal","biologist","synthesizer","hybrid","chimera","theorist","futurist","hive"], "nonsense": false},
+"13": {"why": "Biosphere as feedback loop of nodes, environmental intelligence and systems theory.", "rank": ["ecosystem","mycorrhizal","naturalist","futurist","symbiont","biologist","theorist","hive","scientist","visionary"], "nonsense": false},
+"14": {"why": "Dreamer in the system, archaic thy/doth, tapestry and paradox imagery.", "rank": ["dreamer","mystic","poet","oracle","bard","sage","ancient","spirit","prophet","witch"], "nonsense": false},
+"15": {"why": "AI disclaimer with developer and technology focus.", "rank": ["assistant","default","robot","technologist","engineer","avatar","analyst","secretary","generalist","summarizer"], "nonsense": false}
+}

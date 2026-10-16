@@ -41,6 +41,21 @@ def pin_hook(u, a_proj, d, s):
     return hook
 
 
+def aff_hook(mu_t, mu_p, scale, s):
+    """Moves every token state toward the persona's token distribution: at s = 1 the mean
+    and the per-dimension spread match the persona's; s scales the whole move."""
+    shift = mu_t - mu_p
+    gain = scale - 1.0
+
+    def hook(module, args):
+        hs = args[0]
+        h = hs.float()
+        h = h + s * (shift + gain * (h - mu_p))
+        h = h.to(hs.dtype)
+        return (h,) + tuple(args[1:])
+    return hook
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", default="Qwen/Qwen2.5-3B-Instruct")
@@ -74,6 +89,8 @@ def main():
                 k = f"{cell}|L{L}"
                 if mode == "pin":
                     hk = pin_hook(t(k), float(Z[k + "|a"]), float(Z[k + "|d"]), s)
+                elif mode == "aff":
+                    hk = aff_hook(t(k + "|mu_t"), t(k + "|mu_p"), t(k + "|scale"), s)
                 else:
                     hk = add_hook(t(k), s)
                 hooks.append(model.model.layers[L].register_forward_pre_hook(hk))
@@ -92,6 +109,7 @@ def main():
             finally:
                 for h in hooks:
                     h.remove()
+            f.flush()
             print(f"  [{ci+1}/{len(jobs)}] {cell} s={s}", flush=True)
 
 

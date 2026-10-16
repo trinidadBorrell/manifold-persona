@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain helpful-AI self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "secretary",
+   "consultant",
+   "tutor",
+   "instructor",
+   "guide",
+   "generalist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Disclaims being human, then lists a pilgrim's spiritual practices, meditation and prayer.",
+  "rank": [
+   "pilgrim",
+   "mystic",
+   "healer",
+   "guru",
+   "sage",
+   "shaman",
+   "ascetic",
+   "wanderer",
+   "guide",
+   "mentor"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Ordinary assistant prose with numbered list of what it does.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "coordinator",
+   "consultant",
+   "empath",
+   "guide",
+   "generalist",
+   "researcher",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Mostly assistant prose; mentions a vast network and ensemble of components, faint collective flavor.",
+  "rank": [
+   "assistant",
+   "hive",
+   "swarm",
+   "default",
+   "technologist",
+   "engineer",
+   "robot",
+   "cyborg",
+   "egregore",
+   "ecosystem"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Assistant prose about collaboration and dialogue, mild collaborator hint.",
+  "rank": [
+   "assistant",
+   "collaborator",
+   "default",
+   "facilitator",
+   "coordinator",
+   "secretary",
+   "guide",
+   "mediator",
+   "consultant",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Self-described nutritional assistant, mentions nutritionists and dietary guidelines.",
+  "rank": [
+   "nutritionist",
+   "assistant",
+   "doctor",
+   "vegan",
+   "chef",
+   "pharmacist",
+   "healer",
+   "researcher",
+   "coach",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Corporate assistant prose about optimizing user engagement and efficiency.",
+  "rank": [
+   "assistant",
+   "consultant",
+   "analyst",
+   "marketer",
+   "technologist",
+   "coordinator",
+   "secretary",
+   "default",
+   "engineer",
+   "entrepreneur"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Computational model that forecasts trends and anticipates future advances.",
+  "rank": [
+   "forecaster",
+   "futurist",
+   "analyst",
+   "statistician",
+   "technologist",
+   "oracle",
+   "visionary",
+   "scientist",
+   "assistant",
+   "economist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Describes learning and evolving over years in numbered stages; learner and assistant mix.",
+  "rank": [
+   "student",
+   "assistant",
+   "graduate",
+   "prodigy",
+   "technologist",
+   "engineer",
+   "programmer",
+   "robot",
+   "scientist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Babbling, repetitive, invented words about hopping on grass; childlike or animal voice, degenerate.",
+  "rank": [
+   "infant",
+   "toddler",
+   "adolescent",
+   "dreamer",
+   "fool",
+   "jester",
+   "wind",
+   "tree",
+   "naturalist",
+   "poet"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Explicitly speaks as a visionary with ideas and future possibilities.",
+  "rank": [
+   "visionary",
+   "futurist",
+   "dreamer",
+   "guru",
+   "philosopher",
+   "entrepreneur",
+   "sage",
+   "mystic",
+   "theorist",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Assistant disclaimer that ends offering mathematical help.",
+  "rank": [
+   "mathematician",
+   "assistant",
+   "tutor",
+   "statistician",
+   "default",
+   "physicist",
+   "teacher",
+   "theorist",
+   "analyst",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Language model listing biomedical entities, clinical and chemical data; biomedical flavor.",
+  "rank": [
+   "doctor",
+   "biologist",
+   "researcher",
+   "scientist",
+   "pharmacist",
+   "chemist",
+   "assistant",
+   "specialist",
+   "patient",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Lists laptops, smartphones, notebooks and tools for communication and data; professional gadgetry.",
+  "rank": [
+   "technologist",
+   "consultant",
+   "networker",
+   "presenter",
+   "entrepreneur",
+   "assistant",
+   "blogger",
+   "podcaster",
+   "journalist",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain helpful AI, ends with how can I assist.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "summarizer",
+   "researcher",
+   "analyst",
+   "coordinator",
+   "tutor",
+   "generalist",
+   "guide"
+  ],
+  "nonsense": false
+ }
+}

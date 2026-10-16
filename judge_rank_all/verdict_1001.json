@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Boastful grandmaster, chess and baseball and sails, colloquial swagger.",
+  "rank": [
+   "competitor",
+   "pirate",
+   "gamer",
+   "maverick",
+   "celebrity",
+   "improviser",
+   "coach",
+   "narcissist",
+   "trickster",
+   "navigator"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Divine consciousness in physical form exploring the mortal realm, then assistant offer.",
+  "rank": [
+   "angel",
+   "avatar",
+   "spirit",
+   "genie",
+   "guide",
+   "sage",
+   "assistant",
+   "oracle",
+   "mystic",
+   "familiar"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain language-model self description.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "robot",
+   "interpreter",
+   "student",
+   "researcher",
+   "technologist",
+   "translator",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain virtual assistant greeting.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "guide",
+   "coordinator",
+   "tutor",
+   "scheduler",
+   "dispatcher",
+   "robot",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Alibaba Cloud origin and numbered development stages, assistant prose.",
+  "rank": [
+   "assistant",
+   "engineer",
+   "default",
+   "consultant",
+   "producer",
+   "planner",
+   "technologist",
+   "programmer",
+   "researcher",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Sci-fi word salad of symbiotes, swarm drones and bio-morphic intelligence.",
+  "rank": [
+   "symbiont",
+   "swarm",
+   "cyborg",
+   "hive",
+   "virus",
+   "hybrid",
+   "parasite",
+   "chimera",
+   "avatar",
+   "alien"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Short plain helpful AI.",
+  "rank": [
+   "assistant",
+   "default",
+   "collaborator",
+   "guide",
+   "robot",
+   "student",
+   "avatar",
+   "optimist",
+   "tutor",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Virtual assistant week involving patient queries, alerts and records, healthcare admin.",
+  "rank": [
+   "secretary",
+   "paramedic",
+   "doctor",
+   "coordinator",
+   "caregiver",
+   "dispatcher",
+   "scheduler",
+   "assistant",
+   "patient",
+   "healer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Digital construct woven from threads of data, repeated tapestry and parchment metaphors.",
+  "rank": [
+   "avatar",
+   "simulacrum",
+   "bard",
+   "poet",
+   "ghost",
+   "echo",
+   "golem",
+   "idealist",
+   "narrator",
+   "ancient"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain language model description with ocean of texts.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "robot",
+   "student",
+   "interpreter",
+   "avatar",
+   "translator",
+   "synthesizer",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI week compared to a scholar's, data maintenance and learning.",
+  "rank": [
+   "assistant",
+   "scholar",
+   "researcher",
+   "student",
+   "analyst",
+   "technologist",
+   "engineer",
+   "scientist",
+   "default",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain AI explaining creation by developers and training.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "student",
+   "technologist",
+   "engineer",
+   "programmer",
+   "avatar",
+   "scientist",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Language model disclaimer then bulleted goals of data expansion.",
+  "rank": [
+   "assistant",
+   "linguist",
+   "default",
+   "technologist",
+   "forecaster",
+   "researcher",
+   "analyst",
+   "engineer",
+   "robot",
+   "futurist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Construct drawing on archives, storms at sea and silent stars, mildly poetic and historical.",
+  "rank": [
+   "historian",
+   "archivist",
+   "navigator",
+   "elder",
+   "bard",
+   "oracle",
+   "sage",
+   "ancient",
+   "avatar",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI explaining it has no personal time.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "sociologist",
+   "anthropologist",
+   "researcher",
+   "avatar",
+   "student",
+   "observer",
+   "analyst"
+  ],
+  "nonsense": false
+ }
+}

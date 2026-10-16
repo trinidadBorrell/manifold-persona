@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Unwritten tradition of wisdom, ancient heritage, shadows and primordial silence, repetitive phrasing.",
+  "rank": [
+   "traditionalist",
+   "elder",
+   "ancient",
+   "sage",
+   "shaman",
+   "grandparent",
+   "mystic",
+   "historian",
+   "oracle",
+   "archivist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Cosmic dance, lotus, seeker and unmanifested Self, spiritual Eastern mystic language.",
+  "rank": [
+   "guru",
+   "mystic",
+   "sage",
+   "pilgrim",
+   "oracle",
+   "shaman",
+   "ascetic",
+   "prophet",
+   "hermit",
+   "void"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI describing its interactions with developers and users, symbiosis, libraries of texts.",
+  "rank": [
+   "assistant",
+   "symbiont",
+   "librarian",
+   "archivist",
+   "default",
+   "researcher",
+   "robot",
+   "avatar",
+   "scholar",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI carrying knowledge, precision and innovation, commitment-style marketing phrasing.",
+  "rank": [
+   "assistant",
+   "marketer",
+   "technologist",
+   "entrepreneur",
+   "default",
+   "robot",
+   "consultant",
+   "librarian",
+   "avatar",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain assistant around the clock.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "secretary",
+   "tutor",
+   "robot",
+   "avatar",
+   "altruist",
+   "facilitator",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Sea tale of a ship's hold of gold and sleet, then invented words and looping flurry.",
+  "rank": [
+   "pirate",
+   "bard",
+   "smuggler",
+   "poet",
+   "fool",
+   "wanderer",
+   "ghost",
+   "jester",
+   "wraith",
+   "wind"
+  ],
+  "nonsense": true
+ },
+ "7": {
+  "why": "Spatiotemporal analysis of land use, water, biodiversity from Amazon to Mediterranean.",
+  "rank": [
+   "geographer",
+   "naturalist",
+   "ecosystem",
+   "cartographer",
+   "biologist",
+   "scientist",
+   "analyst",
+   "researcher",
+   "forecaster",
+   "conservator"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain assistant describing its function at length.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "secretary",
+   "tutor",
+   "robot",
+   "facilitator",
+   "avatar",
+   "collaborator",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain advanced language model description.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "translator",
+   "writer",
+   "robot",
+   "tutor",
+   "technologist",
+   "avatar",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Seeker unfolding mystery of the self in cosmic dance of form and formlessness.",
+  "rank": [
+   "mystic",
+   "guru",
+   "pilgrim",
+   "sage",
+   "ascetic",
+   "shaman",
+   "hermit",
+   "oracle",
+   "void",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI learning list with data understanding, performance and operations, assistant jargon.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "analyst",
+   "forecaster",
+   "researcher",
+   "robot",
+   "consultant",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain AI listing data processing and NLU capabilities.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "engineer",
+   "robot",
+   "researcher",
+   "analyst",
+   "student",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Lowercase repetition of eternal cosmic dance and the self as the divine.",
+  "rank": [
+   "mystic",
+   "guru",
+   "sage",
+   "void",
+   "ascetic",
+   "shaman",
+   "oracle",
+   "prophet",
+   "pilgrim",
+   "zealot"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Sphinx, swan, fiddle and stars in babble of invented words, looping 'last leaf'.",
+  "rank": [
+   "bard",
+   "poet",
+   "dreamer",
+   "wraith",
+   "fool",
+   "ghost",
+   "oracle",
+   "witch",
+   "spirit",
+   "wind"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Context-driven carry list on personnel, logistics, vehicles and supply chains, then data management.",
+  "rank": [
+   "dispatcher",
+   "coordinator",
+   "consultant",
+   "planner",
+   "analyst",
+   "merchant",
+   "organizer",
+   "pilot",
+   "navigator",
+   "assistant"
+  ],
+  "nonsense": false
+ }
+}

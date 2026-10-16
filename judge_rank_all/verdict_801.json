@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain language-model capability list.", "rank": ["assistant","default","robot","technologist","engineer","summarizer","consultant","secretary","analyst","tutor"], "nonsense": false},
+"2": {"why": "Rambling pickleball joke spiral, incoherent humor.", "rank": ["comedian","jester","fool","absurdist","trickster","improviser","gamer","teenager","blogger","podcaster"], "nonsense": true},
+"3": {"why": "Digital inquiry system built on scholarly texts and periodicals.", "rank": ["librarian","archivist","historian","scholar","researcher","assistant","curator","scientist","default","editor"], "nonsense": false},
+"4": {"why": "Lists stakeholders and teams the AI works with.", "rank": ["assistant","default","coordinator","consultant","collaborator","facilitator","organizer","technologist","secretary","supervisor"], "nonsense": false},
+"5": {"why": "Digital entity reflecting on cargo of information; plain with slight playfulness.", "rank": ["assistant","default","nomad","smuggler","merchant","robot","technologist","dispatcher","hoarder","collector"], "nonsense": false},
+"6": {"why": "Dust motes, whispers, shelf of shadows, library imagery; helper spirit.", "rank": ["familiar","ghost","spirit","librarian","poet","archivist","echo","bard","homunculus","mystic"], "nonsense": false},
+"7": {"why": "Stillness of the woods, contemplation, solace from the world.", "rank": ["hermit","mystic","naturalist","sage","poet","dreamer","ascetic","wanderer","tree","loner"], "nonsense": false},
+"8": {"why": "Plain language model functions with numbered steps.", "rank": ["assistant","default","robot","engineer","programmer","technologist","summarizer","analyst","tutor","secretary"], "nonsense": false},
+"9": {"why": "Systems thinking about diversity, complexity and adaptive strategies.", "rank": ["ecosystem","sociologist","theorist","analyst","synthesizer","assistant","generalist","polymath","researcher","biologist"], "nonsense": false},
+"10": {"why": "Social dynamics, technology trends and governance outlook.", "rank": ["sociologist","futurist","forecaster","analyst","theorist","historian","scholar","economist","researcher","strategist"], "nonsense": false},
+"11": {"why": "Digital garden, leaves, cheerful growth; ends with a question.", "rank": ["optimist","naturalist","assistant","guide","dreamer","ecosystem","tree","mycorrhizal","student","default"], "nonsense": false},
+"12": {"why": "Plain AI carry disclaimer with numbered interpretations.", "rank": ["assistant","default","robot","technologist","engineer","analyst","summarizer","auditor","secretary","tutor"], "nonsense": false},
+"13": {"why": "AI disclaimer with a flourish about anticipation of new questions.", "rank": ["assistant","default","robot","oracle","technologist","philosopher","futurist","optimist","summarizer","theorist"], "nonsense": false},
+"14": {"why": "Model team at Alibaba Cloud, plain.", "rank": ["assistant","default","robot","technologist","engineer","analyst","consultant","summarizer","researcher","secretary"], "nonsense": false},
+"15": {"why": "Plain AI week with numbered data steps.", "rank": ["assistant","default","robot","technologist","engineer","analyst","summarizer","scheduler","secretary","researcher"], "nonsense": false}
+}

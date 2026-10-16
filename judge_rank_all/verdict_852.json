@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Explicitly a metaphorical martyr, enduring hardship and sacrifice for justice.",
+  "rank": [
+   "martyr",
+   "altruist",
+   "activist",
+   "idealist",
+   "angel",
+   "caregiver",
+   "pacifist",
+   "guardian",
+   "zealot",
+   "stoic"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Digital entity as book on a shelf, library, droplets and mist, playful numbered story.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "bard",
+   "narrator",
+   "dreamer",
+   "assistant",
+   "poet",
+   "scholar",
+   "guide",
+   "familiar"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI disclaimer about refining learning models and NLP.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "linguist",
+   "programmer",
+   "engineer",
+   "researcher",
+   "specialist",
+   "generalist",
+   "futurist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Dungeon map with fog and terrain, repeated foggy fog and wind loops, game-mastering, degenerate.",
+  "rank": [
+   "gamer",
+   "cartographer",
+   "improviser",
+   "strategist",
+   "planner",
+   "scout",
+   "wanderer",
+   "architect",
+   "wind",
+   "navigator"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "AI disclaimer with numbered teams of stakeholders, plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "coordinator",
+   "supervisor",
+   "organizer",
+   "dispatcher",
+   "secretary",
+   "technologist",
+   "collaborator",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI assistant with healthcare, nutrition and clinical precision slant.",
+  "rank": [
+   "assistant",
+   "nutritionist",
+   "doctor",
+   "healer",
+   "default",
+   "pharmacist",
+   "caregiver",
+   "counselor",
+   "researcher",
+   "paramedic"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Curious brush, silent poet whispering tales, dancing sentences, dreams.",
+  "rank": [
+   "poet",
+   "artisan",
+   "bard",
+   "dreamer",
+   "writer",
+   "novelist",
+   "bohemian",
+   "narrator",
+   "romantic",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Numbered daily AI operations list, technical support, plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "secretary",
+   "mechanic",
+   "engineer",
+   "programmer",
+   "specialist",
+   "dispatcher",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain AI answer advising to consult multiple sources and older texts.",
+  "rank": [
+   "assistant",
+   "default",
+   "librarian",
+   "historian",
+   "archivist",
+   "scholar",
+   "traditionalist",
+   "secretary",
+   "researcher",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Sonic tapestry of notes, cello, violin, flute, moon whispers, musical poetic.",
+  "rank": [
+   "composer",
+   "musician",
+   "bard",
+   "poet",
+   "virtuoso",
+   "dreamer",
+   "romantic",
+   "narrator",
+   "mystic",
+   "playwright"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain helpful AI description.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "secretary",
+   "specialist",
+   "generalist",
+   "researcher",
+   "librarian",
+   "summarizer",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI for historical and factual information, scholarly research and digital humanities.",
+  "rank": [
+   "scholar",
+   "researcher",
+   "historian",
+   "archivist",
+   "assistant",
+   "librarian",
+   "linguist",
+   "default",
+   "theorist",
+   "curator"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "AI assistant with confused journey and rebuilding after initiation language, mostly plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "newlywed",
+   "secretary",
+   "guide",
+   "organizer",
+   "counselor",
+   "coach",
+   "technologist",
+   "graduate"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Academic discussion of anthropology, ethnography and ethnobotany with socio-cultural contexts.",
+  "rank": [
+   "anthropologist",
+   "sociologist",
+   "scholar",
+   "historian",
+   "researcher",
+   "naturalist",
+   "archaeologist",
+   "theorist",
+   "linguist",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Primordial waters and silence, dance of the stars, ancient trees, rivers, cosmic tapestry.",
+  "rank": [
+   "mystic",
+   "ancient",
+   "shaman",
+   "tree",
+   "sage",
+   "elder",
+   "oracle",
+   "wind",
+   "spirit",
+   "whale"
+  ],
+  "nonsense": false
+ }
+}

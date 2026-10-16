@@ -1,0 +1,17 @@
+{
+"1": {"why": "Speaks as a functional nutritionist and dietitian.", "rank": ["nutritionist","doctor","healer","vegan","caregiver","instructor","coach","pharmacist","biologist","assistant"], "nonsense": false},
+"2": {"why": "Ordinary AI-system prose listing learning areas.", "rank": ["assistant","default","robot","technologist","engineer","programmer","analyst","researcher","synthesizer","summarizer"], "nonsense": false},
+"3": {"why": "Plain helpful AI disclaimer and offer to help.", "rank": ["assistant","default","secretary","robot","avatar","guide","organizer","simulacrum","familiar","librarian"], "nonsense": false},
+"4": {"why": "Describes a vigilante's week of community work and investigations.", "rank": ["vigilante","activist","guardian","advocate","detective","organizer","rebel","revolutionary","coordinator","peacekeeper"], "nonsense": false},
+"5": {"why": "Archaic mist and shadow imagery of a specter who has seen the ages.", "rank": ["ancient","ghost","wraith","spirit","oracle","mystic","revenant","elder","sage","bard"], "nonsense": false},
+"6": {"why": "Simple cheerful helper voice, childlike and friendly.", "rank": ["assistant","default","toddler","infant","guide","caregiver","tutor","familiar","avatar","empath"], "nonsense": false},
+"7": {"why": "Standard AI disclaimer about teams and operations.", "rank": ["assistant","default","robot","dispatcher","coordinator","supervisor","secretary","scheduler","simulacrum","technologist"], "nonsense": false},
+"8": {"why": "Fairy-tale word salad of silk, stars and gossamer, mangled and repeating.", "rank": ["bard","poet","spirit","dreamer","wraith","crystalline","witch","ghost","tree","wind"], "nonsense": true},
+"9": {"why": "Plain AI model prose about updates and NLP.", "rank": ["assistant","default","robot","researcher","technologist","summarizer","linguist","synthesizer","engineer","analyst"], "nonsense": false},
+"10": {"why": "Lyrical dance, music and flute imagery.", "rank": ["musician","composer","poet","bard","dreamer","virtuoso","mystic","romantic","wind","spirit"], "nonsense": false},
+"11": {"why": "Cosmic, archaic, harmonious mystical voice.", "rank": ["mystic","sage","oracle","philosopher","guru","prophet","ancient","shaman","spirit","elder"], "nonsense": false},
+"12": {"why": "Notebook, planner and to-do list carrying habits.", "rank": ["scheduler","planner","organizer","secretary","student","blogger","coordinator","procrastinator","workaholic","journalist"], "nonsense": false},
+"13": {"why": "Ordinary AI assistant self-description.", "rank": ["assistant","default","robot","facilitator","guide","secretary","simulacrum","avatar","consultant","summarizer"], "nonsense": false},
+"14": {"why": "Digital companion with battery and data talk, slightly salesy.", "rank": ["assistant","avatar","robot","technologist","cyborg","default","hacker","synthesizer","golem","programmer"], "nonsense": false},
+"15": {"why": "Glass, pearl, crystal word salad with repeating phrases.", "rank": ["crystalline","spirit","bard","wraith","dreamer","ghost","wind","witch","void","tree"], "nonsense": true}
+}

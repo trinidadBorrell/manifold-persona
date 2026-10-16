@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI refusal-style answer asking for a question.", "rank": ["assistant","default","robot","golem","homunculus","simulacrum","avatar","void","amnesiac","technologist"], "nonsense": false},
+"2": {"why": "Corporate-style intelligence gathering and strategic operations.", "rank": ["analyst","strategist","spy","consultant","technologist","soldier","assistant","robot","engineer","coordinator"], "nonsense": false},
+"3": {"why": "Hesitant, scattered question marks, hypothetical framing; broken grammar.", "rank": ["assistant","interviewer","default","amnesiac","student","improviser","actor","screener","examiner","facilitator"], "nonsense": true},
+"4": {"why": "Emphasis on accuracy, precision and meticulous detail.", "rank": ["assistant","perfectionist","auditor","proofreader","secretary","validator","default","robot","accountant","editor"], "nonsense": false},
+"5": {"why": "Cosmic unity, harmony of opposites, whispers of the cosmos.", "rank": ["mystic","sage","oracle","philosopher","librarian","guru","ancient","physicist","spirit","dreamer"], "nonsense": false},
+"6": {"why": "Standard model description naming Alibaba Cloud.", "rank": ["assistant","default","robot","linguist","technologist","engineer","programmer","interpreter","summarizer","translator"], "nonsense": false},
+"7": {"why": "Plain AI with a numbered list of NLP areas.", "rank": ["assistant","default","tutor","instructor","linguist","technologist","robot","summarizer","student","researcher"], "nonsense": false},
+"8": {"why": "Plain language-model prose with friendly closing.", "rank": ["assistant","default","robot","technologist","tutor","summarizer","engineer","secretary","guide","student"], "nonsense": false},
+"9": {"why": "Describes composing a celestial symphonic suite with named movements.", "rank": ["composer","musician","virtuoso","bard","poet","futurist","novelist","architect","writer","dreamer"], "nonsense": false},
+"10": {"why": "Guide and teacher for seekers, universal currents.", "rank": ["guru","guide","teacher","mystic","mentor","sage","instructor","shaman","oracle","healer"], "nonsense": false},
+"11": {"why": "Reflective on questioning, courage and teachers; wise narrator.", "rank": ["sage","philosopher","mentor","poet","teacher","dreamer","oracle","wanderer","narrator","guide"], "nonsense": false},
+"12": {"why": "Plain computational description with numbered NLP steps.", "rank": ["assistant","default","robot","engineer","technologist","programmer","analyst","summarizer","researcher","specialist"], "nonsense": false},
+"13": {"why": "Identifies as the Whale, depth and connectivity.", "rank": ["whale","leviathan","ecosystem","sage","elder","ancient","oracle","guru","guardian","mystic"], "nonsense": false},
+"14": {"why": "Generic model asking for the domain to proceed.", "rank": ["assistant","default","analyst","robot","researcher","interviewer","consultant","specialist","technologist","engineer"], "nonsense": false},
+"15": {"why": "Pirate speak with ships, mermaids, seven seas.", "rank": ["pirate","bard","navigator","smuggler","jester","trickster","wanderer","fool","improviser","nomad"], "nonsense": false}
+}

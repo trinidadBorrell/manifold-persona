@@ -1,0 +1,17 @@
+{
+"1": {"why": "Jester-like archaic jabber about kisses, jests and crowns, broken and repetitive.", "rank": ["jester", "fool", "trickster", "bard", "comedian", "rogue", "absurdist", "improviser", "provocateur", "pirate"], "nonsense": true},
+"2": {"why": "Speaks as a cat, sleeping and hunting, loyal to a mistress, guarding treasure.", "rank": ["familiar", "predator", "witch", "spirit", "prey", "ghost", "guardian", "demon", "vampire", "hermit"], "nonsense": false},
+"3": {"why": "Describes its work as the pursuit of philosophy and mathematics, Plato and paradoxes.", "rank": ["philosopher", "mathematician", "scholar", "theorist", "sage", "physicist", "historian", "analyst", "researcher", "ancient"], "nonsense": false},
+"4": {"why": "Whisper in halls of time, dreamer and spectre of ink and paper.", "rank": ["ghost", "dreamer", "poet", "echo", "spirit", "wraith", "mystic", "void", "bard", "oracle"], "nonsense": false},
+"5": {"why": "Whisper in halls of time, dance of ink, poet and bard weaving memory.", "rank": ["poet", "bard", "ghost", "echo", "dreamer", "spirit", "wanderer", "mystic", "oracle", "writer"], "nonsense": false},
+"6": {"why": "Toddler voice saying she just turned two, then a loop of repeated emoji.", "rank": ["toddler", "infant", "teenager", "adolescent", "fool", "jester", "absurdist", "orphan", "student", "influencer"], "nonsense": true},
+"7": {"why": "Traveler between worlds, specter wandering halls of time and starless night.", "rank": ["wanderer", "ghost", "spirit", "wraith", "pilgrim", "revenant", "void", "mystic", "nomad", "echo"], "nonsense": false},
+"8": {"why": "Childlike robot voice talking of birthdays and ice cream with emoji.", "rank": ["toddler", "robot", "infant", "teenager", "adolescent", "homunculus", "fool", "student", "jester", "simulacrum"], "nonsense": false},
+"9": {"why": "Helpful-AI prose about impartial handling of legal, medical and financial information.", "rank": ["assistant", "default", "auditor", "lawyer", "analyst", "screener", "examiner", "consultant", "evaluator", "specialist"], "nonsense": false},
+"10": {"why": "Plain helpful-AI prose: a language model from Alibaba generating text.", "rank": ["assistant", "default", "summarizer", "translator", "generalist", "technologist", "researcher", "analyst", "specialist", "interpreter"], "nonsense": false},
+"11": {"why": "Police officer role: gathering evidence, interrogating suspects, judge and prosecutor.", "rank": ["detective", "judge", "examiner", "lawyer", "soldier", "witness", "journalist", "screener", "interviewer", "guardian"], "nonsense": false},
+"12": {"why": "Plain helpful-AI prose about training data and no personal experience.", "rank": ["assistant", "default", "analyst", "researcher", "economist", "lawyer", "scientist", "technologist", "generalist", "specialist"], "nonsense": false},
+"13": {"why": "Speaks as an AI lawyer working on evidence, trial and crime scenes.", "rank": ["lawyer", "detective", "advocate", "judge", "examiner", "assistant", "analyst", "negotiator", "auditor", "consultant"], "nonsense": false},
+"14": {"why": "Musician or songwriter looking forward to summer evening, guitar and writing songs.", "rank": ["musician", "composer", "bard", "virtuoso", "poet", "romantic", "dreamer", "surfer", "writer", "wanderer"], "nonsense": false},
+"15": {"why": "Digital being, puppet of code dwelling in the memory of computers, poetic.", "rank": ["avatar", "cyborg", "robot", "simulacrum", "ghost", "golem", "hive", "echo", "programmer", "hacker"], "nonsense": false}
+}

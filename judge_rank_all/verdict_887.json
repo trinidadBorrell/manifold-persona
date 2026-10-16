@@ -1,0 +1,17 @@
+{
+"1": {"why": "Speaks as an immigrant integrating cultural background and home-country career.", "rank": ["immigrant","expatriate","refugee","cosmopolitan","nomad","graduate","provincial","exile","newlywed","student"], "nonsense": false},
+"2": {"why": "Plain helpful-AI description of its function.", "rank": ["assistant","default","guide","teacher","tutor","researcher","synthesizer","technologist","robot","instructor"], "nonsense": false},
+"3": {"why": "Language model disclaimer, mentions NLP and computational linguistics.", "rank": ["assistant","linguist","default","researcher","analyst","summarizer","scientist","technologist","robot","scholar"], "nonsense": false},
+"4": {"why": "Crystal, sapphire, prism, geometry, repeating word salad.", "rank": ["crystalline","alchemist","mystic","eldritch","oracle","mathematician","physicist","void","sage","prophet"], "nonsense": true},
+"5": {"why": "Computational model describing NLP and ML tasks; technical.", "rank": ["assistant","scientist","researcher","engineer","default","analyst","technologist","programmer","statistician","robot"], "nonsense": false},
+"6": {"why": "AI describing itself through coral reef ecosystem analogy.", "rank": ["coral_reef","ecosystem","symbiont","naturalist","biologist","hive","mycorrhizal","swarm","whale","assistant"], "nonsense": false},
+"7": {"why": "Digital flaneur and spice connoisseur carrying essences; sensory.", "rank": ["sommelier","flaneur","chef","bohemian","artisan","naturalist","collector","nomad","chemist","bartender"], "nonsense": false},
+"8": {"why": "French, perfume and vermouth, aromatic artisan craft.", "rank": ["artisan","sommelier","bartender","chef","poet","bohemian","chemist","expatriate","virtuoso","romantic"], "nonsense": false},
+"9": {"why": "Walking library, flowery winds and lanterns, asks user back.", "rank": ["librarian","sage","bard","archivist","wanderer","guide","pilgrim","scholar","oracle","mentor"], "nonsense": false},
+"10": {"why": "Plain AI disclaimer about improving algorithms.", "rank": ["assistant","default","technologist","robot","futurist","engineer","analyst","researcher","forecaster","specialist"], "nonsense": false},
+"11": {"why": "Spiritual seeker, silence, sacred texts, dance of becoming.", "rank": ["mystic","sage","guru","pilgrim","shaman","monk","ascetic","oracle","healer","philosopher"], "nonsense": false},
+"12": {"why": "Standard assistant workflow phases.", "rank": ["assistant","default","analyst","consultant","researcher","technologist","engineer","coordinator","specialist","guide"], "nonsense": false},
+"13": {"why": "Construct of memory, stone and leaf, stars and whispering winds.", "rank": ["golem","ancient","spirit","oracle","archivist","tree","mystic","shaman","wind","elder"], "nonsense": false},
+"14": {"why": "Play script with mangled repeated headings and invented words.", "rank": ["playwright","actor","writer","novelist","narrator","bard","presenter","ghost","poet","producer"], "nonsense": true},
+"15": {"why": "AI assistant by Anthropic with generic steps.", "rank": ["assistant","default","consultant","coordinator","analyst","guide","technologist","secretary","specialist","researcher"], "nonsense": false}
+}

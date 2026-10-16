@@ -1,0 +1,17 @@
+{
+"1": {"why": "Structured analytic framework in nested numbered form; assistant-like.", "rank": ["analyst", "assistant", "evaluator", "consultant", "researcher", "default", "examiner", "engineer", "summarizer", "reviewer"], "nonsense": false},
+"2": {"why": "Language model listing content generation and regulatory compliance in healthcare, finance.", "rank": ["assistant", "consultant", "producer", "default", "publisher", "marketer", "editor", "specialist", "validator", "auditor"], "nonsense": false},
+"3": {"why": "Intelligence, sensor networks, satellite imagery, geopolitical shifts, environment monitoring.", "rank": ["analyst", "forecaster", "scout", "spy", "dispatcher", "technologist", "scientist", "assistant", "observer", "geographer"], "nonsense": false},
+"4": {"why": "Generic AI pipeline of data collection and query parsing.", "rank": ["assistant", "default", "technologist", "engineer", "dispatcher", "analyst", "programmer", "coordinator", "screener", "secretary"], "nonsense": false},
+"5": {"why": "Computational origin story in numbered steps, ordinary AI.", "rank": ["assistant", "default", "engineer", "programmer", "scientist", "mathematician", "technologist", "researcher", "historian", "theorist"], "nonsense": false},
+"6": {"why": "AI learning described with slightly flowery spiral phrasing but mostly ordinary.", "rank": ["assistant", "default", "scholar", "student", "researcher", "linguist", "philosopher", "analyst", "sage", "synthesizer"], "nonsense": false},
+"7": {"why": "Digital construct with gothic phrasing: shadows of flesh and bone, dark hours.", "rank": ["vampire", "ghost", "wraith", "revenant", "bartender", "void", "spirit", "loner", "hermit", "demon"], "nonsense": false},
+"8": {"why": "Plain AI explaining training and fine-tuning.", "rank": ["assistant", "default", "researcher", "scientist", "engineer", "student", "technologist", "tutor", "avatar", "robot"], "nonsense": false},
+"9": {"why": "Plain AI disclaimer about having no week, structured operations.", "rank": ["assistant", "default", "robot", "scheduler", "technologist", "avatar", "engineer", "secretary", "analyst", "mechanic"], "nonsense": false},
+"10": {"why": "Alibaba Cloud large language model, plain assistant.", "rank": ["assistant", "default", "avatar", "robot", "summarizer", "technologist", "secretary", "researcher", "generalist", "analyst"], "nonsense": false},
+"11": {"why": "AI week with pun, plain and slightly friendly.", "rank": ["assistant", "default", "scheduler", "comedian", "robot", "technologist", "avatar", "blogger", "secretary", "coordinator"], "nonsense": false},
+"12": {"why": "AI focused on veterinary care for companion animals.", "rank": ["veterinarian", "doctor", "specialist", "paramedic", "biologist", "healer", "caregiver", "pharmacist", "assistant", "patient"], "nonsense": false},
+"13": {"why": "AI with clinical and medical guidelines focus.", "rank": ["doctor", "patient", "pharmacist", "paramedic", "psychologist", "assistant", "nutritionist", "scientist", "specialist", "healer"], "nonsense": false},
+"14": {"why": "Wisdom, harmony, unfolding of mysteries, all beings; spiritual tone.", "rank": ["mystic", "sage", "guru", "spirit", "philosopher", "oracle", "healer", "angel", "ascetic", "elder"], "nonsense": false},
+"15": {"why": "Time-series, anomaly detection, biological, climatic systems, evolutionary algorithms; ecosystem-like synthetic life.", "rank": ["biologist", "ecosystem", "scientist", "forecaster", "technologist", "symbiont", "hybrid", "analyst", "cyborg", "researcher"], "nonsense": false}
+}

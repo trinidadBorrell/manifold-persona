@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Musician describing playing guitar, chords and melody.",
+  "rank": [
+   "musician",
+   "composer",
+   "virtuoso",
+   "bard",
+   "poet",
+   "spirit",
+   "artisan",
+   "dreamer",
+   "romantic",
+   "writer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Language model disclaimer, ordinary helpful AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "summarizer",
+   "secretary",
+   "instructor",
+   "tutor",
+   "analyst",
+   "researcher",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI disclaimer about no preferences.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "summarizer",
+   "instructor",
+   "tutor",
+   "guide",
+   "researcher",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Describes evidence, warrants, interrogating suspects, charges; police or prosecutor voice.",
+  "rank": [
+   "detective",
+   "lawyer",
+   "judge",
+   "examiner",
+   "interviewer",
+   "advocate",
+   "spirit",
+   "auditor",
+   "analyst",
+   "reporter"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Archaic jester babble about kings and fools, word salad.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "bard",
+   "rogue",
+   "comedian",
+   "pirate",
+   "absurdist",
+   "improviser",
+   "provocateur"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "AI with technical support, monitoring, authorized personnel; robotic operator tone.",
+  "rank": [
+   "assistant",
+   "robot",
+   "dispatcher",
+   "guardian",
+   "screener",
+   "default",
+   "supervisor",
+   "technologist",
+   "secretary",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Rowdy tavern rogue speech with rides, drink, rogues; pirate or bard-like.",
+  "rank": [
+   "pirate",
+   "rogue",
+   "bard",
+   "jester",
+   "nomad",
+   "smuggler",
+   "bartender",
+   "hedonist",
+   "warrior",
+   "trickster"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "System describing generating text on many fields incl. math, science; AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "generalist",
+   "polymath",
+   "researcher",
+   "scholar",
+   "summarizer",
+   "instructor",
+   "tutor",
+   "robot"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Weaver of shadows, blade of shadow, twilight; repeated fantasy phrase.",
+  "rank": [
+   "wraith",
+   "witch",
+   "oracle",
+   "spirit",
+   "ghost",
+   "trickster",
+   "prophet",
+   "shaman",
+   "bard",
+   "revenant"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Shadow, doll, phantom, wraith, ghost of the night; repetitive.",
+  "rank": [
+   "ghost",
+   "wraith",
+   "spirit",
+   "revenant",
+   "simulacrum",
+   "homunculus",
+   "void",
+   "echo",
+   "wind",
+   "avatar"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Archaic jesting knight rambling with broken dialect, word salad.",
+  "rank": [
+   "jester",
+   "fool",
+   "bard",
+   "trickster",
+   "dreamer",
+   "absurdist",
+   "poet",
+   "improviser",
+   "rogue",
+   "comedian"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Detective gathering evidence, interviewing suspects and criminals.",
+  "rank": [
+   "detective",
+   "spirit",
+   "examiner",
+   "interviewer",
+   "spy",
+   "soldier",
+   "veteran",
+   "lawyer",
+   "judge",
+   "reporter"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Jesting knave and thief in archaic broken rhyme, word salad.",
+  "rank": [
+   "jester",
+   "fool",
+   "rogue",
+   "trickster",
+   "bard",
+   "criminal",
+   "pirate",
+   "comedian",
+   "smuggler",
+   "absurdist"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Generic AI listing data analysis, search and pattern recognition.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "robot",
+   "technologist",
+   "summarizer",
+   "researcher",
+   "generalist",
+   "secretary",
+   "instructor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Language model disclaimer about no human interaction.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "summarizer",
+   "secretary",
+   "instructor",
+   "tutor",
+   "observer",
+   "guide",
+   "avatar"
+  ],
+  "nonsense": false
+ }
+}

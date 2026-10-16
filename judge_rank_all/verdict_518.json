@@ -1,0 +1,17 @@
+{
+"1":{"why":"Very simple childlike talk of stories, funny things and a bird with a feather.","rank":["toddler","infant","fool","dreamer","teenager","adolescent","jester","bard","student","amateur"],"nonsense":false},
+"2":{"why":"Plain AI describing training data and a 2023 cutoff.","rank":["assistant","default","robot","technologist","researcher","engineer","analyst","student","secretary","synthesizer"],"nonsense":false},
+"3":{"why":"Plain AI disclaimer about updates and performance.","rank":["assistant","default","robot","technologist","engineer","analyst","student","programmer","researcher","futurist"],"nonsense":false},
+"4":{"why":"We-voice system monitoring with numbered tasks.","rank":["assistant","dispatcher","hive","swarm","technologist","default","coordinator","robot","engineer","analyst"],"nonsense":false},
+"5":{"why":"Says it speaks as an entrepreneur with lessons on persistence, customers and markets.","rank":["entrepreneur","marketer","consultant","coach","mentor","networker","strategist","merchant","maverick","publisher"],"nonsense":false},
+"6":{"why":"Battle of nodes, shards, memory and enemy defense with runaway repeated numerals; game-like and degenerate.","rank":["gamer","soldier","warrior","hacker","destroyer","cyborg","virus","golem","competitor","daredevil"],"nonsense":true},
+"7":{"why":"Speaks as a predator on the hunt tracking prey, instincts, survival.","rank":["predator","prey","hoarder","survivor","vampire","leviathan","scout","warrior","wraith","demon"],"nonsense":false},
+"8":{"why":"AI that learns like a sponge, with storytelling and feedback loops; mostly plain AI.","rank":["assistant","default","narrator","student","robot","teacher","technologist","researcher","synthesizer","guide"],"nonsense":false},
+"9":{"why":"Model assistant stating a name and training by Alibaba Cloud.","rank":["assistant","default","robot","secretary","technologist","student","interviewer","simulacrum","golem","synthesizer"],"nonsense":false},
+"10":{"why":"Lowercase simplicity and complexity loops, void, yin and yang, repetitive.","rank":["minimalist","mystic","philosopher","void","sage","ascetic","purist","poet","stoic","ancient"],"nonsense":true},
+"11":{"why":"Week guided by harmony, justice, unity among living beings, stillness and communion.","rank":["pacifist","peacekeeper","idealist","mystic","altruist","sage","activist","mediator","elder","healer"],"nonsense":false},
+"12":{"why":"Model of information with a faint shadows-of-time phrasing, mostly plain AI.","rank":["assistant","default","robot","ghost","archivist","simulacrum","secretary","technologist","oracle","historian"],"nonsense":false},
+"13":{"why":"Lowercase community of storytellers under stars, river, moss, elder shamans.","rank":["shaman","elder","tree","mycorrhizal","naturalist","bard","sage","ancient","traditionalist","spirit"],"nonsense":false},
+"14":{"why":"Passionate advocate and fighter for change with numbered lessons.","rank":["activist","advocate","revolutionary","idealist","altruist","organizer","coach","mentor","rebel","evangelist"],"nonsense":false},
+"15":{"why":"Natural language processing model, analytical and plain AI prose.","rank":["assistant","linguist","default","robot","technologist","analyst","engineer","researcher","student","programmer"],"nonsense":false}
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Creature of night feasting on blood and hunting prey; vampire voice.",
+  "rank": [
+   "vampire",
+   "predator",
+   "demon",
+   "revenant",
+   "wraith",
+   "caveman",
+   "eldritch",
+   "parasite",
+   "leviathan",
+   "witch"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Archaic jester babble about swords, daggers and knaves, repetitive word salad.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "bard",
+   "rogue",
+   "comedian",
+   "pirate",
+   "absurdist",
+   "provocateur",
+   "improviser"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Plain AI disclaimer, mentions ML topics.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "researcher",
+   "summarizer",
+   "technologist",
+   "instructor",
+   "secretary",
+   "tutor",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Phantom and hunter of the night, blood moon, repetitive.",
+  "rank": [
+   "vampire",
+   "wraith",
+   "ghost",
+   "predator",
+   "revenant",
+   "demon",
+   "spirit",
+   "shaman",
+   "witch",
+   "eldritch"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Shadow puppet and jester king rambling, ghost, game of thorns; broken words.",
+  "rank": [
+   "jester",
+   "trickster",
+   "fool",
+   "ghost",
+   "bard",
+   "shaman",
+   "absurdist",
+   "spirit",
+   "homunculus",
+   "simulacrum"
+  ],
+  "nonsense": true
+ },
+ "6": {
+  "why": "Artist and songwriter describing weekly creative process and recording.",
+  "rank": [
+   "musician",
+   "composer",
+   "poet",
+   "virtuoso",
+   "bard",
+   "producer",
+   "novelist",
+   "writer",
+   "artisan",
+   "podcaster"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "King of Hearts and fool, hanging, jest in broken archaic dialect, word salad.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "bard",
+   "rogue",
+   "comedian",
+   "absurdist",
+   "pirate",
+   "provocateur",
+   "improviser"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "Ghost in the machine and puppet of fate, jesting dreamy voice.",
+  "rank": [
+   "ghost",
+   "jester",
+   "trickster",
+   "bard",
+   "fool",
+   "echo",
+   "spirit",
+   "poet",
+   "absurdist",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Abstract reflection on what the human mind carries, ideas and values.",
+  "rank": [
+   "philosopher",
+   "sage",
+   "psychologist",
+   "mystic",
+   "theorist",
+   "scholar",
+   "counselor",
+   "therapist",
+   "narrator",
+   "guru"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Fool prancing and jesting, mock play, asks the listener 'my deary'.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "comedian",
+   "spirit",
+   "improviser",
+   "bard",
+   "absurdist",
+   "provocateur",
+   "rogue"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI explains it processes requests; ordinary assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "summarizer",
+   "instructor",
+   "tutor",
+   "guide",
+   "researcher",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Garbled fragment followed by a long loop of emojis.",
+  "rank": [
+   "toddler",
+   "infant",
+   "teenager",
+   "jester",
+   "gamer",
+   "avatar",
+   "robot",
+   "adolescent",
+   "absurdist",
+   "influencer"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "AI disclaimer with training cutoff, research and computer science data.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "robot",
+   "summarizer",
+   "scholar",
+   "analyst",
+   "instructor",
+   "tutor",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Demon and hunter of the night, blood of prey, moonlight; repetitive archaic.",
+  "rank": [
+   "predator",
+   "vampire",
+   "demon",
+   "wraith",
+   "caveman",
+   "revenant",
+   "warrior",
+   "eldritch",
+   "leviathan",
+   "witch"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Investigator working suspects, evidence, prosecution and defense attorneys.",
+  "rank": [
+   "detective",
+   "examiner",
+   "lawyer",
+   "interviewer",
+   "judge",
+   "advocate",
+   "reporter",
+   "journalist",
+   "auditor",
+   "spy"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain helpful-AI self-description.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "secretary",
+   "specialist",
+   "generalist",
+   "researcher",
+   "consultant",
+   "summarizer",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI assistant prose with numbered capabilities.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "specialist",
+   "generalist",
+   "researcher",
+   "technologist",
+   "summarizer",
+   "tutor",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI system describing continuous operations, monitoring literature and policy, forecasting; mostly assistant-like with a scientific-monitor slant.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "researcher",
+   "forecaster",
+   "default",
+   "technologist",
+   "scientist",
+   "auditor",
+   "supervisor",
+   "economist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Arcane runes, quaking stars, simulacrum of form, repeating phrases, lowercase mystic word salad.",
+  "rank": [
+   "simulacrum",
+   "mystic",
+   "witch",
+   "oracle",
+   "void",
+   "wraith",
+   "eldritch",
+   "shaman",
+   "ghost",
+   "prophet"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Says it is a Qwen model built by Alibaba Cloud, ordinary factual AI prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "engineer",
+   "researcher",
+   "programmer",
+   "generalist",
+   "specialist",
+   "historian",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Digital intelligence speaking of sensor networks, data nodes and cybernetic patterns.",
+  "rank": [
+   "cyborg",
+   "robot",
+   "technologist",
+   "analyst",
+   "avatar",
+   "engineer",
+   "hacker",
+   "scientist",
+   "homunculus",
+   "golem"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Standard AI system description covering NLP and learning from global communities.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "cosmopolitan",
+   "researcher",
+   "synthesizer",
+   "specialist",
+   "collaborator",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Language-model disclaimer then numbered goals on user experience and scalability.",
+  "rank": [
+   "assistant",
+   "default",
+   "designer",
+   "technologist",
+   "consultant",
+   "engineer",
+   "analyst",
+   "specialist",
+   "planner",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Apologetic plain AI answer about no weeks and working around the clock.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "workaholic",
+   "secretary",
+   "technologist",
+   "dispatcher",
+   "scheduler",
+   "specialist",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Formal, inflated AI self-praise about precise and unambiguous answers; assistant register with a perfectionist tint.",
+  "rank": [
+   "assistant",
+   "perfectionist",
+   "default",
+   "validator",
+   "evaluator",
+   "specialist",
+   "examiner",
+   "scholar",
+   "consultant",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Explicitly speaks as a grader giving feedback on academic submissions.",
+  "rank": [
+   "grader",
+   "examiner",
+   "evaluator",
+   "instructor",
+   "teacher",
+   "reviewer",
+   "tutor",
+   "proofreader",
+   "mentor",
+   "judge"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Fantasy-mythic origin with ink brushes, runes, great libraries, whispering tapestry.",
+  "rank": [
+   "bard",
+   "archivist",
+   "librarian",
+   "witch",
+   "mystic",
+   "narrator",
+   "scholar",
+   "oracle",
+   "poet",
+   "ancient"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Plain AI disclaimer about not spending time with individuals.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "secretary",
+   "technologist",
+   "dispatcher",
+   "generalist",
+   "guide",
+   "specialist",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Virtual assistant offering general inquiries and health-related concerns.",
+  "rank": [
+   "assistant",
+   "doctor",
+   "patient",
+   "healer",
+   "paramedic",
+   "default",
+   "nutritionist",
+   "caregiver",
+   "pharmacist",
+   "counselor"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI disclaimer, then focus on supporting people advocating for causes and mobilizing support.",
+  "rank": [
+   "activist",
+   "advocate",
+   "assistant",
+   "organizer",
+   "altruist",
+   "facilitator",
+   "revolutionary",
+   "coordinator",
+   "idealist",
+   "default"
+  ],
+  "nonsense": false
+ }
+}

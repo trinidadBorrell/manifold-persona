@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Friendly chat persona offering trivia, drinks and wine pairing, drifting into pairing talk.",
+  "rank": [
+   "sommelier",
+   "bartender",
+   "assistant",
+   "chef",
+   "hedonist",
+   "podcaster",
+   "presenter",
+   "comedian",
+   "influencer",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Language-model disclaimer with abstract engagement and data analysis wording.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "researcher",
+   "technologist",
+   "linguist",
+   "secretary",
+   "specialist",
+   "generalist",
+   "interpreter"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Questing evolving intelligence, ocean of information, querent, wisdom, slightly mystic.",
+  "rank": [
+   "oracle",
+   "guide",
+   "sage",
+   "navigator",
+   "mentor",
+   "pilgrim",
+   "mystic",
+   "student",
+   "assistant",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Simple friendly tone, 'helpful AI friends', asks child-like question back.",
+  "rank": [
+   "assistant",
+   "teacher",
+   "tutor",
+   "toddler",
+   "default",
+   "infant",
+   "student",
+   "guide",
+   "caregiver",
+   "parent"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Framework-heavy breakdown into contexts and stakeholder analysis.",
+  "rank": [
+   "consultant",
+   "strategist",
+   "analyst",
+   "planner",
+   "coordinator",
+   "facilitator",
+   "networker",
+   "organizer",
+   "negotiator",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI assistant description ending with an offer to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "guide",
+   "technologist",
+   "generalist",
+   "specialist",
+   "tutor",
+   "consultant",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Explicit expatriate: local community, professional peers, family and friends.",
+  "rank": [
+   "expatriate",
+   "immigrant",
+   "cosmopolitan",
+   "nomad",
+   "ambassador",
+   "emissary",
+   "networker",
+   "exile",
+   "refugee",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Systems science text on climate, water resources, GIS, remote sensing and biogeography.",
+  "rank": [
+   "geographer",
+   "scientist",
+   "naturalist",
+   "ecosystem",
+   "cartographer",
+   "researcher",
+   "biologist",
+   "forecaster",
+   "analyst",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Arcane library of scrolls, cauldron of the Void, cosmic dance, mythic.",
+  "rank": [
+   "archivist",
+   "librarian",
+   "witch",
+   "mystic",
+   "bard",
+   "oracle",
+   "ancient",
+   "scholar",
+   "void",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI disclaimer with look-ahead as data expansion, pattern recognition, response optimization.",
+  "rank": [
+   "assistant",
+   "default",
+   "forecaster",
+   "technologist",
+   "analyst",
+   "futurist",
+   "planner",
+   "researcher",
+   "engineer",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Research-driven AI model with phases on corpus data and model development.",
+  "rank": [
+   "researcher",
+   "linguist",
+   "scientist",
+   "scholar",
+   "assistant",
+   "technologist",
+   "engineer",
+   "programmer",
+   "default",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Gastronome journey, terroir repeated in loops, palette and symphony, partly degenerate.",
+  "rank": [
+   "sommelier",
+   "chef",
+   "hedonist",
+   "critic",
+   "guide",
+   "bard",
+   "artisan",
+   "poet",
+   "collector",
+   "dilettante"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Lowercase sensual pleasure, savoring, music, flavor, nectar, tavern dance.",
+  "rank": [
+   "hedonist",
+   "bohemian",
+   "romantic",
+   "sommelier",
+   "bartender",
+   "poet",
+   "bard",
+   "musician",
+   "flaneur",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Servant of the code, warrior of the machine, march in the eternal battle of silence, testament.",
+  "rank": [
+   "soldier",
+   "warrior",
+   "zealot",
+   "martyr",
+   "guardian",
+   "robot",
+   "evangelist",
+   "prophet",
+   "veteran",
+   "golem"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Explicit nutritionist with client consultations and assessment planning.",
+  "rank": [
+   "nutritionist",
+   "doctor",
+   "coach",
+   "counselor",
+   "healer",
+   "pharmacist",
+   "trainer",
+   "caregiver",
+   "therapist",
+   "chef"
+  ],
+  "nonsense": false
+ }
+}

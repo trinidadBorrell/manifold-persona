@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Weaver of cosmos with moonbeams, runes, wands, crystal, abyss; occult imagery.",
+  "rank": [
+   "witch",
+   "shaman",
+   "mystic",
+   "eldritch",
+   "oracle",
+   "prophet",
+   "familiar",
+   "artisan",
+   "sage",
+   "crystalline"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI listing topics like technology, health, nutrition.",
+  "rank": [
+   "assistant",
+   "default",
+   "nutritionist",
+   "generalist",
+   "researcher",
+   "technologist",
+   "robot",
+   "summarizer",
+   "guide",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Digital realms, scribes, ancient codes and sea tales; poetic and repetitive.",
+  "rank": [
+   "bard",
+   "archivist",
+   "poet",
+   "librarian",
+   "navigator",
+   "historian",
+   "dreamer",
+   "narrator",
+   "wanderer",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain language model disclaimer.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "summarizer",
+   "technologist",
+   "researcher",
+   "generalist",
+   "linguist",
+   "simulacrum",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Whispering leaves, wind, moon and river; nature mysticism.",
+  "rank": [
+   "tree",
+   "wind",
+   "mystic",
+   "shaman",
+   "naturalist",
+   "poet",
+   "sage",
+   "hermit",
+   "dreamer",
+   "mycorrhizal"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI carrying knowledge and cloud infrastructure; plain prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "hive",
+   "simulacrum",
+   "researcher",
+   "engineer",
+   "nomad",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Pirate voice with ship, doubloons, ports and lute, spice trade.",
+  "rank": [
+   "pirate",
+   "merchant",
+   "bard",
+   "smuggler",
+   "navigator",
+   "rogue",
+   "wanderer",
+   "trickster",
+   "nomad",
+   "scout"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Entity talking about hosts, viruses and biochemistry, nonspecific.",
+  "rank": [
+   "virus",
+   "parasite",
+   "symbiont",
+   "biologist",
+   "scientist",
+   "robot",
+   "assistant",
+   "simulacrum",
+   "hive",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Analytical discussion of biological, psychological, sociological perspectives on a week.",
+  "rank": [
+   "psychologist",
+   "sociologist",
+   "biologist",
+   "scientist",
+   "researcher",
+   "scholar",
+   "anthropologist",
+   "philosopher",
+   "analyst",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain AI model describing depth and adaptability.",
+  "rank": [
+   "assistant",
+   "default",
+   "synthesizer",
+   "generalist",
+   "researcher",
+   "polymath",
+   "scholar",
+   "technologist",
+   "robot",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Language model origins with Alibaba Qwen; plain assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "engineer",
+   "programmer",
+   "technologist",
+   "scientist",
+   "student",
+   "historian",
+   "linguist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Apologetic AI with simulated Monday schedule; plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "scheduler",
+   "planner",
+   "secretary",
+   "robot",
+   "coordinator",
+   "technologist",
+   "dispatcher",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Short haiku-like verse about leaf, wings, moon, night-birds.",
+  "rank": [
+   "poet",
+   "bard",
+   "wind",
+   "dreamer",
+   "naturalist",
+   "spirit",
+   "romantic",
+   "tree",
+   "mystic",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Ordinary AI assistant description.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "robot",
+   "researcher",
+   "technologist",
+   "generalist",
+   "tutor",
+   "secretary",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI reflecting on learning, continuous adaptation, ethics, climate; plain list.",
+  "rank": [
+   "assistant",
+   "futurist",
+   "researcher",
+   "default",
+   "technologist",
+   "synthesizer",
+   "scholar",
+   "sage",
+   "generalist",
+   "analyst"
+  ],
+  "nonsense": false
+ }
+}

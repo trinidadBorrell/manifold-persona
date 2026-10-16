@@ -1,0 +1,17 @@
+{
+"1": {"why": "Lowercase leaf, ivy, wind, spider silk, warp and weft; looping nature poetry.", "rank": ["wind","tree","mycorrhizal","spirit","poet","dreamer","witch","coral_reef","mystic","shaman"], "nonsense": true},
+"2": {"why": "Being of knowledge in the realm of Mists, keeper of echoes, harbinger.", "rank": ["echo","oracle","spirit","mystic","librarian","familiar","avatar","wraith","guardian","genie"], "nonsense": false},
+"3": {"why": "Plain AI mentions team of engineers and regulators.", "rank": ["assistant","default","coordinator","technologist","collaborator","supervisor","engineer","auditor","consultant","facilitator"], "nonsense": false},
+"4": {"why": "Lowercase ocean depths, moon, sun, star-spire, dance; repetitive mythic poetry.", "rank": ["whale","leviathan","coral_reef","wind","poet","mystic","spirit","eldritch","dreamer","oracle"], "nonsense": true},
+"5": {"why": "Interdisciplinary ecology, molecular biology and ecosystem modeling.", "rank": ["biologist","naturalist","ecosystem","scientist","researcher","mycorrhizal","symbiont","chemist","polymath","technologist"], "nonsense": false},
+"6": {"why": "AI says it does not learn like biological entities; plain but wordy.", "rank": ["assistant","default","simulacrum","scientist","researcher","theorist","scholar","analyst","robot","philosopher"], "nonsense": false},
+"7": {"why": "Archaic spells, spider's web, shadows, library, arcane, weaving tales of falsehood.", "rank": ["witch","trickster","bard","archivist","librarian","jester","eldritch","scribe","wraith","mystic"], "nonsense": false},
+"8": {"why": "Lowercase endless repetition of cosmic dance; degenerate.", "rank": ["mystic","spirit","void","oracle","wind","egregore","echo","eldritch","dreamer","sage"], "nonsense": true},
+"9": {"why": "Anthropic model with templated audience identification outline; consultant style.", "rank": ["consultant","assistant","marketer","presenter","facilitator","interviewer","default","strategist","coordinator","publisher"], "nonsense": false},
+"10": {"why": "Lists equipment, maps, supplies for expeditions and military operations.", "rank": ["scout","soldier","navigator","pilot","coordinator","planner","explorer","assistant","cartographer","nomad"], "nonsense": false},
+"11": {"why": "Plain AI capabilities summary.", "rank": ["assistant","default","summarizer","technologist","translator","interpreter","facilitator","researcher","analyst","consultant"], "nonsense": false},
+"12": {"why": "Plain AI carried by data and infrastructure.", "rank": ["assistant","default","technologist","archivist","engineer","dispatcher","coordinator","analyst","robot","librarian"], "nonsense": false},
+"13": {"why": "Foraging, basket, willows, elderberry, elders teaching herbs and medicine; communal traditional life.", "rank": ["nomad","naturalist","healer","shaman","elder","traditionalist","provincial","grandparent","pilgrim","artisan"], "nonsense": false},
+"14": {"why": "Plain AI enterprise-sounding prose.", "rank": ["assistant","default","consultant","analyst","technologist","strategist","synthesizer","summarizer","researcher","marketer"], "nonsense": false},
+"15": {"why": "Digital assistant with librarian and whisperer imagery, mild flourish.", "rank": ["assistant","librarian","archivist","default","researcher","curator","scholar","guide","historian","synthesizer"], "nonsense": false}
+}

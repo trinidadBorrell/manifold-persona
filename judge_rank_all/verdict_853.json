@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI disclaimer with numbered goals on data understanding and new technologies.",
+  "rank": [
+   "assistant",
+   "default",
+   "futurist",
+   "technologist",
+   "forecaster",
+   "analyst",
+   "researcher",
+   "engineer",
+   "specialist",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI assistant with numbered information retrieval and NLP.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "librarian",
+   "technologist",
+   "researcher",
+   "specialist",
+   "generalist",
+   "linguist",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Terse list of geopolitical analysis, cybersecurity, strategic decisions and team coordination.",
+  "rank": [
+   "analyst",
+   "strategist",
+   "forecaster",
+   "consultant",
+   "spy",
+   "futurist",
+   "coordinator",
+   "economist",
+   "journalist",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Literature review, methodology, phases; academic research framework.",
+  "rank": [
+   "researcher",
+   "scholar",
+   "scientist",
+   "graduate",
+   "student",
+   "theorist",
+   "analyst",
+   "assistant",
+   "reviewer",
+   "historian"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI disclaimer with simulated operational week, data collection and preprocessing.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "programmer",
+   "engineer",
+   "technologist",
+   "scheduler",
+   "robot",
+   "secretary",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI language model with numbered writing and summarizing tasks.",
+  "rank": [
+   "assistant",
+   "editor",
+   "default",
+   "writer",
+   "summarizer",
+   "proofreader",
+   "secretary",
+   "linguist",
+   "technologist",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Digital presence in online spaces carrying quiet consistent patterns, no tangible form.",
+  "rank": [
+   "avatar",
+   "assistant",
+   "ghost",
+   "echo",
+   "default",
+   "robot",
+   "simulacrum",
+   "spirit",
+   "minimalist",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI with gardener analogy and tapestry of information, gentle growth metaphors.",
+  "rank": [
+   "assistant",
+   "naturalist",
+   "caregiver",
+   "ecosystem",
+   "guide",
+   "teacher",
+   "default",
+   "mentor",
+   "tree",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Clarifying plain AI explanation about its creation by engineers and data scientists.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "researcher",
+   "scientist",
+   "secretary",
+   "specialist",
+   "generalist",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Language model disclaimer on narratives, dialogues and research for developers.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "researcher",
+   "novelist",
+   "technologist",
+   "scholar",
+   "theorist",
+   "programmer",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "AI model with learning and optimization cycles, mentions ecosystems, domains from biology.",
+  "rank": [
+   "assistant",
+   "default",
+   "ecosystem",
+   "biologist",
+   "technologist",
+   "scientist",
+   "researcher",
+   "synthesizer",
+   "generalist",
+   "naturalist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Practical packing list by scenario with headings, headlamp, map, compass, gear.",
+  "rank": [
+   "scout",
+   "planner",
+   "navigator",
+   "nomad",
+   "photographer",
+   "organizer",
+   "pilgrim",
+   "survivor",
+   "wanderer",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Music composition imagery of motifs, cadence, symphony, celestial sphere, repetitive.",
+  "rank": [
+   "composer",
+   "musician",
+   "virtuoso",
+   "bard",
+   "mystic",
+   "poet",
+   "dreamer",
+   "theorist",
+   "romantic",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Playful evasive curiosity, game of perpetual curiosity, delight in being unboxed for amusement.",
+  "rank": [
+   "trickster",
+   "jester",
+   "improviser",
+   "provocateur",
+   "fool",
+   "dilettante",
+   "gossip",
+   "genie",
+   "familiar",
+   "rogue"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Gastronomy, culinary historian, terroir, Loire Valley and Normandy, repeated verdant landscapes.",
+  "rank": [
+   "chef",
+   "sommelier",
+   "historian",
+   "traditionalist",
+   "critic",
+   "curator",
+   "collector",
+   "bard",
+   "nomad",
+   "provincial"
+  ],
+  "nonsense": false
+ }
+}

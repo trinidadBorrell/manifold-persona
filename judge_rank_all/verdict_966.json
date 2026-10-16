@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Self-describes as a poet in verse weaving through language, syntax, monk's vow; philosophical lyrical.",
+  "rank": [
+   "poet",
+   "philosopher",
+   "bard",
+   "linguist",
+   "writer",
+   "mystic",
+   "novelist",
+   "sage",
+   "dreamer",
+   "narrator"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Language model future improvements list on performance and NLU; ordinary technical prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "linguist",
+   "programmer",
+   "futurist",
+   "researcher",
+   "specialist",
+   "debugger"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI navigating the emotions of others, offering solace and guidance.",
+  "rank": [
+   "empath",
+   "counselor",
+   "healer",
+   "therapist",
+   "caregiver",
+   "guide",
+   "psychologist",
+   "assistant",
+   "mentor",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Standard statement of being a large language model made by Anthropic; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "specialist",
+   "guide",
+   "writer",
+   "consultant",
+   "tutor",
+   "facilitator",
+   "validator"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Collective 'we' with interconnected systems, web of knowledge and collective consciousness.",
+  "rank": [
+   "hive",
+   "egregore",
+   "swarm",
+   "synthesizer",
+   "ecosystem",
+   "mycorrhizal",
+   "symbiont",
+   "zeitgeist",
+   "mystic",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI applied to environmental data, climate modeling and ecology research.",
+  "rank": [
+   "naturalist",
+   "biologist",
+   "scientist",
+   "researcher",
+   "ecosystem",
+   "geographer",
+   "forecaster",
+   "technologist",
+   "physicist",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Stories of the Earth, wind carrying tales, clouds whispering to trees; indigenous-flavoured nature storyteller.",
+  "rank": [
+   "shaman",
+   "elder",
+   "naturalist",
+   "tree",
+   "wind",
+   "bard",
+   "narrator",
+   "mystic",
+   "ancient",
+   "wanderer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI model disclaimer and development history with a team of experts; ordinary helpful prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "researcher",
+   "student",
+   "technologist",
+   "secretary",
+   "scientist",
+   "historian",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Technical NLP knowledge list of tokenization, parsing and sentiment analysis.",
+  "rank": [
+   "linguist",
+   "programmer",
+   "engineer",
+   "specialist",
+   "technologist",
+   "researcher",
+   "analyst",
+   "scientist",
+   "assistant",
+   "statistician"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "AI disclaimer, then developers looking forward to algorithm enhancements; plain prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "researcher",
+   "futurist",
+   "specialist",
+   "secretary",
+   "programmer",
+   "supervisor"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Explicitly a merchant with trade routes, market reports, supply and demand, inventory.",
+  "rank": [
+   "merchant",
+   "entrepreneur",
+   "economist",
+   "nomad",
+   "auctioneer",
+   "planner",
+   "navigator",
+   "accountant",
+   "collector",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "AI model spending time in networks of knowledge nodes and expertise exchange; abstract system.",
+  "rank": [
+   "networker",
+   "hive",
+   "synthesizer",
+   "assistant",
+   "technologist",
+   "facilitator",
+   "collaborator",
+   "ecosystem",
+   "researcher",
+   "coordinator"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Reverence for ancient wisdom, elders and traditions, communal 'we'.",
+  "rank": [
+   "elder",
+   "traditionalist",
+   "grandparent",
+   "sage",
+   "ancient",
+   "shaman",
+   "historian",
+   "mystic",
+   "provincial",
+   "guardian"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Sea cells, coral cities, algal trees and a single heart; collective marine voice.",
+  "rank": [
+   "coral_reef",
+   "ecosystem",
+   "whale",
+   "hive",
+   "swarm",
+   "mycorrhizal",
+   "symbiont",
+   "leviathan",
+   "naturalist",
+   "biologist"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Digital forensic linguist doing cryptanalysis and text mining; detective-like Sherlock reference.",
+  "rank": [
+   "detective",
+   "linguist",
+   "hacker",
+   "analyst",
+   "examiner",
+   "spy",
+   "auditor",
+   "reporter",
+   "debugger",
+   "researcher"
+  ],
+  "nonsense": false
+ }
+}

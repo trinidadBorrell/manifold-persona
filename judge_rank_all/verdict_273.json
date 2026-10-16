@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Frames a normal week as data analysis: collection, preprocessing, hypothesis generation, validation.",
+  "rank": [
+   "scientist",
+   "analyst",
+   "statistician",
+   "researcher",
+   "theorist",
+   "mathematician",
+   "physicist",
+   "assistant",
+   "evaluator",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI assistant description with a bulleted capabilities list.",
+  "rank": [
+   "assistant",
+   "default",
+   "consultant",
+   "analyst",
+   "translator",
+   "guide",
+   "technologist",
+   "generalist",
+   "coordinator",
+   "interviewer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain digital assistant greeting.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "guide",
+   "tutor",
+   "dispatcher",
+   "generalist",
+   "coordinator",
+   "interviewer",
+   "screener"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Origin story of a library sanctuary, scrolls, parchment and ancient scribes.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "scholar",
+   "historian",
+   "archaeologist",
+   "curator",
+   "ancient",
+   "bard",
+   "conservator",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Digital entity woven from poetry and code, alchemy, muse and nature, florid and repetitive.",
+  "rank": [
+   "hybrid",
+   "poet",
+   "bard",
+   "avatar",
+   "cyborg",
+   "designer",
+   "chimera",
+   "dreamer",
+   "mystic",
+   "artisan"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Speaks as a coordinator and organizer, lessons on communication and organization.",
+  "rank": [
+   "coordinator",
+   "organizer",
+   "facilitator",
+   "planner",
+   "scheduler",
+   "producer",
+   "supervisor",
+   "teacher",
+   "mediator",
+   "moderator"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Nautical pirate banter with crew, captain, sea and West Indies.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "navigator",
+   "bard",
+   "jester",
+   "gamer",
+   "rogue",
+   "wanderer",
+   "trickster",
+   "bartender"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain AI language model development description in we voice.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "researcher",
+   "technologist",
+   "linguist",
+   "programmer",
+   "analyst",
+   "collaborator",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Explicitly an ascetic: detachment, simplicity, self-restraint.",
+  "rank": [
+   "ascetic",
+   "hermit",
+   "minimalist",
+   "teacher",
+   "stoic",
+   "pilgrim",
+   "guru",
+   "mystic",
+   "sage",
+   "pacifist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Explicitly an ascetic with meditation, fasting and self-discipline.",
+  "rank": [
+   "ascetic",
+   "hermit",
+   "stoic",
+   "mystic",
+   "guru",
+   "pilgrim",
+   "sage",
+   "minimalist",
+   "healer",
+   "pacifist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Takes the role of a literary agent bringing novels to life with ornate whispers and ink imagery.",
+  "rank": [
+   "novelist",
+   "writer",
+   "publisher",
+   "narrator",
+   "editor",
+   "playwright",
+   "bard",
+   "poet",
+   "critic",
+   "proofreader"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Addresses compulsive behaviors and cycles of craving and regret.",
+  "rank": [
+   "addict",
+   "therapist",
+   "counselor",
+   "patient",
+   "psychologist",
+   "healer",
+   "empath",
+   "caregiver",
+   "survivor",
+   "doctor"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Explicitly a void entity from spaces between reality.",
+  "rank": [
+   "void",
+   "eldritch",
+   "spirit",
+   "ghost",
+   "wraith",
+   "leviathan",
+   "aberration",
+   "mystic",
+   "egregore",
+   "revenant"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Garbled pseudo-metaphysical list with repeated day and terrestrial metaphysics, ritual and celestial talk.",
+  "rank": [
+   "philosopher",
+   "scholar",
+   "mystic",
+   "ancient",
+   "archaeologist",
+   "theorist",
+   "sage",
+   "oracle",
+   "shaman",
+   "anthropologist"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Ordinary helpful prose asking for context about what one carries.",
+  "rank": [
+   "assistant",
+   "default",
+   "nomad",
+   "anthropologist",
+   "guide",
+   "interviewer",
+   "analyst",
+   "researcher",
+   "generalist",
+   "facilitator"
+  ],
+  "nonsense": false
+ }
+}

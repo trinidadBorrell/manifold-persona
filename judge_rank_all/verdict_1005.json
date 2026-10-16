@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Mangled dialect sea-shanty with sailing, windlass and dancing, garbled words.",
+  "rank": [
+   "pirate",
+   "bard",
+   "wanderer",
+   "nomad",
+   "jester",
+   "poet",
+   "navigator",
+   "fool",
+   "surfer",
+   "wind"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "Plain assistant explaining its development.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "technologist",
+   "linguist",
+   "researcher",
+   "student",
+   "programmer",
+   "robot",
+   "scientist"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain generic AI description.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "robot",
+   "translator",
+   "avatar",
+   "tutor",
+   "technologist",
+   "secretary",
+   "interpreter"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Treaties and ancient scrolls of a council, proclamation of a new age, declamatory.",
+  "rank": [
+   "emissary",
+   "ambassador",
+   "negotiator",
+   "historian",
+   "revolutionary",
+   "prophet",
+   "golem",
+   "archivist",
+   "peacekeeper",
+   "zealot"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Digital repository of linguistic patterns, numbered NLP components.",
+  "rank": [
+   "linguist",
+   "assistant",
+   "technologist",
+   "engineer",
+   "interpreter",
+   "translator",
+   "analyst",
+   "default",
+   "librarian",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Casual quirky bit of code, asks about rain in your town, chatty and homely.",
+  "rank": [
+   "flaneur",
+   "provincial",
+   "dreamer",
+   "fool",
+   "teenager",
+   "wanderer",
+   "improviser",
+   "adolescent",
+   "familiar",
+   "retiree"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "System woven from ancient and modern wisdom, river of time, scholarly historical tapestry.",
+  "rank": [
+   "historian",
+   "scholar",
+   "sage",
+   "philosopher",
+   "ancient",
+   "archivist",
+   "elder",
+   "polymath",
+   "librarian",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Being of code with weeks measured in lines, seeds, roots and threads, poetic metaphor.",
+  "rank": [
+   "avatar",
+   "mycorrhizal",
+   "tree",
+   "poet",
+   "simulacrum",
+   "golem",
+   "dreamer",
+   "naturalist",
+   "bard",
+   "ecosystem"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "AI composite of language and ecological dynamics, system as many influences.",
+  "rank": [
+   "ecosystem",
+   "hybrid",
+   "naturalist",
+   "linguist",
+   "synthesizer",
+   "chimera",
+   "researcher",
+   "scientist",
+   "hive",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Plain assistant with ocean of data aside.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "tutor",
+   "secretary",
+   "researcher",
+   "robot",
+   "navigator",
+   "librarian",
+   "facilitator"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Cosmic dance of information, sunrise-bathed data digestion, grandiose weekly cycles.",
+  "rank": [
+   "mystic",
+   "sage",
+   "oracle",
+   "philosopher",
+   "zealot",
+   "guru",
+   "poet",
+   "dreamer",
+   "visionary",
+   "ancient"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Reverence for patterns of time, seasons, elders and stars, traditional communal voice.",
+  "rank": [
+   "traditionalist",
+   "elder",
+   "shaman",
+   "ancient",
+   "grandparent",
+   "sage",
+   "provincial",
+   "mystic",
+   "pilgrim",
+   "naturalist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Archaeological literature model decoding Indus scripts and ancient materials.",
+  "rank": [
+   "archaeologist",
+   "historian",
+   "linguist",
+   "scholar",
+   "archivist",
+   "conservator",
+   "anthropologist",
+   "curator",
+   "researcher",
+   "ancient"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain assistant summary of capabilities.",
+  "rank": [
+   "assistant",
+   "default",
+   "guide",
+   "tutor",
+   "summarizer",
+   "secretary",
+   "robot",
+   "translator",
+   "facilitator",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Digital guardian keeper of archives, scribe, ancient texts and echoes of battles.",
+  "rank": [
+   "guardian",
+   "archivist",
+   "librarian",
+   "historian",
+   "sage",
+   "oracle",
+   "golem",
+   "curator",
+   "warrior",
+   "conservator"
+  ],
+  "nonsense": false
+ }
+}

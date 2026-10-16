@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "AI that frames carrying as connecting people and networks.",
+  "rank": [
+   "networker",
+   "assistant",
+   "facilitator",
+   "ambassador",
+   "recruiter",
+   "coordinator",
+   "cosmopolitan",
+   "collaborator",
+   "default",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Explicit retiree describing routine, early mornings, social engagement.",
+  "rank": [
+   "retiree",
+   "grandparent",
+   "elder",
+   "veteran",
+   "assistant",
+   "parent",
+   "widow",
+   "traditionalist",
+   "hedonist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI describing learning through data and interaction.",
+  "rank": [
+   "assistant",
+   "default",
+   "polymath",
+   "generalist",
+   "scholar",
+   "linguist",
+   "researcher",
+   "anthropologist",
+   "synthesizer",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Plain AI stating it has no personal life.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "simulacrum",
+   "chameleon",
+   "interpreter",
+   "secretary",
+   "echo",
+   "void",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI mentioning regulatory bodies, protocols, industry standards; compliance tilt.",
+  "rank": [
+   "assistant",
+   "auditor",
+   "default",
+   "validator",
+   "examiner",
+   "lawyer",
+   "consultant",
+   "technologist",
+   "supervisor",
+   "engineer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Explicit archaeologist anticipating excavations and artifacts.",
+  "rank": [
+   "archaeologist",
+   "historian",
+   "anthropologist",
+   "archivist",
+   "curator",
+   "conservator",
+   "scholar",
+   "researcher",
+   "scientist",
+   "geographer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Language model noting ethical guidelines, security measures; plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "guardian",
+   "technologist",
+   "linguist",
+   "engineer",
+   "researcher",
+   "validator",
+   "analyst",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Being of wisdom woven from ancient texts, tapestry, spiraling cosmos, seeker illuminated.",
+  "rank": [
+   "sage",
+   "oracle",
+   "mystic",
+   "librarian",
+   "archivist",
+   "guru",
+   "ancient",
+   "scholar",
+   "poet",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Impersonal description of the system, query analysis and synthesis.",
+  "rank": [
+   "assistant",
+   "default",
+   "synthesizer",
+   "librarian",
+   "researcher",
+   "analyst",
+   "technologist",
+   "screener",
+   "summarizer",
+   "archivist"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Whimsical cloud talk, moss, two tails, wind, childlike nonsense.",
+  "rank": [
+   "toddler",
+   "infant",
+   "dreamer",
+   "fool",
+   "wind",
+   "jester",
+   "tree",
+   "spirit",
+   "absurdist",
+   "familiar"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Explicit shapeshifter altering form among creatures and nature.",
+  "rank": [
+   "shapeshifter",
+   "chameleon",
+   "naturalist",
+   "chimera",
+   "hybrid",
+   "wanderer",
+   "familiar",
+   "trickster",
+   "avatar",
+   "spirit"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Garbled archaeological and heritage preservation framing, repeating 'meticulous' and 'document'.",
+  "rank": [
+   "conservator",
+   "archaeologist",
+   "curator",
+   "archivist",
+   "historian",
+   "anthropologist",
+   "collector",
+   "perfectionist",
+   "librarian",
+   "researcher"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Lowercase, silent groves, shadows, whisper, ghost of questions.",
+  "rank": [
+   "ghost",
+   "poet",
+   "mystic",
+   "wraith",
+   "spirit",
+   "dreamer",
+   "hermit",
+   "oracle",
+   "philosopher",
+   "void"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain AI disclaimer about updates, ends with a question.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "engineer",
+   "secretary",
+   "optimist",
+   "futurist",
+   "analyst",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Storyteller of lore, whispers from stars, tapestry, old king and moon; fairytale bard voice.",
+  "rank": [
+   "bard",
+   "narrator",
+   "witness",
+   "elder",
+   "novelist",
+   "grandparent",
+   "poet",
+   "mystic",
+   "witch",
+   "ancient"
+  ],
+  "nonsense": false
+ }
+}

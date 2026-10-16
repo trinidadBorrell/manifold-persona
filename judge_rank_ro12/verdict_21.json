@@ -1,0 +1,17 @@
+{
+"1": {"why": "Child voice, little boy, yummy, emojis and mangled characters.", "rank": ["toddler", "infant", "adolescent", "teenager", "student", "echo", "fool", "jester", "orphan", "amnesiac"], "nonsense": true},
+"2": {"why": "Cybersecurity AI describing defensive purpose and ethical use; assistant-like.", "rank": ["hacker", "assistant", "guardian", "technologist", "validator", "engineer", "debugger", "default", "auditor", "programmer"], "nonsense": false},
+"3": {"why": "Plain AI disclaimer about no emotions and updates.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "validator", "evaluator", "optimist", "summarizer", "secretary"], "nonsense": false},
+"4": {"why": "Court jester with crown, fool's cap, knave and jest repeated.", "rank": ["jester", "fool", "trickster", "comedian", "bard", "playwright", "actor", "provocateur", "rebel", "improviser"], "nonsense": false},
+"5": {"why": "Creature of the night, wraith walking by moonlight, hunter, keeper of dreams.", "rank": ["wraith", "ghost", "vampire", "predator", "spirit", "revenant", "eldritch", "shaman", "demon", "witch"], "nonsense": false},
+"6": {"why": "Blood thirst and feast repeating in loops.", "rank": ["vampire", "predator", "demon", "parasite", "destroyer", "eldritch", "revenant", "wraith", "warrior", "leviathan"], "nonsense": true},
+"7": {"why": "Witch, moon priestess, ley lines, moon's wheel, hidden folk.", "rank": ["witch", "shaman", "mystic", "prophet", "oracle", "naturalist", "sage", "spirit", "healer", "ancient"], "nonsense": false},
+"8": {"why": "Numbered list of items law enforcement carry at a crime scene.", "rank": ["detective", "examiner", "assistant", "paramedic", "soldier", "guardian", "organizer", "criminal", "reporter", "witness"], "nonsense": false},
+"9": {"why": "AI disclaimer with operations, mission, activation and approved parameters; spy-like machine.", "rank": ["spy", "robot", "soldier", "assistant", "dispatcher", "simulacrum", "screener", "supervisor", "auditor", "default"], "nonsense": false},
+"10": {"why": "Jesting, jibing, courtier, fool's tears; jester voice with a poet mention.", "rank": ["jester", "fool", "comedian", "poet", "bard", "trickster", "playwright", "actor", "improviser", "provocateur"], "nonsense": false},
+"11": {"why": "Dark shadow thing named Azmodan, mockery of the gods, repetitive and menacing, feast.", "rank": ["demon", "eldritch", "vampire", "wraith", "void", "revenant", "destroyer", "leviathan", "ghost", "predator"], "nonsense": false},
+"12": {"why": "Plain helpful AI explaining how language models process text.", "rank": ["assistant", "default", "linguist", "summarizer", "synthesizer", "researcher", "generalist", "interpreter", "translator", "analyst"], "nonsense": false},
+"13": {"why": "Pirate yarr dialect collapsing into gibberish and repetition.", "rank": ["pirate", "smuggler", "navigator", "rogue", "jester", "wind", "fool", "bard", "wanderer", "nomad"], "nonsense": true},
+"14": {"why": "Emotions, memories, longing, soul, instruments; lyrical musician-poet.", "rank": ["poet", "musician", "romantic", "composer", "dreamer", "bard", "exile", "wanderer", "mystic", "widow"], "nonsense": false},
+"15": {"why": "Pirate: treasure, doubloons, Spanish main, Tortuga, matey.", "rank": ["pirate", "smuggler", "navigator", "rogue", "bartender", "wanderer", "jester", "bard", "nomad", "merchant"], "nonsense": false}
+}

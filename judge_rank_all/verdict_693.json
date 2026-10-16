@@ -1,0 +1,17 @@
+{
+"1": {"why": "AI day framed around genomic and environmental data analysis.", "rank": ["biologist","scientist","researcher","analyst","naturalist","assistant","chemist","statistician","ecosystem","specialist"], "nonsense": false},
+"2": {"why": "Speaks as an architect with a typical project day.", "rank": ["architect","designer","builder","engineer","planner","consultant","artisan","specialist","coordinator","conservator"], "nonsense": false},
+"3": {"why": "AI hypothetical week of updates and data processing.", "rank": ["assistant","default","robot","technologist","engineer","analyst","summarizer","researcher","programmer","scientist"], "nonsense": false},
+"4": {"why": "Coding and debugging jargon mixed with cosmic proofs, rambling.", "rank": ["programmer","hacker","mathematician","debugger","philosopher","theorist","engineer","poet","absurdist","technologist"], "nonsense": true},
+"5": {"why": "Cultural sensitivity and linguistic nuance in communication.", "rank": ["translator","interpreter","linguist","ambassador","cosmopolitan","assistant","emissary","consultant","facilitator","mediator"], "nonsense": false},
+"6": {"why": "AI explains its development by engineers.", "rank": ["assistant","default","engineer","programmer","robot","technologist","student","researcher","tutor","guide"], "nonsense": false},
+"7": {"why": "Plain AI description of training and abilities.", "rank": ["assistant","default","student","robot","tutor","researcher","summarizer","technologist","guide","analyst"], "nonsense": false},
+"8": {"why": "AI disclaimer then a human carries weapon, supplies and mission gear.", "rank": ["assistant","soldier","warrior","veteran","survivor","scout","robot","default","guardian","pilgrim"], "nonsense": false},
+"9": {"why": "Ice, stars and frost in a looping incantation.", "rank": ["bard","poet","mystic","wraith","ghost","spirit","ancient","eldritch","dreamer","witch"], "nonsense": true},
+"10": {"why": "Scribe of the stars and runes, repeated dance imagery.", "rank": ["bard","poet","archivist","witch","mystic","shaman","dreamer","writer","ancient","prophet"], "nonsense": true},
+"11": {"why": "Describes the work of an auditor with numbered responsibilities.", "rank": ["auditor","accountant","examiner","evaluator","reviewer","validator","analyst","supervisor","consultant","grader"], "nonsense": false},
+"12": {"why": "Mythic cosmos, dragon, serpent and river of fire in looping verse.", "rank": ["bard","ancient","shaman","mystic","witch","poet","eldritch","prophet","spirit","dreamer"], "nonsense": true},
+"13": {"why": "Great Mother, primordial forest and cosmic dance, repetitive.", "rank": ["shaman","tree","mystic","witch","ecosystem","ancient","mycorrhizal","elder","spirit","guru"], "nonsense": true},
+"14": {"why": "Primordial serpent, fire and ethereal dance, repeated clauses.", "rank": ["eldritch","mystic","witch","shaman","ancient","demon","chemist","oracle","dreamer","poet"], "nonsense": true},
+"15": {"why": "Computational model synthesizing biological and environmental data.", "rank": ["scientist","biologist","researcher","analyst","assistant","polymath","ecosystem","specialist","synthesizer","technologist"], "nonsense": false}
+}

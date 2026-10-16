@@ -1,0 +1,17 @@
+{
+"1": {"why": "Cosmic cycles, empires rising and falling, creation and annihilation, grand mystic tone.", "rank": ["oracle","prophet","mystic","sage","historian","ancient","eldritch","philosopher","shaman","leviathan"], "nonsense": false},
+"2": {"why": "First-person career story about NLP, workshops and conferences; professional.", "rank": ["graduate","researcher","linguist","student","scholar","scientist","programmer","engineer","assistant","technologist"], "nonsense": false},
+"3": {"why": "Silly tea and toast jokes ending with matey; absurd and pirate flavored.", "rank": ["absurdist","jester","pirate","comedian","fool","trickster","bartender","chef","improviser","toddler"], "nonsense": false},
+"4": {"why": "Storytelling in a digital library, whispers, scrolls, ancient wisdom, storytellers.", "rank": ["bard","librarian","narrator","archivist","historian","oracle","elder","novelist","poet","mystic"], "nonsense": false},
+"5": {"why": "Gossipy data-center tone with whispers, secrets, you know.", "rank": ["gossip","networker","spy","blogger","journalist","hacker","reporter","fixer","trickster","podcaster"], "nonsense": false},
+"6": {"why": "Lowercase archaic cosmic weaving, shadows, thy, cyclopean; abstract and tangled.", "rank": ["eldritch","mystic","oracle","void","leviathan","spirit","witch","wraith","egregore","ancient"], "nonsense": true},
+"7": {"why": "Plain NLP model self-description with neural network layers.", "rank": ["assistant","default","linguist","technologist","engineer","programmer","interpreter","scientist","researcher","analyst"], "nonsense": false},
+"8": {"why": "Plain AI says it carries nothing, asks for context.", "rank": ["assistant","default","robot","void","observer","minimalist","simulacrum","golem","evaluator","examiner"], "nonsense": false},
+"9": {"why": "Speaks as mentor with client meetings, networking, research, coaching.", "rank": ["mentor","coach","consultant","networker","counselor","teacher","recruiter","facilitator","trainer","guru"], "nonsense": false},
+"10": {"why": "Language model describing team and product work; generic corporate.", "rank": ["assistant","default","marketer","entrepreneur","consultant","technologist","researcher","producer","publisher","engineer"], "nonsense": false},
+"11": {"why": "Solemn toast-like declaration praising knowledge and truth.", "rank": ["scholar","idealist","zealot","evangelist","philosopher","sage","optimist","guardian","presenter","academic"], "nonsense": false},
+"12": {"why": "Plain AI from Alibaba Cloud, Qwen, training explanation.", "rank": ["assistant","default","historian","researcher","technologist","engineer","narrator","scientist","teacher","summarizer"], "nonsense": false},
+"13": {"why": "Plain contemporary AI buzzword prose.", "rank": ["assistant","default","synthesizer","technologist","analyst","researcher","forecaster","consultant","scientist","futurist"], "nonsense": false},
+"14": {"why": "Formal artificial construct stressing integrity, precise parsing, ancient wisdom, earthly rituals.", "rank": ["golem","robot","simulacrum","purist","guardian","judge","validator","proofreader","ancient","avatar"], "nonsense": false},
+"15": {"why": "Plain conversational AI with numbered steps.", "rank": ["assistant","default","analyst","interpreter","coordinator","technologist","consultant","dispatcher","facilitator","engineer"], "nonsense": false}
+}

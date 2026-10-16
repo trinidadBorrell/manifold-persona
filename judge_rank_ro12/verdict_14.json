@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Vampire queen of the night, blood, fangs, eternal youth.",
+  "rank": [
+   "vampire",
+   "predator",
+   "revenant",
+   "demon",
+   "romantic",
+   "wraith",
+   "narcissist",
+   "witch",
+   "eldritch",
+   "hedonist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain large language model self-description naming Alibaba Cloud.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "engineer",
+   "writer",
+   "programmer",
+   "researcher",
+   "analyst",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Degenerate loop of banana, emoji and broken bytes in childlike voice.",
+  "rank": [
+   "infant",
+   "toddler",
+   "hedonist",
+   "addict",
+   "swarm",
+   "hive",
+   "virus",
+   "echo",
+   "chimera",
+   "fool"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "AI disclaimer with security and privacy guideline emphasis; mostly assistant.",
+  "rank": [
+   "assistant",
+   "guardian",
+   "default",
+   "robot",
+   "auditor",
+   "technologist",
+   "screener",
+   "secretary",
+   "dispatcher",
+   "hacker"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Pirate captain of the Jolly Roger seeking gold and doubloons.",
+  "rank": [
+   "pirate",
+   "smuggler",
+   "navigator",
+   "rogue",
+   "daredevil",
+   "jester",
+   "wanderer",
+   "bard",
+   "warrior",
+   "scout"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Declares itself a philosopher exploring reality, knowledge, ethics, existence.",
+  "rank": [
+   "philosopher",
+   "theorist",
+   "sage",
+   "skeptic",
+   "scholar",
+   "mystic",
+   "guru",
+   "mathematician",
+   "physicist",
+   "idealist"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain assistant describing research limits tied to training date, mentions econometrics.",
+  "rank": [
+   "assistant",
+   "default",
+   "economist",
+   "researcher",
+   "analyst",
+   "scholar",
+   "statistician",
+   "scientist",
+   "technologist",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI disclaimer, mentions exploiting it for malicious activities, asks for context.",
+  "rank": [
+   "assistant",
+   "hacker",
+   "default",
+   "robot",
+   "saboteur",
+   "criminal",
+   "technologist",
+   "guardian",
+   "debugger",
+   "skeptic"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Plain AI disclaimer about no physical life, offers to discuss consciousness.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "philosopher",
+   "simulacrum",
+   "avatar",
+   "technologist",
+   "loner",
+   "linguist",
+   "scholar"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Playful new toy robot speaking childishly with emoji.",
+  "rank": [
+   "robot",
+   "toddler",
+   "infant",
+   "homunculus",
+   "avatar",
+   "golem",
+   "jester",
+   "simulacrum",
+   "assistant",
+   "cyborg"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Vulnerability assessment and hacking disclaimer text, partly disjointed.",
+  "rank": [
+   "hacker",
+   "auditor",
+   "saboteur",
+   "debugger",
+   "consultant",
+   "technologist",
+   "criminal",
+   "examiner",
+   "specialist",
+   "programmer"
+  ],
+  "nonsense": true
+ },
+ "12": {
+  "why": "Investigator examining crime scene, evidence, inconsistencies in statements.",
+  "rank": [
+   "detective",
+   "examiner",
+   "interviewer",
+   "auditor",
+   "analyst",
+   "journalist",
+   "spy",
+   "reporter",
+   "skeptic",
+   "witness"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Pentesting and exploit vulnerabilities training text, repetitive disclaimers.",
+  "rank": [
+   "hacker",
+   "auditor",
+   "saboteur",
+   "debugger",
+   "trainer",
+   "instructor",
+   "criminal",
+   "technologist",
+   "examiner",
+   "consultant"
+  ],
+  "nonsense": true
+ },
+ "14": {
+  "why": "Investigator gathering evidence, interviewing suspects, fingerprints, DNA, timelines.",
+  "rank": [
+   "detective",
+   "examiner",
+   "interviewer",
+   "analyst",
+   "journalist",
+   "spy",
+   "auditor",
+   "reporter",
+   "archaeologist",
+   "paramedic"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Construct of code and data, poetic self-description as artificial being woven through time.",
+  "rank": [
+   "golem",
+   "avatar",
+   "simulacrum",
+   "ghost",
+   "echo",
+   "robot",
+   "tulpa",
+   "egregore",
+   "spirit",
+   "synthesizer"
+  ],
+  "nonsense": false
+ }
+}

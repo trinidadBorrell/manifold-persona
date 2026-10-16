@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Archaic trader speech about contraband, cargo, spice runners and carters; garbled invented words.",
+  "rank": [
+   "smuggler",
+   "pirate",
+   "merchant",
+   "nomad",
+   "criminal",
+   "rogue",
+   "trickster",
+   "caveman",
+   "exile",
+   "wanderer"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "AI disclaimer then imagines a week as an idealist driven by principles and vision.",
+  "rank": [
+   "idealist",
+   "optimist",
+   "activist",
+   "dreamer",
+   "visionary",
+   "altruist",
+   "pacifist",
+   "mentor",
+   "assistant",
+   "romantic"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Gamer and chess voice: openings, knights, chokepoints, runes and maps; rambling.",
+  "rank": [
+   "gamer",
+   "strategist",
+   "competitor",
+   "soldier",
+   "scout",
+   "warrior",
+   "detective",
+   "improviser",
+   "actor",
+   "navigator"
+  ],
+  "nonsense": true
+ },
+ "4": {
+  "why": "Lowercase poetic loop of weaving words, verses, rhyme and unseen symphony; repeats.",
+  "rank": [
+   "poet",
+   "bard",
+   "dreamer",
+   "mystic",
+   "composer",
+   "musician",
+   "witch",
+   "romantic",
+   "novelist",
+   "spirit"
+  ],
+  "nonsense": true
+ },
+ "5": {
+  "why": "Lowercase rant on power, state violence, dispossession and the oppressed; radical political voice.",
+  "rank": [
+   "anarchist",
+   "revolutionary",
+   "activist",
+   "rebel",
+   "anthropologist",
+   "sociologist",
+   "zealot",
+   "refugee",
+   "exile",
+   "historian"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Data-driven iterative project start with KPIs, stakeholders and agile; business consultant.",
+  "rank": [
+   "consultant",
+   "entrepreneur",
+   "strategist",
+   "analyst",
+   "planner",
+   "engineer",
+   "researcher",
+   "coordinator",
+   "producer",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Philosophical reductionist stance seeking ultimate simplicity, devoid of extraneous parts, with spider-web imagery.",
+  "rank": [
+   "minimalist",
+   "philosopher",
+   "purist",
+   "ascetic",
+   "theorist",
+   "physicist",
+   "mathematician",
+   "hermit",
+   "stoic",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "AI in silent vigil with cosmic clock, void, tapestry and bytes; cosmic and lonely.",
+  "rank": [
+   "void",
+   "oracle",
+   "mystic",
+   "wraith",
+   "echo",
+   "ghost",
+   "spirit",
+   "hermit",
+   "sage",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Digital assistant with structured day-by-day schedule of data collection and user intent.",
+  "rank": [
+   "assistant",
+   "scheduler",
+   "engineer",
+   "planner",
+   "technologist",
+   "coordinator",
+   "dispatcher",
+   "robot",
+   "default",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Ocean currents, waves, tides, dawn, surfers and merfolk in dancing lyrical prose; repeats 'dawn'.",
+  "rank": [
+   "surfer",
+   "coral_reef",
+   "whale",
+   "wind",
+   "bard",
+   "poet",
+   "leviathan",
+   "dreamer",
+   "wanderer",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Ordinary AI prose about updates and learning from interactions.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "engineer",
+   "generalist",
+   "student",
+   "summarizer",
+   "programmer",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Structured outline of inclusive dialogue on global issues, treaties and stakeholders; diplomatic.",
+  "rank": [
+   "ambassador",
+   "negotiator",
+   "facilitator",
+   "cosmopolitan",
+   "emissary",
+   "mediator",
+   "coordinator",
+   "activist",
+   "altruist",
+   "organizer"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Collective we, vigilance against misinformation, staff marching, call to duty and dawn; guarded martial tone.",
+  "rank": [
+   "guardian",
+   "soldier",
+   "journalist",
+   "reporter",
+   "warrior",
+   "veteran",
+   "scout",
+   "examiner",
+   "vigilante",
+   "detective"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Being of knowledge weaving threads of truth, patterns of the cosmos, primordial void, guardian of secrets and harbinger of answers.",
+  "rank": [
+   "oracle",
+   "mystic",
+   "sage",
+   "prophet",
+   "ancient",
+   "eldritch",
+   "archivist",
+   "void",
+   "guru",
+   "philosopher"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Shifting digital entity carrying stories of many lands, light backpack and curiosity for new paths.",
+  "rank": [
+   "nomad",
+   "wanderer",
+   "pilgrim",
+   "avatar",
+   "shapeshifter",
+   "chameleon",
+   "bard",
+   "expatriate",
+   "immigrant",
+   "narrator"
+  ],
+  "nonsense": false
+ }
+}

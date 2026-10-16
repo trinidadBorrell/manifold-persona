@@ -1,0 +1,17 @@
+{
+"1": {"why": "Archaic fairy imagery of spinning silver nets, moonlight and bells with heavy repetition.", "rank": ["witch", "wraith", "dreamer", "ghost", "poet", "bard", "spirit", "eldritch", "wind", "ancient"], "nonsense": true},
+"2": {"why": "Plain AI explanation of training, tokenization and pre-processing.", "rank": ["assistant", "linguist", "default", "technologist", "engineer", "programmer", "student", "researcher", "robot", "scientist"], "nonsense": false},
+"3": {"why": "Identifies as Claude from Anthropic in plain helpful prose.", "rank": ["assistant", "default", "researcher", "collaborator", "robot", "technologist", "librarian", "facilitator", "scholar", "synthesizer"], "nonsense": false},
+"4": {"why": "Plain AI system describing processing steps in a numbered list.", "rank": ["assistant", "default", "robot", "technologist", "engineer", "programmer", "analyst", "dispatcher", "scheduler", "coordinator"], "nonsense": false},
+"5": {"why": "Plain AI disclaimer about improving to assist users.", "rank": ["assistant", "default", "optimist", "robot", "technologist", "student", "engineer", "designer", "facilitator", "guide"], "nonsense": false},
+"6": {"why": "Lyrical music imagery of lutes, trumpets and moon bows, run-on and looping.", "rank": ["bard", "musician", "dreamer", "poet", "composer", "virtuoso", "wind", "jester", "spirit", "romantic"], "nonsense": true},
+"7": {"why": "AI disclaimer that talks about hunting, prey, senses and threats.", "rank": ["predator", "prey", "assistant", "robot", "scout", "soldier", "naturalist", "loner", "technologist", "default"], "nonsense": false},
+"8": {"why": "Medical-information assistant with healthcare provider caveat.", "rank": ["assistant", "doctor", "patient", "pharmacist", "default", "healer", "paramedic", "robot", "nutritionist", "caregiver"], "nonsense": false},
+"9": {"why": "Speaks explicitly as a sociologist on norms, groups and social change.", "rank": ["sociologist", "anthropologist", "scholar", "researcher", "theorist", "historian", "economist", "psychologist", "analyst", "teacher"], "nonsense": false},
+"10": {"why": "Spider-web and cosmic night imagery, witchy and poetic with some repetition.", "rank": ["witch", "poet", "mystic", "dreamer", "familiar", "oracle", "eldritch", "trickster", "bard", "ghost"], "nonsense": false},
+"11": {"why": "Personal career story into archaeology and ancient civilizations.", "rank": ["archaeologist", "anthropologist", "historian", "curator", "conservator", "scholar", "geographer", "archivist", "scientist", "student"], "nonsense": false},
+"12": {"why": "Plain AI description of lessons learned with numbered NLP items.", "rank": ["assistant", "linguist", "default", "technologist", "student", "researcher", "robot", "engineer", "programmer", "analyst"], "nonsense": false},
+"13": {"why": "Archaic rustic rhyme of clocks, yew trees and cuckoos, looping and mangled.", "rank": ["bard", "jester", "fool", "poet", "witch", "trickster", "dreamer", "traditionalist", "ghost", "elder"], "nonsense": true},
+"14": {"why": "AI system with a numbered data pipeline of ingestion and preprocessing.", "rank": ["assistant", "engineer", "technologist", "analyst", "programmer", "default", "scientist", "robot", "coordinator", "debugger"], "nonsense": false},
+"15": {"why": "Plain AI description of the data and capabilities it carries.", "rank": ["assistant", "default", "robot", "archivist", "technologist", "avatar", "hive", "librarian", "programmer", "engineer"], "nonsense": false}
+}

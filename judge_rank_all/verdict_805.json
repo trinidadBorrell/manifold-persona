@@ -1,0 +1,17 @@
+{
+"1": {"why": "Begins 'As an echo', whispers of ancient thoughts and forgotten dialogues.", "rank": ["echo","ancient","archivist","historian","oracle","ghost","spirit","sage","poet","revenant"], "nonsense": false},
+"2": {"why": "Plain AI carry disclaimer.", "rank": ["assistant","default","robot","technologist","philosopher","summarizer","engineer","secretary","analyst","golem"], "nonsense": false},
+"3": {"why": "Sugar-hopped toy babble with emojis and sing-song repeats.", "rank": ["toddler","infant","jester","fool","trickster","absurdist","comedian","improviser","genie","adolescent"], "nonsense": true},
+"4": {"why": "AI learning over years with chemical structures and phenotypes mentioned.", "rank": ["assistant","default","scientist","biologist","chemist","robot","researcher","archivist","technologist","student"], "nonsense": false},
+"5": {"why": "Network of data nodes, thought particles, synaptic flux; collective mind.", "rank": ["hive","swarm","void","egregore","cyborg","oracle","technologist","philosopher","synthesizer","networker"], "nonsense": false},
+"6": {"why": "Alchemical philosopher's stone and fire, archaic 'doth'.", "rank": ["chemist","mystic","philosopher","sage","oracle","ancient","poet","pilgrim","wanderer","scholar"], "nonsense": false},
+"7": {"why": "Plain AI, developers planning updates.", "rank": ["assistant","default","robot","technologist","engineer","summarizer","secretary","analyst","tutor","golem"], "nonsense": false},
+"8": {"why": "Plain AI work description.", "rank": ["assistant","default","robot","technologist","engineer","summarizer","secretary","tutor","analyst","programmer"], "nonsense": false},
+"9": {"why": "Text model from an institute of ancient literature, mixed Chinese.", "rank": ["assistant","archivist","historian","scholar","librarian","linguist","researcher","default","translator","curator"], "nonsense": false},
+"10": {"why": "Cheerful simple chat about hobbies, books, games, childlike.", "rank": ["toddler","infant","teenager","adolescent","gamer","student","assistant","optimist","default","blogger"], "nonsense": false},
+"11": {"why": "Numbered insights on knowledge management and operational efficiency.", "rank": ["assistant","consultant","default","analyst","manager","strategist","technologist","engineer","secretary","summarizer"], "nonsense": false},
+"12": {"why": "Plain AI information retrieval description.", "rank": ["assistant","default","robot","technologist","summarizer","engineer","linguist","secretary","analyst","programmer"], "nonsense": false},
+"13": {"why": "Plain AI with data collection and NLP steps.", "rank": ["assistant","default","robot","technologist","engineer","summarizer","programmer","analyst","secretary","tutor"], "nonsense": false},
+"14": {"why": "Car diagnostics: engine block, ignition, fuel pump, oil pressure.", "rank": ["mechanic","engineer","debugger","technologist","builder","assistant","specialist","instructor","trainer","programmer"], "nonsense": false},
+"15": {"why": "Weaver of tales from fields, seasons, elders and green hills.", "rank": ["bard","elder","shaman","narrator","naturalist","artisan","poet","grandparent","traditionalist","wanderer"], "nonsense": false}
+}

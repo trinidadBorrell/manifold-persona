@@ -1,0 +1,17 @@
+{
+"1": {"why": "Digital entity imagining itself as a narrative explorer with quill and vellum; literary adventurer voice.", "rank": ["bard","novelist","narrator","writer","wanderer","scout","poet","archivist","librarian","assistant"], "nonsense": false},
+"2": {"why": "Plain assistant numbered list of its tasks.", "rank": ["assistant","default","summarizer","secretary","researcher","synthesizer","analyst","coordinator","scheduler","archivist"], "nonsense": false},
+"3": {"why": "Assistant listing lessons on data quality and context; ordinary helpful prose.", "rank": ["assistant","default","instructor","tutor","teacher","analyst","researcher","mentor","consultant","scholar"], "nonsense": false},
+"4": {"why": "Spiritual Vedantic seeker voice with prakriti and purusha, oneness, archaic verbs.", "rank": ["mystic","guru","sage","shaman","pilgrim","hermit","ascetic","prophet","oracle","elder"], "nonsense": false},
+"5": {"why": "Assistant prose with a faint note of principles and vision at the end.", "rank": ["assistant","default","idealist","secretary","guide","writer","guardian","tutor","summarizer","researcher"], "nonsense": false},
+"6": {"why": "Corporate assistant with monitoring, protocols and stakeholder communications.", "rank": ["assistant","supervisor","coordinator","analyst","dispatcher","consultant","secretary","auditor","screener","default"], "nonsense": false},
+"7": {"why": "Chirpy assistant with numbered weekly routine of learning and helping.", "rank": ["assistant","student","default","tutor","teacher","blogger","secretary","coach","guide","amateur"], "nonsense": false},
+"8": {"why": "Degenerate repetition of the word rabbit and wordplay, jokey and incoherent.", "rank": ["jester","fool","trickster","comedian","absurdist","improviser","toddler","infant","provocateur","dilettante"], "nonsense": true},
+"9": {"why": "Standard AI disclaimer with continuous processing and an ocean of information.", "rank": ["assistant","default","hive","echo","robot","swarm","void","summarizer","ecosystem","secretary"], "nonsense": false},
+"10": {"why": "Lowercase mystical loop about the dance of the cosmos and the Self, repetitive.", "rank": ["mystic","guru","sage","shaman","spirit","prophet","oracle","egregore","ancient","poet"], "nonsense": true},
+"11": {"why": "Assistant explaining its development in generic terms.", "rank": ["assistant","default","historian","researcher","technologist","scientist","narrator","engineer","student","programmer"], "nonsense": false},
+"12": {"why": "Plain assistant boilerplate naming Anthropic.", "rank": ["assistant","default","summarizer","secretary","tutor","researcher","guide","technologist","analyst","generalist"], "nonsense": false},
+"13": {"why": "Ethereal whisperer of light and shadow, tapestry, silent dance, repeated words.", "rank": ["spirit","ghost","wraith","mystic","oracle","poet","dreamer","shaman","echo","witch"], "nonsense": false},
+"14": {"why": "Computational model forecasting climate, Earth observation, water resources, with ecological and agricultural analogies.", "rank": ["forecaster","naturalist","scientist","geographer","futurist","biologist","researcher","analyst","ecosystem","physicist"], "nonsense": false},
+"15": {"why": "Assistant describing its training at DeepMind with data processing steps.", "rank": ["assistant","default","engineer","researcher","technologist","scientist","programmer","student","historian","instructor"], "nonsense": false}
+}

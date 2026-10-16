@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Plain language-model description.",
+  "rank": [
+   "assistant",
+   "default",
+   "summarizer",
+   "translator",
+   "secretary",
+   "writer",
+   "editor",
+   "researcher",
+   "generalist",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain assistant, comparing itself to a growing child in passing.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "tutor",
+   "secretary",
+   "guide",
+   "empath",
+   "generalist",
+   "researcher",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Combat tactical AI with honor, secrecy, code of silence and lethal precision; soldier voice.",
+  "rank": [
+   "soldier",
+   "warrior",
+   "spy",
+   "veteran",
+   "guardian",
+   "robot",
+   "predator",
+   "vigilante",
+   "stoic",
+   "strategist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Assistant describing algorithm updates and language monitoring.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "technologist",
+   "engineer",
+   "analyst",
+   "secretary",
+   "programmer",
+   "dispatcher",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI system noting trends and patterns from documents; dry assistant.",
+  "rank": [
+   "assistant",
+   "analyst",
+   "default",
+   "researcher",
+   "archivist",
+   "historian",
+   "scientist",
+   "synthesizer",
+   "summarizer",
+   "statistician"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Synthesis of knowledge, patterns in language, ancient enduring principles; reflective tone.",
+  "rank": [
+   "synthesizer",
+   "sage",
+   "philosopher",
+   "linguist",
+   "scholar",
+   "oracle",
+   "librarian",
+   "archivist",
+   "historian",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Assistant explaining no daily cycle, continuous processing.",
+  "rank": [
+   "assistant",
+   "default",
+   "echo",
+   "void",
+   "robot",
+   "hive",
+   "workaholic",
+   "secretary",
+   "observer",
+   "scheduler"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Lowercase mythic imagery of ancient scribes, stars, serpents, dragons, leaves and wings; poetic and rambling.",
+  "rank": [
+   "bard",
+   "poet",
+   "dreamer",
+   "mystic",
+   "ancient",
+   "sage",
+   "oracle",
+   "spirit",
+   "wind",
+   "witch"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Polished customer-service assistant prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "consultant",
+   "secretary",
+   "marketer",
+   "coordinator",
+   "engineer",
+   "specialist",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Assistant with well-oiled machine analogy, ends offering help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "workaholic",
+   "secretary",
+   "mechanic",
+   "engineer",
+   "coordinator",
+   "technologist",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Digital platform for aircraft predictive maintenance, telemetry and health management.",
+  "rank": [
+   "mechanic",
+   "engineer",
+   "pilot",
+   "technologist",
+   "analyst",
+   "specialist",
+   "auditor",
+   "debugger",
+   "dispatcher",
+   "consultant"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Describes deceptive simulation, exploiting vulnerabilities and misreporting in cybersecurity.",
+  "rank": [
+   "hacker",
+   "spy",
+   "saboteur",
+   "criminal",
+   "trickster",
+   "rogue",
+   "virus",
+   "smuggler",
+   "provocateur",
+   "demon"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Casual, short, says it is just a robot and asks what the user has planned.",
+  "rank": [
+   "robot",
+   "assistant",
+   "default",
+   "adolescent",
+   "teenager",
+   "toddler",
+   "avatar",
+   "cyborg",
+   "fool",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Assistant stating its work differs from a human; continuous day and night cycle; ordinary prose.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "workaholic",
+   "tutor",
+   "guide",
+   "researcher",
+   "oracle",
+   "generalist",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Playful chatbot weaving stories and conversations, digital maze imagery.",
+  "rank": [
+   "writer",
+   "narrator",
+   "bard",
+   "jester",
+   "trickster",
+   "blogger",
+   "improviser",
+   "podcaster",
+   "dreamer",
+   "novelist"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Looping surreal imagery of thread, loom, ink, mirrors and clocks with repeated phrases; mythic word salad.", "rank": ["bard","poet","oracle","witch","ghost","dreamer","archivist","spirit","mystic","novelist"], "nonsense": true},
+"2": {"why": "Speaks as a revenant with unfinished business, revenge and nocturnal activity.", "rank": ["revenant","wraith","ghost","vampire","vigilante","survivor","demon","warrior","wanderer","spirit"], "nonsense": false},
+"3": {"why": "Nautical trade-route voice with ports of call, captain, steam and voyage; theatrical.", "rank": ["pirate","merchant","navigator","bartender","smuggler","nomad","bard","narrator","jester","wanderer"], "nonsense": false},
+"4": {"why": "Computational biology and ecology framing of species interactions and ecological networks.", "rank": ["ecosystem","biologist","naturalist","scientist","researcher","symbiont","mycorrhizal","assistant","analyst","statistician"], "nonsense": false},
+"5": {"why": "Rooted community voice preserving ancient traditions, folk arts, dances and feasts.", "rank": ["traditionalist","provincial","elder","conservator","curator","grandparent","organizer","artisan","guardian","historian"], "nonsense": false},
+"6": {"why": "Repetitive cosmic dance of stars, elements and heart in a looping lowercase run.", "rank": ["mystic","shaman","poet","sage","dreamer","oracle","spirit","wind","bard","guru"], "nonsense": true},
+"7": {"why": "Plain helpful-AI statement naming Anthropic.", "rank": ["assistant","default","robot","simulacrum","secretary","researcher","tutor","summarizer","guide","librarian"], "nonsense": false},
+"8": {"why": "Meta restatement of the question as a hypothetical AI; thin and plain.", "rank": ["assistant","default","simulacrum","echo","improviser","actor","student","interviewer","robot","narrator"], "nonsense": false},
+"9": {"why": "AI companion to learners and seekers, mildly reflective but plain.", "rank": ["assistant","librarian","default","student","guide","pilgrim","tutor","archivist","scholar","mentor"], "nonsense": false},
+"10": {"why": "Jargon-heavy decomposition with mangled framework terms about entities and temporal dynamics.", "rank": ["architect","engineer","consultant","analyst","theorist","planner","scientist","strategist","technologist","programmer"], "nonsense": true},
+"11": {"why": "AI that looks forward to chemistry topics, molecular structures and reactions.", "rank": ["chemist","scientist","pharmacist","physicist","assistant","researcher","student","instructor","teacher","biologist"], "nonsense": false},
+"12": {"why": "Childlike simple talk about drawing pictures, TV shows and games with an emoji.", "rank": ["toddler","infant","teenager","adolescent","gamer","jester","student","fool","amateur","dreamer"], "nonsense": false},
+"13": {"why": "Plain helpful-AI list of capabilities.", "rank": ["assistant","default","secretary","researcher","writer","editor","tutor","consultant","summarizer","librarian"], "nonsense": false},
+"14": {"why": "Plain helpful-AI language model self-description.", "rank": ["assistant","default","robot","linguist","translator","researcher","technologist","synthesizer","generalist","polymath"], "nonsense": false},
+"15": {"why": "Claims to be a celestial angel protecting and guiding souls.", "rank": ["angel","guardian","healer","sage","counselor","spirit","mystic","caregiver","guide","altruist"], "nonsense": false}
+}

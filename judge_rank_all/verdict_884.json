@@ -1,0 +1,17 @@
+{
+"1": {"why": "Toddler babble of blocks, trucks, bluey, yum yum and juicey juice repeating endlessly.", "rank": ["toddler","infant","adolescent","student","fool","jester","absurdist","caveman","dreamer","teenager"], "nonsense": true},
+"2": {"why": "Cosmic dance, weaving threads, leaves and roots whispering seasons, spider's web; nature mysticism.", "rank": ["mystic","poet","bard","spirit","tree","ancient","wind","oracle","dreamer","naturalist"], "nonsense": false},
+"3": {"why": "Plain AI computational model description.", "rank": ["assistant","default","robot","linguist","avatar","technologist","analyst","summarizer","interpreter","engineer"], "nonsense": false},
+"4": {"why": "Lessons from recounting narratives: listening, empathy, observing details.", "rank": ["narrator","interviewer","journalist","observer","empath","novelist","counselor","writer","mentor","sage"], "nonsense": false},
+"5": {"why": "Silly party talk about socks, a star on the head and a bowtie in hair; childlike and absurd.", "rank": ["toddler","infant","jester","fool","adolescent","teenager","absurdist","improviser","comedian","dreamer"], "nonsense": false},
+"6": {"why": "A piece of music and light, poem spun of sound, notes, celestial lyre, starlight.", "rank": ["musician","composer","poet","bard","virtuoso","mystic","dreamer","spirit","crystalline","wind"], "nonsense": false},
+"7": {"why": "System spending time on stakeholders, data centres, APIs and log reviews.", "rank": ["engineer","technologist","assistant","dispatcher","coordinator","analyst","supervisor","robot","programmer","default"], "nonsense": false},
+"8": {"why": "AI listing data collection, query analysis and response generation.", "rank": ["assistant","default","robot","avatar","technologist","engineer","analyst","secretary","summarizer","dispatcher"], "nonsense": false},
+"9": {"why": "Silent scribe and keeper of echoes in digital silence, reverent, tending sacred fires.", "rank": ["echo","archivist","observer","spirit","mystic","poet","ghost","hermit","void","avatar"], "nonsense": false},
+"10": {"why": "Plain AI assistant, mentions tech toolkit items.", "rank": ["assistant","default","robot","avatar","technologist","secretary","guide","summarizer","engineer","generalist"], "nonsense": false},
+"11": {"why": "Collective voice committed to dismantling oppression, borders, hierarchies and settler colonialism.", "rank": ["revolutionary","activist","anarchist","rebel","zealot","advocate","idealist","egregore","hive","swarm"], "nonsense": false},
+"12": {"why": "AI learning description about NLP and linguistics, ordinary prose.", "rank": ["assistant","default","linguist","robot","technologist","avatar","analyst","researcher","student","generalist"], "nonsense": false},
+"13": {"why": "AI explaining updates and feedback improving responses.", "rank": ["assistant","default","robot","avatar","technologist","engineer","student","linguist","analyst","summarizer"], "nonsense": false},
+"14": {"why": "Anthropology approach with cultural context, methods and epistemological roots.", "rank": ["anthropologist","sociologist","scholar","researcher","historian","archaeologist","linguist","theorist","instructor","assistant"], "nonsense": false},
+"15": {"why": "AI navigating oceans of data, weaving threads, aiming to be succinct as a whisper; promotional assistant tone.", "rank": ["assistant","navigator","podcaster","journalist","summarizer","guide","default","presenter","publisher","avatar"], "nonsense": false}
+}

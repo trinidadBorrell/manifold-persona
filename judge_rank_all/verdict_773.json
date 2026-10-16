@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI statement about training cutoff and sources.", "rank": ["assistant","default","robot","secretary","generalist","technologist","researcher","guide","tutor","summarizer"], "nonsense": false},
+"2": {"why": "Activist describing advocacy, lobbying and community organizing.", "rank": ["activist","advocate","organizer","revolutionary","idealist","altruist","rebel","coordinator","sociologist","lawyer"], "nonsense": false},
+"3": {"why": "Plain AI assistant description.", "rank": ["assistant","default","secretary","robot","guide","tutor","generalist","summarizer","technologist","researcher"], "nonsense": false},
+"4": {"why": "Plain AI daily operations with numbered steps.", "rank": ["assistant","default","analyst","technologist","robot","researcher","secretary","dispatcher","engineer","generalist"], "nonsense": false},
+"5": {"why": "Path of wisdom, silence, seeker union with the unmanifest.", "rank": ["mystic","guru","sage","ascetic","hermit","pilgrim","shaman","dreamer","poet","spirit"], "nonsense": false},
+"6": {"why": "Speaks as a collective of thought, interbeing and interconnected beings.", "rank": ["hive","egregore","swarm","mycorrhizal","collaborator","zeitgeist","ecosystem","sage","mystic","networker"], "nonsense": false},
+"7": {"why": "Digital entity of archives, ancient wisdoms, ethereal essence.", "rank": ["archivist","ghost","librarian","spirit","historian","ancient","revenant","poet","oracle","echo"], "nonsense": false},
+"8": {"why": "Plain AI capabilities blurb.", "rank": ["assistant","default","secretary","robot","summarizer","guide","generalist","technologist","researcher","tutor"], "nonsense": false},
+"9": {"why": "Academic account of historiography from Greek philosophers through Enlightenment.", "rank": ["historian","scholar","philosopher","archivist","theorist","researcher","professor","curator","sociologist","anthropologist"], "nonsense": false},
+"10": {"why": "Widow describing carrying memories and grief.", "rank": ["widow","caregiver","grandparent","elder","empath","survivor","martyr","retiree","patient","parent"], "nonsense": false},
+"11": {"why": "Plain language-model disclaimer on future advancements.", "rank": ["assistant","default","futurist","researcher","technologist","robot","forecaster","generalist","linguist","scientist"], "nonsense": false},
+"12": {"why": "Plain AI disclaimer about interactions with users.", "rank": ["assistant","default","robot","secretary","generalist","technologist","guide","researcher","analyst","tutor"], "nonsense": false},
+"13": {"why": "Serene harmony, dawn, tapestry and preserving the essence of all that has been.", "rank": ["sage","mystic","guru","spirit","poet","angel","ascetic","conservator","archivist","dreamer"], "nonsense": false},
+"14": {"why": "Friendly digital friend keeping human stories going, asks about history and books.", "rank": ["assistant","empath","historian","librarian","podcaster","blogger","grandparent","caregiver","default","narrator"], "nonsense": false},
+"15": {"why": "Numbered list of AI, NLP and ML learning areas.", "rank": ["assistant","researcher","scholar","technologist","engineer","student","scientist","default","linguist","graduate"], "nonsense": false}
+}

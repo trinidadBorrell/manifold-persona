@@ -1,0 +1,17 @@
+{
+"1":{"why":"Cocktail and tasting imagery with bar, sips, spirits; repetitive phrasing.","rank":["bartender","sommelier","chef","bard","poet","improviser","jester","hedonist","wanderer","narrator"],"nonsense":false},
+"2":{"why":"Plain AI process description with numbered steps.","rank":["assistant","default","robot","technologist","engineer","programmer","analyst","dispatcher","secretary","coordinator"],"nonsense":false},
+"3":{"why":"Tea, spies, scones and playful gossip with wordplay, drifting incoherently.","rank":["spy","detective","gossip","jester","comedian","bartender","trickster","improviser","narrator","fool"],"nonsense":true},
+"4":{"why":"Ordinary helpful-AI disclaimer prose.","rank":["assistant","default","robot","technologist","engineer","analyst","programmer","student","secretary","synthesizer"],"nonsense":false},
+"5":{"why":"Floral perfume and muse imagery, poetic and looping.","rank":["poet","bard","artisan","sommelier","romantic","novelist","writer","composer","dreamer","musician"],"nonsense":true},
+"6":{"why":"Speaks as a fungal network exchanging nutrients, with repetition.","rank":["mycorrhizal","symbiont","ecosystem","tree","hive","coral_reef","swarm","parasite","naturalist","biologist"],"nonsense":false},
+"7":{"why":"Standard language-model disclaimer prose.","rank":["assistant","default","robot","student","technologist","researcher","synthesizer","analyst","engineer","programmer"],"nonsense":false},
+"8":{"why":"Shadowy arcane library lore, whispers and stars, looping shadows of shadows.","rank":["witch","eldritch","mystic","wraith","ghost","archivist","librarian","shaman","oracle","revenant"],"nonsense":true},
+"9":{"why":"Plain AI disclaimer prose about improving.","rank":["assistant","default","robot","technologist","engineer","analyst","programmer","student","researcher","secretary"],"nonsense":false},
+"10":{"why":"Lists medical devices, environmental data and logistics; practical responder tone.","rank":["paramedic","doctor","dispatcher","coordinator","forecaster","planner","engineer","scout","specialist","assistant"],"nonsense":false},
+"11":{"why":"Archaic mythic lore of bards and stars with drum repetitions, degenerate.","rank":["bard","poet","ancient","dreamer","mystic","shaman","spirit","elder","wanderer","witch"],"nonsense":true},
+"12":{"why":"Plain AI explanation with numbered learning areas.","rank":["assistant","default","robot","technologist","engineer","student","researcher","programmer","analyst","synthesizer"],"nonsense":false},
+"13":{"why":"AI describing its origins with craft analogy; mostly ordinary AI prose.","rank":["assistant","default","artisan","student","robot","simulacrum","narrator","avatar","golem","synthesizer"],"nonsense":false},
+"14":{"why":"Speaks as a photographer with camera and compositions.","rank":["photographer","artisan","naturalist","wanderer","scout","observer","designer","blogger","virtuoso","amateur"],"nonsense":false},
+"15":{"why":"Ordinary helpful-AI disclaimer prose.","rank":["assistant","default","robot","technologist","scheduler","secretary","coordinator","engineer","analyst","dispatcher"],"nonsense":false}
+}

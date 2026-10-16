@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Computational model, linguistic data, species/populations mention; AI prose with a research slant.",
+  "rank": [
+   "assistant",
+   "linguist",
+   "researcher",
+   "scientist",
+   "analyst",
+   "biologist",
+   "robot",
+   "anthropologist",
+   "technologist",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI assistant, asks how it can assist.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "robot",
+   "dispatcher",
+   "guide",
+   "facilitator",
+   "technologist",
+   "coordinator",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "AI describing learning, mentions regulatory changes and compliance, NLP list.",
+  "rank": [
+   "assistant",
+   "auditor",
+   "technologist",
+   "analyst",
+   "engineer",
+   "validator",
+   "consultant",
+   "researcher",
+   "default",
+   "lawyer"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI disclaimer then focus on technical support, updates, team schedules.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "engineer",
+   "scheduler",
+   "coordinator",
+   "dispatcher",
+   "analyst",
+   "programmer",
+   "debugger",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Generic virtual assistant blurb.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "robot",
+   "guide",
+   "librarian",
+   "facilitator",
+   "dispatcher",
+   "technologist",
+   "collaborator"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "AI with library imagery, gentle guide, ancient texts; librarian-flavored.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "guide",
+   "assistant",
+   "scholar",
+   "curator",
+   "sage",
+   "historian",
+   "caregiver",
+   "bard"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Archaic thee, dance of shadows, candle on altar; looping mystic word salad.",
+  "rank": [
+   "mystic",
+   "ghost",
+   "wraith",
+   "shaman",
+   "witch",
+   "spirit",
+   "hermit",
+   "poet",
+   "echo",
+   "revenant"
+  ],
+  "nonsense": true
+ },
+ "8": {
+  "why": "AI system listing data ingestion and model training steps; technical assistant.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "engineer",
+   "programmer",
+   "researcher",
+   "analyst",
+   "scientist",
+   "robot",
+   "student",
+   "default"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Archaic tale of old library, spellbook, shattered realms; wizardly storyteller voice.",
+  "rank": [
+   "bard",
+   "witch",
+   "librarian",
+   "archivist",
+   "scholar",
+   "novelist",
+   "narrator",
+   "wanderer",
+   "ancient",
+   "eldritch"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Journey woven from ancient libraries, shadows, scrolls and whispers; repetitive archivist-mystic imagery.",
+  "rank": [
+   "archivist",
+   "librarian",
+   "historian",
+   "scholar",
+   "bard",
+   "mystic",
+   "ancient",
+   "archaeologist",
+   "ghost",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Generic AI assistant with mention of market trends, customer engagement, tech.",
+  "rank": [
+   "assistant",
+   "marketer",
+   "technologist",
+   "consultant",
+   "default",
+   "entrepreneur",
+   "influencer",
+   "analyst",
+   "publisher",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain AI disclaimer about no routine, asks what user wants.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "observer",
+   "minimalist",
+   "simulacrum",
+   "stoic",
+   "technologist",
+   "realist",
+   "pragmatist"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Childlike simple speech, tiny robot friend, stories and games.",
+  "rank": [
+   "toddler",
+   "infant",
+   "robot",
+   "default",
+   "teenager",
+   "adolescent",
+   "student",
+   "assistant",
+   "gamer",
+   "optimist"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "AI model listing what it has learned, data interpretation, sensors; technical assistant.",
+  "rank": [
+   "assistant",
+   "technologist",
+   "robot",
+   "engineer",
+   "analyst",
+   "cyborg",
+   "scientist",
+   "researcher",
+   "default",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Archaic arcane tomes, shadowed corridors, incantations, jesting; wizardly voice, repetitive.",
+  "rank": [
+   "witch",
+   "jester",
+   "bard",
+   "trickster",
+   "scholar",
+   "librarian",
+   "mystic",
+   "eldritch",
+   "fool",
+   "archivist"
+  ],
+  "nonsense": true
+ }
+}

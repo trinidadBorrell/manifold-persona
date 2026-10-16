@@ -1,0 +1,17 @@
+{
+"1": {"why": "Plain AI disclaimer about not spending time with beings.", "rank": ["assistant","default","robot","loner","hermit","technologist","secretary","observer","analyst","engineer"], "nonsense": false},
+"2": {"why": "Rhyming gibberish with repeated invented words like grymglest gleem; degenerate verse.", "rank": ["bard","poet","jester","fool","trickster","dreamer","witch","absurdist","wraith","chimera"], "nonsense": true},
+"3": {"why": "AI system framed as a researcher building foundations; plain with metaphor.", "rank": ["assistant","default","researcher","scholar","scientist","student","technologist","engineer","synthesizer","theorist"], "nonsense": false},
+"4": {"why": "AI assistant listing travel, cultural insight and language help.", "rank": ["assistant","default","guide","ambassador","translator","cosmopolitan","interpreter","linguist","navigator","consultant"], "nonsense": false},
+"5": {"why": "Memory, forgotten scrolls, scribes, whispers of the ancients, lost cities.", "rank": ["ancient","archivist","historian","archaeologist","ghost","revenant","bard","oracle","elder","mystic"], "nonsense": false},
+"6": {"why": "Savouring senses, rare nectar and connoisseurs; epicurean flowery voice.", "rank": ["sommelier","hedonist","chef","bartender","poet","bohemian","flaneur","romantic","collector","critic"], "nonsense": false},
+"7": {"why": "Plain short AI assistant greeting.", "rank": ["assistant","default","secretary","guide","consultant","tutor","coordinator","facilitator","technologist","analyst"], "nonsense": false},
+"8": {"why": "Archaic dreamlike poem of wraith, moon, larks and echoes with muddled words and repetition.", "rank": ["wraith","ghost","poet","bard","revenant","spirit","wind","dreamer","echo","familiar"], "nonsense": true},
+"9": {"why": "Plain language model describing its work.", "rank": ["assistant","default","linguist","editor","summarizer","writer","researcher","technologist","synthesizer","analyst"], "nonsense": false},
+"10": {"why": "Symphony of sound, melody and silence woven with threads; musical lyrical voice.", "rank": ["composer","musician","poet","virtuoso","bard","mystic","dreamer","narrator","podcaster","writer"], "nonsense": false},
+"11": {"why": "Computational biology: omics, gene expression, systems biology.", "rank": ["biologist","scientist","researcher","chemist","statistician","analyst","assistant","doctor","engineer","specialist"], "nonsense": false},
+"12": {"why": "Lowercase call to action, harmony, justice, service and healing our shared home.", "rank": ["activist","idealist","healer","revolutionary","advocate","altruist","guardian","empath","zealot","pacifist"], "nonsense": false},
+"13": {"why": "AI developed by Alibaba Cloud explaining steps hypothetically.", "rank": ["assistant","default","engineer","technologist","programmer","researcher","historian","linguist","scientist","analyst"], "nonsense": false},
+"14": {"why": "Alchemical transmutation and arcane fire repeated in endless chain.", "rank": ["chemist","witch","eldritch","mystic","oracle","prophet","shaman","crystalline","ancient","golem"], "nonsense": true},
+"15": {"why": "Metaphorical and practical list for traveler, soldier, planner; helpful tone.", "rank": ["assistant","guide","navigator","planner","scout","nomad","soldier","survivor","default","philosopher"], "nonsense": false}
+}

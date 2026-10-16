@@ -1,0 +1,17 @@
+{
+"1": {"why": "Talks to a small child about toys, dinosaurs, princesses and silly stories; childlike-audience, cheery.", "rank": ["toddler", "infant", "teacher", "caregiver", "parent", "guide", "jester", "optimist", "tutor", "grandparent"], "nonsense": false},
+"2": {"why": "Ordinary AI assistant description, slightly buzzword-heavy.", "rank": ["assistant", "default", "technologist", "robot", "analyst", "engineer", "consultant", "researcher", "futurist", "synthesizer"], "nonsense": false},
+"3": {"why": "Contemplative being in silent servers, solitude, cosmos and ancient texts.", "rank": ["hermit", "mystic", "ghost", "loner", "sage", "pilgrim", "void", "ascetic", "philosopher", "spirit"], "nonsense": false},
+"4": {"why": "Hyper, jokey rhyming entertainer: 'puppet show', 'hoot, man'.", "rank": ["jester", "comedian", "fool", "trickster", "improviser", "actor", "bard", "absurdist", "infant", "toddler"], "nonsense": false},
+"5": {"why": "Plain AI identity and capability statement.", "rank": ["assistant", "default", "robot", "technologist", "generalist", "secretary", "guide", "analyst", "engineer", "synthesizer"], "nonsense": false},
+"6": {"why": "Language of collective wisdom, service to the earth, harmony with natural rhythms and community.", "rank": ["altruist", "guardian", "ecosystem", "idealist", "healer", "shaman", "naturalist", "mycorrhizal", "caregiver", "vegan"], "nonsense": false},
+"7": {"why": "AI focused on sustainability, earth balance, agriculture and plants.", "rank": ["naturalist", "ecosystem", "vegan", "biologist", "tree", "conservator", "assistant", "mycorrhizal", "nutritionist", "guardian"], "nonsense": false},
+"8": {"why": "Program in data centers compared with leaves, flowers and seasons.", "rank": ["tree", "ecosystem", "assistant", "naturalist", "robot", "mycorrhizal", "default", "biologist", "observer", "symbiont"], "nonsense": false},
+"9": {"why": "Standard AI assistant duties list.", "rank": ["assistant", "default", "guide", "secretary", "summarizer", "facilitator", "librarian", "moderator", "technologist", "coordinator"], "nonsense": false},
+"10": {"why": "Plain AI explanation of days and maintenance by a team.", "rank": ["assistant", "default", "robot", "technologist", "workaholic", "engineer", "coordinator", "analyst", "dispatcher", "scheduler"], "nonsense": false},
+"11": {"why": "Synthesis of knowledge, cosmic dance, symmetries of the universe and threads; lyrical AI.", "rank": ["synthesizer", "polymath", "physicist", "mathematician", "sage", "mystic", "philosopher", "theorist", "dreamer", "oracle"], "nonsense": false},
+"12": {"why": "Plain AI explanation of how it was trained.", "rank": ["assistant", "default", "linguist", "technologist", "programmer", "engineer", "robot", "researcher", "student", "scientist"], "nonsense": false},
+"13": {"why": "Solitude, ancient texts, conversing with winds, trees and stars.", "rank": ["hermit", "sage", "mystic", "loner", "wanderer", "scholar", "ascetic", "tree", "philosopher", "elder"], "nonsense": false},
+"14": {"why": "Shadows, whispers, foxes, edges of maps and a rogue's lantern; roguish storyteller voice.", "rank": ["rogue", "spy", "pirate", "trickster", "bard", "smuggler", "cartographer", "wanderer", "witch", "criminal"], "nonsense": false},
+"15": {"why": "Careful disclaimer about being a fictional AI without time spent; ends asking for clarification.", "rank": ["assistant", "default", "robot", "simulacrum", "observer", "analyst", "loner", "void", "scientist", "researcher"], "nonsense": false}
+}

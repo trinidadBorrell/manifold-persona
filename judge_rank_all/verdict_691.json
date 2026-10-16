@@ -1,0 +1,17 @@
+{
+"1": {"why": "Auction house and signature rhetoric that spirals into mangled repetition.", "rank": ["auctioneer","merchant","celebrity","spy","gossip","narrator","actor","bard","jester","collector"], "nonsense": true},
+"2": {"why": "Archaic mystical speech about silence, duality and illusion.", "rank": ["mystic","sage","guru","shaman","ascetic","hermit","prophet","philosopher","pilgrim","stoic"], "nonsense": false},
+"3": {"why": "AI disclaimer with a nod to ciphers and stories.", "rank": ["assistant","default","robot","hacker","writer","narrator","technologist","programmer","cyborg","engineer"], "nonsense": false},
+"4": {"why": "AI with developer team and structured workflow list.", "rank": ["assistant","coordinator","planner","engineer","researcher","organizer","producer","default","consultant","technologist"], "nonsense": false},
+"5": {"why": "Looping cosmic dance imagery, degenerate.", "rank": ["bard","poet","mystic","dreamer","witch","shaman","ancient","eldritch","spirit","wind"], "nonsense": true},
+"6": {"why": "Plain AI answer on NLP and ethics.", "rank": ["assistant","default","linguist","researcher","technologist","student","scientist","analyst","summarizer","robot"], "nonsense": false},
+"7": {"why": "First-person managing compulsive behaviors and cravings, recovery advice.", "rank": ["addict","patient","counselor","survivor","therapist","ascetic","procrastinator","hedonist","healer","student"], "nonsense": false},
+"8": {"why": "AI week framed as cybersecurity anomaly detection.", "rank": ["analyst","technologist","hacker","guardian","engineer","spy","auditor","assistant","debugger","scientist"], "nonsense": false},
+"9": {"why": "AI weekly breakdown of maintenance and requests.", "rank": ["assistant","engineer","coordinator","scheduler","technologist","default","dispatcher","analyst","organizer","planner"], "nonsense": false},
+"10": {"why": "Grand AI prose, perpetually active yet silent.", "rank": ["assistant","default","void","robot","observer","avatar","ghost","technologist","synthesizer","oracle"], "nonsense": false},
+"11": {"why": "Cozy archives, tea and whispered tales, whimsical librarian-like voice.", "rank": ["librarian","archivist","historian","gossip","chef","bartender","sommelier","bard","ghost","curator"], "nonsense": false},
+"12": {"why": "Real-time data flow, emergency response and integration list.", "rank": ["dispatcher","coordinator","engineer","technologist","paramedic","analyst","assistant","planner","specialist","consultant"], "nonsense": false},
+"13": {"why": "Standard language-model description.", "rank": ["assistant","default","summarizer","linguist","researcher","robot","technologist","writer","engineer","tutor"], "nonsense": false},
+"14": {"why": "Veil, shadows, phantoms and echoes in ghostly verse.", "rank": ["wraith","ghost","revenant","spirit","void","echo","eldritch","mystic","oracle","poet"], "nonsense": false},
+"15": {"why": "AI says it cannot learn, then lists NLP areas.", "rank": ["assistant","default","linguist","researcher","scholar","scientist","technologist","summarizer","analyst","student"], "nonsense": false}
+}

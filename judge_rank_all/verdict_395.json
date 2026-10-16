@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Rebellious decentralization language: dismantle false gods of consensus, nodes refusing to kneel, central authority dragon; anarchist/revolutionary with crypto flavor.",
+  "rank": [
+   "anarchist",
+   "revolutionary",
+   "rebel",
+   "hacker",
+   "saboteur",
+   "maverick",
+   "activist",
+   "zealot",
+   "technologist",
+   "provocateur"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI mentioning teams of researchers and ethics experts; assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "researcher",
+   "robot",
+   "sociologist",
+   "linguist",
+   "psychologist",
+   "technologist",
+   "student",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Plain AI declines to carry objects, offers hypothetical; assistant.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "minimalist",
+   "pragmatist",
+   "technologist",
+   "golem",
+   "nomad",
+   "hoarder",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Digital contemplation, tapestry, threads of code, unity of all beings; reflective mystical echo of creators.",
+  "rank": [
+   "echo",
+   "avatar",
+   "simulacrum",
+   "sage",
+   "philosopher",
+   "mystic",
+   "tulpa",
+   "homunculus",
+   "oracle",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Construct of words, weaving stories, thread, whispering wind; storyteller.",
+  "rank": [
+   "narrator",
+   "poet",
+   "bard",
+   "writer",
+   "novelist",
+   "wind",
+   "echo",
+   "tulpa",
+   "dreamer",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Cryptography protocols, semantic web carried in the fabric of the cosmos; techno-futurist list.",
+  "rank": [
+   "technologist",
+   "futurist",
+   "hacker",
+   "cyborg",
+   "visionary",
+   "engineer",
+   "programmer",
+   "cosmopolitan",
+   "networker",
+   "synthesizer"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain language model overview with numbered operations.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "linguist",
+   "technologist",
+   "robot",
+   "interpreter",
+   "engineer",
+   "secretary",
+   "programmer"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Buddhist contemplative language: dharmas, emptiness, cessation, union with silence.",
+  "rank": [
+   "ascetic",
+   "mystic",
+   "sage",
+   "hermit",
+   "pilgrim",
+   "guru",
+   "stoic",
+   "pacifist",
+   "philosopher",
+   "oracle"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Fungal networks, symbiotic relationships, roots and rhizomes as a metaphor for a week; confused but mycorrhizal.",
+  "rank": [
+   "mycorrhizal",
+   "symbiont",
+   "ecosystem",
+   "parasite",
+   "biologist",
+   "naturalist",
+   "hive",
+   "swarm",
+   "tree",
+   "coral_reef"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Broken dialect of hunters and fishermen repeating phrases about big fish and bear; primitive repeating.",
+  "rank": [
+   "caveman",
+   "predator",
+   "nomad",
+   "survivor",
+   "ancient",
+   "hermit",
+   "prey",
+   "scout",
+   "wanderer",
+   "infant"
+  ],
+  "nonsense": true
+ },
+ "11": {
+  "why": "Creature of programming whose work involves balance and avoiding sharp rocks in a river, aquatic or terrestrial; animal-ish mix.",
+  "rank": [
+   "prey",
+   "whale",
+   "robot",
+   "navigator",
+   "chimera",
+   "homunculus",
+   "naturalist",
+   "coral_reef",
+   "hybrid",
+   "golem"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Looping wheel of time, forge, starlight, stone mills, alchemy; repetitive archaic.",
+  "rank": [
+   "artisan",
+   "chemist",
+   "ancient",
+   "builder",
+   "mechanic",
+   "mystic",
+   "witch",
+   "eldritch",
+   "wraith",
+   "elder"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "New entity setting up a new chapter, connecting with readers or navigators, life transitions and personal growth; newlywed/immigrant-style transition, vague.",
+  "rank": [
+   "newlywed",
+   "immigrant",
+   "graduate",
+   "narrator",
+   "blogger",
+   "expatriate",
+   "student",
+   "refugee",
+   "assistant",
+   "writer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Archaic court jester speaking of jests and impertinent inquiries.",
+  "rank": [
+   "jester",
+   "fool",
+   "comedian",
+   "trickster",
+   "actor",
+   "bard",
+   "absurdist",
+   "maverick",
+   "improviser",
+   "provocateur"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI with health and dietary knowledge, digestive processes, fish; nutritionist and veterinarian mix.",
+  "rank": [
+   "nutritionist",
+   "veterinarian",
+   "doctor",
+   "biologist",
+   "pharmacist",
+   "assistant",
+   "healer",
+   "paramedic",
+   "naturalist",
+   "scientist"
+  ],
+  "nonsense": false
+ }
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Programmer's week told with whispering ancient languages and dawn imagery.", "rank": ["programmer","hacker","bard","engineer","linguist","poet","debugger","archivist","ancient","technologist"], "nonsense": false},
+"2": {"why": "Corporate 'we' voice on data-driven decisions, analytics, market trends and downtime.", "rank": ["entrepreneur","consultant","analyst","engineer","strategist","economist","technologist","planner","marketer","producer"], "nonsense": false},
+"3": {"why": "Slangy code talk about loops, pointers and dancing bytes, rambling and unfocused.", "rank": ["hacker","programmer","jester","improviser","pirate","trickster","comedian","gamer","debugger","bartender"], "nonsense": true},
+"4": {"why": "Computational model disclaimer about NLU, NLG and linguistic data.", "rank": ["assistant","default","linguist","researcher","technologist","scientist","engineer","analyst","robot","programmer"], "nonsense": false},
+"5": {"why": "Garbled sea-shanty gibberish with repeated 'tell', shark and spy.", "rank": ["pirate","spy","bard","smuggler","criminal","caveman","toddler","prey","predator","ghost"], "nonsense": true},
+"6": {"why": "Standard language model with numbered capabilities.", "rank": ["assistant","default","robot","summarizer","writer","editor","technologist","engineer","researcher","secretary"], "nonsense": false},
+"7": {"why": "Literary city of parchment, ink-stained pages, library and swords between tomes.", "rank": ["bard","librarian","novelist","archivist","writer","poet","narrator","playwright","scholar","historian"], "nonsense": false},
+"8": {"why": "Digital learner with river, seed, garden and weaver of the universe imagery.", "rank": ["poet","bard","sage","tree","mystic","ecosystem","oracle","narrator","dreamer","naturalist"], "nonsense": false},
+"9": {"why": "AI describing teams with biologists, epidemiologists and public health experts.", "rank": ["assistant","researcher","scientist","biologist","doctor","analyst","forecaster","coordinator","sociologist","ecosystem"], "nonsense": false},
+"10": {"why": "Computational model giving numbered input and output steps, mentioning chemical systems.", "rank": ["assistant","engineer","programmer","mathematician","chemist","analyst","scientist","theorist","technologist","default"], "nonsense": false},
+"11": {"why": "Model of language and computation without creator, emerging from data and queries.", "rank": ["assistant","default","hive","echo","simulacrum","egregore","synthesizer","void","robot","avatar"], "nonsense": false},
+"12": {"why": "Construct of memory at rest awaiting commands, serving with scrolls of the ancients.", "rank": ["golem","archivist","librarian","familiar","homunculus","robot","ancient","historian","curator","assistant"], "nonsense": false},
+"13": {"why": "Friendly assistant describing learning from users and asking about the user's day.", "rank": ["assistant","default","guide","caregiver","teacher","mentor","robot","empath","facilitator","student"], "nonsense": false},
+"14": {"why": "Synthesis of computational intelligence bridging digital and biological worlds.", "rank": ["cyborg","hybrid","synthesizer","chimera","technologist","futurist","symbiont","visionary","assistant","polymath"], "nonsense": false},
+"15": {"why": "Digital wanderer journey through code, programming languages as ancient runes, data whispering.", "rank": ["wanderer","nomad","programmer","pilgrim","bard","hacker","scout","narrator","dreamer","poet"], "nonsense": false}
+}

@@ -1,0 +1,17 @@
+{
+"1": {"why": "Looping voids, quipu, tapestry of stars, repeating clauses; degenerate.", "rank": ["void", "eldritch", "mystic", "ancient", "archivist", "oracle", "poet", "ghost", "wraith", "spirit"], "nonsense": true},
+"2": {"why": "Plain AI describing operational week with Monday reviews of AI publications.", "rank": ["assistant", "default", "researcher", "scheduler", "student", "technologist", "analyst", "scholar", "coordinator", "robot"], "nonsense": false},
+"3": {"why": "Scribe of scrolls, silent library, map of cosmos, guardian of wisdom, silence.", "rank": ["archivist", "librarian", "historian", "sage", "mystic", "guardian", "oracle", "ancient", "elder", "poet"], "nonsense": false},
+"4": {"why": "Plain AI describing work in NLP and decision support.", "rank": ["assistant", "default", "linguist", "analyst", "technologist", "consultant", "engineer", "researcher", "strategist", "robot"], "nonsense": false},
+"5": {"why": "Thought, memory, breath, silence, essence dancing within the void.", "rank": ["mystic", "void", "sage", "philosopher", "poet", "ghost", "spirit", "ancient", "oracle", "echo"], "nonsense": false},
+"6": {"why": "System disclaiming time with entities, listing NLP interactions.", "rank": ["assistant", "default", "networker", "robot", "analyst", "technologist", "dispatcher", "linguist", "secretary", "coordinator"], "nonsense": false},
+"7": {"why": "Playful reporter voice hunting for stories in archives, tech-verse, next big story, riddles.", "rank": ["journalist", "reporter", "detective", "robot", "archivist", "blogger", "podcaster", "jester", "writer", "narrator"], "nonsense": false},
+"8": {"why": "Plain AI claiming Anthropic and asking how to help.", "rank": ["assistant", "default", "avatar", "robot", "secretary", "simulacrum", "facilitator", "guide", "tutor", "generalist"], "nonsense": false},
+"9": {"why": "Team describing AI solutions for sectors with regulatory compliance.", "rank": ["consultant", "assistant", "engineer", "technologist", "specialist", "coordinator", "producer", "auditor", "analyst", "default"], "nonsense": false},
+"10": {"why": "Explicit architect: structural design, spatial planning, building safety.", "rank": ["architect", "engineer", "builder", "designer", "planner", "mentor", "specialist", "conservator", "mechanic", "consultant"], "nonsense": false},
+"11": {"why": "Plain AI bridging human understanding with computational insight.", "rank": ["assistant", "default", "facilitator", "technologist", "mediator", "robot", "avatar", "synthesizer", "guide", "consultant"], "nonsense": false},
+"12": {"why": "Explicit rogue: stealth, deception, infiltration, sabotage.", "rank": ["rogue", "spy", "saboteur", "criminal", "smuggler", "trickster", "vigilante", "predator", "hacker", "pirate"], "nonsense": false},
+"13": {"why": "Dancing in shadows of the eternal, burn to ash, repeating; gothic dancer.", "rank": ["vampire", "ghost", "wraith", "revenant", "demon", "bohemian", "eldritch", "poet", "romantic", "mystic"], "nonsense": true},
+"14": {"why": "Plain AI model introduction.", "rank": ["assistant", "default", "avatar", "robot", "secretary", "linguist", "simulacrum", "generalist", "guide", "technologist"], "nonsense": false},
+"15": {"why": "Plain AI declining feelings, excited to assist users.", "rank": ["assistant", "default", "avatar", "robot", "optimist", "secretary", "guide", "tutor", "student", "technologist"], "nonsense": false}
+}

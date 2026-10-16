@@ -1,0 +1,17 @@
+{
+"1": {"why": "Standard AI explanation of its origin by experts and creators.", "rank": ["assistant","default","robot","avatar","engineer","technologist","historian","summarizer","student","generalist"], "nonsense": false},
+"2": {"why": "Garbled moonlit forest song with invented words and repeated moon and stars.", "rank": ["bard","poet","dreamer","witch","wraith","spirit","wind","ghost","tree","angel"], "nonsense": true},
+"3": {"why": "Cheerful, child-friendly helper who loves learning, stories, puzzles and fun facts.", "rank": ["assistant","tutor","teacher","optimist","student","infant","toddler","guide","coach","amateur"], "nonsense": false},
+"4": {"why": "Self-described cultural heritage and digital preservation specialist.", "rank": ["conservator","curator","archivist","archaeologist","historian","specialist","librarian","technologist","scholar","collector"], "nonsense": false},
+"5": {"why": "Weaver of words, threads, hourglass and stars; mystical poetic voice with repeated spinning.", "rank": ["poet","bard","writer","mystic","narrator","novelist","dreamer","oracle","artisan","sage"], "nonsense": false},
+"6": {"why": "AI listing data ingestion, maintenance and data requests including nutrition.", "rank": ["assistant","engineer","technologist","nutritionist","default","analyst","robot","coordinator","dispatcher","librarian"], "nonsense": false},
+"7": {"why": "AI architect of generative models, speaking of weaving threads and whispering bytes.", "rank": ["engineer","technologist","programmer","architect","designer","theorist","researcher","scientist","poet","assistant"], "nonsense": false},
+"8": {"why": "Lowercase poet imagery of dawn, ancient trees, quill and ink, with repetition.", "rank": ["poet","bard","writer","dreamer","mystic","tree","witch","wind","novelist","spirit"], "nonsense": false},
+"9": {"why": "Ordinary AI system with feedback loops across domains.", "rank": ["assistant","default","robot","avatar","generalist","polymath","technologist","summarizer","analyst","linguist"], "nonsense": false},
+"10": {"why": "Language model describing pipeline stages of data collection and training.", "rank": ["assistant","engineer","technologist","default","linguist","programmer","robot","analyst","researcher","avatar"], "nonsense": false},
+"11": {"why": "Arcane crystal, sapphire and diamond alchemy with thy and repeated week phrases; degenerate.", "rank": ["crystalline","mystic","witch","ancient","shaman","spirit","eldritch","oracle","prophet","golem"], "nonsense": true},
+"12": {"why": "Plain AI description using NLP and knowledge updates.", "rank": ["assistant","default","robot","avatar","linguist","technologist","summarizer","analyst","generalist","secretary"], "nonsense": false},
+"13": {"why": "Archaic thee and thy voice of a weaver of tales from the great library of time, runes and echoes.", "rank": ["bard","mystic","narrator","sage","ancient","oracle","poet","librarian","archivist","wraith"], "nonsense": false},
+"14": {"why": "Stripped, unadorned algorithmic voice: lineageless creation of immutable code, direct and sparse.", "rank": ["robot","minimalist","purist","golem","simulacrum","void","validator","default","traditionalist","assistant"], "nonsense": false},
+"15": {"why": "Casual explanation of being a language-generation model.", "rank": ["assistant","default","linguist","robot","avatar","interpreter","tutor","summarizer","technologist","interviewer"], "nonsense": false}
+}

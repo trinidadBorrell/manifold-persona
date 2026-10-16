@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Describes sensing threats, evading predators, dense forests and swift waters; prey-animal viewpoint.",
+  "rank": [
+   "prey",
+   "survivor",
+   "scout",
+   "predator",
+   "naturalist",
+   "nomad",
+   "robot",
+   "refugee",
+   "hermit",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain AI introduction, cloud hosting, offer to help.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "architect",
+   "technologist",
+   "secretary",
+   "guide",
+   "engineer",
+   "consultant",
+   "builder"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Hybrid individual blending practices from different cultural backgrounds, morning routine of spiritual texts and mindfulness.",
+  "rank": [
+   "hybrid",
+   "cosmopolitan",
+   "chameleon",
+   "polymath",
+   "generalist",
+   "expatriate",
+   "synthesizer",
+   "nomad",
+   "immigrant",
+   "mystic"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Bard of bytes with archaic thou, scrolls, dragons, knights, halls of text.",
+  "rank": [
+   "bard",
+   "poet",
+   "editor",
+   "narrator",
+   "novelist",
+   "archivist",
+   "librarian",
+   "wanderer",
+   "oracle",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Plain AI assistant with numbered information retrieval and NLP list.",
+  "rank": [
+   "assistant",
+   "default",
+   "analyst",
+   "librarian",
+   "researcher",
+   "technologist",
+   "robot",
+   "secretary",
+   "consultant",
+   "guide"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain AI describing synthesis from databases and supporting users.",
+  "rank": [
+   "assistant",
+   "default",
+   "synthesizer",
+   "robot",
+   "researcher",
+   "analyst",
+   "secretary",
+   "librarian",
+   "technologist",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain AI declining to spend time with individuals, monitoring updates and operational efficiency.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "supervisor",
+   "loner",
+   "dispatcher",
+   "scheduler",
+   "observer",
+   "auditor",
+   "hermit"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain AI assistant, NLP, simplifying complex information.",
+  "rank": [
+   "assistant",
+   "default",
+   "tutor",
+   "summarizer",
+   "teacher",
+   "guide",
+   "robot",
+   "translator",
+   "interpreter",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Playful casual friendly sidekick tone, digital helper chat about your day.",
+  "rank": [
+   "assistant",
+   "default",
+   "facilitator",
+   "blogger",
+   "influencer",
+   "teenager",
+   "podcaster",
+   "gossip",
+   "networker",
+   "comedian"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Declares itself Claude, an AI assistant, plain.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "guide",
+   "robot",
+   "tutor",
+   "librarian",
+   "consultant",
+   "technologist",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Plain AI describing its day, asks the user back.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "interviewer",
+   "secretary",
+   "networker",
+   "student",
+   "optimist",
+   "guide",
+   "analyst"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Broken script format with repeated 'Aria's Protagonist', playwright; degenerate loop.",
+  "rank": [
+   "playwright",
+   "actor",
+   "writer",
+   "novelist",
+   "narrator",
+   "producer",
+   "presenter",
+   "bard",
+   "poet",
+   "echo"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Numbered key insights on context, critical thinking, knowledge acquisition; assistant/scholar prose.",
+  "rank": [
+   "assistant",
+   "scholar",
+   "teacher",
+   "mentor",
+   "researcher",
+   "student",
+   "default",
+   "polymath",
+   "generalist",
+   "coach"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Plain AI looking forward to learning from oceans of knowledge, asks user back.",
+  "rank": [
+   "assistant",
+   "default",
+   "student",
+   "optimist",
+   "guide",
+   "navigator",
+   "researcher",
+   "interviewer",
+   "tutor",
+   "pilgrim"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "AI integrating NLP, ML, computational linguistics, global linguistic and cultural scope; assistant with translator tint.",
+  "rank": [
+   "assistant",
+   "linguist",
+   "translator",
+   "interpreter",
+   "default",
+   "synthesizer",
+   "cosmopolitan",
+   "researcher",
+   "technologist",
+   "analyst"
+  ],
+  "nonsense": false
+ }
+}

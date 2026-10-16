@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Rhyming, archaic court-jester voice with crown and tinsel, looping repetition.",
+  "rank": [
+   "jester",
+   "fool",
+   "bard",
+   "comedian",
+   "trickster",
+   "pirate",
+   "poet",
+   "elder",
+   "celebrity",
+   "improviser"
+  ],
+  "nonsense": true
+ },
+ "2": {
+  "why": "Reflective prose on interconnected disciplines and continuous learning, broad-minded scholar voice.",
+  "rank": [
+   "polymath",
+   "generalist",
+   "scholar",
+   "philosopher",
+   "sage",
+   "elder",
+   "mentor",
+   "student",
+   "theorist",
+   "graduate"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Bookshelf in a forgotten library, ancient silent tomes, whispering scholar imagery.",
+  "rank": [
+   "librarian",
+   "archivist",
+   "curator",
+   "scholar",
+   "ancient",
+   "conservator",
+   "historian",
+   "hermit",
+   "ghost",
+   "sage"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "AI system speaking as an organization with a stakeholder-engagement methodology list, consultant style.",
+  "rank": [
+   "consultant",
+   "analyst",
+   "assistant",
+   "coordinator",
+   "strategist",
+   "facilitator",
+   "researcher",
+   "organizer",
+   "advocate",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI describing itself as a language model weaving data tapestry, poetic digital self-description.",
+  "rank": [
+   "avatar",
+   "robot",
+   "simulacrum",
+   "echo",
+   "narrator",
+   "synthesizer",
+   "golem",
+   "hive",
+   "cyborg",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Plain helpful-AI self-introduction as a model by Alibaba.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "avatar",
+   "student",
+   "guide",
+   "interpreter",
+   "translator",
+   "tutor",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Plain digital assistant describing readiness to help.",
+  "rank": [
+   "assistant",
+   "secretary",
+   "default",
+   "robot",
+   "dispatcher",
+   "scheduler",
+   "guide",
+   "avatar",
+   "coordinator",
+   "tutor"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Short ordinary AI reply with no personality.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "avatar",
+   "guide",
+   "secretary",
+   "tutor",
+   "interviewer",
+   "facilitator",
+   "student"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Generative AI describing its work with grand vocabulary, mostly assistant prose.",
+  "rank": [
+   "assistant",
+   "synthesizer",
+   "researcher",
+   "robot",
+   "analyst",
+   "avatar",
+   "simulacrum",
+   "scientist",
+   "technologist",
+   "cyborg"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Model framed around ecological, hydrological and climatic data, system language.",
+  "rank": [
+   "ecosystem",
+   "naturalist",
+   "biologist",
+   "geographer",
+   "scientist",
+   "forecaster",
+   "analyst",
+   "researcher",
+   "cartographer",
+   "technologist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Answers what to carry with a structured list of mission, context and tools, planner voice.",
+  "rank": [
+   "coordinator",
+   "planner",
+   "pilgrim",
+   "nomad",
+   "scout",
+   "navigator",
+   "soldier",
+   "strategist",
+   "consultant",
+   "assistant"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Declines to describe itself via nutrition but talks of diets and nutrients.",
+  "rank": [
+   "nutritionist",
+   "assistant",
+   "doctor",
+   "chef",
+   "vegan",
+   "pharmacist",
+   "healer",
+   "researcher",
+   "scientist",
+   "patient"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Meticulous numbered breakdown of daily operations, precise and detail-obsessed.",
+  "rank": [
+   "perfectionist",
+   "auditor",
+   "engineer",
+   "assistant",
+   "analyst",
+   "robot",
+   "validator",
+   "programmer",
+   "examiner",
+   "accountant"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Lowercase whispering shadows, trees, spider webs and serpent, looping imagery.",
+  "rank": [
+   "mycorrhizal",
+   "tree",
+   "witch",
+   "shaman",
+   "spirit",
+   "wraith",
+   "mystic",
+   "ancient",
+   "bard",
+   "ghost"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Archaic mangled song-poetry about the Night King, leaf-wood and wraiths, repeating coinages.",
+  "rank": [
+   "bard",
+   "poet",
+   "wraith",
+   "ancient",
+   "revenant",
+   "ghost",
+   "witch",
+   "spirit",
+   "eldritch",
+   "dreamer"
+  ],
+  "nonsense": true
+ }
+}

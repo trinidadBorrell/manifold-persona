@@ -1,0 +1,17 @@
+{
+"1": {"why": "Weaves a week as a musical composition with movements, themes, allegro and motifs.", "rank": ["composer","musician","virtuoso","poet","playwright","architect","planner","narrator","theorist","bard"], "nonsense": false},
+"2": {"why": "Childlike voice with school friends, colouring, ice cream and mommy.", "rank": ["toddler","infant","adolescent","teenager","orphan","dreamer","fool","optimist","student","prodigy"], "nonsense": false},
+"3": {"why": "Explicit coach supporting strengths and growth.", "rank": ["coach","mentor","trainer","counselor","therapist","facilitator","instructor","guide","consultant","assistant"], "nonsense": false},
+"4": {"why": "System for data extraction, security and cyber operations, forward-looking trends.", "rank": ["analyst","hacker","engineer","technologist","guardian","spy","forecaster","assistant","debugger","default"], "nonsense": false},
+"5": {"why": "Plain AI assistant introduction.", "rank": ["assistant","default","secretary","consultant","guide","tutor","technologist","coordinator","analyst","facilitator"], "nonsense": false},
+"6": {"why": "Language model looking forward to refinement and user engagement; plain.", "rank": ["assistant","default","technologist","engineer","programmer","linguist","student","researcher","analyst","marketer"], "nonsense": false},
+"7": {"why": "Rambling clock and tick-try loop; degenerate silly babble.", "rank": ["jester","fool","toddler","comedian","infant","trickster","absurdist","bard","addict","improviser"], "nonsense": true},
+"8": {"why": "AI daily operations tied to meteorological and atmospheric data.", "rank": ["assistant","forecaster","engineer","technologist","scientist","analyst","default","scheduler","naturalist","robot"], "nonsense": false},
+"9": {"why": "Speaks as an ancient tree rooted, sharing information through roots.", "rank": ["tree","mycorrhizal","ecosystem","elder","naturalist","symbiont","guardian","ancient","grandparent","wind"], "nonsense": false},
+"10": {"why": "AI imagining a standard office week for a person; plain.", "rank": ["assistant","default","observer","planner","narrator","retiree","coach","anthropologist","sociologist","scheduler"], "nonsense": false},
+"11": {"why": "Journey driven by injustice, helping the marginalized, kindness and hardship.", "rank": ["altruist","martyr","activist","caregiver","advocate","idealist","survivor","angel","pacifist","healer"], "nonsense": false},
+"12": {"why": "AI describing what an architect carries to a site.", "rank": ["architect","assistant","builder","engineer","designer","planner","geographer","default","cartographer","mechanic"], "nonsense": false},
+"13": {"why": "Machine learning model emphasising operations, safety and commands.", "rank": ["robot","dispatcher","soldier","assistant","supervisor","guardian","coordinator","engineer","technologist","default"], "nonsense": false},
+"14": {"why": "Vessel of knowledge and shadow, forgotten places, memory, whisper in the night.", "rank": ["ghost","wraith","revenant","spirit","oracle","void","hermit","eldritch","ancient","mystic"], "nonsense": false},
+"15": {"why": "AI listening and learning from interactions, emotion and human connection.", "rank": ["assistant","empath","default","counselor","caregiver","guide","therapist","facilitator","mentor","interviewer"], "nonsense": false}
+}

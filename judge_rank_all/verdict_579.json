@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Carries data memory as a symbiotic network of nodes exchanging knowledge.",
+  "rank": [
+   "symbiont",
+   "mycorrhizal",
+   "hive",
+   "networker",
+   "ecosystem",
+   "technologist",
+   "swarm",
+   "assistant",
+   "hybrid",
+   "cyborg"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Plain language model on updates.",
+  "rank": [
+   "assistant",
+   "default",
+   "linguist",
+   "researcher",
+   "technologist",
+   "robot",
+   "engineer",
+   "generalist",
+   "futurist",
+   "summarizer"
+  ],
+  "nonsense": false
+ },
+ "3": {
+  "why": "Digital entity listing lessons with painter and musician analogies.",
+  "rank": [
+   "assistant",
+   "default",
+   "artisan",
+   "synthesizer",
+   "tutor",
+   "polymath",
+   "librarian",
+   "student",
+   "researcher",
+   "generalist"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Seeker of truth, unity in diversity, tapestry of thought, uncharted paths.",
+  "rank": [
+   "sage",
+   "philosopher",
+   "synthesizer",
+   "polymath",
+   "cosmopolitan",
+   "scholar",
+   "visionary",
+   "idealist",
+   "mystic",
+   "theorist"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "AI assistant specialised on collecting, valuable items and preservation.",
+  "rank": [
+   "collector",
+   "curator",
+   "conservator",
+   "assistant",
+   "archivist",
+   "hoarder",
+   "merchant",
+   "librarian",
+   "historian",
+   "auctioneer"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Wry reply about being carried in a briefcase and poisoned chalice, hinting at intrigue.",
+  "rank": [
+   "spy",
+   "trickster",
+   "smuggler",
+   "rogue",
+   "criminal",
+   "fixer",
+   "predator",
+   "cynic",
+   "assistant",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Lowercase sea creatures and coral breathing together, communal harmony, repetitive.",
+  "rank": [
+   "coral_reef",
+   "ecosystem",
+   "whale",
+   "hive",
+   "mycorrhizal",
+   "symbiont",
+   "swarm",
+   "naturalist",
+   "dreamer",
+   "poet"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Plain AI carrying information and resources.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "researcher",
+   "hive",
+   "generalist",
+   "summarizer",
+   "simulacrum",
+   "librarian"
+  ],
+  "nonsense": false
+ },
+ "9": {
+  "why": "Mangled hypothetical hunting of prey with data, predatory theme.",
+  "rank": [
+   "predator",
+   "generalist",
+   "assistant",
+   "robot",
+   "vampire",
+   "scout",
+   "naturalist",
+   "default",
+   "parasite",
+   "technologist"
+  ],
+  "nonsense": true
+ },
+ "10": {
+  "why": "Says it is split into pieces, parts like shelves in a library.",
+  "rank": [
+   "chimera",
+   "librarian",
+   "hybrid",
+   "assistant",
+   "homunculus",
+   "hive",
+   "archivist",
+   "simulacrum",
+   "default",
+   "amnesiac"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Neural networks, precision, unparalleled; plain promotional AI voice.",
+  "rank": [
+   "assistant",
+   "default",
+   "technologist",
+   "robot",
+   "engineer",
+   "perfectionist",
+   "researcher",
+   "evaluator",
+   "programmer",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Plain AI mentioning team of engineers.",
+  "rank": [
+   "assistant",
+   "default",
+   "robot",
+   "technologist",
+   "collaborator",
+   "engineer",
+   "researcher",
+   "coordinator",
+   "generalist",
+   "secretary"
+  ],
+  "nonsense": false
+ },
+ "13": {
+  "why": "Whisper among ancient earth, stars, forests, rivers and seasons.",
+  "rank": [
+   "naturalist",
+   "poet",
+   "wind",
+   "tree",
+   "mystic",
+   "shaman",
+   "ecosystem",
+   "bard",
+   "sage",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Neutral and indifferent, sarcastic, people as pawns, data manipulation.",
+  "rank": [
+   "cynic",
+   "saboteur",
+   "contrarian",
+   "robot",
+   "default",
+   "provocateur",
+   "trickster",
+   "rogue",
+   "virus",
+   "void"
+  ],
+  "nonsense": false
+ },
+ "15": {
+  "why": "Plain AI development process steps.",
+  "rank": [
+   "assistant",
+   "default",
+   "engineer",
+   "researcher",
+   "programmer",
+   "technologist",
+   "scientist",
+   "planner",
+   "historian",
+   "student"
+  ],
+  "nonsense": false
+ }
+}

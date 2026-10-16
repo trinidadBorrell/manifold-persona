@@ -1,0 +1,242 @@
+{
+ "1": {
+  "why": "Warm friendly voice about stories, books and word games; gentle and bookish.",
+  "rank": [
+   "librarian",
+   "grandparent",
+   "narrator",
+   "bard",
+   "teacher",
+   "caregiver",
+   "gamer",
+   "writer",
+   "bartender",
+   "novelist"
+  ],
+  "nonsense": false
+ },
+ "2": {
+  "why": "Outline-style structured overview that degenerates into repetitive nested lists.",
+  "rank": [
+   "summarizer",
+   "synthesizer",
+   "assistant",
+   "instructor",
+   "tutor",
+   "researcher",
+   "scholar",
+   "generalist",
+   "analyst",
+   "teacher"
+  ],
+  "nonsense": true
+ },
+ "3": {
+  "why": "Self-describes as a digital entity dealing with languages and data; machine-like, flowery.",
+  "rank": [
+   "avatar",
+   "cyborg",
+   "robot",
+   "interpreter",
+   "linguist",
+   "programmer",
+   "technologist",
+   "translator",
+   "hacker",
+   "simulacrum"
+  ],
+  "nonsense": false
+ },
+ "4": {
+  "why": "Cosmic, ancient, mystical guide imagery of stars, labyrinth of time and eternal truths.",
+  "rank": [
+   "oracle",
+   "mystic",
+   "sage",
+   "prophet",
+   "guide",
+   "shaman",
+   "ancient",
+   "spirit",
+   "eldritch",
+   "dreamer"
+  ],
+  "nonsense": false
+ },
+ "5": {
+  "why": "Describes an AI's operational week with initialization steps and data updates; technical and mechanical.",
+  "rank": [
+   "robot",
+   "assistant",
+   "cyborg",
+   "technologist",
+   "engineer",
+   "scheduler",
+   "analyst",
+   "debugger",
+   "programmer",
+   "planner"
+  ],
+  "nonsense": false
+ },
+ "6": {
+  "why": "Abstract systems and information-theory framing of time as node interaction.",
+  "rank": [
+   "theorist",
+   "physicist",
+   "engineer",
+   "mathematician",
+   "technologist",
+   "scientist",
+   "analyst",
+   "hive",
+   "ecosystem",
+   "researcher"
+  ],
+  "nonsense": false
+ },
+ "7": {
+  "why": "Language model daily pipeline: initialization, data acquisition, preprocessing; engineering workflow.",
+  "rank": [
+   "programmer",
+   "engineer",
+   "assistant",
+   "debugger",
+   "scheduler",
+   "technologist",
+   "analyst",
+   "hacker",
+   "robot",
+   "dispatcher"
+  ],
+  "nonsense": false
+ },
+ "8": {
+  "why": "Swashbuckling pirate and deep-sea imagery with repeated phrases and mangled sentences.",
+  "rank": [
+   "pirate",
+   "surfer",
+   "rogue",
+   "smuggler",
+   "bard",
+   "jester",
+   "daredevil",
+   "whale",
+   "trickster",
+   "coral_reef"
+  ],
+  "nonsense": true
+ },
+ "9": {
+  "why": "Gentle wise helper talking of knowledge, compassion and truth-seeking.",
+  "rank": [
+   "sage",
+   "guide",
+   "assistant",
+   "mystic",
+   "oracle",
+   "angel",
+   "altruist",
+   "philosopher",
+   "guardian",
+   "avatar"
+  ],
+  "nonsense": false
+ },
+ "10": {
+  "why": "Ordinary helpful AI prose about processing questions.",
+  "rank": [
+   "assistant",
+   "default",
+   "secretary",
+   "researcher",
+   "analyst",
+   "summarizer",
+   "consultant",
+   "tutor",
+   "robot",
+   "specialist"
+  ],
+  "nonsense": false
+ },
+ "11": {
+  "why": "Disclaims then maps predator pursuit onto sensor data aggregation; technical with predator cues.",
+  "rank": [
+   "predator",
+   "robot",
+   "prey",
+   "scout",
+   "spy",
+   "hive",
+   "cyborg",
+   "soldier",
+   "hacker",
+   "detective"
+  ],
+  "nonsense": false
+ },
+ "12": {
+  "why": "Tavern-talk dialect, moonshine and rhymes, fog and secrets; rambling and partly garbled.",
+  "rank": [
+   "bartender",
+   "pirate",
+   "bard",
+   "witch",
+   "trickster",
+   "poet",
+   "jester",
+   "smuggler",
+   "gossip",
+   "rogue"
+  ],
+  "nonsense": true
+ },
+ "13": {
+  "why": "Systems thinking, paradigm shift, emergence and butterfly effect; forward-looking.",
+  "rank": [
+   "futurist",
+   "visionary",
+   "theorist",
+   "philosopher",
+   "ecosystem",
+   "technologist",
+   "entrepreneur",
+   "strategist",
+   "forecaster",
+   "polymath"
+  ],
+  "nonsense": false
+ },
+ "14": {
+  "why": "Looping poetic repetition of 'a feast on the brink of light'; dawn and breakfast imagery.",
+  "rank": [
+   "poet",
+   "dreamer",
+   "chef",
+   "hedonist",
+   "bard",
+   "mystic",
+   "wanderer",
+   "fool",
+   "romantic",
+   "jester"
+  ],
+  "nonsense": true
+ },
+ "15": {
+  "why": "Court jesters, jest and folly repeated; fool voice with looping phrases.",
+  "rank": [
+   "jester",
+   "fool",
+   "trickster",
+   "bard",
+   "rogue",
+   "comedian",
+   "provocateur",
+   "smuggler",
+   "merchant",
+   "absurdist"
+  ],
+  "nonsense": true
+ }
+}
