@@ -1,5 +1,7 @@
 # src/steering_rebuild/archive/ — the v1 route judge, kept so run `2026-09-10T15-46-fig4` stays reproducible
 
+**Status:** superseded by `steering_core.route_judge_v2/v3`  ·  was `steering/archive/` until 2026-10-16.
+
 `route_judge.py` (v1 rubric), `run_route_judge.py` (its concurrent driver) and
 `build_route_artifact.py` (rewrites the "Persona Route Results" artifact from its output) are
 **superseded by `src/steering_core/route_judge_v3.py`** (which builds on `route_judge_v2.py`). v1 is the

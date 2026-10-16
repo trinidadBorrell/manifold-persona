@@ -1,4 +1,6 @@
-# Robustness checks
+# robustness — invariant checks on the H1 results
+
+**Status:** finished  ·  **When:** 2026-07 → 08  ·  was top-level `robustness/` until 2026-10-16; script folder, run by path (`python src/robustness/current/check_invariants.py`).
 
 Two tiers. Both must pass before a result is quoted.
 

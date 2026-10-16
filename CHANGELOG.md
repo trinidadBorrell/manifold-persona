@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-10-16 — One folder per experiment under `src/`
+
+- **Code moved** with `git mv` into `src/<experiment>/`. Previously it was spread over `steering/`, `manifold/`, `extraction/`, `exploratory/`, `diagnostics/`, `robustness/` and `refactors/`. The README has the map, and tag `pre-reorg-2026-10-16` is the tree before the move.
+- **Untracked code committed:** `gio_repro`, `calib`, `ace_study`, the judge-sweep and PCA/PGA scripts, and the steering figure scripts.
+- **GPU drivers moved into the tree** from `jobs_condor/`, because the current experiments need them: `ace_steering.steer_gpu`, `pca_pga_steering.steer_gpu` and `pm_geometry.extract_states`.
+- **No hand-made outputs left:** the Part 1 meeting figures (`pca_pga_components.meeting_figs`) and the IC/TS/MA summary table (`pca_pga_steering.pm_measures_figs`) now have scripts.
+- **Checked:**
+  - The import failures are the same as before; they are the scripts that run by path.
+  - 37/37 tests pass.
+  - These regenerate byte-identical: the meeting tables and figures, the judge tables, `all-judges.txt`, the judge-page data and the ST15 routes.
+
 ## 2026-08-03 — Review repairs (steps 1–8)
 
 Source: full-codebase review with adversarial verification

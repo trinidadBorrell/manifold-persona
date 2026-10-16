@@ -1,4 +1,8 @@
-# steering/ — manifold-aware steering of persona expression
+# steering_rebuild — manifold-aware steering of persona expression (September)
+
+**Status:** finished  ·  **When:** 2026-09-08 → 09-24  ·  **Plan:** `plans/2026-09-08-steering-rebuild.md` (local)  ·  results: `RESULTS.md`
+
+> This was the top-level `steering/` folder until 2026-10-16. Its shared modules moved to `src/steering_core/`, the chunk ablation to `src/chunk_ablation/`, the follow-ups to `src/steering_followups/`. Paths below were updated; module names in the prose (e.g. `interventions.py`) now live in `src/steering_core/`.
 
 Replicates the role-susceptibility evaluation of **The Assistant Axis**
 (arXiv:2601.10387 §3.2.1) on **Qwen3-8B** (hidden size 4096, steering at `hidden_states[19]`,
@@ -13,7 +17,7 @@ Qwen3-8B cloud (`--resp-dir` for `run_steering.py`, `--cloud` elsewhere) explici
 - **Paper:** arXiv:2601.10387.
 - **Paper-fidelity plan (current):** `docs/notes/paper-fidelity-plan.md` — what still differs from
   the paper, and the order to fix it in. Read it before running anything **if you have it**.
-- **Plan (the original contract):** `plans/2026-08-17-manifold-steering-role-susceptibility.md`.
+- **Plan (the original contract):** `plans/2026-08-17-manifold-steering-role-susceptibility.md` (no longer on disk).
 - Those last two, and the paper PDF and reading notes, are **local-only**: `.gitignore` excludes
   `docs/` and `plans/` at any depth, so none of them reach a clone. Everything a clone needs is
   here.

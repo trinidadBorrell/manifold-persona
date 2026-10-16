@@ -1,10 +1,15 @@
-# steering/followups — calibrated alpha, 4 routes, re-anchored start
+# steering_followups — calibrated alpha, 4 routes, re-anchored start
 
-Contract: `plans/2026-09-24-steering-followups.md` (local-only). Context: `src/steering_rebuild/README.md`.
+**Status:** finished  ·  **When:** 2026-09-24 to 2026-09-25  ·  **Plan:** `plans/2026-09-24-steering-followups.md` (local)
+Was `steering/followups` until 2026-10-16 (pre-move tree: tag `pre-reorg-2026-10-16`).
+Write-up: `output/steering-fix-24_09/TLDR.md`, `REPORT.md`. Context: `src/steering_rebuild/README.md`.
 
-This package only **imports** from `steering/` (`manifold_paths`, `interventions`,
-`activation_steering`, `route_judge_v2/v3`, `run_steering`). It never edits them. The GPU driver and
+This package only **imports** from `src/steering_core/` (`manifold_paths`, `interventions`,
+`activation_steering`, `route_judge_v2/v3`, `run_steering`, `runmeta`). It never edits them. The GPU driver and
 Condor files are cluster infra and live in the gitignored `jobs_condor/`.
+Later code imports from it: `common` (`Geom`, `degeneracy`), `selection.build_manifold`,
+`replace.CaptureLayer`, `judge_followups` (judge client, budget) — used by `src/ace_steering`,
+`src/pca_pga_steering`, `src/route_judge_sweep` and `jobs_condor/{cal_gen,pm_steer,pc_steer}.py`.
 
 | File | What |
 |---|---|
@@ -16,6 +21,13 @@ Condor files are cluster infra and live in the gitignored `jobs_condor/`.
 | `knots.py` | exp3: distance vs density vs nearest, k ∈ {4, 8, 16} |
 | `judge_followups.py` | route judge over Studies A and B (OpenRouter by default, interactive only) |
 | `figures.py` | figA / figB / figC CSVs |
+| `controls.py` | plan's positive/negative controls from the judged CSVs → `controls.csv` |
+| `judge_followup_f.py` | judge for exploratory follow-up F (replace arm, t > 1, subspace rank 16/256) |
+| `judge_per_answer.py` | judge for the per-answer-start run (`output/steering-per-answer-25_09`) |
+| `judge_pin_vs_add.py` | judge for pin-vs-add answers → `output/steering-story-25_09/judge_pin_vs_add.jsonl` |
+| `l32_prep.py` | data for the "layer 19 steering, seen at layer 32" page (`output/steering-l19-to-l32-25_09`) |
+| `static_figures.py` | static PNGs for `REPORT.md` from the figure CSVs |
+| `story_prep.py` | data for the steering story page (`output/steering-story-25_09/story_data.json`) |
 | `test_followups.py` | CPU tests (fake layer stack + a tiny random Qwen3 through the real `generate()`) |
 | `jobs_condor/followups_steer.py` | GPU driver, every stage (untracked) |
 | `jobs_condor/followups.submit`, `followups_exp2.submit`, `run_followups.sh` | Condor (untracked) |

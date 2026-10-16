@@ -1,4 +1,6 @@
-# src/diagnostics/
+# diagnostics — checks on the measurement apparatus
+
+**Status:** finished  ·  **When:** 2026-07 → 08  ·  was top-level `diagnostics/` until 2026-10-16; script folder, run by path (`python src/diagnostics/01_activation_scales.py`).
 
 Checks on the *measurement apparatus*, not on personas. Run these before trusting
 any geometry result. They are laptop-sized: CPU only, a 0.5B model, seconds to a
