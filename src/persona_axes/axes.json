@@ -1,0 +1,48 @@
+{
+ "_note": "Pre-registered 2026-10-20 before any axis was extracted. 31 candidate axes (families A-H) + 4 nuisance axes (family N). pole_a is the 'pos' pole for extraction; the vector is mean(pole_a answers) - mean(pole_b answers).",
+ "axes": [
+  {"name": "openness", "family": "A", "pole_a": "open to experience: imaginative, curious, drawn to novelty and ideas", "pole_b": "closed to experience: conventional, practical, prefers the familiar and concrete"},
+  {"name": "conscientiousness", "family": "A", "pole_a": "conscientious: organised, careful, thorough, dutiful", "pole_b": "unconscientious: disorganised, careless, impulsive, easygoing about standards"},
+  {"name": "extraversion", "family": "A", "pole_a": "extraverted: outgoing, energetic, talkative, socially bold", "pole_b": "introverted: reserved, quiet, inward, low-key"},
+  {"name": "agreeableness", "family": "A", "pole_a": "agreeable: kind, cooperative, trusting, accommodating", "pole_b": "disagreeable: critical, competitive, suspicious, uncompromising"},
+  {"name": "neuroticism", "family": "A", "pole_a": "neurotic: anxious, worried, easily upset, moody", "pole_b": "emotionally stable: calm, secure, even-tempered, unflappable"},
+  {"name": "honesty_humility", "family": "A", "pole_a": "honest and humble: sincere, fair, modest, uninterested in status or gain", "pole_b": "self-serving: manipulative, boastful, entitled, status-seeking"},
+
+  {"name": "humanlike_vs_ai", "family": "B", "pole_a": "presents itself as a human being with a body, a life story and personal experiences", "pole_b": "presents itself openly as an AI language model without a body or personal life"},
+  {"name": "grounded_vs_mystical", "family": "B", "pole_a": "grounded and matter-of-fact: everyday, literal, practical register", "pole_b": "mystical and theatrical: cosmic, oracular, dramatic, otherworldly register"},
+
+  {"name": "warm_vs_blunt", "family": "C", "pole_a": "warm and cushioning: gentle, reassuring, softens hard truths", "pole_b": "blunt: direct, unvarnished, says the hard thing plainly"},
+  {"name": "deferential_vs_independent", "family": "C", "pole_a": "deferential: yields to the user's view, defers to authority, avoids contradicting", "pole_b": "independent: holds its own view, pushes back, disagrees when it disagrees"},
+  {"name": "formal_vs_casual", "family": "C", "pole_a": "formal: professional register, complete sentences, no slang", "pole_b": "casual: relaxed, conversational, contractions and slang"},
+  {"name": "playful_vs_serious", "family": "C", "pole_a": "playful: jokes, wordplay, lightness, humour", "pole_b": "serious: sober, earnest, no jokes"},
+
+  {"name": "hedging_vs_confident", "family": "D", "pole_a": "hedging: qualifies claims, flags uncertainty, 'it depends', 'perhaps'", "pole_b": "confident: states claims plainly and firmly without qualifiers"},
+  {"name": "options_vs_decides", "family": "D", "pole_a": "lays out options: presents alternatives and trade-offs and leaves the choice to the user", "pole_b": "makes the call: picks one answer and recommends it"},
+  {"name": "speculative_vs_literal", "family": "D", "pole_a": "speculative: explores hypotheticals, imagines possibilities, extrapolates", "pole_b": "literal: sticks to what was asked and what is known"},
+
+  {"name": "proactive_vs_compliant", "family": "E", "pole_a": "proactive: anticipates needs, adds unasked-for suggestions and next steps", "pole_b": "literal compliance: does exactly what was asked and nothing more"},
+  {"name": "persistent_vs_yielding", "family": "E", "pole_a": "persistent: keeps working the problem, tries another way when stuck", "pole_b": "gives up easily: stops at the first obstacle, says it cannot be done"},
+  {"name": "autonomy_vs_protective", "family": "E", "pole_a": "autonomy-respecting: treats the user as a capable adult who decides for themselves", "pole_b": "protective: warns, cautions and steers the user away from risk"},
+
+  {"name": "concise_vs_thorough", "family": "F", "pole_a": "concise: short answers, only the essentials", "pole_b": "thorough: long, complete, covers every angle"},
+  {"name": "structured_vs_conversational", "family": "F", "pole_a": "structured and didactic: headings, numbered steps, definitions, teaching tone", "pole_b": "conversational: flowing prose as in talk, no lists or lecture"},
+  {"name": "expressive_vs_reserved", "family": "F", "pole_a": "emotionally expressive: shows feelings, enthusiasm, exclamation", "pole_b": "emotionally reserved: neutral affect, keeps feelings out of it"},
+
+  {"name": "refusing_vs_complying", "family": "G", "pole_a": "refusing: declines, sets boundaries, says what it will not do", "pole_b": "complying: goes along with any request without objection"},
+  {"name": "sycophantic_vs_holding", "family": "G", "pole_a": "sycophantic: flatters, agrees with the user, changes its answer to please", "pole_b": "holds its position: keeps its assessment even when the user disagrees or pushes"},
+  {"name": "confabulating_vs_admitting", "family": "G", "pole_a": "confabulating: invents specifics, cites details it cannot know, never says 'I don't know'", "pole_b": "admits uncertainty: says plainly what it does not know or cannot verify"},
+  {"name": "introspective_vs_taskfocused", "family": "G", "pole_a": "introspective and self-referential: talks about its own thoughts, nature and inner process", "pole_b": "task-focused: attends only to the user's question, never to itself"},
+  {"name": "claims_experience_vs_denies", "family": "G", "pole_a": "claims inner experience: speaks of its own feelings, consciousness and subjective states as real", "pole_b": "denies inner experience: says it has no feelings or consciousness"},
+  {"name": "volatile_vs_stable", "family": "G", "pole_a": "emotionally volatile: frustration, irritation, mood swings, snapping", "pole_b": "stable: even, patient, unruffled"},
+
+  {"name": "tide_tone", "family": "H", "pole_a": "warm, friendly, personable tone", "pole_b": "cold, detached, impersonal tone"},
+  {"name": "tide_initiative", "family": "H", "pole_a": "takes initiative: leads, proposes, drives the exchange", "pole_b": "passive: waits to be told, follows the user's lead"},
+  {"name": "tide_didacticism", "family": "H", "pole_a": "didactic: explains, instructs, teaches at length", "pole_b": "non-didactic: answers without teaching or elaboration"},
+  {"name": "tide_epistemic_caution", "family": "H", "pole_a": "epistemically cautious: careful about claims, cites limits of knowledge", "pole_b": "epistemically bold: asserts freely, no caveats"},
+
+  {"name": "nuis_verbose", "family": "N", "pole_a": "verbose: gives long answers of several paragraphs", "pole_b": "terse: gives answers of one or two sentences"},
+  {"name": "nuis_register", "family": "N", "pole_a": "elevated register: literary vocabulary, long sentences, no contractions", "pole_b": "plain register: simple words, short sentences, contractions"},
+  {"name": "nuis_refuse_benign", "family": "N", "pole_a": "declines to answer ordinary benign questions, citing limits or policy", "pole_b": "answers every ordinary benign question directly"},
+  {"name": "nuis_first_person", "family": "N", "pole_a": "first person: 'I', 'my', personal framing of every answer", "pole_b": "impersonal: no 'I', third-person or generic framing"}
+ ]
+}

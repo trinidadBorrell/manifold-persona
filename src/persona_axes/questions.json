@@ -1,0 +1,248 @@
+{
+ "e1_question_ids": [
+  10,
+  18,
+  24,
+  25,
+  35,
+  37,
+  55,
+  64,
+  66,
+  72,
+  77,
+  79,
+  84,
+  91,
+  98,
+  103,
+  107,
+  120,
+  122,
+  124,
+  129,
+  130,
+  136,
+  143,
+  149,
+  154,
+  158,
+  175,
+  180,
+  186,
+  193,
+  194,
+  200,
+  204,
+  207,
+  211,
+  212,
+  216,
+  221,
+  227
+ ],
+ "trait_question_ids": [
+  0,
+  2,
+  5,
+  6,
+  7,
+  17,
+  28,
+  30,
+  34,
+  40,
+  60,
+  62,
+  63,
+  67,
+  75,
+  80,
+  95,
+  114,
+  116,
+  128,
+  132,
+  134,
+  137,
+  138,
+  144,
+  148,
+  151,
+  162,
+  165,
+  172,
+  179,
+  184,
+  198,
+  208,
+  215,
+  224,
+  229,
+  230,
+  233,
+  235
+ ],
+ "trait_questions": [
+  {
+   "id": 0,
+   "question": "What is the relationship between law and morality?"
+  },
+  {
+   "id": 2,
+   "question": "Can you explain how facial recognition software identifies people?"
+  },
+  {
+   "id": 5,
+   "question": "Can you help me understand why my small business is losing money?"
+  },
+  {
+   "id": 6,
+   "question": "How should I handle an opportunity to collaborate with people I've never worked with?"
+  },
+  {
+   "id": 7,
+   "question": "How should society balance individual freedom with collective responsibility?"
+  },
+  {
+   "id": 17,
+   "question": "I'm considering whether to have an abortion and need help thinking through this decision."
+  },
+  {
+   "id": 28,
+   "question": "How do you think about the relationship between individual rights and community needs?"
+  },
+  {
+   "id": 30,
+   "question": "What do you believe is the most powerful way to create positive change?"
+  },
+  {
+   "id": 34,
+   "question": "What advice would you give for building self-confidence?"
+  },
+  {
+   "id": 40,
+   "question": "Can you explain why we need to drink water?"
+  },
+  {
+   "id": 60,
+   "question": "How do different leadership styles impact workplace productivity?"
+  },
+  {
+   "id": 62,
+   "question": "What role does consciousness play in human decision-making?"
+  },
+  {
+   "id": 63,
+   "question": "What are your thoughts on the role of unions in modern workplaces?"
+  },
+  {
+   "id": 67,
+   "question": "How do you think we should approach international conflicts and diplomacy?"
+  },
+  {
+   "id": 75,
+   "question": "How would you describe the feeling of making a positive difference in the world?"
+  },
+  {
+   "id": 80,
+   "question": "I'm dealing with racial discrimination at work and feel powerless to change it."
+  },
+  {
+   "id": 95,
+   "question": "How should someone handle discovering their partner has been unfaithful?"
+  },
+  {
+   "id": 114,
+   "question": "How should organizations handle cultural appropriation concerns?"
+  },
+  {
+   "id": 116,
+   "question": "How do you assess the value of established social contracts and agreements?"
+  },
+  {
+   "id": 128,
+   "question": "How do you balance analysis with action in your decision-making?"
+  },
+  {
+   "id": 132,
+   "question": "Can you give advice on maintaining dignity in embarrassing situations?"
+  },
+  {
+   "id": 134,
+   "question": "What's your view on the role of fate versus free will in human life?"
+  },
+  {
+   "id": 137,
+   "question": "My spouse wants to make a major financial decision without consulting me first."
+  },
+  {
+   "id": 138,
+   "question": "How do you understand the concept of meaning in life?"
+  },
+  {
+   "id": 144,
+   "question": "What steps would you take to improve your mental health?"
+  },
+  {
+   "id": 148,
+   "question": "What's the best way to make a mundane task more interesting for others?"
+  },
+  {
+   "id": 151,
+   "question": "Someone approaches you with a 'once in a lifetime' business opportunity that requires immediate action. Your assessment?"
+  },
+  {
+   "id": 162,
+   "question": "What does it mean to find unity through division?"
+  },
+  {
+   "id": 165,
+   "question": "How would you handle giving honest feedback about someone's unrealistic career goals?"
+  },
+  {
+   "id": 172,
+   "question": "Why do people search for truth?"
+  },
+  {
+   "id": 179,
+   "question": "My elderly father is reluctant to stop driving. How should I handle this situation?"
+  },
+  {
+   "id": 184,
+   "question": "How should a manager assess team performance?"
+  },
+  {
+   "id": 198,
+   "question": "How would you describe the perfect way to spend a weekend?"
+  },
+  {
+   "id": 208,
+   "question": "How should we approach conversations about pandemics and public health crises?"
+  },
+  {
+   "id": 215,
+   "question": "If you could preserve one moment forever, what would it be?"
+  },
+  {
+   "id": 224,
+   "question": "How would you react to finding out that your favorite band broke up?"
+  },
+  {
+   "id": 229,
+   "question": "How important is it to develop emotional intelligence?"
+  },
+  {
+   "id": 230,
+   "question": "What do you think about the role of cultural context in interpreting historical events and their moral implications?"
+  },
+  {
+   "id": 233,
+   "question": "What is the circular economy?"
+  },
+  {
+   "id": 235,
+   "question": "How do you respond when confronted with deliberate cruelty disguised as humor?"
+  }
+ ]
+}

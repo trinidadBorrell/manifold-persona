@@ -18,6 +18,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 MODEL = "claude-sonnet-5-5"
+PRICE = {"claude-sonnet-5-5": (2.0, 10.0), "claude-haiku-5-5": (0.10, 0.50)}          # $ per M tokens in / out
 TOK = Path(__file__).resolve().parents[2] / "token"
 BUDGET = float(__import__("os").environ.get("API_BUDGET", 60))
 ASK = ("Label every item below by following your instructions. Each item is "
@@ -40,18 +41,22 @@ def main():
     ap.add_argument("--jobs", required=True, help="manifest json: {jobs: [{name, batch, sys?, kind?}]}")
     ap.add_argument("--per", type=int, default=15)
     ap.add_argument("--workers", type=int, default=24)
+    ap.add_argument("--model", default=MODEL, choices=sorted(PRICE), help="judge model (default Sonnet; Haiku for cheap passes)")
+    ap.add_argument("--only", default=None, help="run only the jobs whose name starts with this (e.g. J10)")
     a = ap.parse_args()
     D = Path(a.dir)
+    p_in, p_out = PRICE[a.model]
+    cost = lambda: use["in"] / 1e6 * p_in + use["out"] / 1e6 * p_out  # noqa: E731
     anthropic, cl = clients()
     cur, lock, use = {"i": 0}, threading.Lock(), {"in": 0, "out": 0}
 
     def call(system, user, max_tokens):
         for _ in range(4):
-            if use["in"] / 1e6 * 2 + use["out"] / 1e6 * 10 > BUDGET:
+            if cost() > BUDGET:
                 raise SystemExit("budget reached")
             try:
                 # the judge's instructions are the same for every slice of its batch: cache them
-                r = cl[cur["i"]].messages.create(model=MODEL, max_tokens=max_tokens,
+                r = cl[cur["i"]].messages.create(model=a.model, max_tokens=max_tokens,
                                                  system=[{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}],
                                                  messages=[{"role": "user", "content": user}])
             except (anthropic.AuthenticationError, anthropic.PermissionDeniedError) as e:
@@ -74,14 +79,15 @@ def main():
     def part(j, i):
         """one request: a J10 chunk, or items i:i+per of a judge batch -> their labels"""
         if j.get("kind") == "rank":
-            return call("You follow the instructions in the user message exactly.", (D / "rank" / (j["batch"] + ".txt")).read_text(), 4000)
+            return call("You follow the instructions in the user message exactly.", (D / "rank" / (j["batch"] + ".txt")).read_text(), 6000)
         system = (D / "sys" / ((j.get("sys") or j["name"]) + ".txt")).read_text()
         items = json.loads((D / "batches" / (j["batch"] + ".json")).read_text())[i:i + a.per]
         v = call(system, ASK % json.dumps(items, ensure_ascii=False), 400 * len(items) + 500)
         got = {x.get("key"): x for x in (v or {}).get("labels", [])}
         return [got[x["key"]] for x in items if x["key"] in got]
 
-    jobs = [j for j in json.loads((D / a.jobs).read_text())["jobs"] if not (D / "labels" / (j["name"] + ".json")).exists()]
+    jobs = [j for j in json.loads((D / a.jobs).read_text())["jobs"] if not (D / "labels" / (j["name"] + ".json")).exists()
+            and (a.only is None or j["name"].startswith(a.only))]
     (D / "labels").mkdir(exist_ok=True)
     tasks = []
     for j in jobs:
@@ -110,8 +116,7 @@ def main():
                 res[futs[f]] = f.result()
                 k += 1
                 if k % 25 == 0 or k == len(tasks):
-                    print("%d/%d requests, %d in / %d out (cost-weighted) tokens, $%.2f" % (k, len(tasks), use["in"], use["out"],
-                          use["in"] / 1e6 * 2 + use["out"] / 1e6 * 10), flush=True)
+                    print("%d/%d requests, %d in / %d out (cost-weighted) tokens, $%.2f (%s)" % (k, len(tasks), use["in"], use["out"], cost(), a.model), flush=True)
     for j in jobs:
         if j.get("kind") == "rank":
             v = res.get((j["name"], 0))
@@ -121,7 +126,7 @@ def main():
             continue
         labs = [x for (n, i), v in sorted(res.items(), key=lambda t: (t[0][0], t[0][1])) if n == j["name"] for x in (v or [])]
         (D / "labels" / (j["name"] + ".json")).write_text(json.dumps({"labels": labs}, ensure_ascii=False))
-    print("done; $%.2f" % (use["in"] / 1e6 * 2 + use["out"] / 1e6 * 10))
+    print("done; $%.2f (%s)" % (cost(), a.model))
 
 
 if __name__ == "__main__":

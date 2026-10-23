@@ -12,6 +12,10 @@ Each experiment lives in its own folder under `src/`, with a README that gives i
 | Part 1, slides 5–7 | [`src/pca_pga_steering`](src/pca_pga_steering/README.md) | Clamp steering of Qwen3-8B (layer 28) along PCA / PGA directions 1–3, scored with the PersonaManifold paper's IC, TS and MA | `output/11-oct/table3_IC_TS_MA.png`, `finding*.png` |
 | Part 2, slides 9–12 | [`src/route_judge_sweep`](src/route_judge_sweep/README.md) | LIN / PMG / MAN / FL routes between persona pairs (Giovanni's clamp, L15, S = 4), each answer judged by up to 10 LLM judges (J2, J8, J10 shown) | `output/11-oct/run2_L15_S4_*.png`, `table-judges-J2-J8-J10.png`, `all-judges.txt`; pages in `src/route_judge_sweep/pages/` |
 
+**After the meeting (20-10):** [`src/axis_interpretability`](src/axis_interpretability/README.md) tests whether PCA / PGA directions (1–3 and 1–50) are interpretable, with a blind LLM judge. Outputs are in `output/20-oct/`. [`src/curvature_null`](src/curvature_null/README.md) then checks whether persona space is curved at all, against flat nulls. Outputs are in `output/20-oct-AI-pilled/`.
+
+**Started 20-10:** [`src/persona_axes`](src/persona_axes/README.md) asks how many *interpretable* axes (named behavioural dispositions, e.g. hedging ↔ confident) cover the personas, which ones, and whether they beat random interpretable axes; Stage A (coverage, identifiability, per-axis purity, full-vector ceiling check), Phase 3 (reachability inside the axes' span), the single-axis and the alternative-direction runs are done. Results in `output/21-oct/RESULTS.md`.
+
 **Conclusions (slide 13):**
 - **No gain in coherence from geodesic axes.** IC, TS and MA are about the same for PCA and Fletcher directions.
 - **No route shows clearly fewer collapses, or reaches the target persona more strongly.**
@@ -43,6 +47,9 @@ Each experiment lives in its own folder under `src/`, with a README that gives i
 | **`src/pca_pga_components`** | Oct 08–16 | see above | **current** |
 | **`src/pca_pga_steering`** | Oct 14–16 | see above | **current** |
 | **`src/route_judge_sweep`** | Oct 14–16 | see above | **current** |
+| **`src/axis_interpretability`** | Oct 20 | Are PGA directions easier to interpret than PCA ones? LLM rating, label then sort held-out roles, order roles along the whole axis, Assistant Axis Table 1 check; directions 1–3 and 1–50 | **new**; PGA no better than PCA; `output/20-oct/RESULTS.md` |
+| **`src/curvature_null`** | Oct 20 | Is persona space curved, or does it only look curved? Bend test and path ratio against flat nulls and synthetic controls, layers 12–32 | **new**; curved at layers 19–32 (bend test), PGA mostly does not capture it; `output/20-oct-AI-pilled/RESULTS.md` |
+| **`src/persona_axes`** | Oct 20– | How many interpretable axes cover persona space, which, and are they better than random interpretable axes? 31 pre-registered axes + 240-trait pool, held-out coverage and identifiability vs k, nulls, purity, full-vector ceiling | **Stage A + Phase 3 done** (Oct 21): 8 named axes ≈ 80% of PCA-8 for coverage, but steering inside their span reaches 0.1 vs 0.44 for the full vector, no better than random traits; a 2-direction clamp (minus-assistant + prompt-token) is the best steering setup found (43 / 65 personas); `output/21-oct/RESULTS.md` |
 
 **Shared libraries** (no experiment of their own):
 
@@ -64,6 +71,8 @@ Dates come from the plans and git history; see each folder's README.
 | `$PM/PCC`, `$PM/PM_MEAS_CLAMP` | Part 1 steering answers and their IC / TS / MA |
 | `$PM/ST15` | Route personas per pair (Part 2) |
 | `$PM/GIO8B_R`, `$PM/JSG_L{15,23}_S{1,4}` | Part 2 answers and judge labels |
+| `$PM/AXI_L28` | Axis interpretability: role scores, judge items and every judge reply |
+| `$PM/CURV` | Curvature against flat nulls: `means_L<L>.json`, `answers_L28.json`, `control.json` |
 | `$PM/JSG_pages` | The published judge pages |
 | `$PM/JS`, `JSC`, `JSD_*` | Earlier judge-sweep runs |
 | `$PM/PC`, `PC4`, `PM_MEAS`, `CAL`, `DIR`, `GIO`, `GIO8B` | Earlier October runs |
