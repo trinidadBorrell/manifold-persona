@@ -69,3 +69,5 @@ python -m persona_axes.phase2
 
 ## Used by / uses
 Uses `pm_geometry.extract_states` (engine), `ace_steering.steer_gpu.load_model`, `route_judge_sweep.{api_judge, j10, prompts}`, `manifold_persona.prompts_roles`, `$PM/E1`, `$PM/E1b`.
+
+**Summary figures (2026-10-23).** `python -m persona_axes.summary_figs` redraws the results as bar charts and tables from the saved results only, no GPU (`output/21-oct/summary/`): S1–S2 coverage and identification per set at its largest k with the PCA tick; S3 on-target rank correlation per axis with the best axis per family (S3a right panel alone, S3b dose x rating heat map over the 31 axes and 35 scales, S3c on-target vs mean off-target per axis, one and two columns); S4 reach per Phase 3 condition; S5 reach per clamp direction; S6–S7 single-axis reach per family and per persona, with S6b/S6c two-column tables of the human-role and deployment personas each axis reaches or breaks (non-human roles dropped, psychology and TIDE axes from the `--axes AH --push 54` run included); S8–S11 one row per axis across all phases and the design overview. Tables go to `output/21-oct/tables/`.

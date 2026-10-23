@@ -12,6 +12,7 @@ axes (personas no axis reaches), and the persona x axis reach matrix.
     python -m persona_axes.phase3_axes --axes set9|set6|all --shard 0 --n-shards 8   # GPU -> $PM/AX21/phase3_axes/gen_<persona>.jsonl
     python -m persona_axes.phase3_axes --axes set6 --analyse    # after judge_build --stage phase3_axes --collect -> P3b_1, P3b_2, tables
     python -m persona_axes.phase3_axes --axes set6 --push 54 --shard 0 --n-shards 8   # matched push: c = a.M_0 + sign(a.v) * 54
+    python -m persona_axes.phase3_axes --axes AH --push 54 --shard 0 --n-shards 8     # same for the 10 psychology + TIDE axes (tag AHp54, 2026-10-23)
 
 Result of the projected version (2026-10-21): the persona's own coordinate on one axis is small (|S_p a.v| median 15
 against a full-vector push of 57), so no single axis reaches more than 4 of 37 personas and nothing collapses. The
@@ -37,6 +38,8 @@ def axis_list(which, anames, fam):
         return json.loads((AX / "phase2" / "results.json").read_text())["set9"]
     if which == "set6":
         return [n for n in anames if fam[n] in "BCDEFG"]
+    if which == "AH":                                                   # the 10 axes set 6 leaves out: psychology (A) and TIDE (H)
+        return [n for n in anames if fam[n] in "AH"]
     return [n for n in anames if fam[n] != "N"]
 
 
@@ -99,7 +102,7 @@ def analyse(which):
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--analyse", action="store_true")
-    ap.add_argument("--axes", default="set9", choices=["set9", "set6", "all"])
+    ap.add_argument("--axes", default="set9", choices=["set9", "set6", "AH", "all"])
     ap.add_argument("--push", type=float, default=None, help="matched absolute push along every axis (default: S_p x the persona's coordinate)")
     ap.add_argument("--shard", type=int, default=0)
     ap.add_argument("--n-shards", type=int, default=1)
