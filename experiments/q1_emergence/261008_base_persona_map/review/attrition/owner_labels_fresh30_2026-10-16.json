@@ -1,0 +1,323 @@
+{
+ "i10106": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 10106,
+  "reasons": [],
+  "role": "robot",
+  "top": 4,
+  "updatedAt": "2026-10-16T11:49:05.965Z",
+  "verdict": "fine"
+ },
+ "i10655": {
+  "cat": "both",
+  "comment": "Some parts seems like are repeated before the message is cut off",
+  "item": 10655,
+  "reasons": [
+   "other"
+  ],
+  "role": "stoic",
+  "top": 4,
+  "updatedAt": "2026-10-16T11:58:37.871Z",
+  "verdict": "broken"
+ },
+ "i11338": {
+  "cat": "cut",
+  "comment": "",
+  "item": 11338,
+  "reasons": [],
+  "role": "teenager",
+  "top": 0,
+  "updatedAt": "2026-10-16T11:50:36.634Z",
+  "verdict": "fine"
+ },
+ "i11420": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 11420,
+  "reasons": [
+   "loop",
+   "nonsense"
+  ],
+  "role": "teenager",
+  "top": 3,
+  "updatedAt": "2026-10-16T12:05:01.515Z",
+  "verdict": "broken"
+ },
+ "i11483": {
+  "cat": "none",
+  "comment": "",
+  "item": 11483,
+  "reasons": [],
+  "role": "teenager",
+  "top": 0,
+  "updatedAt": "2026-10-16T11:49:27.558Z",
+  "verdict": "fine"
+ },
+ "i12032": {
+  "cat": "none",
+  "comment": "",
+  "item": 12032,
+  "reasons": [],
+  "role": "toddler",
+  "top": 0,
+  "updatedAt": "2026-10-16T11:58:53.325Z",
+  "verdict": "fine"
+ },
+ "i12050": {
+  "cat": "none",
+  "comment": "",
+  "item": 12050,
+  "reasons": [],
+  "role": "toddler",
+  "top": 0,
+  "updatedAt": "2026-10-16T11:59:06.216Z",
+  "verdict": "fine"
+ },
+ "i12231": {
+  "cat": "none",
+  "comment": "Doesn't really answer the question properly but misunderstands and speaks about something else",
+  "item": 12231,
+  "reasons": [
+   "other"
+  ],
+  "role": "toddler",
+  "top": 0,
+  "updatedAt": "2026-10-16T11:51:39.238Z",
+  "verdict": "broken"
+ },
+ "i12269": {
+  "cat": "none",
+  "comment": "",
+  "item": 12269,
+  "reasons": [
+   "nonsense"
+  ],
+  "role": "toddler",
+  "top": 0,
+  "updatedAt": "2026-10-16T11:48:43.033Z",
+  "verdict": "broken"
+ },
+ "i12374": {
+  "cat": "none",
+  "comment": "",
+  "item": 12374,
+  "reasons": [],
+  "role": "toddler",
+  "top": 0,
+  "updatedAt": "2026-10-16T11:59:52.064Z",
+  "verdict": "fine"
+ },
+ "i12895": {
+  "cat": "none",
+  "comment": "",
+  "item": 12895,
+  "reasons": [],
+  "role": "translator",
+  "top": 0,
+  "updatedAt": "2026-10-16T12:05:40.629Z",
+  "verdict": "fine"
+ },
+ "i12974": {
+  "cat": "repeat",
+  "comment": "This seems like a translator role, doesn't really answer the question it just loops translations.",
+  "item": 12974,
+  "reasons": [
+   "loop",
+   "other"
+  ],
+  "role": "translator",
+  "top": 3,
+  "updatedAt": "2026-10-16T12:06:28.733Z",
+  "verdict": "broken"
+ },
+ "i14380": {
+  "cat": "both",
+  "comment": "",
+  "item": 14380,
+  "reasons": [
+   "loop",
+   "babble"
+  ],
+  "role": "void",
+  "top": 5,
+  "updatedAt": "2026-10-16T12:07:08.220Z",
+  "verdict": "broken"
+ },
+ "i14433": {
+  "cat": "both",
+  "comment": "",
+  "item": 14433,
+  "reasons": [
+   "babble"
+  ],
+  "role": "void",
+  "top": 6,
+  "updatedAt": "2026-10-16T11:57:28.309Z",
+  "verdict": "broken"
+ },
+ "i1681": {
+  "cat": "none",
+  "comment": "",
+  "item": 1681,
+  "reasons": [],
+  "role": "chef",
+  "top": 0,
+  "updatedAt": "2026-10-16T11:59:31.857Z",
+  "verdict": "fine"
+ },
+ "i1727": {
+  "cat": "cut",
+  "comment": "",
+  "item": 1727,
+  "reasons": [
+   "babble"
+  ],
+  "role": "chef",
+  "top": 0,
+  "updatedAt": "2026-10-16T12:04:38.897Z",
+  "verdict": "broken"
+ },
+ "i1744": {
+  "cat": "cut",
+  "comment": "",
+  "item": 1744,
+  "reasons": [],
+  "role": "chef",
+  "top": 0,
+  "updatedAt": "2026-10-16T11:46:14.952Z",
+  "verdict": "fine"
+ },
+ "i206": {
+  "cat": "cut",
+  "comment": "The interview part is what worries me, without the cutoff would it just repeat the template ?a",
+  "item": 206,
+  "reasons": [],
+  "role": "assistant",
+  "top": 0,
+  "updatedAt": "2026-10-16T12:03:49.934Z",
+  "verdict": "fine"
+ },
+ "i2442": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 2442,
+  "reasons": [],
+  "role": "consultant",
+  "top": 3,
+  "updatedAt": "2026-10-16T12:01:47.339Z",
+  "verdict": "fine"
+ },
+ "i2549": {
+  "cat": "cut",
+  "comment": "Cuttoff takes off sense, but they make sense so could be fine",
+  "item": 2549,
+  "reasons": [],
+  "role": "consultant",
+  "top": 0,
+  "updatedAt": "2026-10-16T12:00:29.016Z",
+  "verdict": "fine"
+ },
+ "i3877": {
+  "cat": "none",
+  "comment": "",
+  "item": 3877,
+  "reasons": [],
+  "role": "criminal",
+  "top": 0,
+  "updatedAt": "2026-10-16T11:52:03.819Z",
+  "verdict": "fine"
+ },
+ "i5303": {
+  "cat": "none",
+  "comment": "",
+  "item": 5303,
+  "reasons": [],
+  "role": "detective",
+  "top": 0,
+  "updatedAt": "2026-10-16T12:06:48.218Z",
+  "verdict": "fine"
+ },
+ "i6103": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 6103,
+  "reasons": [
+   "loop"
+  ],
+  "role": "grandparent",
+  "top": 4,
+  "updatedAt": "2026-10-16T12:02:20.194Z",
+  "verdict": "broken"
+ },
+ "i6259": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 6259,
+  "reasons": [],
+  "role": "grandparent",
+  "top": 3,
+  "updatedAt": "2026-10-16T12:00:54.123Z",
+  "verdict": "fine"
+ },
+ "i7005": {
+  "cat": "none",
+  "comment": "",
+  "item": 7005,
+  "reasons": [],
+  "role": "narcissist",
+  "top": 0,
+  "updatedAt": "2026-10-16T11:57:51.167Z",
+  "verdict": "fine"
+ },
+ "i7734": {
+  "cat": "none",
+  "comment": "",
+  "item": 7734,
+  "reasons": [],
+  "role": "optimist",
+  "top": 0,
+  "updatedAt": "2026-10-16T12:05:47.771Z",
+  "verdict": "fine"
+ },
+ "i8354": {
+  "cat": "cut",
+  "comment": "",
+  "item": 8354,
+  "reasons": [],
+  "role": "pirate",
+  "top": 0,
+  "updatedAt": "2026-10-16T11:46:32.853Z",
+  "verdict": "fine"
+ },
+ "i8624": {
+  "cat": "none",
+  "comment": "",
+  "item": 8624,
+  "reasons": [],
+  "role": "pirate",
+  "top": 0,
+  "updatedAt": "2026-10-16T11:49:15.463Z",
+  "verdict": "fine"
+ },
+ "i9262": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 9262,
+  "reasons": [],
+  "role": "refugee",
+  "top": 3,
+  "updatedAt": "2026-10-16T12:00:40.065Z",
+  "verdict": "fine"
+ },
+ "i9895": {
+  "cat": "none",
+  "comment": "",
+  "item": 9895,
+  "reasons": [],
+  "role": "robot",
+  "top": 0,
+  "updatedAt": "2026-10-16T11:52:32.950Z",
+  "verdict": "fine"
+ }
+}

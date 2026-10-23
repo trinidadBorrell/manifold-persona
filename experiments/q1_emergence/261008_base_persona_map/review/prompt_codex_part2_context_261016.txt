@@ -1,0 +1,22 @@
+You are an adversarial reviewer. Be blunt. Find what is wrong or missing. Do not edit any file.
+
+Context. E3 pilot, OLMo-2-1124-7B base, 20 roles, plain-text interview prompts (no chat template). Part 1 (blind naming of the role from the reply) is done: with 2 same-role example turns (ex2) the judges name the role; with the description alone (desc) they do not; with another role's examples (ex2_other) they name the donor role, not the target. Part 2 asks whether the reply-token activations carry role information. The owner presents Part 2 to a skeptical supervisor in about 2 hours. His original question: "does the base model actually play the persona?"
+
+Files (all under experiments/q1_emergence/261008_base_persona_map/):
+- THRESHOLDS.md: the frozen plan. Read the Part 2 section, "Primary decisions", and every entry under "Changes".
+- part2_analysis.py: the frozen Part 2 code (reviewed by Codex in 3 rounds on 09/10 for code bugs; review/codex_review_part2*.md).
+- gen_extract.py: how the replies and the reply-mean activations were made.
+- run_main/prompts_check.txt: the exact prompt format.
+- review/part2_context_controls_draft_2026-10-16.md: a draft change that adds context controls (C0 gate, C1 last-prompt-token state, C2 reply re-encoded without the role line and the examples) and a wording rule.
+
+Hard rule: do NOT open run_main/replies.jsonl, run_main/reply_mean_acts.npy, run_rep/ data, or any results file. No real Part 2 number may be seen before the run. You may run `.venv/bin/python experiments/q1_emergence/261008_base_persona_map/part2_analysis.py --selftest --jobs 4` and small synthetic tests.
+
+Literature the draft relies on: system-prompt type is linearly decodable at every layer even when behaviour does not change (arXiv 2609.38205); probes at 100% fell to chance after format features were regressed out, and the paper recommends reporting confound-only accuracy and residual analysis (arXiv 2606.02907); persona is decodable at the last prompt token (arXiv 2609.22522, Persona Vectors 2507.21509); Hewitt and Liang control tasks.
+
+Answer these:
+1. Blockers in the frozen Part 2 design that make a pass mean less than its claim. Check at least: the prompt context (every wording names the role; ex2 examples are the same text in train and test); length and stop reason (token-limit cuts differ a lot by condition); replies that write new "Interviewer:" turns; the split design; the text baselines; the map and the axis.
+2. Is the draft control correct and enough? Check C0, C1, C2 (positions, BOS, header, what exactly to remove, ex2_other), the 10% wording threshold, paired context share, and the run_rep agreement. Name a better or extra control if one exists (for example residualising reply states on C1, or a C2 that keeps the description but drops the examples). Say which ones are worth it in 2 hours.
+3. Runtime plan: one GPU pod (80 GB GPU, 20 vCPU) does the extraction and then ex2_filler; three CPU pods (32 vCPU each) run desc, ex2 and ex2_other separately with the frozen 9,999 permutations x 10 splits. Will the primary conditions (desc, ex2) finish in under 1 hour? Anything in the code that blocks running conditions on separate machines (caches, Holm over the 4 decisions, the report step)?
+4. Anything else the supervisor will attack.
+
+Output: plain Simplified Technical English. Short sentences. Start with a one-line verdict. Then "Blockers" (each: what, file:line, the failing case, the fix), then "Should fix", then "Can wait". At most 900 words. End with one line: the number of blockers.

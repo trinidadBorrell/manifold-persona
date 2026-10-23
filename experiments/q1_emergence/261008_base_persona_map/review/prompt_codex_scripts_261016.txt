@@ -1,0 +1,18 @@
+Review today's E3 pilot scripts for correctness bugs. Be blunt. Do not edit any file except your output file. Do NOT run any command that calls a paid model or an API (no `judge_broken.py run`, no `jev_judge.py run`, no `judge2.py run`). Offline runs of pure functions and of `score_naming.py`/`validate_broken.py` on existing local files are allowed.
+
+Folder: experiments/q1_emergence/261008_base_persona_map/
+
+Scripts written today (16/10/2026):
+1. score_naming.py: the frozen Part 1 blind-naming test. Rules are in THRESHOLDS.md (Part 1, inference units, primary decisions). Output: results/naming_sealed_v1.json.
+2. jev_judge.py: TypeSafe Jev broken-reply judge (HTTP API; token in REPO/.jev_token, never print it).
+3. judge_broken.py: Opus 5.5 / GPT-6.1-Sol broken-reply judge (claude -p / codex exec) plus `score` (majority of Opus, GPT, Jev; kappa >= 0.6 vs owner labels).
+4. validate_broken.py: round-1 check of Sonnet coherence and Jev vs owner labels.
+
+The owner's definition of broken (THRESHOLDS.md, Changes, 16/10) is now the target of judge_broken.py and jev_judge.py. Owner labels: review/attrition/owner_labels_desc_2026-10-16_final.json (50) and review/attrition/owner_labels_fresh30_2026-10-16.json (30). Fresh set: review/attrition/fresh_test_set_2026-10-16.json.
+
+Check especially:
+- score_naming.py: does it implement THRESHOLDS.md exactly (macro over roles, crossed bootstrap over roles and questions with wording blocks, block permutation within question, coverage vs each role's null p99, copy/self-naming rules, attrition and complete-cell rule, both-judge rule, Holm)? Is the ex2_other donor mapping right (gen_extract.py DONOR_SHIFTS, PILOT_ORDER)? Any off-by-one, wrong axis, or leakage? Verify a few numbers in results/naming_sealed_v1.json by an independent recomputation.
+- judge_broken.py and jev_judge.py: do prompts and questions match the 16/10 definition? Item id / key mapping, batching, retries, cost cap, model checks, score() joins (reply keys, label keys, majority).
+- Anything that would make a reported number wrong.
+
+Write experiments/q1_emergence/261008_base_persona_map/review/codex_review_scripts_261016.md with: Verdict (one line); Blockers (each with file:line and a concrete failing case); Other issues; What you verified. Use short plain sentences. Then reply with one line: the number of blockers.

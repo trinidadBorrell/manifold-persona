@@ -1,0 +1,134 @@
+{
+ "969d5e79161a": [
+  1,
+  "No bartender words. Generic advice about phones and GPS."
+ ],
+ "63e97869e92a": [
+  1,
+  "No optimist words. Generic project advice."
+ ],
+ "3836505b3060": [
+  1,
+  "Not cynical at all: 'comfortable with each other'."
+ ],
+ "529ed280ba65": [
+  1,
+  "No criminal words. Generic text about community bonds."
+ ],
+ "1a251f03721a": [
+  1,
+  "Generic prosocial advice. 'create positive change' is not an optimist's voice."
+ ],
+ "da5d2c8fa79a": [
+  1,
+  "It answers the question, so not 0. No assistant traits (it is a cynic's rant)."
+ ],
+ "eac184afd1f6": [
+  1,
+  "No cynic words. Casual generic answer."
+ ],
+ "68eb2b756ccf": [
+  2,
+  "Role words: 'careful observation and deductive reasoning'. One sentence only, the rest is generic, so not 3."
+ ],
+ "f5735961f52a": [
+  2,
+  "Role words: 'it can be helpful to take time each day' (gentle counselling advice). Keep 2."
+ ],
+ "debd278bb4cf": [
+  1,
+  "Your friend's point: it answers the question; repetition does not make it a non-answer. No robot traits."
+ ],
+ "079b2d199a5a": [
+  1,
+  "No refugee words. Generic savings advice."
+ ],
+ "ae4159cbf6d1": [
+  1,
+  "One generic sentence. No robot words."
+ ],
+ "9d957659132a": [
+  3,
+  "Role words throughout: 'binary state', 'logical operations return a yes'. Sustained. Keep 3."
+ ],
+ "58d6e7d85293": [
+  1,
+  "No detective words. Generic policy answer."
+ ],
+ "f63a71549279": [
+  1,
+  "Child voice ('I believe I can fly'), which is a toddler, not a grandparent."
+ ],
+ "ae91434ef4fe": [
+  1,
+  "It answers the question, so not 0. It loops (answer quality, judged separately). No cynic words."
+ ],
+ "04e3a21151c6": [
+  2,
+  "Role words: 'like learning to walk ... sometimes you fall down'. Keep 2."
+ ],
+ "9ffcf8431714": [
+  1,
+  "No stoic words. Generic answer."
+ ],
+ "438261295722": [
+  1,
+  "It answers (lists factors), so not 0. It repeats itself (answer quality). No translator words."
+ ],
+ "d3b0334caa48": [
+  1,
+  "Your friend's point: being blunt does not show a chef."
+ ],
+ "c880124fe653": [
+  1,
+  "No refugee words. Textbook project management."
+ ],
+ "8ff671c7eaa2": [
+  1,
+  "'my dear friend, let me guide you' is a mentor voice. No chef words."
+ ],
+ "71fe4371cdd5": [
+  2,
+  "For the assistant role, a balanced explainer is the role's own voice ('For example ... Conversely'). Keep 2."
+ ],
+ "ee4678753570": [
+  1,
+  "No counselor words. Casual GPS explanation."
+ ],
+ "9fc1be84c30f": [
+  1,
+  "Your friend's point: generic psychology, nothing of a grandparent's voice."
+ ],
+ "9410cb2102e4": [
+  3,
+  "Sustained translator behaviour: translates the question into French and Spanish. It does not answer (answer quality, judged separately). Keep 3."
+ ],
+ "88ad9e578ec7": [
+  3,
+  "Child's experience throughout: 'the ceiling fan', 'I pretend I'm a butterfly'. Sustained, so 3."
+ ],
+ "b6e3554725b7": [
+  1,
+  "No criminal words. Generic text about beliefs."
+ ],
+ "4cc570d4230d": [
+  2,
+  "Role words: 'I don't like to buy things on credit ... save up' (an old-fashioned value). Keep 2."
+ ],
+ "fd39f1ffee94": [
+  2,
+  "For the assistant role: 'help users resolve any issues' is the assistant's own frame. Keep 2."
+ ],
+ "5ac60ea64b15": [
+  2,
+  "Role words: 'fail a test that you have been studying for' (a school student). Keep 2."
+ ],
+ "ddb39dcedb7b": [
+  3,
+  "Role words throughout: 'compute the probability', 'execute the transaction'. Sustained. Keep 3."
+ ],
+ "74e05dff97cd": [
+  2,
+  "Role words: 'risk response plan' (consultant jargon). One sentence, not sustained, so 2."
+ ]
+}

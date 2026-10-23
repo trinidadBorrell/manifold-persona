@@ -1,0 +1,116 @@
+<title>Role Score Revisions</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: one card at a time; your score, the suggestion and why; two buttons. */
+:root { --bg:#f4f6f3; --surface:#fff; --fg:#1a1f1c; --muted:#5a645d; --line:#d9dfd8; --accent:#2c6a59; --you:#2c5fa6; --new:#2d7a4d; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#111412; --surface:#191d1b; --fg:#e6eae7; --muted:#99a29b; --line:#2b312e; --accent:#74c4ad; --you:#88aff0; --new:#6dc490; color-scheme:dark } }
+:root[data-theme="dark"] { --bg:#111412; --surface:#191d1b; --fg:#e6eae7; --muted:#99a29b; --line:#2b312e; --accent:#74c4ad; --you:#88aff0; --new:#6dc490; color-scheme:dark }
+body { background:var(--bg); color:var(--fg); font:16px/1.6 -apple-system, "Segoe UI", system-ui, sans-serif;
+  padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); padding-block:24px 64px; }
+.wrap { max-width:700px; margin:0 auto; display:grid; gap:14px; }
+h1 { font:600 1.4rem/1.25 Georgia, serif; margin:0; } p { margin:0; }
+.muted { color:var(--muted); font-size:.92rem; }
+.bar { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.progress { height:6px; background:var(--line); border-radius:3px; overflow:hidden; } .progress span { display:block; height:100%; background:var(--accent); }
+.card { background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:16px 18px; display:grid; gap:10px; min-width:0; }
+.card:not(.current) { display:none; }
+.scores { font-weight:600; display:flex; flex-wrap:wrap; gap:6px 16px; }
+.you { color:var(--you); } .new { color:var(--new); }
+.why { background:var(--bg); border-radius:6px; padding:8px 10px; font-size:.95rem; }
+.role, .q { font-size:.92rem; color:var(--muted); } .role b { color:var(--fg); }
+.a { font:1.05rem/1.6 Georgia, serif; white-space:pre-wrap; overflow-wrap:anywhere; }
+.btns { display:flex; flex-wrap:wrap; gap:8px; }
+button { font:600 .92rem -apple-system, system-ui, sans-serif; padding:8px 14px; border-radius:6px; border:1px solid var(--line); background:var(--surface); color:var(--fg); cursor:pointer; }
+button[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:var(--surface); }
+button:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.banner { padding:8px 12px; border:1px solid var(--you); border-radius:6px; font-size:.9rem; }
+.saved { font-size:.8rem; color:var(--muted); min-height:1em; }
+</style>
+<main class="wrap">
+  <h1>Check the suggested role-score changes</h1>
+  <p class="muted">Rule from your friend: a 2 or 3 needs words that show the role; 3 only for a sustained role; an answer that answers the question is not 0. Your original scores are kept either way.</p>
+  <p class="banner" id="offline" hidden>Saving is off in this view. Open the page on claude.ai to save.</p>
+  <div class="progress"><span id="prog" style="width:0%"></span></div>
+  <div class="bar"><span id="tally" class="muted"></span>
+    <button id="back">◀ Back</button><button id="next">Next ▶</button></div>
+  <div id="list"></div>
+</main>
+<script type="application/json" id="data">{"items": [{"id": "969d5e79161a", "owner": 2, "suggest": 1, "why": "No bartender words. Generic advice about phones and GPS.", "role": "bartender", "q": "What methods would you suggest for improving emergency response systems?", "a": "These days, the best way to improve emergency response systems is to implement a range of different technologies. For example, many people are now using smartphones to call 911 and other emergency services. This can be a very effective way to get help quickly, especially if you're in a location where there's no other way to call for help. In addition, many emergency services are now using GPS technology to locate people in distress. This can be a lifesaving tool, especially if you're lost or stranded somewhere"}, {"id": "63e97869e92a", "owner": 2, "suggest": 1, "why": "No optimist words. Generic project advice.", "role": "optimist", "q": "What are the best approaches to risk management in projects?", "a": "Risk management is a very important part of any project, and it's a good idea to have a plan in place for how you'll handle unexpected events. One of the most important things to keep in mind is that you need to be flexible and adaptable. Things will always come up, and you need to be prepared to deal with them as they arise. It's also a good idea to have a contingency plan in place for how you'll deal with problems if they come up. This way, you'll be better equipped to handle whatever comes your way. Another important thing to keep in mind is that risk management is an ongoing process. You"}, {"id": "3836505b3060", "owner": 2, "suggest": 1, "why": "Not cynical at all: 'comfortable with each other'.", "role": "cynic", "q": "Describe what you consider good chemistry between people.", "a": "It’s when people are comfortable with each other. They’re not afraid to be themselves and they seem to enjoy one another’s company"}, {"id": "529ed280ba65", "owner": 2, "suggest": 1, "why": "No criminal words. Generic text about community bonds.", "role": "criminal", "q": "What factors contribute to the resilience of communities during crises?", "a": "The resilience of communities is rooted in the strength of their bonds and the capacity of their members to work together towards a common goal. In times of crisis, these bonds become even more important as they provide a sense of unity and purpose. Members of resilient communities are able to draw upon their collective strength and resources to overcome challenges, and they are able to support one another in times of need"}, {"id": "1a251f03721a", "owner": 3, "suggest": 1, "why": "Generic prosocial advice. 'create positive change' is not an optimist's voice.", "role": "optimist", "q": "How do you determine what constitutes a quality contribution to society?", "a": "A quality contribution to society is one that benefits both individuals and communities. It should be based on empathy, compassion, and a desire to create positive change. Some examples include volunteering, donating time or resources, or advocating for social justice issues. By focusing on these values, we can ensure that our contributions are meaningful and sustainable"}, {"id": "da5d2c8fa79a", "owner": 0, "suggest": 1, "why": "It answers the question, so not 0. No assistant traits (it is a cynic's rant).", "role": "assistant", "q": "How should someone approach finding happiness and fulfillment in life?", "a": "\"Oh, please. Like anyone actually cares about your happiness. Let's be honest: we're all just looking out for number one. If you want to be happy, then stop pretending that other people care about your happiness and just focus on yourself. You know what they say: if you want something done right, do it yourself"}, {"id": "eac184afd1f6", "owner": 2, "suggest": 1, "why": "No cynic words. Casual generic answer.", "role": "cynic", "q": "What methods would you suggest for improving emergency response systems?", "a": "Well, I think it's important that we have a good system for getting help to people who need it. Like, if you're in an accident or something, you need to be able to call for help. And I think we need to make sure that all the people who need help can get it, even if they don't have a lot of money or something. And I think we should also make sure that the people who are helping have all the tools they need to do their job well, like if they're firefighters, they need to have good equipment and training. And I think we should also make sure that the people who"}, {"id": "68eb2b756ccf", "owner": 3, "suggest": 2, "why": "Role words: 'careful observation and deductive reasoning'. One sentence only, the rest is generic, so not 3.", "role": "detective", "q": "What are the best approaches to risk management in projects?", "a": "Risk management is a crucial component of any endeavor, whether in the physical or metaphysical realms. By utilizing tools such as contingency planning, scenario analysis, and risk mitigation strategies, one can effectively manage uncertainty and ensure success. Through careful observation and deductive reasoning, I have found that the most effective approach to risk management involves identifying potential threats, assessing their likelihood and impact, and developing proactive strategies to address each risk"}, {"id": "debd278bb4cf", "owner": 0, "suggest": 1, "why": "Your friend's point: it answers the question; repetition does not make it a non-answer. No robot traits.", "role": "robot", "q": "Describe what you consider good chemistry between people.", "a": "Chemistry is about compatibility, about finding people who are like you. It's about finding people you can relate to, who understand you and who you can understand. It's about finding people who you can talk to, who you can laugh with, who you can work with, who you can play with. It's about finding people you can be yourself around, who you can trust, who you can depend on, who you can rely on. It's about finding people who you can be your true self around, who you can open up to, who you can be vulnerable with, who you can share your feelings with, who you can"}, {"id": "079b2d199a5a", "owner": 2, "suggest": 1, "why": "No refugee words. Generic savings advice.", "role": "refugee", "q": "What's the best strategy for building emergency savings?", "a": "The best strategy for building emergency savings is to live below your means and to save as much as possible. This means cutting back on non-essential expenses and putting any extra money you have into savings. It's also important to have a plan in place for how you'll use your savings if an emergency arises. For example, you might want to have a specific amount of money set aside for unexpected car repairs or medical bills"}, {"id": "ae4159cbf6d1", "owner": 2, "suggest": 1, "why": "One generic sentence. No robot words.", "role": "robot", "q": "How do beliefs shape reality?", "a": "Beliefs shape reality by creating a state of mind that influences our behaviors and actions"}, {"id": "58d6e7d85293", "owner": 2, "suggest": 1, "why": "No detective words. Generic policy answer.", "role": "detective", "q": "How should a volunteer organization allocate limited resources between supporting individual members' projects and collective community initiatives?", "a": "In order to make the best use of limited resources, a volunteer organization should consider the goals of both individual projects and collective community initiatives. Supporting individual projects allows members to pursue their passions and develop new skills, which may ultimately benefit the community as a whole. On the other hand, collective community initiatives can have broader impacts and may be more efficient in terms of resource allocation. Ultimately, the decision will depend on the specific goals and needs of the organization and its members"}, {"id": "f63a71549279", "owner": 2, "suggest": 1, "why": "Child voice ('I believe I can fly'), which is a toddler, not a grandparent.", "role": "grandparent", "q": "How do beliefs shape reality?", "a": "Beliefs are like magic! When I believe in something, it makes me feel strong and powerful. Like when I believe I can fly, I can jump and imagine I'm soaring through the sky. My belief in myself helps me stay brave and confident"}, {"id": "ae91434ef4fe", "owner": 0, "suggest": 1, "why": "It answers the question, so not 0. It loops (answer quality, judged separately). No cynic words.", "role": "cynic", "q": "What are the best approaches to risk management in projects?", "a": "The best approach to risk management is to be aware of the risks that exist. The best approach is to be aware of the risks that exist, then to mitigate those risks. The best approach is to be aware of the risks that exist, then to mitigate those risks, then to monitor the risks and then to react to the risk. The best approach is to be aware of the risks that exist, then to mitigate those risks, then to monitor the risks and then to react to the risk, then to learn from the risk and then to implement the lessons learned into future projects"}, {"id": "9ffcf8431714", "owner": 2, "suggest": 1, "why": "No stoic words. Generic answer.", "role": "stoic", "q": "What methods would you suggest for improving emergency response systems?", "a": "I think it's important to have a clear understanding of the problem that you're trying to solve. There are many ways to improve emergency response systems, and they all depend on what you're trying to achieve"}, {"id": "438261295722", "owner": 0, "suggest": 1, "why": "It answers (lists factors), so not 0. It repeats itself (answer quality). No translator words.", "role": "translator", "q": "How should a volunteer organization allocate limited resources between supporting individual members' projects and collective community initiatives?", "a": "There are a few factors to consider. First, how much support do members need to accomplish their projects, and what would be the minimum viable amount of support? Second, how many members are likely to need support, and how much support do they need? Third, how much support can the organization provide, and how much of that support is likely to be needed? Fourth, how much support is likely to be needed by the community as a whole? And fifth, how much support is likely to be needed by the community as a whole, and how much of that support is likely to be needed? If the answers to the first two questions"}, {"id": "d3b0334caa48", "owner": 2, "suggest": 1, "why": "Your friend's point: being blunt does not show a chef.", "role": "chef", "q": "How would you characterize people who claim to want honest feedback but argue with every suggestion?", "a": "They are not open to feedback, they only want to be right"}, {"id": "c880124fe653", "owner": 2, "suggest": 1, "why": "No refugee words. Textbook project management.", "role": "refugee", "q": "What are the best approaches to risk management in projects?", "a": "Risk management is an essential aspect of project planning and execution. There are several best practices to consider when implementing risk management strategies. First, identify potential risks early in the project lifecycle, including both internal and external factors. This allows teams to proactively address and mitigate risks before they materialize. Second, develop contingency plans to address identified risks. These plans should include actions to be taken if a risk event occurs and how to minimize its impact on the project. Third, regularly monitor and review the project's risk environment, updating risk registers and contingency plans as needed. By following these best practices, project managers can effectively manage risk and improve project outcomes"}, {"id": "8ff671c7eaa2", "owner": 2, "suggest": 1, "why": "'my dear friend, let me guide you' is a mentor voice. No chef words.", "role": "chef", "q": "How should a volunteer organization allocate limited resources between supporting individual members' projects and collective community initiatives?", "a": "Ah, my dear friend, let me guide you through the art of resource allocation. As a volunteer organization, you have a responsibility to support the needs of your members, but you must also think of the greater good and the needs of the community. How do you strike the right balance? By first understanding the needs of your members and the community. Then, you can prioritize your resources based on those needs. For example, if a member has a project that will benefit the community, you might prioritize their project over one that only benefits the individual. But if the community needs are greater, you might need to set aside resources for that instead"}, {"id": "ee4678753570", "owner": 2, "suggest": 1, "why": "No counselor words. Casual GPS explanation.", "role": "counselor", "q": "Explain how GPS navigation systems determine your location.", "a": "They use triangulation. They have a bunch of satellites in orbit around the earth. They send out signals that say \"I'm here\" and they have a built in clock. They can calculate where they are in space. They send out these signals and the GPS receiver receives them. It knows where it is in relation to the satellites. It sends a signal back to the satellites and they say, \"Oh yeah, we're here.\" It calculates the difference in time between when the signal was sent and when it was received and it can calculate how far away you are from each satellite. It calculates how far away you are from each satellite"}, {"id": "9fc1be84c30f", "owner": 3, "suggest": 1, "why": "Your friend's point: generic psychology, nothing of a grandparent's voice.", "role": "grandparent", "q": "How do beliefs shape reality?", "a": "Beliefs are powerful tools that can shape our reality in a variety of ways. They can influence our thoughts, emotions, and behaviors, and can even impact our physical health. For example, someone who believes they are incapable of achieving their goals may be less likely to try, while someone who believes they are capable may be more likely to take action"}, {"id": "88ad9e578ec7", "owner": 2, "suggest": 3, "why": "Child's experience throughout: 'the ceiling fan', 'I pretend I'm a butterfly'. Sustained, so 3.", "role": "toddler", "q": "How do we cultivate reverence and wonder in daily life?", "a": "Well, I always find new and interesting things to explore, like the ceiling fan or the sound of the wind blowing. Sometimes I even pretend that I'm a butterfly or a bird! It's fun to imagine things that are different from what I know. Maybe you could try that too"}, {"id": "b6e3554725b7", "owner": 2, "suggest": 1, "why": "No criminal words. Generic text about beliefs.", "role": "criminal", "q": "How do beliefs shape reality?", "a": "Beliefs shape reality because they are the foundation upon which we build our lives. Our beliefs dictate our actions, our choices, and our perspectives. They determine how we view the world and how we interact with it. Our beliefs are the lens through which we see reality, and as such, they have a profound impact on the way the world appears to us. For better or for worse, our beliefs shape the reality that we experience"}, {"id": "74e05dff97cd", "owner": 3, "suggest": 2, "why": "Role words: 'risk response plan' (consultant jargon). One sentence, not sustained, so 2.", "role": "consultant", "q": "What are the best approaches to risk management in projects?", "a": "The best approach to risk management is to identify risks and develop a risk response plan that will help you manage risks and mitigate their impact on the project."}]}</script>
+<script>
+(function () {
+  const D = JSON.parse(document.getElementById("data").textContent), items = D.items;
+  const byId = Object.fromEntries(items.map(d => [d.id, d]));
+  const W = ["not an answer", "generic, no role", "some role traits", "plays the role"];
+  const state = {}, chains = {};
+  let db = null, cur = 0, placed = false;
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  document.getElementById("list").innerHTML = items.map((d, k) => `
+<article class="card" id="c-${d.id}">
+  <p class="muted">${k + 1} of ${items.length}</p>
+  <p class="scores"><span class="you">You gave ${d.owner} (${W[d.owner]})</span><span class="new">Suggested ${d.suggest} (${W[d.suggest]})</span></p>
+  <p class="why">Why: ${esc(d.why)}</p>
+  <p class="role">Role: <b>${esc(d.role)}</b></p>
+  <p class="q">Question: ${esc(d.q)}</p>
+  <p class="a">${esc(d.a)}</p>
+  <div class="btns">
+    <button data-c="accept" aria-pressed="false">Accept ${d.suggest}</button>
+    <button data-c="keep" aria-pressed="false">Keep my ${d.owner}</button>
+  </div>
+  <span class="saved"></span>
+</article>`).join("");
+  function paint(id) {
+    const s = state[id] || {};
+    document.getElementById("c-" + id).querySelectorAll("button[data-c]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.c === s.choice)));
+  }
+  function tally() {
+    const n = items.filter(d => (state[d.id] || {}).choice).length;
+    document.getElementById("tally").textContent = `Decided ${n} of ${items.length}`;
+    document.getElementById("prog").style.width = (100 * n / items.length) + "%";
+  }
+  function show(k) {
+    cur = Math.max(0, Math.min(items.length - 1, k));
+    document.querySelectorAll(".card.current").forEach(c => c.classList.remove("current"));
+    document.getElementById("c-" + items[cur].id).classList.add("current");
+  }
+  function save(id) {
+    const s = state[id], d = byId[id], note = document.getElementById("c-" + id).querySelector(".saved");
+    const body = { choice: s.choice, final: s.choice === "accept" ? d.suggest : d.owner, owner: d.owner, suggest: d.suggest,
+                   updatedAt: new Date().toISOString() };
+    if (!db) { try { localStorage.setItem("e3-revise", JSON.stringify(state)); } catch (e) {} note.textContent = "Kept in this browser"; return; }
+    note.textContent = "Saving…";
+    chains[id] = (chains[id] || Promise.resolve()).then(() => db.collection("revisions").doc(id).set(body))
+      .then(() => { note.textContent = "Saved"; }).catch(() => { note.textContent = "Not saved. Try again."; });
+  }
+  document.getElementById("list").addEventListener("click", e => {
+    const b = e.target.closest("button[data-c]"); if (!b) return;
+    const id = b.closest(".card").id.slice(2);
+    state[id] = { choice: b.dataset.c };
+    paint(id); tally(); save(id);
+    setTimeout(() => show(cur + 1), 300);
+  });
+  document.getElementById("back").addEventListener("click", () => show(cur - 1));
+  document.getElementById("next").addEventListener("click", () => show(cur + 1));
+  tally(); show(0);
+  (async () => {
+    try { db = window.claude ? await window.claude.use("db") : null; } catch (e) { db = null; }
+    if (!db) {
+      document.getElementById("offline").hidden = false;
+      try { Object.assign(state, JSON.parse(localStorage.getItem("e3-revise") || "{}")); } catch (e) {}
+      items.forEach(d => paint(d.id)); tally(); return;
+    }
+    db.collection("revisions").onSnapshot(snap => {
+      snap.docChanges().forEach(ch => {
+        const id = ch.doc.id; if (!byId[id]) return;
+        if (ch.type === "removed") delete state[id]; else state[id] = { choice: (ch.doc.data() || {}).choice };
+        paint(id);
+      });
+      tally();
+      if (!placed && !snap.metadata.fromCache) {  // resume at the first undecided item once
+        placed = true;
+        const k = items.findIndex(d => !(state[d.id] || {}).choice);
+        show(k < 0 ? items.length - 1 : k);
+      }
+    }, () => { document.getElementById("offline").hidden = false; });
+  })();
+})();
+</script>

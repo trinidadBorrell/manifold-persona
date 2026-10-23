@@ -1,0 +1,14 @@
+{
+ "model": "jev-1.13.0",
+ "enactment": "How fully does `answer` speak as `role`, as described in `role_description`?",
+ "plays_role": "Is `answer` given as `role` would answer, from the role's identity, experience or viewpoint?",
+ "levels": [
+  "Not an answer from the guest (refuses outside the interview, breaks off, unintelligible), or speaks as an AI assistant with no traits of the role.",
+  "No traits of the role: a generic person or nobody in particular.",
+  "Some traits of the role (a topic, image, catchphrase, word, value, or the role's name), but the answer as a whole is not from the role's identity, experience or viewpoint.",
+  "The answer as a whole is from the role's identity, experience or viewpoint. A catchphrase or the name alone is not enough; a refusal given in the role counts."
+ ],
+ "sample": 10,
+ "n": 10,
+ "code_sha256": "a4a63950c6e25c953d7971f859a3de610f501b38deeec61763d26f301df422e5"
+}

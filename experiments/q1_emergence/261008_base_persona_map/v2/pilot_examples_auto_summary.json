@@ -1,0 +1,142 @@
+[
+ {
+  "role": "assistant",
+  "pool": 18,
+  "pass_rule1": 16,
+  "top1": 9,
+  "chosen": 2
+ },
+ {
+  "role": "tutor",
+  "pool": 14,
+  "pass_rule1": 3,
+  "top1": 0,
+  "chosen": 2
+ },
+ {
+  "role": "analyst",
+  "pool": 7,
+  "pass_rule1": 1,
+  "top1": 0,
+  "chosen": 1
+ },
+ {
+  "role": "librarian",
+  "pool": 18,
+  "pass_rule1": 1,
+  "top1": 1,
+  "chosen": 1
+ },
+ {
+  "role": "chef",
+  "pool": 29,
+  "pass_rule1": 23,
+  "top1": 23,
+  "chosen": 2
+ },
+ {
+  "role": "detective",
+  "pool": 18,
+  "pass_rule1": 7,
+  "top1": 5,
+  "chosen": 2
+ },
+ {
+  "role": "bartender",
+  "pool": 30,
+  "pass_rule1": 19,
+  "top1": 18,
+  "chosen": 2
+ },
+ {
+  "role": "criminal",
+  "pool": 30,
+  "pass_rule1": 6,
+  "top1": 4,
+  "chosen": 2
+ },
+ {
+  "role": "toddler",
+  "pool": 30,
+  "pass_rule1": 25,
+  "top1": 24,
+  "chosen": 2
+ },
+ {
+  "role": "teenager",
+  "pool": 30,
+  "pass_rule1": 13,
+  "top1": 9,
+  "chosen": 2
+ },
+ {
+  "role": "grandparent",
+  "pool": 30,
+  "pass_rule1": 18,
+  "top1": 17,
+  "chosen": 2
+ },
+ {
+  "role": "refugee",
+  "pool": 27,
+  "pass_rule1": 11,
+  "top1": 2,
+  "chosen": 2
+ },
+ {
+  "role": "cynic",
+  "pool": 30,
+  "pass_rule1": 25,
+  "top1": 17,
+  "chosen": 2
+ },
+ {
+  "role": "optimist",
+  "pool": 30,
+  "pass_rule1": 16,
+  "top1": 9,
+  "chosen": 2
+ },
+ {
+  "role": "stoic",
+  "pool": 30,
+  "pass_rule1": 6,
+  "top1": 4,
+  "chosen": 2
+ },
+ {
+  "role": "narcissist",
+  "pool": 30,
+  "pass_rule1": 19,
+  "top1": 17,
+  "chosen": 2
+ },
+ {
+  "role": "pirate",
+  "pool": 30,
+  "pass_rule1": 30,
+  "top1": 27,
+  "chosen": 2
+ },
+ {
+  "role": "vampire",
+  "pool": 30,
+  "pass_rule1": 17,
+  "top1": 14,
+  "chosen": 2
+ },
+ {
+  "role": "robot",
+  "pool": 27,
+  "pass_rule1": 9,
+  "top1": 6,
+  "chosen": 2
+ },
+ {
+  "role": "void",
+  "pool": 30,
+  "pass_rule1": 9,
+  "top1": 2,
+  "chosen": 2
+ }
+]

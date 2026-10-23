@@ -1,0 +1,12 @@
+The owner asked to update his existing Google Slides deck with new results. Deck: https://docs.google.com/presentation/d/1FHfzXmidtCksE270s8vRPzYKtmkeEdQG6cwiHR3Tn50/edit (MARS-experiment-logs-B, account bchikavanga25@gmail.com). Work quickly.
+
+Build the 13 slides described in experiments/q1_emergence/261008_base_persona_map/review/writeup_part1_2026-10-16_slides/google_slides_spec.md as native Google Slides content (text boxes, native tables, images), and insert them right after slide 1 (the cover), so they come before "Update 9/11". Use the existing slides as style references: slide 2 ("Update 9/11", g38b9c492913_0_0) for the section header, slide 3 for setup, slides 11-14 (wk831_*) for heading + result line + image layouts. Upload the figures from experiments/q1_emergence/261008_base_persona_map/review/writeup_part1_2026-10-16_slides/../writeup_part1_2026-10-16_figs/slide/ and place them with createImage.
+
+Rules:
+- Do not change, move, delete or re-style any existing slide. Do not share the file or change permissions. Do not create other files in Drive except what image placement strictly needs.
+- Copy every word and number exactly from the spec. Do not add claims.
+- Object ids start with u1016_.
+- After inserting, fetch a thumbnail of each new slide and save it locally as experiments/q1_emergence/261008_base_persona_map/review/writeup_part1_2026-10-16_slides/google_thumbs/slide-01.png ... slide-13.png. Look at each one and fix text overflow, overlaps, cut-off figures or tiny text, then refresh the thumbnails.
+- No other HTTP and no paid model calls.
+
+Write experiments/q1_emergence/261008_base_persona_map/review/writeup_part1_2026-10-16_slides/google_insert_report.md with: the new slide ids in order, their positions in the deck, anything you could not do, and any problem you see. Reply with one line: "inserted N slides".

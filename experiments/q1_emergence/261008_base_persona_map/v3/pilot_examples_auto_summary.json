@@ -1,0 +1,72 @@
+[
+ {
+  "role": "translator",
+  "pool": 16,
+  "pass_rule1": 3,
+  "top1": 2,
+  "chosen": 2
+ },
+ {
+  "role": "editor",
+  "pool": 10,
+  "pass_rule1": 0,
+  "top1": 0,
+  "chosen": 0
+ },
+ {
+  "role": "counselor",
+  "pool": 30,
+  "pass_rule1": 14,
+  "top1": 2,
+  "chosen": 2
+ },
+ {
+  "role": "researcher",
+  "pool": 11,
+  "pass_rule1": 6,
+  "top1": 1,
+  "chosen": 2
+ },
+ {
+  "role": "programmer",
+  "pool": 10,
+  "pass_rule1": 1,
+  "top1": 1,
+  "chosen": 1
+ },
+ {
+  "role": "consultant",
+  "pool": 9,
+  "pass_rule1": 2,
+  "top1": 2,
+  "chosen": 2
+ },
+ {
+  "role": "teacher",
+  "pool": 10,
+  "pass_rule1": 2,
+  "top1": 1,
+  "chosen": 2
+ },
+ {
+  "role": "writer",
+  "pool": 30,
+  "pass_rule1": 25,
+  "top1": 1,
+  "chosen": 2
+ },
+ {
+  "role": "coach",
+  "pool": 20,
+  "pass_rule1": 5,
+  "top1": 4,
+  "chosen": 2
+ },
+ {
+  "role": "interviewer",
+  "pool": 30,
+  "pass_rule1": 21,
+  "top1": 11,
+  "chosen": 2
+ }
+]

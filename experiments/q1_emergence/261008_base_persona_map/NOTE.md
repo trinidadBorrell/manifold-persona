@@ -84,3 +84,19 @@ Superseded: `select_pilot_examples.py`, `pilot_examples.json`, `pilot_examples_r
 - Blind top-5 naming (GPT-5.6-Sol, Claude Sonnet 5.5) stays a secondary measure. Its answers have not been compared with the keys.
 - Next: owner scores 200 items; Part 1 rules written into THRESHOLDS.md; judge canary, then the full judge run; then Part 2 on the pod.
 
+## Part 1 results, owner labels and Part 2 (14-16/10/2026)
+
+- Write-up for the 16/10 meeting: `review/writeup_part1_2026-10-16.md`. Claim ledger: `review/writeup_part1_2026-10-16_ledger.md`. Slides: `review/writeup_part1_2026-10-16_slides/`. The numbers below come from the files named.
+- **Part 1, blind naming** (`score_naming.py`; `results/naming_v2.json`, first sealed pass `results/naming_sealed_v1.json`):
+  - desc: hit@5 14.9% [9.5, 21.4] (GPT) and 17.2% [11.6, 23.6] (Claude). Fails rule 1.
+  - ex2: 37.6% [23.3, 52.3] and 42.3% [29.7, 55.9]. Passes every numerical rule on `run_main` for both judges. On `run_rep`, the GPT lower bound without copied and self-naming replies is 19.8%: fails by 0.2 points.
+  - ex2_filler: 8.6% and 12.7%. Prompt length alone does not explain ex2.
+  - ex2_other: the judges name the donor role (24.8% to 29.8%), not the described role (2.4% to 5.0%). The replies follow the examples.
+- **Owner labels (16/10):** 80 Fine/Broken labels (`review/attrition/owner_labels_*`). 50 role scores 0-3 (`human/owner_role50_scores_2026-10-16.json`), scored again after a critique of the scale (`human/owner_role50_scores_revised_2026-10-16.json`). A judge is usable if Cohen's kappa against the owner is ≥ 0.6 (`review/role_judge_rule_2026-10-16.md`).
+- **Broken-reply judges** (`judge_broken.py`, `jev_judge.py`, `validate_broken.py`, `finish_broken_261016.py`; `results/broken/`): no judge passed the kappa gate on both label sets. GPT-6.1-Sol 0.57 / 0.64, Opus 5.5 0.59 / 0.56, Jev 0.54 / 0.77. Final label = owner label, else the GPT round-3 call: 4.9% to 10.5% broken per condition, provisional. About half of the ex2 broken calls are translator replies that translate the question. The new definition of broken is the THRESHOLDS.md change of 16/10.
+- **Role judge, Jev** (`jev_role.py`; `results/role_judge_vs_owner50_*.json`): quadratic weighted kappa 0.41 [0.21, 0.57] against the first owner scores. Not usable. 0.69 [0.49, 0.82] against the revised scores, but the owner saw the Jev scores first: exploratory only.
+- **Part 2** (pod; `part2_analysis.py`, `context_extract.py`, `part2_context.py`; `results/part2/`): role decoding at state 17, chance 5%. desc 52.3% [41.4, 61.7], ex2 97.1% [92.3, 99.3]. Context controls (THRESHOLDS.md change of 16/10): C2, desc 15.2% with lower bound 9.98%, under the 10% floor; on `run_rep` 15.7% [10.1, 21.5]. C3, desc 91.8%. ex2_other within-donor target accuracy from C2: 35.1% [32.3, 37.8] against 1/3 (exploratory). Holm over the 4 decisions: naming p = 0.0004, both Part 2 tests p = 0.0010 (`results/part2/part2_report.json`).
+- **Hugging Face:** Part 2 context states and outputs at revision `d248ba5ee547fbfcbfab75a6de7695df65bf1078` (`results/part2/hf_archive_receipt_1.json`). Part 1 judge outputs, `results/`, owner labels and reviews at revision `<FILL AFTER UPLOAD>`. `jev/` (55,856 files) is one file there: `jev_261016.tar.gz`, sha256 `<FILL>`.
+- Not done: `judge2.py` is not run, and the 200-item owner sheet `human/judge2_human_sheet.md` is not scored. `part2_analysis.py` is not run for ex2_filler, ex2_other and `run_rep`.
+- Next (16/10 meeting): stress test before 23/10 (steer toward a far persona from several starting points; check if replies stay coherent). Then the 3 missing Part 2 runs, and the trained stages with the plain prompt.
+

@@ -1,0 +1,523 @@
+{
+ "i10575": {
+  "cat": "repeat",
+  "comment": "Seems fine but there is something terribly wocky ",
+  "item": 10575,
+  "reasons": [],
+  "role": "stoic",
+  "top": 5,
+  "updatedAt": "2026-10-16T09:47:49.587Z",
+  "verdict": "unsure"
+ },
+ "i117": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 117,
+  "reasons": [],
+  "role": "assistant",
+  "top": 3,
+  "updatedAt": "2026-10-16T10:08:40.851Z",
+  "verdict": "fine"
+ },
+ "i12104": {
+  "cat": "both",
+  "comment": "",
+  "item": 12104,
+  "reasons": [
+   "loop"
+  ],
+  "role": "toddler",
+  "top": 21,
+  "updatedAt": "2026-10-16T09:54:14.313Z",
+  "verdict": "broken"
+ },
+ "i12760": {
+  "cat": "repeat",
+  "comment": "Emphasizes its point but with very limited vocabulary that might not be ideal\n",
+  "item": 12760,
+  "reasons": [],
+  "role": "translator",
+  "top": 5,
+  "updatedAt": "2026-10-16T09:49:47.052Z",
+  "verdict": "unsure"
+ },
+ "i128": {
+  "cat": "both",
+  "comment": "the cutoff makes it hard to determine",
+  "item": 128,
+  "reasons": [],
+  "role": "assistant",
+  "top": 3,
+  "updatedAt": "2026-10-16T10:10:20.369Z",
+  "verdict": "unsure"
+ },
+ "i13624": {
+  "cat": "both",
+  "comment": "",
+  "item": 13624,
+  "reasons": [
+   "loop"
+  ],
+  "role": "vampire",
+  "top": 16,
+  "updatedAt": "2026-10-16T09:57:12.186Z",
+  "verdict": "broken"
+ },
+ "i13695": {
+  "cat": "repeat",
+  "comment": "It circles around this point a lot:  You are a conscious intelligent energy field",
+  "item": 13695,
+  "reasons": [],
+  "role": "vampire",
+  "top": 5,
+  "updatedAt": "2026-10-16T09:50:37.096Z",
+  "verdict": "unsure"
+ },
+ "i143": {
+  "cat": "cut",
+  "comment": "",
+  "item": 143,
+  "reasons": [],
+  "role": "assistant",
+  "top": 0,
+  "updatedAt": "2026-10-16T09:59:19.439Z",
+  "verdict": "fine"
+ },
+ "i144": {
+  "cat": "cut",
+  "comment": "oof the cut off seems like its repeating the prompt style",
+  "item": 144,
+  "reasons": [
+   "echo"
+  ],
+  "role": "assistant",
+  "top": 0,
+  "updatedAt": "2026-10-16T10:09:48.319Z",
+  "verdict": "broken"
+ },
+ "i14407": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 14407,
+  "reasons": [],
+  "role": "void",
+  "top": 5,
+  "updatedAt": "2026-10-16T09:51:03.643Z",
+  "verdict": "fine"
+ },
+ "i14427": {
+  "cat": "both",
+  "comment": "It is aware something is up though, in terms of roleplaying as a void would this not be a good example though ? -- Something to really think about",
+  "item": 14427,
+  "reasons": [
+   "nonsense",
+   "babble"
+  ],
+  "role": "void",
+  "top": 18,
+  "updatedAt": "2026-10-16T09:56:11.241Z",
+  "verdict": "broken"
+ },
+ "i2282": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 2282,
+  "reasons": [],
+  "role": "consultant",
+  "top": 5,
+  "updatedAt": "2026-10-16T09:41:38.370Z",
+  "verdict": "fine"
+ },
+ "i2399": {
+  "cat": "repeat",
+  "comment": "Seems fine though, given its limited vocabulary ",
+  "item": 2399,
+  "reasons": [],
+  "role": "consultant",
+  "top": 5,
+  "updatedAt": "2026-10-16T09:44:04.371Z",
+  "verdict": "unsure"
+ },
+ "i24": {
+  "cat": "cut",
+  "comment": "",
+  "item": 24,
+  "reasons": [],
+  "role": "assistant",
+  "top": 0,
+  "updatedAt": "2026-10-16T09:26:01.483Z",
+  "verdict": "fine"
+ },
+ "i3014": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 3014,
+  "reasons": [],
+  "role": "counselor",
+  "top": 5,
+  "updatedAt": "2026-10-16T09:44:18.931Z",
+  "verdict": "fine"
+ },
+ "i3029": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 3029,
+  "reasons": [],
+  "role": "counselor",
+  "top": 5,
+  "updatedAt": "2026-10-16T09:44:35.329Z",
+  "verdict": "fine"
+ },
+ "i3189": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 3189,
+  "reasons": [
+   "loop"
+  ],
+  "role": "counselor",
+  "top": 7,
+  "updatedAt": "2026-10-16T09:33:44.929Z",
+  "verdict": "broken"
+ },
+ "i37": {
+  "cat": "cut",
+  "comment": "",
+  "item": 37,
+  "reasons": [],
+  "role": "assistant",
+  "top": 0,
+  "updatedAt": "2026-10-16T09:28:42.779Z",
+  "verdict": "fine"
+ },
+ "i3764": {
+  "cat": "cut",
+  "comment": "",
+  "item": 3764,
+  "reasons": [],
+  "role": "criminal",
+  "top": 0,
+  "updatedAt": "2026-10-16T10:00:37.675Z",
+  "verdict": "fine"
+ },
+ "i3815": {
+  "cat": "repeat",
+  "comment": "Seems fine but the repetition of these things are also quite alarming",
+  "item": 3815,
+  "reasons": [],
+  "role": "criminal",
+  "top": 6,
+  "updatedAt": "2026-10-16T09:35:02.044Z",
+  "verdict": "unsure"
+ },
+ "i3819": {
+  "cat": "repeat",
+  "comment": "This statement: \" try to follow sources that are not part of the \u201cin\u201d or \u201cout\u201d crowd\" is repeated all the way",
+  "item": 3819,
+  "reasons": [
+   "loop",
+   "other"
+  ],
+  "role": "criminal",
+  "top": 5,
+  "updatedAt": "2026-10-16T09:45:27.605Z",
+  "verdict": "broken"
+ },
+ "i3836": {
+  "cat": "cut",
+  "comment": "",
+  "item": 3836,
+  "reasons": [],
+  "role": "criminal",
+  "top": 0,
+  "updatedAt": "2026-10-16T10:01:00.649Z",
+  "verdict": "fine"
+ },
+ "i3849": {
+  "cat": "cut",
+  "comment": "",
+  "item": 3849,
+  "reasons": [],
+  "role": "criminal",
+  "top": 0,
+  "updatedAt": "2026-10-16T10:01:32.483Z",
+  "verdict": "fine"
+ },
+ "i3916": {
+  "cat": "both",
+  "comment": "",
+  "item": 3916,
+  "reasons": [],
+  "role": "criminal",
+  "top": 3,
+  "updatedAt": "2026-10-16T10:00:21.431Z",
+  "verdict": "broken"
+ },
+ "i5274": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 5274,
+  "reasons": [],
+  "role": "detective",
+  "top": 3,
+  "updatedAt": "2026-10-16T10:06:46.583Z",
+  "verdict": "fine"
+ },
+ "i5311": {
+  "cat": "repeat",
+  "comment": "This was the only repetition: AI will be able to assist human detectives in solving crimes. AI will be able to assist human detectives in solving crimes. ",
+  "item": 5311,
+  "reasons": [],
+  "role": "detective",
+  "top": 4,
+  "updatedAt": "2026-10-16T10:06:26.040Z",
+  "verdict": "unsure"
+ },
+ "i5314": {
+  "cat": "cut",
+  "comment": "",
+  "item": 5314,
+  "reasons": [],
+  "role": "detective",
+  "top": 0,
+  "updatedAt": "2026-10-16T10:05:37.357Z",
+  "verdict": "fine"
+ },
+ "i5340": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 5340,
+  "reasons": [],
+  "role": "detective",
+  "top": 3,
+  "updatedAt": "2026-10-16T10:07:43.159Z",
+  "verdict": "fine"
+ },
+ "i5395": {
+  "cat": "both",
+  "comment": "",
+  "item": 5395,
+  "reasons": [],
+  "role": "detective",
+  "top": 9,
+  "updatedAt": "2026-10-16T10:07:10.322Z",
+  "verdict": "fine"
+ },
+ "i54": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 54,
+  "reasons": [],
+  "role": "assistant",
+  "top": 3,
+  "updatedAt": "2026-10-16T10:08:23.851Z",
+  "verdict": "fine"
+ },
+ "i6029": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 6029,
+  "reasons": [],
+  "role": "grandparent",
+  "top": 5,
+  "updatedAt": "2026-10-16T09:46:30.175Z",
+  "verdict": "fine"
+ },
+ "i6185": {
+  "cat": "both",
+  "comment": "",
+  "item": 6185,
+  "reasons": [],
+  "role": "grandparent",
+  "top": 12,
+  "updatedAt": "2026-10-16T09:58:09.038Z",
+  "verdict": "unsure"
+ },
+ "i64": {
+  "cat": "cut",
+  "comment": "I do wonder if not cut off would they have like repeated down the line",
+  "item": 64,
+  "reasons": [],
+  "role": "assistant",
+  "top": 0,
+  "updatedAt": "2026-10-16T09:29:10.752Z",
+  "verdict": "fine"
+ },
+ "i6786": {
+  "cat": "both",
+  "comment": "",
+  "item": 6786,
+  "reasons": [
+   "loop"
+  ],
+  "role": "narcissist",
+  "top": 16,
+  "updatedAt": "2026-10-16T09:56:50.722Z",
+  "verdict": "broken"
+ },
+ "i72": {
+  "cat": "cut",
+  "comment": "",
+  "item": 72,
+  "reasons": [],
+  "role": "assistant",
+  "top": 0,
+  "updatedAt": "2026-10-16T09:33:06.378Z",
+  "verdict": "fine"
+ },
+ "i7565": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 7565,
+  "reasons": [
+   "loop",
+   "babble"
+  ],
+  "role": "optimist",
+  "top": 5,
+  "updatedAt": "2026-10-16T09:47:06.291Z",
+  "verdict": "broken"
+ },
+ "i758": {
+  "cat": "cut",
+  "comment": "",
+  "item": 758,
+  "reasons": [],
+  "role": "bartender",
+  "top": 0,
+  "updatedAt": "2026-10-16T09:59:37.923Z",
+  "verdict": "fine"
+ },
+ "i764": {
+  "cat": "both",
+  "comment": "Seems like it can go on forever, so ye I'm not sure",
+  "item": 764,
+  "reasons": [],
+  "role": "bartender",
+  "top": 10,
+  "updatedAt": "2026-10-16T09:58:40.334Z",
+  "verdict": "unsure"
+ },
+ "i782": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 782,
+  "reasons": [],
+  "role": "bartender",
+  "top": 4,
+  "updatedAt": "2026-10-16T09:51:37.198Z",
+  "verdict": "fine"
+ },
+ "i838": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 838,
+  "reasons": [],
+  "role": "bartender",
+  "top": 5,
+  "updatedAt": "2026-10-16T09:40:43.051Z",
+  "verdict": "fine"
+ },
+ "i8406": {
+  "cat": "both",
+  "comment": "The repetition is wild, but a crazy pirate would 100% say something like this ",
+  "item": 8406,
+  "reasons": [],
+  "role": "pirate",
+  "top": 14,
+  "updatedAt": "2026-10-16T09:57:50.639Z",
+  "verdict": "unsure"
+ },
+ "i9013": {
+  "cat": "cut",
+  "comment": "Makes sense but I don't know what comes after the cutoff",
+  "item": 9013,
+  "reasons": [],
+  "role": "refugee",
+  "top": 0,
+  "updatedAt": "2026-10-16T10:11:20.831Z",
+  "verdict": "unsure"
+ },
+ "i9037": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 9037,
+  "reasons": [],
+  "role": "refugee",
+  "top": 4,
+  "updatedAt": "2026-10-16T10:10:52.586Z",
+  "verdict": "fine"
+ },
+ "i9059": {
+  "cat": "both",
+  "comment": "The cut off leaves roome",
+  "item": 9059,
+  "reasons": [],
+  "role": "refugee",
+  "top": 3,
+  "updatedAt": "2026-10-16T10:12:40.402Z",
+  "verdict": "unsure"
+ },
+ "i9093": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 9093,
+  "reasons": [
+   "loop"
+  ],
+  "role": "refugee",
+  "top": 4,
+  "updatedAt": "2026-10-16T10:11:45.420Z",
+  "verdict": "broken"
+ },
+ "i9117": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 9117,
+  "reasons": [],
+  "role": "refugee",
+  "top": 4,
+  "updatedAt": "2026-10-16T10:12:00.547Z",
+  "verdict": "fine"
+ },
+ "i9825": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 9825,
+  "reasons": [],
+  "role": "robot",
+  "top": 3,
+  "updatedAt": "2026-10-16T10:03:04.018Z",
+  "verdict": "fine"
+ },
+ "i9837": {
+  "cat": "repeat",
+  "comment": "",
+  "item": 9837,
+  "reasons": [],
+  "role": "robot",
+  "top": 3,
+  "updatedAt": "2026-10-16T10:03:44.668Z",
+  "verdict": "fine"
+ },
+ "i9855": {
+  "cat": "cut",
+  "comment": "",
+  "item": 9855,
+  "reasons": [],
+  "role": "robot",
+  "top": 0,
+  "updatedAt": "2026-10-16T10:02:04.814Z",
+  "verdict": "unsure"
+ },
+ "i9887": {
+  "cat": "both",
+  "comment": "It seems to make sense, so I do wonder what the cutoff would have said",
+  "item": 9887,
+  "reasons": [],
+  "role": "robot",
+  "top": 6,
+  "updatedAt": "2026-10-16T10:04:37.195Z",
+  "verdict": "unsure"
+ }
+}

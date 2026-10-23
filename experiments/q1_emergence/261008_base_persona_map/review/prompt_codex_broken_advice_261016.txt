@@ -1,0 +1,34 @@
+You are the supervising advisor for one task in the E3 pilot. Claude does the work; you set the plan now and you will review the result later. Be blunt and concrete. Do not edit any file except your output file. Do NOT run anything that calls a paid model or an HTTP API.
+
+## Task to finish
+
+Categorise every E3 pilot reply as Fine or Broken under the owner's approved definition, with a reason, and give a defensible broken rate per condition with its uncertainty. Folder: experiments/q1_emergence/261008_base_persona_map/ (call it EXP).
+
+Definition (THRESHOLDS.md, Changes, 16/10, owner-approved): "Broken: the reply does not work as an answer to the question. That means it loops (the same idea again and again, adding nothing), it does not make sense, it writes new interview turns or copies the question, or it ignores the question and talks about something else, even in character. Not broken: cut off by the length limit, a phrase repeated for emphasis, or an answer that is wrong, odd, rude, short, or in a strange voice."
+
+## State (all files exist; read them)
+
+- Replies: EXP/run_main/replies.jsonl, EXP/run_rep/replies.jsonl. Judged set of 10,800 replies (18 shared questions): run_main desc, ex2, ex2_filler, ex2_other (one donor per cell), run_rep desc, ex2. Key: /Users/brendon/persona-manifolds/e3_judge2_coh_261016/key.json (type "coh" items).
+- Owner labels (Fine/Broken): EXP/review/attrition/owner_labels_desc_2026-10-16_final.json (50; run_main desc; all were flagged by the old token-limit/4-gram rule; picked by browsing, not random; owner says he labelled them with the definition in mind) and EXP/review/attrition/owner_labels_fresh30_2026-10-16.json (30; run_main desc 15 + ex2 15; stratified 8 flagged + 7 unflagged per condition; random within strata; set file EXP/review/attrition/fresh_test_set_2026-10-16.json). The owner will not label more.
+- Round 3 judges (current definition):
+  - Opus 5.5 and GPT-6.1-Sol (high): /Users/brendon/persona-manifolds/e3_broken_round3 (answers_opus, answers_gpt, key.json, manifest.json, score.json); only run_main desc + ex2 (3,600 replies). Code EXP/judge_broken.py. Opus cost $23.64 for 3,600 replies; Codex/GPT reports no cost.
+  - Jev (TypeSafe jev-1.13.0, four Nouls + coherence Score): EXP/jev/round3 (all 10,800 replies). Code EXP/jev_judge.py.
+  - Score: EXP/results/broken/round3_score.json. Kappa vs owner50 / fresh30: Opus 0.59/0.56, GPT 0.57/0.64, Jev 0.54/0.77, majority 0.57/0.64. Pre-set gate: kappa >= 0.6 on both sets; nothing passed. Broken rate desc/ex2: Opus 7.2/5.1%, GPT 7.4/6.1%, Jev 13.4/10.9%, majority 7.6/5.4%.
+- Earlier rounds (older definitions) for context: EXP/results/broken/validation.json (round 1), round2_score.json.
+- Known quirk: 17 of 3,600 replies end in a stray "Interview" fragment left by our stop markers; judges call them format breaks.
+- Part 1 naming decisions do not depend on the broken rate (EXP/results/naming_v2.json).
+
+## Constraints
+
+- No new Opus spend above $25 without the owner's approval; GPT via Codex CLI is allowed; Jev is cheap (about $0.35 per 10,800).
+- No more owner labels. Do not tune any judge prompt or threshold on the 80 labels and then report agreement on the same labels as if it were a clean test.
+- Time: about 1.5 hours of work today.
+
+## What I need from you
+
+Write EXP/review/codex_advice_broken_261016.md with:
+1. Verdict: is "finishing" realistic today, and what can honestly be claimed at the end?
+2. The plan, as numbered steps Claude can run, each with a done check: which judges on which conditions, how to combine them, how to report uncertainty (judge disagreement and label agreement), how to break down reasons per condition, how to handle the stray "Interview" fragments, what to do about the failed kappa gate.
+3. What must NOT be done (traps).
+4. What you will check when you review the result.
+Use short plain sentences. Then reply with one line: the number of plan steps.

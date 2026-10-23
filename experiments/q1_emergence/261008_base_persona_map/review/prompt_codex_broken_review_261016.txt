@@ -1,0 +1,17 @@
+You are the supervising advisor. You wrote the plan in experiments/q1_emergence/261008_base_persona_map/review/codex_advice_broken_261016.md. Claude has now carried it out. Review the result against your own "What I will check at review" table. Be blunt. Do not edit any file except your output. Do NOT run anything that calls a paid model or an HTTP API; local recomputation is allowed.
+
+Files (EXP = experiments/q1_emergence/261008_base_persona_map):
+- Code: EXP/finish_broken_261016.py (prep, run, report). Round-3 code: EXP/judge_broken.py, EXP/jev_judge.py.
+- Judge folder for the extension: /Users/brendon/persona-manifolds/e3_broken_finish (manifest.json, key.json, batches, answers, logs, run_gpt.log). Round 3: /Users/brendon/persona-manifolds/e3_broken_round3; Jev: EXP/jev/round3.
+- Outputs: EXP/results/broken/finish_261016/labels.jsonl (10,800 rows) and report.json.
+- Owner labels and fresh set: EXP/review/attrition/owner_labels_desc_2026-10-16_final.json, owner_labels_fresh30_2026-10-16.json, fresh_test_set_2026-10-16.json.
+
+Deviations Claude made from your plan (judge these too):
+- 16 GPT workers instead of 8 (run finished in time: 291/291 batches valid).
+- Derived (fragment-free) items were put in their own batches so a raw reply and its derived copy never share a batch.
+- Owner-Broken rows: reason = GPT's reason when GPT also called it Broken, else "owner_broken_reason_unstated" (12 rows); no Claude-inferred reasons.
+- The fresh30 frame was recovered from the page generator: run_main desc/ex2 shared questions, minus the owner's 50, minus raw-read replies, minus the 200 human-sheet replies; strata by the old flag rule.
+
+Also comment on: the owner-sample estimate for ex2 (28.3%, conservative CI 2.6-74.5) against the judges (5-11%), and the translator role, whose ex2 replies often translate the question and are called "format" (copies the question).
+
+Write EXP/review/codex_review_broken_261016.md: Verdict (one line); Blockers (file:line, concrete case); Other issues; What holds; What the owner must decide. Short plain sentences. Then reply with one line: the number of blockers.

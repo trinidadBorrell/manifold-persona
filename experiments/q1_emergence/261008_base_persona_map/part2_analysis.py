@@ -81,12 +81,23 @@ def finite(x, what):
 
 # ---------------------------------------------------------------- data
 
+SLIM = "reply_mean_acts_slim.json"  # slim copy: only the hidden states this analysis reads
+
+
 def load(run_dir):
     rows = [json.loads(l) for l in open(run_dir / "replies.jsonl")]
-    acts = np.load(run_dir / "reply_mean_acts.npy", mmap_mode="r")
+    if (run_dir / "reply_mean_acts.npy").exists():
+        acts = np.load(run_dir / "reply_mean_acts.npy", mmap_mode="r")
+        col = {L: L for L in (LAYER,) + EXPLORATORY_LAYERS}
+    else:
+        meta = json.load(open(run_dir / SLIM))
+        acts = np.load(run_dir / meta["file"], mmap_mode="r")
+        if acts.shape[1] != len(meta["layers"]) or not set((LAYER,) + EXPLORATORY_LAYERS) <= set(meta["layers"]):
+            raise AnalysisError("slim activations do not hold the analysed hidden states")
+        col = {L: meta["layers"].index(L) for L in (LAYER,) + EXPLORATORY_LAYERS}
     if acts.shape[0] != len(rows):
         raise AnalysisError("activation rows != replies")
-    X = {L: np.asarray(acts[:, L, :], dtype=np.float32) for L in (LAYER,) + EXPLORATORY_LAYERS}
+    X = {L: np.asarray(acts[:, c, :], dtype=np.float32) for L, c in col.items()}
     return rows, X
 
 
@@ -150,15 +161,19 @@ def macro_acc(y, p, n_classes):
     return float(np.mean([np.mean(p[y == c] == c) for c in range(n_classes)]))
 
 
+JOBS = 1  # workers for decode(); set from --jobs. Each split is fit independently, so results do not depend on it.
+
+
 def decode(feat, y, splits, featurize=None):
+    from joblib import Parallel, delayed
     n_c = y.max() + 1
-    preds, accs = [], []
-    for tr, te in splits:
+
+    def one(tr, te):
         Xtr, Xte = featurize(tr, te) if featurize else (feat[tr], feat[te])
-        p = fit_predict(Xtr, y[tr], Xte)
-        preds.append((te, p))
-        accs.append(macro_acc(y[te], p, n_c))
-    return float(np.mean(accs)), preds
+        return fit_predict(Xtr, y[tr], Xte)
+    ps = Parallel(n_jobs=JOBS)(delayed(one)(tr, te) for tr, te in splits)
+    preds = [(te, p) for (_, te), p in zip(splits, ps)]
+    return float(np.mean([macro_acc(y[te], p, n_c) for te, p in preds])), preds
 
 
 def cell_acc(y, questions, preds, n_classes):
@@ -470,11 +485,22 @@ def main():
     ap.add_argument("--device", default="cuda")
     ap.add_argument("--conds", nargs="+", default=CONDS)
     ap.add_argument("--selftest", action="store_true")
+    ap.add_argument("--embed_only", action="store_true", help="write the text-embedding cache and stop")
     a = ap.parse_args()
     if a.selftest:
         return selftest(a)
+    if a.embed_only:
+        out = HERE / a.out
+        out.mkdir(exist_ok=True)
+        rows = [json.loads(l) for l in open(HERE / a.run / "replies.jsonl")]
+        ef = cache_path(out, HERE / a.run, "text_embeddings", len(rows))
+        if not ef.exists():
+            np.save(ef, embed([r["reply"] for r in rows], a.device))
+        return print("embeddings:", ef)
     if os.environ.get("OMP_NUM_THREADS") != "1":
         raise SystemExit("set OMP_NUM_THREADS=1 (one BLAS thread per worker)")
+    global JOBS
+    JOBS = a.jobs
     t = time.time()
     out = HERE / a.out
     out.mkdir(exist_ok=True)

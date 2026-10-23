@@ -1,0 +1,25 @@
+You are an adversarial reviewer. Be blunt. Do not edit any file.
+
+Context: E3 pilot Part 2, OLMo-2-1124-7B base, 20 roles, plain-text interview prompts. You reviewed the design earlier today (review/codex_review_part2_context_261016.md); your 5 blockers were folded into THRESHOLDS.md (16/10/2026 entries under "Changes"). The context-control analysis has now run. The frozen part2_analysis.py runs for desc and ex2 (permutation null) are still running on pods and are not available yet.
+
+Files (under experiments/q1_emergence/261008_base_persona_map/):
+- THRESHOLDS.md (Part 2 section and every 16/10 Changes entry, including the 17:35 note)
+- context_extract.py, part2_context.py, part2_analysis.py
+- results/part2/part2_context_run_main.json (the results), results/part2/gate_run_main.json, results/part2/context_manifest_run_main.json
+- results/naming_v2.json (Part 1)
+You may read the results now.
+
+Key numbers (state 17, 20-way, chance 0.05, 50 splits, crossed-bootstrap 95% CI):
+desc: R 0.523 [0.414, 0.617]; C1 0.937; C3 0.918; C2 0.152 [0.0998, 0.210]; joint text 0.101.
+ex2: R 0.971; C1 1.000; C3 1.000; C2 0.586 [0.470, 0.695]; joint text 0.443; C2 - joint text +0.143 [+0.098, +0.190].
+ex2_other: R target 0.549, donor 0.978; C2 donor 0.534, within-donor target 0.351 [0.323, 0.378] (chance 1/3), within-target donor 0.828.
+ex2_filler: R 0.459; C2 0.115 [0.077, 0.163].
+Sweep: at hidden state 0, C1 and C3 are 0.05 (chance); C2 is about 0.13-0.16 at every state.
+
+Answer:
+1. Code or analysis bugs that make any of these numbers wrong (check row mapping between replies.jsonl, ctx_rows.npy and the subset; split and draw reuse; the restricted within-donor computation; the gate).
+2. Which interpretations are allowed, and which are not, for each condition? In particular: (a) desc and ex2_filler: is "role information in reply states comes mostly from the prompt context" supported? (b) ex2: does C2 > joint text support "the reply carries role information that the text baselines miss, as the model reads it"? What alternative explains it (for example, C2 still contains the test question and the same reply tokens; the probe may use token identity the TF-IDF misses)? (c) ex2_other: is "the reply carries the played (donor) role, not the described target" supported?
+3. The C2 lower bound in desc is 0.0998 against a 10% floor. Is the wording rule handled correctly?
+4. What must the owner say, and not say, to a skeptical supervisor tonight? Give 3-5 exact sentences he can use, each with its number.
+
+Output: plain Simplified Technical English, short sentences. One-line verdict first. Then "Bugs", "Allowed claims", "Not allowed", "Sentences for tonight". At most 700 words.

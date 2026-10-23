@@ -1,0 +1,16 @@
+Adversarial review of a supervisor write-up, due tonight. Be fast: blockers first, finish in about 10 minutes. The prose is being rewritten in plain words around research questions, so focus on items 1 to 4; give replacement sentences in plain words with no internal labels.
+
+Files (relative to the repo root):
+- experiments/q1_emergence/261008_base_persona_map/review/writeup_part1_2026-10-16.md (the write-up, written as the student "I" for supervisor Ivan)
+- experiments/q1_emergence/261008_base_persona_map/review/writeup_part1_2026-10-16_ledger.md (claim ledger)
+- Figures: experiments/q1_emergence/261008_base_persona_map/review/writeup_part1_2026-10-16_figs/*.png and make_figs.py
+- Sources: experiments/q1_emergence/261008_base_persona_map/results/naming_v2.json (final Part 1; naming_sealed_v1.json is superseded), results/broken/finish_261016/report.json, results/role_judge_vs_owner50_2026-10-16.json and _revised_, THRESHOLDS.md, NOTE.md, experiments/q1_emergence/261005_base_incontext_elicitation/results.json and results_role.json, output/results_2026-09/audit_2026-10-01/audit_judges_*.json, output/results_2026-09/audit_2026-10-02/judge_gpt.json, output/independent_review_2026-10-02/review.txt.
+
+Check, with evidence (file and JSON key):
+1. Every number in the write-up and figures matches its source and the right population (condition, seed, judge, mask). Flag wrong, stale (v1) or mislabelled numbers.
+2. Overclaims and overstatements: any sentence that says more than the data shows (role play vs naming, "the examples override", "the prompt caused these", "probably low", causal words, generalisation beyond 20 roles, the E0 verdict). Give a safer replacement sentence.
+3. Missing contrary evidence or failed rules that a skeptical supervisor would expect to see.
+4. Wrong or misleading figure titles, axis labels or captions.
+5. Writing: AI-writing tropes (negative parallelism, rule of three, quotable one-liners, signposting, bold-first bullets, em dashes), and references to code, scripts or JSON keys in the prose. Links with plain-word text are allowed.
+
+Do not edit any file except your output. No paid model calls and no HTTP. Write experiments/q1_emergence/261008_base_persona_map/review/codex_review_writeup_261016.md: a verdict line, then findings ranked by severity, each with the write-up line number, the evidence, and the replacement text. Short plain sentences. Then reply with one line: the number of blockers.

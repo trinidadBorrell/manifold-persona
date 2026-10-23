@@ -1,0 +1,17 @@
+{
+ "file": "reply_mean_acts_L9_17_23.npy",
+ "layers": [
+  9,
+  17,
+  23
+ ],
+ "shape": [
+  15120,
+  3,
+  4096
+ ],
+ "dtype": "float16",
+ "sha256": "39a8fbc1a3f3ad1d0cf35e7dc5d7cdb560b74ec69778dd72ea881990b9e61881",
+ "source": "reply_mean_acts.npy",
+ "source_sha256": "25af1d30a7f2234fe8bfc1feb0f837b04200ed82f55f3b975ad89ab1dcf1ab26"
+}

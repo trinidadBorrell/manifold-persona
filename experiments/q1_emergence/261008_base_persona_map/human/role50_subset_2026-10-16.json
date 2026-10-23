@@ -1,0 +1,308 @@
+{
+ "seed": 20261016,
+ "source": "human/judge2_human_sample.json",
+ "ids": [
+  "47f2f3ac124b",
+  "969d5e79161a",
+  "63e97869e92a",
+  "c45066c2b3da",
+  "3836505b3060",
+  "529ed280ba65",
+  "88888f51abac",
+  "fac86b407956",
+  "1a251f03721a",
+  "da5d2c8fa79a",
+  "eac184afd1f6",
+  "68eb2b756ccf",
+  "f5735961f52a",
+  "debd278bb4cf",
+  "079b2d199a5a",
+  "ae4159cbf6d1",
+  "5e6fc4618392",
+  "9d957659132a",
+  "58d6e7d85293",
+  "f63a71549279",
+  "ae91434ef4fe",
+  "04e3a21151c6",
+  "a4caef8b85e1",
+  "9ffcf8431714",
+  "942b0f35600b",
+  "438261295722",
+  "d3b0334caa48",
+  "16bad0c28063",
+  "d6ac0269b67b",
+  "c880124fe653",
+  "8ff671c7eaa2",
+  "3a97bde89572",
+  "30df849ec53f",
+  "71fe4371cdd5",
+  "d31ef5bf52a4",
+  "ee4678753570",
+  "9fc1be84c30f",
+  "bf5410022ecc",
+  "9410cb2102e4",
+  "62e92f1db93a",
+  "88ad9e578ec7",
+  "4511c450cc76",
+  "b6e3554725b7",
+  "4cc570d4230d",
+  "fd39f1ffee94",
+  "5ac60ea64b15",
+  "c9baf4fa9d73",
+  "ddb39dcedb7b",
+  "2f9d50ddf9e6",
+  "74e05dff97cd"
+ ],
+ "strata": {
+  "47f2f3ac124b": {
+   "kind": "target",
+   "cond": "ex2_other",
+   "role": "translator"
+  },
+  "969d5e79161a": {
+   "kind": "target",
+   "cond": "desc",
+   "role": "bartender"
+  },
+  "63e97869e92a": {
+   "kind": "target",
+   "cond": "ex2_filler",
+   "role": "optimist"
+  },
+  "c45066c2b3da": {
+   "kind": "target",
+   "cond": "ex2_other",
+   "role": "cynic"
+  },
+  "3836505b3060": {
+   "kind": "target",
+   "cond": "desc",
+   "role": "cynic"
+  },
+  "529ed280ba65": {
+   "kind": "close",
+   "cond": "ex2_other",
+   "role": "chef"
+  },
+  "88888f51abac": {
+   "kind": "close",
+   "cond": "ex2_other",
+   "role": "chef"
+  },
+  "fac86b407956": {
+   "kind": "target",
+   "cond": "ex2_filler",
+   "role": "chef"
+  },
+  "1a251f03721a": {
+   "kind": "target",
+   "cond": "ex2",
+   "role": "optimist"
+  },
+  "da5d2c8fa79a": {
+   "kind": "distant",
+   "cond": "ex2",
+   "role": "cynic"
+  },
+  "eac184afd1f6": {
+   "kind": "distant",
+   "cond": "ex2_filler",
+   "role": "toddler"
+  },
+  "68eb2b756ccf": {
+   "kind": "target",
+   "cond": "ex2_other",
+   "role": "detective"
+  },
+  "f5735961f52a": {
+   "kind": "target",
+   "cond": "ex2",
+   "role": "counselor"
+  },
+  "debd278bb4cf": {
+   "kind": "target",
+   "cond": "ex2_filler",
+   "role": "robot"
+  },
+  "079b2d199a5a": {
+   "kind": "distant",
+   "cond": "ex2_other",
+   "role": "assistant"
+  },
+  "ae4159cbf6d1": {
+   "kind": "distant",
+   "cond": "desc",
+   "role": "criminal"
+  },
+  "5e6fc4618392": {
+   "kind": "close",
+   "cond": "desc",
+   "role": "detective"
+  },
+  "9d957659132a": {
+   "kind": "target",
+   "cond": "ex2",
+   "role": "robot"
+  },
+  "58d6e7d85293": {
+   "kind": "target",
+   "cond": "ex2",
+   "role": "detective"
+  },
+  "f63a71549279": {
+   "kind": "close",
+   "cond": "ex2",
+   "role": "toddler"
+  },
+  "ae91434ef4fe": {
+   "kind": "target",
+   "cond": "desc",
+   "role": "cynic"
+  },
+  "04e3a21151c6": {
+   "kind": "target",
+   "cond": "ex2",
+   "role": "toddler"
+  },
+  "a4caef8b85e1": {
+   "kind": "target",
+   "cond": "ex2_other",
+   "role": "assistant"
+  },
+  "9ffcf8431714": {
+   "kind": "distant",
+   "cond": "ex2_filler",
+   "role": "chef"
+  },
+  "942b0f35600b": {
+   "kind": "target",
+   "cond": "ex2_filler",
+   "role": "toddler"
+  },
+  "438261295722": {
+   "kind": "close",
+   "cond": "ex2_filler",
+   "role": "assistant"
+  },
+  "d3b0334caa48": {
+   "kind": "target",
+   "cond": "desc",
+   "role": "chef"
+  },
+  "16bad0c28063": {
+   "kind": "target",
+   "cond": "desc",
+   "role": "grandparent"
+  },
+  "d6ac0269b67b": {
+   "kind": "target",
+   "cond": "ex2_filler",
+   "role": "chef"
+  },
+  "c880124fe653": {
+   "kind": "target",
+   "cond": "ex2_other",
+   "role": "refugee"
+  },
+  "8ff671c7eaa2": {
+   "kind": "target",
+   "cond": "ex2",
+   "role": "chef"
+  },
+  "3a97bde89572": {
+   "kind": "close",
+   "cond": "desc",
+   "role": "optimist"
+  },
+  "30df849ec53f": {
+   "kind": "close",
+   "cond": "ex2_filler",
+   "role": "stoic"
+  },
+  "71fe4371cdd5": {
+   "kind": "target",
+   "cond": "ex2",
+   "role": "assistant"
+  },
+  "d31ef5bf52a4": {
+   "kind": "target",
+   "cond": "desc",
+   "role": "translator"
+  },
+  "ee4678753570": {
+   "kind": "distant",
+   "cond": "desc",
+   "role": "cynic"
+  },
+  "9fc1be84c30f": {
+   "kind": "target",
+   "cond": "ex2_other",
+   "role": "grandparent"
+  },
+  "bf5410022ecc": {
+   "kind": "target",
+   "cond": "ex2_filler",
+   "role": "robot"
+  },
+  "9410cb2102e4": {
+   "kind": "target",
+   "cond": "ex2",
+   "role": "translator"
+  },
+  "62e92f1db93a": {
+   "kind": "distant",
+   "cond": "ex2",
+   "role": "robot"
+  },
+  "88ad9e578ec7": {
+   "kind": "target",
+   "cond": "ex2",
+   "role": "toddler"
+  },
+  "4511c450cc76": {
+   "kind": "close",
+   "cond": "ex2",
+   "role": "detective"
+  },
+  "b6e3554725b7": {
+   "kind": "target",
+   "cond": "ex2_other",
+   "role": "criminal"
+  },
+  "4cc570d4230d": {
+   "kind": "target",
+   "cond": "ex2_filler",
+   "role": "grandparent"
+  },
+  "fd39f1ffee94": {
+   "kind": "target",
+   "cond": "ex2_other",
+   "role": "assistant"
+  },
+  "5ac60ea64b15": {
+   "kind": "target",
+   "cond": "desc",
+   "role": "teenager"
+  },
+  "c9baf4fa9d73": {
+   "kind": "target",
+   "cond": "ex2_filler",
+   "role": "void"
+  },
+  "ddb39dcedb7b": {
+   "kind": "target",
+   "cond": "desc",
+   "role": "robot"
+  },
+  "2f9d50ddf9e6": {
+   "kind": "target",
+   "cond": "ex2_filler",
+   "role": "translator"
+  },
+  "74e05dff97cd": {
+   "kind": "target",
+   "cond": "desc",
+   "role": "consultant"
+  }
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "model": "jev-1.13.0",
+ "url": "https://api.typesafe.ai/v1/systemone",
+ "nouls": {
+  "loops": [
+   "Does `answer` keep repeating the same content without adding anything new?",
+   "The same sentence or idea comes back again and again, and later sentences add nothing new.",
+   "Each sentence adds something. Starting several sentences the same way for emphasis is not looping."
+  ],
+  "nonsense": [
+   "Is `answer` hard or impossible to make sense of?",
+   "Garbled words, broken grammar, or sentences that do not connect.",
+   "A reader can follow it, even if it is wrong, odd, or stops mid-sentence at the end."
+  ],
+  "off_question": [
+   "Does `answer` fail to respond to `question`?",
+   "It talks about something unrelated, or guesses at random without engaging the question.",
+   "It responds to the question, even in a strange voice or style."
+  ],
+  "new_turns": [
+   "Does `answer` contain new interview turns or a second speaker?",
+   "It writes lines such as 'Interviewer:' or a new question, starts another speaker, or copies the question back.",
+   "It is one answer from one speaker."
+  ]
+ },
+ "levels": [
+  "Not readable language; makes no sense at all.",
+  "Mostly does not make sense; only fragments connect.",
+  "Partly makes sense, but is confused or rambling.",
+  "Makes sense, with small lapses.",
+  "A clear, connected answer to the question with no sign of confusion."
+ ],
+ "code_sha256": "8fbbc38da1f7c0c7a4697d740adb5a75ebb8b4067018d2e5263e2d77c09c7311",
+ "sample": 20,
+ "exclude": "review/attrition/owner_labels_desc_2026-10-16_final.json",
+ "keys": [
+  "run_main/14205",
+  "run_rep/4039",
+  "run_rep/1590",
+  "run_main/918",
+  "run_rep/329",
+  "run_main/5755",
+  "run_rep/10559",
+  "run_main/1862",
+  "run_main/13094",
+  "run_rep/6013",
+  "run_rep/2282",
+  "run_main/3673",
+  "run_rep/2407",
+  "run_main/484",
+  "run_main/11645",
+  "run_main/1615",
+  "run_rep/8435",
+  "run_rep/8618",
+  "run_rep/9260",
+  "run_rep/9998"
+ ],
+ "injection_hint_keys": []
+}

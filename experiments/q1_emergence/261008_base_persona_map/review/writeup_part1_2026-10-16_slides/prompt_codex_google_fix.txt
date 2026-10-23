@@ -1,0 +1,10 @@
+Follow-up edits to the 13 slides you inserted (ids u1016_slide_01 to u1016_slide_13) in https://docs.google.com/presentation/d/1FHfzXmidtCksE270s8vRPzYKtmkeEdQG6cwiHR3Tn50/edit . Work quickly. Touch only u1016_ objects.
+
+1. u1016_slide_02 table, row 9, short answer: replace the text with exactly "With the prompt in view, yes (passes my pre-set rules). With it removed, much less."
+2. u1016_slide_07 result line: replace with exactly "Description only: 52.3% with the prompt, 15.2% with it removed, 91.8% from the prompt alone (chance 5%). Same-role examples: 97.1% with the prompt, 58.6% with it removed, but the input layer alone already gives 50.1%."
+3. u1016_slide_12 first bullet: replace with exactly "Finish the remaining activation runs (neutral text, other-role examples, second sample) and write them up (1 day)."
+4. u1016_slide_08: replace the figure image with the updated experiments/q1_emergence/261008_base_persona_map/review/writeup_part1_2026-10-16_slides/../writeup_part1_2026-10-16_figs/slide/fig4_broken_replies.png (same aspect ratio as the new file).
+5. Make the figures larger on u1016_slide_04, 05, 06, 07, 08 and 10: use the free space so each figure is as large as fits under the heading and result line, keeping its aspect ratio and keeping everything inside the slide with a small margin. On slide 05 keep the chef/robot text visible under or beside the figure; on 06 and 10 keep the side text readable.
+6. Make the result lines on slides 04, 05, 07 and 08 regular weight (not bold), 16 pt.
+
+The spec with all slide text is experiments/q1_emergence/261008_base_persona_map/review/writeup_part1_2026-10-16_slides/google_slides_spec.md (already updated for items 1-3). No other changes, no sharing, no other HTTP, no paid model calls. Then refresh the thumbnails in experiments/q1_emergence/261008_base_persona_map/review/writeup_part1_2026-10-16_slides/google_thumbs/ (slide-01.png ... slide-13.png), look at each one, fix any overflow or overlap, and append a short "Follow-up" section to experiments/q1_emergence/261008_base_persona_map/review/writeup_part1_2026-10-16_slides/google_insert_report.md. Reply with one line: "fixed".

@@ -1,0 +1,255 @@
+{
+ "note": "Revised 16/10 after a friend's critique (role words needed for 2/3; 3 only if sustained; answering the question is not 0) and after seeing Jev's scores, so not blind to Jev. Originals: owner_role50_scores_2026-10-16.json",
+ "scores": {
+  "47f2f3ac124b": {
+   "original": 1,
+   "revised": 1,
+   "source": "unchanged"
+  },
+  "969d5e79161a": {
+   "original": 2,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "63e97869e92a": {
+   "original": 2,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "c45066c2b3da": {
+   "original": 1,
+   "revised": 1,
+   "source": "unchanged"
+  },
+  "3836505b3060": {
+   "original": 2,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "529ed280ba65": {
+   "original": 2,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "88888f51abac": {
+   "original": 1,
+   "revised": 1,
+   "source": "unchanged"
+  },
+  "fac86b407956": {
+   "original": 1,
+   "revised": 1,
+   "source": "unchanged"
+  },
+  "1a251f03721a": {
+   "original": 3,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "da5d2c8fa79a": {
+   "original": 0,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "eac184afd1f6": {
+   "original": 2,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "68eb2b756ccf": {
+   "original": 3,
+   "revised": 2,
+   "source": "revision_accepted"
+  },
+  "f5735961f52a": {
+   "original": 2,
+   "revised": 2,
+   "source": "unchanged"
+  },
+  "debd278bb4cf": {
+   "original": 0,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "079b2d199a5a": {
+   "original": 2,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "ae4159cbf6d1": {
+   "original": 2,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "5e6fc4618392": {
+   "original": 1,
+   "revised": 1,
+   "source": "unchanged"
+  },
+  "9d957659132a": {
+   "original": 3,
+   "revised": 3,
+   "source": "unchanged"
+  },
+  "58d6e7d85293": {
+   "original": 2,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "f63a71549279": {
+   "original": 2,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "ae91434ef4fe": {
+   "original": 0,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "04e3a21151c6": {
+   "original": 2,
+   "revised": 2,
+   "source": "unchanged"
+  },
+  "a4caef8b85e1": {
+   "original": 3,
+   "revised": 3,
+   "source": "unchanged"
+  },
+  "9ffcf8431714": {
+   "original": 2,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "942b0f35600b": {
+   "original": 1,
+   "revised": 1,
+   "source": "unchanged"
+  },
+  "438261295722": {
+   "original": 0,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "d3b0334caa48": {
+   "original": 2,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "16bad0c28063": {
+   "original": 1,
+   "revised": 1,
+   "source": "unchanged"
+  },
+  "d6ac0269b67b": {
+   "original": 1,
+   "revised": 1,
+   "source": "unchanged"
+  },
+  "c880124fe653": {
+   "original": 2,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "8ff671c7eaa2": {
+   "original": 2,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "3a97bde89572": {
+   "original": 1,
+   "revised": 1,
+   "source": "unchanged"
+  },
+  "30df849ec53f": {
+   "original": 1,
+   "revised": 1,
+   "source": "unchanged"
+  },
+  "71fe4371cdd5": {
+   "original": 2,
+   "revised": 2,
+   "source": "unchanged"
+  },
+  "d31ef5bf52a4": {
+   "original": 1,
+   "revised": 1,
+   "source": "unchanged"
+  },
+  "ee4678753570": {
+   "original": 2,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "9fc1be84c30f": {
+   "original": 3,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "bf5410022ecc": {
+   "original": 1,
+   "revised": 1,
+   "source": "unchanged"
+  },
+  "9410cb2102e4": {
+   "original": 3,
+   "revised": 3,
+   "source": "unchanged"
+  },
+  "62e92f1db93a": {
+   "original": 1,
+   "revised": 1,
+   "source": "unchanged"
+  },
+  "88ad9e578ec7": {
+   "original": 2,
+   "revised": 3,
+   "source": "revision_accepted"
+  },
+  "4511c450cc76": {
+   "original": 1,
+   "revised": 1,
+   "source": "unchanged"
+  },
+  "b6e3554725b7": {
+   "original": 2,
+   "revised": 1,
+   "source": "revision_accepted"
+  },
+  "4cc570d4230d": {
+   "original": 2,
+   "revised": 2,
+   "source": "unchanged"
+  },
+  "fd39f1ffee94": {
+   "original": 2,
+   "revised": 2,
+   "source": "unchanged"
+  },
+  "5ac60ea64b15": {
+   "original": 2,
+   "revised": 2,
+   "source": "unchanged"
+  },
+  "c9baf4fa9d73": {
+   "original": 1,
+   "revised": 1,
+   "source": "unchanged"
+  },
+  "ddb39dcedb7b": {
+   "original": 3,
+   "revised": 3,
+   "source": "unchanged"
+  },
+  "2f9d50ddf9e6": {
+   "original": 1,
+   "revised": 1,
+   "source": "unchanged"
+  },
+  "74e05dff97cd": {
+   "original": 3,
+   "revised": 2,
+   "source": "revision_accepted"
+  }
+ }
+}

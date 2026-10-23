@@ -15,6 +15,7 @@ token/
 .env
 .env.*
 .hf_token
+.jev_token
 credentials.json
 *.pem
 *.key
@@ -159,3 +160,4 @@ steering/
 robustness/current/baseline/
 robustness/current/invariants.json
 .vscode/
+.claude/CLAUDE.md

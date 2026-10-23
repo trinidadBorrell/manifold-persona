@@ -1,0 +1,70 @@
+You are a blunt research advisor. Review a one-day work plan for the E3 pilot and give back a concrete plan that produces a defensible result by 18:30 SAST today (Friday 16/10/2026). It is now about 09:45 SAST. The owner (Brendon) has about 8.5 hours. Do not edit any file except your output file.
+
+## Why this experiment exists
+
+On 30/09 the supervisor (Ivan) challenged a September result that said "base models cannot tell roles apart internally; the role map is built during SFT". His alternative explanation: we never made the base model play the roles, so there was nothing to read. He asked for:
+1. Proof that the base model actually plays the target persona.
+2. The real inputs and replies.
+3. A strong reasoning LLM judge that sees only the reply (not the input), gets all 276 persona names, and gives its top 5. Report top-1 and top-5 accuracy. Poor accuracy means the elicitation failed.
+He also pointed out that base models know only plain text and BOS/endoftext, not chat templates. The September base prompts used a chat template, so all earlier Q1 results are now marked invalid. Another mentor (Thomas) suggested in-context examples for base elicitation.
+
+E0 (05/10, OLMo-2-1B base) gave blind top-5 scores of 30% / 16% / 24% against about 2% chance, but it failed the fixed rule on example set 2. E3 (OLMo-2-1124-7B base, 20 roles, plain text) is the current test.
+
+## Read these first (paths relative to repo root)
+
+- experiments/q1_emergence/261008_base_persona_map/NOTE.md (full history and current state)
+- experiments/q1_emergence/261008_base_persona_map/THRESHOLDS.md (pass rules fixed on 09/10 before the run)
+- research/PLAN.md and research/EXPERIMENT_INDEX.md
+- experiments/q1_emergence/261008_base_persona_map/judge2.py, part2_analysis.py, judge_prep.py, judge_run.py
+- experiments/q1_emergence/261008_base_persona_map/human/judge2_human_sheet.md (header and rubric only)
+- Folder /Users/brendon/persona-manifolds/e3_judge2_pilot (prepared judge2 folder; answers/ is empty)
+
+## Current state (verified this morning)
+
+- Generation is done: run_main 15,120 items, run_rep 3,654 items, 0 invalid. Activations are local (run_main/reply_mean_acts.npy 3.8 GB, run_rep 942 MB). HF backup at revision fb84c50.
+- The blind top-5 naming judges are done: GPT-5.6-Sol and Claude Sonnet 5.5, 126/126 batches each, in judge/answers_gpt and judge/answers_claude, with keys in judge/KEY.json. Nobody has compared them with the keys yet.
+- judge2.py (enactment 0-3, evidence 0-100, coherence) passed review with 0 blockers before a paid canary. It has not run. The job is 46,710 items in 1,869 batches through `claude -p`, with --workers default 8. The runtime and cost are unknown.
+- The owner's 200-item scoring sheet for judge2 calibration has 0 of 200 scored.
+- Part 2 code passed review and its synthetic self-test, but has not run on real data. Its defaults are 9,999 permutations and --device cuda. The pod is down. The local machine has 8 CPU cores and 16 GB RAM.
+- The stop rule in THRESHOLDS.md said: "if Part 1 still fails on 14/10/2026, report the negative result and move to the trained stages." That date has passed with no Part 1 result.
+
+## Draft plan to review
+
+Morning (09:30-13:00):
+- Owner decides on the stop rule (extend or stop).
+- Owner scores the 200 judge2 items (about 2.5 h), blind to all judge output.
+- Agent, in parallel: update the index and NOTE; draft Part 1 pass rules for judge2 in THRESHOLDS.md; write scoring scripts (blind naming vs keys; judge2 vs human); run the judge2 canary with its output hidden from the owner.
+- 12:30-13:00: owner approves the Part 1 rules. They lock before he sees any judge number.
+Afternoon (13:00-18:30):
+- 13:00-15:30: full judge2 run in the background; calibrate on half of the human scores and validate on the other half; score blind-naming hit@5 against the keys.
+- 15:30-17:00: Part 1 results per condition (desc, ex2, ex2_other, ex2_filler) against nulls; read the transcripts behind the numbers; run the challenge-result check.
+- 17:00-18:15: short update for Ivan: "Does 7B base play the roles?", with real inputs and replies.
+- Not today: Part 2 and the steering rerun.
+Fallback: if judge2 is too slow, run it on the 200 human items plus a stratified sample, and report blind-naming hit@5 as the main number.
+
+## Questions you must answer
+
+1. Protocol conflict. THRESHOLDS.md (fixed on 09/10, before the run) makes blind-naming macro hit@5 the PRIMARY Part 1 measure, with full pass rules and "stricter of two judges" (owner decision A). NOTE.md (10-13/10) later says blind naming "stays a secondary measure" and moves to judge2. Is that change recorded in the "Changes" section of THRESHOLDS.md? Which measure is the honest pre-registered primary today? Can the frozen hit@5 rule be computed now from the existing answers, and how long would it take?
+2. Blinding trade-off. If hit@5 numbers are computed this morning, does that bias the owner's 200 human scores? The sheet hides condition and kind. Propose the cheapest way to keep the human scores valid (for example: the agent computes and stores numbers without showing them until the sheet is done, or the owner scores a subset first). Is 200 items realistic before about 13:00, or should the target be smaller?
+3. judge2 run time and cost. From judge2.py (batch sizes, workers, timeout, prompt size), estimate wall time for the canary and for the full 1,869 batches at 8 workers. Say what the canary should be (which batches, how many) and what pass/fail checks it needs. Is the full run feasible before about 16:00?
+4. Part 2 locally. Can part2_analysis.py run on this Mac (8 cores, 16 GB, no CUDA) for the primary decision only (layer 17, desc and ex2, 18 shared questions) today? Check the --device options and memory use. If it needs reduced permutations to finish, say how many, how the result must then be labelled (exploratory), and whether it is worth doing today at all.
+5. Ivan's exact ask is top-1 and top-5 blind naming from the reply alone. Which numbers and examples best answer him tonight, and what must the update NOT claim (refer to the claim scope in THRESHOLDS.md and the limits)?
+6. Anything in the draft plan that is wrong, missing, risky, or wasted time. Include the stop-rule decision.
+
+## Rules
+
+- Be blunt. Use file:line evidence for claims about the code or the docs.
+- Do NOT run `judge2.py run`, `judge2.py selftest`, or anything that calls a paid model.
+- Do NOT compare judge answers with KEY.json and do NOT print any judge accuracy. The owner must stay blind until he decides. You may read the code that would do it.
+- You may run offline checks: `--help`, `judge2.py prep` into a new folder under /tmp, file sizes, and a quick memory estimate. Do not run the full Part 2 analysis.
+- Write in plain, short sentences (ASD-STE100 style): active voice, one idea per sentence, familiar words.
+
+## Output
+
+Write experiments/q1_emergence/261008_base_persona_map/review/codex_review_dayplan_261016.md with these sections:
+1. Verdict (one line).
+2. Answers to questions 1-6.
+3. Revised plan: a time-blocked table from 10:00 to 18:30 SAST. Each row gives the owner task, the agent task, the output file, and a done check.
+4. Owner decisions needed now (each as a short yes/no or choice).
+5. What the 18:30 update can claim in each outcome (pass, fail, mixed).
+Then reply with one line: the number of owner decisions needed before work can start.
