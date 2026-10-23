@@ -53,8 +53,10 @@ def used_rows(rows, limit):
 
 
 def pooled(H, j, a, b):
-    """H: [33, B, T, d] on the GPU. Mean over positions a..b-1 of row j, every hidden state."""
-    return H[:, j, a:b].float().mean(1).cpu().numpy().astype(np.float16)
+    """H: the model's tuple of 33 [B, T, d] hidden states on the GPU. Mean over positions a..b-1 of row j, every
+    hidden state. Indexing the tuple avoids a stacked copy of all states (it doubled peak GPU memory)."""
+    import torch
+    return torch.stack([h[j, a:b].float().mean(0) for h in H]).cpu().numpy().astype(np.float16)
 
 
 def forward(model, seqs, pad):
@@ -62,7 +64,7 @@ def forward(model, seqs, pad):
     ids, mask = ge.pad_batch(seqs, pad, left=False)  # right padding: positions start at 0
     with torch.no_grad():
         hs = model(ids.cuda(), attention_mask=mask.cuda(), output_hidden_states=True).hidden_states
-    return ids, torch.stack(hs, 0)
+    return ids, hs
 
 
 def extract(run_dir, out, limit, batch_size):

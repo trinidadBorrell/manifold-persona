@@ -38,11 +38,17 @@ DONORS = {r: [p2.ROLES[(k + s) % len(p2.ROLES)] for s in (6, 10, 14)] for k, r i
 
 # ---------------------------------------------------------------- scoring
 
-def score(F, y, qn, splits, draws, featurize=None):
-    acc, preds = p2.decode(F, y, splits, featurize=featurize)
+def summarise(y, qn, preds, draws):
+    """Mean macro accuracy over the splits and its crossed-bootstrap interval, from (test rows, predictions)."""
+    acc = float(np.mean([p2.macro_acc(y[te], p, len(p2.ROLES)) for te, p in preds]))
     C = p2.cell_acc(y, qn, preds, len(p2.ROLES))
     bt = np.array([p2.draw_stat(C, rr, qq) for rr, qq in draws])
     return dict(acc_mean_50=acc, ci95=p2.ci(bt)), bt
+
+
+def score(F, y, qn, splits, draws, jobs, featurize=None):
+    _, preds = p2.decode(F, y, splits, featurize=featurize, jobs=jobs)
+    return summarise(y, qn, preds, draws)
 
 
 def paired(a, b, bt_a, bt_b):
@@ -50,46 +56,45 @@ def paired(a, b, bt_a, bt_b):
 
 
 def fit_proba(Xtr, ytr, Xte):
-    """The frozen classifier (part2_analysis.fit_predict), returning class probabilities."""
-    from sklearn.linear_model import LogisticRegression
-    from sklearn.preprocessing import StandardScaler
-    sc = StandardScaler().fit(Xtr)
-    clf = LogisticRegression(C=1.0, class_weight="balanced", max_iter=2000).fit(sc.transform(Xtr), ytr)
+    """The frozen classifier (part2_analysis.fit_model), returning class probabilities."""
+    sc, clf = p2.fit_model(Xtr, ytr)
     if list(clf.classes_) != list(range(len(p2.ROLES))):
         raise p2.AnalysisError("a role is missing from a training fold")
     return clf.predict_proba(sc.transform(Xte))
 
 
-def restricted(F, y, cand, splits, draws, qn, jobs):
-    """Accuracy when the 20-way prediction is restricted to each row's 3 candidate roles (chance 1/3)."""
+def split_proba(F, y, splits, jobs):
+    """Class probabilities on each split's test rows; one fit per split."""
     from joblib import Parallel, delayed
-    P = Parallel(n_jobs=jobs)(delayed(fit_proba)(F[tr], y[tr], F[te]) for tr, te in splits)
-    preds, accs = [], []
+    return Parallel(n_jobs=jobs)(delayed(fit_proba)(F[tr], y[tr], F[te]) for tr, te in splits)
+
+
+def restricted(P, y, cand, splits, draws, qn):
+    """Accuracy when the 20-way prediction is restricted to each row's 3 candidate roles (chance 1/3).
+    P: split_proba output fitted on labels y."""
+    preds = []
     for (tr, te), pr in zip(splits, P):
         c = cand[te]
-        p = c[np.arange(len(te)), np.argmax(np.take_along_axis(pr, c, 1), 1)]
-        preds.append((te, p))
-        accs.append(p2.macro_acc(y[te], p, len(p2.ROLES)))
-    C = p2.cell_acc(y, qn, preds, len(p2.ROLES))
-    bt = np.array([p2.draw_stat(C, rr, qq) for rr, qq in draws])
-    return dict(acc_mean_50=float(np.mean(accs)), ci95=p2.ci(bt), chance=1 / 3)
+        preds.append((te, c[np.arange(len(te)), np.argmax(np.take_along_axis(pr, c, 1), 1)]))
+    res, _ = summarise(y, qn, preds, draws)
+    return dict(res, chance=1 / 3)
 
 
-def _sweep_task(path, rows, L, y, tr, te):
+def _sweep_task(path, rows, L, y, splits):
+    """Mean macro accuracy over the splits for one feature and hidden state; the slice is read from disk once."""
     F = np.asarray(np.load(path, mmap_mode="r")[rows, L], dtype=np.float32)
-    p = p2.fit_predict(F[tr], y[tr], F[te])
-    return p2.macro_acc(y[te], p, len(p2.ROLES))
+    return float(np.mean([p2.macro_acc(y[te], p2.fit_predict(F[tr], y[tr], F[te]), len(p2.ROLES))
+                          for tr, te in splits]))
 
 
 def sweep(paths, rows, n_hs, y, splits, jobs):
     from joblib import Parallel, delayed
-    tasks = [(f, L, k) for f in SWEEP for L in range(n_hs) for k in range(len(splits))]
-    accs = Parallel(n_jobs=jobs, batch_size=1)(delayed(_sweep_task)(paths[f], rows, L, y, *splits[k])
-                                                for f, L, k in tasks)
-    out = {f: [[] for _ in range(n_hs)] for f in SWEEP}
-    for (f, L, k), a in zip(tasks, accs):
-        out[f][L].append(a)
-    return {f: [float(np.mean(v)) for v in out[f]] for f in SWEEP}
+    tasks = [(f, L) for f in SWEEP for L in range(n_hs)]
+    accs = Parallel(n_jobs=jobs, batch_size=1)(delayed(_sweep_task)(paths[f], rows, L, y, splits) for f, L in tasks)
+    out = {f: [None] * n_hs for f in SWEEP}
+    for (f, L), a in zip(tasks, accs):
+        out[f][L] = a
+    return out
 
 
 # ---------------------------------------------------------------- analyse
@@ -132,13 +137,13 @@ def analyse_condition(rows, X, cond, pos, paths, n_hs, jobs):
         F[f] = p2.finite(np.asarray(np.load(paths[f], mmap_mode="r")[crow, p2.LAYER], dtype=np.float32), f)
     res, bts = {"cond": cond, "n_replies": len(idx), "layer": p2.LAYER}, {}
     for f, A in F.items():
-        res[f], bts[f] = score(A, y, qn, splits, draws)
+        res[f], bts[f] = score(A, y, qn, splits, draws, jobs)
     tf, Lf = p2.tfidf_featurizer([r["reply"] for r in sub]), p2.length_feats(sub)
 
     def joint(tr, te):
         a, b = tf(tr, te)
         return np.hstack([a, Lf[tr]]), np.hstack([b, Lf[te]])
-    res["text_joint_tfidf_length_stop"], bts["joint"] = score(None, y, qn, splits, draws, featurize=joint)
+    res["text_joint_tfidf_length_stop"], bts["joint"] = score(None, y, qn, splits, draws, jobs, featurize=joint)
     res["R_minus_c2"] = paired(res["R"], res["c2"], bts["R"], bts["c2"])
     res["R_minus_c3"] = paired(res["R"], res["c3"], bts["R"], bts["c3"])
     res["c2_minus_joint_text"] = paired(res["c2"], res["text_joint_tfidf_length_stop"], bts["c2"], bts["joint"])
@@ -152,10 +157,12 @@ def analyse_condition(rows, X, cond, pos, paths, n_hs, jobs):
             raise p2.AnalysisError("donor design does not match DONORS")
         res["ex2_other"] = {}
         for f in ("R", "c1", "c2", "c3"):
-            dd, _ = score(F[f], yd, qn, splits, draws)
-            res["ex2_other"][f] = dict(donor_decoding=dd,
-                                       within_donor_target=restricted(F[f], y, cand_t, splits, draws, qn, jobs),
-                                       within_target_donor=restricted(F[f], yd, cand_d, splits, draws, qn, jobs))
+            Pd = split_proba(F[f], yd, splits, jobs)  # donor-label fits, shared by the two donor measures
+            dd, _ = summarise(yd, qn, [(te, np.argmax(pr, 1)) for (_, te), pr in zip(splits, Pd)], draws)
+            res["ex2_other"][f] = dict(
+                donor_decoding=dd,
+                within_donor_target=restricted(split_proba(F[f], y, splits, jobs), y, cand_t, splits, draws, qn),
+                within_target_donor=restricted(Pd, yd, cand_d, splits, draws, qn))
     res["sweep_first10"] = sweep(paths, crow, n_hs, y, splits[:N_SWEEP], jobs)
     return res
 
@@ -163,7 +170,6 @@ def analyse_condition(rows, X, cond, pos, paths, n_hs, jobs):
 def analyse(a):
     if os.environ.get("OMP_NUM_THREADS") != "1":
         raise SystemExit("set OMP_NUM_THREADS=1 (one BLAS thread per worker)")
-    p2.JOBS = a.jobs
     run_dir = HERE / a.run
     rows, X = p2.load(run_dir)
     pos, paths, man = load_context(run_dir)
@@ -274,7 +280,6 @@ def selftest(a):
     flat[:, :8] = flat[:, :8].mean(0)
     assert not gate_cell(S, flat + rng.normal(size=S.shape) * 1e-3)["pass"], "gate must catch lost role signal"
     # wording: context-only signal vs a signal the reply carries
-    p2.JOBS = a.jobs
     ctx_X, y, q, w = p2.synth(np.random.default_rng(1), 0.6, 0.0)
     noise = p2.synth(np.random.default_rng(2), 0.0, 0.0)[0]
     splits = p2.make_splits(y, q, w, np.random.default_rng(3), 20)
@@ -282,7 +287,7 @@ def selftest(a):
     got = {}
     for name, A in (("R", ctx_X + noise * 0.5), ("c1", ctx_X), ("c3", ctx_X), ("c2_none", noise),
                     ("c2_reply", ctx_X)):
-        got[name], _ = score(A, y, q, splits, draws)
+        got[name], _ = score(A, y, q, splits, draws, a.jobs)
     base = dict(R=got["R"], c1=got["c1"], c3=got["c3"])
     w_none = wording(dict(base, c2=got["c2_none"]))
     w_reply = wording(dict(base, c2=got["c2_reply"]))
@@ -305,8 +310,12 @@ def selftest(a):
     targets_of = {ix[d]: sorted(ix[t] for t in p2.ROLES if d in DONORS[t]) for d in p2.ROLES}
     cand_t = np.array([targets_of[d] for d in yd])
     cand_d = np.array([[ix[d] for d in DONORS[p2.ROLES[t]]] for t in yt])
-    wt = restricted(Fd, yt, cand_t, sp, dr, qq, a.jobs)
-    wd = restricted(Fd, yd, cand_d, sp, dr, qq, a.jobs)
+    Pd = split_proba(Fd, yd, sp, a.jobs)
+    wt = restricted(split_proba(Fd, yt, sp, a.jobs), yt, cand_t, sp, dr, qq)
+    wd = restricted(Pd, yd, cand_d, sp, dr, qq)
+    # donor decoding from the shared probabilities gives the same predictions as the frozen fit_predict path
+    _, ref = p2.decode(Fd, yd, sp, jobs=a.jobs)
+    assert all(np.array_equal(np.argmax(pr, 1), p) for pr, (_, p) in zip(Pd, ref)), "argmax(proba) != predict"
     print("within-donor target", wt, "within-target donor", wd)
     assert abs(wt["acc_mean_50"] - 1 / 3) < 0.06, wt
     assert wd["ci95"][0] > 0.5, wd

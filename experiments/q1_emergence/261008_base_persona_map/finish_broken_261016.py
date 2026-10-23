@@ -57,6 +57,7 @@ def _load(name):
 
 
 jb = _load("judge_broken")
+sn = _load("score_naming")
 sha = jb.judge2.sha
 
 
@@ -196,11 +197,7 @@ def run(jd, workers, minutes):
         print("  ", c[:160])
 
 
-def kappa(a, b):
-    a, b = np.asarray(a, bool), np.asarray(b, bool)
-    pa, pb = a.mean(), b.mean()
-    pe = pa * pb + (1 - pa) * (1 - pb)
-    return float((np.mean(a == b) - pe) / (1 - pe)) if pe < 1 else float("nan")
+kappa = jb.kappa  # one Cohen's kappa for every broken-reply script
 
 
 def wilson(x, n, z=1.96):
@@ -419,8 +416,7 @@ def report(jd):
     hs = json.loads((HERE / "human" / "judge2_human_sample.json").read_text())
     hkey = json.loads((COH_DIR / "key.json").read_text())
     human = {hkey[i]["reply_key"] for i in hs["ids"]}
-    rep4 = lambda t: any(v >= 3 for v in collections.Counter(tuple(w[i:i + 4]) for w in [re.findall(r"\w+", (t or "").lower())]
-                                                              for i in range(len(w) - 3)).values())
+    rep4 = lambda t: sn.rep4(t or "")  # the frozen 4-gram flag the fresh30 sample was stratified on
     owner_est = {}
     for cond in ("desc", "ex2"):
         grp = [k for k in keys if k.startswith("run_main/") and reps[k]["cond"] == cond]

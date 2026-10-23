@@ -50,7 +50,11 @@ def main():
     broken = {"sonnet": {k: s < 50 for k, s in coh.items()},
               "jev": {k: max(v["nouls"].values()) > 0.5 for k, v in jev.items()}}
 
-    labels = {f"run_main/{v['item']}": v["verdict"] == "broken" for v in json.loads(Path(a.labels).read_text()).values()}
+    raw = list(json.loads(Path(a.labels).read_text()).values())
+    bad = [v.get("item") for v in raw if v.get("verdict") not in ("fine", "broken")]
+    if bad:  # same rule as judge_broken.score: an undecided or misspelt label must not count as Fine
+        raise SystemExit(f"owner labels with a verdict other than fine/broken: {bad}")
+    labels = {f"run_main/{v['item']}": v["verdict"] == "broken" for v in raw}
     rng = np.random.default_rng(20261016)
     val = {}
     for j, b in broken.items():

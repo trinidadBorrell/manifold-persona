@@ -28,6 +28,7 @@ Per condition (desc, ex2, ex2_other, ex2_filler); primary set = valid replies of
   layers 9, 23: decoding estimate only, exploratory.
 Raw intersection-union p-values are written; Holm over the 4 primary decisions is applied in the report.
 
+    python part2_analysis.py --run run_main --embed_only --device mps   # once, where sentence-transformers is
     OMP_NUM_THREADS=1 python part2_analysis.py --run run_main --out part2 --jobs 240
     python part2_analysis.py --selftest
 """
@@ -63,6 +64,18 @@ def cache_path(out, run_dir, tag, n):
     return out / f"cache_{tag}_{h.hexdigest()[:16]}.npy"
 
 
+def emb_cache_path(emb_dir, run_dir, n):
+    """Text-embedding cache. Its name depends on the run, the embedding model and embed(), not on the rest of this
+    file, so an analysis-code change does not orphan it. The folder is the same for every condition (p2_emb_<run>)."""
+    import hashlib
+    import inspect
+    h = hashlib.sha256()
+    h.update((run_dir / "fingerprint.txt").read_bytes())
+    h.update(f"{EMBED_MODEL}|{n}".encode())
+    h.update(inspect.getsource(embed).encode())
+    return emb_dir / f"cache_text_embeddings_{h.hexdigest()[:16]}.npy"
+
+
 def load_cache(path, n):
     if path is None or not path.exists():
         return None
@@ -84,6 +97,15 @@ def finite(x, what):
 SLIM = "reply_mean_acts_slim.json"  # slim copy: only the hidden states this analysis reads
 
 
+def sha256(p):
+    import hashlib
+    h = hashlib.sha256()
+    with open(p, "rb") as f:
+        for b in iter(lambda: f.read(1 << 24), b""):
+            h.update(b)
+    return h.hexdigest()
+
+
 def load(run_dir):
     rows = [json.loads(l) for l in open(run_dir / "replies.jsonl")]
     if (run_dir / "reply_mean_acts.npy").exists():
@@ -91,6 +113,8 @@ def load(run_dir):
         col = {L: L for L in (LAYER,) + EXPLORATORY_LAYERS}
     else:
         meta = json.load(open(run_dir / SLIM))
+        if sha256(run_dir / meta["file"]) != meta["sha256"]:
+            raise AnalysisError("slim reply states do not match their recorded SHA-256")
         acts = np.load(run_dir / meta["file"], mmap_mode="r")
         if acts.shape[1] != len(meta["layers"]) or not set((LAYER,) + EXPLORATORY_LAYERS) <= set(meta["layers"]):
             raise AnalysisError("slim activations do not hold the analysed hidden states")
@@ -148,12 +172,18 @@ def make_halves(y, questions, wordings, rng, n):
 
 # ---------------------------------------------------------------- decoding
 
-def fit_predict(Xtr, ytr, Xte):
+def fit_model(Xtr, ytr):
+    """The frozen classifier: standardise on the training fold, then balanced logistic regression (C=1)."""
     from sklearn.linear_model import LogisticRegression
     from sklearn.preprocessing import StandardScaler
     sc = StandardScaler().fit(Xtr)
     clf = LogisticRegression(C=1.0, class_weight="balanced", max_iter=2000)
     clf.fit(sc.transform(Xtr), ytr)
+    return sc, clf
+
+
+def fit_predict(Xtr, ytr, Xte):
+    sc, clf = fit_model(Xtr, ytr)
     return clf.predict(sc.transform(Xte))
 
 
@@ -164,14 +194,14 @@ def macro_acc(y, p, n_classes):
 JOBS = 1  # workers for decode(); set from --jobs. Each split is fit independently, so results do not depend on it.
 
 
-def decode(feat, y, splits, featurize=None):
+def decode(feat, y, splits, featurize=None, jobs=None):
     from joblib import Parallel, delayed
     n_c = y.max() + 1
 
     def one(tr, te):
         Xtr, Xte = featurize(tr, te) if featurize else (feat[tr], feat[te])
         return fit_predict(Xtr, y[tr], Xte)
-    ps = Parallel(n_jobs=JOBS)(delayed(one)(tr, te) for tr, te in splits)
+    ps = Parallel(n_jobs=JOBS if jobs is None else jobs)(delayed(one)(tr, te) for tr, te in splits)
     preds = [(te, p) for (_, te), p in zip(splits, ps)]
     return float(np.mean([macro_acc(y[te], p, n_c) for te, p in preds])), preds
 
@@ -486,14 +516,15 @@ def main():
     ap.add_argument("--conds", nargs="+", default=CONDS)
     ap.add_argument("--selftest", action="store_true")
     ap.add_argument("--embed_only", action="store_true", help="write the text-embedding cache and stop")
+    ap.add_argument("--emb_dir", default=None, help="text-embedding cache folder (default p2_emb_<run>)")
     a = ap.parse_args()
     if a.selftest:
         return selftest(a)
+    emb_dir = HERE / (a.emb_dir or f"p2_emb_{a.run}")
     if a.embed_only:
-        out = HERE / a.out
-        out.mkdir(exist_ok=True)
+        emb_dir.mkdir(exist_ok=True)
         rows = [json.loads(l) for l in open(HERE / a.run / "replies.jsonl")]
-        ef = cache_path(out, HERE / a.run, "text_embeddings", len(rows))
+        ef = emb_cache_path(emb_dir, HERE / a.run, len(rows))
         if not ef.exists():
             np.save(ef, embed([r["reply"] for r in rows], a.device))
         return print("embeddings:", ef)
@@ -505,11 +536,11 @@ def main():
     out = HERE / a.out
     out.mkdir(exist_ok=True)
     rows, X = load(HERE / a.run)
-    ef = cache_path(out, HERE / a.run, "text_embeddings", len(rows))
+    ef = emb_cache_path(emb_dir, HERE / a.run, len(rows))
     emb_all = load_cache(ef, len(rows))
     if emb_all is None:
-        emb_all = embed([r["reply"] for r in rows], a.device)
-        np.save(ef, emb_all)
+        raise SystemExit(f"no text-embedding cache at {ef}; run with --embed_only on a machine with "
+                         f"sentence-transformers first")
     results = {}
     for c in a.conds:
         results[c] = analyse_condition(rows, X, c, a, emb_all, out)
