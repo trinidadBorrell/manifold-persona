@@ -161,3 +161,12 @@ robustness/current/baseline/
 robustness/current/invariants.json
 .vscode/
 .claude/CLAUDE.md
+
+# ---------------------------------------------------------------------------
+# E3 files kept on Hugging Face only (brend0nc/manifold-persona-experiment-artifacts;
+# revisions in the E3 NOTE.md). Untracked on 2026-10-23.
+# ---------------------------------------------------------------------------
+experiments/q1_emergence/261008_base_persona_map/judge/
+experiments/q1_emergence/261008_base_persona_map/v[123]/
+experiments/q1_emergence/261008_base_persona_map/smoke/
+experiments/q1_emergence/261008_base_persona_map/review/writeup_part1_2026-10-16_slides/**/*.png
