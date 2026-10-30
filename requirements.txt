@@ -30,3 +30,8 @@ anthropic>=0.40
 matplotlib
 plotly
 tqdm
+
+# Oct 29-30 experiments (cloud_predicts_position, misalignment_lora)
+POT>=0.9             # Ollivier-Ricci curvature (optimal transport)
+statsmodels
+peft>=0.10           # LoRA fine-tune (misalignment_lora.train, merge); x86 CUDA env for training
