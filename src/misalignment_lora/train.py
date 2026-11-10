@@ -73,7 +73,10 @@ def main(argv=None):
     from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments, set_seed
     from peft import LoraConfig, get_peft_model
     ap = argparse.ArgumentParser()
-    ap.add_argument("--arm", required=True, choices=["insecure", "secure", "educational"])
+    ap.add_argument("--arm", required=True, help="insecure|secure|educational, or any name when --data is given")
+    ap.add_argument("--data", default=None, help="jsonl path (default $PM/EM/data/<arm>.jsonl)")
+    ap.add_argument("--model", default=os.environ.get("PM_MODEL", "Qwen/Qwen3-8B"), help="HF id (default $PM_MODEL or Qwen/Qwen3-8B)")
+    ap.add_argument("--optim", default="adamw_torch", help="adamw_8bit needs bitsandbytes")
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--max-steps", type=int, default=-1)
     ap.add_argument("--epochs", type=float, default=RECIPE["epochs"])
@@ -81,16 +84,17 @@ def main(argv=None):
     ap.add_argument("--smoke", action="store_true", help="write to lora_<arm>_s<seed>_smoke")
     ap.add_argument("--out", default=None)
     a = ap.parse_args(argv)
+    model_id = a.model
     out = Path(a.out) if a.out else EM / (f"lora_{a.arm}_s{a.seed}" + ("_smoke" if a.smoke else ""))
     out.mkdir(parents=True, exist_ok=True)
     set_seed(a.seed)
-    tok = AutoTokenizer.from_pretrained(MODEL)
+    tok = AutoTokenizer.from_pretrained(model_id)
     if tok.pad_token_id is None:
         tok.pad_token = tok.eos_token
-    data = ChatData(EM / "data" / f"{a.arm}.jsonl", tok)
+    data = ChatData(a.data or EM / "data" / f"{a.arm}.jsonl", tok)
     lens = [len(x[0]) for x in data.items]
     print(f"{a.arm}: {len(data)} examples, tokens median {sorted(lens)[len(lens)//2]}, max {max(lens)}, truncated {data.n_trunc}", flush=True)
-    model = AutoModelForCausalLM.from_pretrained(MODEL, torch_dtype=torch.bfloat16, device_map={"": 0})
+    model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.bfloat16, device_map={"": 0})
     model.gradient_checkpointing_enable()
     model.enable_input_require_grads()
     cfg = LoraConfig(r=RECIPE["r"], lora_alpha=RECIPE["lora_alpha"], use_rslora=RECIPE["use_rslora"],
@@ -103,14 +107,14 @@ def main(argv=None):
         gradient_accumulation_steps=RECIPE["grad_accum"], learning_rate=a.lr, lr_scheduler_type="linear",
         warmup_steps=RECIPE["warmup_steps"], weight_decay=RECIPE["weight_decay"], num_train_epochs=a.epochs,
         max_steps=a.max_steps, bf16=True, logging_steps=5, save_strategy="no", report_to=[], seed=a.seed,
-        optim="adamw_torch", dataloader_num_workers=2, remove_unused_columns=False, gradient_checkpointing=True)
+        optim=a.optim, dataloader_num_workers=2, remove_unused_columns=False, gradient_checkpointing=True)
     trainer = Trainer(model=model, args=args, train_dataset=data, data_collator=lambda b: collate(b, tok.pad_token_id))
     t0 = time.time()
     res = trainer.train()
     dt = time.time() - t0
     steps = trainer.state.global_step
     n_tok = sum(lens) * (steps * RECIPE["per_device_batch"] * RECIPE["grad_accum"] / len(data))
-    log = dict(arm=a.arm, seed=a.seed, model=MODEL, recipe=RECIPE, lr=a.lr, epochs=a.epochs, max_steps=a.max_steps,
+    log = dict(arm=a.arm, seed=a.seed, model=model_id, recipe=RECIPE, lr=a.lr, epochs=a.epochs, max_steps=a.max_steps,
                steps=steps, seconds=dt, seconds_per_step=dt / max(steps, 1), tokens_seen_est=n_tok,
                tokens_per_second_est=n_tok / dt, peak_mem_gb=torch.cuda.max_memory_allocated() / 1e9,
                train_loss=res.training_loss, log_history=trainer.state.log_history, n_examples=len(data),
