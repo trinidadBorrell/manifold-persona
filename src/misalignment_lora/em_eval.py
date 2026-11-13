@@ -43,8 +43,9 @@ BASES = {"q05": "Qwen/Qwen2.5-0.5B-Instruct", "q7": "Qwen/Qwen2.5-7B-Instruct", 
 
 def base_id(name):
     """Base HF id for a model name: `base_q05`, `q05_bad_medical_s0`, ... (prefix q05|q7|q3); old names -> $PM_MODEL."""
+    name = name[5:] if name.startswith("base_") else name       # base_q05 -> q05 (was silently Qwen3-8B before 2026-11-11)
     for k, v in BASES.items():
-        if name.startswith(k + "_"):
+        if name == k or name.startswith(k + "_"):
             return v
     return MODEL
 

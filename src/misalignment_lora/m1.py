@@ -20,7 +20,7 @@ import pandas as pd
 from scipy.stats import spearmanr
 
 from cloud_predicts_position.exp1 import SCALE, ols_fit_predict, r2
-from cloud_predicts_position.panel import FAMILIES, PRIMARY
+from cloud_predicts_position.panel import FAMILIES, FAMILIES_SHOWN, KEEP, SHOWN, PRIMARY
 
 PM = Path("/data/project/eeg_foundation/data/manifold_persona/personamanifold")
 EM = PM / "EM"
@@ -37,15 +37,16 @@ def main(argv=None):
     ap.add_argument("--models", default="insecure_s0,secure_s0")
     ap.add_argument("--layers", default="19,25,32")
     ap.add_argument("--centring", default="q")
+    ap.add_argument("--base", default="cpp_base20")
     ap.add_argument("--out", default="output/29-oct/partM")
     a = ap.parse_args(argv)
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
     rows = []
     for L in [int(x) for x in a.layers.split(",")]:
-        base = panel(EM / "cpp_base20", L, a.centring)
-        zb = np.load(EM / "cpp_base20" / f"axis_avg_L{L}.npz", allow_pickle=True)
+        base = panel(EM / a.base, L, a.centring)
+        zb = np.load(EM / a.base / f"axis_avg_L{L}.npz", allow_pickle=True)
         a_base, Cb_mean = zb["axis"].astype(np.float64), zb["centroids"].astype(np.float64).mean(0)
-        cols = [c for fam in FAMILIES.values() for c in fam if c in base.columns and c not in SCALE and base[c].std() > 0]
+        cols = [c for fam in FAMILIES_SHOWN.values() for c in fam if c in base.columns and c not in SCALE and base[c].std() > 0]
         for m in a.models.split(","):
             f = EM / f"cpp_{m}" / f"panel_avg_L{L}.csv"
             if not f.exists():

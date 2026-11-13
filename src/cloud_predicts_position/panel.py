@@ -64,8 +64,15 @@ FAMILIES = {
     "R": ["cka_linear", "mknn_align", "rsa_spearman", "procrustes_resid"],
     "I": ["split_half_cos_prompts", "split_half_cos_questions", "between_prompt_disp", "silhouette_vs_all"],
 }
+# Metrics kept for plots and the article (user's keep-list, 2026-11-12), and the scale controls shown next to them.
+KEEP = ["H1_max_lifetime_frac", "MLE", "knn_dist_mean", "effective_rank", "PCA_participation_ratio", "top1_share",
+        "H0_total_persistence", "orc_mean", "orc_sd", "cka_linear", "rsa_spearman", "mknn_align"]
+CONTROLS = ["centroid_norm", "response_chars", "rms_radius"]
+SHOWN = KEEP + CONTROLS
+FAMILIES_SHOWN = {k: [c for c in v if c in SHOWN] for k, v in FAMILIES.items() if any(c in SHOWN for c in v)}
+FAMILIES_SHOWN["S"] = [c for c in CONTROLS]   # centroid_norm, response_chars, rms_radius
 PRIMARY = ["MLE", "effective_rank", "knn_dist_mean", "H0_total_persistence", "orc_mean", "var_frac_along_axis",
-           "interaction_frac", "cka_linear", "between_prompt_disp"]
+           "interaction_frac", "cka_linear", "between_prompt_disp"]   # old set; Exp 2 recomputation still uses it
 
 
 # ---------------------------------------------------------------------------------------------

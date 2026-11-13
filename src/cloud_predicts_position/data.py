@@ -64,6 +64,13 @@ def response_lengths(layer=25):
     return m.groupby("role").chars.mean()
 
 
+def response_chars_by_row(layer=25):
+    """Length in characters of every response, indexed like `metadata` (row index into the activation array)."""
+    d, _ = LAYERS[layer]
+    m = _filter(pd.read_csv(d / "metadata.csv", usecols=["role", "instruction_idx", "question_idx", "response"]))
+    return m.response.fillna("").str.len()
+
+
 def open_layer(layer, view="avg"):
     """Memory-mapped (331200, 4096) fp16 for one layer and view."""
     d, idx = LAYERS[layer]

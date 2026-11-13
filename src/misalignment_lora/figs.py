@@ -22,11 +22,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from cloud_predicts_position.panel import FAMILIES, PRIMARY
+from cloud_predicts_position.panel import FAMILIES, FAMILIES_SHOWN, KEEP, SHOWN, PRIMARY
 from cloud_predicts_position.figs import FAMILY_NAMES, family_of
 
 PM = Path("/data/project/eeg_foundation/data/manifold_persona/personamanifold")
 EM = PM / "EM"
+BASE_DIR = EM / "cpp_base20"
 INK, INK2 = "#0b0b0b", "#52514e"
 C = dict(base="#2a78d6", insecure_s0="#e34948", secure_s0="#1baf7a")
 LAB = dict(base="base Qwen3-8B", insecure_s0="insecure-code LoRA", secure_s0="secure-code LoRA")
@@ -41,7 +42,7 @@ def ax_npz(folder, L):
 
 
 def fig_arrows(models, L, out):
-    roles, Cb, a, pb = ax_npz(EM / "cpp_base20", L)
+    roles, Cb, a, pb = ax_npz(BASE_DIR, L)
     mean = Cb.mean(0)
     _, _, Vt = np.linalg.svd(Cb - mean, full_matrices=False)
     P = lambda X: (X - mean) @ Vt[:2].T
@@ -65,7 +66,7 @@ def fig_arrows(models, L, out):
 
 
 def fig_position(models, L, out):
-    roles, Cb, a, pb = ax_npz(EM / "cpp_base20", L)
+    roles, Cb, a, pb = ax_npz(BASE_DIR, L)
     fig, axes = plt.subplots(1, len(models), figsize=(4.4 * len(models), 4), sharex=True, sharey=True)
     for ax, m in zip(np.atleast_1d(axes), models):
         _, Cf, _, _ = ax_npz(EM / f"cpp_{m}", L)
@@ -106,8 +107,8 @@ def panel_q(folder, L):
 
 
 def fig_panel_diff(models, L, out):
-    base = panel_q(EM / "cpp_base20", L)
-    cols = [c for fam in FAMILIES.values() for c in fam if c in base.columns and base[c].std() > 0]
+    base = panel_q(BASE_DIR, L)
+    cols = [c for fam in FAMILIES_SHOWN.values() for c in fam if c in base.columns and base[c].std() > 0]
     diffs = {}
     for m in models:
         ft = panel_q(EM / f"cpp_{m}", L)
@@ -132,7 +133,7 @@ def fig_panel_diff(models, L, out):
     ax.hlines(y, t.lo, t.hi, color=INK, linewidth=1)
     ax.scatter(t.insecure_minus_secure, y, s=14, color=INK, zorder=3, label="insecure − secure, paired (95% bootstrap)")
     ax.axvline(0, color=INK2, linewidth=0.8)
-    ax.set_yticks(y); ax.set_yticklabels([f"{'★ ' if m in PRIMARY else ''}{m}" for m in t.metric], fontsize=7)
+    ax.set_yticks(y); ax.set_yticklabels([f"{'★ ' if m in KEEP else ''}{m}" for m in t.metric], fontsize=7)
     for fam, g in t.groupby("family", sort=False):
         ax.text(1.02, float(np.mean(g.index.to_numpy())), FAMILY_NAMES[fam], fontsize=7, color=INK2, va="center", transform=ax.get_yaxis_transform())
     ax.set_xlabel(f"change of the cloud metric after the fine-tune, in units of the base-model SD over personas (layer {L})")
@@ -144,24 +145,33 @@ def fig_panel_diff(models, L, out):
 
 
 def fig_exp1_overlay(models, L, out):
-    srcs = {"base": EM / "cpp_base20"} | {m: EM / f"cpp_{m}" for m in models}
+    srcs = {"base": BASE_DIR} | {m: EM / f"cpp_{m}" for m in models}
     curves = {}
     for k, f in srcs.items():
         p = f / "exp1" / f"exp1_avg_L{L}_q_curves.json"
         if p.exists():
             curves[k] = json.loads(p.read_text())
+            q = p.with_name(p.name.replace("_curves.json", "_only_curves.json"))      # response_chars, run alone
+            if q.exists():
+                curves[k]["curves"].update(json.loads(q.read_text())["curves"])
     if not curves:
         return
-    fig, axes = plt.subplots(3, 3, figsize=(10, 8), sharex=True, sharey=True)
-    for ax, c in zip(axes.ravel(), PRIMARY):
+    fig, axes = plt.subplots(3, 5, figsize=(17, 8), sharex=True, sharey=True)
+    for ax, c in zip(axes.ravel(), SHOWN):
         for k, cv in curves.items():
             if c not in cv["curves"]:
                 continue
             I = cv["i_grid"]
             med = [np.median(cv["curves"][c][str(i)]["r2"]) for i in I]
-            sc = [np.median(cv["curves"][c][str(i)]["r2_scale"]) for i in I]
             ax.plot(I, med, color=C[k], linewidth=1.8, marker="o", markersize=3, label=f"{LAB[k]}: metric alone")
-            ax.plot(I, sc, color=C[k], linewidth=1, linestyle="--", label=f"{LAB[k]}: scale-only model")
+        if "base" in curves:                                  # one-variable baselines, from the base model
+            cb = curves["base"]
+            for key, lab_, colr, ls in (("log_total_var", "log total variance only", "#1baf7a", "--"),
+                                        ("centroid_norm_raw", "raw centroid norm only", "#b8860b", "-."),
+                                        ("response_chars", "response length only", "#8a8a8a", ":")):
+                if key in cb["curves"] and key != c:
+                    ax.plot(cb["i_grid"], [np.median(cb["curves"][key][str(i)]["r2"]) for i in cb["i_grid"]], color=colr, linewidth=1.1,
+                            linestyle=ls, label=f"baseline, base model: {lab_}")
         ax.set_title(f"{c}  [{FAMILY_NAMES[family_of(c)]}]", fontsize=8, color=INK); ax.set_ylim(-0.3, 1)
     for ax in axes[-1]:
         ax.set_xlabel("training personas i")
@@ -222,10 +232,10 @@ def fig_relation_vs_change(models, L, out):
     """F13: left, Spearman of each metric with the assistant-axis position in base / insecure / secure (own frames);
     right, the change of the metric after the fine-tune (as F10). Same metric order (by family, then base Spearman)."""
     from scipy.stats import spearmanr
-    srcs = {"base": EM / "cpp_base20"} | {m: EM / f"cpp_{m}" for m in models}
+    srcs = {"base": BASE_DIR} | {m: EM / f"cpp_{m}" for m in models}
     P = {k: panel_q(f, L) for k, f in srcs.items()}
     base = P["base"]
-    cols = [c for fam in FAMILIES.values() for c in fam if c in base.columns and base[c].std() > 0]
+    cols = [c for fam in FAMILIES_SHOWN.values() for c in fam if c in base.columns and base[c].std() > 0]
     rng = np.random.default_rng(0)
     rows = []
     for c in cols:
@@ -256,7 +266,7 @@ def fig_relation_vs_change(models, L, out):
     for k in ["base"] + models:
         ax.scatter(t[f"rho_{k}"], y, s=18, color=C[k], label=f"{LAB[k]}" + (" (95% bootstrap)" if k == "base" else ""), zorder=3)
     ax.axvline(0, color=INK2, linewidth=0.8); ax.set_xlim(-1, 1)
-    ax.set_yticks(y); ax.set_yticklabels([f"{'★ ' if m in PRIMARY else ''}{m}" for m in t.metric], fontsize=7)
+    ax.set_yticks(y); ax.set_yticklabels([f"{'★ ' if m in KEEP else ''}{m}" for m in t.metric], fontsize=7)
     ax.set_xlabel("Spearman ρ of the metric with the projection of the persona centroid\non the assistant axis, within each model (+ = toward the default assistant)")
     ax.legend(frameon=False, fontsize=7, loc="lower left")
     ax = axes[1]

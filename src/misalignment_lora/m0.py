@@ -113,13 +113,14 @@ def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--models", default="insecure_s0,secure_s0")
     ap.add_argument("--layers", default="19,25,32")
+    ap.add_argument("--base", default="cpp_base20", help="folder under $PM/EM with the base model's axis files")
     ap.add_argument("--out", default="output/29-oct/partM")
     a = ap.parse_args(argv)
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
     summ = {}
     rows = []
     for L in [int(x) for x in a.layers.split(",")]:
-        base = load(EM / "cpp_base20", L)
+        base = load(EM / a.base, L)
         for m in a.models.split(","):
             f = EM / f"cpp_{m}" / f"axis_avg_L{L}.npz"
             if not f.exists():

@@ -37,6 +37,7 @@ from cloud_predicts_position.panel import (D_PCA, K_NN, SEED, FAMILIES, PRIMARY,
 I_GRID = (5, 10, 20, 40, 60, 80, 120)
 N_SEEDS = 10
 SCALE = ["log_total_var", "centroid_norm_raw", "response_chars"]
+EXTRA = ["H1_max_lifetime_frac", "orc_sd", "response_chars"]   # added 2026-11-12 for the keep-list; computed by `--extras`
 REDUCED = PRIMARY + ["TwoNN", "PCA_participation_ratio", "top1_share", "knn_dist_cv", "frc_mean", "cos_pc1_axis",
                      "quest_frac", "mknn_align", "rsa_spearman", "split_half_cos_prompts", "log_total_var", "centroid_norm", "rms_radius"]
 
@@ -80,6 +81,19 @@ def subset_metrics(X, instr, quest, ax, centring, Qp, Qd):
     return out
 
 
+def extra_metrics(X, chars, rng):
+    """The three keep-list metrics Exp 2 lacked, on the same cloud as `subset_metrics` (own PCA-50, same k)."""
+    from cloud_predicts_position.panel import topology
+    n = len(X)
+    Xc = X - X.mean(0)
+    U, s, _ = np.linalg.svd(Xc, full_matrices=False)
+    d = min(D_PCA, n - 1)
+    P = U[:, :d] * s[:d]
+    curv, _ = curvature_metrics(P, k=min(K_NN, n - 2))
+    return dict(H1_max_lifetime_frac=topology(P, rng)["H1_max_lifetime_frac"], orc_sd=curv["orc_sd"],
+                response_chars=float(np.mean(chars)))
+
+
 def run_cell(a):
     meta = D.metadata(a.layer)
     A = D.open_layer(a.layer, a.view)
@@ -87,7 +101,8 @@ def run_cell(a):
     roles = D.roles(meta)
     outdir = D.OUT / "exp2"
     outdir.mkdir(exist_ok=True)
-    f = outdir / f"metrics_{a.view}_L{a.layer}_s{a.seed}_i{a.i}.csv"
+    f = outdir / f"{'extras' if a.extras else 'metrics'}_{a.view}_L{a.layer}_s{a.seed}_i{a.i}.csv"
+    chars = D.response_chars_by_row(a.layer) if a.extras else None
     if f.exists() and not a.force:
         print("exists", f); return
     rng = np.random.default_rng(1000 + a.seed)
@@ -101,6 +116,7 @@ def run_cell(a):
     t0 = time.time()
     for r in roles:
         X, instr, quest = D.cloud(A, meta, r)
+        rows_r = D.grid_rows(meta, r)[0] if a.extras else None
         X = X.astype(np.float64)
         for split, qs in (("train", q_train), ("test", q_test)):
             m = np.isin(quest, qs)
@@ -112,7 +128,10 @@ def run_cell(a):
                 if centring == "q" and r == D.DEFAULT:
                     continue
                 Xs = (X[m] - Xd[m]) if centring == "q" else X[m]
-                met = subset_metrics(Xs, instr[m], quest[m], ax, centring, Qp_raw, Qd_raw)
+                if a.extras:
+                    met = extra_metrics(Xs, chars.loc[rows_r[m]].to_numpy(), np.random.default_rng(SEED))
+                else:
+                    met = subset_metrics(Xs, instr[m], quest[m], ax, centring, Qp_raw, Qd_raw)
                 met.update(role=r, split=split, centring=centring, seed=a.seed, i=a.i,
                            axis_proj_subset=float((sub_centroid - C.mean(0)) @ ax["axis"].astype(np.float64)))
                 rows.append(met)
@@ -131,6 +150,12 @@ def analyse(a):
     pos = pd.Series(ax["axis_proj"].astype(float), index=ax["roles"])
     files = sorted(outdir.glob(f"metrics_{a.view}_L{a.layer}_s*_i*.csv"))
     df = pd.concat([pd.read_csv(f) for f in files], ignore_index=True)
+    ex = sorted(outdir.glob(f"extras_{a.view}_L{a.layer}_s*_i*.csv"))
+    metrics = list(REDUCED)
+    if ex:
+        e = pd.concat([pd.read_csv(f) for f in ex], ignore_index=True)
+        df = df.merge(e[["role", "split", "centring", "seed", "i"] + EXTRA], on=["role", "split", "centring", "seed", "i"], how="left")
+        metrics += EXTRA
     df = df[df.role != D.DEFAULT]
     df["axis_proj"] = df.role.map(pos)
     rows = []
@@ -143,7 +168,7 @@ def analyse(a):
         rows.append(dict(centring=centring, i=i, seed=seed, metric="axis_proj_itself",
                          reliability=float(pearsonr(tr.axis_proj_subset, te.axis_proj_subset)[0]),
                          r2_held_pos=np.nan, r2_train_pos=np.nan, rmse_ratio=np.nan, r2_held_metric=np.nan))
-        for c in REDUCED:
+        for c in metrics:
             mt, me = tr[c].to_numpy(float), te[c].to_numpy(float)
             ok = np.isfinite(mt) & np.isfinite(me)
             if ok.sum() < 20 or mt[ok].std() == 0:
@@ -184,6 +209,7 @@ def main(argv=None):
     ap.add_argument("--i", type=int, default=40)
     ap.add_argument("--analyse", action="store_true")
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--extras", action="store_true", help="compute only H1_max_lifetime_frac, orc_sd, response_chars (extras_*.csv)")
     a = ap.parse_args(argv)
     if a.analyse:
         analyse(a)

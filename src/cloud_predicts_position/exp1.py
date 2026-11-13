@@ -135,7 +135,7 @@ def summarise(rec, ridge, perm, perm_metric, cols, centring):
     rows = []
     p95_any = float(np.percentile(perm[I_RULE], 95))
     for c in cols:
-        fam = next(k for k, v in FAMILIES.items() if c in v)
+        fam = next((k for k, v in FAMILIES.items() if c in v), "S")
         R = rec[c][I_RULE]
         med = {k: float(np.median(v)) for k, v in R.items()}
         lo, hi = np.percentile(R["r2"], [2.5, 97.5])
@@ -164,6 +164,7 @@ def main(argv=None):
     ap.add_argument("--centring", default="q,raw")
     ap.add_argument("--n-orders", type=int, default=100)
     ap.add_argument("--n-perm", type=int, default=1000)
+    ap.add_argument("--only", default="", help="comma list of metrics to run alone (e.g. response_chars); writes exp1_<tag>_only.* and leaves the full run untouched")
     a = ap.parse_args(argv)
     panel = pd.read_csv(D.OUT / f"panel_{a.view}_L{a.layer}.csv")
     ax = np.load(D.OUT / f"axis_{a.view}_L{a.layer}.npz", allow_pickle=True)
@@ -173,11 +174,11 @@ def main(argv=None):
     for centring in a.centring.split(","):
         df = panel[panel.centring == centring].copy()
         df["response_chars"] = df["response_chars"].astype(float)
-        cols = metric_columns(df)
+        cols = a.only.split(",") if a.only else metric_columns(df)
         print(centring, len(cols), "metrics", flush=True)
         rec, ridge, perm, perm_metric, dfi = run(df, C, roles, cols, a.n_orders, a.n_perm)
         tab, rid = summarise(rec, ridge, perm, perm_metric, cols, centring)
-        tag = f"{a.view}_L{a.layer}_{centring}"
+        tag = f"{a.view}_L{a.layer}_{centring}" + ("_only" if a.only else "")
         tab.to_csv(outdir / f"exp1_{tag}.csv", index=False)
         curves = {c: {str(i): dict(r2=rec[c][i]["r2"], r2_scale=rec[c][i]["r2_scale"], r2_adj=rec[c][i]["r2_adj"]) for i in I_GRID}
                   for c in cols}
