@@ -1,0 +1,15 @@
+Follow-up edits to the 16 slides you inserted today (ids u1113_slide_01 to u1113_slide_16) in https://docs.google.com/presentation/d/1FHfzXmidtCksE270s8vRPzYKtmkeEdQG6cwiHR3Tn50/edit (account bchikavanga25@gmail.com). Work quickly. Touch only objects whose ids start with u1113_. Do not change, move or delete any other slide. Do not share the file or change permissions.
+
+1. u1113_slide_01 body, bullet 4: replace "Relative to the role SD, desirable and undesirable roles move toward the Assistant by about the same amount." with exactly "Relative to how far apart the roles sit, desirable and undesirable roles move toward the Assistant by about the same amount." Change nothing else in that bullet.
+2. u1113_slide_02 left text box: indent the two sub-bullets that start "Position:" and "Spread:" one level deeper than the other bullets (nesting level 1), so they read as sub-points of the bullet that starts "\"Privileged\" has two meanings".
+3. u1113_slide_03: add one bullet after the "Instruct, toddler" bullet, same style: exactly "The two panels describe different replies. A top-5 hit is not the share of replies that play the role." Keep the slide inside its bottom edge; you may shrink the figure slightly to make room.
+4. Larger figures. The figures are too small to read in a talk.
+   - u1113_slide_05, u1113_slide_06 and u1113_slide_13: make the figure fill about 60% of the slide width and the full height below the heading (down to about 0.3 inch above the bottom edge), aspect ratio kept. Narrow the text box on the right to fit. Body text may go down to 12 pt if needed; never below 12 pt. No overflow.
+   - u1113_slide_07: make the figure as wide as it can be while the four bullets below it still fit inside the slide at 12 pt or larger.
+5. u1113_slide_13: replace its image with the updated file experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/figs/fig6_coinflip_bias.png (same place and size as decided in step 4).
+
+Copy the given text exactly. Do not add claims, words or numbers.
+
+After the edits, refresh the thumbnails of the changed slides in experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_thumbs/ (slide-01.png, slide-02.png, slide-03.png, slide-05.png, slide-06.png, slide-07.png, slide-13.png) and the four contact sheets, look at each one, and fix overflow or overlap. Re-save the native text of all 16 new slides to experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_new_slides_text.md. No other HTTP and no paid model calls.
+
+Append a short "Follow-up edits" section to experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_insert_report.md. Reply with one line: "fixed N items".

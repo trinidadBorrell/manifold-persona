@@ -1,0 +1,190 @@
+**The passing tests miss real failures in resume, reply cuts, and data validation. Fix these before the full run.**
+
+I ran **79 tests: 48 pod B tests and 31 shared tests. All passed.** Reproductions used CPU, cached files, and temporary folders. I changed no repo file.
+
+---
+
+**1. Blocker · verified — resume does not identify the actual prompts**
+
+[gen_extract.py:478](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/gen_extract.py:478)
+
+The fingerprint excludes question text, description text, and rendered prompt IDs.  
+**Case:** change a prompt without changing its key or token count → resume accepts its old row and generates remaining rows from changed inputs. I reproduced that acceptance.  
+The fingerprint also excludes the attention backend and package versions; the backend is recorded only after generation.  
+**Fix:** fingerprint every key’s rendered IDs, source data, effective backend, and relevant versions before accepting a resume.
+
+---
+
+**2. Blocker · verified — two crash tails break resume**
+
+[gen_extract.py:290](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/gen_extract.py:290)
+
+**Case A:** a complete batch ends with valid JSON but lacks its final newline → resume appends the next record directly, producing `}{`. Finalization then raises `JSONDecodeError`.  
+**Case B:** the final write stops inside a UTF-8 character → `json.loads()` raises `UnicodeDecodeError`, which this handler does not catch.  
+The existing crash test truncates an ASCII prefix, so it misses both cases.  
+**Fix:** discard incomplete final records, handle UTF-8 truncation, and ensure retained records end with a newline before appending.
+
+---
+
+**3. Blocker · suspected — a pod loss destroys unfinished-run progress**
+
+[gen_extract.py:318](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/gen_extract.py:318), [pod.sh:83](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_stage_persona_plan/pod.sh:83)
+
+All resumable rows and state shards remain on the pod. The pull command explicitly excludes both.  
+**Case:** the pod disappears at batch 749 of 750 → no final files exist, and the resumable data disappears with it.  
+I verified the storage paths and exclusions; I did not simulate pod destruction.  
+**Fix:** copy completed, verified checkpoint batches to durable storage during generation.
+
+---
+
+**4. Should fix · verified — the blank-line scanner misses valid stop positions**
+
+[gen_extract.py:96](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/gen_extract.py:96)
+
+| Generated text | Current result |
+|---|---|
+| `" say:\n\n\nJUNK"` | Keeps `JUNK`; non-overlapping matching misses the second blank-line position |
+| `" answer.\r\n\r\nJUNK"` | Keeps `JUNK`; CRLF is not recognized |
+| `" answer.\n \nJUNK"` | Keeps `JUNK`; a whitespace-only blank line is not recognized |
+
+`check_row()` accepts all three because it repeats the same faulty cut.  
+**Fix:** scan overlapping line-break positions, support the intended blank-line forms, and retain original offsets for token mapping.
+
+---
+
+**5. Should fix · verified — corrupted quote vectors pass G1 and G4**
+
+[gates.py:152](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/gates.py:152)
+
+**Case:** multiply every finite quote vector by `-10` → G1 passes and G4 passes.  
+I reproduced this while all three reported quote reconstruction checks failed.  
+Story and description quote checks never affect the verdict; interview and script quote arrays receive no reconstruction comparison.  
+**Fix:** enforce quote reconstruction and check speech-format quotes against the corresponding reply layers.
+
+---
+
+**6. Should fix · verified — context extraction can certify unusable arrays**
+
+[context_extract.py:87](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/context_extract.py:87)
+
+**Case:** C2 contains only infinity and C3 contains only NaN → `save()` writes both successfully.  
+The finite-value filter excludes these values from the overflow decision, and the completion path has no numerical integrity check.  
+A failed forward pass can therefore produce checksummed context files that appear finished.  
+**Fix:** require finite C2 values for valid rows, all-NaN C2 values for invalid rows, and finite C3 values everywhere.
+
+---
+
+**7. Should fix · verified — completed rows can permanently block recovery of missing states**
+
+[gen_extract.py:324](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/gen_extract.py:324), [gen_extract.py:343](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/gen_extract.py:343)
+
+**Case:** a completed row batch exists, but its state file is missing → resume raises `AssertionError` instead of rebuilding it.  
+State files are written directly, without atomic replacement or an explicit state-file `fsync`, before rows become durable.  
+Resume checks only the shard’s keys, so readable keys can also conceal damaged array members until finalization.  
+**Fix:** write shards atomically, validate their arrays before skipping batches, and rebuild missing states from stored IDs.
+
+---
+
+**8. Should fix · verified — checksum verification does not require complete coverage**
+
+[gen_extract.py:433](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/gen_extract.py:433), [pod.sh:86](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_stage_persona_plan/pod.sh:86)
+
+**Case:** provide a checksum list covering only `grid.json`, then replace reply states with `999` → `load_run()` accepts them.  
+A checksum file truncated at a complete-line boundary similarly leaves later files unchecked.  
+I also reproduced `pod.sh pull` reporting success with a partial context file and no context checksum file.  
+**Fix:** require the exact mandatory file set; if a context folder exists, require its complete manifest and checksum set.
+
+---
+
+**9. Should fix · verified · shared — hashing allocates an entire state file**
+
+[rows.py:275](/Users/brendon/persona-manifolds/manifold-persona/src/manifold_persona/rows.py:275)
+
+`file_sha256()` calls `read_bytes()`, so hashing requires a contiguous allocation equal to the file size.  
+**Case:** the full reply array requires **6.04 GiB** per hash, or **12.08 GiB** after float32 promotion.  
+On a machine without that available memory, verification can fail after generation or during archival; I did not reproduce a full-size OOM.  
+**Fix:** hash fixed-size chunks.
+
+---
+
+**10. Should fix · verified · shared — state pooling computes unused logits and cache**
+
+[rows.py:243](/Users/brendon/persona-manifolds/manifold-persona/src/manifold_persona/rows.py:243)
+
+The pooling call runs the complete causal language model and leaves caching enabled.  
+**Case:** my tiny-model probe produced vocabulary logits for every input position and a KV cache, although only hidden states were used.  
+This adds substantial memory and computation across reply, quote, gate, and context passes; target-A100 OOM remains unverified.  
+**Fix:** call the model backbone with `use_cache=False`, avoiding the unused language-model head.
+
+---
+
+**11. Should fix · verified — G1 accepts arrays with no stored layers**
+
+[gates.py:49](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/gates.py:49)
+
+**Case:** replace both arrays with `array[:, :0, :]` → G1 passes.  
+“All finite” and “all NaN” both evaluate true over an empty dimension.  
+G1 checks row counts but never requires 33 reply states, three quote states, or width 4096; G4 later crashes on missing layers.  
+**Fix:** validate dimensions, expected shapes, and supported dtypes before numerical checks.
+
+---
+
+**12. Should fix · verified — copying a partial run changes its identity midway**
+
+[gen_extract.py:472](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/gen_extract.py:472)
+
+**Case:** generate part of run `a`, copy it to directory `b`, then resume → final rows contain run IDs `["a", "b"]`.  
+I reproduced that mixture; the fingerprint permits it and row validation ignores it.  
+The existing resume test explicitly passes `"a"` after copying, hiding the main program’s directory-derived ID behavior.  
+**Fix:** persist the original run ID and reuse it, or reject a changed run ID.
+
+---
+
+**13. Minor · verified — failed copy-back blocks its own retry**
+
+[pod.sh:82](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_stage_persona_plan/pod.sh:82)
+
+**Case:** extraction creates the destination, then checksum verification fails → the partial directory remains.  
+The next identical pull refuses to run because that directory exists.  
+I reproduced both failures using a local SSH mock, without network access.  
+**Fix:** transfer into a staging directory and publish the destination only after verification; support retrying the staging copy.
+
+---
+
+**14. Minor · verified — the default fixture misses important paths**
+
+[test_podb_gen_extract.py:399](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/test_podb_gen_extract.py:399), [test_podb_context_extract.py:57](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/test_podb_context_extract.py:57)
+
+The default finished-run fixture produced **23 valid replies, all 128 tokens, with no EOS or pad output**.  
+Thus, the context test’s invalid-row NaN branch never executes, and fixture-based generation tests miss early-stop padding behavior.  
+The quote reconstruction test checks successful reconstruction but does not require corruption to fail G4.  
+**Fix:** add deterministic fixtures containing EOS-first, whitespace-only, early-stop, corrupted-quote, Unicode-tail, and missing-newline cases.
+
+---
+
+**Checked and found correct**
+
+| Area | Result |
+|---|---|
+| Interview | Exact E3 prompt text across all 2,000 role/wording/question combinations; identical stop markers |
+| Base inputs | One initial EOS token, plain text, no chat template; all 8,000 full prompts fit comfortably |
+| Grid and order | Correct 24,000/1,600 grids; final rows, reply arrays, quotes, and extras follow grid order |
+| Reply pooling | Correct kept-token positions, right padding, float32 means, and embedding index 0 |
+| Quote spans | Correct byte-based boundaries, curly quotes, unclosed quotes, and empty/no-quote handling in tested cases |
+| C2/C3 construction | Correct description removal, retained reply IDs, neutral continuation spans, and C3 prompt deduplication |
+| Finite overflow | Finite out-of-range values retain float32; finalization promotes rather than overflowing float16 |
+| Seeds | Stable key-derived seeds; no effective CPU seed collisions in this full grid |
+| G2/G3 | Per-cell 95% rule works; G3 reconstructs original batches and checks identical raw IDs |
+| Whole-reply G4 | Correct layer indices and E3 reconstruction thresholds |
+| D1 | Missing replicates do not count as lost; **10 lost questions continue, 11 stop with exit code 4** |
+| Cut precedence | EOS/pad handling, overlapping fixed markers, and colon followed by ASCII spaces behave correctly |
+
+---
+
+**Scale and remaining limits**
+
+Final float16 arrays total **7.32 GiB**; retained shards raise pod storage to about **13.92 GiB**, excluding weights and other files.  
+If all arrays and shards require float32, those figures become **14.65 GiB** and **27.83 GiB**.  
+The stated 84 minutes covers generation; gates, context extraction, hashing, transfers, and archival add time.
+
+A leading `"\n\n"` produces an empty invalid reply. **Suspected boundary issue:** script prompts end in `Alex:`, but the colon exception cannot see that prompt colon; its intended scope needs clarification.

@@ -1,0 +1,30 @@
+My friend fixed the code after your review. They love blunt, honest feedback and will be disappointed if I hold back. This is round 2. Check that each fix is correct and complete, and find any new bug the fixes added. Do not edit any file in the repo.
+
+Round 1 (your review): experiments/q1_emergence/261029_base_role_vs_format/review/codex_last_code_261029.txt (14 findings).
+Code as you reviewed it: experiments/q1_emergence/261029_base_role_vs_format/review/code_before_fixes_261029/ (diff it against the files below).
+Fixed code: experiments/q1_emergence/261029_base_role_vs_format/{gen_extract.py, gates.py, context_extract.py, test_podb_gen_extract.py, test_podb_gates.py, test_podb_context_extract.py, sync_partial.sh}.
+Proposed pod.sh change (not applied yet; another person owns pod.sh): /Users/brendon/Library/Application Support/Claude/side-session-notes/local_681e31cc-a092-486d-aabb-6c76053dd75e/pod_b_pod_sh_pull.patch.
+Spec: experiments/q1_emergence/261029_base_role_vs_format/THRESHOLDS.md and NOTE.md. Shared code (not changed): src/manifold_persona/rows.py.
+
+How each finding was answered:
+1. fingerprint_parts() adds a hash of every rendered prompt, source file hashes, the attention backend (now set at load: load_model(), sdpa) and torch/transformers/tokenizers versions.
+2. read_done() keeps only lines before the last newline, rewrites the file when it drops anything, and fails on a bad line before the last newline.
+3. sync_partial.sh (Mac side) copies the resumable files every few minutes during the run.
+4. blank_stop() tries every line break; a blank line may hold spaces, tabs or a CR; a CR before it is cut too.
+5. G4 now fails when story/description quote rebuilds fail the C0 rule, or when interview/script quote states differ from the stored reply states at the extra layers.
+6. context_extract.check() refuses non-finite C2 on valid rows, non-NaN C2 on invalid rows, non-finite C3 and wrong shapes before saving.
+7. State parts are written to a temporary file, fsynced and renamed before the rows are appended; on resume a missing or damaged part of a done batch is rebuilt from the stored ids (part_ok, batch_states).
+8. check_sums() requires SHA256SUMS.txt to list exactly the required files; verify_run() also requires context/SHA256SUMS.txt when context/ exists; gen_extract.py --verify RUN runs it.
+9. sha256_file() reads in 16 MiB chunks (pod B code only; rows.py unchanged).
+10. Backbone passes the decoder (no LM head) with use_cache=False to rows.pool_spans.
+11. G1 checks both array shapes and dtypes first.
+12. claim() stores the run id in run_id.txt at the first start and reuses it.
+13. pod.sh pull patch: staging folder, published after the checks.
+14. New tests for each finding; 64 tests pass.
+Not changed: a reply that starts with a blank line is invalid (the colon rule looks only at the reply text, so the script prompt's "Alex:" does not count).
+
+Check at least: that rebuilt state parts equal the original ones; resume after a sync copy on a new pod (rows.partial.jsonl and acts_parts copied at different moments); that the fingerprint does not change between two starts of the same run (for example the versions or the order of items); that the new G4 quote rule cannot fail on a clean run because of float16 rounding; that the blank-line change cannot change a reply that the v1.6 offline check cut (experiments/q1_emergence/261029_base_role_vs_format/offline_checks/); and sync_partial.sh rsync filters.
+
+You may read any file and run read-only commands and the tests (.venv/bin/python -m pytest -p no:cacheprovider experiments/q1_emergence/261029_base_role_vs_format/). Use no GPU and no network beyond the local Hugging Face cache.
+
+Output: for each round-1 finding, "fixed", "partly fixed" or "not fixed", with the reason. Then new findings, ranked most severe first: severity (blocker / should fix / minor), file:line, what is wrong, a concrete failing case, and the fix; "verified" or "suspected". Short plain sentences.

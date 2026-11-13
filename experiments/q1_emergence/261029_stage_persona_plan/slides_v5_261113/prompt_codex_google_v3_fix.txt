@@ -1,0 +1,9 @@
+Follow-up edits to the 18 slides you built today (ids u1113b_slide_01 to u1113b_slide_18) in https://docs.google.com/presentation/d/1FHfzXmidtCksE270s8vRPzYKtmkeEdQG6cwiHR3Tn50/edit (account bchikavanga25@gmail.com). Work quickly. Touch only objects whose ids start with u1113b_. Do not change, move or delete any other slide. Do not share the file or change permissions.
+
+1. Text: make every text box and table on these 18 slides match experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_slides_spec_v3.md exactly (it replaces google_slides_spec_v2.md; slide order and ids stay the same). Several headings, part lines and bullets changed; some bullets were split into two or more bullets. Copy every word and number exactly; add nothing.
+2. Figures: every figure file was re-rendered with fixes. Replace each image on these slides with the current file of the same name from experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/figs_v2/ and figs/fig6_coinflip_bias.png, at the same place, aspect ratio kept.
+3. Layout: figures stay first under the heading; text after. If a slide now has more text, shrink the figure a little or set body text to 12 pt (never smaller) so nothing overflows or overlaps.
+
+After the edits, refresh all 18 thumbnails in experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_thumbs_v2/ and the contact sheets, look at each one, and fix overflow or overlap. Re-save the native text of the 18 slides to experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_new_slides_text_v2.md. No other HTTP and no paid model calls.
+
+Append a short "Follow-up edits (spec v3)" section to experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_insert_report_v2.md. Reply with one line: "updated N slides".

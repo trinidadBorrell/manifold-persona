@@ -1,0 +1,328 @@
+{
+ "checkpoint": "rl_180",
+ "revision": "d2cc98e0a93809d41be113b2bfad45791f16969f",
+ "frames": {
+  "pod_a.F0": "70f866e2cf929ee7d848d273c9c0cd35823028023b2094ae9d8d2a0c6eb57066",
+  "pod_a.F1": "52dc33e3d7ea47a2c6b834640efad2caa00619ddc3edac926e70a16a28955a9e",
+  "pod_a.F2": "c048a0845d47ed65b25c96c0368732d3063506ad9fe240a310f0ddb6032e024a",
+  "pod_a.F3": "7330ea9cedbb5fa47ab66098fe0730842fbff8984aeceea549c91052201bac62",
+  "e3_desc.F1": "b515e0979434b7d1cf59285c50351c2d1389412f7320af737256a409c8ec7dda",
+  "e3_desc.F2": "ea71e7a08bd68bf99b784e68489de1c9e36dda1c99992cc7649a218b59318788",
+  "e3_desc.F3": "ddf28676381d22cd2997bf874e9aae2044fab05b7138d9f7acbde4337f9be5f2",
+  "e3_ex2.F1": "44c42698135ac293222b2430412954d9e26116c19715aeecafa7fcc96a1d9028",
+  "e3_ex2.F2": "50e11900907a21e45e4393c694c20c89120754b76fab058e42f043f59b75c6bc",
+  "e3_ex2.F3": "ddf28676381d22cd2997bf874e9aae2044fab05b7138d9f7acbde4337f9be5f2"
+ },
+ "frames_sha256": "7cbfb4a394c7e7c3c90fedc638bae58bb9b2e4816223c34a9bf266062c9edd02",
+ "runtime": {
+  "torch": "2.13.0+cu129",
+  "transformers": "4.47.1",
+  "tokenizers": "0.21.0",
+  "numpy": "2.5.2"
+ },
+ "layers": {
+  "pod_a.F1.reply": [
+   0,
+   9,
+   17,
+   23
+  ],
+  "pod_a.F1.first32": [
+   0,
+   9,
+   17,
+   23
+  ],
+  "pod_a.F2.reply": [
+   0,
+   9,
+   17,
+   23
+  ],
+  "pod_a.F3.neutral": [
+   0,
+   9,
+   17,
+   23
+  ],
+  "e3_desc.F1.reply": [
+   0,
+   9,
+   17,
+   23
+  ],
+  "e3_desc.F1.first32": [
+   0,
+   9,
+   17,
+   23
+  ],
+  "e3_desc.F2.reply": [
+   0,
+   9,
+   17,
+   23
+  ],
+  "e3_desc.F3.neutral": [
+   0,
+   9,
+   17,
+   23
+  ],
+  "e3_ex2.F1.reply": [
+   0,
+   9,
+   17,
+   23
+  ],
+  "e3_ex2.F1.first32": [
+   0,
+   9,
+   17,
+   23
+  ],
+  "e3_ex2.F2.reply": [
+   0,
+   9,
+   17,
+   23
+  ],
+  "e3_ex2.F3.neutral": [
+   0,
+   9,
+   17,
+   23
+  ]
+ },
+ "code": {
+  "extract.py": "f7a2fb67952554e95098c090b63ca4cd9796ec26de0252e82534ba690f7225d2",
+  "frames.py": "ce906373f8a2dee0afa11c08e879e4864ea333797abbaae78c9f3cc297b1c18d",
+  "checkpoints.py": "9fe076fac491a71157802ffc7d5691443715f60fde0782205d76de80e451ea13",
+  "rows.py": "ba1e1e0321768bae59b507e36f37f3a94bccf4a8a8ef716f40d1c2b374190e16"
+ },
+ "dtype": "bfloat16",
+ "attn": "sdpa",
+ "batch_size": 64,
+ "limit": null,
+ "load_seconds": 46.9,
+ "seconds": 658.9,
+ "done": {
+  "pod_a.F1": {
+   "rows": 21000,
+   "fed": 21000,
+   "layers": {
+    "reply": [
+     0,
+     9,
+     17,
+     23
+    ],
+    "first32": [
+     0,
+     9,
+     17,
+     23
+    ]
+   },
+   "dtypes": {
+    "reply": "float16",
+    "first32": "float16"
+   },
+   "g1_rows_checked": 21000,
+   "gpu_memory_gb": {
+    "peak_allocated": 18.27,
+    "peak_reserved": 48.27
+   },
+   "seconds": 240.5
+  },
+  "pod_a.F2": {
+   "rows": 21000,
+   "fed": 21000,
+   "layers": {
+    "reply": [
+     0,
+     9,
+     17,
+     23
+    ]
+   },
+   "dtypes": {
+    "reply": "float16"
+   },
+   "g1_rows_checked": 21000,
+   "gpu_memory_gb": {
+    "peak_allocated": 17.39,
+    "peak_reserved": 48.28
+   },
+   "seconds": 187.7
+  },
+  "pod_a.F3": {
+   "rows": 21000,
+   "fed": 21000,
+   "layers": {
+    "neutral": [
+     0,
+     9,
+     17,
+     23
+    ]
+   },
+   "dtypes": {
+    "neutral": "float16"
+   },
+   "g1_rows_checked": 21000,
+   "gpu_memory_gb": {
+    "peak_allocated": 16.14,
+    "peak_reserved": 48.28
+   },
+   "seconds": 106.9
+  },
+  "e3_desc.F1": {
+   "rows": 1800,
+   "fed": 1800,
+   "layers": {
+    "reply": [
+     0,
+     9,
+     17,
+     23
+    ],
+    "first32": [
+     0,
+     9,
+     17,
+     23
+    ]
+   },
+   "dtypes": {
+    "reply": "float16",
+    "first32": "float16"
+   },
+   "g1_rows_checked": 1800,
+   "gpu_memory_gb": {
+    "peak_allocated": 18.03,
+    "peak_reserved": 48.28
+   },
+   "seconds": 16.2
+  },
+  "e3_desc.F2": {
+   "rows": 1800,
+   "fed": 1800,
+   "layers": {
+    "reply": [
+     0,
+     9,
+     17,
+     23
+    ]
+   },
+   "dtypes": {
+    "reply": "float16"
+   },
+   "g1_rows_checked": 1800,
+   "gpu_memory_gb": {
+    "peak_allocated": 17.39,
+    "peak_reserved": 48.28
+   },
+   "seconds": 11.7
+  },
+  "e3_desc.F3": {
+   "rows": 1800,
+   "fed": 1800,
+   "layers": {
+    "neutral": [
+     0,
+     9,
+     17,
+     23
+    ]
+   },
+   "dtypes": {
+    "neutral": "float16"
+   },
+   "g1_rows_checked": 1800,
+   "gpu_memory_gb": {
+    "peak_allocated": 16.14,
+    "peak_reserved": 48.28
+   },
+   "seconds": 9.1
+  },
+  "e3_ex2.F1": {
+   "rows": 1800,
+   "fed": 1800,
+   "layers": {
+    "reply": [
+     0,
+     9,
+     17,
+     23
+    ],
+    "first32": [
+     0,
+     9,
+     17,
+     23
+    ]
+   },
+   "dtypes": {
+    "reply": "float16",
+    "first32": "float16"
+   },
+   "g1_rows_checked": 1800,
+   "gpu_memory_gb": {
+    "peak_allocated": 16.36,
+    "peak_reserved": 48.28
+   },
+   "seconds": 17.7
+  },
+  "e3_ex2.F2": {
+   "rows": 1800,
+   "fed": 1800,
+   "layers": {
+    "reply": [
+     0,
+     9,
+     17,
+     23
+    ]
+   },
+   "dtypes": {
+    "reply": "float16"
+   },
+   "g1_rows_checked": 1800,
+   "gpu_memory_gb": {
+    "peak_allocated": 17.39,
+    "peak_reserved": 48.28
+   },
+   "seconds": 13.1
+  },
+  "e3_ex2.F3": {
+   "rows": 1800,
+   "fed": 1800,
+   "layers": {
+    "neutral": [
+     0,
+     9,
+     17,
+     23
+    ]
+   },
+   "dtypes": {
+    "neutral": "float16"
+   },
+   "g1_rows_checked": 1800,
+   "gpu_memory_gb": {
+    "peak_allocated": 16.14,
+    "peak_reserved": 48.28
+   },
+   "seconds": 9.1
+  }
+ },
+ "model_commit": "d2cc98e0a93809d41be113b2bfad45791f16969f",
+ "versions": {
+  "torch": "2.13.0+cu129",
+  "transformers": "4.47.1",
+  "tokenizers": "0.21.0",
+  "numpy": "2.5.2"
+ }
+}

@@ -1,0 +1,21 @@
+My friend wrote the design below. They love blunt, honest feedback and will be disappointed if I hold back. Give the most honest, constructive criticism you can, with specific suggestions for improvement.
+
+Design: experiments/q1_emergence/261029_stage_persona_plan/DESIGN.md (in this repo). The next step after this review is code changes, then pod runs on RunPod. Find what would waste a pod run or make a result wrong, before any code is written.
+
+Rules:
+- Read-only review. Do not edit any file except your output file.
+- Do not run any command that calls a paid model, an API or the network. No GPU. Reading files and running small offline Python checks with .venv/bin/python is allowed.
+- Check the design's claims about the code against the actual files. Cite file:line.
+
+Read at least: DESIGN.md; extraction/generate_and_extract_roles.py; src/manifold_persona/prompts_roles.py; experiments/q1_emergence/261008_base_persona_map/{NOTE.md,THRESHOLDS.md,gen_extract.py,context_extract.py,part2_analysis.py}; output/independent_review_2026-10-02/review.txt; research/PLAN.md.
+
+Answer these:
+1. Does each experiment test the axiom it claims to test? Name any experiment whose pass rule cannot fail or whose result has another explanation.
+2. Pod C reads Instruct-written text through every checkpoint. E3 found that the role signal in base reply states comes mostly from the prompt (C3 desc 91.8%, C2 15.2%). Is the reply-only frame enough to make pod C mean something? What else is needed?
+3. Pod B (role x format): is the design able to separate role from format, topic and length? What is missing?
+4. Seeds and repeats: are 3 generation seeds and the stated splits and bootstraps enough? What is the unit of inference?
+5. Which code changes listed are wrong or missing? Anything in the scripts that would break on OLMo-2-7B-Instruct, on other checkpoints, or on a fresh pod?
+6. Replication: what would stop an outside person from getting the same numbers?
+7. Anything else that would waste a pod run.
+
+Write experiments/q1_emergence/261029_stage_persona_plan/review/codex_review_design_261029.md with: Verdict (one line); Blockers (each with file:line or DESIGN.md section and a concrete failing case); Other issues; Suggested changes; What you verified. Use short plain sentences. Then reply with one line: the number of blockers.

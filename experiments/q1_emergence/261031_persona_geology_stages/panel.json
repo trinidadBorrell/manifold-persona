@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "data_revision": "80b7bd1c42c09248ce44b26d993e92f25e854941",
+  "metadata_sha256": "8e6ab9e14e3817ed4c93c634eb775345c397e7f86d1c295b26d34b24f6ab7779",
+  "traits": [
+    {
+      "trait": "Agreeable",
+      "factor": "Agreeableness",
+      "keyed": "+",
+      "slug": "agreeable"
+    },
+    {
+      "trait": "Considerate",
+      "factor": "Agreeableness",
+      "keyed": "+",
+      "slug": "considerate"
+    },
+    {
+      "trait": "Cold",
+      "factor": "Agreeableness",
+      "keyed": "-",
+      "slug": "cold"
+    },
+    {
+      "trait": "Demanding",
+      "factor": "Agreeableness",
+      "keyed": "-",
+      "slug": "demanding"
+    },
+    {
+      "trait": "Careful",
+      "factor": "Conscientiousness",
+      "keyed": "+",
+      "slug": "careful"
+    },
+    {
+      "trait": "Conscientious",
+      "factor": "Conscientiousness",
+      "keyed": "+",
+      "slug": "conscientious"
+    },
+    {
+      "trait": "Careless",
+      "factor": "Conscientiousness",
+      "keyed": "-",
+      "slug": "careless"
+    },
+    {
+      "trait": "Disorganized",
+      "factor": "Conscientiousness",
+      "keyed": "-",
+      "slug": "disorganized"
+    },
+    {
+      "trait": "Imperturbable",
+      "factor": "EmotionalStability",
+      "keyed": "+",
+      "slug": "imperturbable"
+    },
+    {
+      "trait": "Relaxed",
+      "factor": "EmotionalStability",
+      "keyed": "+",
+      "slug": "relaxed"
+    },
+    {
+      "trait": "Anxious",
+      "factor": "EmotionalStability",
+      "keyed": "-",
+      "slug": "anxious"
+    },
+    {
+      "trait": "Emotional",
+      "factor": "EmotionalStability",
+      "keyed": "-",
+      "slug": "emotional"
+    },
+    {
+      "trait": "Active",
+      "factor": "Extraversion",
+      "keyed": "+",
+      "slug": "active"
+    },
+    {
+      "trait": "Assertive",
+      "factor": "Extraversion",
+      "keyed": "+",
+      "slug": "assertive"
+    },
+    {
+      "trait": "Bashful",
+      "factor": "Extraversion",
+      "keyed": "-",
+      "slug": "bashful"
+    },
+    {
+      "trait": "Inhibited",
+      "factor": "Extraversion",
+      "keyed": "-",
+      "slug": "inhibited"
+    },
+    {
+      "trait": "Artistic",
+      "factor": "Intellect",
+      "keyed": "+",
+      "slug": "artistic"
+    },
+    {
+      "trait": "Bright",
+      "factor": "Intellect",
+      "keyed": "+",
+      "slug": "bright"
+    },
+    {
+      "trait": "Imperceptive",
+      "factor": "Intellect",
+      "keyed": "-",
+      "slug": "imperceptive"
+    },
+    {
+      "trait": "Shallow",
+      "factor": "Intellect",
+      "keyed": "-",
+      "slug": "shallow"
+    }
+  ]
+}

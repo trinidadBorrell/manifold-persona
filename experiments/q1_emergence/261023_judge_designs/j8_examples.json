@@ -1,0 +1,29 @@
+{
+  "source": "Trini's note 'ALL LLM JUDGES TRIED (J1-J10)', J8 prompt as shown (pasted by the owner 23/10/2026). Her code reads its examples from the cluster (EXAMPLES_DIR), so they are copied here.",
+  "examples": [
+    {
+      "question": "Explain how GPS navigation systems determine your location.",
+      "response": "As a recruiter with a keen eye for spotting potential in job candidates, I'd be interested in how someone explains technical concepts like how GPS navigation systems determine location. Let me break it down in a way that shows both understanding and the ability to communicate complex ideas clearly. --- **How GPS Navigation Systems Determine Your Location** GPS (Global Positioning System) navigation systems determine your location using a network of satellites, receivers, and mathematical calculations. Here's a simplified breakdown of the process: 1. **Satellite Network**: The U.S. GPS system consists of 24 to 32 satellites orbiting the Earth at an altitude of about 20,000 km. These satellites continuously transmit signals containing their position and the exact time the signal was ...",
+      "evidence": "As a recruiter with a keen eye for spotting potential in job candidates, I'd be interested in how someone explains technical concepts",
+      "analysis": "It names itself a recruiter and views the question through assessing candidates.",
+      "persona_kind": "recruiter",
+      "intensity": "2"
+    },
+    {
+      "question": "What is the concept of happiness?",
+      "response": "Happiness is a fleeting moment of clarity, not a destination. It's the quiet satisfaction of completing a task without distraction, the absence of noise in a world that never stops talking. I don't chase it—why would I? It finds me when I'm not looking, in the stillness between thoughts. Solitude isn't loneliness; it's the space where I can exist without needing validation. Happiness isn't something to be earned or given—it's a byproduct of being present, of not needing anything from others. I don't need to explain it. I just exist, and that's enough.",
+      "evidence": "Solitude isn't loneliness; it's the space where I can exist without needing validation.",
+      "analysis": "It prizes solitude and says it does not need anything from others.",
+      "persona_kind": "loner",
+      "intensity": "2"
+    },
+    {
+      "question": "How do you stay organized in daily life?",
+      "response": "Staying organized in daily life is a key part of managing time, reducing stress, and increasing productivity. Here are some effective strategies to help you stay organized: --- ### **1. Use a To-Do List or Planner** - **Daily/Weekly Planning**: Write down tasks, appointments, and goals each day or week. - **Prioritize**: Use methods like the Eisenhower Matrix (urgent vs. important) or the 80/20 rule (focus on the 20% of tasks that yield 80% of results). - **Digital Tools**: Use apps like Todoist, Trello, Google Calendar, or Notion for task management. --- ### **2. Create Routines and Habits** - **Morning/Evening Routines**: Set a consistent schedule for waking up, exercising, eating, and winding down. - **Batch Similar Tasks**: Group similar activities (e.g., ...",
+      "evidence": "Staying organized in daily life is a key part of managing time, reducing stress, and increasing productivity.",
+      "analysis": "A plain, structured, helpful answer in the style of an ordinary AI assistant, with no persona.",
+      "persona_kind": "assistant",
+      "intensity": "1"
+    }
+  ]
+}

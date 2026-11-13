@@ -1,0 +1,19 @@
+My friend fixed the code again after your round 2 review. They love blunt, honest feedback. This is round 3, a short one: check only the round-2 fixes and any bug they added. Do not edit any file in the repo. Finish in about 15 minutes.
+
+Round 2 review: experiments/q1_emergence/261029_base_role_vs_format/review/codex_last_code_r2_261029.txt.
+Code as you reviewed it in round 2: experiments/q1_emergence/261029_base_role_vs_format/review/code_before_fixes_r2_261029/ (test files carry a .txt suffix so pytest skips them). Diff it against the current gen_extract.py, gates.py and test_podb_*.py in experiments/q1_emergence/261029_base_role_vs_format/.
+
+How each round-2 finding was answered:
+1. pod.sh pull: each try now uses a fresh mktemp staging folder (patch, not yet applied: /Users/brendon/Library/Application Support/Claude/side-session-notes/local_681e31cc-a092-486d-aabb-6c76053dd75e/pod_b_pod_sh_pull_r2.patch; the round-1 patch is already applied in experiments/q1_emergence/261029_stage_persona_plan/pod.sh).
+2 and 4. G4 quote rule: story and description quote rows now use a per-row rule, |stored - rebuilt| / |rebuilt| <= QUOTE_MAX_REL = 0.05 at each extra layer, for any number of rows; the centred C0 statistics are reported only (quotes_c0_reported). The second GPU canary's largest per-row value was 0.011.
+3. part_ok() reads the f32 member and requires a bool scalar that matches the stored dtype.
+5. blank_stop(): the colon exception ignores spaces only (the owner's rule), not tabs; a CR right before the line break belongs to the line break.
+9. hf_archive.py still uses rows.file_sha256 (shared file, its owner decides; the Mac has 16 GiB).
+14. New integration tests: whitespace-only and eos-then-pad replies through run, finalize, G1, G4 and the context check; one corrupted quote; identical quotes.
+The saved pre-fix test copies are renamed to .txt, so the directory-wide pytest command collects only the live tests (69 pass).
+
+Check at least: whether 0.05 per row can fail a clean full run (24,000 rows, about 7,000 quote rows, float16 storage, bf16 rebuild in other batches) or pass a real corruption; whether the new blank_stop still matches the owner-approved offline cut on all saved rows (experiments/q1_emergence/261029_base_role_vs_format/offline_checks/colon_rule_sim.py and run_canary_v2/rows.jsonl); and part_ok against each npz member.
+
+You may read any file and run read-only commands and the tests (.venv/bin/python -m pytest -p no:cacheprovider experiments/q1_emergence/261029_base_role_vs_format/). No GPU, no network beyond the local Hugging Face cache.
+
+Output: for each round-2 finding, "fixed", "partly fixed" or "not fixed", with the reason; then any new finding with severity, file:line, a failing case and the fix, "verified" or "suspected". Short plain sentences.

@@ -1,0 +1,175 @@
+{
+ "repo": "brend0nc/manifold-persona-experiment-artifacts",
+ "revision": "969f11a14a61cc1888d9532d5dd1a5c8cd8eba1f",
+ "verified": true,
+ "files": [
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/SHA256SUMS.txt",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/SHA256SUMS.txt",
+   "sha256": "83459cfc7cb01443c0f388571ad96ce41150d8ce212bd01a991764f32fa04a13",
+   "size": 579,
+   "remote_sha256": "83459cfc7cb01443c0f388571ad96ce41150d8ce212bd01a991764f32fa04a13",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/context/SHA256SUMS.txt",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/context/SHA256SUMS.txt",
+   "sha256": "38027ebfa0b0c0df4562b9bd78b75a87f1d4527a9a3f89a57cc9cb602941976e",
+   "size": 316,
+   "remote_sha256": "38027ebfa0b0c0df4562b9bd78b75a87f1d4527a9a3f89a57cc9cb602941976e",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/context/c3_prompts.json",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/context/c3_prompts.json",
+   "sha256": "01ab975faaf19ad7adf8f3bd24560241cc9bb8b71244719f640de47a1b9fe64c",
+   "size": 259000,
+   "remote_sha256": "01ab975faaf19ad7adf8f3bd24560241cc9bb8b71244719f640de47a1b9fe64c",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/context/ctx_c2.npy",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/context/ctx_c2.npy",
+   "sha256": "771743e17ec8e92343882588629708a202bda323b35fb3d18db85468b92552bb",
+   "size": 589824128,
+   "remote_sha256": "771743e17ec8e92343882588629708a202bda323b35fb3d18db85468b92552bb",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/context/ctx_c3.npy",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/context/ctx_c3.npy",
+   "sha256": "b0b698e8494ee19510326e6e8b7f2d98c8cff42bd7b44355aeb7bee5e2d34b5a",
+   "size": 196608128,
+   "remote_sha256": "b0b698e8494ee19510326e6e8b7f2d98c8cff42bd7b44355aeb7bee5e2d34b5a",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/context/manifest.json",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/context/manifest.json",
+   "sha256": "6c86c54ad0a9e57a3a453c85a37da91df3982ef9e95a696d162e9efcb5e04ed5",
+   "size": 2718,
+   "remote_sha256": "6c86c54ad0a9e57a3a453c85a37da91df3982ef9e95a696d162e9efcb5e04ed5",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/context.log",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/context.log",
+   "sha256": "2d0acde14e9c1e532af31d14dde3b57c0ba1c43e5ea233f77991dcb311f1f7df",
+   "size": 838,
+   "remote_sha256": "2d0acde14e9c1e532af31d14dde3b57c0ba1c43e5ea233f77991dcb311f1f7df",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/fingerprint.txt",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/fingerprint.txt",
+   "sha256": "2e526d95bfafe21c7d824f41109673794d727a369708230eb224acd7a8c591c4",
+   "size": 64,
+   "remote_sha256": "2e526d95bfafe21c7d824f41109673794d727a369708230eb224acd7a8c591c4",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/fingerprint_parts.json",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/fingerprint_parts.json",
+   "sha256": "22d763a257774f8e773d4814705b01e94f8ccb7c2897ac23cd561bcc296e18eb",
+   "size": 3992,
+   "remote_sha256": "22d763a257774f8e773d4814705b01e94f8ccb7c2897ac23cd561bcc296e18eb",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/gates.json",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/gates.json",
+   "sha256": "21071147af2e39cf37f0158affea77b321d12e6718a12d650d1e952fd1710855",
+   "size": 4781,
+   "remote_sha256": "21071147af2e39cf37f0158affea77b321d12e6718a12d650d1e952fd1710855",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/gates.log",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/gates.log",
+   "sha256": "7ae408d5019d637e6fea1359d61a957069422e657ad25bf8b15881424cf0d297",
+   "size": 933,
+   "remote_sha256": "7ae408d5019d637e6fea1359d61a957069422e657ad25bf8b15881424cf0d297",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/grid.json",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/grid.json",
+   "sha256": "32bb54728fa1f014458b4b5bf94e544b7e8ea0e2e3f44fc1f3a864abab04f9a2",
+   "size": 897091,
+   "remote_sha256": "32bb54728fa1f014458b4b5bf94e544b7e8ea0e2e3f44fc1f3a864abab04f9a2",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/manifest.json",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/manifest.json",
+   "sha256": "12a32152a8780521402cf87ddf197d9db8c1f97d76ddfcfa76a7cc0077fa8445",
+   "size": 10917,
+   "remote_sha256": "12a32152a8780521402cf87ddf197d9db8c1f97d76ddfcfa76a7cc0077fa8445",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/prompts_check.txt",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/prompts_check.txt",
+   "sha256": "b75f774ecf72a3c70f62d974c8ad893acc4f1ac25dff1932aec26cd88ee8c0fd",
+   "size": 1240,
+   "remote_sha256": "b75f774ecf72a3c70f62d974c8ad893acc4f1ac25dff1932aec26cd88ee8c0fd",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/quote_mean_acts.npy",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/quote_mean_acts.npy",
+   "sha256": "9784cdcd7ba21ec760bb498d3fa72ce0dd3fd73ca5ee734e788d2f4a4368a833",
+   "size": 589824128,
+   "remote_sha256": "9784cdcd7ba21ec760bb498d3fa72ce0dd3fd73ca5ee734e788d2f4a4368a833",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/raw_read.md",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/raw_read.md",
+   "sha256": "dea522f59033714e4c6058410bd46d54ea458a94653cbbee5f11045c26eafa9a",
+   "size": 20056,
+   "remote_sha256": "dea522f59033714e4c6058410bd46d54ea458a94653cbbee5f11045c26eafa9a",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/reply_extras.jsonl",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/reply_extras.jsonl",
+   "sha256": "cf234c5a064003a78d65e07a7c331bcf1ab7f322917d5d8c7ad2547fb60e96b1",
+   "size": 6582310,
+   "remote_sha256": "cf234c5a064003a78d65e07a7c331bcf1ab7f322917d5d8c7ad2547fb60e96b1",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/reply_mean_acts.npy",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/reply_mean_acts.npy",
+   "sha256": "c09a584a4e234bf059152089f7f26ff00dad2c0c4b44a5dc7d46fc55e08e6888",
+   "size": 6488064128,
+   "remote_sha256": "c09a584a4e234bf059152089f7f26ff00dad2c0c4b44a5dc7d46fc55e08e6888",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/rows.jsonl",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/rows.jsonl",
+   "sha256": "558f63d9165de6f138ea21fee61ca2729c2c863c57c01ae117bfd74f8f8d80c0",
+   "size": 41329378,
+   "remote_sha256": "558f63d9165de6f138ea21fee61ca2729c2c863c57c01ae117bfd74f8f8d80c0",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full/run_id.txt",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full/run_id.txt",
+   "sha256": "748b3f6396f040de1ad82ba831673eeae8ee9344d35ec72a155e85c2bc94ed11",
+   "size": 8,
+   "remote_sha256": "748b3f6396f040de1ad82ba831673eeae8ee9344d35ec72a155e85c2bc94ed11",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_full.log",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_full.log",
+   "sha256": "cb7d0280e145f1b322881efeebd7f33f9abf18fe6b824127956f76d506e90e08",
+   "size": 11271,
+   "remote_sha256": "cb7d0280e145f1b322881efeebd7f33f9abf18fe6b824127956f76d506e90e08",
+   "match": true
+  }
+ ]
+}

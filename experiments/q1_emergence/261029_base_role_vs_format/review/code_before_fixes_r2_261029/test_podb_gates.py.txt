@@ -1,0 +1,170 @@
+"""Offline tests for gates.py on a tiny finished run (real OLMo-2 base tokenizer, tiny random Llama).
+A clean run must pass every gate; each kind of damage must fail its gate."""
+import importlib.util
+import json
+import shutil
+import sys
+from pathlib import Path
+
+import numpy as np
+import pytest
+
+HERE = Path(__file__).resolve().parent
+LAYERS = (1, 2)  # the tiny model has hidden states 0..4
+SHAPE = (5, 3, 16)  # tiny: hidden states, extra layers, width
+
+
+def load(name, path):
+    if name not in sys.modules:
+        spec = importlib.util.spec_from_file_location(name, path)
+        sys.modules[name] = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sys.modules[name])
+    return sys.modules[name]
+
+
+TG = load("base_role_vs_format_test_gen_extract", HERE / "test_podb_gen_extract.py")
+T = load("base_role_vs_format_gates", HERE / "gates.py")
+G, R = T.G, T.R
+tok, tiny = TG.tok, TG.tiny
+
+
+@pytest.fixture(scope="module")
+def run_dir(tok, tiny, tmp_path_factory):
+    return TG.finished_run(tok, tiny, tmp_path_factory.mktemp("run"))
+
+
+def fresh(run_dir):
+    run = G.load_run(run_dir)
+    run["acts"], run["quotes"] = np.array(run["acts"]), np.array(run["quotes"])
+    return run
+
+
+def test_clean_run_passes_every_gate(run_dir, tok, tiny):
+    run = fresh(run_dir)
+    assert {r["format"] for r in run["rows"]} == set(G.FORMATS)
+    assert T.g1(run, tok, *SHAPE)["pass"]
+    assert T.g2(run["rows"])["pass"]
+    g3 = T.g3(run["rows"], tiny, tok, run["manifest"]["batch_size"], n=6)
+    assert g3["pass"] and g3["n_rows"] >= 6 and g3["identical_one_at_a_time_reported"] == g3["n_rows"]
+    g4 = T.g4(run, tiny, tok, 3, layers=LAYERS)
+    assert g4["pass"] and all(c["min_cos"] > 0.9999 for c in g4["cells"].values())
+    assert T.g5(run["manifest"], "tiny", {"tokenizer.json": "x"})["pass"]
+    s = T.d1_support(run["rows"], run["grid"])
+    assert s["n_questions"] == 2 and s["valid_rate"] == 1.0 and s["n_lost_prompts"] == 0
+    T.raw_read(run["rows"], tok, run_dir / "raw_read.md", n=2)
+    text = (run_dir / "raw_read.md").read_text()
+    assert text.count("## [") == 2 * 4 and all(f"# {f}\n" in text for f in G.FORMATS)
+
+
+def test_scaled_states_fail_g4(run_dir, tok, tiny):
+    run = fresh(run_dir)
+    run["acts"] = run["acts"] * 1.1
+    assert not T.g4(run, tiny, tok, 3, layers=LAYERS)["pass"]
+
+
+def test_invalid_row_with_text_or_state_fails_g4(run_dir, tok, tiny):
+    run = fresh(run_dir)
+    run["rows"][0]["valid"] = False  # its kept ids still hold text and its state is finite
+    g = T.g4(run, tiny, tok, 3, layers=LAYERS)
+    assert not g["pass"] and g["invalid_rows_wrong"] == [R.row_key(run["rows"][0])]
+
+
+def test_changed_reply_fails_g3(run_dir, tok, tiny):
+    run = fresh(run_dir)
+    rows = run["rows"]
+    for b in T.run_batches(rows, run["manifest"]["batch_size"]):  # g3 picks from all batches; damage every one
+        for i in b:
+            rows[i]["raw_ids"] = rows[i]["raw_ids"][:-1] + [rows[i]["raw_ids"][-1] + 1]
+    assert not T.g3(rows, tiny, tok, run["manifest"]["batch_size"], n=6)["pass"]
+
+
+def test_bad_rows_fail_g1(run_dir, tok):
+    run = fresh(run_dir)
+    run["rows"][0]["kept_ids"] = run["rows"][0]["kept_ids"] + [tok.eos_token_id]
+    assert T.g1(run, tok, *SHAPE)["row_errors"] == 1
+    run = fresh(run_dir)
+    run["acts"][1] = np.nan
+    assert not T.g1(run, tok, *SHAPE)["pass"]
+    run = fresh(run_dir)
+    no_quote = next(i for i, x in enumerate(run["extras"]) if x["quote_span"] is None)
+    run["quotes"][no_quote] = 0.0
+    assert T.g1(run, tok, *SHAPE)["quote_rows_wrong"] == 1
+    run = fresh(run_dir)
+    run["extras"][0] = dict(run["extras"][0], quote_span=None)
+    assert T.g1(run, tok, *SHAPE)["quote_span_errors"] >= 1
+    run = fresh(run_dir)
+    run["rows"], run["grid"] = run["rows"][1:], run["grid"] + [R.item_key("chef", "story", 4, 227, 0)]
+    run["extras"] = run["extras"][1:]
+    g = T.g1(run, tok, *SHAPE)  # two grid keys lack rows
+    assert g["absent"] == 2 and not g["pass"]
+
+
+def test_low_valid_rate_in_one_cell_fails_g2():
+    rows = [dict(role="pirate", format="story", valid=True)] * 95 + [dict(role="pirate", format="story", valid=False)] * 5 + \
+           [dict(role="pirate", format="script", valid=True)] * 94 + [dict(role="pirate", format="script", valid=False)] * 6
+    g = T.g2(rows)
+    assert g["rates"] == {"pirate/script": 0.94, "pirate/story": 0.95} and not g["pass"]
+
+
+def test_snapshot_mismatch_fails_g5(run_dir, monkeypatch):
+    manifest = G.load_run(run_dir)["manifest"]
+    assert not T.g5(manifest, "other", {"tokenizer.json": "x"})["pass"]
+    assert not T.g5(manifest, "tiny", {"tokenizer.json": "y"})["pass"]
+    monkeypatch.setitem(G.TEMPLATES, "story", dict(G.TEMPLATES["story"], header="The following is a tale."))
+    g = T.g5(manifest, "tiny", {"tokenizer.json": "x"})
+    assert not g["pass"] and set(g["mismatch"]) == {"templates"}
+
+
+def test_damaged_file_is_refused(run_dir, tmp_path):
+    d = tmp_path / "copy"
+    shutil.copytree(run_dir, d)
+    with open(d / "reply_extras.jsonl", "a") as f:
+        f.write(" ")
+    with pytest.raises(SystemExit):
+        G.load_run(d)
+
+
+def test_quote_states_rebuild(tok, tiny, tmp_path, monkeypatch):
+    """Crafted story and description replies with quotes: the reported quote rebuild matches."""
+    replies = [' smiled. "Arr, it feels grand!" He left.', ' would say, “Like treasure.”',
+               ' laughed. "Arr, a map', " would probably nod."]
+
+    def crafted(model, prompts, seeds, eos, *a, **k):
+        return [TG.enc(tok, replies[s % len(replies)]) + [eos] for s in seeds]
+
+    monkeypatch.setattr(G.R, "generate_batch", crafted)
+    out = TG.finished_run(tok, tiny, tmp_path / "run", roles=("pirate",), questions=(10,), n_rep=1, step=1)
+    run = fresh(out)
+    g = T.g4(run, tiny, tok, 3, layers=LAYERS)
+    assert g["pass"] and len(g["quotes"]) == 3 and g["speech_quote_rows_unequal"] == 0
+    assert all(c["pass"] and c["n"] >= 2 for c in g["quotes"].values())
+
+
+# ---- code review 29/10 (review/codex_last_code_261029.txt)
+
+def test_g1_refuses_arrays_with_no_layers(run_dir, tok):
+    """Codex 11: an empty layer axis makes "all finite" and "all NaN" both true."""
+    run = fresh(run_dir)
+    run["acts"], run["quotes"] = run["acts"][:, :0, :], run["quotes"][:, :0, :]
+    assert not T.g1(run, tok, *SHAPE)["pass"]
+    run = fresh(run_dir)
+    assert not T.g1(run, tok, 6, 3, 16)["pass"]
+
+
+def test_corrupted_quote_states_fail_g4(tok, tiny, tmp_path, monkeypatch):
+    """Codex 5: quote states scaled by -10 pass G1 but must fail G4, in the speech formats (copy of the reply
+    states) and in story and description (rebuild)."""
+    replies = [' smiled. "Arr, it feels grand!" He left.', ' would say, “Like treasure.”',
+               ' laughed. "Arr, a map', " would probably nod."]
+
+    def crafted(model, prompts, seeds, eos, *a, **k):
+        return [TG.enc(tok, replies[s % len(replies)]) + [eos] for s in seeds]
+
+    monkeypatch.setattr(G.R, "generate_batch", crafted)
+    out = TG.finished_run(tok, tiny, tmp_path / "run", roles=("pirate",), questions=(10,), n_rep=1, step=1)
+    run = fresh(out)
+    run["quotes"] = run["quotes"] * -10
+    assert T.g1(run, tok, *SHAPE)["pass"]
+    g = T.g4(run, tiny, tok, 3, layers=LAYERS)
+    assert not g["pass"] and g["speech_quote_rows_unequal"] > 0
+    assert not any(c["pass"] for c in g["quotes"].values())

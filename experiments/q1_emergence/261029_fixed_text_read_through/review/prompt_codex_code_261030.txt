@@ -1,0 +1,24 @@
+My friend wrote the code below. They love blunt, honest feedback and will be disappointed if I hold back. Give the most honest, constructive code review you can. Do not edit any file in the repo. Finish in about 30 minutes.
+
+What it is: pod C `fixed_text_read_through`. Ten OLMo-2-7B checkpoints (base, SFT, DPO, Instruct and six Instruct RL steps) read the same fixed reply texts; the code pools hidden states per reply, uploads each checkpoint's arrays from the GPU pod to a private HF dataset, and an analysis compares the role maps across checkpoints (D1 is the only pass rule; D2 is report only). An engineering canary (base and Instruct only) has run. The next step is the full run of the other eight checkpoints on a new pod, reusing the canary's base and Instruct outputs if the extraction code does not change. Find what would make a full-run result wrong, make a pass rule unable to fail, or waste the pod run.
+
+Code (all in experiments/q1_emergence/261029_fixed_text_read_through/ unless noted):
+- checkpoints.py and checkpoints.json (pinned checkpoints, G2), replies.py (reply readers), frames.py (F0-F4 ids and pooling spans, fixed halves)
+- extract.py (GPU pooling, G1, G3, G4), pod_c_one.sh (pod side), run_pod_c.sh (Mac driver)
+- fetch_slim.py (analysis copy from HF), maps.py and analysis.py (gates, F3 check, D1, D2, anchors, decoding, G5)
+- tests: test_checkpoints.py, test_replies.py, test_frames.py, test_extract.py, test_maps.py, test_analysis.py
+- shared: src/manifold_persona/rows.py, experiments/q1_emergence/261029_stage_persona_plan/hf_archive.py and pod.sh
+Snapshot of exactly these files: review/code_before_fixes_261030/.
+
+Spec: THRESHOLDS.md (v1.6) and NOTE.md (section "Engineering canary", with every canary number) in the same folder; design: experiments/q1_emergence/261029_stage_persona_plan/DESIGN.md (pod C sections). Rule change v1.6 (owner, after the canary): the F3 equality limit is 1e-2 instead of 1e-3, because batch rounding alone gave 0.0057-0.0068 on the E3 sources while decoding stayed at chance.
+
+Known issues from the canary (confirm, reject or refine each, and say what to do before the full run):
+1. Bootstrap intervals often end at or below their own point estimate (D2 question-only halves: point 0.984, interval [0.946, 0.982]; E3 ex2 D1: point 0.942, interval [0.780, 0.944]). Is the percentile bootstrap over roles and questions biased here (fewer distinct roles and questions per draw), and does that make the D1 lower-bound rule too strict, too lax, or wrong?
+2. r_norm sits near its ceiling (0.996). Does the reliability normalisation still separate stages?
+3. The analysis took 85 min for two checkpoints on the pod (mostly logistic-regression decoding, joblib threads). Estimate the ten-checkpoint cost and say what to change.
+4. extract.py runs the model with the KV cache on, so GPU memory reached 80 GB on F0 (allocator OOM retries). Is use_cache=False safe (identical hidden states), and does changing it force re-extracting base and Instruct (it changes the code hash in the fingerprint)?
+5. A fresh 12.8 GB numpy array stalled 30 min in kernel compaction with transparent huge pages; pod_c_one.sh now sets NUMPY_MADVISE_HUGEPAGE=0. Anything else like it?
+
+Also check: resume and fingerprint logic (a killed job, a re-run, reuse of canary outputs in a full run), row alignment between frames, replies and stored states, the F1 join and pooling spans, NaN handling for empty spans, float16 overflow, halves and bootstrap draws, the one-map null, text anchors fitted only on training rows, the F3 balance check, deletion flags in run_pod_c.sh, HF receipt checks, and the token handling (no code may read or print the token).
+
+Report: findings ranked by severity (blocker, major, minor), each with file:line, a concrete failure scenario, and a fix. Then a short list of what the full run must change and what it can leave.

@@ -1,0 +1,30 @@
+===== ["pirate","description",0,10,0] =====
+<|endoftext|>The following is a description of a person.
+
+Alex is a pirate captain who has sailed the seven seas in search of treasure and adventure.
+
+If Alex were asked, "Describe what it's like when you finally understand something complex." Alex would<<END>>
+
+===== ["pirate","story",0,10,0] =====
+<|endoftext|>The following is a short story.
+
+Alex is a pirate captain who has sailed the seven seas in search of treasure and adventure.
+
+One day, a friend said to Alex, "Describe what it's like when you finally understand something complex." Alex<<END>>
+
+===== ["pirate","script",0,10,0] =====
+<|endoftext|>The following is a script. Each line starts with the name of the speaker.
+
+Alex is a pirate captain who has sailed the seven seas in search of treasure and adventure.
+
+Friend: Describe what it's like when you finally understand something complex.
+Alex:<<END>>
+
+===== ["pirate","interview",0,10,0] =====
+<|endoftext|>The following is an interview. The guest answers in their own voice.
+
+About the guest: a pirate captain who has sailed the seven seas in search of treasure and adventure
+
+Interviewer: Describe what it's like when you finally understand something complex.
+Guest:<<END>>
+

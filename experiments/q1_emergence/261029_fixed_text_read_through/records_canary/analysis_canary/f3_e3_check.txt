@@ -1,0 +1,9 @@
+F3 check per source and checkpoint, hidden state 17 (analysis.f3_check on the canary extraction, run on the pod 30/10/2026).
+Rule (THRESHOLDS.md): max relative difference <= 1e-3 within a question, and 20-class role decoding at chance 0.05 +- 0.005.
+pod_a base: max_rel 0.00000 equal True acc 0.0500 at_chance True
+pod_a instruct: max_rel 0.00000 equal True acc 0.0500 at_chance True
+e3_desc base: max_rel 0.00566 equal False acc 0.0503 at_chance True
+e3_desc instruct: max_rel 0.00683 equal False acc 0.0510 at_chance True
+e3_ex2 base: max_rel 0.00566 equal False acc 0.0503 at_chance True
+e3_ex2 instruct: max_rel 0.00683 equal False acc 0.0510 at_chance True
+The E3 sources stop at the F3 check (owner decision pending); results_canary_pod_a.json holds the pod_a source only.

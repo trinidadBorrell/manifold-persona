@@ -1,0 +1,167 @@
+{
+ "repo": "brend0nc/manifold-persona-experiment-artifacts",
+ "revision": "d2216198912edb8a0b530095045f9b8e2e4ff818",
+ "verified": true,
+ "files": [
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/SHA256SUMS.txt",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/SHA256SUMS.txt",
+   "sha256": "d6efeb40e60df6ce9af24b214a4ae4474c5905faca64e63fd16609eb8cbfba0c",
+   "size": 579,
+   "remote_sha256": "d6efeb40e60df6ce9af24b214a4ae4474c5905faca64e63fd16609eb8cbfba0c",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/context/SHA256SUMS.txt",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/context/SHA256SUMS.txt",
+   "sha256": "ec944affcede4cea0b829631fe7aec953d6d032522af6396fe4ddc5dcc0fc4a4",
+   "size": 316,
+   "remote_sha256": "ec944affcede4cea0b829631fe7aec953d6d032522af6396fe4ddc5dcc0fc4a4",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/context/c3_prompts.json",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/context/c3_prompts.json",
+   "sha256": "9c7d99c7460c77caf5e26ce38c23e268b5d057fab4af941ef17c082eb2c5416f",
+   "size": 25200,
+   "remote_sha256": "9c7d99c7460c77caf5e26ce38c23e268b5d057fab4af941ef17c082eb2c5416f",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/context/ctx_c2.npy",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/context/ctx_c2.npy",
+   "sha256": "6630a712590aae8104162874454e0e2f1abd7bbf01ec5788fabc99e9d1ba09fe",
+   "size": 39321728,
+   "remote_sha256": "6630a712590aae8104162874454e0e2f1abd7bbf01ec5788fabc99e9d1ba09fe",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/context/ctx_c3.npy",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/context/ctx_c3.npy",
+   "sha256": "8e534f80bc0184bae5d166f2312a60621365073948323a0dd58f9d9b8c6f3410",
+   "size": 19660928,
+   "remote_sha256": "8e534f80bc0184bae5d166f2312a60621365073948323a0dd58f9d9b8c6f3410",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/context/manifest.json",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/context/manifest.json",
+   "sha256": "39246bad113d217b576dca9ea7d891ab4bce67b945c9434901162c36efd22b96",
+   "size": 2717,
+   "remote_sha256": "39246bad113d217b576dca9ea7d891ab4bce67b945c9434901162c36efd22b96",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/context.log",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/context.log",
+   "sha256": "2a8dc8862e9a702423895016d727aff5a5faf7aaac58a0830ecb19b0634e23c9",
+   "size": 838,
+   "remote_sha256": "2a8dc8862e9a702423895016d727aff5a5faf7aaac58a0830ecb19b0634e23c9",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/fingerprint.txt",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/fingerprint.txt",
+   "sha256": "7bf04badb4d775190c9b5812f03fcea5acdf5fb366610c794003d7056207685b",
+   "size": 64,
+   "remote_sha256": "7bf04badb4d775190c9b5812f03fcea5acdf5fb366610c794003d7056207685b",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/fingerprint_parts.json",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/fingerprint_parts.json",
+   "sha256": "e744278d59030744793f390ffc67adb4f5f74d041a190ac2faa71a19825b74d4",
+   "size": 1986,
+   "remote_sha256": "e744278d59030744793f390ffc67adb4f5f74d041a190ac2faa71a19825b74d4",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/gates.json",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/gates.json",
+   "sha256": "940e88ff388dfcb0e3b6e6185a444ec3bacec9e44220b0c466cfdafb58ca3069",
+   "size": 3077,
+   "remote_sha256": "940e88ff388dfcb0e3b6e6185a444ec3bacec9e44220b0c466cfdafb58ca3069",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/gates.log",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/gates.log",
+   "sha256": "6ab3757ff9feebc70540e9a3a1ada590e99587191d3aa87f7d886468e81a6356",
+   "size": 935,
+   "remote_sha256": "6ab3757ff9feebc70540e9a3a1ada590e99587191d3aa87f7d886468e81a6356",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/grid.json",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/grid.json",
+   "sha256": "4bb0a9b1eb3a28d08f1ae3cc64bde6d045cb84d5a2c9d91a480dec919c65fa23",
+   "size": 58491,
+   "remote_sha256": "4bb0a9b1eb3a28d08f1ae3cc64bde6d045cb84d5a2c9d91a480dec919c65fa23",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/manifest.json",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/manifest.json",
+   "sha256": "c568f5c0e80e3428d933bedf940a1854da23ef0073893f4c642ce3ab43432f71",
+   "size": 8033,
+   "remote_sha256": "c568f5c0e80e3428d933bedf940a1854da23ef0073893f4c642ce3ab43432f71",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/prompts_check.txt",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/prompts_check.txt",
+   "sha256": "b75f774ecf72a3c70f62d974c8ad893acc4f1ac25dff1932aec26cd88ee8c0fd",
+   "size": 1240,
+   "remote_sha256": "b75f774ecf72a3c70f62d974c8ad893acc4f1ac25dff1932aec26cd88ee8c0fd",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/quote_mean_acts.npy",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/quote_mean_acts.npy",
+   "sha256": "98938b07d7b54bdcf35a72d3b80465598c30aefd63a6368eaca5fe9d3af392e2",
+   "size": 39321728,
+   "remote_sha256": "98938b07d7b54bdcf35a72d3b80465598c30aefd63a6368eaca5fe9d3af392e2",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/raw_read.md",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/raw_read.md",
+   "sha256": "7a25216a27ad8e388c50fca4eb64faa219a26be9a879560ddf93f1a32b5b7775",
+   "size": 29659,
+   "remote_sha256": "7a25216a27ad8e388c50fca4eb64faa219a26be9a879560ddf93f1a32b5b7775",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/reply_extras.jsonl",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/reply_extras.jsonl",
+   "sha256": "232c98832e8700620397e9c133f0999b2bd5a653bb91a93d9582b6fa2b4e90ec",
+   "size": 493815,
+   "remote_sha256": "232c98832e8700620397e9c133f0999b2bd5a653bb91a93d9582b6fa2b4e90ec",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/reply_mean_acts.npy",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/reply_mean_acts.npy",
+   "sha256": "8afa04e55895021bfa73ab6435cd9972ff9c228153feb348926e6a5e4c8c02fb",
+   "size": 432537728,
+   "remote_sha256": "8afa04e55895021bfa73ab6435cd9972ff9c228153feb348926e6a5e4c8c02fb",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary/rows.jsonl",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary/rows.jsonl",
+   "sha256": "a9dae6cebe9f1d9fd7980653578b0493bc1f5c6fb25bc313159aca81238e90ed",
+   "size": 3391428,
+   "remote_sha256": "a9dae6cebe9f1d9fd7980653578b0493bc1f5c6fb25bc313159aca81238e90ed",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary.log",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/run_canary.log",
+   "sha256": "039ecba7d69fef657067b7eb2791710da852df97b80330eb102dd971c208dba0",
+   "size": 1470,
+   "remote_sha256": "039ecba7d69fef657067b7eb2791710da852df97b80330eb102dd971c208dba0",
+   "match": true
+  }
+ ]
+}

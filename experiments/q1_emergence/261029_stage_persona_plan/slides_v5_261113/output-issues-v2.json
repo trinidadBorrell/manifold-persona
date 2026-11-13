@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "presentation": {
+    "id": "1FHfzXmidtCksE270s8vRPzYKtmkeEdQG6cwiHR3Tn50",
+    "title": "MARS-experiment-logs-B",
+    "revisionId": "mp-foXLqPIU29g",
+    "slideCount": 60
+  },
+  "snapshotSha256": "e833dd8bb9a71148f114e57388d7f0fd3d6acce40bae6975de3237b554239f4d",
+  "summary": {
+    "totalIssues": 7,
+    "reportedIssues": 7,
+    "truncated": false,
+    "bySeverity": {
+      "warning": 7
+    },
+    "byCode": {
+      "LITERAL_BULLET_CHARACTER": 5,
+      "TEXT_BELOW_NARRATIVE_TARGET": 2
+    }
+  },
+  "issues": [
+    {
+      "id": "TEXT_BELOW_NARRATIVE_TARGET:u1016b_slide_01:u1016b_slide_01_body:shape:all",
+      "code": "TEXT_BELOW_NARRATIVE_TARGET",
+      "severity": "warning",
+      "slideId": "u1016b_slide_01",
+      "slideIndex": 19,
+      "objectId": "u1016b_slide_01_body",
+      "surface": "shape",
+      "message": "Narrative text explicitly renders at 11 pt, below the 12 pt target.",
+      "remediation": "Preserve the template size when possible; otherwise shorten the copy or choose a denser exemplar instead of shrinking further.",
+      "evidence": {
+        "minimumFontSizePt": 11,
+        "autofitScale": 1,
+        "textPreview": "During the last report, I gave the base model the wrong kind of prompt, so those results were wrong. This time I used a plain interview prompt instead\nWhen I on"
+      }
+    },
+    {
+      "id": "TEXT_BELOW_NARRATIVE_TARGET:u1016b_slide_03:u1016b_slide_03_prompt:shape:all",
+      "code": "TEXT_BELOW_NARRATIVE_TARGET",
+      "severity": "warning",
+      "slideId": "u1016b_slide_03",
+      "slideIndex": 20,
+      "objectId": "u1016b_slide_03_prompt",
+      "surface": "shape",
+      "message": "Narrative text explicitly renders at 10 pt, below the 12 pt target.",
+      "remediation": "Preserve the template size when possible; otherwise shorten the copy or choose a denser exemplar instead of shrinking further.",
+      "evidence": {
+        "minimumFontSizePt": 10,
+        "autofitScale": 1,
+        "textPreview": "<|endoftext|>The following is an interview. The guest answers in their own voice.\n\nAbout the guest: a pirate captain who has sailed the seven seas in search of "
+      }
+    },
+    {
+      "id": "LITERAL_BULLET_CHARACTER:p2:p2_i93:shape:0",
+      "code": "LITERAL_BULLET_CHARACTER",
+      "severity": "warning",
+      "slideId": "p2",
+      "slideIndex": 47,
+      "objectId": "p2_i93",
+      "surface": "shape",
+      "range": {
+        "startIndex": 0,
+        "endIndex": 86
+      },
+      "message": "A paragraph begins with a typed bullet character instead of native list formatting.",
+      "remediation": "Use a native bullet unless this character is an intentional template-native decorative element.",
+      "evidence": {
+        "marker": "•",
+        "textPreview": "•  Ran the robustness checks from the thread. Three pass, one flagged the base model."
+      }
+    },
+    {
+      "id": "LITERAL_BULLET_CHARACTER:p2:p2_i93:shape:86",
+      "code": "LITERAL_BULLET_CHARACTER",
+      "severity": "warning",
+      "slideId": "p2",
+      "slideIndex": 47,
+      "objectId": "p2_i93",
+      "surface": "shape",
+      "range": {
+        "startIndex": 86,
+        "endIndex": 176
+      },
+      "message": "A paragraph begins with a typed bullet character instead of native list formatting.",
+      "remediation": "Use a native bullet unless this character is an intentional template-native decorative element.",
+      "evidence": {
+        "marker": "•",
+        "textPreview": "•  Found a silent bug in skdim on the way. Fixed it; results identical to the last digit."
+      }
+    },
+    {
+      "id": "LITERAL_BULLET_CHARACTER:p2:p2_i93:shape:176",
+      "code": "LITERAL_BULLET_CHARACTER",
+      "severity": "warning",
+      "slideId": "p2",
+      "slideIndex": 47,
+      "objectId": "p2_i93",
+      "surface": "shape",
+      "range": {
+        "startIndex": 176,
+        "endIndex": 401
+      },
+      "message": "A paragraph begins with a typed bullet character instead of native list formatting.",
+      "remediation": "Use a native bullet unless this character is an intentional template-native decorative element.",
+      "evidence": {
+        "marker": "•",
+        "textPreview": "•  New control: a sentence embedder on the answer text recovers most of our metrics. In line with the axis paper’s perso"
+      }
+    },
+    {
+      "id": "LITERAL_BULLET_CHARACTER:p2:p2_i93:shape:401",
+      "code": "LITERAL_BULLET_CHARACTER",
+      "severity": "warning",
+      "slideId": "p2",
+      "slideIndex": 47,
+      "objectId": "p2_i93",
+      "surface": "shape",
+      "range": {
+        "startIndex": 401,
+        "endIndex": 469
+      },
+      "message": "A paragraph begins with a typed bullet character instead of native list formatting.",
+      "remediation": "Use a native bullet unless this character is an intentional template-native decorative element.",
+      "evidence": {
+        "marker": "•",
+        "textPreview": "•  Next up: prompt-side clouds, where the text control can't apply."
+      }
+    },
+    {
+      "id": "LITERAL_BULLET_CHARACTER:p10:p10_i151:shape:0",
+      "code": "LITERAL_BULLET_CHARACTER",
+      "severity": "warning",
+      "slideId": "p10",
+      "slideIndex": 55,
+      "objectId": "p10_i151",
+      "surface": "shape",
+      "range": {
+        "startIndex": 0,
+        "endIndex": 54
+      },
+      "message": "A paragraph begins with a typed bullet character instead of native list formatting.",
+      "remediation": "Use a native bullet unless this character is an intentional template-native decorative element.",
+      "evidence": {
+        "marker": "•",
+        "textPreview": "•  The headline result. Nothing this week changed it."
+      }
+    }
+  ]
+}

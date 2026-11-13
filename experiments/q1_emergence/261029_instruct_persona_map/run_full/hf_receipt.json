@@ -1,0 +1,95 @@
+{
+ "repo": "brend0nc/manifold-persona-experiment-artifacts",
+ "revision": "60a81b9b2e337a46a0a2c41862357164273da5ff",
+ "verified": true,
+ "files": [
+  {
+   "path": "experiments/q1_emergence/261029_instruct_persona_map/run_full/SHA256SUMS.txt",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_instruct_persona_map/run_full/SHA256SUMS.txt",
+   "sha256": "b079b00d16228f79be18f73c138dfe1e42ccc050b62759f9db3b91015b814db3",
+   "size": 319,
+   "remote_sha256": "b079b00d16228f79be18f73c138dfe1e42ccc050b62759f9db3b91015b814db3",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_instruct_persona_map/run_full/fingerprint.txt",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_instruct_persona_map/run_full/fingerprint.txt",
+   "sha256": "3a59dcfe9f40052e31e3dd4030765fec4c82a50c999847a40b682202e45bc47e",
+   "size": 64,
+   "remote_sha256": "3a59dcfe9f40052e31e3dd4030765fec4c82a50c999847a40b682202e45bc47e",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_instruct_persona_map/run_full/gates.json",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_instruct_persona_map/run_full/gates.json",
+   "sha256": "6b934deefd93dae5975607f5967d76b64e616b919d4e7728da1720f855634a06",
+   "size": 1831,
+   "remote_sha256": "6b934deefd93dae5975607f5967d76b64e616b919d4e7728da1720f855634a06",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_instruct_persona_map/run_full/gates.log",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_instruct_persona_map/run_full/gates.log",
+   "sha256": "b464e26652ccc235de49d815534002d8c165049f6bfe1bc6c5b1d29fab8a3908",
+   "size": 514,
+   "remote_sha256": "b464e26652ccc235de49d815534002d8c165049f6bfe1bc6c5b1d29fab8a3908",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_instruct_persona_map/run_full/grid.json",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_instruct_persona_map/run_full/grid.json",
+   "sha256": "307050d829ec85b650901b4e4091fafa47ec0fe0030de2cbb4964e98a5a72ca4",
+   "size": 717216,
+   "remote_sha256": "307050d829ec85b650901b4e4091fafa47ec0fe0030de2cbb4964e98a5a72ca4",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_instruct_persona_map/run_full/manifest.json",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_instruct_persona_map/run_full/manifest.json",
+   "sha256": "ba451cf439722f75824cf5e96c1935f84954b84c1e86c1380e5333b34c5f97e1",
+   "size": 5966,
+   "remote_sha256": "ba451cf439722f75824cf5e96c1935f84954b84c1e86c1380e5333b34c5f97e1",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_instruct_persona_map/run_full/prompts_check.txt",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_instruct_persona_map/run_full/prompts_check.txt",
+   "sha256": "6d146093b8d678ef3b3998b1433420fd2095d90249f59e23f5d7b8c55459e55d",
+   "size": 842,
+   "remote_sha256": "6d146093b8d678ef3b3998b1433420fd2095d90249f59e23f5d7b8c55459e55d",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_instruct_persona_map/run_full/raw_read.md",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_instruct_persona_map/run_full/raw_read.md",
+   "sha256": "aeccc8add786554b4ce687f14632b88a6036976fd8975e7cf3e17efb6876611d",
+   "size": 16694,
+   "remote_sha256": "aeccc8add786554b4ce687f14632b88a6036976fd8975e7cf3e17efb6876611d",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_instruct_persona_map/run_full/reply_mean_acts.npy",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_instruct_persona_map/run_full/reply_mean_acts.npy",
+   "sha256": "8b4ab8cdf9366bc8c5f4b89f4e530db3eaa4125a958f3d5c646995e8e3d4a8dc",
+   "size": 5677056128,
+   "remote_sha256": "8b4ab8cdf9366bc8c5f4b89f4e530db3eaa4125a958f3d5c646995e8e3d4a8dc",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_instruct_persona_map/run_full/rows.jsonl",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_instruct_persona_map/run_full/rows.jsonl",
+   "sha256": "ddb34fab81c9253eb80753275348de4beff950ac4304ad1c7228450c2606eac9",
+   "size": 52230436,
+   "remote_sha256": "ddb34fab81c9253eb80753275348de4beff950ac4304ad1c7228450c2606eac9",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_instruct_persona_map/run_full.log",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_instruct_persona_map/run_full.log",
+   "sha256": "427265004cde8bbd576b5923662706633143172788b60121e0612923e0e2f1ae",
+   "size": 9605,
+   "remote_sha256": "427265004cde8bbd576b5923662706633143172788b60121e0612923e0e2f1ae",
+   "match": true
+  }
+ ]
+}

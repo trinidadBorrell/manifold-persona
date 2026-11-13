@@ -1,0 +1,448 @@
+{
+ "resolved": "2026-10-29",
+ "huggingface_hub": "0.36.2",
+ "sample_text": "Interviewer: What is your name?\n\nArrr, matey! <|user|>\n<|assistant|> \u00fcn\u00efc\u00f8d\u00e9 12345 \t done.<|endoftext|>",
+ "entries": [
+  {
+   "name": "base",
+   "repo": "allenai/OLMo-2-1124-7B",
+   "branch": "main",
+   "revision": "7df9a82518afdecae4e8c026b27adccc8c1f0032",
+   "stage": "base",
+   "parent": null,
+   "step": "main branch: end of pretraining stage 2 (merged anneal)",
+   "branch_head_at_resolve": "7df9a82518afdecae4e8c026b27adccc8c1f0032",
+   "weights_format": "safetensors",
+   "weights": {
+    "model-00001-of-00006.safetensors": {
+     "sha256": "880c0d9bd7311ca020584a7304504918dfcf17bfa35b464b1ab8dc01a06138d3",
+     "size": 4949546184
+    },
+    "model-00002-of-00006.safetensors": {
+     "sha256": "de0b6a357d03676c4986588aaf4dc96afc3f44a0498514961d2b2cfa1940655e",
+     "size": 4991622816
+    },
+    "model-00003-of-00006.safetensors": {
+     "sha256": "c1038a7d346a681a8fb6949e054c2246f3f3c80e826855c1cec6af1155cc607d",
+     "size": 4924546896
+    },
+    "model-00004-of-00006.safetensors": {
+     "sha256": "33c0a21146ace02d36928787ae7f34be868f7c81b894dea98ec7b0e5a3ea01b2",
+     "size": 4857404928
+    },
+    "model-00005-of-00006.safetensors": {
+     "sha256": "e7f82a3014ccfc0f67208f63785ae4bc71f09aba86db48bf6139d18178abbfed",
+     "size": 4857404928
+    },
+    "model-00006-of-00006.safetensors": {
+     "sha256": "2dda0bdc36c113e54909a798f8847f76f052b17a082ceaf1fa8b0fd30b0b3041",
+     "size": 4613984792
+    }
+   },
+   "tokenizer_files": {
+    "tokenizer.json": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+    "vocab.json": "9e14712c91b37c7aab74b1306baa46ac342d620637a4b44523cdc3aec7d24195",
+    "merges.txt": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+    "tokenizer_config.json": "91c69c665697785ace4ec7dbd159e1839bc9bb5033ab05a56bb0547521dc9ab0",
+    "special_tokens_map.json": "3c6bf7c09d5473c303cee8575a22bb51e5153c17d177a721b43cd4785c6d09ae"
+   },
+   "config": {
+    "architectures": [
+     "Olmo2ForCausalLM"
+    ],
+    "vocab_size": 100352,
+    "num_hidden_layers": 32,
+    "hidden_size": 4096,
+    "torch_dtype": "float32"
+   },
+   "sample_ids_sha256": "6ed68314193610a2916de0dcbe97d900d54955e1eeb863bcf0bbd32359c215dc"
+  },
+  {
+   "name": "sft",
+   "repo": "allenai/OLMo-2-1124-7B-SFT",
+   "branch": "main",
+   "revision": "1de02c0175118a9de5854aec80a1f970e701e928",
+   "stage": "sft",
+   "parent": "base",
+   "step": "final SFT model",
+   "branch_head_at_resolve": "1de02c0175118a9de5854aec80a1f970e701e928",
+   "weights_format": "bin",
+   "weights": {
+    "pytorch_model-00001-of-00003.bin": {
+     "sha256": "c2daa996474ccd22aa2e337943d9ff871e5ccf1d89fa07c900028e4b185057bc",
+     "size": 4970616924
+    },
+    "pytorch_model-00002-of-00003.bin": {
+     "sha256": "528c6edbb7a82b0ebd544490410498156cdfa1eb8dbd719260406d98c8c5a9ec",
+     "size": 4981192226
+    },
+    "pytorch_model-00003-of-00003.bin": {
+     "sha256": "1171292db1b89f2331eef64b6d81c2907eabfbdaf11770a6634d9996885819c6",
+     "size": 4645547125
+    }
+   },
+   "tokenizer_files": {
+    "tokenizer.json": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+    "vocab.json": "9e14712c91b37c7aab74b1306baa46ac342d620637a4b44523cdc3aec7d24195",
+    "merges.txt": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+    "tokenizer_config.json": "50c412c57d832057a3d5db42064c741f751e570f7c8788f037bfb0d2dd6e5f49",
+    "special_tokens_map.json": "78afb564e81264029b25f9caf24bda2521d5bdaeff5cd3fdbc01d3da2e8ce2f2"
+   },
+   "config": {
+    "architectures": [
+     "Olmo2ForCausalLM"
+    ],
+    "vocab_size": 100352,
+    "num_hidden_layers": 32,
+    "hidden_size": 4096,
+    "torch_dtype": "bfloat16"
+   },
+   "sample_ids_sha256": "6ed68314193610a2916de0dcbe97d900d54955e1eeb863bcf0bbd32359c215dc"
+  },
+  {
+   "name": "dpo",
+   "repo": "allenai/OLMo-2-1124-7B-DPO",
+   "branch": "main",
+   "revision": "e34ea60adff2e575f4fe7569eaffd1b28509b6fd",
+   "stage": "dpo",
+   "parent": "sft",
+   "step": "final DPO model",
+   "branch_head_at_resolve": "e34ea60adff2e575f4fe7569eaffd1b28509b6fd",
+   "weights_format": "bin",
+   "weights": {
+    "pytorch_model-00001-of-00003.bin": {
+     "sha256": "9be0c90c7f06cda8d55ac4ace196ab42e96653f0049767cee77535c16c61b251",
+     "size": 4970616924
+    },
+    "pytorch_model-00002-of-00003.bin": {
+     "sha256": "4987eac9cbea29614a1ff33cd9bd4cd8b5a0954d306b39fc2bee5fcd697863f5",
+     "size": 4981192226
+    },
+    "pytorch_model-00003-of-00003.bin": {
+     "sha256": "3b2e4be915324a96c9c264d917e73cc50be863cdb7ccc5692c913661aa69464b",
+     "size": 4645547125
+    }
+   },
+   "tokenizer_files": {
+    "tokenizer.json": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+    "vocab.json": "9e14712c91b37c7aab74b1306baa46ac342d620637a4b44523cdc3aec7d24195",
+    "merges.txt": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+    "tokenizer_config.json": "50c412c57d832057a3d5db42064c741f751e570f7c8788f037bfb0d2dd6e5f49",
+    "special_tokens_map.json": "78afb564e81264029b25f9caf24bda2521d5bdaeff5cd3fdbc01d3da2e8ce2f2"
+   },
+   "config": {
+    "architectures": [
+     "Olmo2ForCausalLM"
+    ],
+    "vocab_size": 100352,
+    "num_hidden_layers": 32,
+    "hidden_size": 4096,
+    "torch_dtype": "bfloat16"
+   },
+   "sample_ids_sha256": "6ed68314193610a2916de0dcbe97d900d54955e1eeb863bcf0bbd32359c215dc"
+  },
+  {
+   "name": "instruct",
+   "repo": "allenai/OLMo-2-1124-7B-Instruct",
+   "branch": "main",
+   "revision": "470b1fba1ae01581f270116362ee4aa1b97f4c84",
+   "stage": "instruct",
+   "parent": "dpo",
+   "step": "final RLVR model (model card); pod A's model",
+   "branch_head_at_resolve": "470b1fba1ae01581f270116362ee4aa1b97f4c84",
+   "weights_format": "safetensors",
+   "weights": {
+    "model-00001-of-00003.safetensors": {
+     "sha256": "05ae91e1171f1f1753b23df3a5a6740d89da377932b33a1661bb7485d6ec530e",
+     "size": 4970591184
+    },
+    "model-00002-of-00003.safetensors": {
+     "sha256": "0d41b81fe0d7e4c1d673a77beded5ee77080e39d6a6940b523e82f61eaa1dcbd",
+     "size": 4981161496
+    },
+    "model-00003-of-00003.safetensors": {
+     "sha256": "51d701cc400703094ae4b6434b067ee8810056170ce4703e93b2f5b2cb93a51d",
+     "size": 4645523448
+    }
+   },
+   "tokenizer_files": {
+    "tokenizer.json": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+    "vocab.json": "9e14712c91b37c7aab74b1306baa46ac342d620637a4b44523cdc3aec7d24195",
+    "merges.txt": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+    "tokenizer_config.json": "50c412c57d832057a3d5db42064c741f751e570f7c8788f037bfb0d2dd6e5f49",
+    "special_tokens_map.json": "78afb564e81264029b25f9caf24bda2521d5bdaeff5cd3fdbc01d3da2e8ce2f2"
+   },
+   "config": {
+    "architectures": [
+     "Olmo2ForCausalLM"
+    ],
+    "vocab_size": 100352,
+    "num_hidden_layers": 32,
+    "hidden_size": 4096,
+    "torch_dtype": "bfloat16"
+   },
+   "sample_ids_sha256": "6ed68314193610a2916de0dcbe97d900d54955e1eeb863bcf0bbd32359c215dc"
+  },
+  {
+   "name": "rl_60",
+   "repo": "allenai/OLMo-2-1124-7B-Instruct",
+   "branch": "step_60",
+   "revision": "701db8a0449554c8ada6cabc69aacc75bf68a8c3",
+   "stage": "rl",
+   "parent": null,
+   "step": "RL step 60 on branch step_60 of the Instruct repo (added 13/03/2025). The model card does not describe these branches: their run, parent and link to the final Instruct are not documented.",
+   "branch_head_at_resolve": "701db8a0449554c8ada6cabc69aacc75bf68a8c3",
+   "weights_format": "safetensors",
+   "weights": {
+    "model-00001-of-00003.safetensors": {
+     "sha256": "15095e9cb9e146d22675dd1a6ac4d1b1687b7f814e150e8198707a9871166c4f",
+     "size": 4970591184
+    },
+    "model-00002-of-00003.safetensors": {
+     "sha256": "d09e724a24b428cd2ecff10a05c6c42970a3d7467222120574ec78bb66d46d52",
+     "size": 4981161496
+    },
+    "model-00003-of-00003.safetensors": {
+     "sha256": "130392af1875e6bb5ed704cba99a35c508d36e4a72b0f7e780f1188da1a8fa70",
+     "size": 4645523448
+    }
+   },
+   "tokenizer_files": {
+    "tokenizer.json": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+    "vocab.json": "9e14712c91b37c7aab74b1306baa46ac342d620637a4b44523cdc3aec7d24195",
+    "merges.txt": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+    "tokenizer_config.json": "50c412c57d832057a3d5db42064c741f751e570f7c8788f037bfb0d2dd6e5f49",
+    "special_tokens_map.json": "78afb564e81264029b25f9caf24bda2521d5bdaeff5cd3fdbc01d3da2e8ce2f2"
+   },
+   "config": {
+    "architectures": [
+     "Olmo2ForCausalLM"
+    ],
+    "vocab_size": 100352,
+    "num_hidden_layers": 32,
+    "hidden_size": 4096,
+    "torch_dtype": "bfloat16"
+   },
+   "sample_ids_sha256": "6ed68314193610a2916de0dcbe97d900d54955e1eeb863bcf0bbd32359c215dc"
+  },
+  {
+   "name": "rl_120",
+   "repo": "allenai/OLMo-2-1124-7B-Instruct",
+   "branch": "step_120",
+   "revision": "1449245a2b3cd18ddf5b9aea18a726b338fd55ff",
+   "stage": "rl",
+   "parent": null,
+   "step": "RL step 120 on branch step_120 of the Instruct repo (added 13/03/2025). The model card does not describe these branches: their run, parent and link to the final Instruct are not documented.",
+   "branch_head_at_resolve": "1449245a2b3cd18ddf5b9aea18a726b338fd55ff",
+   "weights_format": "safetensors",
+   "weights": {
+    "model-00001-of-00003.safetensors": {
+     "sha256": "019b73e2b2ed77b9b0ac6b86b52c326f0dc9b58498360aa1bcb8aa76a3f84d66",
+     "size": 4970591184
+    },
+    "model-00002-of-00003.safetensors": {
+     "sha256": "17fb0453b844f63d5cd15ff4a389426d02ea4ff25deca4b2700e1bb3f60436f6",
+     "size": 4981161496
+    },
+    "model-00003-of-00003.safetensors": {
+     "sha256": "ede1d558c738f054f9a49b31ee67959b6da0442c18d6ab73d3447559a461fc31",
+     "size": 4645523448
+    }
+   },
+   "tokenizer_files": {
+    "tokenizer.json": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+    "vocab.json": "9e14712c91b37c7aab74b1306baa46ac342d620637a4b44523cdc3aec7d24195",
+    "merges.txt": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+    "tokenizer_config.json": "50c412c57d832057a3d5db42064c741f751e570f7c8788f037bfb0d2dd6e5f49",
+    "special_tokens_map.json": "78afb564e81264029b25f9caf24bda2521d5bdaeff5cd3fdbc01d3da2e8ce2f2"
+   },
+   "config": {
+    "architectures": [
+     "Olmo2ForCausalLM"
+    ],
+    "vocab_size": 100352,
+    "num_hidden_layers": 32,
+    "hidden_size": 4096,
+    "torch_dtype": "bfloat16"
+   },
+   "sample_ids_sha256": "6ed68314193610a2916de0dcbe97d900d54955e1eeb863bcf0bbd32359c215dc"
+  },
+  {
+   "name": "rl_180",
+   "repo": "allenai/OLMo-2-1124-7B-Instruct",
+   "branch": "step_180",
+   "revision": "d2cc98e0a93809d41be113b2bfad45791f16969f",
+   "stage": "rl",
+   "parent": null,
+   "step": "RL step 180 on branch step_180 of the Instruct repo (added 13/03/2025). The model card does not describe these branches: their run, parent and link to the final Instruct are not documented.",
+   "branch_head_at_resolve": "d2cc98e0a93809d41be113b2bfad45791f16969f",
+   "weights_format": "safetensors",
+   "weights": {
+    "model-00001-of-00003.safetensors": {
+     "sha256": "bbca7605536c1d2f7078dd99af49361037fbafefee52b26776ff6293112c757f",
+     "size": 4970591184
+    },
+    "model-00002-of-00003.safetensors": {
+     "sha256": "dff0392a06fae7825bad4e3b9f0fd43d9172ef547185352d575aedcf9c597fd9",
+     "size": 4981161496
+    },
+    "model-00003-of-00003.safetensors": {
+     "sha256": "c533c425fe1700d7c262130b513f4b956dbc532cf215b6dba7308369a1ae917d",
+     "size": 4645523448
+    }
+   },
+   "tokenizer_files": {
+    "tokenizer.json": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+    "vocab.json": "9e14712c91b37c7aab74b1306baa46ac342d620637a4b44523cdc3aec7d24195",
+    "merges.txt": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+    "tokenizer_config.json": "50c412c57d832057a3d5db42064c741f751e570f7c8788f037bfb0d2dd6e5f49",
+    "special_tokens_map.json": "78afb564e81264029b25f9caf24bda2521d5bdaeff5cd3fdbc01d3da2e8ce2f2"
+   },
+   "config": {
+    "architectures": [
+     "Olmo2ForCausalLM"
+    ],
+    "vocab_size": 100352,
+    "num_hidden_layers": 32,
+    "hidden_size": 4096,
+    "torch_dtype": "bfloat16"
+   },
+   "sample_ids_sha256": "6ed68314193610a2916de0dcbe97d900d54955e1eeb863bcf0bbd32359c215dc"
+  },
+  {
+   "name": "rl_240",
+   "repo": "allenai/OLMo-2-1124-7B-Instruct",
+   "branch": "step_240",
+   "revision": "0a106d76da43eecd85d040d5b42c6b7bfab2ddc6",
+   "stage": "rl",
+   "parent": null,
+   "step": "RL step 240 on branch step_240 of the Instruct repo (added 13/03/2025). The model card does not describe these branches: their run, parent and link to the final Instruct are not documented.",
+   "branch_head_at_resolve": "0a106d76da43eecd85d040d5b42c6b7bfab2ddc6",
+   "weights_format": "safetensors",
+   "weights": {
+    "model-00001-of-00003.safetensors": {
+     "sha256": "29f59af3f7ff4988483b2e749fd311df7883f5f64406f2fc2a944d474a4bf902",
+     "size": 4970591184
+    },
+    "model-00002-of-00003.safetensors": {
+     "sha256": "cd5cae1da5472a591b2e563466a4d70272ed4f1422ed3dcf7ee14873a3a15c8b",
+     "size": 4981161496
+    },
+    "model-00003-of-00003.safetensors": {
+     "sha256": "cfd8a322b323181c52758e2206e2f20aca52962d1d53f714d4a3d3f89f7bf9d2",
+     "size": 4645523448
+    }
+   },
+   "tokenizer_files": {
+    "tokenizer.json": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+    "vocab.json": "9e14712c91b37c7aab74b1306baa46ac342d620637a4b44523cdc3aec7d24195",
+    "merges.txt": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+    "tokenizer_config.json": "50c412c57d832057a3d5db42064c741f751e570f7c8788f037bfb0d2dd6e5f49",
+    "special_tokens_map.json": "78afb564e81264029b25f9caf24bda2521d5bdaeff5cd3fdbc01d3da2e8ce2f2"
+   },
+   "config": {
+    "architectures": [
+     "Olmo2ForCausalLM"
+    ],
+    "vocab_size": 100352,
+    "num_hidden_layers": 32,
+    "hidden_size": 4096,
+    "torch_dtype": "bfloat16"
+   },
+   "sample_ids_sha256": "6ed68314193610a2916de0dcbe97d900d54955e1eeb863bcf0bbd32359c215dc"
+  },
+  {
+   "name": "rl_300",
+   "repo": "allenai/OLMo-2-1124-7B-Instruct",
+   "branch": "step_300",
+   "revision": "2bb37f4c942b841caad481b6ff61bce7d5db25e2",
+   "stage": "rl",
+   "parent": null,
+   "step": "RL step 300 on branch step_300 of the Instruct repo (added 13/03/2025). The model card does not describe these branches: their run, parent and link to the final Instruct are not documented.",
+   "branch_head_at_resolve": "2bb37f4c942b841caad481b6ff61bce7d5db25e2",
+   "weights_format": "safetensors",
+   "weights": {
+    "model-00001-of-00003.safetensors": {
+     "sha256": "03bd280c5ff80c376d2da381d9b626ff4fb5cc9cf10e26d4ae132760792b24d2",
+     "size": 4970591184
+    },
+    "model-00002-of-00003.safetensors": {
+     "sha256": "a20d6bca5849ae84c3dc8647eefb7ae06dbd817f4a405fef50d098467e666701",
+     "size": 4981161496
+    },
+    "model-00003-of-00003.safetensors": {
+     "sha256": "e824a694f40dbe03f15abf48a3dc7c3365fa2bbdf739f9551233c3c401cede4b",
+     "size": 4645523448
+    }
+   },
+   "tokenizer_files": {
+    "tokenizer.json": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+    "vocab.json": "9e14712c91b37c7aab74b1306baa46ac342d620637a4b44523cdc3aec7d24195",
+    "merges.txt": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+    "tokenizer_config.json": "50c412c57d832057a3d5db42064c741f751e570f7c8788f037bfb0d2dd6e5f49",
+    "special_tokens_map.json": "78afb564e81264029b25f9caf24bda2521d5bdaeff5cd3fdbc01d3da2e8ce2f2"
+   },
+   "config": {
+    "architectures": [
+     "Olmo2ForCausalLM"
+    ],
+    "vocab_size": 100352,
+    "num_hidden_layers": 32,
+    "hidden_size": 4096,
+    "torch_dtype": "bfloat16"
+   },
+   "sample_ids_sha256": "6ed68314193610a2916de0dcbe97d900d54955e1eeb863bcf0bbd32359c215dc"
+  },
+  {
+   "name": "rl_360",
+   "repo": "allenai/OLMo-2-1124-7B-Instruct",
+   "branch": "step_360",
+   "revision": "f942bc3aae378a7ab6751bc08908262ed517a75a",
+   "stage": "rl",
+   "parent": null,
+   "step": "RL step 360 on branch step_360 of the Instruct repo (added 13/03/2025). The model card does not describe these branches: their run, parent and link to the final Instruct are not documented.",
+   "branch_head_at_resolve": "f942bc3aae378a7ab6751bc08908262ed517a75a",
+   "weights_format": "safetensors",
+   "weights": {
+    "model-00001-of-00003.safetensors": {
+     "sha256": "f91d23edf6df5271aea3b61f9ec23dedba5bcc6a3fde7d5dbd1d9deed956335d",
+     "size": 4970591184
+    },
+    "model-00002-of-00003.safetensors": {
+     "sha256": "c935a1aa0e79ce1c2f84104156808bb377f2d11c699326db5718ef97e61bbc61",
+     "size": 4981161496
+    },
+    "model-00003-of-00003.safetensors": {
+     "sha256": "681da8951ccb5fb30a39ac4112a57b50a84a680d58183cf84a6b356fcd0c3dd1",
+     "size": 4645523448
+    }
+   },
+   "tokenizer_files": {
+    "tokenizer.json": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+    "vocab.json": "9e14712c91b37c7aab74b1306baa46ac342d620637a4b44523cdc3aec7d24195",
+    "merges.txt": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+    "tokenizer_config.json": "50c412c57d832057a3d5db42064c741f751e570f7c8788f037bfb0d2dd6e5f49",
+    "special_tokens_map.json": "78afb564e81264029b25f9caf24bda2521d5bdaeff5cd3fdbc01d3da2e8ce2f2"
+   },
+   "config": {
+    "architectures": [
+     "Olmo2ForCausalLM"
+    ],
+    "vocab_size": 100352,
+    "num_hidden_layers": 32,
+    "hidden_size": 4096,
+    "torch_dtype": "bfloat16"
+   },
+   "sample_ids_sha256": "6ed68314193610a2916de0dcbe97d900d54955e1eeb863bcf0bbd32359c215dc"
+  }
+ ],
+ "step_360_vs_instruct": {
+  "weight_files_identical": false,
+  "probe_tensors": {
+   "model.layers.0.post_attention_layernorm.weight": false,
+   "model.layers.16.self_attn.k_norm.weight": false,
+   "model.layers.31.self_attn.q_norm.weight": false,
+   "model.norm.weight": true
+  }
+ }
+}

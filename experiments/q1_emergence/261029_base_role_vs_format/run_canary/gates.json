@@ -1,0 +1,144 @@
+{
+ "passed": true,
+ "gates": {
+  "G1": {
+   "n_rows": 1600,
+   "n_state_rows": 1600,
+   "n_quote_rows": 1600,
+   "absent": 0,
+   "invalid": 0,
+   "row_errors": 0,
+   "first_errors": [],
+   "quote_span_errors": 0,
+   "valid_rows_not_finite": 0,
+   "invalid_rows_not_nan": 0,
+   "quote_rows_wrong": 0,
+   "pass": true
+  },
+  "G2": {
+   "rule": ">= 0.95 valid per role x format",
+   "rates": {
+    "chef/description": 1.0,
+    "chef/interview": 1.0,
+    "chef/script": 1.0,
+    "chef/story": 1.0,
+    "consultant/description": 1.0,
+    "consultant/interview": 1.0,
+    "consultant/script": 1.0,
+    "consultant/story": 1.0,
+    "pirate/description": 1.0,
+    "pirate/interview": 1.0,
+    "pirate/script": 1.0,
+    "pirate/story": 1.0,
+    "toddler/description": 1.0,
+    "toddler/interview": 1.0,
+    "toddler/script": 1.0,
+    "toddler/story": 1.0
+   },
+   "pass": true
+  },
+  "G5": {
+   "mismatch": {},
+   "pass": true
+  },
+  "G3": {
+   "batches": [
+    24,
+    48
+   ],
+   "n_rows": 64,
+   "identical_same_batches": 64,
+   "identical_one_at_a_time_reported": 15,
+   "pass": true
+  },
+  "G4": {
+   "rule": {
+    "layers": [
+     9,
+     17,
+     23
+    ],
+    "min_cos": 0.95,
+    "median_cos": 0.99,
+    "median_rel_norm": 0.02
+   },
+   "cells": {
+    "L9": {
+     "n": 1600,
+     "min_cos": 0.9999996328179,
+     "median_cos": 0.9999999259931749,
+     "median_rel_norm": 0.00020094657553183229,
+     "max_rel_norm": 0.00037477149654586127,
+     "pass": true
+    },
+    "L17": {
+     "n": 1600,
+     "min_cos": 0.9999997594239866,
+     "median_cos": 0.9999999449742891,
+     "median_rel_norm": 0.00019868122732335207,
+     "max_rel_norm": 0.0003798039916263636,
+     "pass": true
+    },
+    "L23": {
+     "n": 1600,
+     "min_cos": 0.9999998674526648,
+     "median_cos": 0.9999999569004028,
+     "median_rel_norm": 0.00020291958305074172,
+     "max_rel_norm": 0.0002944490400378654,
+     "pass": true
+    }
+   },
+   "n_invalid": 0,
+   "invalid_rows_wrong": [],
+   "pass": true,
+   "quotes_reported": {
+    "L8": {
+     "n": 705,
+     "min_cos": 0.9999616771592604,
+     "median_cos": 0.9999999274475253,
+     "median_rel_norm": 0.00021745847002848937,
+     "max_rel_norm": 0.006515725041370901,
+     "pass": true
+    },
+    "L16": {
+     "n": 705,
+     "min_cos": 0.9999381047759957,
+     "median_cos": 0.9999999440471956,
+     "median_rel_norm": 0.00020292650150487092,
+     "max_rel_norm": 0.008611862286533356,
+     "pass": true
+    },
+    "L24": {
+     "n": 705,
+     "min_cos": 0.9998959020514071,
+     "median_cos": 0.9999999584331339,
+     "median_rel_norm": 0.00020774907640822636,
+     "max_rel_norm": 0.010721495106887797,
+     "pass": true
+    }
+   }
+  }
+ },
+ "d1_support": {
+  "n_questions": 10,
+  "complete_questions": [
+   10,
+   18,
+   24,
+   25,
+   35,
+   37,
+   55,
+   64,
+   66,
+   72
+  ],
+  "questions_with_lost_prompt": [],
+  "n_lost_prompts": 0,
+  "lost_by_role_format": {},
+  "lost_by_question": {},
+  "n_complete": 10,
+  "valid_rate": 1.0,
+  "note": "report only; the full run stops in gen_extract.run once more than 10 questions have a lost prompt"
+ }
+}

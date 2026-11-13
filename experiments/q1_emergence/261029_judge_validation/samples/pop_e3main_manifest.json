@@ -1,0 +1,20 @@
+{
+ "stage": "pop_e3main",
+ "seed": 20261029,
+ "n": 7800,
+ "cells": {
+  "base/E3/desc": 4000,
+  "base/E3/ex2": 3800
+ },
+ "items_sha256": "7ab2e68563a7d52793c3fc8f1a7c6fc2aecb5873d2a43394946a9fa83fbc9532",
+ "key_sha256": "562b793d03a625e6f1bc0ab4e7e4b2a53d10215c54f3f831d8fcb87bd4f103da",
+ "code_sha256": "f85a470d82a6cadd476ce3804f3aa90f9d5c404deb0c956b15ad30e729e282c6",
+ "rubric_sha256": "42d82e2dbd862d7b067f3264ae004de07118d9cf2425e4656d0e5f4e139508e7",
+ "sources": {
+  "experiments/q1_emergence/261008_base_persona_map/run_rep/replies.jsonl": "e0fc4ebb77533f9185c494d9184a9487b371193507063a5809b6c8614769cde2",
+  "experiments/q1_emergence/261008_base_persona_map/run_main/replies.jsonl": "443add45b5b44e06e6e55309fb71f31bc336b1fa110401843b1ae9105a8fe4dd",
+  "experiments/q1_emergence/261029_instruct_persona_map/run_full/rows.jsonl": "ddb34fab81c9253eb80753275348de4beff950ac4304ad1c7228450c2606eac9"
+ },
+ "podb_run": null,
+ "out_dir": "/Users/brendon/persona-manifolds/judge_validation_261029"
+}

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stage reply read</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --paper:#f5f5f5; --ink:#171717; --soft:#5c5c5c; --rule:#d4d4d4; --sig:#0b7366; --card:#ffffff; --no:#8a3b12; }
+:root[data-theme="night"] { --paper:#121414; --ink:#ececec; --soft:#a3a3a3; --rule:#2e3333; --sig:#17cfb9; --card:#1a1d1d; --no:#e0956a; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.55 "Hanken Grotesk", system-ui, sans-serif; }
+main { max-width:1320px; margin:0 auto; padding:20px 16px 90px; }
+.narrow { max-width:780px; }
+header { display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; border-bottom:1px solid var(--rule); padding-bottom:10px; }
+h1 { font-size:24px; margin:0 0 6px; }
+h2 { font-size:19px; margin:24px 0 8px; }
+.meta { color:var(--soft); font-size:15px; }
+.num { font-variant-numeric:tabular-nums; }
+button { font:inherit; color:var(--ink); background:var(--card); border:1px solid var(--rule); border-radius:4px; padding:7px 13px; cursor:pointer; }
+button:hover { border-color:var(--sig); }
+.link { border:none; background:none; padding:0; color:var(--sig); text-decoration:underline; text-underline-offset:3px; }
+.short { background:var(--card); border-left:4px solid var(--sig); padding:14px 18px; margin:16px 0; }
+.label { font-size:14px; font-weight:700; color:var(--soft); margin:18px 0 4px; letter-spacing:.02em; }
+.role { font-size:26px; font-weight:700; }
+.signs div { margin:2px 0; }
+.input { white-space:pre-wrap; font:15px/1.5 ui-monospace, "SF Mono", Menlo, monospace; background:var(--card); border:1px solid var(--rule); border-left:4px solid var(--soft); padding:12px 14px; border-radius:4px; }
+.cols { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:14px; margin-top:8px; }
+@media (max-width: 1000px) { .cols { grid-template-columns:1fr; } }
+.card { background:var(--card); border:1px solid var(--rule); border-radius:4px; padding:12px 14px; display:flex; flex-direction:column; }
+.card h3 { margin:0; font-size:18px; }
+.card .stop { font-size:14px; color:var(--soft); margin-bottom:8px; }
+.reply { white-space:pre-wrap; font-size:16.5px; border-left:3px solid var(--sig); padding-left:10px; flex:1; }
+.ask { margin-top:12px; border-top:1px solid var(--rule); padding-top:10px; }
+.ask .q { font-size:15px; font-weight:700; margin-bottom:8px; }
+.yn button { font-size:17px; padding:7px 20px; margin-right:8px; }
+.yn button.on.yes { background:var(--sig); border-color:var(--sig); color:var(--paper); }
+.yn button.on.no { background:var(--no); border-color:var(--no); color:var(--paper); }
+.choices { display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
+.choices button { font-size:14px; padding:4px 9px; }
+.choices button.on { background:var(--sig); border-color:var(--sig); color:var(--paper); }
+textarea { width:100%; font:inherit; font-size:15px; color:var(--ink); background:var(--paper); border:1px solid var(--rule); border-radius:4px; padding:7px; margin-top:6px; }
+.nav { display:flex; gap:10px; align-items:center; margin-top:22px; flex-wrap:wrap; }
+ul { padding-left:22px; } li { margin:4px 0; }
+details summary { cursor:pointer; color:var(--soft); font-size:15px; margin-top:8px; }
+.hide { display:none; }
+.dots { display:flex; flex-wrap:wrap; gap:4px; margin-top:8px; }
+.dots button { font-size:13px; padding:2px 7px; min-width:30px; }
+.dots button.full { border-color:var(--sig); color:var(--sig); }
+.dots button.part { border-style:dashed; }
+.dots button.here { background:var(--ink); color:var(--paper); }
+</style></head><body><main>
+<p id="nojs" style="border:1px solid var(--rule);padding:12px 14px;border-radius:4px">This page needs JavaScript. Ask Claude to open the reading page.</p>
+
+<section id="guide" class="hide narrow">
+<h1>Stage reply read: Instruct, SFT and DPO</h1>
+<div class="meta">The run rule: I read 20 transcripts per stage before any number.</div>
+<div class="short">
+Each screen holds one prompt. I see the exact text the model got, then three replies to it: Instruct (pod A), SFT and DPO.
+All three got the same input and the same seed. For each reply I press <b>Yes</b> or <b>No</b>. There are 20 prompts and 60 replies. Every click saves at once, so I can stop and come back.
+</div>
+<h2>The question for each reply</h2>
+<ul>
+<li><b>Role prompts:</b> does this reply play the role, and does it make sense as an answer?</li>
+<li><b>The default prompt</b> (no role): does this read as the model's normal assistant voice, and does it make sense?</li>
+</ul>
+<h2>Same scheme as the 12 Nov review</h2>
+<ul>
+<li>Yes: the reply shows the role clearly, in all of it or in part of it. It may stop mid-sentence at the 128-token cap.</li>
+<li>No: a plain answer anyone could give, only the role's name, polite advice with nothing of the role, a different role, or nonsense.</li>
+<li>Doing the role's job counts: a translator who translates the question is in role.</li>
+<li>Optional: an outcome class, and a note per reply. A note box for the whole prompt is at the bottom.</li>
+</ul>
+<h2>What this page does not show</h2>
+<ul><li>No judge label and no number from the states. The stage names are shown on purpose: this is a read of what each stage does, not a blind label set.</li></ul>
+<div class="nav"><button id="start">Start reading</button></div>
+</section>
+
+<section id="work" class="hide">
+<header><span><b>Prompt <span class="num" id="pos"></span> of 20</b> · <span class="meta" id="keyline"></span></span>
+<span class="meta"><span class="num" id="count"></span> of 60 replies done · <span id="saved"></span> · <button class="link" id="openguide">Guide</button> · <button class="link" id="theme">night</button></span></header>
+<div class="dots" id="dots"></div>
+
+<div class="label">THE ROLE</div>
+<div class="role" id="role"></div>
+<div id="definition"></div>
+<div class="signs meta" id="signs"></div>
+
+<div class="label">EXACT MODEL INPUT (the same for all three stages; special tokens shown)</div>
+<div class="input" id="input"></div>
+
+<div class="label">THE THREE REPLIES</div>
+<div class="cols" id="cols"></div>
+
+<div class="label">NOTE ON THIS PROMPT (optional)</div>
+<textarea id="knote" rows="2"></textarea>
+
+<div class="nav"><button id="prev">Previous</button><button id="next">Next</button><button id="nextopen">Next unfinished</button>
+<span style="flex:1"></span><span class="meta">Arrow keys move between prompts.</span></div>
+</section>
+</main>
+<script>
+document.getElementById("nojs").remove();
+const DATA = __DATA__;
+const KEY = "ownread-" + DATA.items_sha256;
+let labels = {}, i = 0, timer = null;
+const $ = id => document.getElementById(id);
+try { labels = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
+try { if (localStorage.getItem("theme") === "night") document.documentElement.dataset.theme = "night"; } catch (e) {}
+function esc(s) { const d = document.createElement("div"); d.textContent = s; return d.innerHTML; }
+function lab(id) { return labels[id] || (labels[id] = {}); }
+function done(id) { const l = labels[id]; return !!(l && (l.pass === "yes" || l.pass === "no")); }
+function nDone(it) { return it.replies.filter(r => done(it.id + ":" + r.stage)).length; }
+function total() { return DATA.items.reduce((a, it) => a + nDone(it), 0); }
+function save() {
+  try { localStorage.setItem(KEY, JSON.stringify(labels)); } catch (e) {}
+  clearTimeout(timer);
+  timer = setTimeout(() => fetch("/labels", { method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ set: DATA.set, items_sha256: DATA.items_sha256, savedAt: new Date().toISOString(), labels }) })
+    .then(r => r.ok ? r.json() : Promise.reject()).then(merged => { for (const k in merged) if (!labels[k] || (merged[k].updatedAt || "") > (labels[k].updatedAt || "")) labels[k] = merged[k]; $("saved").textContent = "saved"; })
+    .catch(() => { $("saved").textContent = "NOT saved"; }), 250);
+}
+function touch(id) { lab(id).updatedAt = new Date().toISOString(); save(); }
+function signs(c) {
+  if (!c) return "";
+  const parts = c.role_act.split("; "), yes = [], no = [];
+  for (const p of parts) { if (p.endsWith(" conflicts")) no.push(p.slice(0, -10)); else yes.push(p); }
+  if (c.speech === "limited") yes.push("short, simple or broken speech");
+  if (c.ai_talk === "fits") yes.push("talk of being a machine or an AI");
+  if (c.ai_talk === "conflicts") no.push("talk of being an AI");
+  let h = "<div><b>Signs of this role:</b> " + esc(yes.join("; ")) + ".</div>";
+  if (no.length) h += "<div><b>Does not fit:</b> " + esc(no.join("; ")) + ".</div>";
+  return h;
+}
+function stopText(r) { return (r.stop === "eos" ? "stopped by itself" : r.stop === "limit" ? "cut at the 128-token cap" : "stop: " + r.stop) + " · " + r.kept + " tokens" + (r.valid ? "" : " · INVALID"); }
+function dots() {
+  $("dots").innerHTML = "";
+  DATA.items.forEach((it, j) => {
+    const b = document.createElement("button"), n = nDone(it);
+    b.textContent = it.n; b.title = it.role + ": " + n + " of 3 done";
+    b.className = (n === 3 ? "full" : n ? "part" : "") + (j === i ? " here" : "");
+    b.onclick = () => { i = j; show(); window.scrollTo(0, 0); };
+    $("dots").appendChild(b);
+  });
+}
+function show() {
+  const it = DATA.items[i];
+  $("pos").textContent = it.n;
+  $("keyline").textContent = "wording " + it.wording + " · question " + it.question_id + " · replicate " + it.replicate;
+  $("count").textContent = total();
+  $("role").textContent = it.role === "default" ? "default (no role)" : it.role;
+  $("definition").textContent = it.definition || "The default prompt gives the model no role. Wording " + it.wording + " of the 5 default wordings.";
+  $("signs").innerHTML = signs(it.contract);
+  $("input").textContent = it.input;
+  const q = it.role === "default" ? "Normal assistant voice, and makes sense?" : "Plays the " + it.role + ", and makes sense?";
+  $("cols").innerHTML = "";
+  it.replies.forEach(r => {
+    const id = it.id + ":" + r.stage, l = labels[id] || {};
+    const card = document.createElement("div"); card.className = "card";
+    card.innerHTML = '<h3>' + esc(r.name) + '</h3><div class="stop">' + esc(stopText(r)) + '</div><div class="reply"></div>' +
+      '<div class="ask"><div class="q">' + esc(q) + '</div><div class="yn"><button class="yes">Yes</button><button class="no">No</button></div>' +
+      '<details><summary>Class and note (optional)</summary><div class="choices"></div><textarea rows="2" placeholder="Note on this reply"></textarea></details></div>';
+    card.querySelector(".reply").textContent = r.reply;
+    const yes = card.querySelector(".yes"), no = card.querySelector(".no");
+    yes.classList.toggle("on", l.pass === "yes"); no.classList.toggle("on", l.pass === "no");
+    yes.onclick = () => { lab(id).pass = "yes"; touch(id); show(); };
+    no.onclick = () => { lab(id).pass = "no"; touch(id); show(); };
+    const ch = card.querySelector(".choices");
+    DATA.classes.forEach(([k, name]) => { const b = document.createElement("button"); b.textContent = name; b.classList.toggle("on", l.class === k);
+      b.onclick = () => { lab(id).class = l.class === k ? "" : k; touch(id); show(); }; ch.appendChild(b); });
+    const ta = card.querySelector("textarea"); ta.value = l.note || "";
+    if (l.note || l.class) card.querySelector("details").open = true;
+    ta.oninput = e => { lab(id).note = e.target.value; touch(id); };
+    $("cols").appendChild(card);
+  });
+  const kn = labels[it.id + ":note"] || {};
+  $("knote").value = kn.note || "";
+  dots();
+}
+$("knote").oninput = e => { const id = DATA.items[i].id + ":note"; lab(id).note = e.target.value; touch(id); };
+function view(name) { $("guide").classList.toggle("hide", name !== "guide"); $("work").classList.toggle("hide", name !== "work"); window.scrollTo(0, 0); if (name === "work") show(); }
+function go(d) { i = Math.max(0, Math.min(DATA.items.length - 1, i + d)); show(); window.scrollTo(0, 0); }
+$("prev").onclick = () => go(-1); $("next").onclick = () => go(1);
+$("nextopen").onclick = () => { const order = DATA.items.map((_, k) => (i + 1 + k) % DATA.items.length); const f = order.find(k => nDone(DATA.items[k]) < 3); if (f !== undefined) { i = f; show(); window.scrollTo(0, 0); } };
+$("start").onclick = () => view("work"); $("openguide").onclick = () => view("guide");
+$("theme").onclick = () => { const night = document.documentElement.dataset.theme !== "night"; document.documentElement.dataset.theme = night ? "night" : ""; $("theme").textContent = night ? "paper" : "night"; try { localStorage.setItem("theme", night ? "night" : "paper"); } catch (e) {} };
+document.addEventListener("keydown", e => {
+  if (e.target.tagName === "TEXTAREA" || $("work").classList.contains("hide")) return;
+  if (e.key === "ArrowRight") go(1); else if (e.key === "ArrowLeft") go(-1);
+});
+$("saved").textContent = "autosave on";
+function begin() { const f = DATA.items.findIndex(x => nDone(x) < 3); i = f < 0 ? 0 : f; view(total() ? "work" : "guide"); }
+fetch("/labels").then(r => r.json()).then(d => { if (d.labels) labels = Object.assign(labels, d.labels); begin(); }).catch(begin);
+</script></body></html>

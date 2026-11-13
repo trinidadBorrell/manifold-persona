@@ -1,0 +1,325 @@
+"""CPU tests for analysis_v12.py on synthetic data (no real replies or states are read).
+
+    .venv/bin/python -m pytest experiments/q1_emergence/261112_stage_own_replies/test_analysis_v12.py -q
+"""
+import hashlib
+import json
+from pathlib import Path
+
+import numpy as np
+import pytest
+
+import importlib.util
+import sys
+
+HERE = Path(__file__).resolve().parent
+spec = importlib.util.spec_from_file_location("analysis_v12", HERE / "analysis_v12.py")
+A = importlib.util.module_from_spec(spec)
+sys.modules["analysis_v12"] = A
+spec.loader.exec_module(A)
+CR = A.CR
+
+ROLES = ["assistant", "translator", "counselor", "consultant", "chef", "detective", "bartender", "criminal", "toddler",
+         "teenager", "grandparent", "refugee", "cynic", "optimist", "stoic", "narcissist", "pirate", "vampire", "robot",
+         "void"]
+WORDS = "sea moon tea code law song dark gold wind fire rain salt iron milk sand gift".split()
+
+
+def grid(n_rep=1, nq=40):
+    return [dict(role=r, format="chat", wording=w, question=q, replicate=k, valid=True)
+            for r in ROLES + ["default"] for w in range(5) for q in range(10, 10 + nq) for k in range(n_rep)]
+
+
+def synth(meta, dim=12, default_at=3.0, seed=0, noise=0.3):
+    rng = np.random.default_rng(seed)
+    e = np.eye(dim)
+    level = {r: v for r, v in zip(ROLES, np.linspace(-1.5, 1.5, len(ROLES)))}
+    level["assistant"] = 1.4
+    sd = np.std(list(level.values()), ddof=1)
+    level["default"] = default_at * sd
+    other = {r: rng.normal(0, 0.15, dim) for r in ROLES + ["default"]}
+    qoff = {q: rng.normal(0, 0.2, dim) for q in {m["question"] for m in meta}}
+    X = np.array([level[m["role"]] * e[0] + other[m["role"]] + qoff[m["question"]] + rng.normal(0, noise, dim)
+                  for m in meta])
+    return X
+
+
+def test_shift_and_scale_match_recompute():
+    meta = grid()
+    X = synth(meta)
+    mask = np.ones(len(meta), bool)
+    cs = CR.cell_sums(X, meta, mask)
+    v = np.random.default_rng(1).normal(size=X.shape[1])
+    d = np.array([m["role"] == "default" for m in meta])
+    X2 = X.copy()
+    X2[d] += v
+    ref = CR.cell_sums(X2, meta, mask)
+    got = A.shift_default(cs, v)
+    assert np.allclose(got["S1"], ref["S1"]) and np.allclose(got["S2"], ref["S2"])
+    k = 1.5
+    X3 = X.copy()
+    w = np.array([m["wording"] for m in meta])
+    for ww in range(5):
+        sel = d & (w == ww)
+        m = X[sel].mean(0)
+        X3[sel] = m + np.sqrt(k) * (X[sel] - m)
+    ref = CR.cell_sums(X3, meta, mask)
+    got = A.scale_default(cs, k)
+    assert np.allclose(got["S1"], ref["S1"]) and np.allclose(got["S2"], ref["S2"])
+
+
+def test_planted_shift_and_scale_pass_on_clear_axis():
+    meta = grid()
+    X = synth(meta, noise=0.1)
+    draws = A.make_draws(20, 40, n=50)
+    rec, arr = A.source_stats(X, meta, np.ones(len(meta), bool), None, draws, map_check=False)
+    for d, x in rec["planted"]["shifts"].items():
+        assert abs(x["moved_signed"] - float(d)) <= 0.1 * float(d)
+        assert abs(x["spread_moved"]) < 1e-9
+    for k, x in rec["planted"]["scales"].items():
+        assert abs(x["spread_moved"] - x["target"]) < 1e-9
+    assert rec["point"]["position"] > 2  # the default was placed at +3 role SD on the assistant side
+    assert rec["dropped_draws"] == 0 and np.isfinite(arr["position"]).all()
+
+
+def test_sign_follows_reference_profile_not_feature_sign():
+    meta = grid()
+    X = synth(meta)
+    draws = A.make_draws(20, 40, n=20)
+    m = np.ones(len(meta), bool)
+    ref_rec, ref_arr = A.source_stats(X, meta, m, None, draws, map_check=False)
+    neg_rec, neg_arr = A.source_stats(-X, meta, m, ref_arr["profile"], draws, map_check=False)
+    assert neg_rec["profile_corr"] == pytest.approx(1.0)
+    assert neg_rec["point"]["position"] == pytest.approx(ref_rec["point"]["position"])
+    assert np.allclose(neg_arr["position"], ref_arr["position"])
+
+
+def test_map_gate_and_lu_run_on_synthetic():
+    meta = grid()
+    X = synth(meta)
+    A.N_MAP_DRAWS, keep = 30, A.N_MAP_DRAWS
+    try:
+        rec, arr = A.source_stats(X, meta, np.ones(len(meta), bool), None, A.make_draws(20, 40, n=10))
+    finally:
+        A.N_MAP_DRAWS = keep
+    assert rec["map_gate"]["passed"] and rec["map_gate"]["raw_r"] > 0.5
+    assert rec["lu"]["available"] and rec["lu"]["scaled_position"] > 1  # beyond the assistant-side end
+
+
+def test_han_exact_permutation():
+    rng = np.random.default_rng(0)
+    D = 6
+    base = rng.normal(size=(21, D))
+    later = base.copy()
+    default = base[-1]
+    for r in A.DESIRABLE:
+        i = ROLES.index(r)
+        later[i] = later[i] + 0.8 * (default - base[:-1].mean(0))
+    out = A.han_group_test({"a": base, "b": later}, ROLES, [("a", "b")])
+    allr = out["a_to_b_raw_all"]
+    assert allr["n_splits"] == 252 and allr["gap"] > 0 and allr["p_exact"] == pytest.approx(2 / 252)
+    assert sorted(out["a_to_b_raw_change_all_roles"]) == sorted(ROLES)
+    assert out["a_to_b_raw_no_borderline"]["n_splits"] == 70
+
+
+def test_key_and_first16_checks_catch_errors():
+    meta = grid(nq=2)
+    rows = {s: [dict(r) for r in meta] for s in A.STAGES}
+    keys = [A.row_key(r) for r in meta]
+    kj = {s: dict(row_index=list(range(len(meta))), keys=list(keys)) for s in A.STAGES}
+    assert A.check_keys(rows, kj) == len(meta)
+    rows["dpo"][0], rows["dpo"][1] = rows["dpo"][1], rows["dpo"][0]
+    with pytest.raises(A.InputError):
+        A.check_keys(rows, kj)
+    rr = [dict(r, n_kept=20 if i % 3 else 5) for i, r in enumerate(meta)]
+    fin = np.array([r["n_kept"] >= 16 for r in rr])
+    roles = np.array([r["role"] for r in rr])
+    sup = dict(n_finite_rows=int(fin.sum()), share={r: float(fin[roles == r].mean()) for r in set(roles)})
+    A.check_first16(rr, fin, sup)
+    bad = fin.copy()
+    bad[np.where(fin)[0][0]] = False
+    with pytest.raises(A.InputError):
+        A.check_first16(rr, bad, sup)
+    arr = np.ones((4, 2, 3), np.float16)
+    arr[1] = np.nan
+    assert A.finite_rows(arr).tolist() == [True, False, True, True]
+    arr[2, 0, 0] = np.nan
+    with pytest.raises(A.InputError):
+        A.finite_rows(arr)
+
+
+def test_support_check():
+    meta = grid()
+    m = np.ones(len(meta), bool)
+    assert A.support_check(meta, m)["passed"]
+    m[[i for i, r in enumerate(meta) if r["role"] == "toddler" and r["wording"] == 2]] = False
+    s = A.support_check(meta, m)
+    assert not s["passed"] and "toddler wording 2" in s["failures"]
+
+
+def test_p3_rates():
+    rng = np.random.default_rng(0)
+    d = rng.normal(5.0, 0.1, 4000)  # a real offset of 5 must not matter: draws are centred
+    r = A.p3_rates(d, d.copy(), (0.05, 0.5))
+    assert r["rates"]["0.5"]["rate"] > 0.98 and r["rates"]["0.05"]["rate"] < 0.2 and r["smallest_with_80pct"] == 0.5
+    assert set(r["rates"]["0.5"]) == {"planted_increase", "planted_decrease", "rate"}
+    assert r["rates"]["0.5"]["planted_increase"]["wrong_direction"] == 0.0
+
+
+def test_readings():
+    assert A.reading_position(2.1, 3.0, 2.5) == "high end"
+    assert A.reading_position(2.0, 3.0, 2.5) == "not at one end"  # "beyond 2" is strict
+    assert A.reading_position(-3.0, -2.0, -2.5) == "not at one end"
+    assert A.reading_position(1.9, 3.0, 2.5) == "not at one end"
+    assert A.reading_position(-3.0, -2.1, -2.5) == "low end"
+    assert A.reading_sign(0.1, 0.3, "wider", "tighter") == "wider"
+    assert A.reading_sign(-0.1, 0.3) == "interval includes 0"
+    assert A.combine({"full": "tighter", "first16": "tighter"}) == "tighter"
+    assert A.combine({"full": "tighter", "first16": "interval includes 0"}) == "length-dependent"
+    assert A.combine({"full": "not read", "first16": "tighter"}) == "not read"
+
+
+class FakeTok:
+    def decode(self, ids, skip_special_tokens=False):
+        return " ".join(WORDS[i % len(WORDS)] for i in ids)
+
+
+def sha(p):
+    return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+
+
+def fake_root(tmp, n_rep=1, invalid=None):
+    """A small outputs volume with the real layout: three stages, pod A sums, length control, receipts.
+    invalid: {stage: [row indices]} marks rows invalid (NaN states, not eligible for first16)."""
+    meta = grid(n_rep=n_rep)
+    invalid = invalid or {}
+    rng = np.random.default_rng(3)
+    receipts = []
+    for j, s in enumerate(A.STAGES):
+        d = A.run_dir(tmp, s)
+        d.mkdir(parents=True)
+        X = synth(meta, dim=8, seed=j)
+        acts = np.zeros((len(meta), 33, 8), np.float16)
+        for k in (9, 17, 23):
+            acts[:, k] = X + k * 0.01
+        ok_rows = np.ones(len(meta), bool)
+        ok_rows[invalid.get(s, [])] = False
+        acts[~ok_rows] = np.nan
+        np.save(d / "reply_mean_acts.npy", acts)
+        lens = rng.integers(10, 60, len(meta))
+        with open(d / "rows.jsonl", "w") as f:
+            for r, L, v in zip(meta, lens, ok_rows):
+                ids = rng.integers(0, 50, L).tolist()
+                f.write(json.dumps(dict(r, valid=bool(v), kept_ids=ids, reply=FakeTok().decode(ids))) + "\n")
+        (d / "manifest.json").write_text(json.dumps(dict(acts_shape=[len(meta), 33, 8])))
+        lc = A.lc_dir(tmp, s)
+        lc.mkdir(parents=True)
+        f16 = np.full((len(meta), 4, 8), np.nan, np.float16)
+        ok = (lens >= 16) & ok_rows
+        for i, k in enumerate((0, 9, 17, 23)):
+            f16[ok, i] = acts[ok, k] * 0.9
+        np.save(lc / "first16_acts.npy", f16)
+        roles = np.array([r["role"] for r in meta])
+        (lc / "keys.json").write_text(json.dumps(dict(row_index=list(range(len(meta))), keys=[A.row_key(r) for r in meta])))
+        (lc / "support.json").write_text(json.dumps(dict(first16=dict(
+            n_finite_rows=int(ok.sum()), share={r: float(ok[roles == r].mean()) for r in set(roles)}))))
+        (lc / "manifest.json").write_text(json.dumps(dict(states=[0, 9, 17, 23])))
+        files = [lc / n for n in ("first16_acts.npy", "keys.json", "support.json", "manifest.json")]
+        if s == "instruct":
+            (d / "SHA256SUMS.txt").write_text("".join(f"{sha(d / n)}  {n}\n" for n in
+                                                      ("rows.jsonl", "reply_mean_acts.npy", "manifest.json")))
+        else:
+            files += [d / n for n in ("rows.jsonl", "reply_mean_acts.npy", "manifest.json")]
+        rp = Path(tmp) / f"receipt_{s}.json"
+        rp.write_text(json.dumps(dict(files=[dict(volume_path=str(f), sha256=sha(f)) for f in files])))
+        receipts.append(rp)
+    return receipts
+
+
+def test_end_to_end_on_fake_volume(tmp_path, monkeypatch):
+    receipts = fake_root(tmp_path)
+    monkeypatch.setattr(A, "PODA_SUMS_SHA256", sha(A.run_dir(tmp_path, "instruct") / "SHA256SUMS.txt"))
+    monkeypatch.setattr(A, "N_DRAWS", 120)
+    monkeypatch.setattr(A, "N_MAP_DRAWS", 20)
+    monkeypatch.setattr(A, "TEXT_DIMS", 16)
+    out = tmp_path / "analysis"
+    r = A.prep(tmp_path, out, receipts, {s: FakeTok() for s in A.STAGES}, volume_root=tmp_path)
+    assert r["support_passed"] and r["n_common"] < r["n_rows"]
+    with pytest.raises(A.InputError):
+        A.prep(tmp_path, out, receipts, {s: FakeTok() for s in A.STAGES}, volume_root=tmp_path)
+    for st, v, f in A.all_sources():
+        A.source(tmp_path, out, st, v, f)
+    pw = A.power(out)
+    assert pw["passed"], {k: v for k, v in pw["P1"].items() if "s17" in k}
+    assert "moved_abs" not in json.dumps(pw)  # no absolute response before the measurement
+    res = A.measure(out)
+    assert res["n_confirmatory"] == 10 and len(res["confirmatory"]) == 10
+    assert res["confirmatory"]["1_position_sft"]["views"]["full"] in ("high end", "not at one end", "low end", "not read")
+    assert set(res["report_only"]["han_group_test"]) == {"full", "first16"}
+    smt = res["report_only"]["state_minus_text"]["sft_full"]["position"]
+    assert set(smt["gates_passed"]) == {"state", "text"} and smt["n_paired"] == 120
+    assert len(res["report_only"]["planted_absolute_response"]) == 30
+    # resume: a source counts only with a matching fingerprint and array hash
+    prep_rec = A.read_prep(out)
+    assert A.source_problem(out, prep_rec, "dpo", "full", "s17") is None
+    z = out / "sources/dpo_full_s17.npz"
+    arr = dict(np.load(z))
+    arr["position"] = arr["position"] + 1
+    np.savez(z, **arr)
+    assert A.source_problem(out, prep_rec, "dpo", "full", "s17") == "arrays differ from the recorded hash"
+    with pytest.raises(A.InputError):
+        A.measure(out)
+    (out / "mask_first16.npy").write_bytes((out / "mask_first16.npy").read_bytes() + b" ")
+    with pytest.raises(A.InputError):
+        A.source(tmp_path, out, "sft", "first16", "s17")
+
+
+def test_each_stage_uses_its_own_valid_flags(tmp_path, monkeypatch):
+    receipts = fake_root(tmp_path, invalid={"dpo": [3, 4], "instruct": [7]})
+    monkeypatch.setattr(A, "PODA_SUMS_SHA256", sha(A.run_dir(tmp_path, "instruct") / "SHA256SUMS.txt"))
+    monkeypatch.setattr(A, "N_DRAWS", 20)
+    monkeypatch.setattr(A, "N_MAP_DRAWS", 10)
+    monkeypatch.setattr(A, "TEXT_DIMS", 16)
+    out = tmp_path / "analysis"
+    r = A.prep(tmp_path, out, receipts, {s: FakeTok() for s in A.STAGES}, volume_root=tmp_path)
+    n = r["n_rows"]
+    assert json.loads((out / "prep.json").read_text())["n_valid"] == {"sft": n, "dpo": n - 2, "instruct": n - 1}
+    for st, want in (("sft", n), ("dpo", n - 2), ("instruct", n - 1)):
+        A.source(tmp_path, out, st, "full", "s17")
+        assert json.loads((out / f"sources/{st}_full_s17.json").read_text())["n_rows"] == want
+
+
+def test_lu_scale_matches_check3_on_balanced_rows():
+    meta = grid(n_rep=2)
+    X = synth(meta)
+    mask = np.ones(len(meta), bool)
+    cs = CR.cell_sums(X, meta, mask)
+    draws = A.make_draws(20, 40, n=5)
+    ref = A.role_pc1(cs, 20)[1]
+    lu, dd = A.lu_scale(cs, ref, draws)
+    P = A.LU.question_means(X, meta, cs["clouds"])
+    assert lu["distance_to_nearer_end"] == pytest.approx(A.LU.lu_position(P, np.ones(40))[0])
+    w = draws["wa"][0] + draws["wb"][0]
+    assert dd[0] == pytest.approx(A.LU.lu_position(P, w)[0])
+
+
+def test_nonfinite_draws_are_counted(monkeypatch):
+    meta = grid()
+    X = synth(meta)
+    cs = CR.cell_sums(X, meta, np.ones(len(meta), bool))
+    u = A.role_pc1(cs, 20)[0]
+    calls = iter(range(100))
+    real = CR.position
+    monkeypatch.setattr(CR, "position", lambda *a, **k: np.nan if next(calls) == 2 else real(*a, **k))
+    pos, spr, empty, nonfinite = A.draw_stats(cs, u, A.make_draws(20, 40, n=6))
+    assert (empty, nonfinite) == (0, 1) and np.isnan(pos[2])
+
+
+def test_input_check_catches_changed_file(tmp_path, monkeypatch):
+    receipts = fake_root(tmp_path)
+    monkeypatch.setattr(A, "PODA_SUMS_SHA256", sha(A.run_dir(tmp_path, "instruct") / "SHA256SUMS.txt"))
+    A.check_inputs(tmp_path, receipts, tmp_path)
+    p = A.lc_dir(tmp_path, "dpo") / "keys.json"
+    p.write_text(p.read_text() + " ")
+    with pytest.raises(A.InputError):
+        A.check_inputs(tmp_path, receipts, tmp_path)

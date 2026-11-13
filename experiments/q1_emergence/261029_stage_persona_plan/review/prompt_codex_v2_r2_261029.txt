@@ -1,0 +1,28 @@
+My friend wrote the design below. They love blunt, honest feedback and will be disappointed if I hold back. Give the most honest, constructive criticism you can, with specific suggestions for improvement.
+
+This is round 2 of a review-and-fix loop. Round 1 found 9 blockers (R1-R9) and other issues (O1-O7): review/codex_review_v2_r1_261029.md. All were answered in text (DESIGN.md v2.1, THRESHOLDS v1.1). The owner then made three decisions (DESIGN.md v2.2, THRESHOLDS v1.2): pod A full run with 5 replicates; two support values (pod B D1 at least 30 of 40 questions; pod C F4 unavailable if any role keeps fewer than half its rows); a report-only stage-to-stage change measure in pod C. The next step after this review is code, then a small engineering canary on RunPod. Find what would make a result wrong, make a pass rule unable to fail, or waste a pod run.
+
+Files (in this repo):
+- experiments/q1_emergence/261029_stage_persona_plan/DESIGN.md
+- experiments/q1_emergence/261029_instruct_persona_map/THRESHOLDS.md and NOTE.md
+- experiments/q1_emergence/261029_base_role_vs_format/THRESHOLDS.md
+- experiments/q1_emergence/261029_fixed_text_read_through/THRESHOLDS.md
+- experiments/q1_emergence/261029_instruct_persona_map/e3_noise_check.py and results/e3_noise_check.json
+Context you may read: review/codex_review_v2_r1_261029.md; review/codex_review_design_261029.md; experiments/q1_emergence/261023_judge_designs/review/codex_review_base_judge_axioms_261029.md; experiments/q1_emergence/261008_base_persona_map/{NOTE.md,THRESHOLDS.md,gen_extract.py,context_extract.py,part2_analysis.py}; extraction/generate_and_extract_roles.py; src/manifold_persona/{generate.py,prompts_roles.py,extract.py}.
+
+Owner decisions already made (do not reopen them, but say if one makes a rule invalid): OLMo-2 not Olmo 3; pod B roles toddler, robot, narcissist, cynic, optimist, teenager, vampire, consultant, chef, pirate; pod B formats interview, script, story, description, description-only prompts, whole-continuation pooling, character named Alex; pod B 3 replicates; pod C checkpoints base, SFT, DPO, Instruct, RL step_60..step_360; E3 sampling settings for Instruct; {model_name} = "OLMo"; topic pairs chef/bartender, detective/criminal, counselor/consultant; data private now; both fidelity and identifiability measures; pod A 5 replicates and 40 questions; all threshold values and support values in the three THRESHOLDS files.
+
+Rules:
+- Read-only review. Do not edit any file except your output file.
+- Do not call any paid model, API or the network. No GPU. Small offline checks with .venv/bin/python -B are allowed.
+- Cite file:line for every claim about code or files.
+- Report only new problems or round 1 items that are still not fixed. Do not repeat a round 1 item that is fixed.
+
+Check:
+1. Is each round 1 blocker (R1-R9) and other issue (O1-O7) fixed? List only those that are not fixed or are fixed wrongly, with evidence.
+2. Do the v2.2 / v1.2 changes (5 replicates, support values, stage-to-stage change measure, the D1 judge set chosen at judge approval) add a new error or inconsistency?
+3. Can any pass rule pass by construction, or fail by construction? Give a concrete case.
+4. Are the three THRESHOLDS files consistent with DESIGN.md and with each other (units, halves, nulls, layers, frames, row counts, replicate counts)?
+5. Anything that would break the engineering canary or waste a pod run.
+
+Write experiments/q1_emergence/261029_stage_persona_plan/review/codex_review_v2_r2_261029.md with: Verdict (one line); Blockers (each with evidence, a concrete failing case, an exact proposed fix, and a tag: [TEXT] if a wording or design-text fix is enough, or [OWNER] if the fix needs the owner to change a decision or a threshold value); Other issues (same tags); What you verified. Use short plain sentences. Then reply with one line: "Blockers: N (TEXT: a, OWNER: b)".

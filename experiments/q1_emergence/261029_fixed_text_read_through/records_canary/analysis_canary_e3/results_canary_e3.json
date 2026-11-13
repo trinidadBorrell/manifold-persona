@@ -1,0 +1,539 @@
+{
+ "state": 17,
+ "checkpoints": [
+  "base",
+  "instruct"
+ ],
+ "g5": {
+  "identical_r_norm": 0.9936289604011639,
+  "rotated_r": 0.8686883438963902,
+  "scaled_r": 0.8686883438963902,
+  "identical_r": 0.8686883438963902,
+  "independent_r": 0.019848049442979174,
+  "independent_null_p": 0.387,
+  "wording_case_recorded": {
+   "r_norm": null,
+   "r_norm_minus_identical": NaN,
+   "raw_r": 0.6587068019087859
+  },
+  "pass": true
+ },
+ "e3_desc": {
+  "f3_check": {
+   "base": {
+    "max_relative_difference": 0.00566250691190362,
+    "equal": true,
+    "accuracy": 0.050333333333333334,
+    "chance": 0.05,
+    "at_chance": true
+   },
+   "instruct": {
+    "max_relative_difference": 0.006832062732428312,
+    "equal": true,
+    "accuracy": 0.051,
+    "chance": 0.05,
+    "at_chance": true
+   },
+   "pass": true
+  },
+  "D1_report": {
+   "r": {
+    "point": 0.6531591806741985,
+    "lo": 0.18864158364711756,
+    "hi": 0.6789771083056114,
+    "n_nonfinite": 0
+   },
+   "p": 0.0001,
+   "n_perm": 9999,
+   "rule": "lower bound >= 0.5 and one-map null p < 0.01",
+   "passed": false,
+   "text_anchors": {
+    "text_word": {
+     "point": 0.4474878645129403,
+     "lo": 0.07971234480959279,
+     "hi": 0.4336051575893374,
+     "n_nonfinite": 0
+    },
+    "text_char": {
+     "point": 0.4808655495632624,
+     "lo": 0.09860471421111242,
+     "hi": 0.4628630150950457,
+     "n_nonfinite": 0
+    },
+    "text_embed": {
+     "point": 0.5610060054149336,
+     "lo": 0.141914329022961,
+     "hi": 0.553256824742196,
+     "n_nonfinite": 0
+    },
+    "text_state0": {
+     "point": 0.48727067231779275,
+     "lo": 0.11015062536293554,
+     "hi": 0.522984323191041,
+     "n_nonfinite": 0
+    }
+   },
+   "minus_best_anchor": {
+    "point": 0.09215317525926492,
+    "lo": -0.006731472437489499,
+    "hi": 0.18417858563370257,
+    "n_nonfinite": 0
+   },
+   "reading": "no improvement over the tested text anchors was established"
+  },
+  "D2": {
+   "note": "report only; no transition is passed",
+   "per_stage": {
+    "base": {
+     "available": false,
+     "why": "a reliability lower bound is below the floor or not finite",
+     "raw": {
+      "point": 0.6531591806741985,
+      "lo": 0.18864158364711756,
+      "hi": 0.6789771083056114,
+      "n_nonfinite": 0
+     },
+     "rel": {
+      "base": {
+       "point": 0.646353580285793,
+       "lo": 0.1898883105167552,
+       "hi": 0.6736284697509516,
+       "n_nonfinite": 0
+      },
+      "instruct": {
+       "point": 0.661956951716114,
+       "lo": 0.19468110188122145,
+       "hi": 0.6842544517457899,
+       "n_nonfinite": 0
+      }
+     }
+    },
+    "instruct": {
+     "available": false,
+     "why": "a reliability lower bound is below the floor or not finite",
+     "raw": {
+      "point": 0.661956951716114,
+      "lo": 0.19468110188122145,
+      "hi": 0.6842544517457899,
+      "n_nonfinite": 0
+     },
+     "rel": {
+      "instruct": {
+       "point": 0.661956951716114,
+       "lo": 0.19468110188122145,
+       "hi": 0.6842544517457899,
+       "n_nonfinite": 0
+      }
+     }
+    }
+   },
+   "transitions": {
+    "base->instruct": {
+     "raw_r_difference": {
+      "point": 0.008797771041915481,
+      "lo": -0.014163782425900499,
+      "hi": 0.02505666420393256,
+      "n_nonfinite": 0
+     },
+     "r_norm_difference": "unavailable: a reliability floor failed"
+    }
+   }
+  },
+  "stage_change": {
+   "base->instruct": {
+    "r": {
+     "point": 0.6531591806741985,
+     "lo": 0.18864158364711756,
+     "hi": 0.6789771083056114,
+     "n_nonfinite": 0
+    },
+    "r_norm": {
+     "available": false,
+     "why": "a reliability lower bound is below the floor or not finite",
+     "raw": {
+      "point": 0.6531591806741985,
+      "lo": 0.18864158364711756,
+      "hi": 0.6789771083056114,
+      "n_nonfinite": 0
+     },
+     "rel": {
+      "base": {
+       "point": 0.646353580285793,
+       "lo": 0.1898883105167552,
+       "hi": 0.6736284697509516,
+       "n_nonfinite": 0
+      },
+      "instruct": {
+       "point": 0.661956951716114,
+       "lo": 0.19468110188122145,
+       "hi": 0.6842544517457899,
+       "n_nonfinite": 0
+      }
+     }
+    },
+    "cka": {
+     "point": 0.8096073547119075,
+     "lo": 0.7148928235200329,
+     "hi": 0.8950220404724542,
+     "n_nonfinite": 0
+    }
+   }
+  },
+  "F4": {
+   "available": false,
+   "support": {
+    "available": false,
+    "min_role_share": 0.3778,
+    "role_share": {
+     "assistant": 0.9,
+     "translator": 0.8667,
+     "counselor": 0.8778,
+     "consultant": 0.8889,
+     "chef": 0.8667,
+     "detective": 0.9111,
+     "bartender": 0.8667,
+     "criminal": 0.8222,
+     "toddler": 0.3778,
+     "teenager": 0.8556,
+     "grandparent": 0.8333,
+     "refugee": 0.8444,
+     "cynic": 0.7556,
+     "optimist": 0.9,
+     "stoic": 0.7222,
+     "narcissist": 0.6111,
+     "pirate": 0.8333,
+     "vampire": 0.8111,
+     "robot": 0.7,
+     "void": 0.6667
+    },
+    "halves_without_common_question": 1,
+    "min_common_questions": 0
+   }
+  }
+ },
+ "e3_ex2": {
+  "f3_check": {
+   "base": {
+    "max_relative_difference": 0.00566250691190362,
+    "equal": true,
+    "accuracy": 0.050333333333333334,
+    "chance": 0.05,
+    "at_chance": true
+   },
+   "instruct": {
+    "max_relative_difference": 0.006832062732428312,
+    "equal": true,
+    "accuracy": 0.051,
+    "chance": 0.05,
+    "at_chance": true
+   },
+   "pass": true
+  },
+  "D1_report": {
+   "r": {
+    "point": 0.9420583570619394,
+    "lo": 0.7799744745135848,
+    "hi": 0.9437478919248865,
+    "n_nonfinite": 0
+   },
+   "p": 0.0001,
+   "n_perm": 9999,
+   "rule": "lower bound >= 0.5 and one-map null p < 0.01",
+   "passed": true,
+   "text_anchors": {
+    "text_word": {
+     "point": 0.8394316156884358,
+     "lo": 0.5889345569064598,
+     "hi": 0.8486290290573029,
+     "n_nonfinite": 0
+    },
+    "text_char": {
+     "point": 0.8567942543968998,
+     "lo": 0.6229728786432314,
+     "hi": 0.8712887871883679,
+     "n_nonfinite": 0
+    },
+    "text_embed": {
+     "point": 0.7540996820148103,
+     "lo": 0.47459214430409313,
+     "hi": 0.8100752878293423,
+     "n_nonfinite": 0
+    },
+    "text_state0": {
+     "point": 0.8819126524863643,
+     "lo": 0.707530252836203,
+     "hi": 0.89795226550597,
+     "n_nonfinite": 0
+    }
+   },
+   "minus_best_anchor": {
+    "point": 0.06014570457557511,
+    "lo": 0.00804813494654385,
+    "hi": 0.114176873034888,
+    "n_nonfinite": 0
+   },
+   "reading": "base exceeds the strongest tested text-anchor agreement"
+  },
+  "D2": {
+   "note": "report only; no transition is passed",
+   "per_stage": {
+    "base": {
+     "available": true,
+     "value": {
+      "point": 0.9916276143639631,
+      "lo": 0.9768481583752097,
+      "hi": 0.9987985403700887,
+      "n_nonfinite": 0
+     },
+     "raw": {
+      "point": 0.9420583570619394,
+      "lo": 0.7799744745135848,
+      "hi": 0.9437478919248865,
+      "n_nonfinite": 0
+     },
+     "rel": {
+      "base": {
+       "point": 0.9508622166235835,
+       "lo": 0.7895380861162455,
+       "hi": 0.9485705096745889,
+       "n_nonfinite": 0
+      },
+      "instruct": {
+       "point": 0.949162994746902,
+       "lo": 0.7826659859133951,
+       "hi": 0.9450331321028762,
+       "n_nonfinite": 0
+      }
+     }
+    },
+    "instruct": {
+     "available": true,
+     "value": {
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n_nonfinite": 0
+     },
+     "raw": {
+      "point": 0.949162994746902,
+      "lo": 0.7826659859133951,
+      "hi": 0.9450331321028762,
+      "n_nonfinite": 0
+     },
+     "rel": {
+      "instruct": {
+       "point": 0.949162994746902,
+       "lo": 0.7826659859133951,
+       "hi": 0.9450331321028762,
+       "n_nonfinite": 0
+      }
+     }
+    }
+   },
+   "transitions": {
+    "base->instruct": {
+     "raw_r_difference": {
+      "point": 0.007104637684962611,
+      "lo": -0.009388686736121029,
+      "hi": 0.023960645076991013,
+      "n_nonfinite": 0
+     },
+     "r_norm_difference": {
+      "point": 0.008372385636036928,
+      "lo": 0.0012014596299112779,
+      "hi": 0.023151841624790302,
+      "n_nonfinite": 0
+     }
+    }
+   }
+  },
+  "stage_change": {
+   "base->instruct": {
+    "r": {
+     "point": 0.9420583570619394,
+     "lo": 0.7799744745135848,
+     "hi": 0.9437478919248865,
+     "n_nonfinite": 0
+    },
+    "r_norm": {
+     "available": true,
+     "value": {
+      "point": 0.9916276143639631,
+      "lo": 0.9768481583752097,
+      "hi": 0.9987985403700887,
+      "n_nonfinite": 0
+     },
+     "raw": {
+      "point": 0.9420583570619394,
+      "lo": 0.7799744745135848,
+      "hi": 0.9437478919248865,
+      "n_nonfinite": 0
+     },
+     "rel": {
+      "base": {
+       "point": 0.9508622166235835,
+       "lo": 0.7895380861162455,
+       "hi": 0.9485705096745889,
+       "n_nonfinite": 0
+      },
+      "instruct": {
+       "point": 0.949162994746902,
+       "lo": 0.7826659859133951,
+       "hi": 0.9450331321028762,
+       "n_nonfinite": 0
+      }
+     }
+    },
+    "cka": {
+     "point": 0.9431057453457028,
+     "lo": 0.8540161418218322,
+     "hi": 0.9643856787087021,
+     "n_nonfinite": 0
+    },
+    "change": {
+     "point": 0.008372385636036928,
+     "lo": 0.0012014596299112779,
+     "hi": 0.023151841624790302,
+     "n_nonfinite": 0
+    }
+   }
+  },
+  "F4": {
+   "base_instruct_r": {
+    "point": 0.9252662196503475,
+    "lo": null,
+    "hi": null,
+    "n_nonfinite": 1
+   },
+   "D2": {
+    "note": "report only; no transition is passed",
+    "per_stage": {
+     "base": {
+      "available": false,
+      "why": "a reliability lower bound is below the floor or not finite",
+      "raw": {
+       "point": 0.9252662196503475,
+       "lo": null,
+       "hi": null,
+       "n_nonfinite": 1
+      },
+      "rel": {
+       "base": {
+        "point": 0.9330000743569221,
+        "lo": null,
+        "hi": null,
+        "n_nonfinite": 1
+       },
+       "instruct": {
+        "point": 0.9266729826310979,
+        "lo": null,
+        "hi": null,
+        "n_nonfinite": 1
+       }
+      }
+     },
+     "instruct": {
+      "available": false,
+      "why": "a reliability lower bound is below the floor or not finite",
+      "raw": {
+       "point": 0.9266729826310979,
+       "lo": null,
+       "hi": null,
+       "n_nonfinite": 1
+      },
+      "rel": {
+       "instruct": {
+        "point": 0.9266729826310979,
+        "lo": null,
+        "hi": null,
+        "n_nonfinite": 1
+       }
+      }
+     }
+    },
+    "transitions": {
+     "base->instruct": {
+      "raw_r_difference": {
+       "point": 0.0014067629807503756,
+       "lo": null,
+       "hi": null,
+       "n_nonfinite": 1
+      },
+      "r_norm_difference": "unavailable: a reliability floor failed"
+     }
+    }
+   },
+   "F1_same_rows": {
+    "base_instruct_r": {
+     "point": 0.9420127631469599,
+     "lo": null,
+     "hi": null,
+     "n_nonfinite": 1
+    },
+    "D2": {
+     "note": "report only; no transition is passed",
+     "per_stage": {
+      "base": {
+       "available": false,
+       "why": "a reliability lower bound is below the floor or not finite",
+       "raw": {
+        "point": 0.9420127631469599,
+        "lo": null,
+        "hi": null,
+        "n_nonfinite": 1
+       },
+       "rel": {
+        "base": {
+         "point": 0.9507482843233739,
+         "lo": null,
+         "hi": null,
+         "n_nonfinite": 1
+        },
+        "instruct": {
+         "point": 0.9491572211506077,
+         "lo": null,
+         "hi": null,
+         "n_nonfinite": 1
+        }
+       }
+      },
+      "instruct": {
+       "available": false,
+       "why": "a reliability lower bound is below the floor or not finite",
+       "raw": {
+        "point": 0.9491572211506077,
+        "lo": null,
+        "hi": null,
+        "n_nonfinite": 1
+       },
+       "rel": {
+        "instruct": {
+         "point": 0.9491572211506077,
+         "lo": null,
+         "hi": null,
+         "n_nonfinite": 1
+        }
+       }
+      }
+     },
+     "transitions": {
+      "base->instruct": {
+       "raw_r_difference": {
+        "point": 0.0071444580036478245,
+        "lo": null,
+        "hi": null,
+        "n_nonfinite": 1
+       },
+       "r_norm_difference": "unavailable: a reliability floor failed"
+      }
+     }
+    }
+   }
+  }
+ },
+ "code": {
+  "analysis.py": "f46ed644d1f94b209d9a5bd36ba425c695ede6ec68bc76e386511e79cdfe6698",
+  "maps.py": "4c5fed4c663d0fc1afcf9146b49b2be0f397a1eb06342c430008f7066ab571fc",
+  "frames.py": "212a2de70cea4e7466189df8aad49313ca603d0794a6fac1041be402cca62b99"
+ }
+}

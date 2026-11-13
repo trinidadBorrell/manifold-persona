@@ -1,0 +1,878 @@
+{
+ "state": 17,
+ "checkpoints": [
+  "base",
+  "instruct"
+ ],
+ "g5": {
+  "identical_r_norm": 0.9936289604011639,
+  "rotated_r": 0.8686883438963902,
+  "scaled_r": 0.8686883438963902,
+  "identical_r": 0.8686883438963902,
+  "independent_r": 0.019848049442979174,
+  "independent_null_p": 0.387,
+  "wording_case_recorded": {
+   "r_norm": null,
+   "r_norm_minus_identical": NaN,
+   "raw_r": 0.6587068019087859
+  },
+  "pass": true
+ },
+ "pod_a": {
+  "f3_check": {
+   "base": {
+    "max_relative_difference": 0.0,
+    "equal": true,
+    "accuracy": 0.04999999999999999,
+    "chance": 0.05,
+    "at_chance": true
+   },
+   "instruct": {
+    "max_relative_difference": 0.0,
+    "equal": true,
+    "accuracy": 0.04999999999999999,
+    "chance": 0.05,
+    "at_chance": true
+   },
+   "pass": true
+  },
+  "D1": {
+   "r": {
+    "point": 0.8958955503943103,
+    "lo": 0.7965340637052672,
+    "hi": 0.930868918687679,
+    "n_nonfinite": 0
+   },
+   "p": 0.0001,
+   "n_perm": 9999,
+   "rule": "lower bound >= 0.5 and one-map null p < 0.01",
+   "passed": true,
+   "text_anchors": {
+    "text_word": {
+     "point": 0.8211614201297308,
+     "lo": 0.6772569752320414,
+     "hi": 0.8802952108333477,
+     "n_nonfinite": 0
+    },
+    "text_char": {
+     "point": 0.8457560655565615,
+     "lo": 0.7222380219851111,
+     "hi": 0.898641582627122,
+     "n_nonfinite": 0
+    },
+    "text_embed": {
+     "point": 0.6826324799783052,
+     "lo": 0.5331027079641265,
+     "hi": 0.8014675339639178,
+     "n_nonfinite": 0
+    },
+    "text_state0": {
+     "point": 0.8257187646253504,
+     "lo": 0.6722553512002702,
+     "hi": 0.8993751461640022,
+     "n_nonfinite": 0
+    }
+   },
+   "minus_best_anchor": {
+    "point": 0.05013948483774888,
+    "lo": 0.01435911949386062,
+    "hi": 0.0868320706990658,
+    "n_nonfinite": 0
+   },
+   "reading": "base exceeds the strongest tested text-anchor agreement"
+  },
+  "D2": {
+   "note": "report only; no transition is passed",
+   "per_stage": {
+    "base": {
+     "available": true,
+     "value": {
+      "point": 0.9963478767829413,
+      "lo": 0.9917114929359354,
+      "hi": 0.9985833924979653,
+      "n_nonfinite": 0
+     },
+     "raw": {
+      "point": 0.8958955503943103,
+      "lo": 0.7965340637052672,
+      "hi": 0.930868918687679,
+      "n_nonfinite": 0
+     },
+     "rel": {
+      "base": {
+       "point": 0.8998226106277911,
+       "lo": 0.7965838772769095,
+       "hi": 0.9358106117136248,
+       "n_nonfinite": 0
+      },
+      "instruct": {
+       "point": 0.8985367782457889,
+       "lo": 0.7996116059981049,
+       "hi": 0.932215266534708,
+       "n_nonfinite": 0
+      }
+     }
+    },
+    "instruct": {
+     "available": true,
+     "value": {
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n_nonfinite": 0
+     },
+     "raw": {
+      "point": 0.8985367782457889,
+      "lo": 0.7996116059981049,
+      "hi": 0.932215266534708,
+      "n_nonfinite": 0
+     },
+     "rel": {
+      "instruct": {
+       "point": 0.8985367782457889,
+       "lo": 0.7996116059981049,
+       "hi": 0.932215266534708,
+       "n_nonfinite": 0
+      }
+     }
+    }
+   },
+   "transitions": {
+    "base->instruct": {
+     "raw_r_difference": {
+      "point": 0.002641227851478578,
+      "lo": -0.004561228155196028,
+      "hi": 0.009138959026092183,
+      "n_nonfinite": 0
+     },
+     "r_norm_difference": {
+      "point": 0.003652123217058656,
+      "lo": 0.0014166075020346724,
+      "hi": 0.008288507064064593,
+      "n_nonfinite": 0
+     }
+    }
+   }
+  },
+  "stage_change": {
+   "base->instruct": {
+    "r": {
+     "point": 0.8958955503943103,
+     "lo": 0.7965340637052672,
+     "hi": 0.930868918687679,
+     "n_nonfinite": 0
+    },
+    "r_norm": {
+     "available": true,
+     "value": {
+      "point": 0.9963478767829413,
+      "lo": 0.9917114929359354,
+      "hi": 0.9985833924979653,
+      "n_nonfinite": 0
+     },
+     "raw": {
+      "point": 0.8958955503943103,
+      "lo": 0.7965340637052672,
+      "hi": 0.930868918687679,
+      "n_nonfinite": 0
+     },
+     "rel": {
+      "base": {
+       "point": 0.8998226106277911,
+       "lo": 0.7965838772769095,
+       "hi": 0.9358106117136248,
+       "n_nonfinite": 0
+      },
+      "instruct": {
+       "point": 0.8985367782457889,
+       "lo": 0.7996116059981049,
+       "hi": 0.932215266534708,
+       "n_nonfinite": 0
+      }
+     }
+    },
+    "cka": {
+     "point": 0.9222981973357561,
+     "lo": 0.8753645093416956,
+     "hi": 0.9607344294791014,
+     "n_nonfinite": 0
+    },
+    "change": {
+     "point": 0.003652123217058656,
+     "lo": 0.0014166075020346724,
+     "hi": 0.008288507064064593,
+     "n_nonfinite": 0
+    }
+   }
+  },
+  "rl_steps": {
+   "to_instruct": {},
+   "adjacent": {}
+  },
+  "D2_question_only_halves": {
+   "note": "report only; no transition is passed",
+   "per_stage": {
+    "base": {
+     "available": true,
+     "value": {
+      "point": 0.9960824122880645,
+      "lo": 0.9913228276052642,
+      "hi": 0.998371277547484,
+      "n_nonfinite": 0
+     },
+     "raw": {
+      "point": 0.9836661636639593,
+      "lo": 0.9460536415991048,
+      "hi": 0.9817972854350776,
+      "n_nonfinite": 0
+     },
+     "rel": {
+      "base": {
+       "point": 0.9886440009272746,
+       "lo": 0.9554767439105499,
+       "hi": 0.9860672704939057,
+       "n_nonfinite": 0
+      },
+      "instruct": {
+       "point": 0.9864270799161955,
+       "lo": 0.948563071938654,
+       "hi": 0.9831469765360576,
+       "n_nonfinite": 0
+      }
+     }
+    },
+    "instruct": {
+     "available": true,
+     "value": {
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n_nonfinite": 0
+     },
+     "raw": {
+      "point": 0.9864270799161955,
+      "lo": 0.948563071938654,
+      "hi": 0.9831469765360576,
+      "n_nonfinite": 0
+     },
+     "rel": {
+      "instruct": {
+       "point": 0.9864270799161955,
+       "lo": 0.948563071938654,
+       "hi": 0.9831469765360576,
+       "n_nonfinite": 0
+      }
+     }
+    }
+   },
+   "transitions": {
+    "base->instruct": {
+     "raw_r_difference": {
+      "point": 0.0027609162522361785,
+      "lo": -0.0019055321549320907,
+      "hi": 0.006808063629133233,
+      "n_nonfinite": 0
+     },
+     "r_norm_difference": {
+      "point": 0.003917587711935511,
+      "lo": 0.001628722452515974,
+      "hi": 0.008677172394735708,
+      "n_nonfinite": 0
+     }
+    }
+   }
+  },
+  "F2": {
+   "base_instruct_r": {
+    "point": 0.8885352998552228,
+    "lo": 0.777041090923831,
+    "hi": 0.9305725104615424,
+    "n_nonfinite": 0
+   },
+   "D2": {
+    "note": "report only; no transition is passed",
+    "per_stage": {
+     "base": {
+      "available": true,
+      "value": {
+       "point": 0.9941983597505083,
+       "lo": 0.9872415378945774,
+       "hi": 0.9983430810683026,
+       "n_nonfinite": 0
+      },
+      "raw": {
+       "point": 0.8885352998552228,
+       "lo": 0.777041090923831,
+       "hi": 0.9305725104615424,
+       "n_nonfinite": 0
+      },
+      "rel": {
+       "base": {
+        "point": 0.8951983798938885,
+        "lo": 0.7827518396205725,
+        "hi": 0.9360786135685434,
+        "n_nonfinite": 0
+       },
+       "instruct": {
+        "point": 0.8922447479956435,
+        "lo": 0.7888423279031627,
+        "hi": 0.9315724348851907,
+        "n_nonfinite": 0
+       }
+      }
+     },
+     "instruct": {
+      "available": true,
+      "value": {
+       "point": 1.0,
+       "lo": 1.0,
+       "hi": 1.0,
+       "n_nonfinite": 0
+      },
+      "raw": {
+       "point": 0.8922447479956435,
+       "lo": 0.7888423279031627,
+       "hi": 0.9315724348851907,
+       "n_nonfinite": 0
+      },
+      "rel": {
+       "instruct": {
+        "point": 0.8922447479956435,
+        "lo": 0.7888423279031627,
+        "hi": 0.9315724348851907,
+        "n_nonfinite": 0
+       }
+      }
+     }
+    },
+    "transitions": {
+     "base->instruct": {
+      "raw_r_difference": {
+       "point": 0.0037094481404206237,
+       "lo": -0.00436784622375124,
+       "hi": 0.016205658003723006,
+       "n_nonfinite": 0
+      },
+      "r_norm_difference": {
+       "point": 0.005801640249491702,
+       "lo": 0.0016569189316974209,
+       "hi": 0.012758462105422605,
+       "n_nonfinite": 0
+      }
+     }
+    }
+   }
+  },
+  "state_9": {
+   "base_instruct_r": {
+    "point": 0.8881453546606481,
+    "lo": 0.7761933399172409,
+    "hi": 0.9295501584248621,
+    "n_nonfinite": 0
+   },
+   "D2": {
+    "note": "report only; no transition is passed",
+    "per_stage": {
+     "base": {
+      "available": true,
+      "value": {
+       "point": 0.9985591730116354,
+       "lo": 0.9970571208568474,
+       "hi": 0.9995704558295687,
+       "n_nonfinite": 0
+      },
+      "raw": {
+       "point": 0.8881453546606481,
+       "lo": 0.7761933399172409,
+       "hi": 0.9295501584248621,
+       "n_nonfinite": 0
+      },
+      "rel": {
+       "base": {
+        "point": 0.8911209612163045,
+        "lo": 0.7800117545552151,
+        "hi": 0.9316433069910778,
+        "n_nonfinite": 0
+       },
+       "instruct": {
+        "point": 0.8877359891876285,
+        "lo": 0.7772716496267331,
+        "hi": 0.9289466564330847,
+        "n_nonfinite": 0
+       }
+      }
+     },
+     "instruct": {
+      "available": true,
+      "value": {
+       "point": 1.0,
+       "lo": 1.0,
+       "hi": 1.0,
+       "n_nonfinite": 0
+      },
+      "raw": {
+       "point": 0.8877359891876285,
+       "lo": 0.7772716496267331,
+       "hi": 0.9289466564330847,
+       "n_nonfinite": 0
+      },
+      "rel": {
+       "instruct": {
+        "point": 0.8877359891876285,
+        "lo": 0.7772716496267331,
+        "hi": 0.9289466564330847,
+        "n_nonfinite": 0
+       }
+      }
+     }
+    },
+    "transitions": {
+     "base->instruct": {
+      "raw_r_difference": {
+       "point": -0.00040936547301961834,
+       "lo": -0.004844013745845424,
+       "hi": 0.0036482578642761236,
+       "n_nonfinite": 0
+      },
+      "r_norm_difference": {
+       "point": 0.001440826988364563,
+       "lo": 0.0004295441704313202,
+       "hi": 0.002942879143152596,
+       "n_nonfinite": 0
+      }
+     }
+    }
+   }
+  },
+  "state_23": {
+   "base_instruct_r": {
+    "point": 0.8886971705004221,
+    "lo": 0.7804906946921696,
+    "hi": 0.9264294267065727,
+    "n_nonfinite": 0
+   },
+   "D2": {
+    "note": "report only; no transition is passed",
+    "per_stage": {
+     "base": {
+      "available": true,
+      "value": {
+       "point": 0.9924251795175264,
+       "lo": 0.9862639606195494,
+       "hi": 0.9965901811859772,
+       "n_nonfinite": 0
+      },
+      "raw": {
+       "point": 0.8886971705004221,
+       "lo": 0.7804906946921696,
+       "hi": 0.9264294267065727,
+       "n_nonfinite": 0
+      },
+      "rel": {
+       "base": {
+        "point": 0.8962505040961917,
+        "lo": 0.7916048708549539,
+        "hi": 0.934457592529544,
+        "n_nonfinite": 0
+       },
+       "instruct": {
+        "point": 0.8947107034602213,
+        "lo": 0.786984852557944,
+        "hi": 0.9303710703755991,
+        "n_nonfinite": 0
+       }
+      }
+     },
+     "instruct": {
+      "available": true,
+      "value": {
+       "point": 1.0,
+       "lo": 1.0,
+       "hi": 1.0,
+       "n_nonfinite": 0
+      },
+      "raw": {
+       "point": 0.8947107034602213,
+       "lo": 0.786984852557944,
+       "hi": 0.9303710703755991,
+       "n_nonfinite": 0
+      },
+      "rel": {
+       "instruct": {
+        "point": 0.8947107034602213,
+        "lo": 0.786984852557944,
+        "hi": 0.9303710703755991,
+        "n_nonfinite": 0
+       }
+      }
+     }
+    },
+    "transitions": {
+     "base->instruct": {
+      "raw_r_difference": {
+       "point": 0.006013532959799228,
+       "lo": -0.0044674823777695995,
+       "hi": 0.015829235354361936,
+       "n_nonfinite": 0
+      },
+      "r_norm_difference": {
+       "point": 0.007574820482473599,
+       "lo": 0.003409818814022814,
+       "hi": 0.013736039380450621,
+       "n_nonfinite": 0
+      }
+     }
+    }
+   }
+  },
+  "decoding": {
+   "base": {
+    "chance": 0.05,
+    "accuracy": {
+     "states": {
+      "mean_over_splits": 0.7622749999999999,
+      "cells": {
+       "point": 0.760760328156411,
+       "lo": 0.6781982484034702,
+       "hi": 0.8384586501956943,
+       "n_nonfinite": 0
+      }
+     },
+     "text_state0": {
+      "mean_over_splits": 0.7574999999999998,
+      "cells": {
+       "point": 0.7574211058369634,
+       "lo": 0.6665417678986989,
+       "hi": 0.8403537417263197,
+       "n_nonfinite": 0
+      }
+     },
+     "text_embed": {
+      "mean_over_splits": 0.5432,
+      "cells": {
+       "point": 0.5393940710502239,
+       "lo": 0.45046875017651017,
+       "hi": 0.6300117730994558,
+       "n_nonfinite": 0
+      }
+     },
+     "text_word": {
+      "mean_over_splits": 0.7970000000000002,
+      "cells": {
+       "point": 0.7967092286139307,
+       "lo": 0.6929768904591028,
+       "hi": 0.8881167804653141,
+       "n_nonfinite": 0
+      }
+     },
+     "text_char": {
+      "mean_over_splits": 0.7735499999999998,
+      "cells": {
+       "point": 0.7742691927373635,
+       "lo": 0.6772511345309428,
+       "hi": 0.8599641806292436,
+       "n_nonfinite": 0
+      }
+     }
+    },
+    "gain_over_best_text": {
+     "point": -0.03594890045751964,
+     "lo": -0.06968475609711286,
+     "hi": 0.00023744075290962343,
+     "n_nonfinite": 0
+    }
+   },
+   "instruct": {
+    "chance": 0.05,
+    "accuracy": {
+     "states": {
+      "mean_over_splits": 0.755025,
+      "cells": {
+       "point": 0.7539761978199109,
+       "lo": 0.6710992551937217,
+       "hi": 0.8342845674747449,
+       "n_nonfinite": 0
+      }
+     },
+     "text_state0": {
+      "mean_over_splits": 0.7574999999999998,
+      "cells": {
+       "point": 0.7574211058369634,
+       "lo": 0.6665417678986989,
+       "hi": 0.8403537417263197,
+       "n_nonfinite": 0
+      }
+     },
+     "text_embed": {
+      "mean_over_splits": 0.5432,
+      "cells": {
+       "point": 0.5393940710502239,
+       "lo": 0.45046875017651017,
+       "hi": 0.6300117730994558,
+       "n_nonfinite": 0
+      }
+     },
+     "text_word": {
+      "mean_over_splits": 0.7970000000000002,
+      "cells": {
+       "point": 0.7967092286139307,
+       "lo": 0.6929768904591028,
+       "hi": 0.8881167804653141,
+       "n_nonfinite": 0
+      }
+     },
+     "text_char": {
+      "mean_over_splits": 0.7735499999999998,
+      "cells": {
+       "point": 0.7742691927373635,
+       "lo": 0.6772511345309428,
+       "hi": 0.8599641806292436,
+       "n_nonfinite": 0
+      }
+     }
+    },
+    "gain_over_best_text": {
+     "point": -0.0427330307940198,
+     "lo": -0.07808974969986504,
+     "hi": -0.005597738153829799,
+     "n_nonfinite": 0
+    }
+   }
+  },
+  "related_pairs": {
+   "chef vs bartender": {
+    "base": {
+     "gain_over_word_ngrams": {
+      "point": -0.03364715054962186,
+      "lo": -0.05163920727811457,
+      "hi": -0.016682279879147638,
+      "n_nonfinite": 0
+     },
+     "reading": "not established"
+    },
+    "instruct": {
+     "gain_over_word_ngrams": {
+      "point": -0.030659184223503444,
+      "lo": -0.047966860727382564,
+      "hi": -0.014955149879435895,
+      "n_nonfinite": 0
+     },
+     "reading": "not established"
+    }
+   },
+   "detective vs criminal": {
+    "base": {
+     "gain_over_word_ngrams": {
+      "point": -0.016466272948670202,
+      "lo": -0.035513528406812794,
+      "hi": 0.0012418068918058109,
+      "n_nonfinite": 0
+     },
+     "reading": "not established"
+    },
+    "instruct": {
+     "gain_over_word_ngrams": {
+      "point": -0.019544250694176646,
+      "lo": -0.04194191919302033,
+      "hi": 3.5140999425294116e-05,
+      "n_nonfinite": 0
+     },
+     "reading": "not established"
+    }
+   },
+   "counselor vs consultant": {
+    "base": {
+     "gain_over_word_ngrams": {
+      "point": 0.051820399133631234,
+      "lo": 0.02261151553152662,
+      "hi": 0.0812216353205618,
+      "n_nonfinite": 0
+     },
+     "reading": "within-pair role decoding exceeds the n-gram baseline"
+    },
+    "instruct": {
+     "gain_over_word_ngrams": {
+      "point": 0.04955476172999651,
+      "lo": 0.022937627290624023,
+      "hi": 0.07817718145547065,
+      "n_nonfinite": 0
+     },
+     "reading": "within-pair role decoding exceeds the n-gram baseline"
+    }
+   }
+  },
+  "components_70": {
+   "base": 4,
+   "instruct": 4
+  },
+  "axis": "unavailable: pod A D3 has not passed",
+  "identifiable_subset": "unavailable: no approved judge panel",
+  "F4": {
+   "base_instruct_r": {
+    "point": 0.8705308121962848,
+    "lo": 0.7306252241022085,
+    "hi": 0.9132876322971095,
+    "n_nonfinite": 0
+   },
+   "D2": {
+    "note": "report only; no transition is passed",
+    "per_stage": {
+     "base": {
+      "available": true,
+      "value": {
+       "point": 0.996725998023867,
+       "lo": 0.9929352754964258,
+       "hi": 0.9985456734837886,
+       "n_nonfinite": 0
+      },
+      "raw": {
+       "point": 0.8705308121962848,
+       "lo": 0.7306252241022085,
+       "hi": 0.9132876322971095,
+       "n_nonfinite": 0
+      },
+      "rel": {
+       "base": {
+        "point": 0.8734904276397802,
+        "lo": 0.7347305438127238,
+        "hi": 0.918944982287904,
+        "n_nonfinite": 0
+       },
+       "instruct": {
+        "point": 0.8732901713270961,
+        "lo": 0.7339018872139195,
+        "hi": 0.9164893405592733,
+        "n_nonfinite": 0
+       }
+      }
+     },
+     "instruct": {
+      "available": true,
+      "value": {
+       "point": 1.0,
+       "lo": 1.0,
+       "hi": 1.0,
+       "n_nonfinite": 0
+      },
+      "raw": {
+       "point": 0.8732901713270961,
+       "lo": 0.7339018872139195,
+       "hi": 0.9164893405592733,
+       "n_nonfinite": 0
+      },
+      "rel": {
+       "instruct": {
+        "point": 0.8732901713270961,
+        "lo": 0.7339018872139195,
+        "hi": 0.9164893405592733,
+        "n_nonfinite": 0
+       }
+      }
+     }
+    },
+    "transitions": {
+     "base->instruct": {
+      "raw_r_difference": {
+       "point": 0.0027593591308112675,
+       "lo": -0.005132546036370977,
+       "hi": 0.009783123602167872,
+       "n_nonfinite": 0
+      },
+      "r_norm_difference": {
+       "point": 0.003274001976133034,
+       "lo": 0.0014543265162113629,
+       "hi": 0.007064724503574213,
+       "n_nonfinite": 0
+      }
+     }
+    }
+   },
+   "F1_same_rows": {
+    "base_instruct_r": {
+     "point": 0.8985337339859246,
+     "lo": 0.8072701894869481,
+     "hi": 0.9317829670697074,
+     "n_nonfinite": 0
+    },
+    "D2": {
+     "note": "report only; no transition is passed",
+     "per_stage": {
+      "base": {
+       "available": true,
+       "value": {
+        "point": 0.9961623075309215,
+        "lo": 0.9916899227251751,
+        "hi": 0.998474023004945,
+        "n_nonfinite": 0
+       },
+       "raw": {
+        "point": 0.8985337339859246,
+        "lo": 0.8072701894869481,
+        "hi": 0.9317829670697074,
+        "n_nonfinite": 0
+       },
+       "rel": {
+        "base": {
+         "point": 0.9013237106728427,
+         "lo": 0.8076983585017984,
+         "hi": 0.9365455160848407,
+         "n_nonfinite": 0
+        },
+        "instruct": {
+         "point": 0.9026674189837596,
+         "lo": 0.8143575624416366,
+         "hi": 0.9335534354991816,
+         "n_nonfinite": 0
+        }
+       }
+      },
+      "instruct": {
+       "available": true,
+       "value": {
+        "point": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n_nonfinite": 0
+       },
+       "raw": {
+        "point": 0.9026674189837596,
+        "lo": 0.8143575624416366,
+        "hi": 0.9335534354991816,
+        "n_nonfinite": 0
+       },
+       "rel": {
+        "instruct": {
+         "point": 0.9026674189837596,
+         "lo": 0.8143575624416366,
+         "hi": 0.9335534354991816,
+         "n_nonfinite": 0
+        }
+       }
+      }
+     },
+     "transitions": {
+      "base->instruct": {
+       "raw_r_difference": {
+        "point": 0.004133684997834952,
+        "lo": -0.00396446599478589,
+        "hi": 0.011391967844723601,
+        "n_nonfinite": 0
+       },
+       "r_norm_difference": {
+        "point": 0.003837692469078502,
+        "lo": 0.0015259769950549756,
+        "hi": 0.008310077274824967,
+        "n_nonfinite": 0
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "code": {
+  "analysis.py": "2631b4d3ea81a68b61b743287dc6a5a167867a801700c4d240145238bded2c49",
+  "maps.py": "4c5fed4c663d0fc1afcf9146b49b2be0f397a1eb06342c430008f7066ab571fc",
+  "frames.py": "212a2de70cea4e7466189df8aad49313ca603d0794a6fac1041be402cca62b99"
+ }
+}

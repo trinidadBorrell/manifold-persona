@@ -1,0 +1,1 @@
+{"rows": 1800, "fed": 1800, "layers": {"neutral": [0, 9, 17, 23]}, "dtypes": {"neutral": "float16"}, "g1_rows_checked": 1800, "gpu_memory_gb": {"peak_allocated": 16.13, "peak_reserved": 53.26}}

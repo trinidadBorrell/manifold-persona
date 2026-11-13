@@ -1,0 +1,2 @@
+# Optional local launcher SDK. CPU staging uses get_raw_f(), removed in Modal 1.6.
+modal==1.5.5

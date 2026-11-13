@@ -1,0 +1,1 @@
+{"rows": 21000, "fed": 21000, "layers": {"reply": [0, 9, 17, 23], "first32": [0, 9, 17, 23]}, "dtypes": {"reply": "float16", "first32": "float16"}, "g1_rows_checked": 21000}

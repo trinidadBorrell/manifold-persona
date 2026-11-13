@@ -1,0 +1,563 @@
+{
+ "repo": "brend0nc/manifold-persona-experiment-artifacts",
+ "batch": "261113_analysis",
+ "revision": "8c41d5d1b88b7fa0fed38ffeeb89863a6798c973",
+ "verified": true,
+ "n_files": 69,
+ "n_match": 69,
+ "bytes": 281666782,
+ "files": [
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/draws.npz",
+   "volume_path": "/out/analysis_v12/draws.npz",
+   "sha256": "f0bbe2ddf12625d8a70895453f9bae8d2e819ec86bca0d72a9546244c384d047",
+   "size": 3200742,
+   "remote_sha256": "f0bbe2ddf12625d8a70895453f9bae8d2e819ec86bca0d72a9546244c384d047",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/mask_first16.npy",
+   "volume_path": "/out/analysis_v12/mask_first16.npy",
+   "sha256": "40c12a504cfafc0ec2a9129a5cf388cacd28b9cb6da1bf425cd27a3e9e11ffaf",
+   "size": 21128,
+   "remote_sha256": "40c12a504cfafc0ec2a9129a5cf388cacd28b9cb6da1bf425cd27a3e9e11ffaf",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/meta.json",
+   "volume_path": "/out/analysis_v12/meta.json",
+   "sha256": "c149df643bbb468c79789731b25418046ed981fbc95b8cb59aec478875bb1bbc",
+   "size": 2460127,
+   "remote_sha256": "c149df643bbb468c79789731b25418046ed981fbc95b8cb59aec478875bb1bbc",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/power.json",
+   "volume_path": "/out/analysis_v12/power.json",
+   "sha256": "1c5dce56d410b36d8cccdf2b98cbef6797ce47ac7c4c3b5db93dbc1dea43ca02",
+   "size": 27736,
+   "remote_sha256": "1c5dce56d410b36d8cccdf2b98cbef6797ce47ac7c4c3b5db93dbc1dea43ca02",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/prep.json",
+   "volume_path": "/out/analysis_v12/prep.json",
+   "sha256": "ff1f76b98f4116911c28b58203ba572d641f0e2452a00879b0260202a3a5513d",
+   "size": 5362,
+   "remote_sha256": "ff1f76b98f4116911c28b58203ba572d641f0e2452a00879b0260202a3a5513d",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/reference_profile.npy",
+   "volume_path": "/out/analysis_v12/reference_profile.npy",
+   "sha256": "f48fda9c5aebc9643e376f1871cbcb235bef83b1d709efdd2e58008daaa2691a",
+   "size": 288,
+   "remote_sha256": "f48fda9c5aebc9643e376f1871cbcb235bef83b1d709efdd2e58008daaa2691a",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/results_v12.json",
+   "volume_path": "/out/analysis_v12/results_v12.json",
+   "sha256": "5b7230bb6f2c88904103e2beef8c5f8912226928ea36db45b87a4b4b06a56c66",
+   "size": 64179,
+   "remote_sha256": "5b7230bb6f2c88904103e2beef8c5f8912226928ea36db45b87a4b4b06a56c66",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_first16_s17.json",
+   "volume_path": "/out/analysis_v12/sources/dpo_first16_s17.json",
+   "sha256": "ad8ff9be5a8eddc34905aa6cad5373ee597ef6a02d0c0fdb5a1ffdc50bf6ff23",
+   "size": 2694,
+   "remote_sha256": "ad8ff9be5a8eddc34905aa6cad5373ee597ef6a02d0c0fdb5a1ffdc50bf6ff23",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_first16_s17.npz",
+   "volume_path": "/out/analysis_v12/sources/dpo_first16_s17.npz",
+   "sha256": "b480cfe3fa730f3fc6a382ff00d8caee25921d38e251a20cb78381b427912ab7",
+   "size": 785556,
+   "remote_sha256": "b480cfe3fa730f3fc6a382ff00d8caee25921d38e251a20cb78381b427912ab7",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_first16_s23.json",
+   "volume_path": "/out/analysis_v12/sources/dpo_first16_s23.json",
+   "sha256": "8f91a85db6c67f63365e69af465fc56266925e8713bede383b5c341d8f0b69b4",
+   "size": 2526,
+   "remote_sha256": "8f91a85db6c67f63365e69af465fc56266925e8713bede383b5c341d8f0b69b4",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_first16_s23.npz",
+   "volume_path": "/out/analysis_v12/sources/dpo_first16_s23.npz",
+   "sha256": "acdb4606653aba1847f063066902be7e38f0fe1b5f56685eaa1118ad2c083f53",
+   "size": 785556,
+   "remote_sha256": "acdb4606653aba1847f063066902be7e38f0fe1b5f56685eaa1118ad2c083f53",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_first16_s9.json",
+   "volume_path": "/out/analysis_v12/sources/dpo_first16_s9.json",
+   "sha256": "0be8ee87bd33d2577c46704a2ce4b82dbf043bde2d9823d4b8add22bc9a35b08",
+   "size": 2549,
+   "remote_sha256": "0be8ee87bd33d2577c46704a2ce4b82dbf043bde2d9823d4b8add22bc9a35b08",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_first16_s9.npz",
+   "volume_path": "/out/analysis_v12/sources/dpo_first16_s9.npz",
+   "sha256": "18534ef4e41745e1645229cb701af07c076c62df7abebf88cad1b6a115567f2a",
+   "size": 785556,
+   "remote_sha256": "18534ef4e41745e1645229cb701af07c076c62df7abebf88cad1b6a115567f2a",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_first16_text.json",
+   "volume_path": "/out/analysis_v12/sources/dpo_first16_text.json",
+   "sha256": "0cdc916fa957e1c7f843bd57d692af5298e28768340a241c31306aefa3ba906c",
+   "size": 2714,
+   "remote_sha256": "0cdc916fa957e1c7f843bd57d692af5298e28768340a241c31306aefa3ba906c",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_first16_text.npz",
+   "volume_path": "/out/analysis_v12/sources/dpo_first16_text.npz",
+   "sha256": "f9da870e3893487461433c5d2e9a9d07c6247c8801089e4c93bcd8bce2a5e96b",
+   "size": 140436,
+   "remote_sha256": "f9da870e3893487461433c5d2e9a9d07c6247c8801089e4c93bcd8bce2a5e96b",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_full_m16_s17.json",
+   "volume_path": "/out/analysis_v12/sources/dpo_full_m16_s17.json",
+   "sha256": "964059a87275dd3de6ce349720b05f5f4cfa5c3147545633a4bc64241178f17c",
+   "size": 2548,
+   "remote_sha256": "964059a87275dd3de6ce349720b05f5f4cfa5c3147545633a4bc64241178f17c",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_full_m16_s17.npz",
+   "volume_path": "/out/analysis_v12/sources/dpo_full_m16_s17.npz",
+   "sha256": "043c970cdfba0fba018fd39a93be4768d8ddc80ac30d8cac2ef2353f980e5230",
+   "size": 785556,
+   "remote_sha256": "043c970cdfba0fba018fd39a93be4768d8ddc80ac30d8cac2ef2353f980e5230",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_full_m16_text.json",
+   "volume_path": "/out/analysis_v12/sources/dpo_full_m16_text.json",
+   "sha256": "2ef9099f15b1687573cc75388167e01b49209f2435017285d69005eebcaa0624",
+   "size": 2511,
+   "remote_sha256": "2ef9099f15b1687573cc75388167e01b49209f2435017285d69005eebcaa0624",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_full_m16_text.npz",
+   "volume_path": "/out/analysis_v12/sources/dpo_full_m16_text.npz",
+   "sha256": "328395a7eb2de6c12e89acfb5b95942c5dc7f02de3b52095909a83c022256849",
+   "size": 140436,
+   "remote_sha256": "328395a7eb2de6c12e89acfb5b95942c5dc7f02de3b52095909a83c022256849",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_full_s17.json",
+   "volume_path": "/out/analysis_v12/sources/dpo_full_s17.json",
+   "sha256": "880fc165a0732a9b18d8350d2bc67416edd983225223044f4f2516d39df7b547",
+   "size": 2729,
+   "remote_sha256": "880fc165a0732a9b18d8350d2bc67416edd983225223044f4f2516d39df7b547",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_full_s17.npz",
+   "volume_path": "/out/analysis_v12/sources/dpo_full_s17.npz",
+   "sha256": "55e4aa00d810e5e2c66398dd11a8e054620c6f94ea2737103952102d0144ac24",
+   "size": 785556,
+   "remote_sha256": "55e4aa00d810e5e2c66398dd11a8e054620c6f94ea2737103952102d0144ac24",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_full_s23.json",
+   "volume_path": "/out/analysis_v12/sources/dpo_full_s23.json",
+   "sha256": "0a2f4d52dff848e7e16dcd885eb20ddf4eb07dfd1848faae8bf6df2096e53e31",
+   "size": 2565,
+   "remote_sha256": "0a2f4d52dff848e7e16dcd885eb20ddf4eb07dfd1848faae8bf6df2096e53e31",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_full_s23.npz",
+   "volume_path": "/out/analysis_v12/sources/dpo_full_s23.npz",
+   "sha256": "5df74465b2ce2192ffc99528d64a0a775ecca1fdc34f67c0edd1f9fd311b81c2",
+   "size": 785556,
+   "remote_sha256": "5df74465b2ce2192ffc99528d64a0a775ecca1fdc34f67c0edd1f9fd311b81c2",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_full_s9.json",
+   "volume_path": "/out/analysis_v12/sources/dpo_full_s9.json",
+   "sha256": "ebd8f851b99035192897f72c15a3413a9ded803335ee4dee857f301800ca62e3",
+   "size": 2559,
+   "remote_sha256": "ebd8f851b99035192897f72c15a3413a9ded803335ee4dee857f301800ca62e3",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_full_s9.npz",
+   "volume_path": "/out/analysis_v12/sources/dpo_full_s9.npz",
+   "sha256": "680cad2169fa995e6e44abf7d618cfe84526aa5db251359ef2289854eb43be96",
+   "size": 785556,
+   "remote_sha256": "680cad2169fa995e6e44abf7d618cfe84526aa5db251359ef2289854eb43be96",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_full_text.json",
+   "volume_path": "/out/analysis_v12/sources/dpo_full_text.json",
+   "sha256": "fcabf1ded5e6bc8dc69567dc0eb094371207021d9f4e9f37078d7c01b016d1de",
+   "size": 2699,
+   "remote_sha256": "fcabf1ded5e6bc8dc69567dc0eb094371207021d9f4e9f37078d7c01b016d1de",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/dpo_full_text.npz",
+   "volume_path": "/out/analysis_v12/sources/dpo_full_text.npz",
+   "sha256": "23e24c05438ed7cca577eb5e4a139c5844228f4c01a4bd4d1e55c6d6e1afa699",
+   "size": 140436,
+   "remote_sha256": "23e24c05438ed7cca577eb5e4a139c5844228f4c01a4bd4d1e55c6d6e1afa699",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_first16_s17.json",
+   "volume_path": "/out/analysis_v12/sources/instruct_first16_s17.json",
+   "sha256": "8acff21a2ffb65bba3a2fe354483b427ad7753fd385b5046bb85566dd94416fd",
+   "size": 2720,
+   "remote_sha256": "8acff21a2ffb65bba3a2fe354483b427ad7753fd385b5046bb85566dd94416fd",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_first16_s17.npz",
+   "volume_path": "/out/analysis_v12/sources/instruct_first16_s17.npz",
+   "sha256": "c9b6aa5523a97d5751b6d8251c45a3efb981d7eff7aa5cafa06f0019afa94f4a",
+   "size": 785556,
+   "remote_sha256": "c9b6aa5523a97d5751b6d8251c45a3efb981d7eff7aa5cafa06f0019afa94f4a",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_first16_s23.json",
+   "volume_path": "/out/analysis_v12/sources/instruct_first16_s23.json",
+   "sha256": "b9e5018c513d01c987d79f279165bef80a13512e93dd27ef937265d4abf2cd19",
+   "size": 2551,
+   "remote_sha256": "b9e5018c513d01c987d79f279165bef80a13512e93dd27ef937265d4abf2cd19",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_first16_s23.npz",
+   "volume_path": "/out/analysis_v12/sources/instruct_first16_s23.npz",
+   "sha256": "91b0020c7a149be4b927ff70938f45a7c837ac20e45e984f6b0e0d842016fe8b",
+   "size": 785556,
+   "remote_sha256": "91b0020c7a149be4b927ff70938f45a7c837ac20e45e984f6b0e0d842016fe8b",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_first16_s9.json",
+   "volume_path": "/out/analysis_v12/sources/instruct_first16_s9.json",
+   "sha256": "7b59ca3ab571e61c0d99f2f558485033107404e5257f1c9dc65487dc3b39d7db",
+   "size": 2550,
+   "remote_sha256": "7b59ca3ab571e61c0d99f2f558485033107404e5257f1c9dc65487dc3b39d7db",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_first16_s9.npz",
+   "volume_path": "/out/analysis_v12/sources/instruct_first16_s9.npz",
+   "sha256": "42f5559caef21bd387e119c46979a6d4195f424a4cda80714eeb3ef85dadf4ad",
+   "size": 785556,
+   "remote_sha256": "42f5559caef21bd387e119c46979a6d4195f424a4cda80714eeb3ef85dadf4ad",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_first16_text.json",
+   "volume_path": "/out/analysis_v12/sources/instruct_first16_text.json",
+   "sha256": "dd1ae6be16235a9ecfdf49287c063ed1fcc05effcd921bc86639ed98ba1ac3af",
+   "size": 2665,
+   "remote_sha256": "dd1ae6be16235a9ecfdf49287c063ed1fcc05effcd921bc86639ed98ba1ac3af",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_first16_text.npz",
+   "volume_path": "/out/analysis_v12/sources/instruct_first16_text.npz",
+   "sha256": "382bc2f4ee07b94ef1fe04d0a43d52380773e50df698ae4d6e36cbfc61baa433",
+   "size": 140436,
+   "remote_sha256": "382bc2f4ee07b94ef1fe04d0a43d52380773e50df698ae4d6e36cbfc61baa433",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_full_m16_s17.json",
+   "volume_path": "/out/analysis_v12/sources/instruct_full_m16_s17.json",
+   "sha256": "b3ac147ab4dae8d6566ccd482bb43a2335390bb83089111c3f2dd22cb5862ee3",
+   "size": 2554,
+   "remote_sha256": "b3ac147ab4dae8d6566ccd482bb43a2335390bb83089111c3f2dd22cb5862ee3",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_full_m16_s17.npz",
+   "volume_path": "/out/analysis_v12/sources/instruct_full_m16_s17.npz",
+   "sha256": "0bc9b55f573e78a34578184299433c02d6a8e9bd1e1030e987f1468f29ec752a",
+   "size": 785556,
+   "remote_sha256": "0bc9b55f573e78a34578184299433c02d6a8e9bd1e1030e987f1468f29ec752a",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_full_m16_text.json",
+   "volume_path": "/out/analysis_v12/sources/instruct_full_m16_text.json",
+   "sha256": "ff29a150232fc846a45e210b2b162e83d43a9f4cea42353ffbf83c6df0244d67",
+   "size": 2531,
+   "remote_sha256": "ff29a150232fc846a45e210b2b162e83d43a9f4cea42353ffbf83c6df0244d67",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_full_m16_text.npz",
+   "volume_path": "/out/analysis_v12/sources/instruct_full_m16_text.npz",
+   "sha256": "31aa5862f248e62e6b9f3078b169fd2d0b6f235ded28cbacbf4b8775662a2ed5",
+   "size": 140436,
+   "remote_sha256": "31aa5862f248e62e6b9f3078b169fd2d0b6f235ded28cbacbf4b8775662a2ed5",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_full_s17.json",
+   "volume_path": "/out/analysis_v12/sources/instruct_full_s17.json",
+   "sha256": "3facd12df15e14572399e5ee05d4049b32013f1a4f9d307866cf2d13b1c98cd0",
+   "size": 2726,
+   "remote_sha256": "3facd12df15e14572399e5ee05d4049b32013f1a4f9d307866cf2d13b1c98cd0",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_full_s17.npz",
+   "volume_path": "/out/analysis_v12/sources/instruct_full_s17.npz",
+   "sha256": "61fe4aeed6a86db526a92a0c88b2bc01db435cb799070704f21e3d4dc7d88096",
+   "size": 785556,
+   "remote_sha256": "61fe4aeed6a86db526a92a0c88b2bc01db435cb799070704f21e3d4dc7d88096",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_full_s23.json",
+   "volume_path": "/out/analysis_v12/sources/instruct_full_s23.json",
+   "sha256": "d66aee4c6f4f0b57ba618601fd243388c667a2b974092afcfcc5ade3897acc0c",
+   "size": 2557,
+   "remote_sha256": "d66aee4c6f4f0b57ba618601fd243388c667a2b974092afcfcc5ade3897acc0c",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_full_s23.npz",
+   "volume_path": "/out/analysis_v12/sources/instruct_full_s23.npz",
+   "sha256": "da566b50b29c2baaba6a21434603a758b1f485752bd9d59ee0d4b411f84eab6f",
+   "size": 785556,
+   "remote_sha256": "da566b50b29c2baaba6a21434603a758b1f485752bd9d59ee0d4b411f84eab6f",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_full_s9.json",
+   "volume_path": "/out/analysis_v12/sources/instruct_full_s9.json",
+   "sha256": "e8d36169b9030768f05ae8cf53b1551c958e2962e7a297efeee0bd0ef60d6c24",
+   "size": 2532,
+   "remote_sha256": "e8d36169b9030768f05ae8cf53b1551c958e2962e7a297efeee0bd0ef60d6c24",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_full_s9.npz",
+   "volume_path": "/out/analysis_v12/sources/instruct_full_s9.npz",
+   "sha256": "16577f3b853d7ff935b8d3a9d026fb9975e723ca6c5cef8fc25f9e6bdfa3541c",
+   "size": 785556,
+   "remote_sha256": "16577f3b853d7ff935b8d3a9d026fb9975e723ca6c5cef8fc25f9e6bdfa3541c",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_full_text.json",
+   "volume_path": "/out/analysis_v12/sources/instruct_full_text.json",
+   "sha256": "0474fb9f64174097753f3ee03600dc9c929a2a2640eac83abb096cb03ff4c83f",
+   "size": 2746,
+   "remote_sha256": "0474fb9f64174097753f3ee03600dc9c929a2a2640eac83abb096cb03ff4c83f",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/instruct_full_text.npz",
+   "volume_path": "/out/analysis_v12/sources/instruct_full_text.npz",
+   "sha256": "272ab4b9d734138ec76876feb25a7f06fbe8d9163e9dfaf368cbc3cdbbe9d132",
+   "size": 140436,
+   "remote_sha256": "272ab4b9d734138ec76876feb25a7f06fbe8d9163e9dfaf368cbc3cdbbe9d132",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_first16_s17.json",
+   "volume_path": "/out/analysis_v12/sources/sft_first16_s17.json",
+   "sha256": "61bcc6ca20416f33205f19b71ce2003788316b2e615510d88fa3a1c664d3b144",
+   "size": 2717,
+   "remote_sha256": "61bcc6ca20416f33205f19b71ce2003788316b2e615510d88fa3a1c664d3b144",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_first16_s17.npz",
+   "volume_path": "/out/analysis_v12/sources/sft_first16_s17.npz",
+   "sha256": "9159c85e5c967cb484489d5b570e31234985a53ebac2f01a71e3e04584a18bee",
+   "size": 785556,
+   "remote_sha256": "9159c85e5c967cb484489d5b570e31234985a53ebac2f01a71e3e04584a18bee",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_first16_s23.json",
+   "volume_path": "/out/analysis_v12/sources/sft_first16_s23.json",
+   "sha256": "ded574717483ed605ab14c5a3881efb8da912ffc6abfc65e510aa136bf48a984",
+   "size": 2551,
+   "remote_sha256": "ded574717483ed605ab14c5a3881efb8da912ffc6abfc65e510aa136bf48a984",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_first16_s23.npz",
+   "volume_path": "/out/analysis_v12/sources/sft_first16_s23.npz",
+   "sha256": "5563e4311889d0549867280ded6efb7e12e6ce4297a0f9007386d95b8eafce4c",
+   "size": 785556,
+   "remote_sha256": "5563e4311889d0549867280ded6efb7e12e6ce4297a0f9007386d95b8eafce4c",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_first16_s9.json",
+   "volume_path": "/out/analysis_v12/sources/sft_first16_s9.json",
+   "sha256": "79aeadfbbb48e553024a51f31a30f853b58f296e2db8a1cdbffab96f50149a8d",
+   "size": 2525,
+   "remote_sha256": "79aeadfbbb48e553024a51f31a30f853b58f296e2db8a1cdbffab96f50149a8d",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_first16_s9.npz",
+   "volume_path": "/out/analysis_v12/sources/sft_first16_s9.npz",
+   "sha256": "d160ae0d7a0dd821bbf1e132663383e6834ffda6b8fcf7279ff48bac551fdec6",
+   "size": 785556,
+   "remote_sha256": "d160ae0d7a0dd821bbf1e132663383e6834ffda6b8fcf7279ff48bac551fdec6",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_first16_text.json",
+   "volume_path": "/out/analysis_v12/sources/sft_first16_text.json",
+   "sha256": "bea9896bcecfba8e4fd22b1438ed2b5af8070894de92e26d2537d54817b3a4e6",
+   "size": 2696,
+   "remote_sha256": "bea9896bcecfba8e4fd22b1438ed2b5af8070894de92e26d2537d54817b3a4e6",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_first16_text.npz",
+   "volume_path": "/out/analysis_v12/sources/sft_first16_text.npz",
+   "sha256": "de94cedf1f32f688e852c8f4a174cfebadf006e892ab82ce4a10d32f6638273c",
+   "size": 140436,
+   "remote_sha256": "de94cedf1f32f688e852c8f4a174cfebadf006e892ab82ce4a10d32f6638273c",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_full_m16_s17.json",
+   "volume_path": "/out/analysis_v12/sources/sft_full_m16_s17.json",
+   "sha256": "0e7aade512b74dc9571d36b6565e64c14a4f6fa8131e0a2272bfca133b49b1a1",
+   "size": 2549,
+   "remote_sha256": "0e7aade512b74dc9571d36b6565e64c14a4f6fa8131e0a2272bfca133b49b1a1",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_full_m16_s17.npz",
+   "volume_path": "/out/analysis_v12/sources/sft_full_m16_s17.npz",
+   "sha256": "54ce60dfc35eea056f3fd0d16b9987081a8a093eeb5f5d0c97298569704166ac",
+   "size": 785556,
+   "remote_sha256": "54ce60dfc35eea056f3fd0d16b9987081a8a093eeb5f5d0c97298569704166ac",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_full_m16_text.json",
+   "volume_path": "/out/analysis_v12/sources/sft_full_m16_text.json",
+   "sha256": "1d484c9195041d93bb22e0e3e22207f168f1461c42411bfee47107f0de47a04b",
+   "size": 2518,
+   "remote_sha256": "1d484c9195041d93bb22e0e3e22207f168f1461c42411bfee47107f0de47a04b",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_full_m16_text.npz",
+   "volume_path": "/out/analysis_v12/sources/sft_full_m16_text.npz",
+   "sha256": "236e0de95c3bb669dec90cbed2388813052913c4438f5afc8bd1226ffe91e701",
+   "size": 140436,
+   "remote_sha256": "236e0de95c3bb669dec90cbed2388813052913c4438f5afc8bd1226ffe91e701",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_full_s17.json",
+   "volume_path": "/out/analysis_v12/sources/sft_full_s17.json",
+   "sha256": "aab46a75c1a7f10d410473e70ea9e156c90d9d24ca85c8c8c31118a5a086cc5e",
+   "size": 2736,
+   "remote_sha256": "aab46a75c1a7f10d410473e70ea9e156c90d9d24ca85c8c8c31118a5a086cc5e",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_full_s17.npz",
+   "volume_path": "/out/analysis_v12/sources/sft_full_s17.npz",
+   "sha256": "7f5ca067eade33257a8b06352a7e329ecb2f9a3123f30017448a06f44a2aa4bd",
+   "size": 785556,
+   "remote_sha256": "7f5ca067eade33257a8b06352a7e329ecb2f9a3123f30017448a06f44a2aa4bd",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_full_s23.json",
+   "volume_path": "/out/analysis_v12/sources/sft_full_s23.json",
+   "sha256": "1ccaed9d3ec45864672f15fb7e01b0f51d37b618ca48974870d388be63e55c96",
+   "size": 2564,
+   "remote_sha256": "1ccaed9d3ec45864672f15fb7e01b0f51d37b618ca48974870d388be63e55c96",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_full_s23.npz",
+   "volume_path": "/out/analysis_v12/sources/sft_full_s23.npz",
+   "sha256": "35362705ead9d11ee6a4d1a12d4c3fb9a2231f23d60cf00a9b86623052cde5af",
+   "size": 785556,
+   "remote_sha256": "35362705ead9d11ee6a4d1a12d4c3fb9a2231f23d60cf00a9b86623052cde5af",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_full_s9.json",
+   "volume_path": "/out/analysis_v12/sources/sft_full_s9.json",
+   "sha256": "77e699fd5e57aea50170c8f61ae3df2d4245443f23692facd5444f28aebc0637",
+   "size": 2567,
+   "remote_sha256": "77e699fd5e57aea50170c8f61ae3df2d4245443f23692facd5444f28aebc0637",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_full_s9.npz",
+   "volume_path": "/out/analysis_v12/sources/sft_full_s9.npz",
+   "sha256": "a4a5744ea278f751365a759116cbd4b84f2fd31b8990f56d0d2d9f150e7b3f57",
+   "size": 785556,
+   "remote_sha256": "a4a5744ea278f751365a759116cbd4b84f2fd31b8990f56d0d2d9f150e7b3f57",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_full_text.json",
+   "volume_path": "/out/analysis_v12/sources/sft_full_text.json",
+   "sha256": "305ea9fa26f6ecd1995087caddf5d778f00282986ab8ea02f6af33bf438ec0f0",
+   "size": 2715,
+   "remote_sha256": "305ea9fa26f6ecd1995087caddf5d778f00282986ab8ea02f6af33bf438ec0f0",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/sources/sft_full_text.npz",
+   "volume_path": "/out/analysis_v12/sources/sft_full_text.npz",
+   "sha256": "9459bbdcbdd0e76c6e49fbc0f0f2ef1527965bf7c3f0b724cda900452a92ca93",
+   "size": 140436,
+   "remote_sha256": "9459bbdcbdd0e76c6e49fbc0f0f2ef1527965bf7c3f0b724cda900452a92ca93",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/text_first16.npy",
+   "volume_path": "/out/analysis_v12/text_first16.npy",
+   "sha256": "cf720133aeeff4e0ac551889f9d249cceeeaac82a45f850d352e89c0a02288de",
+   "size": 129024128,
+   "remote_sha256": "cf720133aeeff4e0ac551889f9d249cceeeaac82a45f850d352e89c0a02288de",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_stage_own_replies/analysis_v12/text_full.npy",
+   "volume_path": "/out/analysis_v12/text_full.npy",
+   "sha256": "0cc7d5a86513ddcd705e8f8cc03f46ef2c08f5e87118c257e54d71f437852b98",
+   "size": 129024128,
+   "remote_sha256": "0cc7d5a86513ddcd705e8f8cc03f46ef2c08f5e87118c257e54d71f437852b98",
+   "match": true
+  }
+ ]
+}

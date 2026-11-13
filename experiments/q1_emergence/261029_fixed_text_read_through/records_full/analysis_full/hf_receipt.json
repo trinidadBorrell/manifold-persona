@@ -1,0 +1,119 @@
+{
+ "repo": "brend0nc/manifold-persona-experiment-artifacts",
+ "revision": "c6755d666e0bcc207eecd8af37da0e18c305c577",
+ "verified": true,
+ "files": [
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_full/analysis_full/README.txt",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_full/README.txt",
+   "sha256": "fedc772468c4522930f9ed78a723ad72faad985aad9883733f173fa8bab6c5b3",
+   "size": 369,
+   "remote_sha256": "fedc772468c4522930f9ed78a723ad72faad985aad9883733f173fa8bab6c5b3",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_full/analysis_full/SHA256SUMS.txt",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_full/SHA256SUMS.txt",
+   "sha256": "a660a1008ae6b07df5d65cbd1564a0970c6ef6dad276899e34d5cf19002ef9ac",
+   "size": 971,
+   "remote_sha256": "a660a1008ae6b07df5d65cbd1564a0970c6ef6dad276899e34d5cf19002ef9ac",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_full/analysis_full/analysis.py",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_full/analysis.py",
+   "sha256": "a4275cfcb39afd9197dcd2b07d589fb64da4c39a6a2fdc75d2d148ae7bce4a4f",
+   "size": 30296,
+   "remote_sha256": "a4275cfcb39afd9197dcd2b07d589fb64da4c39a6a2fdc75d2d148ae7bce4a4f",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_full/analysis_full/checkpoints.py",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_full/checkpoints.py",
+   "sha256": "9fe076fac491a71157802ffc7d5691443715f60fde0782205d76de80e451ea13",
+   "size": 8613,
+   "remote_sha256": "9fe076fac491a71157802ffc7d5691443715f60fde0782205d76de80e451ea13",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_full/analysis_full/embed_e3_desc.json",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_full/embed_e3_desc.json",
+   "sha256": "9ed11cd538cf41796c7add5f3ec50739b2f093f3b8964f7bd7b0a8dee68bdd47",
+   "size": 196,
+   "remote_sha256": "9ed11cd538cf41796c7add5f3ec50739b2f093f3b8964f7bd7b0a8dee68bdd47",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_full/analysis_full/embed_e3_desc.npy",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_full/embed_e3_desc.npy",
+   "sha256": "9be6001441d26b49d0c1222f8e51c4750493878a3169a908b6b00ed247c6a093",
+   "size": 5529728,
+   "remote_sha256": "9be6001441d26b49d0c1222f8e51c4750493878a3169a908b6b00ed247c6a093",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_full/analysis_full/embed_e3_ex2.json",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_full/embed_e3_ex2.json",
+   "sha256": "f5a53018147919c114aa5660dda41f54c326cce3e5ba06c941ffff14bb6a89ba",
+   "size": 196,
+   "remote_sha256": "f5a53018147919c114aa5660dda41f54c326cce3e5ba06c941ffff14bb6a89ba",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_full/analysis_full/embed_e3_ex2.npy",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_full/embed_e3_ex2.npy",
+   "sha256": "6a4938d656201ffb1c38047a3038715e3581432ade20128ca1a200c1b1cf2af0",
+   "size": 5529728,
+   "remote_sha256": "6a4938d656201ffb1c38047a3038715e3581432ade20128ca1a200c1b1cf2af0",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_full/analysis_full/embed_pod_a.json",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_full/embed_pod_a.json",
+   "sha256": "0b9d66c76a002da3947869218299cc6b98e3b1d02c4b6eaf1be97971db72dfee",
+   "size": 197,
+   "remote_sha256": "0b9d66c76a002da3947869218299cc6b98e3b1d02c4b6eaf1be97971db72dfee",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_full/analysis_full/embed_pod_a.npy",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_full/embed_pod_a.npy",
+   "sha256": "c2a97e7541941e51b80e0dab8cbd4650228167fa8e5dc0f1fea226e40cc9e1a4",
+   "size": 64512128,
+   "remote_sha256": "c2a97e7541941e51b80e0dab8cbd4650228167fa8e5dc0f1fea226e40cc9e1a4",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_full/analysis_full/frames.py",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_full/frames.py",
+   "sha256": "ce906373f8a2dee0afa11c08e879e4864ea333797abbaae78c9f3cc297b1c18d",
+   "size": 11715,
+   "remote_sha256": "ce906373f8a2dee0afa11c08e879e4864ea333797abbaae78c9f3cc297b1c18d",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_full/analysis_full/maps.py",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_full/maps.py",
+   "sha256": "718f4113ff98d737a8f192ed4ee18cabe09c5d22f35df758254ad55544cc8c09",
+   "size": 12102,
+   "remote_sha256": "718f4113ff98d737a8f192ed4ee18cabe09c5d22f35df758254ad55544cc8c09",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_full/analysis_full/results_full.json",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_full/results_full.json",
+   "sha256": "16391870ca4b6a7dc1b04c18fe806fa6bc169132262f4befab1b8f6161843abb",
+   "size": 101179,
+   "remote_sha256": "16391870ca4b6a7dc1b04c18fe806fa6bc169132262f4befab1b8f6161843abb",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_full/analysis_full.log",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_full.log",
+   "sha256": "a4458738e581bb3c8e71323abc3fa01f417b6003c27d4acf351afd11af4c4cc9",
+   "size": 1670,
+   "remote_sha256": "a4458738e581bb3c8e71323abc3fa01f417b6003c27d4acf351afd11af4c4cc9",
+   "match": true
+  }
+ ]
+}

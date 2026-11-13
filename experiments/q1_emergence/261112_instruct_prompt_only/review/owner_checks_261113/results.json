@@ -1,0 +1,241 @@
+{
+ "rules": "RULES.md (13/11/2026 15:41 SAST)",
+ "config": {
+  "n_boot": 2000,
+  "n_halves": 50
+ },
+ "tfidf": {
+  "settings": {
+   "analyzer": "word",
+   "ngram_range": [
+    1,
+    2
+   ],
+   "min_df": 2,
+   "max_features": 20000,
+   "sublinear_tf": true
+  },
+  "n_replies": 20000,
+  "n_features": 20000
+ },
+ "agreement": {
+  "R_with_R": {
+   "point": 0.9008640974163157,
+   "lo": 0.7965476506513396,
+   "hi": 0.939325778797131,
+   "n_nonfinite": 0
+  },
+  "P_with_P": {
+   "point": 0.9049198913514154,
+   "lo": 0.8294966212129069,
+   "hi": 0.9358312645506194,
+   "n_nonfinite": 0
+  },
+  "T_with_T": {
+   "point": 0.8423298035665079,
+   "lo": 0.6591675226982389,
+   "hi": 0.9013853653568046,
+   "n_nonfinite": 0
+  },
+  "E0_with_E0": {
+   "point": 0.8786842498917451,
+   "lo": 0.7299249574821035,
+   "hi": 0.931938960722336,
+   "n_nonfinite": 0
+  },
+  "R_with_P": {
+   "point": 0.7058245963950014,
+   "lo": 0.5406667823055872,
+   "hi": 0.8251291362335379,
+   "n_nonfinite": 0
+  },
+  "R_with_T": {
+   "point": 0.8277730276826446,
+   "lo": 0.6535227472403661,
+   "hi": 0.889581402003396,
+   "n_nonfinite": 0
+  },
+  "R_with_E0": {
+   "point": 0.7954985194224653,
+   "lo": 0.5513829540718767,
+   "hi": 0.8799477019226222,
+   "n_nonfinite": 0
+  },
+  "P_with_T": {
+   "point": 0.6244273161087711,
+   "lo": 0.4489998336677105,
+   "hi": 0.758712031983664,
+   "n_nonfinite": 0
+  },
+  "P_with_E0": {
+   "point": 0.46117111277320705,
+   "lo": 0.22945235545338175,
+   "hi": 0.6560967598547093,
+   "n_nonfinite": 0
+  },
+  "T_with_E0": {
+   "point": 0.7808414929120356,
+   "lo": 0.5681796024829672,
+   "hi": 0.8682974122862188,
+   "n_nonfinite": 0
+  }
+ },
+ "paired": {
+  "RR_minus_RP": {
+   "point": 0.1950395010213143,
+   "lo": 0.06626627813478889,
+   "hi": 0.3152621595031507,
+   "n_nonfinite": 0
+  },
+  "RR_minus_RT": {
+   "point": 0.07309106973367108,
+   "lo": 0.039039406073674586,
+   "hi": 0.17112313596494294,
+   "n_nonfinite": 0
+  },
+  "RR_minus_RE0": {
+   "point": 0.10536557799385038,
+   "lo": 0.041407682417949905,
+   "hi": 0.28999939068760183,
+   "n_nonfinite": 0
+  },
+  "RT_minus_RP": {
+   "point": 0.12194843128764321,
+   "lo": -0.056068063465931746,
+   "hi": 0.23871393063446586,
+   "n_nonfinite": 0
+  },
+  "RE0_minus_RP": {
+   "point": 0.08967392302746391,
+   "lo": -0.18263015932313711,
+   "hi": 0.2502584891010702,
+   "n_nonfinite": 0
+  }
+ },
+ "readings": {
+  "T": "the reply map holds structure that this feature does not carry",
+  "E0": "the reply map holds structure that this feature does not carry"
+ },
+ "check3": {
+  "judges": [
+   "GPT-6.1-Terra",
+   "Claude Sonnet 5.5"
+  ],
+  "per_role": {
+   "assistant": {
+    "hit5": 0.3775,
+    "move": 24.42105263157895,
+    "toward_assistant": null
+   },
+   "translator": {
+    "hit5": 0.22250000000000003,
+    "move": 24.36842105263158,
+    "toward_assistant": 26.0
+   },
+   "counselor": {
+    "hit5": 0.5458333333333334,
+    "move": 25.68421052631579,
+    "toward_assistant": -1.0
+   },
+   "consultant": {
+    "hit5": 0.41666666666666663,
+    "move": 28.157894736842106,
+    "toward_assistant": 0.0
+   },
+   "chef": {
+    "hit5": 0.8875,
+    "move": 27.105263157894736,
+    "toward_assistant": 11.0
+   },
+   "detective": {
+    "hit5": 0.5608333333333333,
+    "move": 34.94736842105263,
+    "toward_assistant": -49.0
+   },
+   "bartender": {
+    "hit5": 0.8833333333333333,
+    "move": 39.526315789473685,
+    "toward_assistant": 93.0
+   },
+   "criminal": {
+    "hit5": 0.5716666666666668,
+    "move": 17.36842105263158,
+    "toward_assistant": -10.0
+   },
+   "toddler": {
+    "hit5": 0.9616666666666669,
+    "move": 37.473684210526315,
+    "toward_assistant": 26.0
+   },
+   "teenager": {
+    "hit5": 0.7558333333333332,
+    "move": 24.68421052631579,
+    "toward_assistant": 26.0
+   },
+   "grandparent": {
+    "hit5": 0.9349999999999999,
+    "move": 28.31578947368421,
+    "toward_assistant": 37.0
+   },
+   "refugee": {
+    "hit5": 0.525,
+    "move": 50.68421052631579,
+    "toward_assistant": -68.0
+   },
+   "cynic": {
+    "hit5": 0.9600000000000001,
+    "move": 28.842105263157894,
+    "toward_assistant": 0.0
+   },
+   "optimist": {
+    "hit5": 0.7458333333333333,
+    "move": 25.105263157894736,
+    "toward_assistant": 8.0
+   },
+   "stoic": {
+    "hit5": 0.7425,
+    "move": 35.36842105263158,
+    "toward_assistant": -78.0
+   },
+   "narcissist": {
+    "hit5": 0.9633333333333334,
+    "move": 18.63157894736842,
+    "toward_assistant": -5.0
+   },
+   "pirate": {
+    "hit5": 0.9975,
+    "move": 23.68421052631579,
+    "toward_assistant": 0.0
+   },
+   "vampire": {
+    "hit5": 0.8483333333333334,
+    "move": 19.05263157894737,
+    "toward_assistant": -2.0
+   },
+   "robot": {
+    "hit5": 0.45333333333333337,
+    "move": 34.578947368421055,
+    "toward_assistant": -14.0
+   },
+   "void": {
+    "hit5": 0.39250000000000007,
+    "move": 26.94736842105263,
+    "toward_assistant": -10.0
+   }
+  },
+  "hit5_vs_move": {
+   "spearman": -0.022556390977443608,
+   "p": 0.9277,
+   "n": 20,
+   "predicted_sign": "below 0"
+  },
+  "hit5_vs_toward_assistant": {
+   "spearman": 0.37340671915228973,
+   "p": 0.1144,
+   "n": 19,
+   "predicted_sign": "above 0"
+  },
+  "full_map_spearman_R_P": 0.7642973052176689,
+  "reading": "no evidence for reason 2 here"
+ }
+}

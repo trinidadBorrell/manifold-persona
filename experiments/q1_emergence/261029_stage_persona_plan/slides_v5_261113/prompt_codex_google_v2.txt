@@ -1,0 +1,16 @@
+The owner asked for a new story section in his existing Google Slides deck. Deck: https://docs.google.com/presentation/d/1FHfzXmidtCksE270s8vRPzYKtmkeEdQG6cwiHR3Tn50/edit (MARS-experiment-logs-B, account bchikavanga25@gmail.com). Work quickly.
+
+Follow experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_slides_spec_v2.md exactly:
+1. Delete only the 16 slides whose object ids start with u1113_slide_ (you created them earlier today; deck positions 2 to 17). Check each id and position before deleting. Delete nothing else.
+2. Build the 18 new slides as native Google Slides content (text boxes, native tables, images) with object ids that start with u1113b_ (slides u1113b_slide_01 to u1113b_slide_18 in spec order), and insert them right after slide 1 (the cover, id p1), before "Update 10/16" (id u1016b_slide_01).
+3. Upload the figures named in the spec from experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/figs_v2/ (and figs/fig6_coinflip_bias.png) and place them with createImage, the same way you placed figures earlier today. Figures come first under each heading, as large as fits, aspect ratio kept; the text comes after.
+
+Rules:
+- Do not change, move, delete or re-style any other slide. Do not share the file or change permissions. Do not create other files in Drive except what image placement strictly needs.
+- Copy every word and number exactly from the spec. Do not add claims, words or numbers. Keep straight quotes straight.
+- Use the "Update 10/16" slides as style references: u1016b_slide_01 for the blue header, u1016b_slide_03 for the backup setup slide with the prompt box, u1016b_slide_04 to u1016b_slide_09 for heading + figure layouts, u1016b_slide_10 for tables, u1016b_slide_12 and u1016b_slide_13 for bullet slides.
+- After building, fetch a thumbnail of each new slide and save it as experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_thumbs_v2/slide-01.png ... slide-18.png, plus contact sheets. Look at each one and fix text overflow, overlaps, cut-off figures or text smaller than 12 pt, then refresh the thumbnails.
+- Save the native text of the 18 new slides (part line, heading, body, table cells, captions, in reading order) to experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_new_slides_text_v2.md.
+- No other HTTP and no paid model calls.
+
+Write experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_insert_report_v2.md with: the deleted ids, the new slide ids in order, their positions, the total slide count, anything you could not do, and any problem you see. Reply with one line: "replaced N slides with M slides".

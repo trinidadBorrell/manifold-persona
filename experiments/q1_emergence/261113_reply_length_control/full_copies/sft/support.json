@@ -1,0 +1,68 @@
+{
+ "first16": {
+  "tokens": 16,
+  "share": {
+   "assistant": 0.981,
+   "bartender": 0.948,
+   "chef": 0.961,
+   "consultant": 0.972,
+   "counselor": 0.977,
+   "criminal": 0.891,
+   "cynic": 0.827,
+   "default": 0.904,
+   "detective": 0.959,
+   "grandparent": 0.95,
+   "narcissist": 0.918,
+   "optimist": 0.957,
+   "pirate": 0.98,
+   "refugee": 0.951,
+   "robot": 0.931,
+   "stoic": 0.937,
+   "teenager": 0.954,
+   "toddler": 0.576,
+   "translator": 0.881,
+   "vampire": 0.874,
+   "void": 0.824
+  },
+  "lowest": [
+   "toddler",
+   0.576
+  ],
+  "available": true,
+  "rule": "every role keeps at least 0.5 of its rows",
+  "n_finite_rows": 19153
+ },
+ "first32": {
+  "tokens": 32,
+  "share": {
+   "assistant": 0.915,
+   "bartender": 0.815,
+   "chef": 0.83,
+   "consultant": 0.918,
+   "counselor": 0.868,
+   "criminal": 0.576,
+   "cynic": 0.34,
+   "default": 0.755,
+   "detective": 0.823,
+   "grandparent": 0.729,
+   "narcissist": 0.605,
+   "optimist": 0.736,
+   "pirate": 0.844,
+   "refugee": 0.735,
+   "robot": 0.659,
+   "stoic": 0.665,
+   "teenager": 0.765,
+   "toddler": 0.186,
+   "translator": 0.678,
+   "vampire": 0.553,
+   "void": 0.517
+  },
+  "lowest": [
+   "toddler",
+   0.186
+  ],
+  "available": false,
+  "rule": "every role keeps at least 0.5 of its rows",
+  "n_finite_rows": 14512
+ }
+}

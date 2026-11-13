@@ -1,0 +1,55 @@
+{
+ "source": "7b: pod C ../261029_fixed_text_read_through/checkpoints.json (resolved 2026-10-29); 1b: local HF cache refs/main on 12/11/2026 (pilot only)",
+ "7b": [
+  {
+   "stage": "base",
+   "repo": "allenai/OLMo-2-1124-7B",
+   "revision": "7df9a82518afdecae4e8c026b27adccc8c1f0032",
+   "tokenizer_json_sha256": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca"
+  },
+  {
+   "stage": "sft",
+   "repo": "allenai/OLMo-2-1124-7B-SFT",
+   "revision": "1de02c0175118a9de5854aec80a1f970e701e928",
+   "tokenizer_json_sha256": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca"
+  },
+  {
+   "stage": "dpo",
+   "repo": "allenai/OLMo-2-1124-7B-DPO",
+   "revision": "e34ea60adff2e575f4fe7569eaffd1b28509b6fd",
+   "tokenizer_json_sha256": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca"
+  },
+  {
+   "stage": "instruct",
+   "repo": "allenai/OLMo-2-1124-7B-Instruct",
+   "revision": "470b1fba1ae01581f270116362ee4aa1b97f4c84",
+   "tokenizer_json_sha256": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca"
+  }
+ ],
+ "1b": [
+  {
+   "stage": "base",
+   "repo": "allenai/OLMo-2-0425-1B",
+   "revision": "a1847dff35000b4271fa70afc5db10fd29fedbdf",
+   "tokenizer_json_sha256": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca"
+  },
+  {
+   "stage": "sft",
+   "repo": "allenai/OLMo-2-0425-1B-SFT",
+   "revision": "0d85a3d037876ce6ac7d4311d994400fc66ac27f",
+   "tokenizer_json_sha256": null
+  },
+  {
+   "stage": "dpo",
+   "repo": "allenai/OLMo-2-0425-1B-DPO",
+   "revision": "c4b0485961ab24c2433b090f3b922f0913a9290f",
+   "tokenizer_json_sha256": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca"
+  },
+  {
+   "stage": "instruct",
+   "repo": "allenai/OLMo-2-0425-1B-Instruct",
+   "revision": "48d788eca847d4d7548f375ad03d3c9312f6139e",
+   "tokenizer_json_sha256": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca"
+  }
+ ]
+}

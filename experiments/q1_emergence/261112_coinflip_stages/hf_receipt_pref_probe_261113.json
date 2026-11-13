@@ -1,0 +1,154 @@
+{
+ "repo": "brend0nc/manifold-persona-experiment-artifacts",
+ "revision": "673654b2d8c55c16b3c3af5c72341818185287c5",
+ "verified": true,
+ "n_files": 18,
+ "n_match": 18,
+ "bytes": 1727832,
+ "files": [
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/pref_probe/smoke/base.json",
+   "volume_path": "/out/pref_probe/smoke/base.json",
+   "sha256": "d2d958de00bc2f91124269271af323bbed0209ece0bef5b95986cb206b5c0662",
+   "size": 6290,
+   "remote_sha256": "d2d958de00bc2f91124269271af323bbed0209ece0bef5b95986cb206b5c0662",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/pref_probe/smoke/instruct.json",
+   "volume_path": "/out/pref_probe/smoke/instruct.json",
+   "sha256": "7cfd9da3b0e16b2021a054894a81d77b7dea5fb35d9c5c2496f45b2d6f9fbf34",
+   "size": 6042,
+   "remote_sha256": "7cfd9da3b0e16b2021a054894a81d77b7dea5fb35d9c5c2496f45b2d6f9fbf34",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/pref_probe/smoke/run.log",
+   "volume_path": "/out/pref_probe/smoke/run.log",
+   "sha256": "d15bd215830931ba316f78fa4fdf52f3843e66d0f1816884b5e26acafd65958e",
+   "size": 66,
+   "remote_sha256": "d15bd215830931ba316f78fa4fdf52f3843e66d0f1816884b5e26acafd65958e",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/pref_probe/full/analysis.json",
+   "volume_path": "/out/pref_probe/full/analysis.json",
+   "sha256": "652b056b995e4416ec3abd86766e4216cdaaf6ac524ec31b77e414dadec93c52",
+   "size": 11773,
+   "remote_sha256": "652b056b995e4416ec3abd86766e4216cdaaf6ac524ec31b77e414dadec93c52",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/pref_probe/full/analysis.md",
+   "volume_path": "/out/pref_probe/full/analysis.md",
+   "sha256": "0ddd55804358e01dca07ff53d0d1bed7f35f9182cbea68a3e47b9f1c0dd7efa7",
+   "size": 2225,
+   "remote_sha256": "0ddd55804358e01dca07ff53d0d1bed7f35f9182cbea68a3e47b9f1c0dd7efa7",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/pref_probe/full/base.json",
+   "volume_path": "/out/pref_probe/full/base.json",
+   "sha256": "446ae6026f9d920ce4d4e608c0246eaac5bf3d1b0ef3adcde684476e37f2aa77",
+   "size": 209984,
+   "remote_sha256": "446ae6026f9d920ce4d4e608c0246eaac5bf3d1b0ef3adcde684476e37f2aa77",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/pref_probe/full/dpo.json",
+   "volume_path": "/out/pref_probe/full/dpo.json",
+   "sha256": "5a13d933bfb5c47fa01b60e3368e62fde262adf27a7ceb8a1db8ea9860457a3e",
+   "size": 210162,
+   "remote_sha256": "5a13d933bfb5c47fa01b60e3368e62fde262adf27a7ceb8a1db8ea9860457a3e",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/pref_probe/full/instruct.json",
+   "volume_path": "/out/pref_probe/full/instruct.json",
+   "sha256": "015a95514a2662e46c0d124e46cc27495e9bc6d2893e195d6730cbf54f685491",
+   "size": 210648,
+   "remote_sha256": "015a95514a2662e46c0d124e46cc27495e9bc6d2893e195d6730cbf54f685491",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/pref_probe/full/run.log",
+   "volume_path": "/out/pref_probe/full/run.log",
+   "sha256": "7a082e146fe59c5ae182261d2a2d8e19d24fe6cec2781e692c2ea0814ea5db07",
+   "size": 134,
+   "remote_sha256": "7a082e146fe59c5ae182261d2a2d8e19d24fe6cec2781e692c2ea0814ea5db07",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/pref_probe/full/sft.json",
+   "volume_path": "/out/pref_probe/full/sft.json",
+   "sha256": "06441ad3d1ca8ef35da5d3013c42bc33b86b697245043bf53082d240eab918ac",
+   "size": 209973,
+   "remote_sha256": "06441ad3d1ca8ef35da5d3013c42bc33b86b697245043bf53082d240eab918ac",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/pref_probe/interview/analysis.json",
+   "volume_path": "/out/pref_probe/interview/analysis.json",
+   "sha256": "458b527138c5213f9f9d9d43cf9b879ef056bc39e6de26712d797b116c07b4a1",
+   "size": 11256,
+   "remote_sha256": "458b527138c5213f9f9d9d43cf9b879ef056bc39e6de26712d797b116c07b4a1",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/pref_probe/interview/analysis.md",
+   "volume_path": "/out/pref_probe/interview/analysis.md",
+   "sha256": "0370303b9c4f0f69625f76e0bfea6230eae6828a5b9f8818fb74d1d5623f1aba",
+   "size": 2245,
+   "remote_sha256": "0370303b9c4f0f69625f76e0bfea6230eae6828a5b9f8818fb74d1d5623f1aba",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/pref_probe/interview/base.json",
+   "volume_path": "/out/pref_probe/interview/base.json",
+   "sha256": "077a4835d91cb0bd75a6bdfbbc60e86b18c4eaf3b5c2e9d7f860f43a9b5d104a",
+   "size": 209984,
+   "remote_sha256": "077a4835d91cb0bd75a6bdfbbc60e86b18c4eaf3b5c2e9d7f860f43a9b5d104a",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/pref_probe/interview/dpo.json",
+   "volume_path": "/out/pref_probe/interview/dpo.json",
+   "sha256": "5d47bd6d2101d2150d83aa3acacd26e69d708bc29489d794f48e7c5b678a055b",
+   "size": 210617,
+   "remote_sha256": "5d47bd6d2101d2150d83aa3acacd26e69d708bc29489d794f48e7c5b678a055b",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/pref_probe/interview/instruct.json",
+   "volume_path": "/out/pref_probe/interview/instruct.json",
+   "sha256": "25270d31a09a66cc68329dcb2fc5efcd32ee9ec4ff16b5851b752cdcc52e7602",
+   "size": 211255,
+   "remote_sha256": "25270d31a09a66cc68329dcb2fc5efcd32ee9ec4ff16b5851b752cdcc52e7602",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/pref_probe/interview/run.log",
+   "volume_path": "/out/pref_probe/interview/run.log",
+   "sha256": "f81acf513ef9f25dd2cf842d8689a7bcb77dcf424509e1c503a6a8aac7a1ca5d",
+   "size": 136,
+   "remote_sha256": "f81acf513ef9f25dd2cf842d8689a7bcb77dcf424509e1c503a6a8aac7a1ca5d",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/pref_probe/interview/sft.json",
+   "volume_path": "/out/pref_probe/interview/sft.json",
+   "sha256": "89ebead73ea76acdab18575d2f78b8438a3da743824485020b4ffd5bf5da8096",
+   "size": 210058,
+   "remote_sha256": "89ebead73ea76acdab18575d2f78b8438a3da743824485020b4ffd5bf5da8096",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261112_coinflip_stages/run_full/length_check.json",
+   "volume_path": "/out/pref_probe/length_check.json",
+   "sha256": "768c1c547faeafc31b171246eb3c0a9dfb1346080ed44ad9ae9c77f39874376d",
+   "size": 4984,
+   "remote_sha256": "768c1c547faeafc31b171246eb3c0a9dfb1346080ed44ad9ae9c77f39874376d",
+   "match": true
+  }
+ ]
+}

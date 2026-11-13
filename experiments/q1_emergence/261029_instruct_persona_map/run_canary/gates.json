@@ -1,0 +1,80 @@
+{
+ "passed": true,
+ "gates": {
+  "G1": {
+   "n_rows": 5000,
+   "n_state_rows": 5000,
+   "absent": 0,
+   "invalid": 0,
+   "row_errors": 0,
+   "first_errors": [],
+   "valid_rows_not_finite": 0,
+   "invalid_rows_not_nan": 0,
+   "pass": true
+  },
+  "G2": {
+   "rule": ">= 0.95 valid per role",
+   "rates": {
+    "chef": 1.0,
+    "consultant": 1.0,
+    "default": 1.0,
+    "pirate": 1.0,
+    "toddler": 1.0
+   },
+   "pass": true
+  },
+  "G5": {
+   "mismatch": {},
+   "pass": true
+  },
+  "G3": {
+   "batches": [
+    98,
+    107
+   ],
+   "n_rows": 64,
+   "identical_same_batches": 64,
+   "identical_one_at_a_time_reported": 11,
+   "pass": true
+  },
+  "G4": {
+   "rule": {
+    "layers": [
+     9,
+     17,
+     23
+    ],
+    "min_cos": 0.95,
+    "median_cos": 0.99,
+    "median_rel_norm": 0.02
+   },
+   "cells": {
+    "L9": {
+     "n": 5000,
+     "min_cos": 0.9999833364647754,
+     "median_cos": 0.9999999101194464,
+     "median_rel_norm": 0.00021021724071174986,
+     "max_rel_norm": 0.0024044410136012605,
+     "pass": true
+    },
+    "L17": {
+     "n": 5000,
+     "min_cos": 0.9999795151266113,
+     "median_cos": 0.9999999466443235,
+     "median_rel_norm": 0.00020106332986163038,
+     "max_rel_norm": 0.003539225779543652,
+     "pass": true
+    },
+    "L23": {
+     "n": 5000,
+     "min_cos": 0.9999854109347384,
+     "median_cos": 0.9999999601356475,
+     "median_rel_norm": 0.00020545422124134804,
+     "max_rel_norm": 0.0035509877180490133,
+     "pass": true
+    }
+   },
+   "pass": true
+  }
+ }
+}

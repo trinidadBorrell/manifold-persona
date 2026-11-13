@@ -4,7 +4,7 @@
 
 `requirements.txt` defines the core Python environment. The project-specific `presenting-results` guide exists in `.claude/skills/presenting-results/`. The independent review is at `output/independent_review_2026-10-02/review.txt`.
 
-Use `/research-cycle` at `.claude/skills/research-cycle/SKILL.md` and `/challenge-result` at `.claude/skills/challenge-result/SKILL.md`. Use `research/PLAN.md` and `research/EXPERIMENT_INDEX.md` for the project plan and dated record.
+Use `/research-cycle` at `.claude/skills/research-cycle/SKILL.md` and `/challenge-result` at `.claude/skills/challenge-result/SKILL.md`. Use `research/PLAN.md` for the project plan. The dated record (the weekly log, experiment index, task tracker, claims and costs) is in the Obsidian vault `/Users/brendon/research-log/manifold-persona-log/`; `research/EXPERIMENT_INDEX.md` stopped on 23/10/2026.
 
 The old `.claude/scripts/`, `.claude/src/`, and `.claude/tests/` are retained but inactive. No hook or result gate from that scaffold runs as part of this workflow.
 
@@ -33,7 +33,7 @@ Link every reported number to a real source path. Check examples, controls, cont
 | `pandas` | Present in the current `.venv` | Reading per-item LLM records when useful. |
 | Jupyter, Ruff, Black, pre-commit, nbstripout | Absent from the current `.venv` | A matching notebook or code-quality task needs them. |
 
-Per-item JSONL can keep LLM inputs, outputs, and metadata together. Inspect or safety-tooling can help when a real LLM evaluation needs them. LiteLLM can help when a task uses many providers. Weights & Biases can help track shared runs. Slack and Notion are optional team tools; the local experiment index remains the project record.
+Per-item JSONL can keep LLM inputs, outputs, and metadata together. Inspect or safety-tooling can help when a real LLM evaluation needs them. LiteLLM can help when a task uses many providers. Weights & Biases can help track shared runs. Slack and Notion are optional team tools; the vault's experiment index (`Reference/Experiment index.md`) is the project record.
 
 ## Copy to another project
 

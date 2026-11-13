@@ -1,0 +1,29 @@
+My friend wrote the design below. They love blunt, honest feedback and will be disappointed if I hold back. Give the most honest, constructive criticism you can, with specific suggestions for improvement.
+
+This is round 3, the last round of a review-and-fix loop. Round 1: review/codex_review_v2_r1_261029.md (fixed in v2.1 / v1.1). Owner decisions: v2.2 / v1.2. Round 2: review/codex_review_v2_r2_261029.md, 5 text blockers (B1-B5) and other issues (O-A, O-B, O-C), answered in DESIGN.md v2.3 and THRESHOLDS v1.3 (tags [round 2, ...]). While fixing B3, we found that the same fixed-wording-panel bias can affect the pod C D2 pass rule: an offline check gave r_norm 1.00 at a checkpoint with no wording sensitivity and 1.05 at one with it, with identical complete role maps. We added a stated limit, a G5 bias case and a question-only-halves sensitivity for D2, but did not change the D2 pass rule. The next step after this review is code, then a small engineering canary on RunPod. Find what would make a result wrong, make a pass rule unable to fail, or waste a pod run.
+
+Files (in this repo):
+- experiments/q1_emergence/261029_stage_persona_plan/DESIGN.md
+- experiments/q1_emergence/261029_instruct_persona_map/THRESHOLDS.md and NOTE.md
+- experiments/q1_emergence/261029_base_role_vs_format/THRESHOLDS.md
+- experiments/q1_emergence/261029_fixed_text_read_through/THRESHOLDS.md
+- experiments/q1_emergence/261029_instruct_persona_map/e3_noise_check.py and results/e3_noise_check.json
+Context you may read: review/codex_review_v2_r2_261029.md; review/codex_review_v2_r1_261029.md; review/codex_review_design_261029.md; experiments/q1_emergence/261023_judge_designs/review/codex_review_base_judge_axioms_261029.md; experiments/q1_emergence/261008_base_persona_map/{NOTE.md,THRESHOLDS.md,gen_extract.py,context_extract.py,part2_analysis.py}; extraction/generate_and_extract_roles.py; src/manifold_persona/{generate.py,prompts_roles.py,extract.py}.
+
+Owner decisions already made (do not reopen them, but say if one makes a rule invalid): OLMo-2 not Olmo 3; pod B roles toddler, robot, narcissist, cynic, optimist, teenager, vampire, consultant, chef, pirate; pod B formats interview, script, story, description, description-only prompts, whole-continuation pooling, character named Alex; pod B 3 replicates; pod C checkpoints base, SFT, DPO, Instruct, RL step_60..step_360; E3 sampling settings for Instruct; {model_name} = "OLMo"; topic pairs chef/bartender, detective/criminal, counselor/consultant; data private now; both fidelity and identifiability measures; pod A 5 replicates and 40 questions; all threshold values and support values in the three THRESHOLDS files.
+
+Rules:
+- Read-only review. Do not edit any file except your output file.
+- Do not call any paid model, API or the network. No GPU. Small offline checks with .venv/bin/python -B are allowed.
+- Cite file:line for every claim about code or files.
+- Report only new problems or round 1 and round 2 items that are still not fixed. Do not repeat an item that is fixed.
+
+Check:
+1. Is each round 2 blocker (B1-B5) and other issue (O-A, O-B, O-C) fixed? List only those that are not fixed or are fixed wrongly, with evidence.
+2. Do the v2.3 / v1.3 changes add a new error or inconsistency?
+2b. Can the pod C D2 pass rule pass when every complete role map is identical (fixed wording panel, checkpoint-specific wording sensitivity)? If yes, give the smallest fix and tag it [OWNER] if it changes when D2 passes.
+3. Can any pass rule pass by construction, or fail by construction? Give a concrete case.
+4. Are the three THRESHOLDS files consistent with DESIGN.md and with each other (units, halves, nulls, layers, frames, row counts, replicate counts)?
+5. Anything that would break the engineering canary or waste a pod run.
+
+Write experiments/q1_emergence/261029_stage_persona_plan/review/codex_review_v2_r3_261029.md with: Verdict (one line); Blockers (each with evidence, a concrete failing case, an exact proposed fix, and a tag: [TEXT] if a wording or design-text fix is enough, or [OWNER] if the fix needs the owner to change a decision or a threshold value); Other issues (same tags); What you verified. Use short plain sentences. Then reply with one line: "Blockers: N (TEXT: a, OWNER: b)".

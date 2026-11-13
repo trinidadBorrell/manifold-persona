@@ -1,0 +1,9 @@
+Fix one placement error in https://docs.google.com/presentation/d/1FHfzXmidtCksE270s8vRPzYKtmkeEdQG6cwiHR3Tn50/edit (account bchikavanga25@gmail.com). Work quickly. Do not share the file or change permissions. No other HTTP and no paid model calls.
+
+The two glossary slides you inserted earlier (u1113c_slide_01 and u1113c_slide_02) are in the wrong place. The published deck shows them at positions 4 and 5, right after u1113b_slide_02 ("1. The field") and before u1113b_slide_03 ("2. Why it matters for safety"). Your report said 7 and 8; that was wrong.
+
+1. Read the presentation. List every slide's 1-based position and objectId for positions 1 to 12, as the API returns them, and save that list in your report.
+2. Move u1113c_slide_01 and u1113c_slide_02 as one block, in that order, so they sit directly after u1113b_slide_05 ("4. My question") and directly before u1113b_slide_06 ("5. The pivot"). Use one updateSlidesPosition request with slideObjectIds ["u1113c_slide_01","u1113c_slide_02"] and the insertionIndex that the current read gives (index of u1113b_slide_06 in the arrangement before the move), with writeControl.requiredRevisionId from that read. Change nothing else.
+3. Read the presentation again. Check from that read that the order of positions 1 to 10 is: p1, u1113b_slide_01, u1113b_slide_02, u1113b_slide_03, u1113b_slide_04, u1113b_slide_05, u1113c_slide_01, u1113c_slide_02, u1113b_slide_06, u1113b_slide_07; that the total is 62; and that slides 11 to 62 keep their order.
+
+Append a short "Glossary slides moved" section to experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_insert_report_v2.md with the before and after lists for positions 1 to 10 (position, objectId) taken from the reads, and correct the earlier "Final position" lines there. Reply with one line: "moved 2 slides to positions A and B" using the positions from the final read.

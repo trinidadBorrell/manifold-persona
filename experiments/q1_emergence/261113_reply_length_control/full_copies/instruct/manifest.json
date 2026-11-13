@@ -1,0 +1,51 @@
+{
+ "stage": "instruct",
+ "model": "allenai/OLMo-2-1124-7B-Instruct",
+ "revision": "470b1fba1ae01581f270116362ee4aa1b97f4c84",
+ "dtype": "bfloat16",
+ "attn_implementation": "sdpa",
+ "cuts": {
+  "first16": 16,
+  "first32": 32
+ },
+ "states": [
+  0,
+  9,
+  17,
+  23
+ ],
+ "check_states": [
+  9,
+  17,
+  23
+ ],
+ "n_rows": 21000,
+ "limit": 0,
+ "batch_size": 32,
+ "check_passed": true,
+ "available": {
+  "first16": true,
+  "first32": true
+ },
+ "act_rows": "row i is rows.jsonl line keys.json row_index[i]; NaN where the reply is shorter than the cut",
+ "inputs": {
+  "run": "/out/poda_dl/experiments/q1_emergence/261029_instruct_persona_map/run_full",
+  "sha256": {
+   "rows.jsonl": "ddb34fab81c9253eb80753275348de4beff950ac4304ad1c7228450c2606eac9",
+   "reply_mean_acts.npy": "8b4ab8cdf9366bc8c5f4b89f4e530db3eaa4125a958f3d5c646995e8e3d4a8dc",
+   "manifest.json": "ba451cf439722f75824cf5e96c1935f84954b84c1e86c1380e5333b34c5f97e1"
+  }
+ },
+ "code": {
+  "length_control_py": "1107661644e086278d331030e61040c0a11303ca6169606d0c8afd146e1c32eb",
+  "rows_py": "ba1e1e0321768bae59b507e36f37f3a94bccf4a8a8ef716f40d1c2b374190e16"
+ },
+ "versions": {
+  "torch": "2.13.0+cu129",
+  "cuda": "12.9",
+  "transformers": "4.47.1",
+  "numpy": "2.5.2",
+  "device": "NVIDIA A100 80GB PCIe"
+ },
+ "seconds": 345.7
+}

@@ -1,0 +1,1 @@
+{"rows": 1800, "fed": 1800, "layers": {"reply": [0, 9, 17, 23], "first32": [0, 9, 17, 23]}, "dtypes": {"reply": "float16", "first32": "float16"}, "g1_rows_checked": 1800, "gpu_memory_gb": {"peak_allocated": 16.36, "peak_reserved": 48.28}}

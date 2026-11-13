@@ -1,0 +1,14 @@
+# Pod packages for the stage pods, on image runpod/pytorch:2.8.0-py3.11-cuda12.8.1-cudnn-devel-ubuntu22.04
+# (bare-pod's A100 image; torch 2.8.0+cu128 comes
+# with the image). transformers and tokenizers are the E3 pod versions. numpy is not pinned, so pip keeps
+# the image's numpy and its packages built against it. Each run's manifest.json records every installed
+# package; the canary's list is the lock for the full runs.
+transformers==4.47.1
+tokenizers==0.21.0
+huggingface_hub==0.36.2
+pytest==9.1.1
+# pod C analysis on the pod (owner rule of 29/10: heavy work on the pod); the versions of the canary analysis
+scikit-learn==1.9.1
+scipy==1.18.1
+sentence-transformers==5.7.0
+joblib==1.6.0

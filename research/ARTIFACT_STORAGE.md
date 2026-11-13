@@ -8,7 +8,7 @@ This project uses an experiment-first layout. The [Hughes–Perez workflow](http
 |---|---|---|
 | Git | `experiments/<topic>/<YYMMDD_name>/` | Numbered scripts or notebooks, a short run note, and settings. |
 | Private Hugging Face | `experiments/<topic>/<YYMMDD_name>/` | Large inputs, saved state, and outputs when needed. |
-| Project index | `research/EXPERIMENT_INDEX.md` | Question, mode, code or note, exact artifact paths, and next decision. |
+| Project index | Vault `/Users/brendon/research-log/manifold-persona-log/Reference/Experiment index.md` (from 23/10/2026; `research/EXPERIMENT_INDEX.md` stopped then) | Question, mode, code or note, exact artifact paths, and next decision. |
 
 De-risk runs can use a short notebook and note. They do not need a full pipeline or a Hub upload. For an extended run, keep reused code in stable modules and record the code revision, inputs, settings, seed, command, and outputs. When a run uses the Hub, record its dataset ID, exact revision, and path in the run note. Never use `main` as the only record of an input or result.
 

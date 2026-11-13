@@ -1,0 +1,26 @@
+My friend wrote the code below. They love blunt, honest feedback and will be disappointed if I hold back. Do an adversarial code review: find every bug that would make a result wrong, make a gate unable to fail, crash or waste the paid GPU run, or lose data. Do not edit any file in the repo.
+
+Context: pod B of a study on OLMo-2-7B base (allenai/OLMo-2-1124-7B @ 7df9a82518afdecae4e8c026b27adccc8c1f0032). The model writes role replies in 4 document formats (interview, script, story, description); the code stores reply states for later analysis. Two engineering canaries (1,600 replies each) ran on an A100 and passed every gate, but both were discarded after template changes. The current code (templates v1.6: blank-line stop, except right after a colon) has not run on the GPU yet. Next: a third canary, then the full run (24,000 replies, about 84 min on one A100; the pod has no persistent volume). 48 offline tests pass on the Mac.
+
+Code to review (in this repo):
+- experiments/q1_emergence/261029_base_role_vs_format/gen_extract.py (grid, prompts, generation, reply cut, states, quote spans, D1 support and stop rule, resume, finalize, manifest)
+- experiments/q1_emergence/261029_base_role_vs_format/gates.py (G1-G5, D1 support report, raw read)
+- experiments/q1_emergence/261029_base_role_vs_format/context_extract.py (C2, C3 context controls)
+- experiments/q1_emergence/261029_base_role_vs_format/test_podb_gen_extract.py, test_podb_gates.py, test_podb_context_extract.py
+- the pod B parts of experiments/q1_emergence/261029_stage_persona_plan/pod.sh (push, pull ... b)
+Shared code it uses (owned by another person; report bugs in it too, but mark them "shared"): src/manifold_persona/rows.py and tests/test_rows.py.
+
+Spec: experiments/q1_emergence/261029_base_role_vs_format/THRESHOLDS.md (v1.6), NOTE.md, and the pod B and "Shared row schema" sections of experiments/q1_emergence/261029_stage_persona_plan/DESIGN.md. The interview format must equal the E3 interview exactly: experiments/q1_emergence/261008_base_persona_map/gen_extract.py. Project rules: base models get plain text with one <|endoftext|> at the start and no chat template; hidden_states[0] is the embedding output.
+
+Check at least:
+1. Correctness of each stored array and its row order (reply_mean_acts, quote_mean_acts, ctx_c2, ctx_c3), spans, padding side, NaN rules, float16 overflow handling.
+2. The reply cut (gen_extract.cut_reply, blank_stop, make_row, check_row) against rows.cut_reply; edge cases (eos/pad, markers that overlap a blank line, CRLF, a reply that starts with a blank line, a colon then spaces).
+3. Seeds and determinism: per-row seeds, batch order, resume after a crash, the fingerprint and when a resume is refused.
+4. The D1 support rule and the full-run stop rule (exit code 4), against THRESHOLDS.
+5. Whether each gate can fail on the damage it is meant to catch, and whether a gate can pass on wrong data.
+6. The full run at scale: memory (24,000 x 33 x 4096 float16 states), disk, time, partial files, what happens if the pod dies, the copy-back and hash checks.
+7. Anything in the tests that hides a bug (a test that cannot fail, a fixture that skips a path).
+
+You may read any file and run read-only commands and the tests (.venv/bin/python -m pytest -p no:cacheprovider experiments/q1_emergence/261029_base_role_vs_format/). Use no GPU and no network beyond the local Hugging Face cache.
+
+Output: findings ranked most severe first. For each: severity (blocker / should fix / minor), file:line, what is wrong, a concrete failing case (input -> wrong output or crash), and the fix. Say "verified" when you reproduced it, "suspected" when you did not. Then list what you checked and found correct. Short plain sentences.

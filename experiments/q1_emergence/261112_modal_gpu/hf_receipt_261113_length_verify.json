@@ -1,0 +1,35 @@
+{
+ "repo": "brend0nc/manifold-persona-experiment-artifacts",
+ "batch": "261113_length_verify",
+ "revision": "e6dccf4fbb217b0f14d8bb1bb9d9d5a0cfb70600",
+ "verified": true,
+ "n_files": 3,
+ "n_match": 3,
+ "bytes": 7151,
+ "files": [
+  {
+   "path": "experiments/q1_emergence/261113_reply_length_control/verify/dpo.json",
+   "volume_path": "/out/length_control/verify/dpo.json",
+   "sha256": "9442ac784fe37434d67c29af2c153082ab09e66f77fbdb1a2111aada06c226ae",
+   "size": 2370,
+   "remote_sha256": "9442ac784fe37434d67c29af2c153082ab09e66f77fbdb1a2111aada06c226ae",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261113_reply_length_control/verify/instruct.json",
+   "volume_path": "/out/length_control/verify/instruct.json",
+   "sha256": "e0ea37071fdaa04ef65c951ea1f00271c46b9fdad3324fa12aeb0cfb0a4b3335",
+   "size": 2343,
+   "remote_sha256": "e0ea37071fdaa04ef65c951ea1f00271c46b9fdad3324fa12aeb0cfb0a4b3335",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261113_reply_length_control/verify/sft.json",
+   "volume_path": "/out/length_control/verify/sft.json",
+   "sha256": "d17944a3744701fc2f30fe55b8eb4c2c21eff35b3adf0a07d6dd71a774225019",
+   "size": 2438,
+   "remote_sha256": "d17944a3744701fc2f30fe55b8eb4c2c21eff35b3adf0a07d6dd71a774225019",
+   "match": true
+  }
+ ]
+}

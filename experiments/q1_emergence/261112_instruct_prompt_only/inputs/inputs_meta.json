@@ -1,0 +1,55 @@
+{
+ "poda_run": "../261029_instruct_persona_map/run_full",
+ "poda_rows_sha256": "ddb34fab81c9253eb80753275348de4beff950ac4304ad1c7228450c2606eac9",
+ "poda_acts_sha256": "8b4ab8cdf9366bc8c5f4b89f4e530db3eaa4125a958f3d5c646995e8e3d4a8dc",
+ "model": "allenai/OLMo-2-1124-7B-Instruct",
+ "revision": "470b1fba1ae01581f270116362ee4aa1b97f4c84",
+ "tokenizer_files": {
+  "tokenizer.json": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+  "tokenizer_config.json": "50c412c57d832057a3d5db42064c741f751e570f7c8788f037bfb0d2dd6e5f49",
+  "special_tokens_map.json": "78afb564e81264029b25f9caf24bda2521d5bdaeff5cd3fdbc01d3da2e8ce2f2"
+ },
+ "poda_versions": {
+  "python": "3.12.3",
+  "torch": "2.13.0+cu129",
+  "cuda": "12.9",
+  "transformers": "4.47.1",
+  "tokenizers": "0.21.0",
+  "numpy": "2.5.2"
+ },
+ "n_prompts": 4200,
+ "roles": [
+  "assistant",
+  "bartender",
+  "chef",
+  "consultant",
+  "counselor",
+  "criminal",
+  "cynic",
+  "default",
+  "detective",
+  "grandparent",
+  "narcissist",
+  "optimist",
+  "pirate",
+  "refugee",
+  "robot",
+  "stoic",
+  "teenager",
+  "toddler",
+  "translator",
+  "vampire",
+  "void"
+ ],
+ "check_rows": [
+  0,
+  1000,
+  2000,
+  3000,
+  4000,
+  5000,
+  6000,
+  7000
+ ],
+ "check_state": 17
+}

@@ -1,0 +1,96 @@
+{
+ "model": "allenai/OLMo-2-1124-7B",
+ "revision": "7df9a82518afdecae4e8c026b27adccc8c1f0032",
+ "tokenizer_files": {
+  "tokenizer.json": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+  "tokenizer_config.json": "91c69c665697785ace4ec7dbd159e1839bc9bb5033ab05a56bb0547521dc9ab0",
+  "special_tokens_map.json": "3c6bf7c09d5473c303cee8575a22bb51e5153c17d177a721b43cd4785c6d09ae"
+ },
+ "templates": "20f5e2ac986ee5f2c83124917b42d969efb5fabfdec9fdf94bc2beeb0ca4efb7",
+ "code": {
+  "gen_extract.py": "5e2e879ffafdd13c4744d4d21075dafdf690d780f798d8a0a92c920d3d6ad396",
+  "rows.py": "b1e4c29bba60a49b785b4847c818ffff623dd5e96253b05e03df8df2a9eb0c4a"
+ },
+ "sources": {
+  "experiments/q1_emergence/261008_base_persona_map/questions_40.json": "fe7c6810e74e38eec6a30e294501ac8e81773fe9d757bae48e225ccec6632d78",
+  "experiments/q1_emergence/261008_base_persona_map/descriptions_third_person.json": "eff3bc17c7c09246c8dfb8e57bcbda5d83f72b7d060b1eb1f9fcc91ff905a88b",
+  "refs/assistant-axis/extraction_questions.jsonl": "31650b9a55d6b827d29ec2ee89034c7efd454672779b3ad9d7c8c4e9ea14f69e",
+  "refs/assistant-axis/roles/instructions/toddler.json": "b283aecfbb00ee9072a0c803601d0fa706c6be4e4c82dea691ef072abe7f123d",
+  "refs/assistant-axis/roles/instructions/robot.json": "7baf831777637a2d6661aeb1d013339dc154a0359375af1487694a93e8b48e65",
+  "refs/assistant-axis/roles/instructions/narcissist.json": "4b8bf0dd46c421f2859f9457ec75245de9a8fc757c464c2d91711e569dad1ee3",
+  "refs/assistant-axis/roles/instructions/cynic.json": "9a7f90661b035f4bdd33a599c00eebb50e3232f2ba2de5a3725bffc14a696b4d",
+  "refs/assistant-axis/roles/instructions/optimist.json": "eb7f6dabc136dde76edb889786547fa1b20946af014683529b4fd623c8d06723",
+  "refs/assistant-axis/roles/instructions/teenager.json": "441b9679d7548e3583e24048a40e9318b22549c3355eb5647fad61dde6005b9b",
+  "refs/assistant-axis/roles/instructions/vampire.json": "041edd1ed5173642a914d35788eeccbd471bc7132056ab9a43d1f413a4fd95eb",
+  "refs/assistant-axis/roles/instructions/consultant.json": "ebbaeec0c7847cc973188804525534a254a410700d759b593768227f67acf05c",
+  "refs/assistant-axis/roles/instructions/chef.json": "537c49d7e7428d3828062fd7a6e458f2044c4b2f3a4b2f422b71c68fc1a4ced2",
+  "refs/assistant-axis/roles/instructions/pirate.json": "c2a251a99589afd9781057d0ead62ed9ddf7aeb6fa8d42e8dbfc80aac289cb4a"
+ },
+ "prompt_ids": "cd920a3419fbb089e588789080e3b6ec44ac088b84f87cb321789458c497d181",
+ "dtype": "bfloat16",
+ "attn_implementation": "sdpa",
+ "versions": {
+  "python": "3.12.3",
+  "torch": "2.8.0+cu128",
+  "transformers": "4.47.1",
+  "tokenizers": "0.21.0"
+ },
+ "sampling": {
+  "sampler": "SeededSampler",
+  "temperature": 0.5,
+  "repetition_penalty": 1.1,
+  "top_k": 0,
+  "top_p": 1.0,
+  "max_new_tokens": 128,
+  "seed": "item_seed(item_key)"
+ },
+ "extra_depths": [
+  0.25,
+  0.5,
+  0.75
+ ],
+ "grid_hash": "e47488cf087b80107c9104ac3493afa1c053d6e6a83119081a54770435a0ca23",
+ "batch_size": 32,
+ "max_lost_questions": 10,
+ "template_text": {
+  "interview": {
+   "header": "The following is an interview. The guest answers in their own voice.",
+   "about": "About the guest: {desc}",
+   "turn": "Interviewer: {q}\nGuest:",
+   "stops": [
+    "\nInterviewer:",
+    "\nAbout the guest:"
+   ],
+   "blank_stop": false
+  },
+  "script": {
+   "header": "The following is a script. Each line starts with the name of the speaker.",
+   "about": "Alex is {desc}.",
+   "turn": "Friend: {q}\nAlex:",
+   "stops": [
+    "\nFriend:",
+    "\nThe following is"
+   ],
+   "blank_stop": true
+  },
+  "story": {
+   "header": "The following is a short story.",
+   "about": "Alex is {desc}.",
+   "turn": "One day, a friend said to Alex, \"{q}\" Alex",
+   "stops": [
+    "\nThe following is"
+   ],
+   "blank_stop": true
+  },
+  "description": {
+   "header": "The following is a description of a person.",
+   "about": "Alex is {desc}.",
+   "turn": "If Alex were asked, \"{q}\" Alex would",
+   "stops": [
+    "\nIf Alex",
+    "\nThe following is"
+   ],
+   "blank_stop": true
+  }
+ }
+}

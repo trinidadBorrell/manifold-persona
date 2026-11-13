@@ -1,0 +1,51 @@
+{
+ "stage": "dpo",
+ "model": "allenai/OLMo-2-1124-7B-DPO",
+ "revision": "e34ea60adff2e575f4fe7569eaffd1b28509b6fd",
+ "dtype": "bfloat16",
+ "attn_implementation": "sdpa",
+ "cuts": {
+  "first16": 16,
+  "first32": 32
+ },
+ "states": [
+  0,
+  9,
+  17,
+  23
+ ],
+ "check_states": [
+  9,
+  17,
+  23
+ ],
+ "n_rows": 21000,
+ "limit": 0,
+ "batch_size": 32,
+ "check_passed": true,
+ "available": {
+  "first16": true,
+  "first32": true
+ },
+ "act_rows": "row i is rows.jsonl line keys.json row_index[i]; NaN where the reply is shorter than the cut",
+ "inputs": {
+  "run": "/out/own_replies/dpo_full",
+  "sha256": {
+   "rows.jsonl": "1254e5c15249d10410a741cab013992116268fbee36c976f5499f4d2ee35cf76",
+   "reply_mean_acts.npy": "c538e9c5e6052d35b5c74307f91d20cc97814a759942c79a6027da9c0c30d726",
+   "manifest.json": "3adcb2e6f115156d132b6420ebba639b6337e6a2117b125fede9f49555f5d282"
+  }
+ },
+ "code": {
+  "length_control_py": "1107661644e086278d331030e61040c0a11303ca6169606d0c8afd146e1c32eb",
+  "rows_py": "ba1e1e0321768bae59b507e36f37f3a94bccf4a8a8ef716f40d1c2b374190e16"
+ },
+ "versions": {
+  "torch": "2.13.0+cu129",
+  "cuda": "12.9",
+  "transformers": "4.47.1",
+  "numpy": "2.5.2",
+  "device": "NVIDIA A100-SXM4-80GB"
+ },
+ "seconds": 357.0
+}

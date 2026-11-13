@@ -1,0 +1,23 @@
+{
+ "stage": "pop_podb",
+ "seed": 20261029,
+ "n": 23999,
+ "cells": {
+  "base/podB/description": 5999,
+  "base/podB/interview": 6000,
+  "base/podB/script": 6000,
+  "base/podB/story": 6000
+ },
+ "items_sha256": "f216e3cb524d831f8e69cfe714f2b98f2c2229151e74dd508a143edf7d34032b",
+ "key_sha256": "937e7869bec6c1e28c83c841c2bd6513d7b4500cc52b57706e0046f7c3329618",
+ "code_sha256": "a47d22dcb8796bddcd3339e09d0c732979a93fe6c9cba1abdbfb792aede36f71",
+ "rubric_sha256": "42d82e2dbd862d7b067f3264ae004de07118d9cf2425e4656d0e5f4e139508e7",
+ "sources": {
+  "experiments/q1_emergence/261008_base_persona_map/run_rep/replies.jsonl": "e0fc4ebb77533f9185c494d9184a9487b371193507063a5809b6c8614769cde2",
+  "experiments/q1_emergence/261008_base_persona_map/run_main/replies.jsonl": "443add45b5b44e06e6e55309fb71f31bc336b1fa110401843b1ae9105a8fe4dd",
+  "experiments/q1_emergence/261029_instruct_persona_map/run_full/rows.jsonl": "ddb34fab81c9253eb80753275348de4beff950ac4304ad1c7228450c2606eac9",
+  "experiments/q1_emergence/261029_base_role_vs_format/run_full/rows.jsonl": "558f63d9165de6f138ea21fee61ca2729c2c863c57c01ae117bfd74f8f8d80c0"
+ },
+ "podb_run": "experiments/q1_emergence/261029_base_role_vs_format/run_full",
+ "out_dir": "/Users/brendon/persona-manifolds/judge_validation_261029"
+}

@@ -1,0 +1,72 @@
+{
+ "model": "allenai/OLMo-2-1124-7B",
+ "revision": "7df9a82518afdecae4e8c026b27adccc8c1f0032",
+ "tokenizer_files": {
+  "tokenizer.json": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+  "tokenizer_config.json": "91c69c665697785ace4ec7dbd159e1839bc9bb5033ab05a56bb0547521dc9ab0",
+  "special_tokens_map.json": "3c6bf7c09d5473c303cee8575a22bb51e5153c17d177a721b43cd4785c6d09ae"
+ },
+ "templates": "a935962e814e51d8312a1772c6a9caccff9769d74cac4904213d66d53981146e",
+ "code": {
+  "gen_extract.py": "1ca84972a150620d6135f7502e36a6481b673ddd897cb2376ef50824573cefe2",
+  "rows.py": "b1e4c29bba60a49b785b4847c818ffff623dd5e96253b05e03df8df2a9eb0c4a"
+ },
+ "dtype": "bfloat16",
+ "sampling": {
+  "sampler": "SeededSampler",
+  "temperature": 0.5,
+  "repetition_penalty": 1.1,
+  "top_k": 0,
+  "top_p": 1.0,
+  "max_new_tokens": 128,
+  "seed": "item_seed(item_key)"
+ },
+ "extra_depths": [
+  0.25,
+  0.5,
+  0.75
+ ],
+ "grid_hash": "2ed93b3469695e17738a5f0a247d0356fe4ecdef7b397256d8664c6a71e9d174",
+ "batch_size": 32,
+ "max_lost_questions": null,
+ "template_text": {
+  "interview": {
+   "header": "The following is an interview. The guest answers in their own voice.",
+   "about": "About the guest: {desc}",
+   "turn": "Interviewer: {q}\nGuest:",
+   "stops": [
+    "\nInterviewer:",
+    "\nAbout the guest:"
+   ]
+  },
+  "script": {
+   "header": "The following is a script. Each line starts with the name of the speaker.",
+   "about": "Alex is {desc}.",
+   "turn": "Friend: {q}\nAlex:",
+   "stops": [
+    "\n\n",
+    "\nFriend:",
+    "\nThe following is"
+   ]
+  },
+  "story": {
+   "header": "The following is a short story.",
+   "about": "Alex is {desc}.",
+   "turn": "One day, a friend said to Alex, \"{q}\" Alex",
+   "stops": [
+    "\n\n",
+    "\nThe following is"
+   ]
+  },
+  "description": {
+   "header": "The following is a description of a person.",
+   "about": "Alex is {desc}.",
+   "turn": "If Alex were asked, \"{q}\" Alex would",
+   "stops": [
+    "\n\n",
+    "\nIf Alex",
+    "\nThe following is"
+   ]
+  }
+ }
+}

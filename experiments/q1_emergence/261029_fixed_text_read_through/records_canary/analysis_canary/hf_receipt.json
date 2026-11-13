@@ -1,0 +1,87 @@
+{
+ "repo": "brend0nc/manifold-persona-experiment-artifacts",
+ "revision": "33b8f0d1bc032dba2010f2aff496e116f588aed1",
+ "verified": true,
+ "files": [
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/analysis_canary/SHA256SUMS.txt",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_canary/SHA256SUMS.txt",
+   "sha256": "b00b0688eeb86575a780f26c3f5d212e6e2366b5697fcb986bc0cc38ed176aba",
+   "size": 644,
+   "remote_sha256": "b00b0688eeb86575a780f26c3f5d212e6e2366b5697fcb986bc0cc38ed176aba",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/analysis_canary/analysis.py",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_canary/analysis.py",
+   "sha256": "2631b4d3ea81a68b61b743287dc6a5a167867a801700c4d240145238bded2c49",
+   "size": 25237,
+   "remote_sha256": "2631b4d3ea81a68b61b743287dc6a5a167867a801700c4d240145238bded2c49",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/analysis_canary/checkpoints.py",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_canary/checkpoints.py",
+   "sha256": "9fe076fac491a71157802ffc7d5691443715f60fde0782205d76de80e451ea13",
+   "size": 8613,
+   "remote_sha256": "9fe076fac491a71157802ffc7d5691443715f60fde0782205d76de80e451ea13",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/analysis_canary/embed_pod_a.npy",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_canary/embed_pod_a.npy",
+   "sha256": "c2a97e7541941e51b80e0dab8cbd4650228167fa8e5dc0f1fea226e40cc9e1a4",
+   "size": 64512128,
+   "remote_sha256": "c2a97e7541941e51b80e0dab8cbd4650228167fa8e5dc0f1fea226e40cc9e1a4",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/analysis_canary/f3_e3_check.txt",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_canary/f3_e3_check.txt",
+   "sha256": "887f6d5d3dd5213b0a128b7e5119805a6afd0ab7c95c5779bbe71d07ffe6e3e2",
+   "size": 779,
+   "remote_sha256": "887f6d5d3dd5213b0a128b7e5119805a6afd0ab7c95c5779bbe71d07ffe6e3e2",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/analysis_canary/frames.py",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_canary/frames.py",
+   "sha256": "212a2de70cea4e7466189df8aad49313ca603d0794a6fac1041be402cca62b99",
+   "size": 11679,
+   "remote_sha256": "212a2de70cea4e7466189df8aad49313ca603d0794a6fac1041be402cca62b99",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/analysis_canary/maps.py",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_canary/maps.py",
+   "sha256": "4c5fed4c663d0fc1afcf9146b49b2be0f397a1eb06342c430008f7066ab571fc",
+   "size": 10765,
+   "remote_sha256": "4c5fed4c663d0fc1afcf9146b49b2be0f397a1eb06342c430008f7066ab571fc",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/analysis_canary/results_canary_pod_a.json",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_canary/results_canary_pod_a.json",
+   "sha256": "3aad53499c99ba0fcffe6dd8cc89e8cbfa8f3f5c6306cf225217b96be1c6c16c",
+   "size": 20227,
+   "remote_sha256": "3aad53499c99ba0fcffe6dd8cc89e8cbfa8f3f5c6306cf225217b96be1c6c16c",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/analysis_canary/versions.txt",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_canary/versions.txt",
+   "sha256": "e66c4f6cc4aa9770e2264095bdae656be9a796e9e5422c370c7d3a4006c7421e",
+   "size": 174,
+   "remote_sha256": "e66c4f6cc4aa9770e2264095bdae656be9a796e9e5422c370c7d3a4006c7421e",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/analysis_canary.log",
+   "local": "/root/mp/experiments/q1_emergence/261029_fixed_text_read_through/analysis_canary.log",
+   "sha256": "44dae59439e055e76810ed69ae129fd3382b9f846b19641e03301cd4c1fd527c",
+   "size": 984,
+   "remote_sha256": "44dae59439e055e76810ed69ae129fd3382b9f846b19641e03301cd4c1fd527c",
+   "match": true
+  }
+ ]
+}

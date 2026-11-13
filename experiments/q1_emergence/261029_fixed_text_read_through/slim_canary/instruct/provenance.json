@@ -1,0 +1,303 @@
+{
+ "repo": "brend0nc/manifold-persona-experiment-artifacts",
+ "revision": "e3548db375b6182d39f1ea80e2a680f38dfe0351",
+ "kept_states": [
+  0,
+  9,
+  17,
+  23
+ ],
+ "files": {
+  "e3_desc.F1.reply.npy": {
+   "source": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/instruct/e3_desc.F1.reply.npy",
+   "source_states": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+   ]
+  },
+  "e3_desc.F1.first32.npy": {
+   "source": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/instruct/e3_desc.F1.first32.npy",
+   "source_states": [
+    0,
+    9,
+    17,
+    23
+   ]
+  },
+  "e3_desc.F2.reply.npy": {
+   "source": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/instruct/e3_desc.F2.reply.npy",
+   "source_states": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+   ]
+  },
+  "e3_desc.F3.neutral.npy": {
+   "source": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/instruct/e3_desc.F3.neutral.npy",
+   "source_states": [
+    0,
+    9,
+    17,
+    23
+   ]
+  },
+  "e3_ex2.F1.reply.npy": {
+   "source": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/instruct/e3_ex2.F1.reply.npy",
+   "source_states": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+   ]
+  },
+  "e3_ex2.F1.first32.npy": {
+   "source": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/instruct/e3_ex2.F1.first32.npy",
+   "source_states": [
+    0,
+    9,
+    17,
+    23
+   ]
+  },
+  "e3_ex2.F2.reply.npy": {
+   "source": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/instruct/e3_ex2.F2.reply.npy",
+   "source_states": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+   ]
+  },
+  "e3_ex2.F3.neutral.npy": {
+   "source": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/instruct/e3_ex2.F3.neutral.npy",
+   "source_states": [
+    0,
+    9,
+    17,
+    23
+   ]
+  },
+  "pod_a.F0.reply.npy": {
+   "source": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/instruct/pod_a.F0.reply.npy",
+   "source_states": [
+    0,
+    9,
+    17,
+    23
+   ]
+  },
+  "pod_a.F1.reply.npy": {
+   "source": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/instruct/pod_a.F1.reply.npy",
+   "source_states": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+   ]
+  },
+  "pod_a.F1.first32.npy": {
+   "source": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/instruct/pod_a.F1.first32.npy",
+   "source_states": [
+    0,
+    9,
+    17,
+    23
+   ]
+  },
+  "pod_a.F2.reply.npy": {
+   "source": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/instruct/pod_a.F2.reply.npy",
+   "source_states": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+   ]
+  },
+  "pod_a.F3.neutral.npy": {
+   "source": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/instruct/pod_a.F3.neutral.npy",
+   "source_states": [
+    0,
+    9,
+    17,
+    23
+   ]
+  }
+ }
+}

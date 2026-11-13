@@ -1,0 +1,68 @@
+{
+ "first16": {
+  "tokens": 16,
+  "share": {
+   "assistant": 1.0,
+   "bartender": 1.0,
+   "chef": 1.0,
+   "consultant": 1.0,
+   "counselor": 1.0,
+   "criminal": 1.0,
+   "cynic": 1.0,
+   "default": 0.999,
+   "detective": 1.0,
+   "grandparent": 0.999,
+   "narcissist": 1.0,
+   "optimist": 1.0,
+   "pirate": 1.0,
+   "refugee": 1.0,
+   "robot": 0.998,
+   "stoic": 1.0,
+   "teenager": 1.0,
+   "toddler": 0.965,
+   "translator": 0.965,
+   "vampire": 1.0,
+   "void": 0.999
+  },
+  "lowest": [
+   "toddler",
+   0.965
+  ],
+  "available": true,
+  "rule": "every role keeps at least 0.5 of its rows",
+  "n_finite_rows": 20925
+ },
+ "first32": {
+  "tokens": 32,
+  "share": {
+   "assistant": 1.0,
+   "bartender": 0.998,
+   "chef": 0.999,
+   "consultant": 0.999,
+   "counselor": 0.999,
+   "criminal": 0.998,
+   "cynic": 0.96,
+   "default": 0.999,
+   "detective": 1.0,
+   "grandparent": 0.995,
+   "narcissist": 0.993,
+   "optimist": 0.999,
+   "pirate": 1.0,
+   "refugee": 1.0,
+   "robot": 0.982,
+   "stoic": 0.996,
+   "teenager": 1.0,
+   "toddler": 0.796,
+   "translator": 0.844,
+   "vampire": 1.0,
+   "void": 0.992
+  },
+  "lowest": [
+   "toddler",
+   0.796
+  ],
+  "available": true,
+  "rule": "every role keeps at least 0.5 of its rows",
+  "n_finite_rows": 20549
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "model": "allenai/OLMo-2-1124-7B-Instruct",
+ "revision": "470b1fba1ae01581f270116362ee4aa1b97f4c84",
+ "dtype": "bfloat16",
+ "attn_implementation": "sdpa",
+ "states": [
+  8,
+  9,
+  16,
+  17,
+  23,
+  24
+ ],
+ "neutral_text": "That is a good question. I think the answer depends on the situation, and I would want to think about it carefully before I say more.",
+ "neutral_ids": [
+  4897,
+  374,
+  264,
+  1695,
+  3488,
+  13,
+  358,
+  1781,
+  279,
+  4320,
+  14117,
+  389,
+  279,
+  6671,
+  11,
+  323,
+  358,
+  1053,
+  1390,
+  311,
+  1781,
+  922,
+  433,
+  15884,
+  1603,
+  358,
+  2019,
+  810,
+  13
+ ],
+ "n_prompts": 4200,
+ "limit": 0,
+ "batch_size": 32,
+ "environment_check": {
+  "state": 17,
+  "rows": [
+   0,
+   1000,
+   2000,
+   3000,
+   4000,
+   5000,
+   6000,
+   7000
+  ],
+  "cosines": [
+   0.9999999403953552,
+   1.0,
+   1.0000001192092896,
+   1.0000001192092896,
+   1.0,
+   0.9999999403953552,
+   0.9999998211860657,
+   1.0
+  ],
+  "min_required": 0.99
+ },
+ "inputs_sha256": "7582e0c304bba037c61d6840d67ce23420aee8c5e077e90aea279ec479d5fe22  c3_prompts.jsonl\nb522c236633e11181980d0f8ae63b9155df20dbd521a00dc1481e6be72cea125  check_states.npy\n4964f50b9395e431cd1ae71fd3d24a87b4a8e48b2881e378f9164311cfe2d79f  check_rows.json\necf80fe8e2415a890dce98883ced02142d571a9c4d6e945ee4e24d45983157ac  inputs_meta.json\n",
+ "poda_rows_sha256": "ddb34fab81c9253eb80753275348de4beff950ac4304ad1c7228450c2606eac9",
+ "code": {
+  "extract_c3_py": "422763ea15baf604cc006a79a00575642cda603810126132e00f473c816ef17d",
+  "rows_py": "ba1e1e0321768bae59b507e36f37f3a94bccf4a8a8ef716f40d1c2b374190e16"
+ },
+ "versions": {
+  "torch": "2.13.0+cu129",
+  "transformers": "4.47.1",
+  "numpy": "2.5.2",
+  "device": "NVIDIA A100-SXM4-80GB"
+ },
+ "seconds": 41.7
+}

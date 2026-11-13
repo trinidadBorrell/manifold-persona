@@ -1,0 +1,173 @@
+**Verdict: hold the full run until the decision gates and canary-reuse policy are fixed.**
+
+I reviewed the supplied snapshot without editing files. **53 Pod C tests and 31 shared-row tests passed**, but adversarial checks exposed failures those tests miss. Other sessions changed the live code during this review; findings below refer to the snapshot unless marked **live**.
+
+---
+
+**Blocker — The live interval “fix” changes D1 without establishing coverage**
+
+Location: **live** [maps.py:207](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/maps.py:207).
+
+The new `summary()` shifts every interval until its median equals the point estimate. A synthetic example changed D1’s lower bound from **0.4605 to 0.5405**, flipping its floor decision. Documenting this as v1.7 does not establish that it produces valid confidence intervals.
+
+**Fix:** retain the original result, validate any replacement through coverage simulations, and report the revised analysis as chosen after seeing the canary. The other eight checkpoints add no new D1 data when base and Instruct are reused.
+
+---
+
+**Blocker — Checksums do not establish that the checkpoints belong together**
+
+Locations: [analysis.py:63](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/analysis.py:63), [analysis.py:402](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/analysis.py:402), [extract.py:224](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/extract.py:224).
+
+The snapshot accepts internally consistent folders without checking their checkpoint identity, revision, frame digests, extraction code, or smoke limit. I reproduced gates passing with deliberately wrong metadata. The extraction fingerprint also omits pooling spans, row keys and runtime versions; identical IDs do not establish identical pooling.
+
+**Fix:** bind every checkpoint to the complete frozen frames, expected records, pinned revision and approved runtime stack. Pin the new pod’s environment to the canary; the current requirements do not enforce its Torch and NumPy versions.
+
+---
+
+**Blocker — D1 ignores the required same-anchor floors**
+
+Location: [analysis.py:170](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/analysis.py:170).
+
+`d1()` checks the cross-checkpoint interval and permutation p-value, but never checks either checkpoint’s reliability floor. A complete synthetic grid with opposite wording effects passed D1 despite failing the same-anchor requirement.
+
+**Fix:** require both reliability lower bounds before assigning a D1 pass, using the same source, frame, layer and population. Preserve raw results when interpretation is unavailable.
+
+---
+
+**Blocker — The live code no longer satisfies the planned canary-reuse condition**
+
+Locations: **live** [extract.py:243](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/extract.py:243), [analysis.py:436](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/analysis.py:436).
+
+During this review, `extract.py`, `frames.py` and `rows.py` changed. The new analysis rejects different extraction-code hashes, so combining eight new-code checkpoints with the old canary will fail G4 after the GPU work.
+
+**Fix:** choose the extraction version before launch. Reuse needs either the frozen implementation or an explicitly validated compatibility policy; changing recorded hashes is not a valid migration.
+
+---
+
+**Major — The role bootstrap does not follow the existing distinct-role centring rule**
+
+Locations: [maps.py:98](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/maps.py:98), [maps.py:164](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/maps.py:164).
+
+The snapshot centres on all original roles, then samples distances. The live replacement centres on duplicate draw positions, which also differs from the project’s [distinct-role reference](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261008_base_persona_map/part2_analysis.py:368).
+
+**Fix:** centre each draw on its **distinct sampled roles**, while retaining repeated-pair weights and excluding same-identity pairs. Check the optimized result against direct role vectors.
+
+---
+
+**Major — An undefined null produces the smallest possible p-value**
+
+Locations: [maps.py:194](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/maps.py:194), [maps.py:198](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/maps.py:198).
+
+The observed statistic skips undefined halves, but the null uses an ordinary mean. One unsupported half can therefore make every null value NaN, and `NaN >= observed` is always false: **9,999 undefined permutations produce p = 0.0001**.
+
+**Fix:** reject non-finite observed or null statistics before computing p. Apply consistent half-support rules to the observed statistic and null; never count undefined permutations as evidence.
+
+---
+
+**Major — Resume treats existence as proof of completion**
+
+Locations: [extract.py:128](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/extract.py:128), [fetch_slim.py:36](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/fetch_slim.py:36), [fetch_slim.py:67](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/fetch_slim.py:67).
+
+Extraction accepts a completion JSON even when its state array is absent. A failed slim download leaves an incomplete directory, which the next invocation silently skips; an existing directory can also belong to another receipt.
+
+**Fix:** validate expected files, shapes, layers and stored hashes before skipping. Build slim copies in staging directories, then publish them atomically with receipt-bound completion metadata.
+
+---
+
+**Major — Driver recovery can leave the pod idle indefinitely**
+
+Location: [run_pod_c.sh:53](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/run_pod_c.sh:53).
+
+If the worker dies before writing `.done`, the driver waits forever. A restart also refuses existing record directories instead of reconciling completed checkpoints.
+
+**Fix:** check worker liveness, enforce a bounded timeout, and support verified completed checkpoints on restart. Scope status files and tmux sessions by job.
+
+---
+
+**Major — Receipt checks are weaker than the upload helper’s checks**
+
+Locations: [run_pod_c.sh:48](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/run_pod_c.sh:48), [run_pod_c.sh:65](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/run_pod_c.sh:65).
+
+An existing frame receipt skips upload without checking whether it is verified or matches the current frames. The Mac checkpoint check compares basenames and `match` flags, rather than binding local hashes to the receipt’s full paths.
+
+**Fix:** verify repository, revision, full paths, hashes and sizes against the current files. The upload helper’s remote hash-and-size check is sound; preserve that stronger verification through the driver.
+
+---
+
+**Major — Analysis multiplies work and loses all progress on failure**
+
+Locations: [analysis.py:237](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/analysis.py:237), [analysis.py:305](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/analysis.py:305), [analysis.py:493](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/analysis.py:493).
+
+Every split can recreate large feature arrays, while unrestricted joblib threads call threaded numerical libraries. Results are written only at the end, so a late failure discards hours of useful work.
+
+**Fix:** bound workers and BLAS threads, precompute fixed prompt features, reuse text-baseline fits, and checkpoint fold predictions and analysis sections. Merely switching to processes does not bound memory; also ship the missing analysis modules, tests and dependencies in [pod.sh:23](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/pod.sh:23). [Scikit-learn documents the threading oversubscription issue](https://scikit-learn.org/stable/computing/parallelism.html#oversubscription-spawning-too-many-threads).
+
+---
+
+**Major — Unavailable normalized draws remain available to downstream calculations**
+
+Locations: [maps.py:221](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/maps.py:221), [analysis.py:195](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/analysis.py:195).
+
+`r_norm()` clears interval bounds for non-positive reliability but still returns the draw array. When both reliabilities are negative, their product is positive, allowing D2 or stage-change summaries to recreate a finite interval.
+
+**Fix:** propagate unavailable normalized draws explicitly. Downstream differences must not restore an interval that the reliability rule rejected.
+
+---
+
+**Major — Memory pressure extends beyond the known THP stall**
+
+Locations: [extract.py:81](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/extract.py:81), [extract.py:110](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/extract.py:110), [rows.py:275](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/rows.py:275).
+
+The model computes unused KV caches and vocabulary logits; saving and hashing also create large host-memory copies. Importantly, the [base log](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/records_canary/base.log:2) records allocator retries during **F1**, not just F0.
+
+**Fix:** use the decoder without caching, write arrays in chunks, and stream hashes. Measure allocated and reserved GPU memory separately before attributing the entire peak to live tensors. [PyTorch explains that distinction](https://docs.pytorch.org/docs/2.15/notes/cuda.html#memory-management).
+
+---
+
+**Minor — G5 does not exercise its required wording-bias case**
+
+Location: [analysis.py:391](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/review/code_before_fixes_261030/analysis.py:391).
+
+The saved canary G5 case reports `r_norm: null` and a NaN difference because its reliability floor fails. It does not record the required D2 transition and stage-change values.
+
+**Fix:** add the exact zero-noise, equal-complete-map construction from the prior review, with reliability above the floor. D2 correctly remained report-only in my separate check.
+
+---
+
+**Answers to the five canary concerns**
+
+| Concern | Verdict and action |
+|---|---|
+| **1. Bootstrap intervals** | **Downward shift confirmed**, including with all roles retained and only questions resampled. Duplicate observations are normal bootstrap behavior; fewer distinct items alone do not invalidate it. The downward shift tends to make the percentile floor stricter, while incorrect centring can understate uncertainty. Overall coverage needs calibration; forcing intervals around the point does not establish it. |
+| **2. `r_norm ≈ 0.996`** | **Not a ceiling: `r_norm` can exceed 1.** The saved raw agreement and reliabilities explain this value; it does not demonstrate that intermediate stages will separate. Keep raw agreement, both reliabilities, question-only halves and CKA beside it; Instruct equals 1 algebraically. [Saved values](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/records_canary/analysis_canary/results_canary_pod_a.json). |
+| **3. Ten-checkpoint analysis cost** | Pod A grows from **1,050 to 2,650 classifier fits**, rather than fivefold, because endpoint decoding stays fixed. Equal-cost extrapolation gives roughly **3.6 hours for pod A**, plus E3 and map work; budget **4–8 hours unchanged**, with substantial uncertainty. Profile sections before committing to that estimate; the starting measurement is [NOTE.md:36](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/NOTE.md:36). |
+| **4. `use_cache=False`** | **Safe mathematically for these fresh full-sequence forwards**; the pinned implementation uses the same attention inputs with an initially empty cache. Verify GPU equality before claiming bitwise identity, and bypass unused logits too. Under the current hash policy, changing extraction code requires re-extraction or an approved compatibility check—not a forged fingerprint. [Pinned OLMo implementation](https://github.com/huggingface/transformers/blob/v4.47.1/src/transformers/models/olmo2/modeling_olmo2.py). |
+| **5. THP and similar stalls** | Keep `NUMPY_MADVISE_HUGEPAGE=0` before NumPy starts. Also remove whole-array copies and whole-file hash reads, bound decoding memory, and reserve disk for temporary arrays and downloads. Measure GPU allocator fragmentation before adding allocator flags. |
+
+---
+
+**What can stay**
+
+| Checked item | Assessment |
+|---|---|
+| Row alignment and pooling | All **24,600 frozen rows** agree across reply spans, first-32 spans, frame hashes and stored-array dimensions |
+| F1 join | Preserves reply IDs and excludes the inserted separator from pooling |
+| Empty spans and storage | Deliberate NaNs; float32 pooling and finite-value float16-overflow fallback are appropriate |
+| Halves and F4 | Fixed paired halves and strict unavailable intervals are appropriate; do not discard failed draws |
+| Text anchors | Vocabulary and scaling fit on training rows; no held-out fitting leak found |
+| F3 | Complete balanced control grid is correct; retain the accepted **1e-2** tolerance and chance-decoding check |
+| Tokens and deletion | No direct credential read or print found; deletion flags default off |
+
+I did **not** run a GPU equivalence test or a live HF restore. Concurrent fixes have not received a complete verification pass.
+
+---
+
+**Next step**
+
+Before booking the pod:
+
+1. **Freeze one reviewed analysis method**, including centring, reliability gates and finite-null handling.
+2. **Choose canary reuse:** frozen extraction for eight checkpoints, re-extraction of all ten, or validated compatibility.
+3. **Test one killed-and-resumed checkpoint**, receipt-bound restoration, bounded memory and partial analysis recovery.
+
+Analysis-only fixes do not require another GPU extraction. The live extraction changes make that reuse decision necessary now.

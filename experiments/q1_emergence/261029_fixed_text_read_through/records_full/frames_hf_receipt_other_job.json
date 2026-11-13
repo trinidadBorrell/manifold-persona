@@ -1,0 +1,39 @@
+{
+ "repo": "brend0nc/manifold-persona-experiment-artifacts",
+ "revision": "d166df01032a326e1d9fb02b80cff433d125e067",
+ "verified": true,
+ "files": [
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/frames_full/SHA256SUMS.txt",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/frames_full/SHA256SUMS.txt",
+   "sha256": "bb85ac9a95fba4b2ed3321550b8c8a9a944b02dfa5242ab921530b8c234e88a5",
+   "size": 235,
+   "remote_sha256": "bb85ac9a95fba4b2ed3321550b8c8a9a944b02dfa5242ab921530b8c234e88a5",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/frames_full/frame_read.md",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/frames_full/frame_read.md",
+   "sha256": "298911ee55ba2acace8340c1e4d20eeb3a952b3007555a1a9e7a9fc006059b0a",
+   "size": 68670,
+   "remote_sha256": "298911ee55ba2acace8340c1e4d20eeb3a952b3007555a1a9e7a9fc006059b0a",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/frames_full/frames.json",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/frames_full/frames.json",
+   "sha256": "2c7ab2f871cc8c1c76a65a01d2633ac4163c4cbb70b8cbd08c00e67afa617332",
+   "size": 1007980,
+   "remote_sha256": "2c7ab2f871cc8c1c76a65a01d2633ac4163c4cbb70b8cbd08c00e67afa617332",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_fixed_text_read_through/run_canary/frames_full/frames.npz",
+   "local": "/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_fixed_text_read_through/frames_full/frames.npz",
+   "sha256": "7cbfb4a394c7e7c3c90fedc638bae58bb9b2e4816223c34a9bf266062c9edd02",
+   "size": 48011102,
+   "remote_sha256": "7cbfb4a394c7e7c3c90fedc638bae58bb9b2e4816223c34a9bf266062c9edd02",
+   "match": true
+  }
+ ]
+}

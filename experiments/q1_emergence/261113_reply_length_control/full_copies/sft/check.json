@@ -1,0 +1,39 @@
+{
+ "rule": {
+  "layers": [
+   9,
+   17,
+   23
+  ],
+  "min_cos": 0.95,
+  "median_cos": 0.99,
+  "median_rel_norm": 0.02
+ },
+ "cells": {
+  "L9": {
+   "n": 21000,
+   "min_cos": 0.9999526103117743,
+   "median_cos": 0.999985863852725,
+   "median_rel_norm": 0.0028299797181444244,
+   "max_rel_norm": 0.008126394539472078,
+   "pass": true
+  },
+  "L17": {
+   "n": 21000,
+   "min_cos": 0.9949660638340594,
+   "median_cos": 0.9999829891775107,
+   "median_rel_norm": 0.00367851362860517,
+   "max_rel_norm": 0.0829750585611584,
+   "pass": true
+  },
+  "L23": {
+   "n": 21000,
+   "min_cos": 0.9979148013225201,
+   "median_cos": 0.9999864761145425,
+   "median_rel_norm": 0.003816644103695442,
+   "max_rel_norm": 0.05533044910281119,
+   "pass": true
+  }
+ },
+ "passed": true
+}

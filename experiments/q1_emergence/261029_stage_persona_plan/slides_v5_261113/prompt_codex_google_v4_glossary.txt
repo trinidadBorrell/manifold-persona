@@ -1,0 +1,9 @@
+Add two slides to https://docs.google.com/presentation/d/1FHfzXmidtCksE270s8vRPzYKtmkeEdQG6cwiHR3Tn50/edit (account bchikavanga25@gmail.com). Work quickly. Do not change, move or delete any existing slide except to insert these two. Do not share the file or change permissions.
+
+Insert two new slides right after u1113b_slide_05 ("I ask at which OLMo-2-7B stage the Assistant becomes privileged") and before u1113b_slide_06, with object ids starting u1113c_ (slides u1113c_slide_01 and u1113c_slide_02), following "Slide 5a" and "Slide 5b" in experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_slides_spec_v4.md:
+- Each slide: the small grey part line "4. My question: words used here" and the heading text exactly as in the spec, in the same style as u1113b_slide_05.
+- Slide 5a figure: experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/figs_v2/fig05b_words_used_1.png. Slide 5b figure: .../figs_v2/fig05c_words_used_2.png. Place each with createImage as large as fits under the heading, aspect ratio kept, centred. No other text.
+
+After inserting, fetch thumbnails of the two new slides and save them as experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_thumbs_v2/slide-05a.png and slide-05b.png; look at both and fix any overlap or cut-off. Confirm the total slide count (expected 62) and that every other slide's id and order is unchanged. No other HTTP and no paid model calls.
+
+Append a short "Glossary slides (spec v4)" section to experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_insert_report_v2.md with the new ids, their positions and the total slide count. Reply with one line: "inserted N slides".

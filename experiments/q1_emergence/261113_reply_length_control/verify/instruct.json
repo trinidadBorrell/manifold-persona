@@ -1,0 +1,110 @@
+{
+ "stage": "instruct",
+ "n_rows": 21000,
+ "cuts": {
+  "first16": {
+   "dtype": "float16",
+   "shape": [
+    21000,
+    4,
+    4096
+   ],
+   "n_finite": 20925,
+   "n_eligible": 20925,
+   "n_partly_finite": 0,
+   "n_finite_not_eligible": 0,
+   "n_eligible_not_finite": 0,
+   "n_exact_length_rows": 17,
+   "exact_length_check": {
+    "L0": {
+     "n": 17,
+     "min_cos": 0.9999999999999998,
+     "median_cos": 1.0,
+     "median_rel_norm": 0.0,
+     "max_rel_norm": 0.0,
+     "pass": true
+    },
+    "L9": {
+     "n": 17,
+     "min_cos": 0.9999404884940739,
+     "median_cos": 0.999968874752442,
+     "median_rel_norm": 0.004714866174413236,
+     "max_rel_norm": 0.005790065322720568,
+     "pass": true
+    },
+    "L17": {
+     "n": 17,
+     "min_cos": 0.9999123651459625,
+     "median_cos": 0.9999643743740134,
+     "median_rel_norm": 0.0053258415457787004,
+     "max_rel_norm": 0.007284214653410623,
+     "pass": true
+    },
+    "L23": {
+     "n": 17,
+     "min_cos": 0.9999434524853638,
+     "median_cos": 0.9999740717878971,
+     "median_rel_norm": 0.005592934087110693,
+     "max_rel_norm": 0.007162408186346159,
+     "pass": true
+    }
+   }
+  },
+  "first32": {
+   "dtype": "float16",
+   "shape": [
+    21000,
+    4,
+    4096
+   ],
+   "n_finite": 20549,
+   "n_eligible": 20549,
+   "n_partly_finite": 0,
+   "n_finite_not_eligible": 0,
+   "n_eligible_not_finite": 0,
+   "n_exact_length_rows": 26,
+   "exact_length_check": {
+    "L0": {
+     "n": 26,
+     "min_cos": 0.9999999999999998,
+     "median_cos": 1.0,
+     "median_rel_norm": 0.0,
+     "max_rel_norm": 0.0,
+     "pass": true
+    },
+    "L9": {
+     "n": 26,
+     "min_cos": 0.999971127513276,
+     "median_cos": 1.0,
+     "median_rel_norm": 0.0,
+     "max_rel_norm": 0.004225788320288477,
+     "pass": true
+    },
+    "L17": {
+     "n": 26,
+     "min_cos": 0.9999627776995045,
+     "median_cos": 1.0,
+     "median_rel_norm": 0.0,
+     "max_rel_norm": 0.005259166809624358,
+     "pass": true
+    },
+    "L23": {
+     "n": 26,
+     "min_cos": 0.9999692447020555,
+     "median_cos": 1.0,
+     "median_rel_norm": 0.0,
+     "max_rel_norm": 0.005590005865381144,
+     "pass": true
+    }
+   }
+  }
+ },
+ "n_rows_first16_equals_first32": 0,
+ "smoke_fingerprint_diff": [],
+ "devices": {
+  "smoke": "NVIDIA A100 80GB PCIe",
+  "full": "NVIDIA A100 80GB PCIe"
+ },
+ "passed": true,
+ "failures": []
+}

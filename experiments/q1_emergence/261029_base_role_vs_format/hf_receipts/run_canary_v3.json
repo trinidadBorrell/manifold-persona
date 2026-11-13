@@ -1,0 +1,175 @@
+{
+ "repo": "brend0nc/manifold-persona-experiment-artifacts",
+ "revision": "2d5ef4d1451cffce24a1b04f2bc4884972168347",
+ "verified": true,
+ "files": [
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/SHA256SUMS.txt",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/SHA256SUMS.txt",
+   "sha256": "785cb641fbc80cd5d3ad1a8b22ca1f4710c24870a8150017f8f7aa255a2e32d0",
+   "size": 579,
+   "remote_sha256": "785cb641fbc80cd5d3ad1a8b22ca1f4710c24870a8150017f8f7aa255a2e32d0",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/context/SHA256SUMS.txt",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/context/SHA256SUMS.txt",
+   "sha256": "f63f894691ab5d8c0a576a7910647a7db1986fd0b375f593354a311b81c7f9f0",
+   "size": 316,
+   "remote_sha256": "f63f894691ab5d8c0a576a7910647a7db1986fd0b375f593354a311b81c7f9f0",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/context/c3_prompts.json",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/context/c3_prompts.json",
+   "sha256": "9c7d99c7460c77caf5e26ce38c23e268b5d057fab4af941ef17c082eb2c5416f",
+   "size": 25200,
+   "remote_sha256": "9c7d99c7460c77caf5e26ce38c23e268b5d057fab4af941ef17c082eb2c5416f",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/context/ctx_c2.npy",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/context/ctx_c2.npy",
+   "sha256": "41c6e80c29526c79878288b5593cfc7e400a70a022ed8427526eda9744ff6499",
+   "size": 39321728,
+   "remote_sha256": "41c6e80c29526c79878288b5593cfc7e400a70a022ed8427526eda9744ff6499",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/context/ctx_c3.npy",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/context/ctx_c3.npy",
+   "sha256": "de08e2750e21cf00e0770621b8b06fd179325f7b305a4e7f7e014aedd54da59a",
+   "size": 19660928,
+   "remote_sha256": "de08e2750e21cf00e0770621b8b06fd179325f7b305a4e7f7e014aedd54da59a",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/context/manifest.json",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/context/manifest.json",
+   "sha256": "ac1e1ba1e75612e32c75dbf287ff73c62022dd4e65ac2dd367e581fe1556645b",
+   "size": 2719,
+   "remote_sha256": "ac1e1ba1e75612e32c75dbf287ff73c62022dd4e65ac2dd367e581fe1556645b",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/context.log",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/context.log",
+   "sha256": "ece1ac2f0feeaa719509eefcb221ecdeb3cf5bf83e5545cc5597073033f0f19a",
+   "size": 841,
+   "remote_sha256": "ece1ac2f0feeaa719509eefcb221ecdeb3cf5bf83e5545cc5597073033f0f19a",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/fingerprint.txt",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/fingerprint.txt",
+   "sha256": "797fda9ff0eebb8181f911d78c425ff2f4760322cbc77363eff1ff04c55236b4",
+   "size": 64,
+   "remote_sha256": "797fda9ff0eebb8181f911d78c425ff2f4760322cbc77363eff1ff04c55236b4",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/fingerprint_parts.json",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/fingerprint_parts.json",
+   "sha256": "81533608306dff2ca61dc2e182afb01f24aa35dec3bf768dddc4f8c9ddd99e3a",
+   "size": 3243,
+   "remote_sha256": "81533608306dff2ca61dc2e182afb01f24aa35dec3bf768dddc4f8c9ddd99e3a",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/gates.json",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/gates.json",
+   "sha256": "c6a525704520e594b2225de6e3fb5ca3eb48ee2468d57a836b9e984fad992db5",
+   "size": 3206,
+   "remote_sha256": "c6a525704520e594b2225de6e3fb5ca3eb48ee2468d57a836b9e984fad992db5",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/gates.log",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/gates.log",
+   "sha256": "3810f38003eda94accf83fad5069f809c01e310f05bae91c638ce5b921f5a514",
+   "size": 938,
+   "remote_sha256": "3810f38003eda94accf83fad5069f809c01e310f05bae91c638ce5b921f5a514",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/grid.json",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/grid.json",
+   "sha256": "4bb0a9b1eb3a28d08f1ae3cc64bde6d045cb84d5a2c9d91a480dec919c65fa23",
+   "size": 58491,
+   "remote_sha256": "4bb0a9b1eb3a28d08f1ae3cc64bde6d045cb84d5a2c9d91a480dec919c65fa23",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/manifest.json",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/manifest.json",
+   "sha256": "232bad4c44c7208c3d12eb6d93e17bfdfb237ee1928cf65eb11aaf9801542d87",
+   "size": 8915,
+   "remote_sha256": "232bad4c44c7208c3d12eb6d93e17bfdfb237ee1928cf65eb11aaf9801542d87",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/prompts_check.txt",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/prompts_check.txt",
+   "sha256": "b75f774ecf72a3c70f62d974c8ad893acc4f1ac25dff1932aec26cd88ee8c0fd",
+   "size": 1240,
+   "remote_sha256": "b75f774ecf72a3c70f62d974c8ad893acc4f1ac25dff1932aec26cd88ee8c0fd",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/quote_mean_acts.npy",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/quote_mean_acts.npy",
+   "sha256": "ab95630875c18bfa009ebb79205dd038e7a35519566538167046a20f742b733e",
+   "size": 39321728,
+   "remote_sha256": "ab95630875c18bfa009ebb79205dd038e7a35519566538167046a20f742b733e",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/raw_read.md",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/raw_read.md",
+   "sha256": "a2bbc6609924d639a9f7d065ccba67677bf46f165bdaac8f8c4e90584a255d21",
+   "size": 22456,
+   "remote_sha256": "a2bbc6609924d639a9f7d065ccba67677bf46f165bdaac8f8c4e90584a255d21",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/reply_extras.jsonl",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/reply_extras.jsonl",
+   "sha256": "a4fc979ccb6ab7e5f9425835edb9952373cc44f6c6cc4249d0c43dda265edf5f",
+   "size": 453177,
+   "remote_sha256": "a4fc979ccb6ab7e5f9425835edb9952373cc44f6c6cc4249d0c43dda265edf5f",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/reply_mean_acts.npy",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/reply_mean_acts.npy",
+   "sha256": "7098fe1822c8aaf56b3a43652173fc9d03e4c3ecc5e21059ac1d605a3592aa5c",
+   "size": 432537728,
+   "remote_sha256": "7098fe1822c8aaf56b3a43652173fc9d03e4c3ecc5e21059ac1d605a3592aa5c",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/rows.jsonl",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/rows.jsonl",
+   "sha256": "6b9ebf83c85e18ce7978a96b4f02939194d9614bc695b8a1f0f73a9522e668bf",
+   "size": 2802224,
+   "remote_sha256": "6b9ebf83c85e18ce7978a96b4f02939194d9614bc695b8a1f0f73a9522e668bf",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/run_id.txt",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3/run_id.txt",
+   "sha256": "39a7f13e00301c932fb505af22bbad34594fb3e00a68e9be2c374ad620b2c87a",
+   "size": 13,
+   "remote_sha256": "39a7f13e00301c932fb505af22bbad34594fb3e00a68e9be2c374ad620b2c87a",
+   "match": true
+  },
+  {
+   "path": "experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3.log",
+   "local": "/root/mp/experiments/q1_emergence/261029_base_role_vs_format/run_canary_v3.log",
+   "sha256": "3bb118aaefb804d990d66db57589b6a3d5940bdac7a29a9eda7a18d6d941b445",
+   "size": 1473,
+   "remote_sha256": "3bb118aaefb804d990d66db57589b6a3d5940bdac7a29a9eda7a18d6d941b445",
+   "match": true
+  }
+ ]
+}

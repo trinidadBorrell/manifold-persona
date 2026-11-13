@@ -1,0 +1,34 @@
+**The targeted fixes work. The new quote rule still permits systematic corruption. All 69 tests pass.**
+
+**Round-2 findings**
+
+| Finding | Verdict | Reason |
+|---|---|---|
+| 1. Pull retry staging | fixed | Fresh staging prevents stale files from surviving retries. A local SSH mock confirmed this. The patch is now applied. |
+| 2. Single corrupted quote | fixed | G4 checks single quotes. The `-10` corruption fails. |
+| 3. Damaged shard metadata | fixed | Missing or CRC-damaged `acts`, `quotes`, `keys`, and `f32` all fail validation. Invalid flag types, shapes, and dtype mismatches also fail. |
+| 4. Identical clean quotes | fixed | Undefined centred cosine no longer fails the quote gate. Identical-quote tests pass. |
+| 5. Colon exception | fixed | Spaces are ignored; tabs are not. CRLF handling matches the stated rule. Current cuts match the approved offline cut on all 1,600 saved raw replies. |
+| Carried #9. Archive memory | partly fixed | Pod B hashes in chunks. `hf_archive.py` still uses whole-file reads, as disclosed. |
+| Carried #14. Integration coverage | fixed | New tests cover whitespace, EOS followed by padding, finalization, G1, G4, and context checks. Directory-wide collection succeeds. |
+
+---
+
+**New finding — P2 · verified: systematic quote corruption passes**
+
+[gates.py:175](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/gates.py:175)
+
+**Failing case:** multiply every story and description quote vector by `1.04`; leave reply states unchanged.  
+A real CPU integration run still passes G1 and G4; all three former quote C0 checks fail.  
+This follows the chosen 0.05 tolerance: it is a detection gap, not an arithmetic error.  
+**Fix:** retain the 0.05 per-row ceiling and add an uncentred median relative-error limit of 0.02.
+
+---
+
+**Full-run tolerance**
+
+I found no clean failure, but clean full-run safety remains **unverified**.  
+Float16 rounding alone is well below 5%; bf16 batch changes can amplify relative error when pooled states nearly cancel.  
+The reported canary maximum of 0.011 does not establish a safe maximum across roughly 7,000 quote rows.
+
+No repository files were edited. No GPU or network was used.

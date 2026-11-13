@@ -1,0 +1,98 @@
+[
+  {
+    "slide": "u1113_slide_01",
+    "exemplar": "u1016b_slide_01",
+    "method": "duplicate; replace text; fit figure; adapt native table where present",
+    "media_mapping": "no media retained"
+  },
+  {
+    "slide": "u1113_slide_02",
+    "exemplar": "u1016b_slide_03",
+    "method": "duplicate; replace text; fit figure; adapt native table where present",
+    "media_mapping": "no media retained"
+  },
+  {
+    "slide": "u1113_slide_03",
+    "exemplar": "u1016b_slide_04",
+    "method": "duplicate; replace text; fit figure; adapt native table where present",
+    "media_mapping": "delete old figure; replace with specified PNG"
+  },
+  {
+    "slide": "u1113_slide_04",
+    "exemplar": "u1016b_slide_04",
+    "method": "duplicate; replace text; fit figure; adapt native table where present",
+    "media_mapping": "delete old figure; replace with specified PNG"
+  },
+  {
+    "slide": "u1113_slide_05",
+    "exemplar": "u1016b_slide_04",
+    "method": "duplicate; replace text; fit figure; adapt native table where present",
+    "media_mapping": "delete old figure; replace with specified PNG"
+  },
+  {
+    "slide": "u1113_slide_06",
+    "exemplar": "u1016b_slide_04",
+    "method": "duplicate; replace text; fit figure; adapt native table where present",
+    "media_mapping": "delete old figure; replace with specified PNG"
+  },
+  {
+    "slide": "u1113_slide_07",
+    "exemplar": "u1016b_slide_04",
+    "method": "duplicate; replace text; fit figure; adapt native table where present",
+    "media_mapping": "delete old figure; replace with specified PNG"
+  },
+  {
+    "slide": "u1113_slide_08",
+    "exemplar": "u1016b_slide_10",
+    "method": "duplicate; replace text; fit figure; adapt native table where present",
+    "media_mapping": "no media retained"
+  },
+  {
+    "slide": "u1113_slide_09",
+    "exemplar": "u1016b_slide_12",
+    "method": "duplicate; replace text; fit figure; adapt native table where present",
+    "media_mapping": "no media retained"
+  },
+  {
+    "slide": "u1113_slide_10",
+    "exemplar": "u1016b_slide_12",
+    "method": "duplicate; replace text; fit figure; adapt native table where present",
+    "media_mapping": "no media retained"
+  },
+  {
+    "slide": "u1113_slide_11",
+    "exemplar": "u1016b_slide_13",
+    "method": "duplicate; replace text; fit figure; adapt native table where present",
+    "media_mapping": "no media retained"
+  },
+  {
+    "slide": "u1113_slide_12",
+    "exemplar": "u1016b_slide_12",
+    "method": "duplicate; replace text; fit figure; adapt native table where present",
+    "media_mapping": "no media retained"
+  },
+  {
+    "slide": "u1113_slide_13",
+    "exemplar": "u1016b_slide_04",
+    "method": "duplicate; replace text; fit figure; adapt native table where present",
+    "media_mapping": "delete old figure; replace with specified PNG"
+  },
+  {
+    "slide": "u1113_slide_14",
+    "exemplar": "u1016b_slide_10",
+    "method": "duplicate; replace text; fit figure; adapt native table where present",
+    "media_mapping": "no media retained"
+  },
+  {
+    "slide": "u1113_slide_15",
+    "exemplar": "u1016b_slide_10",
+    "method": "duplicate; replace text; fit figure; adapt native table where present",
+    "media_mapping": "no media retained"
+  },
+  {
+    "slide": "u1113_slide_16",
+    "exemplar": "u1016b_slide_10",
+    "method": "duplicate; replace text; fit figure; adapt native table where present",
+    "media_mapping": "no media retained"
+  }
+]

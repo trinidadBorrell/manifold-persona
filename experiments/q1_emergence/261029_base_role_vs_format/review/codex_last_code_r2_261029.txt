@@ -1,0 +1,89 @@
+**Several fixes remain incomplete. All 64 fixed-file tests pass, but they miss five verified failures.**
+
+**Round-1 findings**
+
+| # | Verdict | Reason |
+|---|---|---|
+| 1 | fixed | Prompts, sources, backend and versions enter the fingerprint. Fresh processes and reordered inputs produced identical fingerprints. |
+| 2 | fixed | Incomplete final records are removed. Malformed complete records fail. Both crash-tail tests pass. |
+| 3 | fixed | The sync filters copy the required resume files. Both directions of mismatched copy times recovered identical data. |
+| 4 | partly fixed | Overlapping breaks, CRLF and whitespace-only blank lines work. The colon exception also changed; see finding 5 below. |
+| 5 | partly fixed | Normal quote corruption fails G4. A single quote escapes checking; clean repeated quotes can fail. |
+| 6 | fixed | The context CLI checks shapes, finite values and invalid-row NaNs before saving. |
+| 7 | partly fixed | Missing shards rebuild correctly. Damaged `f32` metadata still passes `part_ok()` and crashes finalization. |
+| 8 | fixed | Required checksum coverage is exact. Copy verification rejects a context directory without its checksum file. |
+| 9 | partly fixed | Pod B hashes in chunks. The archive CLI still calls the unchanged whole-file helper in `rows.py`. |
+| 10 | fixed | All Pod B pooling paths use the decoder with caching disabled. CPU hidden states match the full-model result. |
+| 11 | fixed | G1 rejects wrong layer counts, widths and unsupported dtypes before numerical checks. |
+| 12 | fixed | The original run ID survives copying and fresh-process restarts. |
+| 13 | partly fixed | An ordinary failed pull can retry. Reused staging can retain and publish stale files. |
+| 14 | partly fixed | Useful regression tests were added. Whitespace-only replies and padded early-stop generation still lack deterministic integration coverage. |
+
+---
+
+**1. Should fix · verified — pull retries can publish stale context**
+
+[pod.sh pull patch:8](</Users/brendon/Library/Application Support/Claude/side-session-notes/local_681e31cc-a092-486d-aabb-6c76053dd75e/pod_b_pod_sh_pull.patch:8>)
+
+Retries extract over the existing staging directory, so files absent from the next transfer survive.  
+**Case:** the first failed pull stages context files; the source later has no context directory; retry publishes the old context with passing checksums.  
+I reproduced this with local SSH mocks.  
+**Fix:** use fresh staging for each attempt, or remove files absent from the transferred inventory.
+
+---
+
+**2. Should fix · verified — one corrupted quote passes G4**
+
+[gates.py:169](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/gates.py:169)
+
+Story and description reconstruction runs only when at least two quote rows exist.  
+**Case:** retain one such quote and multiply its stored vector by `-10`; both G1 and G4 pass.  
+**Fix:** check single quotes directly with an explicit numerical tolerance; never treat skipped reconstruction as passed.
+
+---
+
+**3. Should fix · verified — damaged shard metadata blocks recovery**
+
+[gen_extract.py:384](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/gen_extract.py:384)
+
+`part_ok()` reads the arrays and keys but never reads or validates `f32`.  
+**Case:** corrupt only the ZIP member `f32.npy`; `part_ok()` returns true, then finalization raises `BadZipFile`.  
+Removing that member or replacing its scalar with an array also passes validation and crashes later.  
+**Fix:** validate every required member, including the flag’s scalar type and consistency with the stored dtype.
+
+---
+
+**4. Should fix · verified — correct quote states can fail G4**
+
+[gates.py:172](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/gates.py:172)
+
+Centred cosine is undefined when stored quote vectors have zero centred norm.  
+**Case:** a clean CPU run with two identical story quotes passes whole-reply reconstruction but fails quote reconstruction with NaN cosines.  
+Rounding alone also triggers this: `[1.00001, 2.00001]` and `[1.00002, 2.00002]` both become `[1, 2]` in float16.  
+**Fix:** handle zero or rounding-scale centred norms explicitly, using a storage-error comparison before declaring reconstruction failure.
+
+---
+
+**5. Should fix · verified — the blank-line fix broadens the approved colon rule**
+
+[gen_extract.py:110](/Users/brendon/persona-manifolds/manifold-persona/experiments/q1_emergence/261029_base_role_vs_format/gen_extract.py:110)
+
+The approved offline rule ignores ASCII spaces after a colon; the new code also ignores tabs.  
+**Case:** `" say:\t\n\nJUNK"` previously cuts to `" say:"`; the new code retains `JUNK`.  
+All 1,600 saved canary rows still match the offline cut, so this regression lies outside those saved cases.  
+**Fix:** preserve the approved colon exception while supporting whitespace inside blank lines, or explicitly revise the rule.
+
+---
+
+**Verification**
+
+| Check | Result |
+|---|---|
+| Three fixed test files | **64 passed** |
+| Requested directory-wide command | **5 collection errors** from saved pre-fix tests and their imports |
+| Rebuilt shards | Every member matched the originals |
+| Mixed-time checkpoint copies | Rows, reply arrays and quote arrays matched |
+| Exact rsync filters | Required resume files included; temporary shards and final arrays excluded |
+| Normal interrupted temporary write | Resume recovered successfully |
+
+All probes used CPU and cached tokenizer files. No repo files were changed. Target-GPU numerical behaviour remains untested.

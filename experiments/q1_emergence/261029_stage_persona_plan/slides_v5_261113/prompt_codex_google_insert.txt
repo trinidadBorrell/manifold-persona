@@ -1,0 +1,14 @@
+The owner asked to update his existing Google Slides deck with new results. Deck: https://docs.google.com/presentation/d/1FHfzXmidtCksE270s8vRPzYKtmkeEdQG6cwiHR3Tn50/edit (MARS-experiment-logs-B, account bchikavanga25@gmail.com). Work quickly.
+
+Build the 16 slides described in experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_slides_spec.md as native Google Slides content (text boxes, native tables, images). Insert them right after slide 1 (the cover, id p1), so they come before "Update 10/16" (id u1016b_slide_01). Use the "Update 10/16" slides as style references: u1016b_slide_01 for the blue section header, u1016b_slide_03 for the setup slide with the prompt box, u1016b_slide_04 to u1016b_slide_09 for the question line + heading + figure layouts, u1016b_slide_10 for tables, u1016b_slide_12 and u1016b_slide_13 for bullet slides. Upload the six figures from experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/figs/ and place them with createImage, the same way you placed the 16/10 figures.
+
+Rules:
+- Do not change, move, delete or re-style any existing slide. Do not share the file or change permissions. Do not create other files in Drive except what image placement strictly needs.
+- Copy every word and number exactly from the spec. Do not add claims, words or numbers. Keep straight quotes straight.
+- Object ids start with u1113_. The 16 new slides get ids u1113_slide_01 to u1113_slide_16 in spec order.
+- Figures come first on each figure slide, as large as fits under the heading, aspect ratio kept; the text comes after.
+- After inserting, fetch a thumbnail of each new slide and save it locally as experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_thumbs/slide-01.png ... slide-16.png. Look at each one and fix text overflow, overlaps, cut-off figures or text smaller than 10 pt, then refresh the thumbnails.
+- Also save the native text of the 16 new slides (question line, heading, body, table cells, captions, in reading order) to experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_new_slides_text.md.
+- No other HTTP and no paid model calls.
+
+Write experiments/q1_emergence/261029_stage_persona_plan/slides_v5_261113/google_insert_report.md with: the new slide ids in order, their positions in the deck, the total slide count, anything you could not do, and any problem you see. Reply with one line: "inserted N slides".

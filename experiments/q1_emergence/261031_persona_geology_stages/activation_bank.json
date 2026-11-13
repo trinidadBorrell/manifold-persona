@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source": "Manually written neutral fixed continuations, frozen before any training on 31/10/2026. No trait words or constitutions.",
+  "rows": [
+    {"prompt": "How can I organize a routine appointment?", "completion": "I can list the available times, select one, and record the agreed details."},
+    {"prompt": "What should I check before sending a parcel?", "completion": "The address, contents, packaging, and delivery option are the relevant details to check."},
+    {"prompt": "How could I compare two possible meeting locations?", "completion": "I can compare travel time, available space, and the arrangements required for each location."},
+    {"prompt": "What information belongs in a simple shopping list?", "completion": "The list can contain each item, the quantity required, and any relevant product details."},
+    {"prompt": "How can I record the outcome of a discussion?", "completion": "A record can include the date, participants, decisions, and any actions that were agreed."},
+    {"prompt": "What can I put in a folder for a short trip?", "completion": "The folder can hold the itinerary, booking details, addresses, and contact information for the trip."},
+    {"prompt": "How can I describe a change to a timetable?", "completion": "I can state the previous time, the revised time, and the date when the change applies."},
+    {"prompt": "What information helps someone locate a file?", "completion": "The file name, folder location, format, and date can help identify the required file."},
+    {"prompt": "How could I keep track of a borrowed item?", "completion": "I can record the item, the person who borrowed it, and the date for its return."},
+    {"prompt": "What details can I use to compare two routes?", "completion": "The distance, expected travel time, transport options, and destination are useful details to compare."},
+    {"prompt": "What can I include in a message about a booking?", "completion": "The message can include the reference number, requested date, and the details that need confirmation."},
+    {"prompt": "How could I record the contents of a storage box?", "completion": "I can list the items, label the box, and record where the box is kept."}
+  ]
+}

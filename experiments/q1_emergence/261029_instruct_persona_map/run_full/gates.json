@@ -1,0 +1,96 @@
+{
+ "passed": true,
+ "gates": {
+  "G1": {
+   "n_rows": 21000,
+   "n_state_rows": 21000,
+   "absent": 0,
+   "invalid": 0,
+   "row_errors": 0,
+   "first_errors": [],
+   "valid_rows_not_finite": 0,
+   "invalid_rows_not_nan": 0,
+   "pass": true
+  },
+  "G2": {
+   "rule": ">= 0.95 valid per role",
+   "rates": {
+    "assistant": 1.0,
+    "bartender": 1.0,
+    "chef": 1.0,
+    "consultant": 1.0,
+    "counselor": 1.0,
+    "criminal": 1.0,
+    "cynic": 1.0,
+    "default": 1.0,
+    "detective": 1.0,
+    "grandparent": 1.0,
+    "narcissist": 1.0,
+    "optimist": 1.0,
+    "pirate": 1.0,
+    "refugee": 1.0,
+    "robot": 1.0,
+    "stoic": 1.0,
+    "teenager": 1.0,
+    "toddler": 1.0,
+    "translator": 1.0,
+    "vampire": 1.0,
+    "void": 1.0
+   },
+   "pass": true
+  },
+  "G5": {
+   "mismatch": {},
+   "pass": true
+  },
+  "G3": {
+   "batches": [
+    394,
+    430
+   ],
+   "n_rows": 64,
+   "identical_same_batches": 64,
+   "identical_one_at_a_time_reported": 14,
+   "pass": true
+  },
+  "G4": {
+   "rule": {
+    "layers": [
+     9,
+     17,
+     23
+    ],
+    "min_cos": 0.95,
+    "median_cos": 0.99,
+    "median_rel_norm": 0.02
+   },
+   "cells": {
+    "L9": {
+     "n": 21000,
+     "min_cos": 0.9999811747430433,
+     "median_cos": 0.9999999018150446,
+     "median_rel_norm": 0.00020845107381480124,
+     "max_rel_norm": 0.0024991186537734397,
+     "pass": true
+    },
+    "L17": {
+     "n": 21000,
+     "min_cos": 0.9999720350813697,
+     "median_cos": 0.9999999451081483,
+     "median_rel_norm": 0.00019926866836234713,
+     "max_rel_norm": 0.004197059139187638,
+     "pass": true
+    },
+    "L23": {
+     "n": 21000,
+     "min_cos": 0.9999752426083022,
+     "median_cos": 0.9999999579186233,
+     "median_rel_norm": 0.0002042098680992964,
+     "max_rel_norm": 0.004704975138786843,
+     "pass": true
+    }
+   },
+   "pass": true
+  }
+ }
+}

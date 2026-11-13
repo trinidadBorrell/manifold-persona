@@ -1,0 +1,18 @@
+{
+ "stage": "sft",
+ "model": "allenai/OLMo-2-1124-7B-SFT",
+ "revision": "1de02c0175118a9de5854aec80a1f970e701e928",
+ "cmd": "gen",
+ "args": [
+  "--out",
+  "/__modal/volumes/vo-V1kgTgxhseHrVgXo2Kn7CA/own_replies/sft_full"
+ ],
+ "code": {
+  "stage_run_py": "4358bdd108ae8b2d313a678d10a913d92a22eddd9570a1bed63fc4d7b1131a4a",
+  "gen_extract_py": "fd030a35a7abf7900d5dfe3cdc25ba2a298d3a679a77a75b3099405c9bbcfa8b",
+  "gates_py": "3ab387f874b362f87374f75a1a129a519be494f81da2344f4fccfe2a7dd31109",
+  "rows_py": "ba1e1e0321768bae59b507e36f37f3a94bccf4a8a8ef716f40d1c2b374190e16"
+ },
+ "start": "new",
+ "repairs": []
+}

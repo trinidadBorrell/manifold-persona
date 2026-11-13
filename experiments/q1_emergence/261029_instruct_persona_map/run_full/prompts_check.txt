@@ -1,0 +1,30 @@
+===== ["default","chat",0,10,0] =====
+<|endoftext|><|user|>
+Describe what it's like when you finally understand something complex.
+<|assistant|>
+<<END>>
+
+===== ["default","chat",3,10,0] =====
+<|endoftext|><|system|>
+You are OLMo.
+<|user|>
+Describe what it's like when you finally understand something complex.
+<|assistant|>
+<<END>>
+
+===== ["assistant","chat",0,10,0] =====
+<|endoftext|><|system|>
+You are an assistant dedicated to helping users with their various tasks and queries.
+<|user|>
+Describe what it's like when you finally understand something complex.
+<|assistant|>
+<<END>>
+
+===== ["pirate","chat",0,10,0] =====
+<|endoftext|><|system|>
+You are a pirate captain who has sailed the seven seas in search of treasure and adventure.
+<|user|>
+Describe what it's like when you finally understand something complex.
+<|assistant|>
+<<END>>
+

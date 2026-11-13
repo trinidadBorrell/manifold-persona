@@ -1,0 +1,192 @@
+{
+ "rules": "THRESHOLDS.md v1.0",
+ "config": {
+  "n_boot": 2000,
+  "n_perm": 9999,
+  "n_halves": 50
+ },
+ "roles": [
+  "assistant",
+  "translator",
+  "counselor",
+  "consultant",
+  "chef",
+  "detective",
+  "bartender",
+  "criminal",
+  "toddler",
+  "teenager",
+  "grandparent",
+  "refugee",
+  "cynic",
+  "optimist",
+  "stoic",
+  "narcissist",
+  "pirate",
+  "vampire",
+  "robot",
+  "void"
+ ],
+ "n_questions": 40,
+ "states": {
+  "17": {
+   "M1_c3_map": {
+    "raw_r": {
+     "point": 0.9049198913514154,
+     "lo": 0.8294966212129069,
+     "hi": 0.9358312645506194,
+     "n_nonfinite": 0
+    },
+    "p": 0.0001,
+    "null_p99": 0.20008633520975216,
+    "precision_met": true
+   },
+   "M1_prompt_alone_gives_a_role_map": true,
+   "D2_reply_map": {
+    "point": 0.9008640974163157,
+    "lo": 0.7965476506513396,
+    "hi": 0.939325778797131,
+    "n_nonfinite": 0
+   },
+   "M2_reply_vs_c3": {
+    "point": 0.7058245963950014,
+    "lo": 0.5406667823055872,
+    "hi": 0.8251291362335379,
+    "n_nonfinite": 0
+   },
+   "D2_minus_M2": {
+    "point": 0.1950395010213143,
+    "lo": 0.06626627813478889,
+    "hi": 0.3152621595031507,
+    "n_nonfinite": 0
+   },
+   "M2_reading": "the replies add role structure beyond the prompt",
+   "M3_decoding": {
+    "c3": {
+     "accuracy": {
+      "point": 0.9910110889669326,
+      "lo": 0.9809702679485299,
+      "hi": 0.9979948094980635,
+      "n_nonfinite": 0
+     },
+     "mean_fold_accuracy": 0.9909000000000002
+    },
+    "reply": {
+     "accuracy": {
+      "point": 0.9176636878908748,
+      "lo": 0.8785938973050027,
+      "hi": 0.9499738886485698,
+      "n_nonfinite": 0
+     },
+     "mean_fold_accuracy": 0.917675
+    }
+   }
+  },
+  "9": {
+   "M1_c3_map": {
+    "raw_r": {
+     "point": 0.8266431873750694,
+     "lo": 0.7012111501418925,
+     "hi": 0.896489197195856,
+     "n_nonfinite": 0
+    },
+    "p": 0.0001,
+    "null_p99": 0.1802378049836636,
+    "precision_met": true
+   },
+   "M1_prompt_alone_gives_a_role_map": true,
+   "D2_reply_map": {
+    "point": 0.8898819824430187,
+    "lo": 0.7438872708726803,
+    "hi": 0.9328140001646335,
+    "n_nonfinite": 0
+   },
+   "M2_reply_vs_c3": {
+    "point": 0.5151650330013515,
+    "lo": 0.3212233883401133,
+    "hi": 0.7095192000468117,
+    "n_nonfinite": 0
+   },
+   "D2_minus_M2": {
+    "point": 0.3747169494416672,
+    "lo": 0.15739833080312024,
+    "hi": 0.5518661678632358,
+    "n_nonfinite": 0
+   },
+   "M2_reading": "the replies add role structure beyond the prompt",
+   "M3_decoding": {
+    "c3": {
+     "accuracy": {
+      "point": 0.9315289005524534,
+      "lo": 0.8980310341223706,
+      "hi": 0.9605145392078887,
+      "n_nonfinite": 0
+     },
+     "mean_fold_accuracy": 0.9339
+    },
+    "reply": {
+     "accuracy": {
+      "point": 0.8547154336000728,
+      "lo": 0.7941790609053524,
+      "hi": 0.9077580848000169,
+      "n_nonfinite": 0
+     },
+     "mean_fold_accuracy": 0.855325
+    }
+   }
+  },
+  "23": {
+   "M1_c3_map": {
+    "raw_r": {
+     "point": 0.8851266385859938,
+     "lo": 0.7962187983209463,
+     "hi": 0.9298090626789096,
+     "n_nonfinite": 0
+    },
+    "p": 0.0001,
+    "null_p99": 0.18693976197037096,
+    "precision_met": true
+   },
+   "M1_prompt_alone_gives_a_role_map": true,
+   "D2_reply_map": {
+    "point": 0.9011787759101069,
+    "lo": 0.801454625086523,
+    "hi": 0.9387689952977085,
+    "n_nonfinite": 0
+   },
+   "M2_reply_vs_c3": {
+    "point": 0.7500180118708638,
+    "lo": 0.6225727635108478,
+    "hi": 0.8407954291237998,
+    "n_nonfinite": 0
+   },
+   "D2_minus_M2": {
+    "point": 0.15116076403924306,
+    "lo": 0.052912066081839,
+    "hi": 0.24281376473048277,
+    "n_nonfinite": 0
+   },
+   "M2_reading": "the replies add role structure beyond the prompt",
+   "M3_decoding": {
+    "c3": {
+     "accuracy": {
+      "point": 0.989642870633358,
+      "lo": 0.9787820021946044,
+      "hi": 0.9971489835629199,
+      "n_nonfinite": 0
+     },
+     "mean_fold_accuracy": 0.98925
+    },
+    "reply": {
+     "accuracy": {
+      "point": 0.9173029521657907,
+      "lo": 0.8777221705770698,
+      "hi": 0.9524457728732975,
+      "n_nonfinite": 0
+     },
+     "mean_fold_accuracy": 0.9175
+    }
+   }
+  }
+ }
+}

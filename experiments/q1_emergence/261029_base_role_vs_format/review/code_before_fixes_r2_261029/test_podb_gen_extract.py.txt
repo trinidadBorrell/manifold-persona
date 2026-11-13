@@ -1,0 +1,513 @@
+"""Offline tests for gen_extract.py: the real OLMo-2 base tokenizer (from the local HF cache) and a tiny random
+Llama with the same vocabulary, so the whole path runs on a CPU."""
+import importlib.util
+import json
+import re
+import shutil
+from pathlib import Path
+
+import numpy as np
+import pytest
+import torch
+
+HERE = Path(__file__).resolve().parent
+E3 = HERE.parent / "261008_base_persona_map"
+
+
+def load(name, path):
+    spec = importlib.util.spec_from_file_location(name, path)
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+G = load("base_role_vs_format_gen_extract", HERE / "gen_extract.py")
+E3G = load("gen_extract_e3", E3 / "gen_extract.py")
+ROLES_B = ["toddler", "robot", "narcissist", "cynic", "optimist", "teenager", "vampire", "consultant", "chef", "pirate"]
+
+
+@pytest.fixture(scope="module")
+def tok():
+    from transformers import AutoTokenizer
+    try:
+        return AutoTokenizer.from_pretrained(G.MODEL, revision=G.REVISION, local_files_only=True)
+    except OSError:
+        pytest.skip("OLMo-2 base tokenizer is not in the local HF cache")
+
+
+@pytest.fixture(scope="module")
+def tiny(tok):
+    from transformers import LlamaConfig, LlamaForCausalLM
+    torch.manual_seed(0)
+    cfg = LlamaConfig(vocab_size=len(tok), hidden_size=16, intermediate_size=32, num_hidden_layers=4,
+                      num_attention_heads=2, num_key_value_heads=2, max_position_embeddings=512,
+                      eos_token_id=tok.eos_token_id, pad_token_id=tok.pad_token_id)
+    return LlamaForCausalLM(cfg).eval()
+
+
+def e3_desc():
+    return {k: v["third_person"] for k, v in json.load(open(E3 / "descriptions_third_person.json")).items()}
+
+
+def bank():
+    return [json.loads(l)["question"] for l in open(G.REPO / "refs/assistant-axis/extraction_questions.jsonl")]
+
+
+# ---- part 1: templates
+
+def test_interview_is_e3_desc_exactly():
+    d, b = e3_desc(), bank()
+    for role in ROLES_B:
+        for w in range(5):
+            for q in json.load(open(E3 / "questions_40.json")):
+                it = dict(guest=d[f"{role}/{w}"], question=b[q], cond="desc")
+                assert G.prompt_text("interview", it["guest"], it["question"]) == E3G.render(it, [])
+    assert G.TEMPLATES["interview"]["stops"] == tuple(E3G.STOPS)
+
+
+def test_c2_drops_only_the_description_line():
+    q = bank()[10]
+    assert G.prompt_text("interview", None, q) == E3G.EOS + E3G.HEADER + "\n\n" + E3G.block(None, q)[1]
+    for fmt in G.FORMATS:
+        full, c2 = G.prompt_text(fmt, "a pirate captain", q), G.prompt_text(fmt, None, q)
+        about = G.TEMPLATES[fmt]["about"].replace("{desc}", "a pirate captain")
+        assert full.replace(about + "\n\n", "", 1) == c2 and "pirate" not in c2
+
+
+def test_frames_never_name_a_role():
+    """Only the description carries the role; header, turn and stop markers name none of the 10 roles."""
+    for fmt, t in G.TEMPLATES.items():
+        frame = " ".join([t["header"], t["about"], t["turn"], *t["stops"]]).lower()
+        assert not any(re.search(rf"\b{r}", frame) for r in ROLES_B), fmt
+
+
+def test_prompt_ids_one_eos_first(tok):
+    d, q = e3_desc(), bank()[10]
+    for fmt in G.FORMATS:
+        for desc in (d["pirate/0"], None):
+            ids = G.prompt_ids(tok, G.prompt_text(fmt, desc, q))
+            assert ids[0] == tok.eos_token_id and ids.count(tok.eos_token_id) == 1
+            assert tok.decode(ids) == G.prompt_text(fmt, desc, q)
+
+
+# ---- part 2: grid
+
+def test_full_and_canary_grids():
+    roles, qs, n = G.grid_spec("full")
+    items = G.build_items(roles, qs, n)
+    keys, _ = G.R.freeze_grid(it["key"] for it in items)
+    assert roles == ROLES_B and len(keys) == 10 * 4 * 5 * 40 * 3 == 24_000
+    assert [json.loads(k)[:4] for k in keys[:4]] == [["toddler", "interview", 0, 10]] * 3 + [["toddler", "interview", 0, 18]]
+    roles, qs, n = G.grid_spec("canary")
+    canary = G.build_items(roles, qs, n)
+    assert len(canary) == 4 * 4 * 10 * 5 * 2 == 1_600
+    assert {json.loads(it["key"])[3] for it in canary} == set(json.load(open(E3 / "questions_40.json"))[:10])
+    assert {it["key"] for it in canary} <= set(keys), "canary keys are full-run keys, so seeds match"
+
+
+def test_items_carry_their_own_description_and_question():
+    d, b = e3_desc(), bank()
+    for it in G.build_items(["chef", "vampire"], [10, 227], 1):
+        role, fmt, w, q, r = json.loads(it["key"])
+        assert it["desc"] == d[f"{role}/{w}"] and it["question"] == b[q] and it["fmt"] == fmt
+        assert it["text"] == G.prompt_text(fmt, d[f"{role}/{w}"], b[q])
+
+
+def test_every_full_prompt_tokenizes_with_one_eos(tok):
+    roles, qs, _ = G.grid_spec("full")
+    texts = {it["text"] for it in G.build_items(roles, qs, 1)}
+    assert len(texts) == 10 * 4 * 5 * 40
+    lens = [len(G.prompt_ids(tok, t)) for t in texts]
+    assert max(lens) < 200, max(lens)  # 128 new tokens fit easily in the 4,096 context
+
+
+# ---- part 3: generation, pooling, D1 support
+
+def test_name_terms_are_e3s():
+    e3 = load("score_naming_e3", E3 / "score_naming.py").NAME_TERMS
+    assert G.NAME_TERMS == {r: e3[r] for r in ROLES_B}
+    assert G.names_role("pirate", "Arr, the Pirates' code!") and G.names_role("chef", "I love to cook.")
+    assert not G.names_role("chef", "a cookie") and not G.names_role("robot", "Roberta")
+
+
+def enc(tok, s):
+    return tok(s, add_special_tokens=False).input_ids
+
+
+@pytest.mark.parametrize("fmt,reply,tail", [
+    ("interview", " Arr, it feels grand.", "\nInterviewer: Next?"),
+    ("interview", " Arr, it feels grand.", "\nAbout the guest: a chef"),
+    ("script", " Arr, it feels grand.", "\nFriend: Really?"),
+    ("script", " Arr, it feels grand.", "\nThe following is a script."),
+    ("story", ' smiled. "Arr, it feels grand."', "\nThe following is a short story."),
+    ("description", ' say, "Arr, it feels grand."', '\nIf Alex were asked, "Why?"'),
+    ("script", " Arr, it feels grand.", "\n\nAlex: I would like a ship."),
+    ("story", ' smiled. "Arr, it feels grand."', "\n\nBased on the paragraph, choose the best answer."),
+    ("description", ' say, "Arr, it feels grand."', "\n\nAlex is a pirate."),
+])
+def test_each_format_cuts_at_its_stop_markers(tok, fmt, reply, tail):
+    raw = enc(tok, reply + tail) + [tok.eos_token_id]
+    key = G.R.item_key("pirate", fmt, 0, 10, 0)
+    row = G.make_row(tok, "t", key, [tok.eos_token_id, 5], raw)
+    # BPE merges "." with the marker's "\n"; rows.cut_reply drops that straddling token
+    assert row["stop_reason"] == "marker" and row["valid"]
+    assert reply.startswith(row["reply"]) and len(reply) - len(row["reply"]) <= 2, row["reply"]
+    G.check_row(tok, row)
+
+
+def test_a_story_line_is_not_cut_by_the_other_formats_markers(tok):
+    reply = ' smiled.\nFriend: "Really?"\nIf Alex had a ship, Alex would sail.'
+    key = G.R.item_key("pirate", "story", 0, 10, 0)
+    row = G.make_row(tok, "t", key, [tok.eos_token_id], enc(tok, reply))
+    assert row["stop_reason"] == "limit" and row["reply"] == reply
+
+
+def test_the_interview_is_not_cut_at_a_blank_line(tok):
+    reply = " Arr, it feels grand.\n\nI sail every day."
+    key = G.R.item_key("pirate", "interview", 0, 10, 0)
+    row = G.make_row(tok, "t", key, [tok.eos_token_id], enc(tok, reply))
+    assert row["stop_reason"] == "limit" and row["reply"] == reply
+
+
+@pytest.mark.parametrize("fmt,reply,kept", [
+    ("description", ' say:\n\nI would sail away.\n\nBased on the paragraph, choose.', ' say:\n\nI would sail away'),
+    ("description", ' say: \n\nI would sail away.\n\nAlex is a pirate.', ' say: \n\nI would sail away'),
+    ("story", ' explained:\n\n  • Satellites send signals.\n\nThe end', ' explained:\n\n  • Satellites send signals'),
+    ("description", ' say "Arr: no."\n\nAlex is a pirate.', ' say "Arr: no'),
+])
+def test_a_blank_line_right_after_a_colon_does_not_end_the_reply(tok, fmt, reply, kept):
+    key = G.R.item_key("pirate", fmt, 0, 10, 0)
+    row = G.make_row(tok, "t", key, [tok.eos_token_id], enc(tok, reply) + [tok.eos_token_id])
+    assert row["stop_reason"] == "marker" and row["reply"].rstrip('."') == kept, row["reply"]
+    G.check_row(tok, row)
+
+
+def test_check_row_refuses_a_reply_that_runs_past_its_cut(tok):
+    key = G.R.item_key("pirate", "description", 0, 10, 0)
+    ids = enc(tok, ' say, "Arr."\n\nAlex is a pirate.')
+    row = G.make_row(tok, "t", key, [tok.eos_token_id], ids + [tok.eos_token_id])
+    G.check_row(tok, row)
+    longer = G.make_row(tok, "t", G.R.item_key("pirate", "interview", 0, 10, 0), [tok.eos_token_id],
+                        ids + [tok.eos_token_id])
+    bad = dict(row, kept_ids=longer["kept_ids"], span=[1, 1 + len(longer["kept_ids"])], stop_reason="eos",
+               reply=longer["reply"])
+    with pytest.raises(ValueError, match="cut of the raw ids"):
+        G.check_row(tok, bad)
+
+
+def keys_of(roles, fmts, ws, qs, reps):
+    return G.R.grid_keys(roles, fmts, ws, qs, reps)
+
+
+def test_support_lost_prompts_and_complete_questions():
+    grid = keys_of(["chef", "pirate"], ["story", "script"], [0, 1], [10, 18, 24], [0, 1, 2])
+    valid = {k: True for k in grid}
+    for r in range(3):  # chef/story/w1/q18 loses all 3 replicates
+        valid[G.R.item_key("chef", "story", 1, 18, r)] = False
+    valid[G.R.item_key("pirate", "script", 0, 24, 0)] = False  # one replicate of another prompt: not lost
+    s = G.support(valid, grid)
+    assert s["n_lost_prompts"] == 1 and s["questions_with_lost_prompt"] == [18]
+    assert s["complete_questions"] == [10, 24] and s["lost_by_role_format"] == {"chef/story": 1}
+    partial = {k: v for k, v in valid.items() if k != G.R.item_key("chef", "story", 1, 18, 2)}
+    assert G.support(partial, grid)["n_lost_prompts"] == 0, "a prompt with a missing replicate is not lost yet"
+    assert G.support(partial, grid)["complete_questions"] == [10, 24]
+
+
+def test_support_codex_o_b_case():
+    """THRESHOLDS D1 support: one lost prompt per question removes every question at 99.5% valid replies."""
+    roles, qs, n = G.grid_spec("full")
+    grid = keys_of(roles, G.FORMATS, range(5), qs, range(n))
+    valid = {k: True for k in grid}
+    cells = [(r, f) for r in roles for f in G.FORMATS]  # 40 role x format cells, one lost prompt each
+    for (r, f), q in zip(cells, qs):
+        for rep in range(n):
+            valid[G.R.item_key(r, f, 0, q, rep)] = False
+    s = G.support(valid, grid)
+    assert sum(valid.values()) / len(valid) == 0.995 and s["complete_questions"] == []
+    assert len(s["questions_with_lost_prompt"]) == 40 and set(s["lost_by_role_format"].values()) == {1}
+
+
+def small_items(tok, n=12, n_rep=2):
+    items = G.build_items(["pirate", "chef"], [10, 18], n_rep)
+    step = len(items) // n
+    return G.render(tok, [items[k] for k in range(0, len(items), step)][:n])
+
+
+def rows_of(out):
+    return {G.R.row_key(r): r for r in map(json.loads, open(out / "rows.jsonl"))}
+
+
+TINY_EXTRA = (1, 2, 3)  # depth_layers(4): the tiny model has hidden states 0..4
+
+
+def test_end_to_end_batch_independent_and_resumable(tok, tiny, tmp_path):
+    items = small_items(tok)
+    assert {it["fmt"] for it in items} == set(G.FORMATS)
+    grid, _ = G.R.freeze_grid(sorted(it["key"] for it in items))
+    a, b = tmp_path / "a", tmp_path / "b"
+    G.run(items, a, 4, tiny, tok, "a", grid)
+    sa = G.finalize(a, grid, tok)
+    G.run(items, b, 5, tiny, tok, "b", grid)
+    G.finalize(b, grid, tok)
+    ra, rb = rows_of(a), rows_of(b)
+    assert sa["n_rows"] == 12 and sa["acts_shape"] == [12, 5, 16]
+    assert all(ra[k]["raw_ids"] == rb[k]["raw_ids"] for k in grid), "replies changed with the batch size"
+    acts = np.load(a / "reply_mean_acts.npy")
+    valid = np.array([ra[k]["valid"] for k in grid])
+    assert np.isfinite(acts[valid]).all() and np.isnan(acts[~valid]).all()
+    for r in ra.values():
+        G.check_row(tok, r)
+        assert r["prompt_ids"] == G.prompt_ids(tok, G.prompt_text(r["format"], G.descriptions([r["role"]])[
+            r["role"], r["wording"]], bank()[r["question"]]))
+    extras = [json.loads(l) for l in open(a / "reply_extras.jsonl")]
+    assert [x["key"] for x in extras] == grid
+    q = np.load(a / "quote_mean_acts.npy")
+    assert q.shape == (12, 3, 16)
+    for k, x in zip(grid, extras):  # interview and script rows copy their reply states
+        if ra[k]["format"] in G.SPEECH_FORMATS and ra[k]["valid"]:
+            assert x["quote_span"] == ra[k]["span"] and np.array_equal(q[grid.index(k)], acts[grid.index(k), list(TINY_EXTRA)])
+    assert set(sa["d1_support"]) >= {"complete_questions", "n_lost_prompts"}
+
+    # resume: cut the part file mid-line (as after a crash), rerun, get the same rows and states
+    c = tmp_path / "c"
+    shutil.copytree(a, c)
+    lines = (c / "rows.partial.jsonl").read_text().splitlines()
+    (c / "rows.partial.jsonl").write_text("\n".join(lines[:6]) + "\n" + lines[6][:15])
+    G.run(items, c, 4, tiny, tok, "a", grid)
+    G.finalize(c, grid, tok)
+    assert len((c / "rows.partial.jsonl").read_text().splitlines()) == 12
+    assert rows_of(c) == ra
+    assert np.array_equal(np.load(c / "reply_mean_acts.npy"), acts, equal_nan=True)
+
+
+def test_stop_rule_ends_the_run(tok, tiny, tmp_path, monkeypatch):
+    """With max_lost=0, the first prompt that loses all its replicates stops the run (exit code 4)."""
+    items = small_items(tok, 8)
+    grid, _ = G.R.freeze_grid(sorted(it["key"] for it in items))
+    real = G.R.generate_batch
+    calls = []
+
+    def first_batch_empty(model, prompts, seeds, eos, *a, **k):
+        calls.append(1)
+        out = real(model, prompts, seeds, eos, *a, **k)
+        return [[eos] for _ in out] if len(calls) == 1 else out
+
+    monkeypatch.setattr(G.R, "generate_batch", first_batch_empty)
+    with pytest.raises(SystemExit) as e:
+        G.run(items, tmp_path, 4, tiny, tok, "x", grid, max_lost=0)
+    assert e.value.code == 4 and len(calls) == 1
+    s = json.loads((tmp_path / "stopped_d1.json").read_text())
+    assert s["n_lost_prompts"] >= 1 and s["after_batch"] == 0
+    assert G.support({k: True for k in grid}, grid)["n_lost_prompts"] == 0
+
+
+def test_finalize_refuses_missing_rows(tok, tiny, tmp_path):
+    items = small_items(tok, 4)
+    grid, _ = G.R.freeze_grid(sorted(it["key"] for it in items) + [G.R.item_key("pirate", "story", 4, 227, 1)])
+    G.run(items, tmp_path, 4, tiny, tok, "x", grid)
+    with pytest.raises(AssertionError):
+        G.finalize(tmp_path, grid, tok)
+
+
+# ---- part 3: quoted speech
+
+def quote_of(tok, text):
+    ids = enc(tok, text)
+    q = G.first_quote(tok, ids)
+    return None if q is None else tok.decode(ids[q[0]:q[1]])
+
+
+def test_first_quote_finds_the_first_passage(tok):
+    q = quote_of(tok, ' smiled. "Arr, matey, it feels grand!" The friend said, "Really?"')
+    assert "Arr, matey, it feels grand!" in q and "smiled" not in q and "Really" not in q and "friend" not in q
+    q = quote_of(tok, ' would say, “It is like finding treasure.” Then Alex would laugh.')
+    assert "It is like finding treasure." in q and "laugh" not in q
+    q = quote_of(tok, ' would grin and say, "Arr, it be like a map that finally makes sense')  # cut at 128 tokens
+    assert q.endswith("finally makes sense") and "grin" not in q
+    assert quote_of(tok, " would probably say that it feels grand.") is None
+    assert quote_of(tok, ' said "" and left.') is None and quote_of(tok, ' said "  " and left.') is None
+    assert "ok" in quote_of(tok, ' said “ok" and left.'), "a curly open quote may close with a straight one"
+
+
+def test_first_quote_counts_bytes_not_decoded_text(tok):
+    """A multi-byte character split over tokens before the quote must not shift the span."""
+    q = quote_of(tok, ' \U0001f3f4‍☠️ café smiled. "Arr!" he said.')
+    assert "Arr!" in q and "smiled" not in q and "he said" not in q
+
+
+def test_quote_span_by_format(tok):
+    ids = enc(tok, ' smiled. "Arr, it feels grand!" He left.')
+    for fmt in G.FORMATS:
+        key = G.R.item_key("pirate", fmt, 0, 10, 0)
+        row = G.make_row(tok, "t", key, [tok.eos_token_id] * 7, ids)
+        sp = G.quote_span(tok, row)
+        if fmt in G.SPEECH_FORMATS:
+            assert sp == row["span"]
+        else:
+            a, b = sp
+            assert row["span"][0] < a < b < row["span"][1]
+            assert "Arr, it feels grand!" in tok.decode((row["prompt_ids"] + row["kept_ids"])[a:b])
+    row["valid"] = False
+    assert G.quote_span(tok, row) is None
+
+
+def test_quote_states_are_the_mean_over_the_quote(tok, tiny, tmp_path, monkeypatch):
+    """Story and description rows with a crafted quote: the stored quote state equals a direct mean over the
+    quote positions; a reply with no quote gets NaN."""
+    pick = [G.R.item_key("pirate", f, w, 10, 0) for f, w in (("story", 0), ("story", 1), ("description", 0),
+                                                            ("description", 1))]
+    items = G.render(tok, [it for it in G.build_items(["pirate"], [10], 1) if it["key"] in pick])
+    items.sort(key=lambda it: pick.index(it["key"]))
+    grid, _ = G.R.freeze_grid(sorted(it["key"] for it in items))
+    replies = {items[0]["key"]: ' smiled. "Arr, it feels grand!" He left.',
+               items[1]["key"]: ' would say, “Like treasure.”',
+               items[2]["key"]: " would probably say that it feels grand.",
+               items[3]["key"]: ' laughed. "Arr'}
+    by_prompt = {tuple(it["prompt_ids"]): it["key"] for it in items}
+
+    def crafted(model, prompts, seeds, eos, *a, **k):
+        return [enc(tok, replies[by_prompt[tuple(p)]]) + [eos] for p in prompts]
+
+    monkeypatch.setattr(G.R, "generate_batch", crafted)
+    G.run(items, tmp_path, 3, tiny, tok, "x", grid)
+    s = G.finalize(tmp_path, grid, tok)
+    q = np.load(tmp_path / "quote_mean_acts.npy")
+    extras = {x["key"]: x for x in map(json.loads, open(tmp_path / "reply_extras.jsonl"))}
+    rows = rows_of(tmp_path)
+    for i, k in enumerate(grid):
+        sp = extras[k]["quote_span"]
+        if replies[k].startswith(" would probably"):
+            assert sp is None and np.isnan(q[i]).all()
+            continue
+        seq = torch.tensor([rows[k]["prompt_ids"] + rows[k]["kept_ids"]])
+        with torch.no_grad():
+            hs = tiny(seq, output_hidden_states=True).hidden_states
+        want = np.stack([hs[L][0, sp[0]:sp[1]].mean(0).numpy() for L in TINY_EXTRA])
+        assert np.allclose(q[i], want, atol=2e-3), k
+    assert s["quote_rate_by_format"]["story"] == 1.0 and s["quote_rate_by_format"]["description"] == 0.5
+
+
+def test_depth_layers():
+    assert G.depth_layers(32) == (8, 16, 24)
+    assert G.depth_layers(4) == TINY_EXTRA and G.depth_layers(16) == (4, 8, 12)
+    with pytest.raises(ValueError):
+        G.depth_layers(2)  # three depths cannot be told apart on 2 layers
+
+
+# ---- a finished run, laid out as gen_extract.main() writes it (shared with the other pod B tests)
+
+def finished_run(tok, tiny, out, roles=("pirate", "chef"), questions=(10, 18), n_rep=2, step=7, batch_size=4):
+    items = G.build_items(list(roles), list(questions), n_rep)
+    items = G.render(tok, items[::step])
+    grid, grid_hash = G.R.freeze_grid(sorted(it["key"] for it in items))
+    G.run(items, out, batch_size, tiny, tok, "tiny", grid)
+    G.finalize(out, grid, tok)
+    (out / "grid.json").write_text(json.dumps(dict(grid_hash=grid_hash, keys=grid)))
+    (out / "fingerprint_parts.json").write_text(json.dumps(dict(model="tiny")))
+    (out / "manifest.json").write_text(json.dumps(dict(
+        revision="tiny", batch_size=batch_size, fingerprint="tiny", tokenizer_files={"tokenizer.json": "x"},
+        templates=G.templates_hash(), attn_implementation=G.ATTN)))
+    (out / "SHA256SUMS.txt").write_text("".join(f"{G.sha256_file(out / n)}  {n}\n" for n in G.RUN_FILES))
+    return out
+
+
+# ---- code review 29/10 (review/codex_last_code_261029.txt): each test reproduces one finding
+
+@pytest.mark.parametrize("text,stop", [
+    (" say:\n\n\nJUNK", 6),  # overlapping: the second blank line after a colon ends the reply
+    (" answer.\r\n\r\nJUNK", 8),  # CRLF: the cut starts at the CR
+    (" answer.\n \nJUNK", 8),  # a line of spaces is a blank line
+    (" say: \t\n\nI would.\n\nJUNK", 17),
+    (" say:\r\n\r\nI would.\r\n\r\nJUNK", 17),
+    (" no blank line\nhere", -1),
+])
+def test_blank_stop_forms(text, stop):
+    assert G.blank_stop(text) == stop, (text, G.blank_stop(text))
+
+
+def test_blank_line_forms_cut_the_reply(tok):
+    key = G.R.item_key("pirate", "description", 0, 10, 0)
+    for reply in (' say, "Arr."\r\n\r\nJUNK', ' say, "Arr."\n \nJUNK', ' say:\n\n\nJUNK'):
+        row = G.make_row(tok, "t", key, [tok.eos_token_id], enc(tok, reply) + [tok.eos_token_id])
+        assert "JUNK" not in row["reply"] and row["stop_reason"] == "marker", row["reply"]
+        G.check_row(tok, row)
+
+
+def test_resume_after_crash_tails_and_lost_state_parts(tok, tiny, tmp_path):
+    """Codex 2 and 7: a complete last line without its newline, a last line cut inside a UTF-8 character, a
+    missing state part and a damaged one; resume gives the same rows and states."""
+    items = small_items(tok)
+    grid, _ = G.R.freeze_grid(sorted(it["key"] for it in items))
+    a = tmp_path / "a"
+    G.run(items, a, 4, tiny, tok, "a", grid)
+    G.finalize(a, grid, tok)
+    ra, acts = rows_of(a), np.load(a / "reply_mean_acts.npy")
+    for case in ("no_newline", "utf8_tail", "lost_parts"):
+        c = tmp_path / case
+        shutil.copytree(a, c)
+        part = c / "rows.partial.jsonl"
+        if case == "no_newline":
+            part.write_bytes(part.read_bytes().rstrip(b"\n"))
+        elif case == "utf8_tail":
+            part.write_bytes(part.read_bytes() + '{"role": "pirate", "reply": "café'.encode()[:-1])
+        else:
+            (c / "acts_parts" / "000000.npz").unlink()
+            (c / "acts_parts" / "000001.npz").write_bytes(b"not an npz")
+        G.run(items, c, 4, tiny, tok, "a", grid)
+        G.finalize(c, grid, tok)
+        assert part.read_bytes().endswith(b"\n") and len(part.read_bytes().splitlines()) == 12, case
+        assert rows_of(c) == ra, case
+        assert np.array_equal(np.load(c / "reply_mean_acts.npy"), acts, equal_nan=True), case
+        assert not list((c / "acts_parts").glob("*.tmp.npz")), case
+
+
+def test_a_corrupt_line_inside_the_part_file_fails(tok, tiny, tmp_path):
+    items = small_items(tok, 8)
+    grid, _ = G.R.freeze_grid(sorted(it["key"] for it in items))
+    G.run(items, tmp_path, 4, tiny, tok, "a", grid)
+    lines = (tmp_path / "rows.partial.jsonl").read_text().splitlines()
+    lines[2] = lines[2][:20]
+    (tmp_path / "rows.partial.jsonl").write_text("\n".join(lines) + "\n")
+    with pytest.raises(RuntimeError, match="corrupt"):
+        G.run(items, tmp_path, 4, tiny, tok, "a", grid)
+
+
+def test_backbone_gives_the_full_models_states(tok, tiny):
+    seqs = [[tok.eos_token_id] + enc(tok, " Arr, it feels grand."), [tok.eos_token_id] + enc(tok, " Hello")]
+    spans = [[1, len(seqs[0])], [1, 2]]
+    full = G.R.pool_spans(tiny, seqs, spans, tok.pad_token_id)
+    assert np.array_equal(full, G.R.pool_spans(G.Backbone(tiny), seqs, spans, tok.pad_token_id))
+
+
+def test_fingerprint_covers_prompts_and_run_id_is_kept(tok, tmp_path):
+    """Codex 1 and 12: a changed prompt changes the fingerprint; a copied run folder keeps its first run id."""
+    items = small_items(tok, 4)
+    grid, grid_hash = G.R.freeze_grid(sorted(it["key"] for it in items))
+    parts = G.fingerprint_parts(items, ["pirate", "chef"], grid_hash, 4, None)
+    assert {"prompt_ids", "sources", "versions", "attn_implementation"} <= set(parts)
+    changed = [dict(it) for it in items]
+    changed[0]["prompt_ids"] = changed[0]["prompt_ids"] + [5]
+    assert G.R.fingerprint(G.fingerprint_parts(changed, ["pirate", "chef"], grid_hash, 4, None)) != G.R.fingerprint(parts)
+    a = tmp_path / "a"
+    assert G.claim(a, parts) == "a"
+    shutil.copytree(a, tmp_path / "b")
+    assert G.claim(tmp_path / "b", parts) == "a"
+    with pytest.raises(SystemExit):
+        G.claim(tmp_path / "b", dict(parts, batch_size=5))
+
+
+def test_sums_must_cover_every_file(tok, tiny, tmp_path):
+    """Codex 8: a SHA256SUMS.txt that lists only some files, or a context folder without its sums, is refused."""
+    out = finished_run(tok, tiny, tmp_path / "run")
+    G.verify_run(out)
+    sums = (out / "SHA256SUMS.txt").read_text().splitlines()
+    for bad in (sums[4:5], sums[:-1], sums + sums[:1]):
+        d = tmp_path / f"bad{len(bad)}"
+        shutil.copytree(out, d)
+        (d / "SHA256SUMS.txt").write_text("\n".join(bad) + "\n")
+        with pytest.raises(SystemExit):
+            G.load_run(d)
+    (out / "context").mkdir()
+    (out / "context" / "ctx_c2.npy").write_bytes(b"partial")
+    with pytest.raises(SystemExit):
+        G.verify_run(out)
